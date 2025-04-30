@@ -13,7 +13,7 @@ next:
 When working with a Jetpack Compose Android app, UXCam's Automatic Screen Name Tagging is not supported because directly tracking composition routes is not as straightforward as in traditional Android architectures like Fragments or Activities due to Composeables being functional components that don't have lifecycle-based callbacks like onStart(), onStop(), etc where the automatic tagging takes place. However, there are ways to achieve this by leveraging state management libraries.
 
 > 📘 `navigation-compose` library is the recommended approach for navigation on Android official docs.
-> 
+>
 > Because of this, the below examples take into consideration the usage of said library.
 
 Among all the possible ways the simplest way to tag the route as a screen from the highest level Composable. Generally, this is where `NavHostController` is created. There can be multiple `navController` within a single app and this should be added for all where screen tagging is expected.
