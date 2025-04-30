@@ -22,7 +22,7 @@ With a complete UXCam integration, you’ll be able to track user journeys, anal
 
 Before starting the integration, ensure your project meets the following requirements:
 
-- **AndroidX Enabled**: UXCam’s Cordova SDK requires AndroidX. Add the following to your `config.xml` file:
+* **AndroidX Enabled**: UXCam’s Cordova SDK requires AndroidX. Add the following to your `config.xml` file:
 
   ```xml
   <preference name="AndroidXEnabled" value="true" />
@@ -143,7 +143,7 @@ To integrate UXCam with Capacitor:
 
 ### OkHttp Error
 
-If you encounter the following error: _Failed resolution of: Lokhttp3/Callback;_ follow these steps:
+If you encounter the following error: *Failed resolution of: Lokhttp3/Callback;* follow these steps:
 
 1. Navigate to `Platforms > Android > App > build.gradle`.
 2. Add the following dependency:
@@ -161,9 +161,9 @@ Now that you have UXCam integrated, your sessions will start appearing on the da
 Check out our additional documentation to learn how to further tailor UXCam to your needs!
 
 > 👍 **As Simple As That!**
-> 
+>
 > Your integration process is complete. Start reviewing sessions in the dashboard and explore UXCam's powerful features to get more insights into your app's user experience.
 
 > 📜 **SDK Updates**
-> 
+>
 > To stay up to date with the latest SDK improvements, visit [this page](https://help.uxcam.com/hc/en-us/articles/4404509626509--SDK-UPDATES).
