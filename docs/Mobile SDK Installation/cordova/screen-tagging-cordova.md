@@ -31,7 +31,7 @@ While on native frameworks we recommend automatic tagging, Cordova requires manu
 UXCam.tagScreenName(screenName);
 ```
 
-**Example**: **The Recommended Place to Tag**  
+**Example**: **The Recommended Place to Tag**\
 To tag a screen in Cordova, place the above code where each screen view is triggered to ensure the screen name is updated accordingly.
 
 ```javascript
@@ -50,9 +50,9 @@ For more information, click the button below:
 [Tagging WebViews Documentation](/docs/web-view-tagging)
 
 > 👍 Summary:
-> 
+>
 > **Automatic Tagging:** Not available in Cordova due to the nature of how activities/screens are managed.
-> 
+>
 > **Manual Tagging:** For specific screen names or more meaningful tags, manual tagging is straightforward and can be added at any point where screen views are handled.
 
 With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
