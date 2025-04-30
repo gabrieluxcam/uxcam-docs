@@ -75,20 +75,20 @@ class _MyAppState extends State<MyApp> {
 ```
 
 > 👍 As Simple As That!
-> 
+>
 > This will complete the integration process.  
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background. 
-> 
+> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+>
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 
 > ❗️ Troubleshooting Data Delays
-> 
+>
 > If you have successfully integrated the Flutter SDK but are still seeing "Waiting for data to arrive" in your dashboard, here are some common causes and solutions:
-> 
-> - App State: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
-> - SDK Version: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version. 
-> - Check Logs: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
+>
+> * App State: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
+> * SDK Version: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
+> * Check Logs: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
 
 ## Next Steps ➡️
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
+You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up.
