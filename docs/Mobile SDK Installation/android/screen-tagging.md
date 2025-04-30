@@ -36,27 +36,13 @@ UXCam.startWithConfiguration(config);
 
 As for enabling or disabling Fragment Based Tagging, it can be done trough the options in your UXCam Dashboard:
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/07229bc9d7a26e06060c2acbd17e5204d40f73c933de16f20d85a2b24f1f8adf-image.png",
-        null,
-        null
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/07229bc9d7a26e06060c2acbd17e5204d40f73c933de16f20d85a2b24f1f8adf-image.png" />
 
 ## Manual Screen Tagging - For In Depth Customisation
 
 While we recommend automatic tagging, you may sometimes need more precise control over your screen names or want to ensure custom screens are clearly identified in your analytics. In these cases, you can use manual screen tagging.
 
-**Example**: **Tagging an Activity Manually**  
+**Example**: **Tagging an Activity Manually**\
 To tag a screen in an activity, use the following code in the `onCreate()` method of your activity:
 
 ```coffeescript Android
@@ -69,7 +55,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-**Example: Tagging a Fragment Manually**  
+**Example: Tagging a Fragment Manually**\
 Similarly, to tag a fragment, place the code in the `onResume()` method of the fragment:
 
 ```coffeescript Android
@@ -90,9 +76,9 @@ For more information, click the button below:
 [Tagging WebViews Documentation](/docs/web-view-tagging)
 
 > 👍 Summary:
-> 
-> **Automatic Tagging:** By default, UXCam automatically tags screens in Android apps, which we recommend as the simplest and most efficient approach.  
-> **Tagging Fragments: **Fragments can also be automatically tagged, but consider disabling this initially for more control.  
+>
+> **Automatic Tagging:** By default, UXCam automatically tags screens in Android apps, which we recommend as the simplest and most efficient approach.\
+> **Tagging Fragments:** Fragments can also be automatically tagged, but consider disabling this initially for more control.\
 > **Manual Tagging:** When you need specific names for screens or want to add more meaningful tags for your analytics, manual tagging is straightforward and can be done in the lifecycle methods like `onCreate()` for activities or `onResume()` for fragments.
 
 With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
