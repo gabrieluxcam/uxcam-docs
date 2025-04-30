@@ -13,7 +13,7 @@ next:
 So you've got your account set up, now let’s make sure your iOS app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
 
 > 🚧 Note for SwiftUI developers:
-> 
+>
 > If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/v1.1/docs/swiftui).
 
 # What Does a Successful Integration Look Like?
@@ -30,15 +30,15 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 #### Cocoapods
 
-- Add UXCam to your `Podfile`:
+* Add UXCam to your `Podfile`:
 
 `pod 'UXCam'`
 
-- Run <code>pod install</code> in the project directory to download dependency.
+* Run <code>pod install</code> in the project directory to download dependency.
 
 #### Swift Package Manager
 
-- If you prefer Swift Package Manager, you can add UXCam using the following [URL:](https://github.com/uxcam/uxcam-ios-sdk)
+* If you prefer Swift Package Manager, you can add UXCam using the following [URL:](https://github.com/uxcam/uxcam-ios-sdk)
 
 `https://github.com/uxcam/uxcam-ios-sdk`
 
@@ -73,34 +73,32 @@ UXCam.start(with: configuration)
 
 ## Available Configuration Options:
 
-<p style="font-size: 18px"><code class="language-java">enableAutomaticScreenNameTagging
-          </code></br>
-<em style="font-size: 13px">Used to disable automatic screen tagging if manual tagging of the screens will be done, default is true</em></p>
+<p style={{ fontSize: "18px" }}><code class="language-java">enableAutomaticScreenNameTagging</code></br>
+<em style={{ fontSize: "13px" }}>Used to disable automatic screen tagging if manual tagging of the screens will be done, default is true</em></p>
 
-<p style="font-size: 18px"><code class="language-java">enableAdvancedGestureRecognition</code></br>
-<em style="font-size: 13px">Control the gesture recognizers used by UXCam. Set TRUE to enable the full range of gesture recognizers (the default) or FALSE to limit it to basic gestures.</em></p>
+<p style={{ fontSize: "18px" }}><code class="language-java">enableAdvancedGestureRecognition</code></br>
+<em style={{ fontSize: "13px" }}>Control the gesture recognizers used by UXCam. Set TRUE to enable the full range of gesture recognizers (the default) or FALSE to limit it to basic gestures.</em></p>
 
-<p style="font-size: 18px"><code class="language-java">enableCrashHandling:
-</code></br>
-<em style="font-size: 13px">Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em></p>
+<p style={{ fontSize: "18px" }}><code class="language-java">enableCrashHandling:</code></br>
+<em style={{ fontSize: "13px" }}>Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em></p>
 
 > 👍 As Simple As That!
-> 
-> This will complete the integration process.  
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background. 
-> 
+>
+> This will complete the integration process.\
+> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+>
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 
 <br />
 
 > 📘 Additional Resources
-> 
-> **[SDK Updates](https://developer.uxcam.com/docs/changelog): **Stay up to date with the latest features and improvements.
-> 
+>
+> **[SDK Updates](https://developer.uxcam.com/docs/changelog):** Stay up to date with the latest features and improvements.
+>
 > **[Tailor for Success](https://help.uxcam.com/hc/en-us/articles/360022226651-How-to-customize-the-UXCam-account):** Learn how to use advanced features such as identifying users, tagging sessions, or hiding sensitive views.
 
 <br />
 
 ## Next Steps ➡️
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
+You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up.
