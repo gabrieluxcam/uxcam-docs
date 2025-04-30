@@ -11,7 +11,7 @@ next:
   description: ''
 ---
 > 🚧 Important
-> 
+>
 > Please keep in mind that this feature is only available in versions 2.3.0+ of the UXCam Flutter SDK
 
 ## What is it and what does it do?
@@ -34,7 +34,7 @@ What do you need to do in order to implement this new feature?
 
 <pre><code class="language-java">import 'package:flutter_uxcam/flutter_uxcam.dart';</code></pre>
 
-2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).  **
+2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).**
 
 <pre><code class="language-java">const OccludeWrapper(     
    child:
@@ -53,4 +53,4 @@ const OccludeWrapper(
 
 3. **Now you are all set, you should start getting video recordings with your widgets being occluded properly.**
 
-In case you have any questions, please feel free to favourite support team at [team@uxcam.com.](<>)
+In case you have any questions, please feel free to favourite support team at [team@uxcam.com](mailto:team@uxcam.com).
