@@ -14,7 +14,7 @@ metadata:
 next:
   description: ''
 ---
-In this section, we focus on how to handle sensitive data within your Flutter application using UXCam’s features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
+In this section, we focus on how to handle sensitive data within your Flutter application using UXCam's features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
 
 UXCam ensures that as a controller you can use our platform and fulfil your obligations under GDPR. However, if you collect any **PII data** in your app such as email address, phone, or credit card number you should use our API to hide it.
 
@@ -27,7 +27,7 @@ You can choose to hide:
 
 Sensitive information is hidden directly on the device by applying red boxes or blurring, meaning this data is never sent to UXCam servers. Ensure that all sensitive data is hidden before releasing your app to production.
 
-> **Note**: When occluding sensitive data, you still have the option to record gestures for those views or screens. If you’re occluding passwords or other sensitive inputs, we recommend also disabling gesture recording.
+> **Note**: When occluding sensitive data, you still have the option to record gestures for those views or screens. If you're occluding passwords or other sensitive inputs, we recommend also disabling gesture recording.
 
 ***
 
@@ -43,36 +43,41 @@ By default, Flutter does not enable occlusion out of the box. Developers need to
 
 With Flutter, occluding specific widgets such as Column or ListView was previously challenging. The  `OccludeWrapper` feature makes it easy to hide sensitive widgets from video recordings.
 
-Now you might be wondering, how does it work? Well, it's pretty simple. Decide which is the widget that you want to occlude and pass it as a child to our **OccludeWrapper** container. 
+Now you might be wondering, how does it work? Well, it's pretty simple. Decide which is the widget that you want to occlude and pass it as a child to our **OccludeWrapper** container.
 
 ## Things to note
 
-It’s pretty important to mention that our SDK is the one in charge of occluding these elements, so the occlusion settings will happen in the device before the session gets uploaded to the UXCam servers. 
+It's pretty important to mention that our SDK is the one in charge of occluding these elements, so the occlusion settings will happen in the device before the session gets uploaded to the UXCam servers.
 
 ## Example: How to Use OccludeWrapper
 
-What do you need to do in order to implement this new feature? 
+What do you need to do in order to implement this new feature?
 
 1. **First of all (IMPORTANT), import the library that contains this new wrapper**
 
-<pre><code class="language-dart">import 'package:flutter_uxcam/flutter_uxcam.dart';</code></pre>
+```dart
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+```
 
 2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).**
 
-<pre><code class="language-dart">const OccludeWrapper(     
+```dart
+const OccludeWrapper(
    child:
    // Here goes your widget
-),</code></pre>
+),
+```
 
-Example on how to get a Text widget occluded  
+Example on how to get a Text widget occluded
 
-<pre><code class="language-dart">//Example  
+```dart
+//Example
 const OccludeWrapper(  
    child: Text(  
        'Sensitive data that will be occluded by the Wrapper',  
     ),  
 ),  
-</code></pre>
+```
 
 3. **Now you are all set, you should start getting video recordings with your widgets being occluded properly.**
 
@@ -84,9 +89,7 @@ You can add screen level occlusion rules to your app directly from your dashboar
 
 From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
 
-<Image alt="Blur option will also enable you to select the blur radius (strength) once selected." align="center" src="https://files.readme.io/751b737-image.png">
-  Blur option will also enable you to select the blur radius (strength) once selected.
-</Image>
+<Image align="center" alt="Blur option will also enable you to select the blur radius (strength) once selected." border={false} caption="Blur option will also enable you to select the blur radius (strength) once selected." src="https://files.readme.io/751b737-image.png" />
 
 ### Screen Specific Occlusion Rules from Dashboard
 
@@ -96,9 +99,11 @@ You can also customise which screens you want to apply occlusion rules to, and c
 
 <br />
 
-> 📘
+> 📘 **Note**
 >
-> Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option 
+> **Note**
+>
+> Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option
 >
 > ![](https://files.readme.io/33bf4ad-image.png)
 
@@ -118,13 +123,13 @@ You can also customise which screens you want to apply occlusion rules to, and c
 
 # Occlusion Setup from SDK Code
 
-If you prefer to manually handle occlusions in your app or [occlude specific views](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view) instead of entire screens, read below for guidance on how to set it up. 
+If you prefer to manually handle occlusions in your app or [occlude specific views](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view) instead of entire screens, read below for guidance on how to set it up.
 
 ## Occlude The Entire Screen with Overlay
 
 You can configure different overlay options with the following:
 
-```coffeescript Flutter
+```dart
 import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
 
 FlutterUXOverlay overlay = FlutterUXOverlay(
@@ -138,38 +143,36 @@ FlutterUxcam.removeOcclusion(overlay); //To remove overlay
 
 **Available overlay options are:**
 
-<p style="font-size: 17px"><code class="language-java">withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code></br>
-<em style="font-size: 12px">Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.</em></p>
+<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
+Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.
 
-<p style="font-size: 17px"><code class="language-java">screens(List < String > screens)</code> - Use it in the configuration object</br>
-<em style="font-size: 12px">Allows you to define the screens where the overlay is to either be applied or not, depending on the value passed to <strong>excludeMentionedScreens(boolean excludeMentionedScreens)</strong>.
+<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
+Allows you to define the screens where the overlay is to either be applied or not, depending on the value passed to <strong>excludeMentionedScreens(boolean excludeMentionedScreens)</strong>.
 
 By default, if no screens are passed, the overlay is applied to all the screens unless explicitly removed. This acts as a global setting and will override all other occlusion settings defined for all screens. The occlusion must be removed to revert this action.
 
-If screens are passed, you have the ability to either apply overlay on the mentioned screens or to exclude the mentioned screens from being overlayed.</em></p>
+If screens are passed, you have the ability to either apply overlay on the mentioned screens or to exclude the mentioned screens from being overlayed.
 
-<p style="font-size: 17px"><code class="language-java">excludeMentionedScreens(boolean excludeMentionedScreens)</code></br>
-<em style="font-size: 12px">This option should be used in conjunction with <strong>screens(List < String > screens)</strong>.
+<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
+This option should be used in conjunction with <strong>screens(List screens)</strong>.
 
- If the passed in value is true, it tells the SDK to exclude the mentioned screens from occlusion, while applying the occlusion to the rest of the screens in the app. 
+If the passed in value is true, it tells the SDK to exclude the mentioned screens from occlusion, while applying the occlusion to the rest of the screens in the app.
 
 If the passed in value is false, it tells the SDK to apply occlusion only to the screens that have been passed.
 
-Default value is false.</em></p>
+Default value is false.
 
-<Image title="Overlay.png" alt={2534} align="center" width="80%" src="https://files.readme.io/095be49-Overlay.png">
-  You'll see the desired screen completely hidden while your users navigate through it.
-</Image>
+<Image align="center" alt="2534" border={false} caption="You'll see the desired screen completely hidden while your users navigate through it." title="Overlay.png" src="https://files.readme.io/095be49-Overlay.png" width="80%" />
 
 ## Blur The Entire Screen
 
 Blur is an occlusion API that allows you to blur screen records of screens. This lets you obtain information regarding the state of the screen and user interaction, while also maintaining privacy in sensitive screens.
 
-This is useful to set all the occlusion/Blur from one place of the application without having to set it individually in different screens. 
+This is useful to set all the occlusion/Blur from one place of the application without having to set it individually in different screens.
 
-You can configure different options using the following: 
+You can configure different options using the following:
 
-```coffeescript Flutter
+```dart
 //Import this on the screen you are trying to Blur
 import 'package:flutter_uxcam/uxblur.dart';
 
@@ -185,27 +188,23 @@ FlutterUxcam.removeOcclusion(blur); //To remove blur
 
 **Available blur options are:**
 
-<p style="font-size: 17px"><code class="language-java">blurRadius(int blurRadius)</code></br>
-<em style="font-size: 12px">This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be. </em></p>
+<p style={{fontSize: "17px"}}><code>blurRadius(int blurRadius)</code><br /></p>
+This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be.
 
-<p style="font-size: 17px"><code class="language-java">withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code></br>
-<em style="font-size: 12px">Same as overlay. Please refer to overlay section.</em></p>
+<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
+Same as overlay. Please refer to overlay section.
 
-<p style="font-size: 17px"><code class="language-java">screens(List < String > screens)</code> - Use it in the configuration object</br>
-<em style="font-size: 12px">Same as overlay. Please refer to overlay section.</em></p>
+<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
+Same as overlay. Please refer to overlay section.
 
-<p style="font-size: 17px"><code class="language-java">excludeMentionedScreens(boolean excludeMentionedScreens)</code></br>
-<em style="font-size: 12px">Same as overlay. Please refer to overlay section.</em></p>
+<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
+Same as overlay. Please refer to overlay section.
 
-<Image title="UXCam Dashboard - 24 May 2022 (1) (1).gif" alt={736} align="center" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif">
-  You'll see your desired screens with a blur on top.
-</Image>
+<Image align="center" alt="736" border={false} caption="You'll see your desired screens with a blur on top." title="UXCam Dashboard - 24 May 2022 (1) (1).gif" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif" />
 
 **Examples on blur radius property customization:**
 
-<Image alt="Blur radius customization examples" align="center" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png">
-  Blur radius customisation examples
-</Image>
+<Image align="center" alt="Blur radius customization examples" border={false} caption="Blur radius customisation examples" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png" />
 
 <br />
 
@@ -217,7 +216,7 @@ The API parameters are:
 
 **sensitiveView**: A widget or view object that contains sensitive information.
 
-```coffeescript Flutter
+```dart
 const OccludeWrapper(     
    child:
    // Here goes your widget that you want to occlude
@@ -234,21 +233,21 @@ const OccludeWrapper(
 
 It's also possible to pass a list of occlusions (except Sensitive View) to be applied during configuration.  For example:
 
-```java Flutter
+```dart
 import 'package:flutter_uxcam/uxblur.dart'; //Import this for Blurring
 import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
 
 FlutterUXBlur blur = FlutterUXBlur(
    	blurRadius: 10, 
    	blurType: BlurType.gaussian, 
-	hideGestures: true 
-	screens: [“LoginScreen”, “PaymentScreen”] 
+	hideGestures: true, 
+	screens: ["LoginScreen", "PaymentScreen"] 
 );
 
 FlutterUXOverlay overlay = FlutterUXOverlay(
-   color: Colors.red 
-   hideGestures: true 
-   screens: [“LoginScreen”, “PaymentScreen”]
+   color: Colors.red, 
+   hideGestures: true, 
+   screens: ["LoginScreen", "PaymentScreen"]
 );
 
 FlutterUxConfig config = FlutterUxConfig(
@@ -271,4 +270,4 @@ For more information, click the button below:
 
 # Summary:
 
-Using UXCam’s occlusion features, you can ensure sensitive information in your Flutter app is hidden before it is sent to our servers. Whether using the OccludeWrapper widget or setting screen-level occlusions via the UXCam dashboard, these tools provide flexibility to meet privacy standards.
+Using UXCam's occlusion features, you can ensure sensitive information in your Flutter app is hidden before it is sent to our servers. Whether using the OccludeWrapper widget or setting screen-level occlusions via the UXCam dashboard, these tools provide flexibility to meet privacy standards.
