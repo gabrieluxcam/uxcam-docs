@@ -26,41 +26,13 @@ To ensure proper crash reporting with UXCam, you need to upload dSYM files. Foll
 1. In Xcode, select your project from the **Project Navigator**.
 2. Click on the application target.
 3. Select the **Build Settings** tab in the Settings editor.
-4. Change **DEBUG_INFORMATION_FORMAT** to **DWARF with dSYM File**.
+4. Change **DEBUG\_INFORMATION\_FORMAT** to **DWARF with dSYM File**.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/482dd7ef5b062815fe8a03040b467b24d27bb79afc9fa1ca38978d34cc183714-Uploading_dSYM_Symbols_-_Google_Docs.jpg",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/482dd7ef5b062815fe8a03040b467b24d27bb79afc9fa1ca38978d34cc183714-Uploading_dSYM_Symbols_-_Google_Docs.jpg" />
 
+5. Set **ENABLE\_USER\_SCRIPT\_SANDBOXING** in your Xcode project settings to **NO**.
 
-5. Set **ENABLE_USER_SCRIPT_SANDBOXING** in your Xcode project settings to **NO**.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7bedf23ccfb03f0d83c2bd4407f65f30793f29f1b68abbf12df82dd314607c43-dsym2.jpg",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/7bedf23ccfb03f0d83c2bd4407f65f30793f29f1b68abbf12df82dd314607c43-dsym2.jpg" />
 
 ## Step 3: Add a Run Script to Build Phase
 
@@ -68,21 +40,7 @@ To ensure proper crash reporting with UXCam, you need to upload dSYM files. Foll
 2. Click the **+** icon in the upper left corner of the main panel.
 3. Select **New Run Script Phase** from the dropdown.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/eef86ca61a8d6462cccc22235e161d6a960d64b8545d64a3b0b4dde78e20db71-dsym3.jpg",
-        null,
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/eef86ca61a8d6462cccc22235e161d6a960d64b8545d64a3b0b4dde78e20db71-dsym3.jpg" />
 
 4. In the script box, add the following lines based on your dependency management method:
 
