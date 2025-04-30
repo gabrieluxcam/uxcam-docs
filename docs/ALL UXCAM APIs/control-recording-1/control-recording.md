@@ -46,8 +46,8 @@ UXCam automatically stops a session when the app goes to the background. Using t
 
 This is useful for:
 
-- Recording a specific flow without sending the application to the background.
-- Sending data (events, gestures, etc.) in a session without the closure of an app.
+* Recording a specific flow without sending the application to the background.
+* Sending data (events, gestures, etc.) in a session without the closure of an app.
 
 ```swift iOS
 UXCam.stopSessionAndUploadData()
@@ -83,8 +83,8 @@ With this API you are going to be able to get the verification status when UXCam
 
 By getting this you are going to be able to:
 
-- Send events to UXCam as soon as the session starts.
-- Log the current UXCam session URL or the user URL to other 3rd party services such as Firebase.
+* Send events to UXCam as soon as the session starts.
+* Log the current UXCam session URL or the user URL to other 3rd party services such as Firebase.
 
 ```text iOS
 Doesn't exist on iOS - use startWithKey with completion handler.
