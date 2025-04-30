@@ -10,11 +10,11 @@ metadata:
 next:
   description: ''
 ---
-So you've got your account set up, now let’s make sure your Flutter app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
+So you've got your account set up, now let's make sure your Flutter app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
 
 ## What Does a Successful Integration Look Like?
 
-With a solid integration, you’ll have a complete picture of how users interact with your app. From screen journeys and user behaviours to session replays and user properties, you’ll be able to understand and enhance every aspect of your product’s user experience. Follow along with this quick guide, and you’ll be up and running in no time.
+With a solid integration, you'll have a complete picture of how users interact with your app. From screen journeys and user behaviours to session replays and user properties, you'll be able to understand and enhance every aspect of your product's user experience. Follow along with this quick guide, and you'll be up and running in no time.
 
 ### Quick Start: Only a Couple of Lines of Code
 
@@ -25,20 +25,25 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 #### Flutter Integration
 
 1. Add the UXCam package to your Flutter app:
-   <pre><code class="language-objectivec">flutter pub add flutter_uxcam</code></pre>
+   ```bash
+   flutter pub add flutter_uxcam
+   ```
 
 2. This will add a line similar to this to your package's pubspec.yaml file
-   <pre><code class="language-objectivec">dependencies:
+   ```yaml
+   dependencies:
      flutter_uxcam: ^x.x.x
-   </code></pre>
+   ```
 
 3. Import UXCam in your app:
-   <pre><code class="language-objectivec">import 'package:flutter_uxcam/flutter_uxcam.dart';</code></pre>
+   ```dart
+   import 'package:flutter_uxcam/flutter_uxcam.dart';
+   ```
 
-4. Initialise UXCam:  
+4. Initialise UXCam:\
    To ensure UXCam is properly started, it's recommended to initialize it within the initState method of a StatefulWidget. This ensures that the SDK starts as soon as the widget is created.
 
-```coffeescript Flutter
+```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_uxcam/flutter_uxcam.dart';
 
@@ -76,7 +81,7 @@ class _MyAppState extends State<MyApp> {
 
 > 👍 As Simple As That!
 >
-> This will complete the integration process.  
+> This will complete the integration process.\
 > Your session will be shown on the dashboard within a few seconds after the app goes in the background.
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
@@ -91,4 +96,4 @@ class _MyAppState extends State<MyApp> {
 
 ## Next Steps ➡️
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up.
+You've successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let's go further into setting things up.
