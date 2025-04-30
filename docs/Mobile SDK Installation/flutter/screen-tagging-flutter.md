@@ -24,7 +24,7 @@ While native frameworks may offer automatic tagging, in Flutter, the architectur
 
 > **IMPORTANT**: Please make sure to set `enableAutomaticScreenNameTagging`: **`false`** for better results
 
-**Tagging a Screen Manually: One Simple Line of Code: **
+**Tagging a Screen Manually: One Simple Line of Code:**
 
 In Flutter, tagging a screen manually is straightforward. You can use the following line of code to tag a screen:
 
@@ -71,18 +71,18 @@ class _HomeScreenState extends State<HomeScreen> {
 This approach ensures that every time a user navigates back to this screen, it's correctly tagged in your analytics.
 
 > 👍 Summary:
-> 
-> - **Automatic Tagging Should be Off**: Due to how Flutter manages navigation, automatic tagging may not always be reliable.
-> - **Manual Tagging**: Use lifecycle methods like initState() or navigation listeners to tag screens accurately every time they are shown.
+>
+> * **Automatic Tagging Should be Off**: Due to how Flutter manages navigation, automatic tagging may not always be reliable.
+> * **Manual Tagging**: Use lifecycle methods like initState() or navigation listeners to tag screens accurately every time they are shown.
 
 By taking this approach, you can make data-driven decisions and gain actionable insights into how users navigate through your app.
 
 # Flutter Automatic Screen Tagging:
 
 > 🚧 Important:
-> 
+>
 > Flutter SDK version 2.2.2 introduces the option to add tagging from the Flutter side of your app. This feature is optional and still under active development, so any feedback during testing is highly appreciated.
-> 
+>
 > Note: This feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. However, ongoing work on Navigator 2.0 aims to address these issues in the future.
 
 ## Adding `FlutterUxcamNavigatorObserver` to Your App:
@@ -91,14 +91,13 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
 
 ### Steps to Integrate FlutterUxcamNavigatorObserver:
 
-1. **Import the SDK:**  
-   In your Dart file, import the `flutter_uxcam` package:  
+1. **Import the SDK:**\
+   In your Dart file, import the `flutter_uxcam` package:\
    `import 'package:flutter_uxcam/flutter_uxcam.dart';`
-2. **Disable Automatic Screen Name Tagging**  
+2. **Disable Automatic Screen Name Tagging**\
    Ensure the configuration parameter `enableAutomaticScreenNameTagging` is set to `false`.
 3. **Add the Navigation Observer**
-   - **Using Navigator 1.0:**  
-     <br />  
+   * **Using Navigator 1.0:**\ <br />\
      Add the `FlutterUxcamNavigatorObserver` to the `navigatorObservers` of your \`MaterialApp
      ```coffeescript Flutter
      MaterialApp(
@@ -109,8 +108,7 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
        ...
      )
      ```
-   - **Using Navigator 2.0:**  
-     <br />  
+   * **Using Navigator 2.0:**\ <br />\
      Add it to the observers for your router. Below is an example using GoRouter:
      ```coffeescript Flutter
      final GoRouter router = GoRouter(
@@ -121,13 +119,12 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
        ...
      );
      ```
-4. **Add Names to Your Routes**  
-   <br />  
+4. **Add Names to Your Routes**\ <br />\
    It is recommended to add names to your routes to ensure clear tagging. If no names are provided, routes may show up as default values such as '/'.
 
 ### Additional Considerations for Flutter
 
-**Navigation Events**: If you're using a navigation package like flutter_bloc or provider, ensure that screen tagging is part of the navigation logic. This guarantees that every screen transition is tracked properly.
+**Navigation Events**: If you're using a navigation package like flutter\_bloc or provider, ensure that screen tagging is part of the navigation logic. This guarantees that every screen transition is tracked properly.
 
 **Consistent Naming**: Be consistent with your screen names across the app. This will make analyzing data in the UXCam dashboard more intuitive and prevent confusion.
 
