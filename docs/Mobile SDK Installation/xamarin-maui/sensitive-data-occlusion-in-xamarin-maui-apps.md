@@ -20,9 +20,9 @@ UXCam ensures that as a controller, you can use our platform and fulfill your ob
 
 You can choose to hide:
 
-- **Texts**: When you only collect PII data with text fields.
-- **Screen Views**: When you need to hide a specific section of your screen.
-- **Screens**: When you need to hide the whole screen, e.g., payment screens.
+* **Texts**: When you only collect PII data with text fields.
+* **Screen Views**: When you need to hide a specific section of your screen.
+* **Screens**: When you need to hide the whole screen, e.g., payment screens.
 
 Sensitive information will be hidden under red boxes or blurred screens on the device before rendering the video and therefore never sent to UXCam. Make sure that all this information is hidden before releasing your app to production to ensure your users’ PII is never recorded.
 
@@ -34,11 +34,11 @@ Sensitive information will be hidden under red boxes or blurred screens on the d
 
 **iOS**
 
-- Occlusion of text fields based on the `UITextContentType` property. If the text field has any of `password`, `creditcardnumber`, `newpassword`, or `onetimecode`, it will be occluded by default, regardless of if it’s shown at some point in the app.
+* Occlusion of text fields based on the `UITextContentType` property. If the text field has any of `password`, `creditcardnumber`, `newpassword`, or `onetimecode`, it will be occluded by default, regardless of if it’s shown at some point in the app.
 
 **Android**
 
-- Password fields with `android:inputType="textPassword"` or `InputType.TYPE_TEXT_VARIATION_PASSWORD` are occluded.
+* Password fields with `android:inputType="textPassword"` or `InputType.TYPE_TEXT_VARIATION_PASSWORD` are occluded.
 
 ***
 
@@ -65,24 +65,24 @@ You can also choose to occlude all text input fields on specific or multiple scr
 ![UXCam Dashboard - Occlude Text Inputs](https://files.readme.io/253cbf0-small-Staging_-_UXCam_Dashboard.png)
 
 > 📜 **Additionally**, you can opt to record gestures on all blurred/occluded screens by toggling on the option:
-> 
+>
 > ![](https://files.readme.io/33bf4ad-image.png)
 
 ## Dashboard Occlusion Limitations
 
 ### Occlusion Priority
 
-- Screen-specific overlay from Dashboard.
-- Screen-specific blur from Dashboard.
-- Global blur/overlay from Dashboard applied to all screens.
-- Screen-specific overlay from SDK.
-- Screen-specific blur from SDK.
-- Global blur/overlay from SDK applied to all screens.
-- Global blur/overlay from SDK with record exception screens.
+* Screen-specific overlay from Dashboard.
+* Screen-specific blur from Dashboard.
+* Global blur/overlay from Dashboard applied to all screens.
+* Screen-specific overlay from SDK.
+* Screen-specific blur from SDK.
+* Global blur/overlay from SDK applied to all screens.
+* Global blur/overlay from SDK with record exception screens.
 
 ### Limitations
 
-- Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view)).
+* Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view)).
 
 # Occlusion Setup from SDK Code
 
@@ -114,10 +114,10 @@ UXCam.removeOcclusion(blur); // Remove blur
 
 **Available Blur Options Are:**
 
-- `blurRadius(int blurRadius)`: Define the blur radius to be used. The higher the value, the more blurred the resulting video will be.
-- `withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)`: Configure whether to capture gestures in the occluded screen or not. Default is true, so gestures are not captured.
-- `screens(List<String> screens)`: Define the screens where the overlay is applied or excluded, depending on `excludeMentionedScreens`.
-- `excludeMentionedScreens(boolean excludeMentionedScreens)`: Use in conjunction with `screens`. If true, exclude the mentioned screens from occlusion while applying occlusion to the rest. Default is false.
+* `blurRadius(int blurRadius)`: Define the blur radius to be used. The higher the value, the more blurred the resulting video will be.
+* `withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)`: Configure whether to capture gestures in the occluded screen or not. Default is true, so gestures are not captured.
+* `screens(List<String> screens)`: Define the screens where the overlay is applied or excluded, depending on `excludeMentionedScreens`.
+* `excludeMentionedScreens(boolean excludeMentionedScreens)`: Use in conjunction with `screens`. If true, exclude the mentioned screens from occlusion while applying occlusion to the rest. Default is false.
 
 ## Hide Sensitive View
 
