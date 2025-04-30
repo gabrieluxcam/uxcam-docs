@@ -24,13 +24,13 @@ While on native frameworks we recommend automatic tagging, React Native does not
 
 <br />
 
-**As simple as a line of code: **
+**As simple as a line of code:**
 
 ```coffeescript React Native
 RNUxcam.tagScreenName: (screenName: string) => void
 ```
 
-**Example**: **The Recommended Place to Tag**  
+**Example**: **The Recommended Place to Tag**\
 To tag a screen in React Native, we recommend to use the following code in the `useFocusEffect()` method of your component:
 
 ```coffeescript Android
@@ -39,7 +39,7 @@ To tag a screen in React Native, we recommend to use the following code in the `
   });
 ```
 
-**Example: Tagging a Fragment Manually**  
+**Example: Tagging a Fragment Manually**\
 Similarly, to tag a fragment, place the code in the `onResume()` method of the fragment:
 
 <br />
@@ -53,9 +53,9 @@ For more information, click the button below:
 [Tagging WebViews Documentation](/docs/web-view-tagging)
 
 > 👍 Summary:
-> 
+>
 > **Automatic Tagging:** Inconsistent and limited due to React Native's handling of activities/controllers
-> 
+>
 > **Manual Tagging:** You need specific names for screens or want to add more meaningful tags for your analytics, manual tagging is straightforward and can be done in the lifecycle methods like  `useFocusEffect` to make sure it's tagged every time it shows up
 
 With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
