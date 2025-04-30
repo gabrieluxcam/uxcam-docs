@@ -59,7 +59,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 If you're using Angular or Vue with your NativeScript project, here's how you should integrate UXCam:
 
-- **Vue Example**:
+* **Vue Example**:
 
   ```typescript Vue
   export default Vue.extend({
@@ -80,7 +80,7 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
   });
   ```
 
-- **Angular Example**:
+* **Angular Example**:
 
   ```typescript Angular
   import { Component, OnInit } from '@angular/core';
@@ -103,10 +103,10 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
   ```
 
 > 👍 **As Simple As That!**
-> 
-> This will complete the integration process.  
+>
+> This will complete the integration process.\
 > Your session will be shown on the dashboard within a few seconds after the app goes into the background.  
-> 
+>
 > We recommend that after you've set this up and have reviewed some sessions from your tests, you explore the customisation features UXCam offers. Let's move on to the next steps!
 
 ## Next Steps ➡️
