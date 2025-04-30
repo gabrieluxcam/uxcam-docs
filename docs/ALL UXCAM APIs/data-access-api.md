@@ -20,8 +20,8 @@ Go ahead and try out our REST APIs with credentials on Postman)
 
 Postman enables you to test and utilize UXCam's Data Access APIs without requiring a developer account. You can set up and send requests and receive responses for the provided Data Access APIs.
 
-> 📘 
-> 
+> 📘
+>
 > To check the Postman technical documentation, please visit [this](https://documenter.getpostman.com/view/9127779/2s935it5r2) site
 
 ### Steps to set up postman for UXCAM's Data Access APIs collection:)
@@ -36,8 +36,8 @@ Postman enables you to test and utilize UXCam's Data Access APIs without requiri
 
 To use the UXCam Data Access APIs, you will need to have two authentication parameters:
 
-- App ID: This is the ID of the app you created on the UXCam Dashboard
-- API Key: This is a randomly generated authentication key to validate UXcam Data Access APIs only.
+* App ID: This is the ID of the app you created on the UXCam Dashboard
+* API Key: This is a randomly generated authentication key to validate UXcam Data Access APIs only.
 
 These parameters can be obtained by following the instructions below.
 
