@@ -16,9 +16,9 @@ An entity that engages with an application is referred to as a user. A user can 
 
 UXCam Data Access API provides two endpoint URLs for retrieving both qualitative (List User) and quantitative (Analyze User) data for users. The endpoint URLs are:
 
-List User: <https://api.uxcam.com/v2/user>
+List User: [https://api.uxcam.com/v2/user](https://api.uxcam.com/v2/user)
 
-Analyze User: <https://api.uxcam.com/v2/user/analytics>
+Analyze User: [https://api.uxcam.com/v2/user/analytics](https://api.uxcam.com/v2/user/analytics)
 
 ## User Data Attributes
 
@@ -26,102 +26,270 @@ For UXCam Data Access user APIs, all valid attributes that can be used for perfo
 
 ### Users Attribute Table
 
-| Attribute Category | Attribute Data Type | Attribute Name                  | Description                                                                                                                                                                                              |
-| ------------------ | ------------------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DateTime           | DateTime            | date_range                      | DateTime when the user used the app                                                                                                                                                                      |
-| DateTime           | DateTime            | user_first_seen_on              | DateTime when the user used the app first                                                                                                                                                                |
-| Device             | string              | app_version                     | App version on the device                                                                                                                                                                                |
-| Device             | string              | device_class                    | Class of the device given by the device size                                                                                                                                                             |
-| Device             | string              | device_id                       | Device Ids are randomly generated unique ids for user devices. For more detail [Link]                                                                                                                    |
-| Device             | string              | device_manufacturer             | Device manufacturers recorded within a given user. E.g. Samsung and motorola                                                                                                                             |
-| Device             | string              | device_model                    | Device name                                                                                                                                                                                              |
-| Device             | string              | device_os_version               | Device OS version recorded within a given user                                                                                                                                                           |
-| Device             | string              | device_platform                 | Platform (iOS or Android) of the user. The value is set to 1 for android users having a device OS as an ANDROID platform, and the value is set to 2 for iOS users having a device OS as an iOS platform. |
-| Device             | string              | sdk_version                     | UXCam SDK version on app                                                                                                                                                                                 |
-| Engagement         | Integer             | user_gesture_count              | Total number of gestures by the user                                                                                                                                                                     |
-| Engagement         | Integer             | user_rage_gesture_count         | Total number of rage gestures on the user                                                                                                                                                                |
-| Engagement         | Integer             | user_responsive_gesture_count   | Total number of responsive gestures by the user                                                                                                                                                          |
-| Engagement         | Integer             | user_session_screen_count       | Total number of screens visited by the user                                                                                                                                                              |
-| Engagement         | Integer             | user_session_duration           | Total time spent in seconds by the user                                                                                                                                                                  |
-| Engagement         | Integer             | user_unresponsive_gesture_count | Total number of unresponsive gestures by the user                                                                                                                                                        |
-| Session Property   | string              | event_name                      | Event triggered by users on sessions                                                                                                                                                                     |
-| Session Property   | list                | session_screen_list             | List of screens visited during the session                                                                                                                                                               |
-| Session Property   | DateTime String     | session_uploaded_month          | Distribution of users by month (relevant to grouping parameter only)                                                                                                                                     |
-| Session Property   | DateTime String     | session_uploaded_week           | Distribution of users by week(Mon-Sun) (relevant to grouping parameter only)                                                                                                                             |
-| Session Property   | DateTime String     | session_uploadedon_day          | Distribution of users by days (relevant to grouping parameter only)                                                                                                                                      |
-| User               | string              | device_city                     | Country city name based on device IP address. For more details on IP Address [Link]                                                                                                                      |
-| User               | string              | device_country                  | Country name based on device IP address                                                                                                                                                                  |
-| User               | JSON                | user_custom_property            | Additional properties attached for users on sessions                                                                                                                                                     |
-| User               | string              | user_name                       | Randomly assigned alias for users. Note: This is not the real user name, alias, or ID. For more detail [Link]                                                                                            |
-| User               | string              | uxcamuserid                     | UXCam User ID of user                                                                                                                                                                                    |
+| Attribute Category | Attribute Data Type | Attribute Name                     | Description                                                                                                                                                                                              |
+| ------------------ | ------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DateTime           | DateTime            | date\_range                        | DateTime when the user used the app                                                                                                                                                                      |
+| DateTime           | DateTime            | user\_first\_seen\_on              | DateTime when the user used the app first                                                                                                                                                                |
+| Device             | string              | app\_version                       | App version on the device                                                                                                                                                                                |
+| Device             | string              | device\_class                      | Class of the device given by the device size                                                                                                                                                             |
+| Device             | string              | device\_id                         | Device Ids are randomly generated unique ids for user devices. For more detail [Link]                                                                                                                    |
+| Device             | string              | device\_manufacturer               | Device manufacturers recorded within a given user. E.g. Samsung and motorola                                                                                                                             |
+| Device             | string              | device\_model                      | Device name                                                                                                                                                                                              |
+| Device             | string              | device\_os\_version                | Device OS version recorded within a given user                                                                                                                                                           |
+| Device             | string              | device\_platform                   | Platform (iOS or Android) of the user. The value is set to 1 for android users having a device OS as an ANDROID platform, and the value is set to 2 for iOS users having a device OS as an iOS platform. |
+| Device             | string              | sdk\_version                       | UXCam SDK version on app                                                                                                                                                                                 |
+| Engagement         | Integer             | user\_gesture\_count               | Total number of gestures by the user                                                                                                                                                                     |
+| Engagement         | Integer             | user\_rage\_gesture\_count         | Total number of rage gestures on the user                                                                                                                                                                |
+| Engagement         | Integer             | user\_responsive\_gesture\_count   | Total number of responsive gestures by the user                                                                                                                                                          |
+| Engagement         | Integer             | user\_session\_screen\_count       | Total number of screens visited by the user                                                                                                                                                              |
+| Engagement         | Integer             | user\_session\_duration            | Total time spent in seconds by the user                                                                                                                                                                  |
+| Engagement         | Integer             | user\_unresponsive\_gesture\_count | Total number of unresponsive gestures by the user                                                                                                                                                        |
+| Session Property   | string              | event\_name                        | Event triggered by users on sessions                                                                                                                                                                     |
+| Session Property   | list                | session\_screen\_list              | List of screens visited during the session                                                                                                                                                               |
+| Session Property   | DateTime String     | session\_uploaded\_month           | Distribution of users by month (relevant to grouping parameter only)                                                                                                                                     |
+| Session Property   | DateTime String     | session\_uploaded\_week            | Distribution of users by week(Mon-Sun) (relevant to grouping parameter only)                                                                                                                             |
+| Session Property   | DateTime String     | session\_uploadedon\_day           | Distribution of users by days (relevant to grouping parameter only)                                                                                                                                      |
+| User               | string              | device\_city                       | Country city name based on device IP address. For more details on IP Address [Link]                                                                                                                      |
+| User               | string              | device\_country                    | Country name based on device IP address                                                                                                                                                                  |
+| User               | JSON                | user\_custom\_property             | Additional properties attached for users on sessions                                                                                                                                                     |
+| User               | string              | user\_name                         | Randomly assigned alias for users. Note: This is not the real user name, alias, or ID. For more detail [Link]                                                                                            |
+| User               | string              | uxcamuserid                        | UXCam User ID of user                                                                                                                                                                                    |
 
 <br />
 
 ### Web Only:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Attribute  \n Category",
-    "h-1": "Attribute  \n Data Type",
-    "h-2": "Attribute Name",
-    "h-3": "Description",
-    "0-0": "User",
-    "0-1": "JSON",
-    "0-2": "user_first_utm",
-    "0-3": "The UTM of the first session of the user.",
-    "1-0": "User",
-    "1-1": "String",
-    "1-2": "user_first_referer",
-    "1-3": "The referrer URL of the first session of the user.",
-    "2-0": "User",
-    "2-1": "String",
-    "2-2": "user_first_screen_name",
-    "2-3": "First page the user landed on.",
-    "3-0": "User",
-    "3-1": "String",
-    "3-2": "user_first_referer_domain",
-    "3-3": "The referring domain of the first session of the user.",
-    "4-0": "Session",
-    "4-1": "String",
-    "4-2": "browser_name",
-    "4-3": "User’s browser name in a session  ",
-    "5-0": "Session",
-    "5-1": "String",
-    "5-2": "browser_version",
-    "5-3": "User’s browser version in a session",
-    "6-0": "Session",
-    "6-1": "String",
-    "6-2": "referer",
-    "6-3": "URL that referred the user to the current session",
-    "7-0": "Session",
-    "7-1": "String",
-    "7-2": "referer_domain",
-    "7-3": "Domain of the referrer URL in a session  ",
-    "8-0": "Session",
-    "8-1": "JSON",
-    "8-2": "utm",
-    "8-3": "UTM parameters of the Session's Landing page.",
-    "9-0": "Session",
-    "9-1": "String",
-    "9-2": "device_os_name",
-    "9-3": "Device OS name from which sessions are recorded",
-    "10-0": "Session",
-    "10-1": "String",
-    "10-2": "device_type",
-    "10-3": "Device type from which sessions are recorded"
-  },
-  "cols": 4,
-  "rows": 11,
-  "align": [
-    "left",
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Attribute
 
+
+
+
+         Category
+      </th>
+
+      <th>
+        Attribute
+
+
+
+
+         Data Type
+      </th>
+
+      <th>
+        Attribute Name
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        JSON
+      </td>
+
+      <td>
+        user\_first\_utm
+      </td>
+
+      <td>
+        The UTM of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_referer
+      </td>
+
+      <td>
+        The referrer URL of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_screen\_name
+      </td>
+
+      <td>
+        First page the user landed on.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_referer\_domain
+      </td>
+
+      <td>
+        The referring domain of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        browser\_name
+      </td>
+
+      <td>
+        User’s browser name in a session  
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        browser\_version
+      </td>
+
+      <td>
+        User’s browser version in a session
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        referer
+      </td>
+
+      <td>
+        URL that referred the user to the current session
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        referer\_domain
+      </td>
+
+      <td>
+        Domain of the referrer URL in a session  
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        JSON
+      </td>
+
+      <td>
+        utm
+      </td>
+
+      <td>
+        UTM parameters of the Session's Landing page.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        device\_os\_name
+      </td>
+
+      <td>
+        Device OS name from which sessions are recorded
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        device\_type
+      </td>
+
+      <td>
+        Device type from which sessions are recorded
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## List Users
 
@@ -131,8 +299,8 @@ A user list provides qualitative data, including details about the device, user 
 
 Now that you have explored the data attributes and query parameters, The list user endpoint supports the following query parameters as given in the URL structure below. 
 
-- [Pagination](https://developer.uxcam.com/docs/query-parameters#pagination)
-- Filters
+* [Pagination](https://developer.uxcam.com/docs/query-parameters#pagination)
+* Filters
 
 For more information on request parameters see the [Query parameters ](https://developer.uxcam.com/docs/query-parameters)section
 
@@ -145,7 +313,7 @@ https://api.uxcam.com/v2/user?appid=<appid>&apikey=<apikey>&filters=<filters>&pa
 
 To authenticate the List event API, App ID and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50)
+[Example](https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=50)
 
 ### Response Structure
 
@@ -261,11 +429,11 @@ This endpoint for analyzing user data offers aggregated numerical data that can 
 
 This user analytics endpoint supports the following query parameters as given in the URL structure below.
 
-- pagination
-- filters
-- group_by
-- aggregation
-- comparison
+* pagination
+* filters
+* group\_by
+* aggregation
+* comparison
 
 For more information on request parameters see the [Query parameters](https://developer.uxcam.com/docs/query-parameters) section.
 
@@ -277,7 +445,7 @@ https://api.uxcam.com/v2/user/analytics?appid=<appid>&apikey=<apikey>&filters=<f
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100)
+[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=100)
 
 ### Response Structure
 
@@ -301,11 +469,11 @@ The user analytics API provides aggregated data of users based on the user’s q
 }
 ```
 
-[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]&group_by=[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]&page=1&page_size=100)
+[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&filters=\[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]\&group_by=\[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]\&page=1\&page_size=100)
 
 ### Example Requests
 
-- Usage for a given location compared to the past:
+* Usage for a given location compared to the past:
 
 How many users are in a given country (for instance USA) for the app in the last month, and how did this change compared to the month before?
 
@@ -313,7 +481,7 @@ How many users are in a given country (for instance USA) for the app in the last
 https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]&comparison=1
 ```
 
-- Users distribution by device manufacturer
+* Users distribution by device manufacturer
 
 What is the most commonly used device manufacturer observed in the generated users? Or what is the distribution of users by the device manufacturer for Jan 2023?
 
