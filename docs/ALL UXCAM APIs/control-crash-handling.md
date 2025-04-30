@@ -16,7 +16,7 @@ By default, UXCam automatically detects crashes and ANRs to let you capture all 
 
 ### Control Crash Handling Events
 
-**If you want to disable UXCam from capturing sessions with crashes**, you will need to call this API** before startWithKey.** 
+**If you want to disable UXCam from capturing sessions with crashes**, you will need to call this API **before startWithKey.** 
 
 ```swift iOS
 UXCam.disableCrashHandling(_ disabled: Bool)
@@ -31,7 +31,7 @@ void UXCam.DisableCrashHandling(bool disable)
 RNUxcam.enableCrashHandling(bool)
 ```
 
-> 📘 
-> 
-> The API parameters are:  
+> 📘
+>
+> The API parameters are:\
 > **disable**: Default **false**. Set **true** to disable crash recording.
