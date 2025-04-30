@@ -12,20 +12,20 @@ next:
 ---
 You can send events and events' properties to UXCam to gather more insights about your users' behavior. It will help you to:  
 
-- Create more granular funnels thanks to the combination of Events and Screens.
-- Follow your user journey closely by analyzing all the relevant steps.
-- Easily identify errors in your user journey or conversion process.
-- Track each step of your registration process to easily identify drop-offs.
-- Measure and analyze the adoption of new features.
+* Create more granular funnels thanks to the combination of Events and Screens.
+* Follow your user journey closely by analyzing all the relevant steps.
+* Easily identify errors in your user journey or conversion process.
+* Track each step of your registration process to easily identify drop-offs.
+* Measure and analyze the adoption of new features.
 
-E.g You have an app to book movie tickets. You’re sending the Event ‘ticket_booked,’  you can then attach several properties to the event to provide more context to that event, such as: ‘Movie_Category’, ‘Movie_Name’, ‘Movie_Time’, ‘Quantity’, ‘Price’, etc. 
+E.g You have an app to book movie tickets. You’re sending the Event ‘ticket\_booked,’  you can then attach several properties to the event to provide more context to that event, such as: ‘Movie\_Category’, ‘Movie\_Name’, ‘Movie\_Time’, ‘Quantity’, ‘Price’, etc. 
 
 Need some inspiration? [Check this article to find some Events ideas →](https://help.uxcam.com/hc/en-us/articles/360043593691)
 
 All the events will be attached to the respective sessions and users; therefore, you can easily use filters to find sessions or users that triggered a specific event. What’s more, you can analyze your events with Event Analytics or use them to build funnels.
 
-> 📘 
-> 
+> 📘
+>
 > Note: UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
 
 ### Log Events
@@ -94,38 +94,25 @@ UXCam.logEventWithProperties("purchased", {
 });
 ```
 
-> 📘 
-> 
-> The API parameters are:  
-> **eventName**: A tag to attach to the session recording at the current time  
+> 📘
+>
+> The API parameters are:\
+> **eventName**: A tag to attach to the session recording at the current time\
 > **properties**: (Optional) A Dictionary of properties to associate with this event. Only number and string property types are supported.
 
 > 📘 Tips on Sending Dates as Event Properties:
-> 
-> In terms of the date formats, there are many options that will work, but generally we would recommend to use the UTC time format (‘YYYY-MM-DDTHH:MM:SSZ’) or either of the following options:  
-> ‘YYYY-MM-DD HH-MM-SS’  
-> ‘YYYY/MM/DD HH-MM-SS’  
-> ‘YYYY-MM-DD’  
-> ‘YYYY/MM/DD’  
-> ‘YYYY’.  
-> The separators you use don’t matter as long as they are consistent. For instance if you compare ‘YYYY/MM’  to ‘YYYY-MM’ you will get sensible results.  
-> Alternatively, you can just attach the Unix time (seconds since 1970), and then use simple integer comparison <https://www.utctime.net/utc-timestamp> which will work already.
+>
+> In terms of the date formats, there are many options that will work, but generally we would recommend to use the UTC time format (‘YYYY-MM-DDTHH:MM:SSZ’) or either of the following options:\
+> ‘YYYY-MM-DD HH-MM-SS’\
+> ‘YYYY/MM/DD HH-MM-SS’\
+> ‘YYYY-MM-DD’\
+> ‘YYYY/MM/DD’\
+> ‘YYYY’.\
+> The separators you use don’t matter as long as they are consistent. For instance if you compare ‘YYYY/MM’  to ‘YYYY-MM’ you will get sensible results.\
+> Alternatively, you can just attach the Unix time (seconds since 1970), and then use simple integer comparison [https://www.utctime.net/utc-timestamp](https://www.utctime.net/utc-timestamp) which will work already.
 
 ### Things to Consider
 
-- If you pass more than the limit 20 properties for a single event, instead, an event called \_UXCam_Overload will appear mentioning the limit has been exceeded for that event. 
+* If you pass more than the limit 20 properties for a single event, instead, an event called \_UXCam\_Overload will appear mentioning the limit has been exceeded for that event. 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/79bc10d8d7478cc438efc2c160b7dbed11ee24be159af25d10ea7b01ec0efd05-image_15.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/79bc10d8d7478cc438efc2c160b7dbed11ee24be159af25d10ea7b01ec0efd05-image_15.png" />
