@@ -18,9 +18,9 @@ For example, when a user taps the login button in the app, it is considered a ta
 
 UXCAM provides two endpoint URLs for retrieving qualitative (**Event List**) and quantitative (**Event Analytics**) data for events. The endpoint URLs are:
 
-Event List: <https://api.uxcam.com/v2/event>
+Event List: [https://api.uxcam.com/v2/event](https://api.uxcam.com/v2/event)
 
-Event Analytics: <https://api.uxcam.com/v2/event/analytics>
+Event Analytics: [https://api.uxcam.com/v2/event/analytics](https://api.uxcam.com/v2/event/analytics)
 
 ## Event Data Attributes
 
@@ -28,108 +28,276 @@ For UXCam Data Access event APIs, all valid attributes that can be used for perf
 
 ### Event Attribute Table
 
-| Attribute Category | Attribute Data Type      | Attribute Name                     | Description                                                                                                                                                                                              |
-| ------------------ | ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| DateTime           | DateTime                 | date_range                         | DateTime when the user used the app and sessions/events are uploaded                                                                                                                                     |
-| Device             | String                   | app_version                        | Device app version recorded within a given session.                                                                                                                                                      |
-| Device             | String                   | device_class                       | Class of the device given by the device size.                                                                                                                                                            |
-| Device             | String                   | device_id                          | Device Ids are randomly generated unique ids for user devices. More info here.                                                                                                                           |
-| Device             | String                   | device_manufacturer                | Device manufacturers recorded within a given session. E.g. Samsung and motorola.                                                                                                                         |
-| Device             | String                   | device_model                       | Device name                                                                                                                                                                                              |
-| Device             | String                   | device_os_version                  | Device operating system version                                                                                                                                                                          |
-| Device             | String                   | device_platform                    | Platform (iOS or Android) of the user. The value is set to 1 for android users having a device OS as an ANDROID platform. And the value is set to 2 for iOS users having a device OS is an iOS platform. |
-| Session Property   | String                   | sdk_version                        | UXCam SDK version on device                                                                                                                                                                              |
-| Session Property   | Bool String              | session_crashed                    | Show only sessions that are crashed / not crashed. The value is set to true for crashed sessions and false for not crashed sessions.                                                                     |
-| Session Property   | Integer                  | session_duration                   | Total session length in seconds                                                                                                                                                                          |
-| Session Property   | Integer                  | session_gesture_count              | Total gesture on the individual session                                                                                                                                                                  |
-| Session Property   | Bool String (true/false) | session_has_video                  | Is there a video for the session? Value is set to true and false for sessions with no video.                                                                                                             |
-| Session Property   | Count                    | session_new_users_count            | Total new users                                                                                                                                                                                          |
-| Session Property   | Integer                  | session_number_of_user             | Count of sessions for the particular user. View user 10th session with UXCamuserid                                                                                                                       |
-| Session Property   | Integer                  | session_rage_gesture_count         | Total number of rage gestures in the session                                                                                                                                                             |
-| Session Property   | Integer                  | session_responsive_gesture_count   | Total number of responsive gestures on the session                                                                                                                                                       |
-| Session Property   | Integer                  | session_screen_count               | Total number of screens visited on the session                                                                                                                                                           |
-| Session Property   | list                     | session_screen_list                | List of screens visited during the session                                                                                                                                                               |
-| Session Property   | Integer                  | session_unique_screen_count        | Total number of screens visited on the session                                                                                                                                                           |
-| Session Property   | Integer                  | session_unresponsive_gesture_count | Total number of unresponsive gestures during the session                                                                                                                                                 |
-| Event              | DateTime String          | event_uploaded_month               | Distribution of events by month (relevant to grouping parameter only)                                                                                                                                    |
-| Event              | DateTime String          | event_uploaded_week                | Distribution of events by week(Mon-Sun) (relevant to grouping parameter only)                                                                                                                            |
-| Event              | DateTime String          | event_uploadedon_day               | Distribution of events by days (relevant to grouping parameter only)                                                                                                                                     |
-| User               | String                   | device_city                        | Country city name based on device IP address. Read for more details about IP Address                                                                                                                     |
-| User               | String                   | device_country                     | Country name based on device IP address                                                                                                                                                                  |
-| User               | String                   | uxcamuserid                        | The UXCam User ID assigned to the user                                                                                                                                                                   |
-| User               | String                   | user_name                          | Randomly assigned alias for users. Note: This is not the real user name, alias, or ID. More info here.                                                                                                   |
-| User               | JSON                     | user_custom_property               | Additional custom properties attached to sessions                                                                                                                                                        |
-| Event              | String                   | event_name                         | Event triggered by users on sessions                                                                                                                                                                     |
-| Event              | String                   | event_screen_name                  | Screen name on which event happened                                                                                                                                                                      |
-| Event              | JSON                     | event_custom_property              | Additional properties attach for events on sessions                                                                                                                                                      |
+| Attribute Category | Attribute Data Type      | Attribute Name                        | Description                                                                                                                                                                                              |
+| ------------------ | ------------------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| DateTime           | DateTime                 | date\_range                           | DateTime when the user used the app and sessions/events are uploaded                                                                                                                                     |
+| Device             | String                   | app\_version                          | Device app version recorded within a given session.                                                                                                                                                      |
+| Device             | String                   | device\_class                         | Class of the device given by the device size.                                                                                                                                                            |
+| Device             | String                   | device\_id                            | Device Ids are randomly generated unique ids for user devices. More info here.                                                                                                                           |
+| Device             | String                   | device\_manufacturer                  | Device manufacturers recorded within a given session. E.g. Samsung and motorola.                                                                                                                         |
+| Device             | String                   | device\_model                         | Device name                                                                                                                                                                                              |
+| Device             | String                   | device\_os\_version                   | Device operating system version                                                                                                                                                                          |
+| Device             | String                   | device\_platform                      | Platform (iOS or Android) of the user. The value is set to 1 for android users having a device OS as an ANDROID platform. And the value is set to 2 for iOS users having a device OS is an iOS platform. |
+| Session Property   | String                   | sdk\_version                          | UXCam SDK version on device                                                                                                                                                                              |
+| Session Property   | Bool String              | session\_crashed                      | Show only sessions that are crashed / not crashed. The value is set to true for crashed sessions and false for not crashed sessions.                                                                     |
+| Session Property   | Integer                  | session\_duration                     | Total session length in seconds                                                                                                                                                                          |
+| Session Property   | Integer                  | session\_gesture\_count               | Total gesture on the individual session                                                                                                                                                                  |
+| Session Property   | Bool String (true/false) | session\_has\_video                   | Is there a video for the session? Value is set to true and false for sessions with no video.                                                                                                             |
+| Session Property   | Count                    | session\_new\_users\_count            | Total new users                                                                                                                                                                                          |
+| Session Property   | Integer                  | session\_number\_of\_user             | Count of sessions for the particular user. View user 10th session with UXCamuserid                                                                                                                       |
+| Session Property   | Integer                  | session\_rage\_gesture\_count         | Total number of rage gestures in the session                                                                                                                                                             |
+| Session Property   | Integer                  | session\_responsive\_gesture\_count   | Total number of responsive gestures on the session                                                                                                                                                       |
+| Session Property   | Integer                  | session\_screen\_count                | Total number of screens visited on the session                                                                                                                                                           |
+| Session Property   | list                     | session\_screen\_list                 | List of screens visited during the session                                                                                                                                                               |
+| Session Property   | Integer                  | session\_unique\_screen\_count        | Total number of screens visited on the session                                                                                                                                                           |
+| Session Property   | Integer                  | session\_unresponsive\_gesture\_count | Total number of unresponsive gestures during the session                                                                                                                                                 |
+| Event              | DateTime String          | event\_uploaded\_month                | Distribution of events by month (relevant to grouping parameter only)                                                                                                                                    |
+| Event              | DateTime String          | event\_uploaded\_week                 | Distribution of events by week(Mon-Sun) (relevant to grouping parameter only)                                                                                                                            |
+| Event              | DateTime String          | event\_uploadedon\_day                | Distribution of events by days (relevant to grouping parameter only)                                                                                                                                     |
+| User               | String                   | device\_city                          | Country city name based on device IP address. Read for more details about IP Address                                                                                                                     |
+| User               | String                   | device\_country                       | Country name based on device IP address                                                                                                                                                                  |
+| User               | String                   | uxcamuserid                           | The UXCam User ID assigned to the user                                                                                                                                                                   |
+| User               | String                   | user\_name                            | Randomly assigned alias for users. Note: This is not the real user name, alias, or ID. More info here.                                                                                                   |
+| User               | JSON                     | user\_custom\_property                | Additional custom properties attached to sessions                                                                                                                                                        |
+| Event              | String                   | event\_name                           | Event triggered by users on sessions                                                                                                                                                                     |
+| Event              | String                   | event\_screen\_name                   | Screen name on which event happened                                                                                                                                                                      |
+| Event              | JSON                     | event\_custom\_property               | Additional properties attach for events on sessions                                                                                                                                                      |
 
 <br />
 
 ### Web Only:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Attribute  \n Category",
-    "h-1": "Attribute  \n Data Type",
-    "h-2": "Attribute Name",
-    "h-3": "Description",
-    "0-0": "User",
-    "0-1": "JSON",
-    "0-2": "user_first_utm",
-    "0-3": "The UTM of the first session of the user.",
-    "1-0": "User",
-    "1-1": "String",
-    "1-2": "user_first_referer",
-    "1-3": "The referrer URL of the first session of the user.",
-    "2-0": "User",
-    "2-1": "String",
-    "2-2": "user_first_screen_name",
-    "2-3": "First page the user landed on.",
-    "3-0": "User",
-    "3-1": "String",
-    "3-2": "user_first_referer_domain",
-    "3-3": "The referring domain of the first session of the user.",
-    "4-0": "Session",
-    "4-1": "String",
-    "4-2": "browser_name",
-    "4-3": "User’s browser name in a session  ",
-    "5-0": "Session",
-    "5-1": "String",
-    "5-2": "browser_version",
-    "5-3": "User’s browser version in a session",
-    "6-0": "Session",
-    "6-1": "String",
-    "6-2": "referer",
-    "6-3": "URL that referred the user to the current session",
-    "7-0": "Session",
-    "7-1": "String",
-    "7-2": "referer_domain",
-    "7-3": "Domain of the referrer URL in a session  ",
-    "8-0": "Session",
-    "8-1": "JSON",
-    "8-2": "utm",
-    "8-3": "UTM parameters of the Session's Landing page.",
-    "9-0": "Session",
-    "9-1": "String",
-    "9-2": "device_os_name",
-    "9-3": "Device OS name from which sessions are recorded",
-    "10-0": "Session",
-    "10-1": "String",
-    "10-2": "device_type",
-    "10-3": "Device type from which sessions are recorded"
-  },
-  "cols": 4,
-  "rows": 11,
-  "align": [
-    "left",
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
+<Table align={["left","left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Attribute
 
+
+
+
+         Category
+      </th>
+
+      <th>
+        Attribute
+
+
+
+
+         Data Type
+      </th>
+
+      <th>
+        Attribute Name
+      </th>
+
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        JSON
+      </td>
+
+      <td>
+        user\_first\_utm
+      </td>
+
+      <td>
+        The UTM of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_referer
+      </td>
+
+      <td>
+        The referrer URL of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_screen\_name
+      </td>
+
+      <td>
+        First page the user landed on.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        User
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        user\_first\_referer\_domain
+      </td>
+
+      <td>
+        The referring domain of the first session of the user.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        browser\_name
+      </td>
+
+      <td>
+        User’s browser name in a session  
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        browser\_version
+      </td>
+
+      <td>
+        User’s browser version in a session
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        referer
+      </td>
+
+      <td>
+        URL that referred the user to the current session
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        referer\_domain
+      </td>
+
+      <td>
+        Domain of the referrer URL in a session  
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        JSON
+      </td>
+
+      <td>
+        utm
+      </td>
+
+      <td>
+        UTM parameters of the Session's Landing page.
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        device\_os\_name
+      </td>
+
+      <td>
+        Device OS name from which sessions are recorded
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Session
+      </td>
+
+      <td>
+        String
+      </td>
+
+      <td>
+        device\_type
+      </td>
+
+      <td>
+        Device type from which sessions are recorded
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 ## List Events
 
@@ -137,8 +305,8 @@ For UXCam Data Access event APIs, all valid attributes that can be used for perf
 
 This list events endpoint supports the following query parameters apart from authentication as given in the URL structure below.
 
-- [Pagination](https://developer.uxcam.com/docs/query-parameters#pagination)
-- Filters
+* [Pagination](https://developer.uxcam.com/docs/query-parameters#pagination)
+* Filters
 
 For more information on request parameters see the [Query parameters](https://developer.uxcam.com/docs/query-parameters) section
 
@@ -150,7 +318,7 @@ https://api.uxcam.com/v2/event?appid=<appid>&apikey=<apikey>&filters=<filters>&p
 
 To authenticate the List event API, App ID and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/event?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50)
+[Example](https://api.uxcam.com/v2/event?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=50)
 
 ### Response Structure
 
@@ -222,11 +390,11 @@ This endpoint for analyzing event data offers aggregated numerical data that can
 
 This event analytics endpoint supports the following query parameters as given in the URL structure below.
 
-- pagination
-- filters
-- group_by
-- aggregation
-- comparison
+* pagination
+* filters
+* group\_by
+* aggregation
+* comparison
 
 For more information on request parameters see the [Query parameters](https://developer.uxcam.com/docs/query-parameters) section
 
@@ -239,7 +407,7 @@ https://api.uxcam.com/v2/event/analytics?appid=<appid>&apikey=<apikey>&filters=<
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/event/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100)
+[Example](https://api.uxcam.com/v2/event/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=100)
 
 ### Response Structure
 
