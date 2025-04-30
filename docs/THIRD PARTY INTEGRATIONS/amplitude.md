@@ -14,7 +14,7 @@ next:
 
 Whether you are using Amplitude to follow up your events, analyze your user journey, or track conversions, you can connect it with UXCam to <strong>get the context behind each user interaction</strong> with your app by <strong>attaching your users’ and sessions’ URLs</strong> to each Amplitude’s Event. That way you will be able to analyze more in-depth the reason behind the decisions of your users, easily identify bugs, understand what actions specifically led to conversion, and precisely pinpoint roadblocks on your user’s journey.
 
-We highly recommend sending the same Events to UXCam to have more consistency in your data.  
+We highly recommend sending the same Events to UXCam to have more consistency in your data.\
 [Read more about our Event Analytics here →](https://help.uxcam.com/hc/en-us/articles/360050286872)
 
 The following guide explains how to associate a UXCam session URL with Amplitude event enabling you to see a step by step session replay for your every event.
