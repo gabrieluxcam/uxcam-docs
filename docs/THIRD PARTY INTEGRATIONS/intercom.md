@@ -14,9 +14,9 @@ If you are using Intercom to communicate with your users and help them solve the
 
 ### Benefits:
 
-- **Connect your users** across both platforms to easily find and reproduce your users' sessions, understand and analyze their journey. 
-- Provide **faster and better solutions** to your users' issues by watching their session recordings and understanding when and why the issue happened.
-- **Gain more insights and customize conversations** with your users, thanks to UXCam's session replay and event analytics you can better understand their actions before replying. 
+* **Connect your users** across both platforms to easily find and reproduce your users' sessions, understand and analyze their journey. 
+* Provide **faster and better solutions** to your users' issues by watching their session recordings and understanding when and why the issue happened.
+* **Gain more insights and customize conversations** with your users, thanks to UXCam's session replay and event analytics you can better understand their actions before replying. 
 
 ## How UXCam-Intercom integration works:
 
@@ -27,11 +27,11 @@ If you are using Intercom to communicate with your users and help them solve the
 Attach your Intercom user’s IDs to UXCam by sending them as user properties. That way you can easily find in UXCam Dashboard all the sessions for the user’s that connected with you on Intercom.
 
 > 📘 Example
-> 
+>
 > The user Peter reported an issue in your app. Understanding what happened and replicating the user’s steps can be hard. After attaching your Intercom user ID "Peter" as "userid" in the UXCam SDK, you can easily filter for Peter’s sessions on your UXCam dashboard and watch the video recordings to gather more insights and better understand the issue. You will be able to address these problems faster and more accurately while increasing your customer satisfaction.
 
-> 📘 
-> 
+> 📘
+>
 > Please keep in mind that if you're sending any PII data you will need to sign a DPA agreement with us.
 
 ### How to do it:
@@ -81,7 +81,7 @@ You can send multiple events to Intercom to get more insights about your users, 
 That way you can **customize your conversations based on your user’s behavior** and help them through the onboarding process or with achieving some milestones within your app. 
 
 > 📘 Example
-> 
+>
 > Your support team is chatting with a user who is asking how to complete a purchase - they can see in the Intercom dashboard that the user triggered the event "Add to cart", but he indeed didn't trigger the event "Purchase completed". On the Intercom dashboard they can just click on the UXCam user or session URL for the "Add to cart" event to directly watch the session and understand how that user interacted with the app, analyze his journey and pinpoint the reasons why he may not have completed the process, to easily address all his questions and guide him in the right direction.
 
 ### How to do it:
