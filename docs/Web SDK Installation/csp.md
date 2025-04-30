@@ -20,7 +20,7 @@ CSP ensures the security of your website by controlling which external resources
 
 To allow UXCam, add the following to your CSP configuration:
 
-```text
+```javascript
 content-security-policy: default-src https://*.uxcam.com wss://*.uxcam.com;
 ```
 
@@ -33,7 +33,7 @@ This directive allows:
 
 If you already have a CSP, update it to include UXCam alongside your other allowed resources. Here’s an example:
 
-```text
+```javascript
 content-security-policy: default-src 'self' https://*.intercom.io https://*.uxcam.com wss://*.uxcam.com;
 ```
 
