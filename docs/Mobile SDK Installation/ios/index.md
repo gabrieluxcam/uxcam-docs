@@ -38,7 +38,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 #### Swift Package Manager
 
-* If you prefer Swift Package Manager, you can add UXCam using the following [URL:](https://github.com/uxcam/uxcam-ios-sdk)
+* If you prefer Swift Package Manager, you can add UXCam using the following URL:
 
 `https://github.com/uxcam/uxcam-ios-sdk`
 
@@ -73,14 +73,29 @@ UXCam.start(with: configuration)
 
 ## Available Configuration Options:
 
-<p style={{ fontSize: "18px" }}><code class="language-java">enableAutomaticScreenNameTagging</code></br>
-<em style={{ fontSize: "13px" }}>Used to disable automatic screen tagging if manual tagging of the screens will be done, default is true</em></p>
+<p style={{ fontSize: "18px" }}>
+  <code class="language-java">enableAutomaticScreenNameTagging</code>
 
-<p style={{ fontSize: "18px" }}><code class="language-java">enableAdvancedGestureRecognition</code></br>
-<em style={{ fontSize: "13px" }}>Control the gesture recognizers used by UXCam. Set TRUE to enable the full range of gesture recognizers (the default) or FALSE to limit it to basic gestures.</em></p>
+  <br />
 
-<p style={{ fontSize: "18px" }}><code class="language-java">enableCrashHandling:</code></br>
-<em style={{ fontSize: "13px" }}>Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em></p>
+  <em style={{ fontSize: "13px" }}>Used to disable automatic screen tagging if manual tagging of the screens will be done, default is true</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code class="language-java">enableAdvancedGestureRecognition</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Control the gesture recognizers used by UXCam. Set TRUE to enable the full range of gesture recognizers (the default) or FALSE to limit it to basic gestures.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code class="language-java">enableCrashHandling:</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em>
+</p>
 
 > 👍 As Simple As That!
 >
@@ -101,4 +116,4 @@ UXCam.start(with: configuration)
 
 ## Next Steps ➡️
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up.
+You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
