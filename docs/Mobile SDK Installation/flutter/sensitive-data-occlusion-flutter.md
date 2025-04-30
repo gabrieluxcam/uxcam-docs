@@ -20,8 +20,8 @@ UXCam ensures that as a controller you can use our platform and fulfil your obli
 
 You can choose to hide:
 
-- **Views**: Hide specific views on the screen.
-- **Screens: **Hide entire screens, such as payment pages
+* **Views**: Hide specific views on the screen.
+* **Screens:** Hide entire screens, such as payment pages
 
 <br />
 
@@ -57,7 +57,7 @@ What do you need to do in order to implement this new feature?
 
 <pre><code class="language-dart">import 'package:flutter_uxcam/flutter_uxcam.dart';</code></pre>
 
-2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).  **
+2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).**
 
 <pre><code class="language-dart">const OccludeWrapper(     
    child:
@@ -84,22 +84,9 @@ You can add screen level occlusion rules to your app directly from your dashboar
 
 From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/751b737-image.png",
-        null,
-        "Blur option will also enable you to select the blur radius (strength) once selected."
-      ],
-      "align": "center",
-      "caption": "Blur option will also enable you to select the blur radius (strength) once selected."
-    }
-  ]
-}
-[/block]
-
+<Image alt="Blur option will also enable you to select the blur radius (strength) once selected." align="center" src="https://files.readme.io/751b737-image.png">
+  Blur option will also enable you to select the blur radius (strength) once selected.
+</Image>
 
 ### Screen Specific Occlusion Rules from Dashboard
 
@@ -109,25 +96,25 @@ You can also customise which screens you want to apply occlusion rules to, and c
 
 <br />
 
-> 📘 
-> 
+> 📘
+>
 > Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option 
-> 
+>
 > ![](https://files.readme.io/33bf4ad-image.png)
 
 ### Occlusion priority:
 
-- Screen specific overlay from Dashboard
-- Screen specific blur from Dashboard
-- Global blur/overlay from Dashboard that is applied to all screens
-- Screen specific Overlay from SDK
-- Screen specific Blur from SDK
-- Global blur/overlay from SDK that is applied to all screens
-- Global blur/overlay from SDK that has Record exception screens
+* Screen specific overlay from Dashboard
+* Screen specific blur from Dashboard
+* Global blur/overlay from Dashboard that is applied to all screens
+* Screen specific Overlay from SDK
+* Screen specific Blur from SDK
+* Global blur/overlay from SDK that is applied to all screens
+* Global blur/overlay from SDK that has Record exception screens
 
 ### Limitations:
 
-- Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
+* Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
 
 # Occlusion Setup from SDK Code
 
@@ -149,7 +136,7 @@ FlutterUxcam.applyOcclusion(overlay); //To apply overlay
 FlutterUxcam.removeOcclusion(overlay); //To remove overlay
 ```
 
-**Available overlay options are: **
+**Available overlay options are:**
 
 <p style="font-size: 17px"><code class="language-java">withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code></br>
 <em style="font-size: 12px">Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.</em></p>
@@ -170,23 +157,9 @@ If the passed in value is false, it tells the SDK to apply occlusion only to the
 
 Default value is false.</em></p>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/095be49-Overlay.png",
-        "Overlay.png",
-        2534
-      ],
-      "align": "center",
-      "sizing": "80",
-      "caption": "You'll see the desired screen completely hidden while your users navigate through it."
-    }
-  ]
-}
-[/block]
-
+<Image title="Overlay.png" alt={2534} align="center" width="80%" src="https://files.readme.io/095be49-Overlay.png">
+  You'll see the desired screen completely hidden while your users navigate through it.
+</Image>
 
 ## Blur The Entire Screen
 
@@ -210,7 +183,7 @@ FlutterUxcam.applyOcclusion(blur); //To apply blur
 FlutterUxcam.removeOcclusion(blur); //To remove blur
 ```
 
-**Available blur options are: **
+**Available blur options are:**
 
 <p style="font-size: 17px"><code class="language-java">blurRadius(int blurRadius)</code></br>
 <em style="font-size: 12px">This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be. </em></p>
@@ -224,41 +197,15 @@ FlutterUxcam.removeOcclusion(blur); //To remove blur
 <p style="font-size: 17px"><code class="language-java">excludeMentionedScreens(boolean excludeMentionedScreens)</code></br>
 <em style="font-size: 12px">Same as overlay. Please refer to overlay section.</em></p>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif",
-        "UXCam Dashboard - 24 May 2022 (1) (1).gif",
-        736
-      ],
-      "align": "center",
-      "caption": "You'll see your desired screens with a blur on top."
-    }
-  ]
-}
-[/block]
-
+<Image title="UXCam Dashboard - 24 May 2022 (1) (1).gif" alt={736} align="center" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif">
+  You'll see your desired screens with a blur on top.
+</Image>
 
 **Examples on blur radius property customization:**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png",
-        null,
-        "Blur radius customization examples"
-      ],
-      "align": "center",
-      "caption": "Blur radius customisation examples"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Blur radius customization examples" align="center" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png">
+  Blur radius customisation examples
+</Image>
 
 <br />
 
