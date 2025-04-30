@@ -52,7 +52,7 @@ To integrate the Web SDK, include the following script in your HTML file before 
 <br />
 
 > 📘 Please note
-> 
+>
 > You will need to integrate this script in all of your HTML elements in order to get the session recording of your entire website.
 
 ## What is Captured by Default
@@ -61,36 +61,55 @@ To integrate the Web SDK, include the following script in your HTML file before 
 
 By default, the following events are captured:
 
-- uxc_input: Triggered when an input loses focus after it has been modified.
-- uxc_submit: Triggered when a form is submitted.
-- uxc_u_turn: Triggered when a user goes back to the same page. The event is triggered on the page they went back to.  
+* uxc\_input: Triggered when an input loses focus after it has been modified.
+* uxc\_submit: Triggered when a form is submitted.
+* uxc\_u\_turn: Triggered when a user goes back to the same page. The event is triggered on the page they went back to.\
   Example: If a user navigates Home > About Us > Home, it will be triggered on Home.
-- uxc_page_refresh: Triggered when refreshing the page.
+* uxc\_page\_refresh: Triggered when refreshing the page.
 
 ### Default Occlusion
 
 Inputs will be occluded by default if they meet any of the following criteria:
 
-[block:parameters]
-{
-  "data": {
-    "h-0": "Input Types",
-    "h-1": "Input Names Containing",
-    "h-2": "Autocomplete Properties Containing",
-    "0-0": "'password'  \n'email'  \n'tel'  \n'hidden'  \n'number'  \n'hidden'",
-    "0-1": "'password'  \n'cc-'  \n'email'",
-    "0-2": "'cc-'  \n'address'  \n'phone'  \n'email'  \n'password'"
-  },
-  "cols": 3,
-  "rows": 1,
-  "align": [
-    "left",
-    "left",
-    "left"
-  ]
-}
-[/block]
-
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        Input Types
+      </th>
+      <th>
+        Input Names Containing
+      </th>
+      <th>
+        Autocomplete Properties Containing
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        'password'
+        'email'
+        'tel'
+        'hidden'
+        'number'
+        'hidden'
+      </td>
+      <td>
+        'password'\
+        'cc-'\
+        'email'
+      </td>
+      <td>
+        'cc-'\
+        'address'\
+        'phone'\
+        'email'\
+        'password'
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 These inputs will be occluded with asterisks.
 
@@ -98,7 +117,7 @@ These inputs will be occluded with asterisks.
 
 ## Configuration Options
 
-The SDK can be configured with optional parameters. The configuration object (opts) supports the following options:
+The SDK can be configured with optional parameters. The configuration object (`opts`) supports the following options:
 
 ### appVersion
 
@@ -112,7 +131,7 @@ Define the version of your application.
 
 Enables occlusion of sensitive data in URLs and query parameters.
 
-- Occluding Query Parameters  
+* Occluding Query Parameters\
   Query parameters to be occluded should be listed under queryParams.
 
 ```javascript
@@ -125,14 +144,14 @@ occlusion: {
 // Output:http://www.uxcam.com/query?product=_occluded_&userId=_occluded
 ```
 
-- Occluding URLs  
+* Occluding URLs\
   A custom function can be used to occlude parts of the URL before the query parameters.
 
 ```javascript
 occlusion: {  
   url: function(url) {  
     // Custom logic to modify the URL  
-    return url.replace(/\/invite\/\\w+/, '/invite/:inviteId');  
+    return url.replace(/\/invite\/\w+/, '/invite/:inviteId');  
   }  
 }  
 // Example  
@@ -156,8 +175,8 @@ The SDK provides methods to log events and set user properties.
 
 Logs an event.
 
-- eventName (string): The name of the event.
-- properties (object, optional): A JSON object with event properties.
+* eventName (string): The name of the event.
+* properties (object, optional): A JSON object with event properties.
 
 ```javascript
 uxc.event("your_amazing_event", { key: "value" });
@@ -169,7 +188,7 @@ uxc.event("your_amazing_event", { key: "value" });
 
 Sets the user identity.
 
-- userId (string): The unique identifier for the user.
+* userId (string): The unique identifier for the user.
 
 ```javascript
 uxc.setUserIdentity("user_12345");
@@ -181,8 +200,8 @@ uxc.setUserIdentity("user_12345");
 
 Sets a single user property.
 
-- key (string): The property name.
-- value (any JSON valid value): The property value.
+* key (string): The property name.
+* value (any JSON valid value): The property value.
 
 ```javascript
 uxc.setUserProperty("age", 30);
@@ -194,7 +213,7 @@ uxc.setUserProperty("age", 30);
 
 Sets multiple user properties.
 
-- properties (object): A JSON object where each key-value pair represents a user property.
+* properties (object): A JSON object where each key-value pair represents a user property.
 
 ```javascript
 uxc.setUserProperties({ name: "John", age: 30 });
@@ -254,7 +273,7 @@ Here is an example of initializing the SDK with an application version and occlu
 
 ## Occlusion of HTML Elements
 
-To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to the elements you want to occlude.
+To occlude specific HTML elements, add the attribute `data-uxc="obfuscated"` to the elements you want to occlude.
 
 ```javascript
 <div data-uxc="obfuscated">Sensitive Content</div>
