@@ -26,7 +26,7 @@ To add custom JavaScript globally to your WordPress site:
 ## 2. Add the UXCam Script
 
 1. Open the plugin settings (e.g., Settings > Insert Headers and Footers).
-2. In the Global Header or Before <body> section, paste the following script:
+2. In the Global Header or Before &lt;body&gt; section, paste the following script:
 
 ```javascript
 <script type="text/javascript" defer="">
@@ -63,7 +63,7 @@ To add custom JavaScript globally to your WordPress site:
 
 <br />
 
-3. Replace YOUR_APP_KEY with your UXCam App Key.
+3. Replace YOUR\_APP\_KEY with your UXCam App Key.
 4. Save your changes.
 
 # Step 2: Sending Events
