@@ -41,12 +41,11 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
    </code></pre>
 
 > 👍 As Simple As That!
-> 
-> This will complete the integration process.  
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background. 
-> 
+>
+> This will complete the integration process. Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+>
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 
 ## Next Steps ➡️
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
+You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up.
