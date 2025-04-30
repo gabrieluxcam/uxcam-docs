@@ -23,9 +23,9 @@ UXCam ensures that as a controller you can use our platform and fulfil your obli
 
 You can choose to hide:
 
-- **Text Fields**: Hide PII collected through text input fields
-- **Views**: Hide specific views on the screen.
-- **Screens: **Hide entire screens, such as payment pages
+* **Text Fields**: Hide PII collected through text input fields
+* **Views**: Hide specific views on the screen.
+* **Screens:** Hide entire screens, such as payment pages
 
 <br />
 
@@ -39,7 +39,7 @@ Sensitive information is hidden directly on the device by applying red boxes or 
 
 React Native provides the following occlusion behaviour by default:
 
-- Any text input tagged with `uxcam-occlude` or `<input type="password">` is occluded.
+* Any text input tagged with `uxcam-occlude` or `<input type="password">` is occluded.
 
 ***
 
@@ -51,22 +51,9 @@ You can now add occlusion rules to your app directly from your dashboard. Simply
 
 From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/751b737-image.png",
-        null,
-        "Blur option will also enable you to select the blur radius (strength) once selected."
-      ],
-      "align": "center",
-      "caption": "Blur option will also enable you to select the blur radius (strength) once selected."
-    }
-  ]
-}
-[/block]
-
+<Image alt="Blur option will also enable you to select the blur radius (strength) once selected." align="center" src="https://files.readme.io/751b737-image.png">
+  Blur option will also enable you to select the blur radius (strength) once selected.
+</Image>
 
 ### Screen Specific Occlusion Rules from Dashboard
 
@@ -80,25 +67,25 @@ You can also choose to occlude all text input fields on a specific or multiple s
 
 ![](https://files.readme.io/253cbf0-small-Staging_-_UXCam_Dashboard.png)
 
-> 📘 
-> 
+> 📘
+>
 > Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option 
-> 
+>
 > ![](https://files.readme.io/33bf4ad-image.png)
 
 ### Occlusion priority:
 
-- Screen specific overlay from Dashboard
-- Screen specific blur from Dashboard
-- Global blur/overlay from Dashboard that is applied to all screens
-- Screen specific Overlay from SDK
-- Screen specific Blur from SDK
-- Global blur/overlay from SDK that is applied to all screens
-- Global blur/overlay from SDK that has Record exception screens
+* Screen specific overlay from Dashboard
+* Screen specific blur from Dashboard
+* Global blur/overlay from Dashboard that is applied to all screens
+* Screen specific Overlay from SDK
+* Screen specific Blur from SDK
+* Global blur/overlay from SDK that is applied to all screens
+* Global blur/overlay from SDK that has Record exception screens
 
 ### Limitations:
 
-- Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
+* Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
 
 # Occlusion Setup from SDK Code
 
@@ -125,7 +112,7 @@ RNUxcam.applyOcclusion(overlay); // apply overlay
 RNUxcam.removeOcclusion(overlay); // remove overlay
 ```
 
-**Available overlay options are: **
+**Available overlay options are:**
 
 <p style="font-size: 17px"><code class="language-java">withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code></br>
 <em style="font-size: 12px">Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.</em></p>
@@ -146,23 +133,9 @@ If the passed in value is false, it tells the SDK to apply occlusion only to the
 
 Default value is false.</em></p>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/095be49-Overlay.png",
-        "Overlay.png",
-        2534
-      ],
-      "align": "center",
-      "sizing": "80",
-      "caption": "You'll see the desired screen completely hidden while your users navigate through it."
-    }
-  ]
-}
-[/block]
-
+<Image title="Overlay.png" alt={2534} align="center" width="80%" src="https://files.readme.io/095be49-Overlay.png">
+  You'll see the desired screen completely hidden while your users navigate through it.
+</Image>
 
 ## Blur The Entire Screen
 
@@ -189,7 +162,7 @@ RNUxcam.applyOcclusion(blur); // apply blur
 RNUxcam.removeOcclusion(blur); // remove blur
 ```
 
-**Available blur options are: **
+**Available blur options are:**
 
 <p style="font-size: 17px"><code class="language-java">blurRadius(int blurRadius)</code></br>
 <em style="font-size: 12px">This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be. </em></p>
@@ -203,41 +176,15 @@ RNUxcam.removeOcclusion(blur); // remove blur
 <p style="font-size: 17px"><code class="language-java">excludeMentionedScreens(boolean excludeMentionedScreens)</code></br>
 <em style="font-size: 12px">Same as overlay. Please refer to overlay section.</em></p>
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif",
-        "UXCam Dashboard - 24 May 2022 (1) (1).gif",
-        736
-      ],
-      "align": "center",
-      "caption": "You'll see your desired screens with a blur on top."
-    }
-  ]
-}
-[/block]
-
+<Image title="UXCam Dashboard - 24 May 2022 (1) (1).gif" alt={736} align="center" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif">
+  You'll see your desired screens with a blur on top.
+</Image>
 
 **Examples on blur radius property customization:**
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png",
-        null,
-        "Blur radius customization examples"
-      ],
-      "align": "center",
-      "caption": "Blur radius customization examples"
-    }
-  ]
-}
-[/block]
-
+<Image alt="Blur radius customization examples" align="center" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png">
+  Blur radius customization examples
+</Image>
 
 ***
 
@@ -263,28 +210,14 @@ RNUxcam.removeOcclusion(hideTextFields); // remove hide text fields
 // components. If you wish to hide <Text> components, refer to hiding Views.
 ```
 
-> **NOTE: **Please keep in mind that this API will only hide `<TextInput>`  
+> **NOTE:** Please keep in mind that this API will only hide `<TextInput>`\
 > components. If you wish to hide `<Text>` components, refer to hiding Views below.
 
 <br />
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/9caa54d-TextFields.png",
-        "TextFields.png",
-        2534
-      ],
-      "align": "center",
-      "sizing": "80",
-      "caption": "All fields identified as text will be occluded."
-    }
-  ]
-}
-[/block]
-
+<Image title="TextFields.png" alt={2534} align="center" width="80%" src="https://files.readme.io/9caa54d-TextFields.png">
+  All fields identified as text will be occluded.
+</Image>
 
 ## Hide Sensitive View
 
