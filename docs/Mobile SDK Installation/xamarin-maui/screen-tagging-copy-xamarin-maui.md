@@ -44,8 +44,8 @@ While automatic tagging is efficient, there are times when you may want more pre
 
 Manual tagging ensures that each screen gets the correct name, improving the granularity of your analytics. This is particularly useful for:
 
-- **Assigning specific names to screens** that are more meaningful to your app's business context.
-- **Tagging screens dynamically**, based on user behavior.
+* **Assigning specific names to screens** that are more meaningful to your app's business context.
+* **Tagging screens dynamically**, based on user behavior.
 
 ### Example: Manually Tagging a Screen
 
@@ -77,15 +77,15 @@ protected override void OnResume()
 
 ### Best Practices for Screen Tagging
 
-- **Automatic Tagging**: By default, UXCam automatically tags screens in Xamarin apps. This approach is perfect for getting started quickly and ensuring basic analytics coverage.
-- **Manual Tagging**: When you need specific names for screens or want to enhance your analytics with more meaningful tags, manual tagging is easy to implement. It should be done within lifecycle methods like `ViewWillAppear` (iOS) and `OnResume` (Android).
+* **Automatic Tagging**: By default, UXCam automatically tags screens in Xamarin apps. This approach is perfect for getting started quickly and ensuring basic analytics coverage.
+* **Manual Tagging**: When you need specific names for screens or want to enhance your analytics with more meaningful tags, manual tagging is easy to implement. It should be done within lifecycle methods like `ViewWillAppear` (iOS) and `OnResume` (Android).
 
 With a mix of automatic and manual tagging, you'll gain a full understanding of how users navigate your app, giving you the insights needed for data-driven decisions.
 
 ## Summary
 
-- **Automatic Tagging**: Convenient and suitable for simple integration.
-- **Manual Tagging**: More customizable, allowing you to assign meaningful tags to screens and enhance the quality of your analytics.
+* **Automatic Tagging**: Convenient and suitable for simple integration.
+* **Manual Tagging**: More customizable, allowing you to assign meaningful tags to screens and enhance the quality of your analytics.
 
 ## How to Tag WebViews
 
