@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Web Installation
 excerpt: ''
 deprecated: false
 hidden: false
