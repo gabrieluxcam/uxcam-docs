@@ -18,7 +18,7 @@ This method stops and deletes the session in progress (if any) and disables the 
 
 Use this if:
 
-- The user has chosen not to enable analytics (screen recording)
+* The user has chosen not to enable analytics (screen recording)
 
 ```swift iOS
 UXCam.optOutOverall()
@@ -39,8 +39,8 @@ void UXCam.OptOutOverall()
 UXCam.optOutOverall: () => void
 ```
 
-> 📘 
-> 
+> 📘
+>
 > The optIn/optOut setting resets to opt-In if the user un-installs and re-installs the app or clears app data.
 
 ### Opt in a User
