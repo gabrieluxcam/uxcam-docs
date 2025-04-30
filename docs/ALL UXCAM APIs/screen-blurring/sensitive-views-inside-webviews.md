@@ -20,7 +20,7 @@ Before implementing the occlusion approach, you need to identify the HTML elemen
 
 To occlude the sensitive views, you simply need to add the `uxcam-occlude` class to the corresponding HTML elements. This class will instruct UXCam to automatically obscure these elements in the recorded sessions, maintaining privacy and data protection.
 
-**Example:**  
+**Example:**\
 Let's assume you have a login form with two input fields for username and password. To occlude these fields, modify the HTML code as follows:
 
 ```coffeescript HTML
@@ -37,21 +37,7 @@ After implementing the `uxcam-occlude` class in your webview, it's crucial to ve
 
 During the review process, pay close attention to the areas where you applied the `uxcam-occlude` class. Ensure that the sensitive elements are suitably obscured, demonstrating that the occlusion is functioning correctly.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f98e600-9caa54d-TextFields.png",
-        null,
-        "Occluded Fields in a UXCam Session"
-      ],
-      "align": "center",
-      "caption": ""
-    }
-  ]
-}
-[/block]
+<Image align="center" src="https://files.readme.io/f98e600-9caa54d-TextFields.png" />
 
 ### Step 4: Adjust Occlusion if Necessary
 
@@ -61,6 +47,6 @@ Remember to test the updated implementation and review the recordings again to c
 
 ***
 
-> 👍 
-> 
+> 👍
+>
 > By following this guide, you can easily utilize UXCam's `uxcam-occlude` class to handle webview occlusion effectively. Adding the class to sensitive HTML elements ensures their privacy and protection in UXCam recordings, providing a seamless user experience without compromising data security.
