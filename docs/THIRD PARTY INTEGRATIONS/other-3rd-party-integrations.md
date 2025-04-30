@@ -18,8 +18,8 @@ UXCam offers seamless integrations with products you already use by tagging UXCa
 
 UXCam needs to be verified successfully to get user and session URLs. It is recommended to start UXCam along with a completion handler, callback or verification listener to ensure that session was started.
 
-> 📘 
-> 
+> 📘
+>
 > This is an optional step. You can conditionally attach UXCam URL later. For instance, you may only want to attach URLs for users that purchased your product or performed specific action.
 
 ```swift iOS
