@@ -37,7 +37,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
    } 
    dependencies { 
         implementation 'com.uxcam:uxcam:3.+' 
-   }}
+   }
    </code></pre>
 
 #### Initializing UXCam:
@@ -52,12 +52,11 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 ```java Java
 UXConfig config = new UXConfig.Builder("yourAppKey")
 	.build();
-
 ```
+
 ```java Kotlin
 val config = UXConfig.Builder("yourAppKey")
     .build()
-
 ```
 
 ```coffeescript Java/Kotlin
@@ -67,10 +66,10 @@ UXCam.startWithConfiguration(config);
 <br />
 
 > 👍 As Simple As That!
-> 
-> This will complete the integration process.  
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background. 
-> 
+>
+> This will complete the integration process.
+> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+>
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 
 ## Next Steps ➡️
