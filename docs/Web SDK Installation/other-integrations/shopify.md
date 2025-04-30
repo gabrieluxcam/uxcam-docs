@@ -15,9 +15,13 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 ## Prerequisites
 
 * An active Shopify account with access to theme editing.
-* Your UXCam App Key. You can find this in your UXCam dashboard under Settings &gt; Project Settings.
+* Your UXCam App Key. You can find this in your UXCam dashboard under Settings > Project Settings.
 
-> 📘 Note:
+> 📘 **Note**
+>
+> **Note**
+>
+> Note:
 >
 > Liquid tags allow you to dynamically insert Shopify data (such as product details or customer information) into your JavaScript code. This ensures that events sent to UXCam are accurate and relevant to the context of the page being viewed. They are particularly useful for tracking user-specific data and page-specific events.
 
@@ -26,15 +30,15 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 ## 1. Access the Shopify Theme Editor
 
 1. Log in to your Shopify Admin.
-2. Go to Online Store &gt; Themes.
-3. Select your active theme and click Actions &gt; Edit Code.
+2. Go to Online Store > Themes.
+3. Select your active theme and click Actions > Edit Code.
 
 <Image align="center" src="https://files.readme.io/be2dbfd5991354fef4ea0087b0f2c2e4067b59a0aac5d672a9734faf58f50af1-Screenshot_2025-01-08_at_12.18.13.png" />
 
 ## 2. Add the Web SDK Script
 
 1. In the Layout section, locate the theme.liquid file.
-2. Add the following script before the closing </head> tag:
+2. Add the following script before the closing  tag:
 
 ```javascript
 <script type="text/javascript" defer="">
@@ -72,7 +76,11 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 3. Replace **YOUR\_APP\_KEY** with your actual UXCam App Key.
 4. Save the changes.
 
-> 📘 Important:
+> 📘 **Note**
+>
+> **Note**
+>
+> Important:
 >
 > Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.
 
