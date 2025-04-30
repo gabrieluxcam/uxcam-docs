@@ -10,6 +10,7 @@ metadata:
 next:
   description: ''
 ---
+```md
 > 📘 Mixpanel provides event tracking and advanced reporting capabilities to gain insight to your data sets.
 
 The following guide explains how to associate a UXCam session URL with Mixpanel event enabling you to see a step by step session replay for your every event.
@@ -18,7 +19,7 @@ The following guide explains how to associate a UXCam session URL with Mixpanel 
 
 ***
 
-UXCam website will walk you through how to sign up and set up  UXCam. To create a Mixpanel account, visit Mixpanel's website.
+UXCam website will walk you through how to sign up and set up UXCam. To create a Mixpanel account, visit Mixpanel's website.
 
 For more information about 3rd party integration and best practices, visit our [3rd party integration guide](https://uxcam-documentation.readme.io/docs/other-3rd-party-integrations).
 
@@ -30,30 +31,13 @@ For more information about 3rd party integration and best practices, visit our [
 2. [Track UXCam session](#track-uxcam-session)
 3. [UXCam session URL in Mixpanel](#uxcam-session-url-in-mixpanel)
 4. [Log Mixpanel metadata with UXCam](#log-mixpanel-metadata-with-uxcam)
-5. [View your Mixpanel events from UXCam  
-   ](#view-your-mixpanel-events-from-uxcam)  
-   </br>
+5. [View your Mixpanel events from UXCam](#view-your-mixpanel-events-from-uxcam)
 
 ### Set User Identity
 
 If your app requires registered user login, we highly encourage you to set user identity for UXCam and Mixpanel. By doing so, you can easily filter all the sessions for the user from UXCam user dashboard.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/cb89362-Screen_Shot_2020-09-10_at_10.48.03_AM.png",
-        "Screen Shot 2020-09-10 at 10.48.03 AM.png",
-        528
-      ],
-      "align": "center",
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" width="smart" src="https://files.readme.io/cb89362-Screen_Shot_2020-09-10_at_10.48.03_AM.png" />
 
 #### How to do It:
 
@@ -191,3 +175,4 @@ UXCam.logEvent("mixpanel", eventProperties);
 ### View your Mixpanel events from UXCam
 
 You can filter events related to Mixpanel from your events dashboard.
+```
