@@ -20,9 +20,8 @@ This documentation will guide you through the process of integrating the Web SDK
 
 To integrate the Web SDK, include the following script in your HTML file before the closing \</head> tag:
 
-````coffeescript
-
 ```javascript
+
 <script type="text/javascript" defer="">
 (function(appKey, opts) {
     window.uxc = {
@@ -53,7 +52,7 @@ To integrate the Web SDK, include the following script in your HTML file before 
     head.appendChild(script);
 })('Your_App_Key', {}); 
 </script>
-````
+```
 
 ***
 
