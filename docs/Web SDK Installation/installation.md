@@ -61,7 +61,7 @@ To integrate the Web SDK, include the following script in your HTML file before 
 > Please ensure that:
 >
 > * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your dashboard.
-> * Your **plan includes web session recording.**<br />\
+> * Your **plan includes web session recording.**\
 >   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
 
 > 📘 Please note
@@ -80,7 +80,7 @@ By default, the following events are captured:
 
 * uxc\_input: Triggered when an input loses focus after it has been modified.
 * uxc\_submit: Triggered when a form is submitted.
-* uxc\_u\_turn: Triggered when a user goes back to the same page. The event is triggered on the page they went back to.<br />\
+* uxc\_u\_turn: Triggered when a user goes back to the same page. The event is triggered on the page they went back to.\
   Example: If a user navigates Home > About Us > Home, it will be triggered on Home.
 * uxc\_page\_refresh: Triggered when refreshing the page.
 
@@ -117,16 +117,16 @@ Inputs will be occluded by default if they meet any of the following criteria:
       </td>
 
       <td>
-        'password'<br />
-        'cc-'<br />
+        'password'
+        'cc-'
         'email'
       </td>
 
       <td>
-        'cc-'<br />
-        'address'<br />
-        'phone'<br />
-        'email'<br />
+        'cc-'
+        'address'
+        'phone'
+        'email'
         'password'
       </td>
     </tr>
@@ -135,7 +135,7 @@ Inputs will be occluded by default if they meet any of the following criteria:
 
 > 📘 Note:
 >
-> Occluded input field texts are replaced by asterisks \*\*<br />\
+> Occluded input field texts are replaced by asterisks \*\*\
 > Occluded input field numbers are replaced by 0000
 
 ***
@@ -156,7 +156,7 @@ Define the version of your application.
 
 Enables occlusion of sensitive data in URLs and query parameters.
 
-* Occluding Query Parameters<br />\
+* Occluding Query Parameters\
   Query parameters to be occluded should be listed under queryParams.
 
 ```javascript
@@ -307,6 +307,3 @@ To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to th
 ## Conclusion
 
 This concludes the documentation for integrating the Web SDK. If you have any questions or need further assistance, please contact [team@uxcam.com](mailto:team@uxcam.com).
-
-```
-```
