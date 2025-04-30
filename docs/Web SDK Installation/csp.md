@@ -26,8 +26,8 @@ content-security-policy: default-src https://*.uxcam.com wss://*.uxcam.com;
 
 This directive allows:
 
-- https\://\*.uxcam.com: To load UXCam’s scripts and resources.
-- wss://\*.uxcam.com: To enable WebSocket connections used by the SDK.
+* https\://\*.uxcam.com: To load UXCam’s scripts and resources.
+* wss\://\*.uxcam.com: To enable WebSocket connections used by the SDK.
 
 ### Example CSP
 
