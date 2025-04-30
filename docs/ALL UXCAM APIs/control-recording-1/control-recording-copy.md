@@ -46,8 +46,8 @@ UXCam automatically stops a session when the app goes to the background. Using t
 
 This is useful for:
 
-- Recording a specific flow without sending the application to the background.
-- Sending data (events, gestures, etc.) in a session without the closure of an app.
+* Recording a specific flow without sending the application to the background.
+* Sending data (events, gestures, etc.) in a session without the closure of an app.
 
 ```swift iOS
 UXCam.stopSessionAndUploadData()
@@ -83,11 +83,11 @@ This API allows the user to take a short trip to another app without causing a b
 
 This is useful when users need to use another app to complete a certain process like:
 
-- A login using Google, Facebook, etc.
-- Navigating to another URL using an external browser.
-- Taking a picture in order to complete a setup process.
-- Getting the OTP and/or verification email to complete a process.
-- Obtaining the confirmation of a payment through an external resource.
+* A login using Google, Facebook, etc.
+* Navigating to another URL using an external browser.
+* Taking a picture in order to complete a setup process.
+* Getting the OTP and/or verification email to complete a process.
+* Obtaining the confirmation of a payment through an external resource.
 
 ```swift iOS
 UXCam.allowShortBreak(forAnotherApp continueSession: Bool)
@@ -128,15 +128,15 @@ UXCamCore.allowShortBreak(forAnotherApp continueSession: Bool)
 UXCamCore.setAllowShortBreakMaxDuration(duration: Double)
 ```
 
-> 📘 
-> 
-> The API parameters are:  
-> **continueSession**: Set to TRUE to continue the current session after a short trip out to another app. Default is FALSE - stops the session as soon as the app enters the background.  
-> **timeInMilliseconds**: JUST FOR Android - Time to wait before closing current session. By default the method will wait 180000ms (3 min) to end the session.  
+> 📘
+>
+> The API parameters are:\
+> **continueSession**: Set to TRUE to continue the current session after a short trip out to another app. Default is FALSE - stops the session as soon as the app enters the background.\
+> **timeInMilliseconds**: JUST FOR Android - Time to wait before closing current session. By default the method will wait 180000ms (3 min) to end the session.\
 > **duration**: JUST FOR iOS - Set to the duration of break allowed.
 
-> 🚧 
-> 
+> 🚧
+>
 > **Important**: To avoid any inconsistencies, set **allowShortBreakForAnotherApp(true)** before navigating to another app and call **allowShortBreakForAnotherApp(false)** after returning to the app.
 
 ### Add Verification Listener
@@ -145,8 +145,8 @@ With this API you are going to be able to get the verification status when UXCam
 
 By getting this you are going to be able to:
 
-- Send events to UXCam as soon as the session starts.
-- Log the current UXCam session URL or the user URL to other 3rd party services such as Firebase.
+* Send events to UXCam as soon as the session starts.
+* Log the current UXCam session URL or the user URL to other 3rd party services such as Firebase.
 
 ```text iOS
 Doesn't exist on iOS - use startWithKey with completion handler.
