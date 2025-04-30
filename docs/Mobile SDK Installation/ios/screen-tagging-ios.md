@@ -39,7 +39,7 @@ As for enabling or disabling Fragment Based Tagging, it can be done trough the o
 
 While we recommend automatic tagging, you may sometimes need more precise control over your screen names or want to ensure custom screens are clearly identified in your analytics. In these cases, you can use manual screen tagging.
 
-**Example**: **Tagging a View Controller Manually**  
+**Example**: **Tagging a View Controller Manually**\
 To tag a screen in a view controller, use the following code in the `viewWillAppear` method of your controller:
 
 ```coffeescript Swift
@@ -61,9 +61,9 @@ For more information, click the button below:
 [Tagging WebViews Documentation](/docs/web-view-tagging)
 
 > 👍 Summary:
-> 
+>
 > **Automatic Tagging:** By default, UXCam automatically tags screens in iOS apps, which we recommend as the simplest and most efficient approach.
-> 
+>
 > **Manual Tagging:** When you need specific names for screens or want to add more meaningful tags for your analytics, manual tagging is straightforward and can be done in the lifecycle methods like `viewWillAppear`
 
 With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
