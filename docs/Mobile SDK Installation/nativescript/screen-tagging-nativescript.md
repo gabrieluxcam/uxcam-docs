@@ -28,7 +28,7 @@ While on native frameworks we recommend automatic tagging, NativeScript behaves 
 NSUXCam.tagScreenName('Home Screen');
 ```
 
-**Example**: **The Recommended Place to Tag**  
+**Example**: **The Recommended Place to Tag**\
 To tag a screen in NativeScript, we recommend using the following code in the `onNavigatedTo` lifecycle event of your page:
 
 ```typescript
@@ -57,9 +57,9 @@ For more information, click the button below:
 [Tagging WebViews Documentation](/docs/web-view-tagging)
 
 > 👍 Summary:
-> 
+>
 > **Automatic Tagging:** Limited due to NativeScript's lifecycle events.
-> 
+>
 > **Manual Tagging:** Provides specific names for screens or allows more meaningful tags for your analytics. Manual tagging can be done in lifecycle methods like `onNavigatedTo` to make sure it's tagged every time the screen appears.
 
 With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
