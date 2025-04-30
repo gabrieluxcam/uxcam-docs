@@ -20,9 +20,9 @@ By default, UXCam generates a random alias name to identify your users based on 
 
 Gain deeper insights into user behaviour, enabling you to create segments and compare behaviour across different audiences.
 
-- Easily identify users using a unique User ID, which can help you diagnose user issues and offer better support.
-- Track users across multiple devices, ensuring a unified view of their journey.
-- Have a better understanding of your users’ actions, create segments, and discover how behavior changes between different audiences.
+* Easily identify users using a unique User ID, which can help you diagnose user issues and offer better support.
+* Track users across multiple devices, ensuring a unified view of their journey.
+* Have a better understanding of your users’ actions, create segments, and discover how behavior changes between different audiences.
 
 We recommend avoiding the use of Personally Identifiable Information (PII), such as email addresses or phone numbers. Instead, use a unique User ID to identify your users in UXCam. If you need to send PII, you must sign a Data Processing Agreement (DPA) with us. Please contact [team@uxcam.com](mailto:team@uxcam.com) for further discussion.
 
@@ -48,12 +48,12 @@ Additional custom user properties help you group sessions, users, or events base
 
 **Example User Properties:**
 
-- Role
-- Company Name
-- Acquisition Source
-- Subscription Type
-- Loyalty Membership
-- NPS Score or Rating
+* Role
+* Company Name
+* Acquisition Source
+* Subscription Type
+* Loyalty Membership
+* NPS Score or Rating
 
 ```coffeescript Flutter
 void setUserProperty(String key, String value)
@@ -66,7 +66,7 @@ FlutterUxcam.setUserProperty("company_name","your-company")
 
 **API Parameters:**
 
-`propertyName`: The name of the property to attach to the user.  
+`propertyName`: The name of the property to attach to the user.\
 `value`: A value to associate with the property. String or Number are accepted for value.
 
 > 🚧 Note: User IDs and properties are case sensitive. Please ensure consistent naming conventions when using them.
