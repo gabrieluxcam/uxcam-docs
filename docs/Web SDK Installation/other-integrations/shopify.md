@@ -14,11 +14,11 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 
 ## Prerequisites
 
-- An active Shopify account with access to theme editing.
-- Your UXCam App Key. You can find this in your UXCam dashboard under Settings > Project Settings.
+* An active Shopify account with access to theme editing.
+* Your UXCam App Key. You can find this in your UXCam dashboard under Settings &gt; Project Settings.
 
 > 📘 Note:
-> 
+>
 > Liquid tags allow you to dynamically insert Shopify data (such as product details or customer information) into your JavaScript code. This ensures that events sent to UXCam are accurate and relevant to the context of the page being viewed. They are particularly useful for tracking user-specific data and page-specific events.
 
 # Step 1: Adding UXCam Web SDK to Shopify
@@ -26,24 +26,10 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 ## 1. Access the Shopify Theme Editor
 
 1. Log in to your Shopify Admin.
-2. Go to Online Store > Themes.
-3. Select your active theme and click Actions > Edit Code.
+2. Go to Online Store &gt; Themes.
+3. Select your active theme and click Actions &gt; Edit Code.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/be2dbfd5991354fef4ea0087b0f2c2e4067b59a0aac5d672a9734faf58f50af1-Screenshot_2025-01-08_at_12.18.13.png",
-        "",
-        ""
-      ],
-      "align": "center"
-    }
-  ]
-}
-[/block]
-
+<Image align="center" src="https://files.readme.io/be2dbfd5991354fef4ea0087b0f2c2e4067b59a0aac5d672a9734faf58f50af1-Screenshot_2025-01-08_at_12.18.13.png" />
 
 ## 2. Add the Web SDK Script
 
@@ -83,11 +69,11 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 </script>
 ```
 
-3. Replace **YOUR_APP_KEY** with your actual UXCam App Key.
+3. Replace **YOUR\_APP\_KEY** with your actual UXCam App Key.
 4. Save the changes.
 
 > 📘 Important:
-> 
+>
 > Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.
 
 # Step 2: Sending Custom Events
