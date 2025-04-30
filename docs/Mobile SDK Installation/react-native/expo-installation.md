@@ -19,25 +19,29 @@ So in case you have an Expo application and want to check the possibility of int
 ## Integration
 
 1. Install the latest EAS CLI - For this you can just do the following:
-   <pre><code class="language-java"> npm install -g eas-cli
-   </code></pre>
+   ```bash
+   npm install -g eas-cli
+   ```
 
 2. Configure your project to run under the EAS build - For this you can do the following to configure your iOS and Android Projects:
-   <pre><code class="language-java"> eas build:configure 
-   </code></pre>
+   ```bash
+   eas build:configure
+   ```
 
 3. Add UXCam in your application - You can follow the instructions listed in [here](https://developer.uxcam.com/docs/react-native).
 
 4. Run your build - For this you can do:
-   <pre><code class="language-java">//Android 
-   eas build --platform android 
-   //iOS 
+   ```bash
+   //Android
+   eas build --platform android
+   //iOS
    eas build --platform ios
-   </code></pre>
+   ```
 
 > 👍
 >
-> This will complete the integration process. Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+> This will complete the integration process.\
+> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
 
 For more reference on how to add EAS into your Expo application, please visit the following link: [https://docs.expo.dev/build/setup/](https://docs.expo.dev/build/setup/)
 
