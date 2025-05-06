@@ -12,7 +12,7 @@ This documentation will guide you through the process of integrating the Web SDK
 
 ## Installation
 
-To integrate the Web SDK, include the following script in your HTML file before the closing </head> tag:
+To integrate the Web SDK, include the following script in your HTML file before the closing \</head> tag:
 
 ```javascript
 <script type="text/javascript" defer="">
