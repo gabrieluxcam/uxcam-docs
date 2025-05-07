@@ -1,0 +1,28 @@
+---
+name: GithubBadgeLatest
+---
+export const GitHubReleaseBadge = ({ owner, repo, branch = 'main' }) => {
+  // 1. Badge image that shows the latest tag (e.g. “v1.2.3”)
+  const badgeUrl = `https://img.shields.io/github/v/release/${owner}/${repo}.svg`;
+
+  // 2. Link to the actual “latest release” page
+  const releasePage = `https://github.com/${owner}/${repo}/releases/latest`;
+
+  return (
+    <a 
+      href={releasePage} 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src={badgeUrl} 
+        alt={`${repo} latest release`} 
+        className="h-6" 
+      />
+    </a>
+  );
+};
+
+
+<GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
+
