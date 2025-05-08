@@ -25,6 +25,12 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 #### Flutter Integration
 
 1. Add the UXCam package to your Flutter app:
+   <Terminal>
+     {`
+         $ flutter pub add flutter_uxcam
+       `}
+   </Terminal>
+   <br />
    ```bash
    flutter pub add flutter_uxcam
    ```
