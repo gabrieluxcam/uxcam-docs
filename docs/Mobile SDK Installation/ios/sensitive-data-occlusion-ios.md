@@ -30,8 +30,6 @@ UXCam ensures that as a controller you can use our platform and fulfil your obli
 
 > 📘 **Note**
 >
-> **Note**
->
 > iOS - SwiftUI Differences
 >
 > This article covers both SDK's occlusion approaches, which are mostly identical, you can check the snippet examples depending on the SDK you use.
