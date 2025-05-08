@@ -26,22 +26,17 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 1. To add UXCam to your project:
 
-<br />
-
 <Terminal>
   {`
-      $ yarn add react-native-ux-cam
-    `}
+          $ yarn add react-native-ux-cam
+        `}
 </Terminal>
 
-<br />
+Or
 
-```bash
-yarn add react-native-ux-cam
-
-//If you use npm instead of yarn
-npm i react-native-ux-cam
-```
+<Terminal>
+  {`npm i react-native-ux-cam`}
+</Terminal>
 
 1. Add imports and create the configuration object in your App.js when your app starts. Your **App-key** is available on the UXCam dashboard
    ```javascript
