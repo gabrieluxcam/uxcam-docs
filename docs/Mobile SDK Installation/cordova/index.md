@@ -36,9 +36,9 @@ Integrating UXCam into your Cordova project only requires a few steps. With just
 
 Add UXCam to your Cordova project by running the following command:
 
-```coffeescript Cordova
-cordova plugin add cordova-uxcam
-```
+<Terminal>
+  {`cordova plugin add cordova-uxcam`}
+</Terminal>
 
 ### Step 2: Initialize UXCam
 
@@ -71,7 +71,7 @@ If you're using Ionic, here are the steps to integrate UXCam:
 
 2. **Add UXCam Declaration**
 
-      In your `AppComponent.ts`, declare UXCam:
+   In your `AppComponent.ts`, declare UXCam:
 
    ```typescript
    declare var UXCam: any;
@@ -111,7 +111,7 @@ To integrate UXCam with Capacitor:
 
 2. **Add UXCam Declaration**
 
-      In your `AppComponent.ts` file, add:
+   In your `AppComponent.ts` file, add:
 
    ```typescript
    declare var UXCam: any;
@@ -156,7 +156,7 @@ This should resolve the error, and your integration should complete successfully
 
 ## Next Steps ➞
 
-Now that you have UXCam integrated, your sessions will start appearing on the dashboard within a few seconds after the app goes into the background. We encourage you to explore customization options such as identifying users, tagging sessions, or hiding sensitive views. 
+Now that you have UXCam integrated, your sessions will start appearing on the dashboard within a few seconds after the app goes into the background. We encourage you to explore customization options such as identifying users, tagging sessions, or hiding sensitive views.
 
 Check out our additional documentation to learn how to further tailor UXCam to your needs!
 
