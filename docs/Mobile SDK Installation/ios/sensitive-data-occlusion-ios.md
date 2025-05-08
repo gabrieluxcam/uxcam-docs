@@ -28,9 +28,7 @@ In this section, we focus on how to handle sensitive data within your iOS applic
 
 UXCam ensures that as a controller you can use our platform and fulfil your obligations under GDPR. However, if you collect any **PII data** in your app such as email address, phone, or credit card number you should use our API to hide it.
 
-> 📘 **Note**
->
-> iOS - SwiftUI Differences
+> 📘 **iOS - SwiftUI Differences**
 >
 > This article covers both SDK's occlusion approaches, which are mostly identical, you can check the snippet examples depending on the SDK you use.
 
