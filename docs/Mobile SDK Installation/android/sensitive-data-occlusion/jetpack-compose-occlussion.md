@@ -28,9 +28,9 @@ The process for including UXCamKtx in a project is almost exactly the same as th
 
 ```java
 // core module
-implementation "com.uxcam:uxcam:3.6.33"
+implementation "com.uxcam:uxcam:3.+"
 // ktx module
-implementation "com.uxcam:uxcam-ktx:1.2.33"
+implementation "com.uxcam:uxcam-ktx:1.+"
 ```
 
 Then simply, import the UXCam artifact:
