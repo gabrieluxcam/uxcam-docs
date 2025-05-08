@@ -24,7 +24,7 @@ With a solid integration, you'll have a complete picture of how users interact w
 
 <SimpleStepper>
   <SimpleStep header="Step 1: Install And Initialize">
-    Add the UXCam SDK to your project, obtain your app key from the UXCam dashboard, and initialize the SDK in your app’s entry point
+    Add the UXCam SDK to your project, obtain your app key from the UXCam dashboard, and initialize the SDK in your app’s entry point.
   </SimpleStep>
 
   <SimpleStep header="Step 2: Customize Your Data">
