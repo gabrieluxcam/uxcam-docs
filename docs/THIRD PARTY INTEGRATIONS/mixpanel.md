@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-````md
+
 > 📘 Mixpanel provides event tracking and advanced reporting capabilities to gain insight to your data sets.
 
 The following guide explains how to associate a UXCam session URL with Mixpanel event enabling you to see a step by step session replay for your every event.
