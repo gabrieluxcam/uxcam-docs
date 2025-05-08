@@ -74,15 +74,17 @@ export const SimpleStepper = ({ children }) => {
         >
           Back
         </button>
-        <button
-          type="button"
-          style={buttonStyle}
-          onClick={handleNext}
-          disabled={currentStep === steps.length - 1}
-          aria-label="Next Step"
-        >
-          Next
-        </button>
+{currentStep < steps.length - 1 && (
+  <button
+    type="button"
+    style={buttonStyle}
+    onClick={handleNext}
+    aria-label="Next Step"
+  >
+    Next
+  </button>
+)}
+
       </div>
     </div>
   );
