@@ -22,7 +22,9 @@ With a solid integration, you’ll have a complete picture of how users interact
 
 ## Quick Start: Only a Couple of Lines of Code
 
-[![pod version](https://img.shields.io/cocoapods/v/UXCam)](https://github.com/uxcam/uxcam-ios-sdk/tree/3.6.11)
+<br />
+
+<GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
 
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
 
