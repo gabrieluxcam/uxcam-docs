@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-```markdown
 <strong>Integrate UXCam with Firebase Google Analytics to get more insights about your events and better analyze your data.</strong>
 
 Even with tons of data from events triggered in your app, sometimes it’s hard to know why your user’s made some decisions, why they’re not adopting the new features, or not using your app the way you expected them to. While Firebase can provide you with quantitative data, by sending and connecting the events to UXCam, you’ll have a better understanding of your user’s behavior.
@@ -22,19 +21,19 @@ Connect <strong>UXCam with Firebase</strong> to have your Session’s and User's
 ***
 
 1. Have more <strong>consistency in your data</strong> by sending the events to Firebase and UXCam.
-2. Understand the <strong>reasons behind</strong> all your Firebase data, better analyze your user’s behavior, and address problems more precisely. 
+2. Understand the <strong>reasons behind</strong> all your Firebase data, better analyze your user’s behavior, and address problems more precisely.
 
 ## How to do it?
 
 ***
 
-You need to have a Firebase Google Analytics account and a UXCam account. 
+You need to have a Firebase Google Analytics account and a UXCam account.
 
 ### In Firebase:
 
-1. On your Firebase project Dashboard, under the Analytics section click on Custom Definitions and then go to “<strong>Create custom dimensions</strong>”.<br/>
-2. Give a descriptive name of the dimension (Event) that you want to link to UXCam.<br/>
-3. Add a parameter to this dimension in “<strong>Event parameter</strong>” (here you will add your UXCam URL) with a name that you desire, i.e. UXCam\_links in example below.<br/>
+1. On your Firebase project Dashboard, under the Analytics section click on Custom Definitions and then go to “<strong>Create custom dimensions</strong>”.<br />
+2. Give a descriptive name of the dimension (Event) that you want to link to UXCam.<br />
+3. Add a parameter to this dimension in “<strong>Event parameter</strong>” (here you will add your UXCam URL) with a name that you desire, i.e. UXCam\_links in example below.<br />
 
 ![](https://files.readme.io/b16e4d7-ezgif.com-gif-maker_6_1.gif "ezgif.com-gif-maker (6) (1).gif")
 
@@ -66,7 +65,7 @@ UXCam.start(withKey: "APP_KEY") { (started) in
 // Inside onCreate method of all activity that is an entry point to your app add
 mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 UXCam.startWithConfiguration(config);
-
+    
 UXCam.addVerificationListener(new OnVerificationListener() {
     @Override
     public void onVerificationSuccess() {
@@ -74,7 +73,7 @@ UXCam.addVerificationListener(new OnVerificationListener() {
         bundle.putString("UXCam_links", UXCam.urlForCurrentSession());
         mFirebaseAnalytics.logEvent("purchase_completed", bundle);
     }
-
+      
     @Override
     public void onVerificationFailed(Strings) { }
     
@@ -109,9 +108,9 @@ this.uxcamEvent = emitter.addListener('UXCam_Verification_Event', async () => {
 
 ***
 
-When **analyzing your Events on Firebase** you can see the custom parameters and all the UXCam URLs for that event, so you can export all these data or just go to the URL and watch the sessions directly on UXCam Dashboard to understand how the event was triggered. 
+When **analyzing your Events on Firebase** you can see the custom parameters and all the UXCam URLs for that event, so you can export all these data or just go to the URL and watch the sessions directly on UXCam Dashboard to understand how the event was triggered.
 
-> 📘
+> 📘 Example
 >
 > We suggest send the same events that you’ve on Firebase to UXCam, to have more consistency in your data and collect more insights into your users’ behavior. **[Send Events to UXCam →](https://uxcam-documentation.readme.io/docs/send-events)**
 
@@ -126,4 +125,3 @@ adb shell setprop debug.firebase.analytics.app "yourpackagename"
 ```
 
 This will enable the **DebugView** that is also located under the Analytics section in your firebase console and will let you see if the events are being properly logged.
-```
