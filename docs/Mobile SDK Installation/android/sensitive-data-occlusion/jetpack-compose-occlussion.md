@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-````mdx
 > 🚧 **Warning**
 >
 > **Warning**
@@ -123,4 +122,3 @@ fun ExampleComposable(modifier: Modifier = Modifier) {
   }
 }
 ```
-````
