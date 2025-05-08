@@ -36,6 +36,12 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 * Run <code>pod install</code> in the project directory to download dependency.
 
+<Terminal>
+  {`
+      $ pod install
+    `}
+</Terminal>
+
 #### Swift Package Manager
 
 * If you prefer Swift Package Manager, you can add UXCam using the following URL:
