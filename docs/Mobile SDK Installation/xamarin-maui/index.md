@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-```markdown
+````markdown
 # UXCam Xamarin / MAUI Integration Guide
 
 Welcome! This guide will help you set up UXCam for your Xamarin project, enabling you to gather insights that are crucial for improving user experience. We'll guide you through the installation process, initial setup, and a few useful configurations to get the most out of UXCam.
@@ -71,9 +71,9 @@ For reference on including a component into your project <a href="https://develo
    .Build();
 
    UXCam.StartWithConfiguration(config);
-   ```
+````
 
-   <br />
+<br />
 
 ## Next Steps ➞
 
@@ -88,4 +88,6 @@ Check out our additional documentation to learn how to further tailor UXCam to y
 > 📜 **SDK Updates**
 >
 > To stay up to date with the latest SDK improvements, visit [this page](https://help.uxcam.com/hc/en-us/articles/4404509626509--SDK-UPDATES).
+
+```
 ```
