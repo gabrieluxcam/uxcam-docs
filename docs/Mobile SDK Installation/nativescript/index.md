@@ -34,9 +34,6 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
      {`tns plugin add nativescript-uxcam`}
    </Terminal>
 
-   ```typescript
-   ```
-
 2. **Import the UXCam Plugin**:
 
    Add the UXCam plugin code at the top of your App Component file:
