@@ -20,6 +20,24 @@ So you've got your account set up, now let's make sure your Android app is equip
 
 With a solid integration, you'll have a complete picture of how users interact with your app. From screen journeys and user behaviours to session replays and user properties, you'll be able to understand and enhance every aspect of your product's user experience. Follow along with this quick guide, and you'll be up and running in no time.
 
+<br />
+
+<SimpleStepper>
+  <SimpleStep header="Step 1: Install And Initialize">
+    Add the UXCam SDK to your project, obtain your app key from the UXCam dashboard, and initialize the SDK in your app’s entry point
+  </SimpleStep>
+
+  <SimpleStep header="Step 2: Customize Your Data">
+    Configure screen tagging, custom events, user identities, their properties and occlusion of any sensitive views or data shown in your app.
+  </SimpleStep>
+
+  <SimpleStep header="Step 3: Test And Review">
+    Run through critical user journeys in a test build to verify that sessions are recorded and events are logged correctly and iteratively refine your event tags, screen names, and occlusion rules based on the insights you uncover.
+  </SimpleStep>
+</SimpleStepper>
+
+<br />
+
 ### Quick Start: Only a Couple of Lines of Code
 
 [![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
