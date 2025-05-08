@@ -20,6 +20,12 @@ With a solid integration, you'll have a complete picture of how users interact w
 
 ![npm version](https://badge.fury.io/js/react-native-ux-cam.svg)
 
+<br />
+
+<GitHubReleaseBadge owner="uxcam" repo="react-native-ux-cam" />
+
+<br />
+
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
 
 #### React Native Integration
@@ -28,8 +34,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-      $ yarn add react-native-ux-cam
-            `}
+          $ yarn add react-native-ux-cam
+                `}
 </Terminal>
 
 Or
