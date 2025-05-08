@@ -42,7 +42,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 `https://github.com/uxcam/uxcam-ios-sdk`
 
-Specify the exact version to ensure compatibility (e.g., 3.6.22).
+Specify the exact version to ensure compatibility.
 
 ## Initializing UXCam
 
