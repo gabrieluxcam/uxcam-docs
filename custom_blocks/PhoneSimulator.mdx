@@ -9,6 +9,7 @@ export const PhoneSimulator = ({
   frameColor = '#000',
   backgroundColor = '#fff',
   notch = true,
+  glow = true,
   children,
 }) => {
  return (
@@ -20,6 +21,10 @@ export const PhoneSimulator = ({
         borderRadius: '32px',
         border: `12px solid ${frameColor}`,
         backgroundColor: frameColor,
+        boxShadow: glow
+        ? `0 0 16px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.2)`
+        : '0 4px 12px rgba(0, 0, 0, 0.2)',
+      transition: 'box-shadow 0.3s ease-in-out',
       }}
       >
       {/* Notch */}
