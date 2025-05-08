@@ -65,15 +65,17 @@ export const SimpleStepper = ({ children }) => {
         {steps.length > 0 ? <>{steps[currentStep]}</> : <></>}
       </div>
       <div>
-        <button
-          type="button"
-          style={buttonStyle}
-          onClick={handlePrev}
-          disabled={currentStep === 0}
-          aria-label="Previous Step"
-        >
-          Back
-        </button>
+  {/* only show “Back” if we’re past the first step */}
+  {currentStep > 0 && (
+    <button
+      type="button"
+      style={buttonStyle}
+      onClick={handlePrev}
+      aria-label="Previous Step"
+    >
+      Back
+    </button>
+  )}
 {currentStep < steps.length - 1 && (
   <button
     type="button"
