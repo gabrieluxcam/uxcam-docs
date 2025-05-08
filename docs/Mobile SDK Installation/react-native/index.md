@@ -28,14 +28,14 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-          $ yarn add react-native-ux-cam
-        `}
+      $ yarn add react-native-ux-cam
+            `}
 </Terminal>
 
 Or
 
 <Terminal>
-  {`npm i react-native-ux-cam`}
+  {`$ npm i react-native-ux-cam`}
 </Terminal>
 
 1. Add imports and create the configuration object in your App.js when your app starts. Your **App-key** is available on the UXCam dashboard
