@@ -1,0 +1,63 @@
+---
+name: PhoneSimulator
+---
+import React from 'react';
+
+export const PhoneSimulator = ({
+  width = '300px',
+  height = '600px',
+  frameColor = '#000',
+  backgroundColor = '#fff',
+  notch = true,
+  children,
+}) => {
+ return (
+    <div
+      className="mx-auto my-6 relative shadow-md"
+      style={{
+        width,
+        height,
+        borderRadius: '32px',
+        border: `12px solid ${frameColor}`,
+        backgroundColor: frameColor,
+      }}
+      >
+      {/* Notch */}
+      {notch && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: '60px',
+            height: '24px',
+            backgroundColor: frameColor,
+            borderBottomLeftRadius: '12px',
+            borderBottomRightRadius: '12px',
+          }}
+        />
+      )}
+           {/* Inner screen */}
+      <div
+        className="overflow-hidden"
+        style={{
+          position: 'absolute',
+          top: notch ? '24px' : '0',
+          left: '0',
+          right: '0',
+          bottom: '0',
+          borderRadius: '20px',
+          backgroundColor,
+          boxShadow: 'inset 0 0 6px rgba(0,0,0,0.1)',
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
+
+<PhoneSimulator frameColor="#333" width="280px" height="560px" notch={false}>
+<iframe src="https://example.com/embed" style={{ width: '100%', height: '100%', border: 'none' }} />
+</PhoneSimulator>
