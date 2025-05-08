@@ -22,8 +22,6 @@ With a solid integration, you’ll have a complete picture of how users interact
 
 ## Quick Start: Only a Couple of Lines of Code
 
-<br />
-
 <GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
 
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
