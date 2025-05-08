@@ -30,8 +30,11 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 1. **Add UXCam to Your Project**:
 
+   <Terminal>
+     {`tns plugin add nativescript-uxcam`}
+   </Terminal>
+
    ```typescript
-   tns plugin add nativescript-uxcam
    ```
 
 2. **Import the UXCam Plugin**:
@@ -105,7 +108,7 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
 > 👍 **As Simple As That!**
 >
 > This will complete the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes into the background.  
+> Your session will be shown on the dashboard within a few seconds after the app goes into the background.
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, you explore the customisation features UXCam offers. Let's move on to the next steps!
 
