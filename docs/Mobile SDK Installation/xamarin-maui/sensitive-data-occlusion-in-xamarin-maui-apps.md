@@ -104,6 +104,36 @@ UXCam.removeOcclusion(overlay); // Remove overlay
 
 Blur is a new occlusion API that allows you to blur screen recordings. This lets you obtain information regarding the state of the screen and user interaction while maintaining privacy on sensitive screens.
 
+```Text MAUI
+#if ANDROID
+using Com.Uxcam.Screenshot.Model;
+#endif
+
+// Add in the CreateMaui method
+
+// Your SDK Init
+UXCam.OptIntoSchematicRecordings();
+var config = new UXCamConfiguration("yourAppKey");
+         
+// Occlusion:
+#if ANDROID
+       var blur = new UXCamBlur.Builder()
+.BlurRadius(20)                   
+.Build();
+       config.Occlusion = blur;
+
+#elif IOS
+
+   var blur = new UXCamBlurSetting (20);
+       var occlusion = new UXCamOcclusion(blur);
+       config.Occlusion = occlusion;
+
+#endif
+
+// SDK start
+UXCam.Start(config);
+
+```
 ```csharp Xamarin
 // Xamarin Example - Apply Blur
 UXCamBlurSetting blur = new UXCamBlurSetting (10);
