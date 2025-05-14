@@ -37,10 +37,6 @@ For reference on including a component into your project visit here.
 
 ## SDK Installation - MAUI
 
-<br />
-
-[![NuGet version](https://badge.fury.io/nu/UXCam.svg)](https://www.nuget.org/packages/UXCamDotNet/1.0.1)
-
 1. Import the UXCam agent header at the top of your MauiProgram.cs
 
 ```coffeescript Code
