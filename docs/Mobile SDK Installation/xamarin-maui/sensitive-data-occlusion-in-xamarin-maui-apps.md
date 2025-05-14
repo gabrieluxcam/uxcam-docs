@@ -104,7 +104,7 @@ UXCam.removeOcclusion(overlay); // Remove overlay
 
 Blur is a new occlusion API that allows you to blur screen recordings. This lets you obtain information regarding the state of the screen and user interaction while maintaining privacy on sensitive screens.
 
-```Text MAUI
+```coffeescript MAUI
 #if ANDROID
 using Com.Uxcam.Screenshot.Model;
 #endif
