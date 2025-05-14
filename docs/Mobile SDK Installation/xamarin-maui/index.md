@@ -22,8 +22,6 @@ With a complete UXCam integration, you'll be able to track user journeys, analyz
 
 ## Quick Start Guide
 
-<br />
-
 Please download the latest Xamarin UXCam component from here\
 For reference on including a component into your project visit here.
 
