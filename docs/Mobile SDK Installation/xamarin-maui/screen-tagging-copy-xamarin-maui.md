@@ -14,7 +14,7 @@ metadata:
 next:
   description: ''
 ---
-# Screen Tagging for Xamarin - A Comprehensive Guide
+# Screen Tagging for MAUI and Xamarin - A Comprehensive Guide
 
 So you've integrated the UXCam SDK, and your sessions are coming through—great! Now it's time to understand the concept of screens: what they are, how to tag them, and why tagging is crucial for understanding user behavior in your app.
 
@@ -49,7 +49,7 @@ Manual tagging ensures that each screen gets the correct name, improving the gra
 
 ### Example: Manually Tagging a Screen
 
-Below are examples of how to manually tag a screen in Xamarin for both iOS and Android. 
+Below are examples of how to manually tag a screen in Xamarin for both iOS and Android.
 
 Use the `ViewWillAppear` method for iOS and `OnResume` for Android:
 
