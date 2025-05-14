@@ -1,5 +1,5 @@
 ---
-title: Xamarin
+title: Xamarin - MAUI
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,6 +10,14 @@ metadata:
 next:
   description: ''
 ---
+### MAUI
+
+#### V. 1.0.1 (May 14, 2025)
+
+* First stable version for MAUI users
+* Update iOS version to 3.6.24 and Android version to 3.6.41
+* Support dotnet versions from 8
+
 ### Xamarin
 
 #### V. 3.5.1 (December 12, 2023)
@@ -25,7 +33,7 @@ next:
 #### V. 3.4.2 (September 12, 2022)
 
 * Android SDK updated to v 3.4.4
-* Fix: Null pointer issue on occlusion application 🪲 [IMPORTANT]
+* Fix: Null pointer issue on occlusion application 🪲 \[IMPORTANT]
 * New: Screen level control for OccludeAllTextFields
 
 #### V. 3.4.1 (August 11, 2022)
