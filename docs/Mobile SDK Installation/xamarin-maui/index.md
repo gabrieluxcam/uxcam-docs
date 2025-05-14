@@ -31,9 +31,7 @@ For reference on including a component into your project visit here.
 >
 > If you're implementing the SDK using .NET MAUI instead of regular Xamarin, you'll have to download the package from [this link](https://www.nuget.org/packages/UXCamDotNet/1.0.1) instead, all other implementation steps are identical as seen below.
 
-\<GitHubCallout type="important">> 📘 .NET MAUI SDK &#x20;
-\>
-\> If you're implementing the SDK using .NET MAUI instead of regular Xamarin, you'll have to download the package from \[this link]\(\[https\://www\.nuget.org/packages/UXCamDotNet/1.0.1]\(https\://www\.nuget.org/packages/UXCamDotNet/1.0.1)) instead, all other implementation steps are identical as seen below.\\\</GitHubCallout>
+<GitHubCallout type="important">> 📘 If you're implementing the SDK using .NET MAUI instead of regular Xamarin, you'll have to download the package from [this link](https://www.nuget.org/packages/UXCamDotNet/1.0.1) instead, all other implementation steps are identical as seen below.</GitHubCallout>
 
 ## SDK Installation - MAUI
 
