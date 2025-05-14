@@ -30,6 +30,15 @@ By default, UXCam automatically tags screens as they are presented. However, you
 
 To enable (default) or disable automatic tagging during SDK initialization, use the following code:
 
+```Text MAUI
+// In screen names
+protected override void OnAppearing()
+{
+base.OnAppearing();
+UXCam.TagScreenName("name of screen");
+}
+
+```
 ```csharp Xamarin
 // Configuration Example for Xamarin
 UXCamConfiguration configuration = new UXCamConfiguration(
