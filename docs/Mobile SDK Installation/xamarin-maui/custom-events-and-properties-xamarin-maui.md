@@ -41,6 +41,9 @@ To send an event with properties, use the following method:
 void UXCam.LogEvent(string eventName, JSONObject properties) //Android
 void UXCam.LogEvent(string eventName, NSObject properties) //iOS
 ```
+```coffeescript MAUI
+UXCam.LogEvent("Event Name", new Dictionary<string, object> { { "stringValue", "value" }, {"numeric", 1} });
+```
 
 This approach gives you a richer dataset and helps in better segmenting and understanding your users' behaviour.
 
