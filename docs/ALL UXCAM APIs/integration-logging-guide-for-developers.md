@@ -35,7 +35,7 @@ All messages are prefixed with UXCam and categorized by level:
 
 Refer to the tables below for important messages you’ll see.
 
-### 4. Important Logs During Startup
+### Important Logs During Startup
 
 <br />
 
@@ -56,7 +56,7 @@ Refer to the tables below for important messages you’ll see.
 
 ---
 
-### 5. File‑Type Upload Logs
+### File‑Type Upload Logs
 
 <br />
 
@@ -69,7 +69,7 @@ Refer to the tables below for important messages you’ll see.
 
 ---
 
-### 6. Session & Screen Recording Events
+###  Session & Screen Recording Events
 
 <br />
 
@@ -88,7 +88,7 @@ Refer to the tables below for important messages you’ll see.
 
 ---
 
-### 7. Configuration Toggles
+###  Configuration Toggles
 
 <br />
 
@@ -108,7 +108,7 @@ INFO UXCam  [ConfigurationName] has been enabled.
 
 ---
 
-### 8. User & Event Logs
+###  User & Event Logs
 
 <br />
 
@@ -123,7 +123,7 @@ INFO UXCam  [ConfigurationName] has been enabled.
 
 ---
 
-### 9. Troubleshooting Tips
+###  Troubleshooting Tips
 
 <br />
 
