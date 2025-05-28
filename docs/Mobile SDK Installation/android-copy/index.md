@@ -18,30 +18,28 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 
 ***
 
-<br />
-
 ## 🗺️ Integration Journey at a Glance
 
-<Table>
+<Table align={["left","left","left","left","left"]}>
   <thead>
     <tr>
-      <th>
+      <th style={{ textAlign: "left" }}>
         #
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Step
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Goal
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Est. time with AI
       </th>
 
-      <th>
+      <th style={{ textAlign: "left" }}>
         Est. time manual
       </th>
     </tr>
@@ -49,111 +47,111 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 
   <tbody>
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         **1**
       </td>
 
-      <td>
-        **Initialise the SDK**
+      <td style={{ textAlign: "left" }}>
+        **Initialise the SDK** [Sign Up](https://app.uxcam.com/signup)
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Capture your first live session
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **10 min**
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **10 min**
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         **2**
       </td>
 
-      <td>
-        **Occlude sensitive data**
+      <td style={{ textAlign: "left" }}>
+        **Occlude sensitive data** [Sign Up](https://app.uxcam.com/signup)
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Hide passwords, PII & GDPR/CCPA data
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **10 min**
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **\~1 h**
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         **3**
       </td>
 
-      <td>
-        **Validate & refine screen names**
+      <td style={{ textAlign: "left" }}>
+        **Validate & refine screen names** [Sign Up](https://app.uxcam.com/signup)
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Enable heat maps and screen analytics
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **20 min**
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **\~2 h**
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         **4 ★**
       </td>
 
-      <td>
-        **Instrument events & users**
+      <td style={{ textAlign: "left" }}>
+        **Instrument events & users** [Sign Up](https://app.uxcam.com/signup)
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Power funnels & cohorts
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **20 min**
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **\~2 h**
       </td>
     </tr>
 
     <tr>
-      <td>
+      <td style={{ textAlign: "left" }}>
         **5**
       </td>
 
-      <td>
-        **QA & ship to production**
+      <td style={{ textAlign: "left" }}>
+        **QA & ship to production** [Sign Up](https://app.uxcam.com/signup)
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         Final smoke-test + release
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **\~20 min**
       </td>
 
-      <td>
+      <td style={{ textAlign: "left" }}>
         **\~20 min**
       </td>
     </tr>
@@ -164,35 +162,19 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 
 ***
 
-<br />
-
 ## 🔑 Key Benefits After Setup
-
-<br />
 
 * **Session Replay + Heatmaps** – watch each UX moment in context.
 * **AI-generated Insights** – anomaly detection, journey summaries, rage-tap alerts.
 * **Engineering Analytics** – client-side performance correlated with user behaviour.
   <br />
-  ***
-  <br />
-  <br />
 
-## 🚦 Next Up
+***
 
-<br />
+## 💡 Tips Before You Begin
 
-1. **Initialise the SDK →** *(5 lines of code and you’re recording)*
-2. **Hide sensitive fields →** [Occluding data ⟩](link.to.next.page)
-3. **Review screen tags →** *(auto-tagging + AI suggestions)*
-4. **\[Optional] Instrument events and users →** *(funnels, cohorts, retention)*
-5. **QA checklist →** *(verify, upload, release)*
-   <br />
-   ***
-   <br />
-   ## 💡 Tips Before You Begin
-   * **Separate keys** for *debug* and *production* keep analytics squeaky-clean.
-   * **Use feature flags** to toggle UXCam in staging builds without redeploying.
-   * **Lean on AI helpers** – they auto-detect sensitive views and propose screen/event names.
-   * **Check Logcat for “Verification success”** to confirm everything is wired up.
-   Happy shipping! 🎉
+* **Separate keys** for *debug* and *production* keep analytics squeaky-clean.
+* **Use feature flags** to toggle UXCam in staging builds without redeploying.
+* **Lean on AI helpers** – they auto-detect sensitive views and propose screen/event names.
+* **Check Logcat for “Verification success”** to confirm everything is wired up.\
+  Happy shipping! 🎉
