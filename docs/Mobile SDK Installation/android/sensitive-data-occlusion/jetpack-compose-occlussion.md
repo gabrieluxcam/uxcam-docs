@@ -1,5 +1,5 @@
 ---
-title: Jetpack Compose Occlussion
+title: Jetpack Compose Occlusion
 excerpt: ''
 deprecated: false
 hidden: false
