@@ -1,5 +1,5 @@
 ---
-title: Initialise UXCam SDK and start recording
+title: Initialise the SDK
 deprecated: false
 hidden: false
 metadata:
@@ -22,7 +22,9 @@ dependencies {
 }
 ```
 
-#### Store your UXCAM\_KEY safelyFind the UXCam App Key for your app integration - **TODO: Add screenshot of where to find the App Key**
+#### Store your UXCAM\_KEY safely
+
+Find the UXCam App Key for your app integration - **TODO: Add screenshot of where to find the App Key**
 
 1. **Pro tip:** create separate apps keys for your debug and production app in the UXCam dashboard (e.g. 'Your app - debug', 'Your app - production') to keep your data clean.
 
