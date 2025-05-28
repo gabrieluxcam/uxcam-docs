@@ -1,8 +1,8 @@
 ---
-title: Android (COPY)
+title: Android SDK Integration
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 next:
@@ -15,67 +15,122 @@ So you've got your account set up, now let's make sure your Android app is equip
 
 ## What Does a Successful Integration Look Like?
 
-With a solid integration, you'll have a complete picture of how users interact with your app. From screen journeys and user behaviours to session replays and user properties, you'll be able to understand and enhance every aspect of your product's user experience. Follow along with this quick guide, and you'll be up and running in no time.
-
-<br />
-
-<SimpleStepper>
-  <SimpleStep header="Step 1: Install And Initialize">
-    Add the UXCam SDK to your project, obtain your app key from the UXCam dashboard, and initialize the SDK in your app’s entry point.
-  </SimpleStep>
-
-  <SimpleStep header="Step 2: Customize Your Data">
-    Configure screen tagging, custom events, user identities, their properties and occlusion of any sensitive views or data shown in your app.
-  </SimpleStep>
-
-  <SimpleStep header="Step 3: Test And Review">
-    Run through critical user journeys in a test build to verify that sessions are recorded and events are logged correctly and iteratively refine your event tags, screen names, and occlusion rules based on the insights you uncover.
-  </SimpleStep>
-</SimpleStepper>
+1. Basic integration
 
 <br />
 
 ### Quick Start: Only a Couple of Lines of Code
 
-[![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
-
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
 
-#### Adding The Dependencies:
+#### Add dependencies for UXCam Library
 
-1. In the **module's build.gradle** file add UXCam:
-   ```java
-   repositories {
-     maven{ 
-        url 'https://sdk.uxcam.com/android/' 
-     } 
-   } 
-   dependencies { 
-        implementation 'com.uxcam:uxcam:3.+' 
-   }
+Import UXCam using Maven in the **module's build.gradle** file:
+
+```kotlin build.gradle (Java & Kotlin)
+repositories {
+  maven{ 
+     url 'https://sdk.uxcam.com/android/' 
+  } 
+} 
+dependencies { 
+     implementation 'com.uxcam:uxcam:3.+' 
+}
+```
+
+#### Add your UXCam Key to your app
+
+1. Find the UXCam App Key for your app integration - **TODO: Add screenshot of where to find the App Key**
+
+   **Pro tip:** create separate apps keys for your debug and production app in the UXCam dashboard (e.g. 'Your app - debug', 'Your app - production') to keep your data clean.
+
+2. Add UXCAM\_KEY to your local.properties file. local.properties lives in the project root and is already in every default .gitignore, so it never reaches your VCS.
+   ```Text local.properties (Java & Kotlin)
+   UXCAM_KEY=your_app_key
    ```
 
-#### Initializing UXCam:
+3. Load the `UXCAM_KEY` in your build.gradle (or build.gradle.tks) files into your BuildConfig
 
-1. In your launcher activity, import UXCam:
-   ```java
-   import com.uxcam.UXCam;
-   import com.uxcam.datamodel.UXConfig;
-   ```
+```kotlin
+// app/build.gradle.kts (Kotlin DSL)
 
-2. Now, you need to create a configuration object with desired settings and then start UXCam using this configuration object:
+val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
 
-   ```java Kotlin
-   val config = UXConfig.Builder("yourAppKey")
-       .build()
-   ```
-   ```coffeescript Java
-   UXConfig config = new UXConfig.Builder("yourAppKey").build();
-   ```
+android {
+    defaultConfig {
+        // Same result: BuildConfig.UXCAM_KEY
+        buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
+    }
+}
+```
+```groovy
+// app/build.gradle (Groovy DSL)
 
-   ```java
-   UXCam.startWithConfiguration(config);
-   ```
+def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
+
+android {
+    defaultConfig {
+        // Make the key available as BuildConfig.UXCAM_KEY
+        buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
+    }
+}
+```
+
+<br />
+
+#### Configure and initialise the UXCam SDK
+
+1. Identify where to initialise the UXCam Android SDK
+
+| **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Have (or can add) a custom **`Application`class**           | `MyApp : Application` → `override fun onCreate()`                                        | Runs before any `Activity`, so the first screen and uncaught crashes are always captured. Recommended for most apps. |
+| Don’t have an `Application` class and don’t want to add one | Your **launcher`Activity`** → `onCreate()` (before `setContentView`)                     | Still early enough for the first screen; simplest drop-in as shown in the official quick-start.                      |
+| Use a **single-Activity / Jetpack Compose** architecture    | Either of the above (preferred) **or** the top-level `@Composable` that’s first rendered | Works because Compose’s `setContent` is still in the launcher activity’s `onCreate()`.                               |
+| Rely on **MultiDex**                                        | Call `MultiDex.install(this)` first, then UXCam, inside `Application.onCreate()`         | Guarantees the secondary dex files are loaded before the SDK.                                                        |
+
+**Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
+
+2. Configure and start UXCam recording in Launcher Activity
+
+```kotlin
+// app/src/main/java/com/example/MyApp.kt
+// import library
+import com.uxcam.UXCam;
+import com.uxcam.datamodel.UXConfig;
+```
+```java
+import com.uxcam.UXCam;
+import com.uxcam.datamodel.UXConfig;
+```
+
+<br />
+
+```java Kotlin
+// app/src/main/java/com/example/MyApp.kt
+class MyApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        val builder = UXConfig.Builder(BuildConfig.UXCAM_KEY)
+            .enableAutomaticScreenNameTagging(true)   // optional tweaks
+            
+        
+        // Enable verbose integration logging only in debug builds
+				if (BuildConfig.DEBUG) {
+        	builder.enableIntegrationLogging(true);
+				}
+
+        UXCam.startWithConfiguration(config.build())
+    }
+}
+```
+```coffeescript Java
+UXConfig config = new UXConfig.Builder("yourAppKey").build();
+```
+
+<br />
 
 <br />
 
