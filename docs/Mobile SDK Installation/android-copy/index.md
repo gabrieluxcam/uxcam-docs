@@ -52,7 +52,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Initialise the SDK** [Sign Up](https://app.uxcam.com/signup)
+        **Initialise the SDK** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -74,7 +74,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Occlude sensitive data** [Sign Up](https://app.uxcam.com/signup)
+        **Occlude sensitive data** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -96,7 +96,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Validate & refine screen names** [Sign Up](https://app.uxcam.com/signup)
+        **Validate & refine screen names** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -118,7 +118,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Instrument events & users** [Sign Up](https://app.uxcam.com/signup)
+        **Instrument events & users** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -140,7 +140,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **QA & ship to production** [Sign Up](https://app.uxcam.com/signup)
+        **QA & ship to production** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
