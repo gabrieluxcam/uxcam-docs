@@ -1,5 +1,5 @@
 ---
-title: Android SDK Integration
+title: Android -
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
 hidden: true
