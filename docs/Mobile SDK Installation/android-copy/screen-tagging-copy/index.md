@@ -1,5 +1,5 @@
 ---
-title: Android - Screen Tagging
+title: Screen Tagging
 deprecated: false
 hidden: true
 metadata:
