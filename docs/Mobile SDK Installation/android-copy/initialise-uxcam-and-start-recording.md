@@ -7,22 +7,42 @@ metadata:
 ---
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
-## Add dependencies for UXCam Library
+<br />
 
-Import UXCam using Maven in the **module's build.gradle** file:
+## 1  Add the UXCam dependency
 
-```kotlin build.gradle (Java & Kotlin)
+Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
+
+```groovy build.gradle (Groovy)
 repositories {
-  maven{ 
-     url 'https://sdk.uxcam.com/android/' 
-  } 
-} 
-dependencies { 
-     implementation 'com.uxcam:uxcam:3.+' 
+    maven { url 'https://sdk.uxcam.com/android/' }
+}
+
+dependencies {
+    implementation 'com.uxcam:uxcam:3.+'
+}
+```
+```kotlin build.gradle.kts (Kotlin DSL)
+repositories {
+    maven { url 'https://sdk.uxcam.com/android/' }
+}
+
+dependencies {
+    implementation 'com.uxcam:uxcam:3.+'
 }
 ```
 
-#### Store your UXCAM\_KEY safely
+<br />
+
+## 2  Store your **UXCAM\_KEY** safely
+
+1. \*\*Find your App Key\*\* in the UXCam dashboard &#x20;
+   &#x20;  \<!-- TODO: Add screenshot of where to find the App Key -->
+
+> **Pro-tip:** create separate keys for your *debug* and *production* apps (e.g. **“Your App – debug”**, **“Your App – production”**) to keep data clean.Add the key to **`local.properties`** (already ignored by Git):
+
+2. **Add the key to local.properties** (already ignored by Git):
+   <br />
 
 Find the UXCam App Key for your app integration - **TODO: Add screenshot of where to find the App Key**
 
