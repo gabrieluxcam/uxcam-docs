@@ -1,5 +1,5 @@
 ---
-title: Android - Screen Tagging
+title: Jetpack Compose - Screen Tagging
 deprecated: false
 hidden: false
 metadata:
