@@ -1,5 +1,5 @@
 ---
-title: Android - review and improve screen tagging
+title: Android - Screen Tagging
 deprecated: false
 hidden: true
 metadata:
