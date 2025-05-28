@@ -1,7 +1,7 @@
 ---
-title: Screen Tagging (COPY)
+title: Android - review and improve screen tagging
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 next:
