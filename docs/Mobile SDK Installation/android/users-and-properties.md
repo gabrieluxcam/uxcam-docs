@@ -1,5 +1,5 @@
 ---
-title: Set user IDs and properties
+title: Set user IDs and property
 excerpt: ''
 deprecated: false
 hidden: false
