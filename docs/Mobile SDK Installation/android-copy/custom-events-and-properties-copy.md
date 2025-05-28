@@ -1,5 +1,5 @@
 ---
-title: Android - send custom events with properties
+title: Send custom events with properties
 deprecated: false
 hidden: true
 metadata:
