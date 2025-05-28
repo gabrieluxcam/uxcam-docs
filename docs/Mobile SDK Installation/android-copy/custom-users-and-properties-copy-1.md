@@ -1,5 +1,5 @@
 ---
-title: Custom Users and Properties (COPY)
+title: Android - set User IDs and properties
 deprecated: false
 hidden: false
 metadata:
