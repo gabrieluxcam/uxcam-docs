@@ -2,7 +2,7 @@
 title: "🤖\_AI‑Powered Bootstrap Setup with Codex\_CLI"
 excerpt: Implement the SDK and record your first session.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
