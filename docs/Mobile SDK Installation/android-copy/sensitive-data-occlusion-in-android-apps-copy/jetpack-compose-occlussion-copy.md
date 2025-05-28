@@ -1,7 +1,7 @@
 ---
-title: Jetpack Compose Occlussion (COPY)
+title: Android - occlude sensitive data in Jetpack Compose apps
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
