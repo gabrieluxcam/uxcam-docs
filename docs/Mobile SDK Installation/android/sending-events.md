@@ -1,5 +1,5 @@
 ---
-title: Custom Events and Properties
+title: Send custom events with properties
 excerpt: ''
 deprecated: false
 hidden: false
