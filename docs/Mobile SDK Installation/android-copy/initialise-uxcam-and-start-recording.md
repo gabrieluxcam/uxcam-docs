@@ -5,11 +5,9 @@ hidden: false
 metadata:
   robots: index
 ---
-### Quick Start: Only a Couple of Lines of Code
+Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
-Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
-
-#### Add dependencies for UXCam Library
+## Add dependencies for UXCam Library
 
 Import UXCam using Maven in the **module's build.gradle** file:
 
