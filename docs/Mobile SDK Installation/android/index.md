@@ -72,7 +72,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
    val config = UXConfig.Builder("yourAppKey")
        .build()
    ```
-   ```Text Java
+   ```coffeescript Java
    UXConfig config = new UXConfig.Builder("yourAppKey").build();
    ```
 
