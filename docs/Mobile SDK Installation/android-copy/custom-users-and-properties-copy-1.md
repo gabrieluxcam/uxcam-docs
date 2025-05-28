@@ -1,7 +1,7 @@
 ---
 title: Android - set User IDs and properties
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
