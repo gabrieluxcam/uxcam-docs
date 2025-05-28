@@ -1,5 +1,5 @@
 ---
-title: Android SDK Integration
+title: 🚀 Android Integration Guide – Overview
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
 hidden: true
@@ -7,22 +7,188 @@ metadata:
   robots: index
 next:
   pages:
-    - slug: screen-tagging
-      title: Screen Tagging
+    - slug: initialise-uxcam-and-start-recording
+      title: Initialise UXCam SDK and start recording
       type: basic
 ---
-If you haven't done so, you can sign up to a free Trial of UXCam [here](https://app.uxcam.com/signup).
+Welcome! If you haven’t yet signed up for UXCam, grab your **free trial** in seconds → [Sign Up](https://app.uxcam.com/signup) .
 
-Once you've got your account set up, now let's make sure your Android app is equipped with the insights that UXCam can provide.
+Once your account is ready, follow the **five-step path** below to start turning raw usage into AI-powered insights for Product and Engineering teams.\
+Most teams ship the core setup in **under two hours** (often much faster with UXCam’s AI helpers).
 
-The UXCam Integration in your Android app consists of 5 simple steps and can be completed in a matter of 1-2 hours. We recommend you use our AI recommendations, which can help you speed up the process significantly Afterwards you will be able to get a holistic, AI powered view of your users' experience through Product Analytics and Engineering Analytics enriched with Session Replay.
+***
 
-1. **Initialise the UXCam SDK in your app to record your first session** - 10 min
-2. **Occlude sensitive information.** - 10min with AI - 1h without AI - [add link to next page](link.to.next.page)
-3. **Review and setup tagging of screens** - 20min with AI - 2h without AI
-4. ***\[Optional]* Instrumentation**
-   1. **Tag key events in your app** - 20min with AI - 2h without AI
-   2. **Set user IDs and properties** - 10min with AI - 10min without AI
-5. **QA and production release**
+<br />
 
-We recommend you follow these steps before releasing your app with UXCam into production to get the most value out of UXCam, but you can also skip the optional steps and come back to them later.
+## 🗺️ Integration Journey at a Glance
+
+<Table>
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+
+      <th>
+        Step
+      </th>
+
+      <th>
+        Goal
+      </th>
+
+      <th>
+        Est. time with AI
+      </th>
+
+      <th>
+        Est. time manual
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        **1**
+      </td>
+
+      <td>
+        **Initialise the SDK**
+      </td>
+
+      <td>
+        Capture your first live session
+      </td>
+
+      <td>
+        **10 min**
+      </td>
+
+      <td>
+        **10 min**
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **2**
+      </td>
+
+      <td>
+        **Occlude sensitive data**
+      </td>
+
+      <td>
+        Hide passwords, PII & GDPR/CCPA data
+      </td>
+
+      <td>
+        **10 min**
+      </td>
+
+      <td>
+        **\~1 h**
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **3**
+      </td>
+
+      <td>
+        **Validate & refine screen names**
+      </td>
+
+      <td>
+        Enable heat maps and screen analytics
+      </td>
+
+      <td>
+        **20 min**
+      </td>
+
+      <td>
+        **\~2 h**
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **4 ★**
+      </td>
+
+      <td>
+        Power funnels & cohorts
+      </td>
+
+      <td>
+        **20 min**
+      </td>
+
+      <td>
+        **\~2 h**
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **5**
+      </td>
+
+      <td>
+        **QA & ship to production**
+      </td>
+
+      <td>
+        Final smoke-test + release
+      </td>
+
+      <td>
+        **\~20 min**
+      </td>
+
+      <td>
+        **\~20 min**
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+> ★ **Optional but highly recommended.** You can launch with the core setup (steps 1-3) and revisit step 4 later.
+
+***
+
+<br />
+
+## 🔑 Key Benefits After Setup
+
+<br />
+
+* **Session Replay + Heatmaps** – watch each UX moment in context.
+* **AI-generated Insights** – anomaly detection, journey summaries, rage-tap alerts.
+* **Engineering Analytics** – client-side performance correlated with user behaviour.
+  <br />
+  ***
+  <br />
+  <br />
+
+## 🚦 Next Up
+
+<br />
+
+1. **Initialise the SDK →** *(5 lines of code and you’re recording)*
+2. **Hide sensitive fields →** [Occluding data ⟩](link.to.next.page)
+3. **Review screen tags →** *(auto-tagging + AI suggestions)*
+4. **\[Optional] Instrument events and users →** *(funnels, cohorts, retention)*
+5. **QA checklist →** *(verify, upload, release)*
+   <br />
+   ***
+   <br />
+   ## 💡 Tips Before You Begin
+   * **Separate keys** for *debug* and *production* keep analytics squeaky-clean.
+   * **Use feature flags** to toggle UXCam in staging builds without redeploying.
+   * **Lean on AI helpers** – they auto-detect sensitive views and propose screen/event names.
+   * **Check Logcat for “Verification success”** to confirm everything is wired up.
+   Happy shipping! 🎉
