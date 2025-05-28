@@ -1,16 +1,39 @@
 ---
 title: Initialise the SDK
+excerpt: Implement the SDK and record your first session.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
+/
+
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
-```
-```
+<Accordion title="1. Add the UXCam dependency" icon="fa-info-circle">
+  Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
 
-<br />
+  ```kotlin build.gradle.kts (Kotlin DSL)
+  repositories {
+      maven { url 'https://sdk.uxcam.com/android/' }
+  }
+
+  dependencies {
+      implementation 'com.uxcam:uxcam:3.+'
+  }
+  ```
+  ```groovy build.gradle (Groovy)
+  repositories {
+      maven { url 'https://sdk.uxcam.com/android/' }
+  }
+
+  dependencies {
+      implementation 'com.uxcam:uxcam:3.+'
+  }
+  ```
+
+  ##
+</Accordion>
 
 ## 1. Add the UXCam dependency
 
