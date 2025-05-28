@@ -1,5 +1,5 @@
 ---
-title: Sensitive Data Occlusion in Android Apps
+title: Occlude Sensitive Data
 excerpt: ''
 deprecated: false
 hidden: false
