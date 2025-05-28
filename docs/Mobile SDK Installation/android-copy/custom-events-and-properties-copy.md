@@ -1,7 +1,7 @@
 ---
-title: Custom Events and Properties (COPY)
+title: Android - send custom events with properties
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
