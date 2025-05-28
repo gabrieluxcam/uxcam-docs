@@ -120,6 +120,10 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td>
+        **Instrument events & users**
+      </td>
+
+      <td>
         Power funnels & cohorts
       </td>
 
