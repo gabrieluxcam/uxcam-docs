@@ -1,7 +1,7 @@
 ---
 title: Sensitive Data Occlusion in Android Apps (COPY)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 next:
