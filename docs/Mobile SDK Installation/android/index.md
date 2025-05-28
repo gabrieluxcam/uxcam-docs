@@ -68,9 +68,12 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 2. Now, you need to create a configuration object with desired settings and then start UXCam using this configuration object:
 
-   ```java
+   ```java Kotlin
    val config = UXConfig.Builder("yourAppKey")
        .build()
+   ```
+   ```Text Java
+   UXConfig config = new UXConfig.Builder("yourAppKey").build();
    ```
 
    ```java
