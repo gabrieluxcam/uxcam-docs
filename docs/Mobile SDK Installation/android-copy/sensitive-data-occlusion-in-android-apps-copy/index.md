@@ -1,5 +1,5 @@
 ---
-title: 'Android - occlude sensitive data '
+title: 'Occlude sensitive data '
 deprecated: false
 hidden: true
 metadata:
