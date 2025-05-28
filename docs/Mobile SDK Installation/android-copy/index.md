@@ -18,7 +18,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 
 ***
 
-## 🗺️ Integration Journey at a Glance
+## Integration Journey at a Glance
 
 <Table align={["left","left","left","left","left"]}>
   <thead>
@@ -162,9 +162,10 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 
 ***
 
-## 🔑 Key Benefits After Setup
+## Key Benefits After Setup
 
-* **Session Replay + Heatmaps** – watch each UX moment in context.
+* **Session Replay + Heat maps** – watch each UX moment in context.
+* **Advanced Product Analytics** – measure conversions, engagement and retention of your users, and be alerted about any changes.
 * **AI-generated Insights** – anomaly detection, journey summaries, rage-tap alerts.
 * **Engineering Analytics** – client-side performance correlated with user behaviour.
   <br />
