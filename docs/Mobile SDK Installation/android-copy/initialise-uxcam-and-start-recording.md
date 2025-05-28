@@ -1,5 +1,5 @@
 ---
-title: Initialise the SDK
+title: Initialise the SDK and record your first session
 excerpt: Implement the SDK and record your first session.
 deprecated: false
 hidden: false
@@ -8,75 +8,81 @@ metadata:
 ---
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
-\<Tabs>\
-\<Tab title="Second Tab">
-AI Approach
-\</Tab>
-\<Tab title="Manual Integration">
+## 1  Add the UXCam dependency
 
-\<Accordion title="Add the UXCam dependency">\
 Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
 
-```
-```
+```kotlin build.gradle.kts (Kotlin DSL)
+repositories {
+    maven { url 'https://sdk.uxcam.com/android/' }
+}
 
+dependencies {
+    implementation 'com.uxcam:uxcam:3.+'
+}
 ```
-```
+```groovy build.gradle (Groovy)
+repositories {
+    maven { url 'https://sdk.uxcam.com/android/' }
+}
 
+dependencies {
+    implementation 'com.uxcam:uxcam:3.+'
+}
 ```
-```
-
-\<Accordion title="Store your **UXCAM\_KEY** safely" icon="fa-key">
 
 ## 2  Store your **UXCAM\_KEY** safely
 
-1. **Find your App Key** in the UXCam dashboard\\\
+1. **Find your App Key** in the UXCam dashboard\
    \<!-- TODO: Add screenshot of where to find the App Key -->
 
 > **Pro-tip:** create separate keys for your *debug* and *production* apps (e.g. **“Your App – debug”**, **“Your App – production”**) to keep data clean.Add the key to **`local.properties`** (already ignored by Git):
 
 2. **Add the key to local.properties** (already ignored by Git):
 
-```
+```Text local.properties
+UXCAM_KEY=your_app_key
 ```
 
 3. **Expose the key to code via BuildConfig**
 
-```
-```
+```kotlin app/build.gradle.kts (Kotlin DSL)
+// app/build.gradle.kts (Kotlin DSL)
 
-val uxcamKey: String = project.findProperty("UXCAM\_KEY") as? String ?: ""
+val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
 
-android \{\
-defaultConfig \{
-// Same result: BuildConfig.UXCAM\_KEY
-buildConfigField("String", "UXCAM\_KEY", ""$uxcamKey"")
+android {
+    defaultConfig {
+        // Same result: BuildConfig.UXCAM_KEY
+        buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
+    }
 }
-}````
+```
 ```groovy app/build.gradle (Groovy)
 // app/build.gradle (Groovy DSL)
-````
 
-def uxcamKey = project.findProperty("UXCAM\_KEY") ?: ""
+def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
 
-android \{\
-defaultConfig \{
-// Make the key available as BuildConfig.UXCAM\_KEY
-buildConfigField "String", "UXCAM\_KEY", ""$\{uxcamKey}""
+android {
+    defaultConfig {
+        // Make the key available as BuildConfig.UXCAM_KEY
+        buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
+    }
 }
-}```
-\</Accordion>
 ```
 
-<br />
+## 3 Configure and initialise the UXCam SDK
 
-## 1. Add the UXCam dependency
+### 3.1 Pick the right place to start UXCam
 
-## 2. Store your **UXCAM\_KEY** safely
+| **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
+| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Have (or can add) a custom **`Application`class**           | `MyApp : Application` → `override fun onCreate()`                                        | Runs before any `Activity`, so the first screen and uncaught crashes are always captured. Recommended for most apps. |
+| Don’t have an `Application` class and don’t want to add one | Your **launcher`Activity`** → `onCreate()` (before `setContentView`)                     | Still early enough for the first screen; simplest drop-in as shown in the official quick-start.                      |
+| Use a **single-Activity / Jetpack Compose** architecture    | Either of the above (preferred) **or** the top-level `@Composable` that’s first rendered | Works because Compose’s `setContent` is still in the launcher activity’s `onCreate()`.                               |
+| Rely on **MultiDex**                                        | Call `MultiDex.install(this)` first, then UXCam, inside `Application.onCreate()`         | Guarantees the secondary dex files are loaded before the SDK.                                                        |
 
-1. **Find your App Key** in the UXCam dashboard\\
-
-<br />
+**Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
 
 ### 3.2 Sample  setup (inside Application)
 
@@ -129,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
 ***
 
-## 4. Verify the integration
+## 4  Verify the integration
 
 1. **Run the app in an emulator or device**, interact with it for 20s or so and watch *Logcat* (filter by `uxcam`). You should see:
 
@@ -139,8 +145,6 @@ public class MainActivity extends AppCompatActivity {
 2. **Background the app** (don’t just kill the emulator).
 3. \*\*Within 1–2 minutes you’ll see the session on your [UXCam Dashboard](\[https://app.uxcam.com]\(https://app.uxcam.com\)) . \*\*\
    \<!-- TODO: Add screenshot of the first session in the dashboard -->
-
-<br />
 
 ## Next Steps ➡️
 
