@@ -1,5 +1,5 @@
 ---
-title: Initialise the SDK and record your first session (COPY)
+title: '[AI] Initialise the SDK and record your first session'
 excerpt: Implement the SDK and record your first session.
 deprecated: false
 hidden: false
