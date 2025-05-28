@@ -8,78 +8,65 @@ metadata:
 ---
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
+\<Tabs>\
+\<Tab title="Second Tab">
+AI Approach
+\</Tab>
+\<Tab title="Manual Integration">
 
+\<Accordion title="Add the UXCam dependency">\
+Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
 
-\<Tabs>
-&#x20; \<Tab title="Second Tab">
-&#x20;   AI Approach
-&#x20; \</Tab>
-&#x20; \<Tab title="Manual Integration">
+```
+```
 
-\<Accordion title="Add the UXCam dependency">
-&#x20;   Add UXCam’s Maven repo and the dependency in \*\*your module’s\*\* \`build.gradle\` (Groovy) \*\*or\*\* \`build.gradle.kts\` (Kotlin DSL):
+```
+```
 
-&#x20;   \`\`\`kotlin build.gradle.kts (Kotlin DSL)
-&#x20;   repositories \{
-&#x20;       maven \{ url 'https\://sdk.uxcam.com/android/' }
-&#x20;   }
+```
+```
 
-&#x20;   dependencies \{
-&#x20;       implementation 'com.uxcam:uxcam:3.+'
-&#x20;   }
-&#x20;   \`\`\`
-&#x20;   \`\`\`groovy build.gradle (Groovy)
-&#x20;   repositories \{
-&#x20;       maven \{ url 'https\://sdk.uxcam.com/android/' }
-&#x20;   }
+\<Accordion title="Store your **UXCAM\_KEY** safely" icon="fa-key">
 
-&#x20;   dependencies \{
-&#x20;       implementation 'com.uxcam:uxcam:3.+'
-&#x20;   }
-&#x20;   \`\`\`
-\</Accordion>
+## 2  Store your **UXCAM\_KEY** safely
 
-\<Accordion title="Store your \*\*UXCAM\\\_KEY\*\* safely" icon="fa-key">
-&#x20; \## 2  Store your \*\*UXCAM\\\_KEY\*\* safely
+1. **Find your App Key** in the UXCam dashboard\\\
+   \<!-- TODO: Add screenshot of where to find the App Key -->
 
-1\. \*\*Find your App Key\*\* in the UXCam dashboard\\
-&#x20;  \\\<!-- TODO: Add screenshot of where to find the App Key -->
+> **Pro-tip:** create separate keys for your *debug* and *production* apps (e.g. **“Your App – debug”**, **“Your App – production”**) to keep data clean.Add the key to **`local.properties`** (already ignored by Git):
 
-\> \*\*Pro-tip:\*\* create separate keys for your \*debug\* and \*production\* apps (e.g. \*\*“Your App – debug”\*\*, \*\*“Your App – production”\*\*) to keep data clean.Add the key to \*\*\`local.properties\`\*\* (already ignored by Git):
+2. **Add the key to local.properties** (already ignored by Git):
 
-2\. \*\*Add the key to local.properties\*\* (already ignored by Git):
+```
+```
 
-\`\`\`Text local.properties
-UXCAM\_KEY=your\_app\_key
-\`\`\`
+3. **Expose the key to code via BuildConfig**
 
-3\. \*\*Expose the key to code via BuildConfig\*\*
-
-\`\`\`kotlin app/build.gradle.kts (Kotlin DSL)
-// app/build.gradle.kts (Kotlin DSL)
+```
+```
 
 val uxcamKey: String = project.findProperty("UXCAM\_KEY") as? String ?: ""
 
-android \{
-&#x20;   defaultConfig \{
-&#x20;       // Same result: BuildConfig.UXCAM\_KEY
-&#x20;       buildConfigField("String", "UXCAM\_KEY", "\\"$uxcamKey\\"")
-&#x20;   }
+android \{\
+defaultConfig \{
+// Same result: BuildConfig.UXCAM\_KEY
+buildConfigField("String", "UXCAM\_KEY", ""$uxcamKey"")
 }
-\`\`\`
-\`\`\`groovy app/build.gradle (Groovy)
+}````
+```groovy app/build.gradle (Groovy)
 // app/build.gradle (Groovy DSL)
+````
 
 def uxcamKey = project.findProperty("UXCAM\_KEY") ?: ""
 
-android \{
-&#x20;   defaultConfig \{
-&#x20;       // Make the key available as BuildConfig.UXCAM\_KEY
-&#x20;       buildConfigField "String", "UXCAM\_KEY", "\\"$\{uxcamKey}\\""
-&#x20;   }
+android \{\
+defaultConfig \{
+// Make the key available as BuildConfig.UXCAM\_KEY
+buildConfigField "String", "UXCAM\_KEY", ""$\{uxcamKey}""
 }
-\`\`\`
+}```
 \</Accordion>
+```
 
 <br />
 
