@@ -9,7 +9,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <br />
 
-## 1  Add the UXCam dependency
+## 1. Add the UXCam dependency
 
 Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
 
@@ -34,7 +34,7 @@ dependencies {
 
 <br />
 
-## 2  Store your **UXCAM\_KEY** safely
+## 2. Store your **UXCAM\_KEY** safely
 
 1. **Find your App Key** in the UXCam dashboard\
    \<!-- TODO: Add screenshot of where to find the App Key -->
@@ -74,7 +74,7 @@ android {
 }
 ```
 
-## 3 Configure and initialise the UXCam SDK
+## 3. Configure and initialise the UXCam SDK
 
 ### 3.1 Pick the right place to start UXCam
 
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
 ***
 
-## 4  Verify the integration
+## 4. Verify the integration
 
 1. **Run the app in an emulator or device**, interact with it for 20s or so and watch *Logcat* (filter by `uxcam`). You should see:
 
