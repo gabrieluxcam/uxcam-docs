@@ -7,6 +7,9 @@ metadata:
 ---
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
+```
+```
+
 <br />
 
 ## 1. Add the UXCam dependency
