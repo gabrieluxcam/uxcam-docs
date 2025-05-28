@@ -136,13 +136,6 @@ public class MainActivity extends AppCompatActivity {
 
 ```
 
-> 👍 As Simple As That!
->
-> This will complete the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
->
-> We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
-
 ***
 
 ## 4  Verify the integration
@@ -153,8 +146,10 @@ public class MainActivity extends AppCompatActivity {
 * `Session recording started`
 
 2. **Background the app** (don’t just kill the emulator).
-3. \*\*Within 1–2 minutes you’ll see the session on your \[UXCam Dashboard]\(https\://app.uxcam.com) . \*\* &#x20;
-   &#x20;  \<!-- TODO: Add screenshot of the first session in the dashboard -->
+3. \*\*Within 1–2 minutes you’ll see the session on your [UXCam Dashboard](\[https://app.uxcam.com]\(https://app.uxcam.com\)) . \*\*\
+   \<!-- TODO: Add screenshot of the first session in the dashboard -->
+
+<br />
 
 ## Next Steps ➡️
 
