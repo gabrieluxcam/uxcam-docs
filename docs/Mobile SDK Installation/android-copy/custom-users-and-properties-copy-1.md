@@ -1,5 +1,5 @@
 ---
-title: Android - set User IDs and properties
+title: Set user IDs and properties
 deprecated: false
 hidden: true
 metadata:
