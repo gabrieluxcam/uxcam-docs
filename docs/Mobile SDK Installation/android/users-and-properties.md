@@ -1,5 +1,5 @@
 ---
-title: Custom Users and Properties
+title: Set user IDs and properties
 excerpt: ''
 deprecated: false
 hidden: false
