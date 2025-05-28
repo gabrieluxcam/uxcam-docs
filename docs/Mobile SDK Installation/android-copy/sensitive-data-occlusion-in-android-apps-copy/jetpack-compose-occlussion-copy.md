@@ -1,5 +1,5 @@
 ---
-title: Android - occlude sensitive data in Jetpack Compose apps
+title: Occlude sensitive data in Jetpack Compose apps
 deprecated: false
 hidden: true
 metadata:
