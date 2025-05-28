@@ -52,7 +52,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Initialise the SDK** [Link](https://app.uxcam.com/signup)
+        **Initialise the SDK** [Link](https://developer.uxcam.com/v2.0/update/docs/initialise-uxcam-and-start-recording#/versions)
       </td>
 
       <td style={{ textAlign: "left" }}>
