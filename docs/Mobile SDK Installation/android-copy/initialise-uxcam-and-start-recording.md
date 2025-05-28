@@ -1,7 +1,7 @@
 ---
 title: Initialise the SDK
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
