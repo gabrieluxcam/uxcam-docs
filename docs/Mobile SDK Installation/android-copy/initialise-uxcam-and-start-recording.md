@@ -13,7 +13,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 Add UXCam’s Maven repo and the dependency in **your module’s** `build.gradle` (Groovy) **or** `build.gradle.kts` (Kotlin DSL):
 
-```groovy build.gradle (Groovy)
+```kotlin build.gradle.kts (Kotlin DSL)
 repositories {
     maven { url 'https://sdk.uxcam.com/android/' }
 }
@@ -22,7 +22,7 @@ dependencies {
     implementation 'com.uxcam:uxcam:3.+'
 }
 ```
-```kotlin build.gradle.kts (Kotlin DSL)
+```groovy build.gradle (Groovy)
 repositories {
     maven { url 'https://sdk.uxcam.com/android/' }
 }
@@ -36,26 +36,20 @@ dependencies {
 
 ## 2  Store your **UXCAM\_KEY** safely
 
-1. \*\*Find your App Key\*\* in the UXCam dashboard &#x20;
-   &#x20;  \<!-- TODO: Add screenshot of where to find the App Key -->
+1. **Find your App Key** in the UXCam dashboard\
+   \<!-- TODO: Add screenshot of where to find the App Key -->
 
 > **Pro-tip:** create separate keys for your *debug* and *production* apps (e.g. **“Your App – debug”**, **“Your App – production”**) to keep data clean.Add the key to **`local.properties`** (already ignored by Git):
 
 2. **Add the key to local.properties** (already ignored by Git):
-   <br />
 
-Find the UXCam App Key for your app integration - **TODO: Add screenshot of where to find the App Key**
+```Text local.properties
+UXCAM_KEY=your_app_key
+```
 
-1. **Pro tip:** create separate apps keys for your debug and production app in the UXCam dashboard (e.g. 'Your app - debug', 'Your app - production') to keep your data clean.
+3. **Expose the key to code via BuildConfig**
 
-2. Add UXCAM\_KEY to your local.properties file. local.properties lives in the project root and is already in every default .gitignore, so it never reaches your VCS.
-   ```Text local.properties (Java & Kotlin)
-   UXCAM_KEY=your_app_key
-   ```
-
-3. Load the `UXCAM_KEY` in your build.gradle (or build.gradle.tks) files into your BuildConfig
-
-```kotlin
+```kotlin app/build.gradle.kts (Kotlin DSL)
 // app/build.gradle.kts (Kotlin DSL)
 
 val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
@@ -67,7 +61,7 @@ android {
     }
 }
 ```
-```groovy
+```groovy app/build.gradle (Groovy)
 // app/build.gradle (Groovy DSL)
 
 def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
@@ -80,9 +74,9 @@ android {
 }
 ```
 
-#### Configure and initialise the UXCam SDK
+## 3 Configure and initialise the UXCam SDK
 
-1. Identify where to initialise the UXCam Android SDK
+### 3.1 Pick the right place to start UXCam
 
 | **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -93,41 +87,53 @@ android {
 
 **Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
 
-2. Configure and start UXCam recording in Launcher Activity
+### 3.2 Sample  setup (inside Application)
 
 ```kotlin
 // app/src/main/java/com/example/MyApp.kt
-// import library
-import com.uxcam.UXCam;
-import com.uxcam.datamodel.UXConfig;
-```
-```java
-import com.uxcam.UXCam;
-import com.uxcam.datamodel.UXConfig;
-```
+package com.example
 
-```java Kotlin
-// app/src/main/java/com/example/MyApp.kt
+import android.app.Application
+import com.uxcam.UXCam
+import com.uxcam.datamodel.UXConfig
+
 class MyApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
-        val builder = UXConfig.Builder(BuildConfig.UXCAM_KEY)
-            .enableAutomaticScreenNameTagging(true)   // optional tweaks
-            
-        
-        // Enable verbose integration logging only in debug builds
-				if (BuildConfig.DEBUG) {
-        	builder.enableIntegrationLogging(true);
-				}
+        val config = UXConfig.Builder(BuildConfig.UXCAM_KEY)
+            .enableAutomaticScreenNameTagging(true) // remove if you tag screens manually
+            .apply {
+                // Enable verbose integration logs only in debug builds
+                if (BuildConfig.DEBUG) {
+                    enableIntegrationLogging(true)
+                }
+            }
+            .build()
 
-        UXCam.startWithConfiguration(config.build())
+        UXCam.startWithConfiguration(config)
     }
 }
+
 ```
-```coffeescript Java
-UXConfig config = new UXConfig.Builder("yourAppKey").build();
+```java Java fallback
+public class MainActivity extends AppCompatActivity {
+
+    @Override protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        UXConfig config = new UXConfig
+                .Builder(BuildConfig.UXCAM_KEY)
+                .build();
+
+        // Call BEFORE setContentView
+        UXCam.startWithConfiguration(config);
+
+        setContentView(R.layout.activity_main);
+    }
+}
+
 ```
 
 > 👍 As Simple As That!
@@ -136,6 +142,19 @@ UXConfig config = new UXConfig.Builder("yourAppKey").build();
 > Your session will be shown on the dashboard within a few seconds after the app goes in the background.
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
+
+***
+
+## 4  Verify the integration
+
+1. **Run the app in an emulator or device**, interact with it for 20s or so and watch *Logcat* (filter by `uxcam`). You should see:
+
+* `Verification successful`
+* `Session recording started`
+
+2. **Background the app** (don’t just kill the emulator).
+3. \*\*Within 1–2 minutes you’ll see the session on your \[UXCam Dashboard]\(https\://app.uxcam.com) . \*\* &#x20;
+   &#x20;  \<!-- TODO: Add screenshot of the first session in the dashboard -->
 
 ## Next Steps ➡️
 
