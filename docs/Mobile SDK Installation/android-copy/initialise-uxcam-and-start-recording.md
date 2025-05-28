@@ -1,5 +1,5 @@
 ---
-title: Initialise UXCam and start recording
+title: Initialise UXCam SDK and start recording
 deprecated: false
 hidden: false
 metadata:
