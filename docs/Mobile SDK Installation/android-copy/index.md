@@ -176,5 +176,5 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
 * **Separate keys** for *debug* and *production* keep analytics squeaky-clean.
 * **Use feature flags** to toggle UXCam in staging builds without redeploying.
 * **Lean on AI helpers** – they auto-detect sensitive views and propose screen/event names.
-* **Check Logcat for “Verification success”** to confirm everything is wired up.\
+* **Check Logcat for “Verification success” and "Session/Video uploaded" messages** to confirm everything is wired up.\
   Happy shipping! 🎉
