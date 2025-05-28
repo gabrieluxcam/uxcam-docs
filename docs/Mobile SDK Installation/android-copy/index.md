@@ -1,5 +1,5 @@
 ---
-title: 🚀 Android Integration Guide – Overview
+title: Android SDK Integration Guide
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
 hidden: true
