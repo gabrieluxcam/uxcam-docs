@@ -171,6 +171,3 @@ public class MainActivity extends AppCompatActivity {
 
 Great job—your first sessions are flowing!\
 Now learn how to **occlude sensitive data** and **refine screen names** to unlock the full power of UXCam analytics.
-
-```
-```
