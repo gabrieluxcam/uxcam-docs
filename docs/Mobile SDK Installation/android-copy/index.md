@@ -11,171 +11,79 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-Welcome! If you haven’t yet signed up for UXCam, grab your **free trial** in seconds → [Sign Up](https://app.uxcam.com/signup) .
+Welcome! If you haven’t signed up yet, grab your **free trial** → [Sign Up](https://app.uxcam.com/signup).
 
-Once your account is ready, follow the **five-step path** below to start turning raw usage into AI-powered insights for Product and Engineering teams.\
-Most teams ship the core setup in **under two hours** (often much faster with UXCam’s AI helpers).
+Once your account is ready, follow the five‑step path below.  
+Most teams complete the core setup in **about two hours** with a single developer.
 
-***
+---
 
 ## Integration Journey at a Glance
 
-<Table align={["left","left","left","left","left"]}>
-  <thead>
-    <tr>
-      <th style={{ textAlign: "left" }}>
-        #
-      </th>
+<Table align={["left","left","left","left"]}>
+<thead>
+<tr>
+<th>#</th><th>Step</th><th>Goal</th><th>Typical time</th>
+</tr>
+</thead>
+<tbody>
 
-      <th style={{ textAlign: "left" }}>
-        Step
-      </th>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Initialise SDK & Start Recording</strong> <a href="#initialise-sdk-and-start-recording">Jump →</a></td>
+<td>Capture your first live session</td>
+<td><strong>15 min</strong></td>
+</tr>
 
-      <th style={{ textAlign: "left" }}>
-        Goal
-      </th>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Mask PII & Sensitive Content</strong> <a href="#masking-pii-and-sensitive-content">Jump →</a></td>
+<td>Hide passwords and other GDPR/CCPA data</td>
+<td><strong>30 – 60 min</strong></td>
+</tr>
 
-      <th style={{ textAlign: "left" }}>
-        Est. time with AI
-      </th>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Screen Tagging</strong> <a href="#screen-tagging">Jump →</a></td>
+<td>Enable heat‑maps & screen analytics</td>
+<td><strong>45 – 120 min</strong></td>
+</tr>
 
-      <th style={{ textAlign: "left" }}>
-        Est. time manual
-      </th>
-    </tr>
-  </thead>
+<tr>
+<td><strong>4 ★</strong></td>
+<td><strong>User Identity & Properties</strong> <a href="#user-identity-and-properties">Jump →</a></td>
+<td>Unify sessions, power funnels & cohorts</td>
+<td><strong>15 min</strong></td>
+</tr>
 
-  <tbody>
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        **1**
-      </td>
+<tr>
+<td><strong>5</strong></td>
+<td><strong>Event Tagging</strong> <a href="#event-tagging">Jump →</a></td>
+<td>Measure key actions & run final QA</td>
+<td><strong>30 – 60 min</strong></td>
+</tr>
 
-      <td style={{ textAlign: "left" }}>
-        **Initialise SDK and start recording**  [Link](https://developer.uxcam.com/v2.0/update/docs/initialise-uxcam-and-start-recording#/versions)
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Capture your first live session
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **10 min**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **10 min**
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        **2**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **Masking PII and Sensitive Content** [Link](https://app.uxcam.com/signup)
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Hide passwords, PII & GDPR/CCPA data
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **10 min**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **\~1 h**
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        **3**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **Screen Tagging** [Link](https://app.uxcam.com/signup)
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Enable heat maps and screen analytics
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **20 min**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **\~2 h**
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        **4 ★**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **Set User Identity and Properties** [Link](https://app.uxcam.com/signup)
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Power funnels & cohorts
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **20 min**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **\~2 h**
-      </td>
-    </tr>
-
-    <tr>
-      <td style={{ textAlign: "left" }}>
-        **5**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **Send Custom Events with Properties** [Link](https://app.uxcam.com/signup)
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        Final smoke-test + release
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **\~20 min**
-      </td>
-
-      <td style={{ textAlign: "left" }}>
-        **\~20 min**
-      </td>
-    </tr>
-  </tbody>
+</tbody>
 </Table>
 
-> ★ **Optional but highly recommended.** You can launch with the core setup (steps 1-3) and revisit step 4 later.
+> ★ **Optional but highly recommended.**  
+> Ship steps 1‑3 to start getting replays and heat‑maps, then add steps 4‑5 for deeper analytics.
 
-***
+---
 
 ## Key Benefits After Setup
 
-* **Session Replay + Heat maps** – watch each UX moment in context.
-* **Advanced Product Analytics** – measure conversions, engagement and retention of your users, and be alerted about any changes.
-* **AI-generated Insights** – anomaly detection, journey summaries, rage-tap alerts.
-* **Engineering Analytics** – client-side performance correlated with user behaviour.
-  <br />
+* **Session Replay + Heat‑maps** – watch every UX moment in context.  
+* **Advanced Product Analytics** – funnels, retention, feature adoption.  
+* **Insight Alerts** – journey summaries, rage‑tap & anomaly detection.  
+* **Engineering Analytics** – client‑side performance tied to real sessions.
 
-***
+---
 
 ## 💡 Tips Before You Begin
 
-* **Separate keys** for *debug* and *production* keep analytics squeaky-clean.
-* **Use feature flags** to toggle UXCam in staging builds without redeploying.
-* **Lean on AI helpers** – they auto-detect sensitive views and propose screen/event names.
-* **Check Logcat for “Verification success” and "Session/Video uploaded" messages** to confirm everything is wired up.\
-  Happy shipping! 🎉
+* Create **separate keys** for *debug* & *production* to keep data clean.  
+* Use **feature flags** to toggle UXCam in staging builds.  
+* In Logcat look for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
+
+Happy analysing! 🎉
