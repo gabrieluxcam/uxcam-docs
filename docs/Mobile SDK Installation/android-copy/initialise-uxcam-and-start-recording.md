@@ -5,6 +5,11 @@ deprecated: false
 hidden: true
 metadata:
   robots: index
+next:
+  pages:
+    - slug: sensitive-data-occlusion-in-android-apps-copy
+      title: 'Occlude sensitive data '
+      type: basic
 ---
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing first user sessions in your test app.
 
@@ -31,7 +36,7 @@ dependencies {
 }
 ```
 
-## 2  Store your **UXCAM\_KEY** safely
+## 2  Find and store your **UXCAM\_KEY** safely
 
 The app key is the identifier for your integration, and you can find it in the App settings page on the [UXCam dashboard](app.uxcam.com). It is recommended to create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
 
@@ -44,8 +49,6 @@ The app key is the identifier for your integration, and you can find it in the A
 
   <Image align="center" border={true} src="https://files.readme.io/6cc92db41a0fb9b3a0cfe90d4a6a8944366df95727cc764c1cd41d1b62a139c2-Screenshot_2025-05-29_at_14.27.15.png" width="70% " />
 </Accordion>
-
-<br />
 
 To make it easier to manage different keys and to not expose the app key in your VCS it is recommendable to manage the app key in the environment files. To do this  you just need to add the key to local.properties (already ignored by Git) like:
 
@@ -84,11 +87,13 @@ android {
 
 ## 3 Configure and initialise the UXCam SDK
 
-To start the recording you just need to initialise the SDK in the right place in your app.
+To start the recording you just need to initialise the SDK in the right place in your app, which is typically ... \[GIVE DETAILS]
 
 **Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
 
-<Accordion title="My Accordion Title" icon="fa-info-circle">
+Never add the initialisation to multiple places in the app to avoid conflicts
+
+<Accordion title="How to decide where to initialise the UXCam SDK" icon="fa-info-circle">
   | **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
   | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
   | Have (or can add) a custom **`Application`class**           | `MyApp : Application` → `override fun onCreate()`                                        | Runs before any `Activity`, so the first screen and uncaught crashes are always captured. Recommended for most apps. |
@@ -97,14 +102,7 @@ To start the recording you just need to initialise the SDK in the right place in
   | Rely on **MultiDex**                                        | Call `MultiDex.install(this)` first, then UXCam, inside `Application.onCreate()`         | Guarantees the secondary dex files are loaded before the SDK.                                                        |
 </Accordion>
 
-| **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Have (or can add) a custom **`Application`class**           | `MyApp : Application` → `override fun onCreate()`                                        | Runs before any `Activity`, so the first screen and uncaught crashes are always captured. Recommended for most apps. |
-| Don’t have an `Application` class and don’t want to add one | Your **launcher`Activity`** → `onCreate()` (before `setContentView`)                     | Still early enough for the first screen; simplest drop-in as shown in the official quick-start.                      |
-| Use a **single-Activity / Jetpack Compose** architecture    | Either of the above (preferred) **or** the top-level `@Composable` that’s first rendered | Works because Compose’s `setContent` is still in the launcher activity’s `onCreate()`.                               |
-| Rely on **MultiDex**                                        | Call `MultiDex.install(this)` first, then UXCam, inside `Application.onCreate()`         | Guarantees the secondary dex files are loaded before the SDK.                                                        |
-
-### 3.2 Sample setup (inside Application)
+### Sample setup (inside Application)
 
 ```kotlin
 // app/src/main/java/com/example/MyApp.kt
