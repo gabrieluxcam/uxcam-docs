@@ -46,12 +46,13 @@ props.put("source",      "google_ads");
 props.put("price_cents", 1499);
 
 UXCam.logEvent("Payment_Succeeded", props);
+```
+
 | Rule | Reason |
 |------|--------|
 | **Keys are case‑sensitive** | `Plan` ≠ `plan`. Pick one style. |
 | **Values stored as String or Number** | Cast complex objects to JSON if needed. |
 | **No PII** | Avoid GDPR headaches—use IDs or hashed values. |
-```
 
 ---
 
