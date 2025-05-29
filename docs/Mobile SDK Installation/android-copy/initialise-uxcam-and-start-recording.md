@@ -49,13 +49,13 @@ The app key is the identifier for your integration, and you can find it in the A
 
 <br />
 
-### 2.2 **Add the key to local.properties** (already ignored by Git):
+To make it easier to manage different keys and to not expose the app key in your VCS it is recommendable to manage the app key in the environment files. To do this  you just need to add the key to local.properties (already ignored by Git) like:
 
 ```Text local.properties
 UXCAM_KEY=your_app_key
 ```
 
-### 2.3 Expose the key to code via BuildConfig
+Then you just need to expose the key to code via BuildConfig:
 
 ```kotlin app/build.gradle.kts (Kotlin DSL)
 // app/build.gradle.kts (Kotlin DSL)
