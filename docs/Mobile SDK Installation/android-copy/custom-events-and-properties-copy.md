@@ -69,7 +69,7 @@ These fire without code; add your own tags **in addition** for business logic.
 
 ## 5 Verify in 3 minutes
 
-1. Trigger the event in a debug build.  
+1. Trigger the event in a debug build and upload session.  
 2. Open **Dashboard → Events**.  
 3. Confirm your new event and its properties appear correctly.  
 4. Check a replay: event pin should align with the correct moment.
