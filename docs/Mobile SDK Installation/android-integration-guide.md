@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# 🚀 Android + UXCam – 5‑Step Fast‑Track
-
 Welcome! If you haven’t signed up yet, grab your **free trial** → [Sign Up](https://app.uxcam.com/signup).
 
 Once your account is ready, follow the five‑step path below.  
