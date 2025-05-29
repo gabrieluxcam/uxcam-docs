@@ -179,6 +179,10 @@ public class MainActivity extends AppCompatActivity {
    * `Verification successful`
    * `Session recording started`
 2. **Background the app** (don’t terminate the process).
+   You should see:
+
+   * `Session upload started.` and `Video upload started.`
+   * `Session upload successful.` and `Video upload successful.`
 3. Within **1–2 minutes** the session appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
 
 ---
@@ -187,4 +191,3 @@ public class MainActivity extends AppCompatActivity {
 
 Great job—your first sessions are flowing!
 Next, learn how to **occlude sensitive data** and **refine screen names** to unlock the full power of UXCam analytics.
-
