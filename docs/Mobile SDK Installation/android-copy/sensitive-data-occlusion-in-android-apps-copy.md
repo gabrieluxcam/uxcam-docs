@@ -2,7 +2,7 @@
 title: Masking PII & Sensitive Content
 excerpt: Protect your users’ privacy before the first session hits the dashboard.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
