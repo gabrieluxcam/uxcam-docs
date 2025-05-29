@@ -5,54 +5,91 @@ hidden: true
 metadata:
   robots: index
 ---
-Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
+# 🎯 Event Tagging
 
-<br />
+Screens tell you **where** users go; events reveal **what they do**.  
+With a handful of well‑chosen events and properties you can build funnels, spot drop‑offs and debug support tickets in minutes.
 
-> 📘 Note:
->
-> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
+---
 
-## How to Send Events
+## 1 Pick the right moments to log
 
-To send an event, use the following method in your code:
+| Event type | Why tag it? | Typical name |
+|------------|-------------|--------------|
+| **Flow milestones** | Build conversion funnels | `Signup_Started` / `Signup_Completed` |
+| **Key feature use** | Measure adoption | `Video_Export` / `AR_Scan` |
+| **Errors / cancels** | Quantify friction | `Payment_Failed` / `Upload_Cancelled` |
+| **A/B variant exposure** | Compare cohorts | `Variant_Shown_A` |
 
-```coffeescript Android
-UXCam.logEvent("EventName");
+> **Aim for 5‑15 core events.** Too many dilute insight and blow up dashboards.
+
+---
+
+## 2 Log a basic event
+java
+UXCam.logEvent("Signup_Started");
+kotlin
+UXCam.logEvent("Signup_Started")
+*Best practice*: keep names **PascalCase** or **snake_case** and store them as constants to avoid typos.
+
+---
+
+## 3 Add context with properties
+
+Up to **20 key‑value pairs** per event give colour to each action.
+```java
+HashMap<String, Object> props = new HashMap<>();
+props.put("plan",        "pro");
+props.put("source",      "google_ads");
+props.put("price_cents", 1499);
+
+UXCam.logEvent("Payment_Succeeded", props);
+| Rule | Reason |
+|------|--------|
+| **Keys are case‑sensitive** | `Plan` ≠ `plan`. Pick one style. |
+| **Values stored as String or Number** | Cast complex objects to JSON if needed. |
+| **No PII** | Avoid GDPR headaches—use IDs or hashed values. |
 ```
 
-Replace `"EventName"` with a meaningful name that describes the action being tracked, such as `"ButtonClicked" `or` "UserLoggedIn"`. Naming your events consistently will make your analytics easier to understand.
+---
 
-## Sending Events with Properties
+## 4 Built‑in automatic events
 
-Events can also have properties associated with them to provide additional context. For example, if you have an event called "`Purchase`", you might include properties like the product ID, product category, or price.
+| Auto event | Captured when… |
+|------------|----------------|
+| `Rage Tap` | User taps &gt 3 times in &lt 300 ms at same spot |
+| `UI Freeze` | Main thread blocked > 2 s |
 
-To send an event with properties, use the following method:
+These fire without code; add your own tags **in addition** for business logic.
 
-```coffeescript Android
-HashMap<String, Object> properties = new HashMap<>();
-properties.put("ProductID", "12345");
-properties.put("Category", "Electronics");
-properties.put("Price", 299.99);
+---
 
-UXCam.logEvent("Purchase", properties);
+## 5 Verify in 3 minutes
 
-```
+1. Trigger the event in a debug build.  
+2. Open **Dashboard → Events**.  
+3. Confirm your new event and its properties appear correctly.  
+4. Check a replay: event pin should align with the correct moment.
 
-This approach gives you a richer dataset and helps in better segmenting and understanding your users' behaviour.
+---
 
-### Important Considerations
+## 6 Troubleshooting cheat‑sheet
 
-**Properties Limit**: Each event can include up to 20 properties. If you exceed this limit, any extra properties will not be shown, and you'll receive a message indicating that there's an excess of properties.
+| Issue | Likely cause | Fix |
+|-------|--------------|-----|
+| Event missing | Name typo, fire before SDK start | Store names in constants; ensure call happens after `UXCam.startWithConfiguration()` |
+| Property not shown | Sent > 20 props | Trim to 20; aggregate extras into one JSON string |
+| Duplicate events | Called in loop or retry logic | Add guard (e.g. send once per session) |
+| Mixed‑case duplicates | `Signup_started` vs `Signup_Started` | Standardise naming convention |
 
-**Case Sensitivity**: Event names and property keys are case sensitive. This means "purchase" and "Purchase" will be treated as two different events, so be consistent with naming to avoid confusion.
+---
 
-### Best Practices
+## 7 QA checklist
 
-**Be Consistent**: Use consistent naming conventions for event names and properties. This makes it easier to search and analyze your events in UXCam.
+- [ ] All events in recorded sessions appear in **Event** page and in Nav bar of session replay.
+- [ ] Properties show correct values and casing.  
+- [ ] No unwanted duplicate names (case or spelling).  
+- [ ] Replaying a session shows event pins at the right second.  
+- [ ] No PII present in names or properties.
 
-**Keep Properties Relevant:** Only add properties that provide meaningful context. Overloading events with unnecessary properties can make your analytics harder to interpret.
-
-**Test Your Implementation**: Before rolling out your analytics to production, thoroughly test your events and properties to ensure they are correctly logged and appear as expected.
-
-By leveraging events and properties effectively, you can unlock valuable insights into how users interact with your app, leading to better product decisions and enhanced user experiences.
+Happy tracking! 📊
