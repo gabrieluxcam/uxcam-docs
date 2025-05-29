@@ -60,8 +60,8 @@ UXCam.logEvent("Payment_Succeeded", props);
 
 | Auto event | Captured when… |
 |------------|----------------|
-| `Rage Tap` | User taps &gt 3 times in &lt 300 ms at same spot |
-| `UI Freeze` | Main thread blocked > 2 s |
+| `Rage Tap` | User taps more than 3 times in less than 300 ms at same spot |
+| `UI Freeze` | Main thread blocked more than 2 s |
 
 These fire without code; add your own tags **in addition** for business logic.
 
