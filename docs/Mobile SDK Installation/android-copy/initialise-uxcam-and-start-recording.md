@@ -37,17 +37,19 @@ The app key is the identifier for your integration, and you can find it in the A
 
 **Tip** create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
 
-<br />
+<Accordion title="How to find your app key on the UXCam dashboard" icon="fa-info-circle">
 
 1. **Go to the App settings of the app you created on the UXCam dashboard.**
-
-<br />
 
 <Image align="center" className="border" border={true} width="70% " src="https://files.readme.io/74a9f2d53acc063c2fcf45c3dbce3c3783c752a09b05a50f98534358dc394bc7-Screenshot_2025-05-29_at_14.26.02.png" />
 
 2. **Copy the app key from the top right corner**
 
-\<Image align="center" border=\\\{true} src="\[\[https\://files.readme.io/2b7fc799c60691312a3db1ffeab8c59381f859b3033cd80f7ae7ff54a82bef6f-Screenshot\\\_2025-05-29\\\_at\\\_14.27.15.png]\(https\://files.readme.io/2b7fc799c60691312a3db1ffeab8c59381f859b3033cd80f7ae7ff54a82bef6f-Screenshot\_2025-05-29\_at\_14.27.15.png)]\\(\[https\://files.readme.io/2b7fc799c60691312a3db1ffeab8c59381f859b3033cd80f7ae7ff54a82bef6f-Screenshot\\\_2025-05-29\\\_at\\\_14.27.15.png]\(https\://files.readme.io/2b7fc799c60691312a3db1ffeab8c59381f859b3033cd80f7ae7ff54a82bef6f-Screenshot\_2025-05-29\_at\_14.27.15.png))" width="70% " /> &#x20;
+<Image align="center" className="border" border={true} width="70% " src="https://files.readme.io/6cc92db41a0fb9b3a0cfe90d4a6a8944366df95727cc764c1cd41d1b62a139c2-Screenshot_2025-05-29_at_14.27.15.png" />
+</Accordion>
+
+
+<br />
 
 1. **Add the key to local.properties** (already ignored by Git):
 
