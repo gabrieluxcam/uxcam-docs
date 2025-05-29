@@ -1,5 +1,5 @@
 ---
-title: Initialise SDK and start recording
+title: Initialise SDK and Start Recording
 excerpt: Implement the SDK and record your first session.
 deprecated: false
 hidden: false
