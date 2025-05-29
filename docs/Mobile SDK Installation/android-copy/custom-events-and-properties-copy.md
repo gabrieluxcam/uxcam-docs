@@ -16,9 +16,9 @@ With a handful of well‑chosen events and properties you can build funnels, spo
 
 | Event type | Why tag it? | Typical name |
 |------------|-------------|--------------|
-| **Flow milestones** | Build conversion funnels | `Signup_Started` / `Signup_Completed` |
-| **Key feature use** | Measure adoption | `Video_Export` / `AR_Scan` |
-| **Errors / cancels** | Quantify friction | `Payment_Failed` / `Upload_Cancelled` |
+| **Flow milestones** | Build conversion funnels | `Signup_Started`, `Signup_Completed` |
+| **Key feature use** | Measure adoption | `Video_Export`, `AR_Scan` |
+| **Errors / cancels** | Quantify friction | `Payment_Failed`, `Upload_Cancelled` |
 | **A/B variant exposure** | Compare cohorts | `Variant_Shown_A` |
 
 > **Aim for 5‑15 core events.** Too many dilute insight and blow up dashboards.
@@ -26,11 +26,13 @@ With a handful of well‑chosen events and properties you can build funnels, spo
 ---
 
 ## 2 Log a basic event
-java
+```java
 UXCam.logEvent("Signup_Started");
-kotlin
+```
+```kotlin
 UXCam.logEvent("Signup_Started")
 *Best practice*: keep names **PascalCase** or **snake_case** and store them as constants to avoid typos.
+```
 
 ---
 
