@@ -37,8 +37,8 @@ The app key is the identifier for your integration, and you can find it in the A
 
 **Tip** create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
 
-<Accordion title="How to find the app key" icon="fa-info-circle">
-  1. Go to the App settings of the app you created on the UXCam dashboard.
+<Accordion title="How to find the app key on the UXCam dashboard" icon="fa-info-circle">
+  1. **Go to the App settings of the app you created on the UXCam dashboard.**
 
   <Image align="left" border={true} src="https://files.readme.io/74a9f2d53acc063c2fcf45c3dbce3c3783c752a09b05a50f98534358dc394bc7-Screenshot_2025-05-29_at_14.26.02.png" width="70% " />
 
