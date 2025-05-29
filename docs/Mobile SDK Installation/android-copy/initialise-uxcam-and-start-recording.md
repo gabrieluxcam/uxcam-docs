@@ -1,8 +1,8 @@
 ---
-title: Initialise the SDK and record your first session
+title: Initialisation
 excerpt: Implement the SDK and record your first session.
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
@@ -84,7 +84,7 @@ android {
 
 **Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
 
-### 3.2 Sample  setup (inside Application)
+### 3.2 Sample setup (inside Application)
 
 ```kotlin
 // app/src/main/java/com/example/MyApp.kt
