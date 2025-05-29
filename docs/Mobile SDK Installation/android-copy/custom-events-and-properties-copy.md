@@ -31,8 +31,8 @@ UXCam.logEvent("Signup_Started");
 ```
 ```kotlin
 UXCam.logEvent("Signup_Started")
-*Best practice*: keep names **PascalCase** or **snake_case** and store them as constants to avoid typos.
 ```
+*Best practice*: keep names **PascalCase** or **snake_case** and store them as constants to avoid typos.
 
 ---
 
