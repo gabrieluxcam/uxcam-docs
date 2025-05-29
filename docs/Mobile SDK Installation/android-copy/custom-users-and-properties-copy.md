@@ -1,5 +1,5 @@
 ---
-title: User Identity & Properties
+title: Set User Identity & Properties
 deprecated: false
 hidden: false
 metadata:
