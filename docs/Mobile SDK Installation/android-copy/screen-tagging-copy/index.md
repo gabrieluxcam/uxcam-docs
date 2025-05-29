@@ -10,79 +10,138 @@ next:
       title: Sensitive Data Occlusion
       type: basic
 ---
-So you've integrated the SDK and have some sessions going already, good! Now it's time to dig into screens—what they are, how to tag them, and why it matters for understanding user behaviour in your app.
+Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. 
+This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
-## Automatic Screen Tagging - The Recommended, Simple Approach
+---
 
-For Android, UXCam's SDK automatically tags screens (i.e., activities), and this is the recommended default behaviour. Automatic tagging means that each activity your user navigates to is recorded automatically, without requiring you to manually intervene. This gives you the advantage of capturing user activity with minimal integration effort.
+## 1 Start with a quick reality check
 
-### Tagging Fragments
+1. Record **one or two sessions** in your debug build.  
+2. Open any replay in the UXCam Dashboard and scan the **screen list** on the right.  
+3. For each entry, ask:
 
-Fragments can also be automatically tagged in Android. However, we recommend testing with the option disabled when starting out, especially if your app's structure includes many fragment-based views. This will give you more granular control over screen identification as you get familiar with UXCam.
+   | Check‑question | Why it matters |
+   |----------------|----------------|
+   | Does the name describe the UI the user actually saw? | Makes funnels human‑readable. |
+   | Would a heat‑map over the frames make sense? | Ensures events aggregate on the right surface. |
+   | Do any screens repeat with a **0 s** duration? | Signals duplicate or missing tags. |
 
-To enable (default) or disable automatic tagging during SDK initialisation, use the following code:
+> **If everything looks good** – simply rename screens in **Dashboard → Screens** (e.g. change `MainActivity` → **Home**) and you’re done. No code required.
 
-```coffeescript Android
-UXConfig config = new UXConfig.Builder("yourAppKey")
-    .enableAutomaticScreenNameTagging(true) // True by Default. Set to false if you want to disable automatic screen tagging.
-    .build();
+---
+
+## 2 When you *need* manual tags
+
+| Symptom | Typical cause | Fix |
+|---------|---------------|-----|
+| Same visual screen logged under two names | Activity reused with different intent extras | Call `UXCam.tagScreenName("BetterName")` when you know the context |
+| A flow shows **0 s** steps | Auto‑tag & manual tag both fire in one frame | Disable automatic tagging **or** remove duplicate manual calls |
+| Compose NavGraph only shows `MainActivity` | Single‑Activity architecture | Tag once per navigation change (see example) |
+
+Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance. fileciteturn0file0
+
+---
+
+### 2.1 Disable automatic tagging (optional)
+
+```java
+UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY)
+        .enableAutomaticScreenNameTagging(false)
+        .build();
+
 UXCam.startWithConfiguration(config);
-
 ```
 
-As for enabling or disabling Fragment Based Tagging, it can be done trough the options in your UXCam Dashboard:
+### 2.2 Manual tag in an Activity
 
-<Image align="center" src="https://files.readme.io/07229bc9d7a26e06060c2acbd17e5204d40f73c933de16f20d85a2b24f1f8adf-image.png" />
-
-## Manual Screen Tagging - For In Depth Customisation
-
-While we recommend automatic tagging, you may sometimes need more precise control over your screen names or want to ensure custom screens are clearly identified in your analytics. In these cases, you can use manual screen tagging.
-
-**Example**: **Tagging an Activity Manually**\
-To tag a screen in an activity, use the following code in the `onCreate()` method of your activity:
-
-```coffeescript Android
-@Override
-protected void onCreate(Bundle savedInstanceState) {
+```java
+@Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
-  
-    UXCam.tagScreenName("Main Activity"); // Manually tag this activity with a screen name.
+    setContentView(R.layout.activity_checkout);
+
+    UXCam.tagScreenName("Checkout");   // one clear tag
 }
 ```
 
-**Example: Tagging a Fragment Manually**\
-Similarly, to tag a fragment, place the code in the `onResume()` method of the fragment:
+### 2.3 Jetpack Compose navigation listener
 
-```coffeescript Android
-@Override
-public void onResume() {
-    super.onResume();
-    UXCam.tagScreenName("Fragment Name"); // Manually tag this fragment with a screen name.
+```kotlin
+@Composable
+fun AppNavHost(navController: NavHostController) {
+
+    LaunchedEffect(navController) {
+        navController.currentBackStackEntryFlow.collect { entry ->
+            when (entry.destination.route) {
+                "home"         -> UXCam.tagScreenName("Home")
+                "product/{id}" -> UXCam.tagScreenName("ProductDetail")
+                "settings"     -> UXCam.tagScreenName("Settings")
+            }
+        }
+    }
+
+    NavHost(navController, startDestination = "home") { /* … */ }
 }
-
 ```
 
-## How to Tag WebViews
+*A single tag fires per navigation event, eliminating 0 s “ghost” screens.*
 
-WebViews can be a unique challenge when it comes to screen tagging, as they often contain dynamic content. To properly tag your WebView screens, you can follow our detailed guide that walks you through the best practices and methods for effective WebView tagging.
+---
 
-For more information, click the button below:
+## 3 Verify your tags
 
-[Tagging WebViews Documentation](/docs/web-view-tagging)
+1. Install a **debug** build, visit every tagged screen, then background the app.  
+2. Once the session uploads, check:
 
-> 👍 Summary:
->
-> **Automatic Tagging:** By default, UXCam automatically tags screens in Android apps, which we recommend as the simplest and most efficient approach.\
-> **Tagging Fragments:** Fragments can also be automatically tagged, but consider disabling this initially for more control.\
-> **Manual Tagging:** When you need specific names for screens or want to add more meaningful tags for your analytics, manual tagging is straightforward and can be done in the lifecycle methods like `onCreate()` for activities or `onResume()` for fragments.
+   * Each screen appears **exactly once**, with duration **> 0 s**.  
+   * No “Unknown” or class‑name screens remain.  
+   * Names match your analytics language.
 
-With this approach, you'll be well-equipped to make data-driven decisions based on how users move through your app's screens.
+If something is off, look for duplicate tag calls or a missing route handler.
 
-<br />
+---
 
-## Next Steps ➡️
+## 4 Troubleshooting cheat‑sheet
 
-<br />
+| Issue | Quick diagnosis | Solution |
+|-------|-----------------|----------|
+| **0 s screens** | Duplicate tag same frame (auto + manual) | Disable auto tagging or remove extra tag |
+| **Screen missing** | NavController route not handled | Add case in `when(route)` |
+| **Random class names** | Forgot to rename in Dashboard | Edit in **Screens** tab |
+| **Stale name after refactor** | Hard‑coded tag string | Update `UXCam.tagScreenName()` constant |
 
-You're on a roll! You've now set up some of the most important features from UXCam to get full insights already, but let's dive next into protecting sensitive information.
+---
+
+## 5 Edge‑cases to watch for
+
+| Potential gap | What can break | How to guard |
+|---------------|---------------|--------------|
+| **Orientation change** recreates activity | Duplicate tag → 0 s screen | Debounce tags or handle `configChanges` in manifest |
+| **Dialogs / BottomSheets** within same activity | Heat‑map merges with parent screen | Tag inside `show()` – e.g. `UploadDialog` |
+| **Split‑screen mode** on tablets | Sidebar never gains focus → no tag | Tag from `onStart()` in multi‑window mode |
+| **WebView checkout flow** | Every step recorded as “WebViewScreen” | Trigger tags via JS bridge on URL change |
+| **Dynamic Feature Modules** | ProGuard strips UXCam call sites | Keep `com.uxcam` package in base `proguard-rules.pro` |
+| **Deep‑link cold launch** | First screen appears before SDK start | Initialise SDK in `Application` class |
+| **Internationalised tag strings** | “Profile” vs “Perfil” split analytics | Tag with a constant key, translate in Dashboard |
+| **Rapid tab switching** | Tags <  300 ms apart collapse to 0 s | Debounce tag logic in nav listener |
+
+---
+
+## 6 QA checklist
+
+Tick each box before handing the build to QA or releasing:
+
+- [ ] Every visually distinct screen appears **once** with duration **> 0 s**  
+- [ ] Screen names are clean, without class names or typos  
+- [ ] No duplicate names differing only by case or locale  
+- [ ] Heat‑maps align with tappable areas on a random sample  
+- [ ] Sensitive screens remain blurred / occluded after tagging changes
+
+---
+
+### Next steps ➡️
+
+* **Event tagging** – Log funnel milestones and errors.  
+* **PII occlusion** – Mask passwords & payment data.
+
+Happy tagging! 🎯
