@@ -21,7 +21,6 @@ Follow the **four mini-steps** below and you’ll have your first test session o
 
 Add UXCam’s Maven repo **and** dependency in your *module-level* Gradle file.
 
-
 ```kotlin build.gradle.kts (Kotlin DSL)
 repositories {
     maven { url 'https://sdk.uxcam.com/android/' }
@@ -45,39 +44,40 @@ dependencies {
 
 ### 2 Find & store your **UXCAM\_KEY** safely
 
-1. **Grab the key** in **App Settings → App Key** on the [UXCam Dashboard](https://app.uxcam.com).
+#### 2.1 **Grab the key** in **App Settings → App Key** on the [UXCam Dashboard](https://app.uxcam.com).
 
    > **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
 
-2. **Add the key to`local.properties`** (already in the default `.gitignore`):
+#### 2.2 **Add the key to`local.properties`** (already in the default `.gitignore`):
 
    ```properties
    # local.properties
    UXCAM_KEY=your_app_key
    ```
 
-3. **Expose the key via`BuildConfig`** so you never hard-code secrets.
-  
-     ```kotlin Kotlin DSL
-     // app/build.gradle.kts
-     val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
+#### 2.3 **Expose the key via`BuildConfig`** so you never hard-code secrets.
 
-     android {
-         defaultConfig {
-             buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
-         }
-     }
-     ```
-     ```groovy Groovy DSL
-     // app/build.gradle
-     def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
+   ```kotlin Kotlin DSL
+   // app/build.gradle.kts
+   val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
 
-     android {
-         defaultConfig {
-             buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
-         }
-     }
-     ```
+   android {
+       defaultConfig {
+           buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
+       }
+   }
+   ```
+   ```groovy Groovy DSL
+   // app/build.gradle
+   def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
+
+   android {
+       defaultConfig {
+           buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
+       }
+   }
+   ```
+
 ***
 
 ### 3 Configure **and** initialise the SDK
@@ -153,17 +153,17 @@ public class MainActivity extends AppCompatActivity {
 
 ### 4 Verify the integration
 
-1. **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).\
+#### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).\
    You should see:
 
    * `Verification successful`
    * `Session recording started`
-2. **Background the app** (don’t terminate the process).\
+#### 4.2 **Background the app** (don’t terminate the process).\
    You should see upload logs:
 
    * `Session upload started` / `Video upload started`
    * `Session upload successful` / `Video upload successful`
-3. Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
+#### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
 
 ***
 
