@@ -11,8 +11,6 @@ next:
       title: 'Occlude sensitive data '
       type: basic
 ---
-## 🚀 Initialise the UXCam SDK & Start Recording
-
 Follow the **four mini-steps** below and you’ll have your first test session on the UXCam Dashboard in minutes.
 
 ***
@@ -46,37 +44,37 @@ dependencies {
 
 #### 2.1 **Grab the key** in **App Settings → App Key** on the [UXCam Dashboard](https://app.uxcam.com).
 
-   > **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
+> **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
 
 #### 2.2 **Add the key to`local.properties`** (already in the default `.gitignore`):
 
-   ```properties
-   # local.properties
-   UXCAM_KEY=your_app_key
-   ```
+```properties
+# local.properties
+UXCAM_KEY=your_app_key
+```
 
 #### 2.3 **Expose the key via`BuildConfig`** so you never hard-code secrets.
 
-   ```kotlin Kotlin DSL
-   // app/build.gradle.kts
-   val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
+```kotlin Kotlin DSL
+// app/build.gradle.kts
+val uxcamKey: String = project.findProperty("UXCAM_KEY") as? String ?: ""
 
-   android {
-       defaultConfig {
-           buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
-       }
-   }
-   ```
-   ```groovy Groovy DSL
-   // app/build.gradle
-   def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
+android {
+    defaultConfig {
+        buildConfigField("String", "UXCAM_KEY", "\"$uxcamKey\"")
+    }
+}
+```
+```groovy Groovy DSL
+// app/build.gradle
+def uxcamKey = project.findProperty("UXCAM_KEY") ?: ""
 
-   android {
-       defaultConfig {
-           buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
-       }
-   }
-   ```
+android {
+    defaultConfig {
+        buildConfigField "String", "UXCAM_KEY", "\"${uxcamKey}\""
+    }
+}
+```
 
 ***
 
@@ -153,16 +151,20 @@ public class MainActivity extends AppCompatActivity {
 
 ### 4 Verify the integration
 
-#### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).\
-   You should see:
+#### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).\\
 
-   * `Verification successful`
-   * `Session recording started`
-#### 4.2 **Background the app** (don’t terminate the process).\
-   You should see upload logs:
+You should see:
 
-   * `Session upload started` / `Video upload started`
-   * `Session upload successful` / `Video upload successful`
+* `Verification successful`
+* `Session recording started`
+
+#### 4.2 **Background the app** (don’t terminate the process).\\
+
+You should see upload logs:
+
+* `Session upload started` / `Video upload started`
+* `Session upload successful` / `Video upload successful`
+
 #### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
 
 ***
