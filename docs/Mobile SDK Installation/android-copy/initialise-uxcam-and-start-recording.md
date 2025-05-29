@@ -38,26 +38,24 @@ The app key is the identifier for your integration, and you can find it in the A
 **Tip** create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
 
 <Accordion title="How to find your app key on the UXCam dashboard" icon="fa-info-circle">
+  1. **Go to the App settings of the app you created on the UXCam dashboard.**
 
-1. **Go to the App settings of the app you created on the UXCam dashboard.**
+  <Image align="center" border={true} src="https://files.readme.io/74a9f2d53acc063c2fcf45c3dbce3c3783c752a09b05a50f98534358dc394bc7-Screenshot_2025-05-29_at_14.26.02.png" width="70% " />
 
-<Image align="center" className="border" border={true} width="70% " src="https://files.readme.io/74a9f2d53acc063c2fcf45c3dbce3c3783c752a09b05a50f98534358dc394bc7-Screenshot_2025-05-29_at_14.26.02.png" />
+  2. **Copy the app key from the top right corner**
 
-2. **Copy the app key from the top right corner**
-
-<Image align="center" className="border" border={true} width="70% " src="https://files.readme.io/6cc92db41a0fb9b3a0cfe90d4a6a8944366df95727cc764c1cd41d1b62a139c2-Screenshot_2025-05-29_at_14.27.15.png" />
+  <Image align="center" border={true} src="https://files.readme.io/6cc92db41a0fb9b3a0cfe90d4a6a8944366df95727cc764c1cd41d1b62a139c2-Screenshot_2025-05-29_at_14.27.15.png" width="70% " />
 </Accordion>
-
 
 <br />
 
-1. **Add the key to local.properties** (already ignored by Git):
+### 2.2 **Add the key to local.properties** (already ignored by Git):
 
 ```Text local.properties
 UXCAM_KEY=your_app_key
 ```
 
-3. **Expose the key to code via BuildConfig**
+### 2.3 Expose the key to code via BuildConfig
 
 ```kotlin app/build.gradle.kts (Kotlin DSL)
 // app/build.gradle.kts (Kotlin DSL)
