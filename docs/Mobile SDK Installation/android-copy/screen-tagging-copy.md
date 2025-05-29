@@ -1,5 +1,8 @@
 ---
 title: Tag Screens
+excerpt: >-
+  Review auto-screen tagging and manually tag screens to get the most out of
+  UXCam's Heat Maps and advanced Screen Analytics
 deprecated: false
 hidden: false
 metadata:
