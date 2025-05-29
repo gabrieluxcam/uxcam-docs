@@ -33,9 +33,7 @@ dependencies {
 
 ## 2  Store your **UXCAM\_KEY** safely
 
-The app key is the identifier for your integration, and you can find it in the App settings page on the [UXCam dashboard](app.uxcam.com).
-
-**Tip** create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
+The app key is the identifier for your integration, and you can find it in the App settings page on the [UXCam dashboard](app.uxcam.com). It is recommended to create separate apps in the UXCam dashboard for your *debug* and *production* apps (e.g. **“*Your App* – debug”**, **“*Your App* – production”**) to keep data clean.
 
 <Accordion title="How to find your app key on the UXCam dashboard" icon="fa-info-circle">
   1. **Go to the App settings of the app you created on the UXCam dashboard.**
@@ -86,9 +84,11 @@ android {
 
 ## 3 Configure and initialise the UXCam SDK
 
-To start the recording
+To start the recording you just need to initialise the SDK in the right place in your app. 
 
-### 3.1 Pick the right place to start UXCam
+**Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
+
+
 
 | **If you…**                                                 | **Put`UXCam.startWithConfiguration()` in…**                                              | **Why**                                                                                                              |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -97,7 +97,6 @@ To start the recording
 | Use a **single-Activity / Jetpack Compose** architecture    | Either of the above (preferred) **or** the top-level `@Composable` that’s first rendered | Works because Compose’s `setContent` is still in the launcher activity’s `onCreate()`.                               |
 | Rely on **MultiDex**                                        | Call `MultiDex.install(this)` first, then UXCam, inside `Application.onCreate()`         | Guarantees the secondary dex files are loaded before the SDK.                                                        |
 
-**Rule of thumb:** *Start the SDK once, at the earliest point where you have an`android.content.Context` that lives for the entire app lifecycle.*
 
 ### 3.2 Sample setup (inside Application)
 
