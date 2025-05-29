@@ -1,7 +1,7 @@
 ---
 title: Send custom events with properties
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
