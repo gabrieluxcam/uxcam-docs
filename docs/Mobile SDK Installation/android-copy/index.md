@@ -144,7 +144,7 @@ Most teams complete the core setup in **about two hours** with a single develope
 * **Session Replay + Heat‑maps** – watch every UX moment in context.
 * **Advanced Product Analytics** – funnels, retention, feature adoption.
 * **Insight Alerts** – journey summaries, rage‑tap & anomaly detection.
-* **Engineering Analytics** – client‑side performance tied to real sessions.
+* **Engineering Analytics** – client‑side performance tied to real sessions, to monitor crashes, ANRs and Handled Exceptions and expose Session Replay and Developer Logs around issues for simplified debugging.
 
 ***
 
