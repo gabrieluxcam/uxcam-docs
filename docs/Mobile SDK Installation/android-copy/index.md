@@ -52,7 +52,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Initialise the SDK** [Link](https://developer.uxcam.com/v2.0/update/docs/initialise-uxcam-and-start-recording#/versions)
+        **Initialise SDK and start recording**  [Link](https://developer.uxcam.com/v2.0/update/docs/initialise-uxcam-and-start-recording#/versions)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -74,7 +74,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Occlude sensitive data** [Link](https://app.uxcam.com/signup)
+        **Masking PII and Sensitive Content** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -96,7 +96,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Validate & refine screen names** [Link](https://app.uxcam.com/signup)
+        **Screen Tagging** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -118,7 +118,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **Instrument events & users** [Link](https://app.uxcam.com/signup)
+        **Set User Identity and Properties** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
@@ -140,7 +140,7 @@ Most teams ship the core setup in **under two hours** (often much faster with UX
       </td>
 
       <td style={{ textAlign: "left" }}>
-        **QA & ship to production** [Link](https://app.uxcam.com/signup)
+        **Send Custom Events with Properties** [Link](https://app.uxcam.com/signup)
       </td>
 
       <td style={{ textAlign: "left" }}>
