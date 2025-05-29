@@ -33,6 +33,14 @@ dependencies {
 
 ## 2  Store your **UXCAM\_KEY** safely
 
+The app key is the identifier for your integration, and you can find it in the App settings page on the [UXCam dashboard](app.uxcam.com).
+
+<Image align="left" width="70% " src="https://files.readme.io/74a9f2d53acc063c2fcf45c3dbce3c3783c752a09b05a50f98534358dc394bc7-Screenshot_2025-05-29_at_14.26.02.png" />
+
+<Image align="right" src="https://files.readme.io/2b7fc799c60691312a3db1ffeab8c59381f859b3033cd80f7ae7ff54a82bef6f-Screenshot_2025-05-29_at_14.27.15.png" width="70% " />
+
+<Accordion title="How to find the UXCam App Key" icon="fa-info-circle" />
+
 1. **Find your App Key** in the UXCam dashboard\
    \<!-- TODO: Add screenshot of where to find the App Key -->
 
