@@ -1,5 +1,6 @@
 ---
-title: 'Occlude sensitive data '
+title: Masking PII & Sensitive Content
+excerpt: Protect your users’ privacy before the first session hits the dashboard.
 deprecated: false
 hidden: true
 metadata:
@@ -31,7 +32,7 @@ The SDK lets you **mask or blur** that content **on the device, before the video
 
 ### 1  Pin-point what needs to be hidden
 
-Run the app once with UXCam logging enabled, then answer:
+Run the app once with full UXCam recording enabled, and go through all user flows in your app. Then answer:
 
 | UI element | Typical examples | Best occlusion scope |
 |------------|------------------|----------------------|
