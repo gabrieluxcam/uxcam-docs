@@ -39,7 +39,8 @@ This guide walks you through **reviewing the automatic tags first**, deciding wh
 | A flow shows **0 s** steps | Auto‑tag & manual tag both fire in one frame | Disable automatic tagging **or** remove duplicate manual calls |
 | Compose NavGraph only shows `MainActivity` | Single‑Activity architecture | Tag once per navigation change (see example) |
 
-Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance. fileciteturn0file0
+Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance. 
+
 
 ---
 
@@ -88,6 +89,7 @@ fun AppNavHost(navController: NavHostController) {
 
 ---
 
+
 ## 3 Verify your tags
 
 1. Install a **debug** build, visit every tagged screen, then background the app.  
@@ -101,6 +103,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 
 ---
 
+
 ## 4 Troubleshooting cheat‑sheet
 
 | Issue | Quick diagnosis | Solution |
@@ -111,6 +114,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 | **Stale name after refactor** | Hard‑coded tag string | Update `UXCam.tagScreenName()` constant |
 
 ---
+
 
 ## 5 Edge‑cases to watch for
 
