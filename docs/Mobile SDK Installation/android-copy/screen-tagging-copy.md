@@ -1,5 +1,5 @@
 ---
-title: Screen Tagging
+title: Tag Screens
 deprecated: false
 hidden: false
 metadata:
