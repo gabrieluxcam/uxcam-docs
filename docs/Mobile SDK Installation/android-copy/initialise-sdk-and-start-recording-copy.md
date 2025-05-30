@@ -43,8 +43,7 @@ dependencies {
 ### 2 Find & store your **UXCAM\_KEY** safely
 
 #### 2.1 **Grab the key** in **App Settings → App Key** on the [UXCam Dashboard](https://app.uxcam.com).
-#### 2.1 **Grab the key** in **App Settings → App Key** on the 
-<a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+#### 2.1 **Grab the key** in **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener"><b>UXCam Dashboard</b></a>.
 
 
 > **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
