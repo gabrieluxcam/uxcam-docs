@@ -1,0 +1,146 @@
+---
+name: StepperTest
+---
+import React, { useState, useMemo } from "react";
+
+
+
+export const SimpleStepper2 = ({ children }) => {
+  const steps = useMemo(
+    () => (Array.isArray(children) ? children : [children]),
+    [children]
+  );
+  const [currentStep, setCurrentStep] = useState(0);
+
+
+  const containerStyle = {
+    maxWidth: 680,
+    margin: "40px auto",
+    padding: "32px 40px",
+    borderRadius: 12,
+    background: "#ffffff",            // white card
+    boxShadow: "0 4px 24px rgba(0,0,0,.12)",
+    fontFamily: "Inter, 'Helvetica Neue', sans-serif",
+    color: "#161E35",
+  };
+
+
+  const indicatorStyle = (active) => ({
+    width: 36,
+    height: 36,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "0 6px",
+    borderRadius: "50%",
+    fontWeight: 600,
+    fontSize: 14,
+    background: active ? "#161E35" : "#ECEDEF",
+    color: active ? "#ffffff" : "#555B6E",
+    transition: "background .2s ease, color .2s ease",
+  });
+
+
+  const buttonStyle = {
+    padding: "10px 22px",
+    margin: "24px 8px 0",
+    border: 0,
+    borderRadius: 6,
+    background: "#5D97FF",
+    color: "#fff",
+    fontWeight: 500,
+    fontFamily: "Inter, sans-serif",
+    cursor: "pointer",
+    transition: "background .2s ease",
+  };
+
+  const buttonHover = { background: "#437DFF" };
+
+  const codeBlockStyle = {
+    textAlign: "left",
+    background: "#1E2530",
+    color: "#EDEDED",
+    padding: "16px 20px",
+    borderRadius: 8,
+    overflowX: "auto",
+    lineHeight: 1.5,
+    fontSize: 14,
+    marginTop: 12,
+  };
+
+
+  const handlePrev = () => setCurrentStep((i) => Math.max(i - 1, 0));
+  const handleNext = () =>
+    setCurrentStep((i) => Math.min(i + 1, steps.length - 1));
+
+  return (
+    <div style={containerStyle}>
+    
+      <div style={{ marginBottom: 28 }}>
+        {steps.map((_, i) => (
+          <span key={i} style={indicatorStyle(i === currentStep)}>
+            {i + 1}
+          </span>
+        ))}
+      </div>
+
+
+      <div aria-live="polite">
+        {steps.length > 0 ? (
+          React.cloneElement(steps[currentStep], { codeBlockStyle })
+        ) : (
+          <></>
+        )}
+      </div>
+
+
+      <div>
+        {currentStep > 0 && (
+          <button
+            type="button"
+            style={buttonStyle}
+            onMouseOver={(e) => Object.assign(e.target.style, buttonHover)}
+            onMouseOut={(e) => Object.assign(e.target.style, buttonStyle)}
+            onClick={handlePrev}
+          >
+            Back
+          </button>
+        )}
+        {currentStep < steps.length - 1 && (
+          <button
+            type="button"
+            style={buttonStyle}
+            onMouseOver={(e) => Object.assign(e.target.style, buttonHover)}
+            onMouseOut={(e) => Object.assign(e.target.style, buttonStyle)}
+            onClick={handleNext}
+          >
+            Next
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+export const SimpleStep2 = ({ header, children, codeBlockStyle = {} }) => (
+  <div style={{ fontFamily: "Inter, sans-serif" }}>
+    <h2 style={{ margin: "0 0 24px", fontWeight: 600, fontSize: 22 }}>
+      {header}
+    </h2>
+
+
+    {React.Children.map(children, (child) => {
+      if (typeof child === "string") {
+        return <p>{child}</p>;
+      }
+
+      if (child.type === "pre") {
+        return React.cloneElement(child, {
+          style: { ...codeBlockStyle, ...child.props.style },
+        });
+      }
+      return child;
+    })}
+  </div>
+);
