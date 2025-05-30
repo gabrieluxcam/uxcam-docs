@@ -1,7 +1,7 @@
 ---
 title: API Test
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
