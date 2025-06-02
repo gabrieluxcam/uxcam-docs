@@ -15,7 +15,7 @@ Follow the **four mini-steps** below and you’ll have your first test session o
 
 ***
 
-### 1 Add the UXCam dependency
+## 1 Add the UXCam dependency
 
 Add UXCam’s Maven repo **and** dependency in your *module-level* Gradle file.
 
@@ -40,21 +40,20 @@ dependencies {
 
 ***
 
-### 2 Find & store your **UXCAM\_KEY** safely
+## 2 Find & store your **UXCAM\_KEY** safely
 
-#### 2.1 **Grab the key** in **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
-
+### 2.1 **Grab the key** in **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
 > **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
 
-#### 2.2 **Add the key to`local.properties`** (already in the default `.gitignore`):
+### 2.2 **Add the key to`local.properties`** (already in the default `.gitignore`):
 
 ```properties
 # local.properties
 UXCAM_KEY=your_app_key
 ```
 
-#### 2.3 **Expose the key via`BuildConfig`** so you never hard-code secrets.
+### 2.3 **Expose the key via`BuildConfig`** so you never hard-code secrets.
 
 ```kotlin Kotlin DSL
 // app/build.gradle.kts
@@ -79,9 +78,9 @@ android {
 
 ***
 
-### 3 Configure **and** initialise the SDK
+## 3 Configure **and** initialise the SDK
 
-#### 3.1 Pick the right spot
+### 3.1 Pick the right spot
 
 > **Rule of thumb:** *Start the SDK**once**, at the earliest `Context` that lives for the whole app.*
 
@@ -94,7 +93,7 @@ android {
 
 ❌ **Never** call it from multiple places—this triggers “SDK already started” warnings and may break uploads.
 
-#### 3.2 Sample Kotlin setup (inside `Application`)
+### 3.2 Sample Kotlin setup (inside `Application`)
 
 ```kotlin
 // app/src/main/java/com/example/MyApp.kt
@@ -150,27 +149,27 @@ public class MainActivity extends AppCompatActivity {
 
 ***
 
-### 4 Verify the integration
+## 4 Verify the integration
 
-#### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).\\
+### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).
 
 You should see:
 
 * `Verification successful`
 * `Session recording started`
 
-#### 4.2 **Background the app** (don’t terminate the process).\\
+### 4.2 **Background the app** (don’t terminate the process).\\
 
 You should see upload logs:
 
 * `Session upload started` / `Video upload started`
 * `Session upload successful` / `Video upload successful`
 
-#### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
+### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
 
 ***
 
-### ➡️ Next steps
+## ➡️ Next steps
 
 Great job—your first sessions are flowing!\
 Now learn how to **occlude sensitive data** and **refine screen names** to unlock the full power of UXCam analytics.
