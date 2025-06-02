@@ -16,10 +16,6 @@ Go ahead and try out our REST APIs with credentials on Postman)
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://web.postman.co/network/import?collection=9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2)
 
-<br />
-
-<PostmanRunButton collectionId="21323748-c6777706-74e3-4570-952d-9045b822756e" collectionUrl="" />
-
 ## Postman Guide
 
 Postman enables you to test and utilize UXCam's Data Access APIs without requiring a developer account. You can set up and send requests and receive responses for the provided Data Access APIs.
