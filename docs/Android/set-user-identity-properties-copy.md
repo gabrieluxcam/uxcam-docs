@@ -1,5 +1,5 @@
 ---
-title: Set User Identity & Properties (COPY)
+title: Set User Identity & Properties
 deprecated: false
 hidden: false
 metadata:
