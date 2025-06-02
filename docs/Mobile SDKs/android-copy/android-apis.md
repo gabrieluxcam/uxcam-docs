@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: '> API Reference'
 deprecated: false
 hidden: false
 metadata:
