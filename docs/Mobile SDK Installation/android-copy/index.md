@@ -20,7 +20,7 @@ Most teams complete the core setup in **about two hours** with a single develope
 
 ## Integration Journey at a Glance
 
-<Table align={["left","left","left","left"]}>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -33,10 +33,6 @@ Most teams complete the core setup in **about two hours** with a single develope
 
       <th>
         Goal
-      </th>
-
-      <th>
-        Typical time
       </th>
     </tr>
   </thead>
@@ -54,10 +50,6 @@ Most teams complete the core setup in **about two hours** with a single develope
       <td>
         Capture your first live session
       </td>
-
-      <td>
-        <strong>15 min</strong>
-      </td>
     </tr>
 
     <tr>
@@ -71,10 +63,6 @@ Most teams complete the core setup in **about two hours** with a single develope
 
       <td>
         Hide passwords and other GDPR/CCPA data
-      </td>
-
-      <td>
-        <strong>30 – 60 min</strong>
       </td>
     </tr>
 
@@ -90,10 +78,6 @@ Most teams complete the core setup in **about two hours** with a single develope
       <td>
         Enable heat‑maps & screen analytics
       </td>
-
-      <td>
-        <strong>45 – 120 min</strong>
-      </td>
     </tr>
 
     <tr>
@@ -108,10 +92,6 @@ Most teams complete the core setup in **about two hours** with a single develope
       <td>
         Unify sessions, power funnels & cohorts
       </td>
-
-      <td>
-        <strong>15 min</strong>
-      </td>
     </tr>
 
     <tr>
@@ -125,10 +105,6 @@ Most teams complete the core setup in **about two hours** with a single develope
 
       <td>
         Measure key actions & run final QA
-      </td>
-
-      <td>
-        <strong>30 – 60 min</strong>
       </td>
     </tr>
   </tbody>
