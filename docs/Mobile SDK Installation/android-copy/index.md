@@ -13,7 +13,7 @@ next:
 ---
 Welcome! If you haven’t signed up yet, grab your **free trial** → [Sign Up](https://app.uxcam.com/signup).
 
-Once your account is ready, follow the five‑step path below.\
+Once your account is ready, follow the five‑step path below\.2\
 Most teams complete the core setup in **about two hours** with a single developer.
 
 ***
