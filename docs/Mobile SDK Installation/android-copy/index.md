@@ -11,8 +11,6 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-# 📱 Android Quick-Start
-
 Welcome! If you haven’t signed up yet, grab your **free trial** → [Sign Up](https://app.uxcam.com/signup).
 
 Once your account is ready, follow the five-step path below.  
