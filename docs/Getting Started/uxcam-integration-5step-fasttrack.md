@@ -305,11 +305,6 @@ In Logcat look for **“Verification successful”** and **“Session/Video uplo
 
 ***
 
-## 💡 Tips Before You Begin
-
-* Create **separate keys** for *debug* & *production* to keep data clean.
-* Use **feature flags** to toggle UXCam in staging builds.
-* Let the built‑in helpers auto‑detect sensitive views and suggest screen/event names.
-* In Logcat look for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
+<br />
 
 Happy shipping! 🎉
