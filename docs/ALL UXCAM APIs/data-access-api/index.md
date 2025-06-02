@@ -18,7 +18,7 @@ Go ahead and try out our REST APIs with credentials on Postman)
 
 <br />
 
-<PostmanRunButton collectionId="9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2" collectionUrl="https://web.postman.co/network/import?collection=9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2" />
+<PostmanRunButton collectionId="21323748-c6777706-74e3-4570-952d-9045b822756e" collectionUrl="https://web.postman.co/network/import?collection=9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2" />
 
 ## Postman Guide
 
