@@ -18,7 +18,7 @@ UXCam turns every mobile moment into **actionable insight**: watch session repla
 | Pillar | How it helps you ship better apps |
 |--------|-----------------------------------|
 | **Engineering Analytics**<br/>Crashes · ANRs · Handled Exceptions · Rage-taps · Unresponsive Gestures | Get instant alerts for any stability issue, quantify its user-impact, and ship with confidence that UXCam will surface new regressions the moment they happen. |
-| **Debugging Capabilities**<br/>Session Replay · Stack Traces · In-replay Logs & Network Breadcrumbs | Jump straight from an error card to the exact second in the replay, view device logs and API calls, and reproduce complex bugs without asking users for screenshots. |
+| **Debugging Capabilities**<br/>Session Replay · Stack Traces · In-replay Logs | Jump straight from an error card to the exact second in the replay, view device logs, and reproduce complex bugs without asking users for screenshots. |
 | **360° Product Insights**<br/>Heat-maps · Funnels · Retention Cohorts | See every gesture and context-click, discover drop-offs, and validate design changes with real behavioural data. |
 | **Privacy-first by design** | Client-side PII masking APIs (blur, overlay, sensitive view) satisfy GDPR & CCPA out of the gate. |
 | **Wide platform coverage** | One vendor for every mobile framework – native, cross-platform and web. |
