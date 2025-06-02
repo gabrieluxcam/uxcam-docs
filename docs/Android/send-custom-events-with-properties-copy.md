@@ -1,5 +1,5 @@
 ---
-title: Send custom events with properties (COPY)
+title: Send custom events with properties
 deprecated: false
 hidden: false
 metadata:
