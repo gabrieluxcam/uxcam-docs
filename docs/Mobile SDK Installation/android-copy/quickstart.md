@@ -15,9 +15,7 @@ metadata:
 
 ***
 
-## 2 Install the SDK
-
-<br />
+## 2 Install the SDK -> Link
 
 ```kotlin
 repositories {
@@ -40,7 +38,7 @@ dependencies {
 
 ***
 
-## 3 Initialise & record your first session
+## 3 Initialise & record your first session -> Link
 
 ```kotlin
 class MyApp : Application() {
@@ -54,11 +52,11 @@ class MyApp : Application() {
 }
 ```
 
-Look for **“Verification successful”** in Logcat, then interact with the app and ensure **“Session recording started”** appears.
+Look for **“Verification successful”** in Logcat, interact with the app and then send it to background.
 
 ***
 
-## 4 Mask PII (mandatory check)
+## 4 Mask PII (mandatory check) -> Link
 
 Run a test session. If you can read passwords or card numbers in the replay, apply:
 
@@ -74,7 +72,7 @@ More options → [Masking PII & Sensitive Content](#masking-pii-and-sensitive-co
 
 ***
 
-## 5 Tag screens
+## 5 Tag screens -> Link
 
 Automatic tags cover most apps.\
 Manual example:
