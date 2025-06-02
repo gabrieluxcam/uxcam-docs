@@ -90,7 +90,7 @@ Most teams complete the core install in **≈ 2 hours** with a single develo
 
     <tr>
       <td>
-        **5★**
+        **5 ★**
       </td>
 
       <td>
