@@ -1,5 +1,5 @@
 ---
-title: Android APIs (COPY)
+title: API Reference
 deprecated: false
 hidden: false
 metadata:
