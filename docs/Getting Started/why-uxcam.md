@@ -28,12 +28,12 @@ UXCam turns every mobile moment into **actionable insight**: watch session repla
 | Framework                 | Package               | Docs                                  |
 | ------------------------- | --------------------- | ------------------------------------- |
 | **Android** (Kotlin/Java) | `com.uxcam:uxcam`     | [Quick‑start](../android/quick-start) |
-| **iOS** (Swift/Obj‑C)     | `pod 'UXCam'`         | iOS guide                             |
-| **React Native**          | `react-native-ux-cam` | GitHub README                         |
-| **Flutter**               | `flutter_uxcam`       | Pub.dev package                       |
-| **.NET MAUI / Xamarin**   | `Uxcam.Maui`          | MAUI guide                            |
-| **Cordova**               | `cordova-uxcam`       | npm / docs                            |
-| **Web & SPA**             | `@uxcam/web-sdk`      | Web quick‑start                       |
+| **iOS** (Swift/Obj‑C)     | `pod 'UXCam'`         | [Quick‑start](../android/quick-start) |
+| **React Native**          | `react-native-ux-cam` | [Quick‑start](../android/quick-start) |
+| **Flutter**               | `flutter_uxcam`       | [Quick‑start](../android/quick-start) |
+| **.NET MAUI / Xamarin**   | `Uxcam.Maui`          | [Quick‑start](../android/quick-start) |
+| **Cordova**               | `cordova-uxcam`       | [Quick‑start](../android/quick-start) |
+| **Web & SPA**             | `@uxcam/web-sdk`      | [Quick‑start](../android/quick-start) |
 
 > 📈 **37 000+** apps analyse millions of sessions every day with UXCam.
 
