@@ -14,7 +14,7 @@ next:
       title: Users and Properties
       type: basic
 ---
-### Why this matters
+## Why this matters
 
 Under GDPR / CCPA *you* are the data-controller.\
 UXCam records screens so you can debug and improve UX—but **it should never receive raw Personally Identifiable Information (PII)** such as:
@@ -28,7 +28,7 @@ The SDK lets you **mask or blur** that content **on the device, before the video
 
 ***
 
-### 1  Pin-point what needs to be hidden
+## 1  Identify what needs to be hidden
 
 Run the app once with full UXCam recording enabled, and go through all user flows in your app. Then answer:
 
@@ -42,7 +42,7 @@ Run the app once with full UXCam recording enabled, and go through all user flow
 
 ***
 
-### 2  Pick an SDK helper
+## 2  Pick an SDK helper
 
 | Helper class                       | Masks …                            | Keeps gestures? | When to choose                                                 |
 | ---------------------------------- | ---------------------------------- | --------------- | -------------------------------------------------------------- |
@@ -60,11 +60,11 @@ excludeMentionedScreens(boolean)      // treat list as allow-list (false) or den
 
 ***
 
-### 3  Step-by-step examples
+## 3  Step-by-step examples
 
 > Each snippet is self-contained—copy it into **`onCreate()`of your`Application`** or the target `Activity`.
 
-#### 3.1  Hide one payment screen completely
+### 3.1  Hide one payment screen completely
 
 ```java
 // 1) Build an overlay that hides touches too
@@ -82,7 +82,7 @@ Touches are suppressed, guarding against key-logging.
 
 ***
 
-#### 3.2  Blur everything **except** Settings
+### 3.2  Blur everything **except** Settings
 
 ```java
 UXCamBlur globalBlur = new UXCamBlur.Builder()
@@ -98,7 +98,7 @@ UXCam.applyOcclusion(globalBlur);
 
 ***
 
-#### 3.3  Occlude **all text fields** on Checkout + Login
+### 3.3  Occlude **all text fields** on Checkout + Login
 
 ```java
 UXCamOccludeAllTextFields hideText = new UXCamOccludeAllTextFields.Builder()
@@ -112,7 +112,7 @@ UXCam.applyOcclusion(hideText);
 
 ***
 
-#### 3.4  Mask a single `EditText`
+### 3.4  Mask a single `EditText`
 
 ```java
 EditText cardInput = findViewById(R.id.cardNumberInput);
@@ -123,7 +123,7 @@ UXCam.occludeSensitiveView(cardInput);
 
 ***
 
-### 4  Apply occlusions automatically at startup
+## 4  Apply occlusions automatically at startup
 
 Put multiple rules in one list and pass them to the *initial* configuration:
 
@@ -137,7 +137,7 @@ UXCam.startWithConfiguration(config);
 
 ***
 
-### 5  Defaults you get for free
+## 5  Defaults you get for free
 
 * Android `EditText` with `android:inputType="textPassword"` or\
   `InputType.TYPE_TEXT_VARIATION_PASSWORD` is auto-occluded.
@@ -178,7 +178,7 @@ UXCam.startWithConfiguration(config);
 
 ***
 
-### Dashboard-only rules (no code)
+## Dashboard-only rules (no code)
 
 Prefer a zero-code workflow?\
 Open **App Settings → Video Recording Privacy** on the UXCam Dashboard:
