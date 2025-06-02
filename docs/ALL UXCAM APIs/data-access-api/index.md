@@ -14,17 +14,11 @@ The UXCam Data Access API is designed using REST principles, featuring predictab
 
 Go ahead and try out our REST APIs with credentials on Postman)
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://web.postman.co/network/import?collection=9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2)
-
-<br />
-
 <HTMLBlock>{`
 <a href="https://web.postman.co/network/import?collection=9127779-b44a835e-e256-41ba-862d-3b10388c7b67-2s935it5r2" target="_blank" rel="noopener noreferrer">
   <img src="https://run.pstmn.io/button.svg" alt="Run in Postman">
 </a>
 `}</HTMLBlock>
-
-<br />
 
 ## Postman Guide
 
