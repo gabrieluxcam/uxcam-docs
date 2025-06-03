@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)            \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)             \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -33,6 +33,8 @@ dependencies {
 ## 2 · Start Recording
 
 From your Application Class or Launcher Activity, add the configuration and start the SDK.
+
+<GitHubCallout type="important">Make sure to start the SDK at the earliest possible Context.</GitHubCallout>
 
 ```kotlin Kotlin
 import com.uxcam.UXCam
