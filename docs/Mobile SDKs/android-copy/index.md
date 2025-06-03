@@ -13,77 +13,130 @@ next:
 ---
 Welcome! If you haven’t signed up yet, grab your **free trial** → [Sign Up](https://app.uxcam.com/signup).
 
-Once your account is ready, follow the five-step path below.  
+Once your account is ready, follow the five-step path below.\
 Most teams complete the core setup in **about two hours** with a single developer.
 
----
+***
 
 ## Integration Journey at a Glance
 
 <Table align={["left","left","left"]}>
-<thead>
-<tr><th>#</th><th>Step</th><th>Goal</th></tr>
-</thead>
-<tbody>
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
 
-<tr>
-<td><strong>1</strong></td>
-<td><strong>Initialise SDK & Start Recording</strong> <a href="#1-initialise-sdk--start-recording">Jump →</a></td>
-<td>Capture your first live session</td>
-</tr>
+      <th>
+        Step
+      </th>
 
-<tr>
-<td><strong>2</strong></td>
-<td><strong>Mask PII & Sensitive Content</strong> <a href="#2-mask-pii--sensitive-content">Jump →</a></td>
-<td>Hide passwords and other GDPR/CCPA data</td>
-</tr>
+      <th>
+        Goal
+      </th>
+    </tr>
+  </thead>
 
-<tr>
-<td><strong>3</strong></td>
-<td><strong>Tag Screens</strong> <a href="#3-tag-screens">Jump →</a></td>
-<td>Enable heat-maps & screen analytics</td>
-</tr>
+  <tbody>
+    <tr>
+      <td>
+        <strong>1</strong>
+      </td>
 
-<tr>
-<td><strong>4 ★</strong></td>
-<td><strong>Set User Identity & Properties</strong> <a href="#4-set-user-identity--properties">Jump →</a></td>
-<td>Unify sessions, power funnels & cohorts</td>
-</tr>
+      <td>
+        <strong>Initialise SDK & Start Recording</strong> <a href="#1-initialise-sdk--start-recording">Jump →</a>
+      </td>
 
-<tr>
-<td><strong>5 ★</strong></td>
-<td><strong>Tag Events</strong> <a href="#5-tag-events">Jump →</a></td>
-<td>Measure key actions & run final QA</td>
-</tr>
+      <td>
+        Capture your first live session
+      </td>
+    </tr>
 
-</tbody>
+    <tr>
+      <td>
+        <strong>2</strong>
+      </td>
+
+      <td>
+        <strong>Mask PII & Sensitive Content</strong> <a href="#2-mask-pii--sensitive-content">Jump →</a>
+      </td>
+
+      <td>
+        Hide passwords and other GDPR/CCPA data
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>3</strong>
+      </td>
+
+      <td>
+        <strong>Tag Screens</strong> <a href="#3-tag-screens">Jump →</a>
+      </td>
+
+      <td>
+        Enable heat-maps & screen analytics
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>4 ★</strong>
+      </td>
+
+      <td>
+        <strong>Set User Identity & Properties</strong> <a href="#4-set-user-identity--properties">Jump →</a>
+      </td>
+
+      <td>
+        Unify sessions, power funnels & cohorts
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>5 ★</strong>
+      </td>
+
+      <td>
+        <strong>Tag Events</strong> <a href="#5-tag-events">Jump →</a>
+      </td>
+
+      <td>
+        Measure key actions & run final QA
+      </td>
+    </tr>
+  </tbody>
 </Table>
 
-> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.
+<GitHubCallout type="note"> ★ ***Optional But Highly Recommended***:                                                Ship steps 1‑3 to start getting replays and heat‑maps, then add steps 4‑5 for deeper analytics.</GitHubCallout>
 
----
+***
 
 ## Key Benefits After Setup
 
-* **Session Replay + Heat-maps** – watch every UX moment in context.  
-* **Advanced Product Analytics** – funnels, retention, feature adoption.  
-* **Insight Alerts** – journey summaries, rage-tap & anomaly detection.  
+* **Session Replay + Heat-maps** – watch every UX moment in context.
+* **Advanced Product Analytics** – funnels, retention, feature adoption.
+* **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
 * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
 
----
+***
 
 ## 💡 Tips Before You Begin
 
-* Create **separate keys** for *debug* & *production* to keep data clean.  
-* Use **feature flags** to toggle UXCam in staging builds.  
+* Create **separate keys** for *debug* & *production* to keep data clean.
+* Use **feature flags** to toggle UXCam in staging builds.
 * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
 
 Happy analysing! 🎉
 
----
+***
 
 ## 1 – Initialise SDK & Start Recording
+
 ### 1.1 Prerequisites
+
 * **minSdkVersion 21**
 * **Java 8 / Kotlin 1.6+**
 * Gradle Android Plugin 7.4+
@@ -94,7 +147,7 @@ Happy analysing! 🎉
 ```kotlin
 repositories { maven { url = uri("https://sdk.uxcam.com/android/") } }
 dependencies { implementation("com.uxcam:uxcam:3.+") }
-````
+```
 ```groovy
 repositories { maven { url 'https://sdk.uxcam.com/android/' } }
 dependencies { implementation 'com.uxcam:uxcam:3.+' }
@@ -116,7 +169,7 @@ class MyApp : Application() {
 
 Look for **“Verification successful”** in Logcat.
 
----
+***
 
 ## 2 – Mask PII & Sensitive Content
 
@@ -132,7 +185,7 @@ UXCam.applyOcclusion(payOverlay)
 
 More options → see the *Masking PII* guide.
 
----
+***
 
 ## 3 – Tag Screens
 
@@ -147,7 +200,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 For Jetpack-Compose navigation, use a `NavController` listener (see full guide).
 
----
+***
 
 ## 4 – Set User Identity & Properties
 
@@ -157,7 +210,7 @@ UXCam.setUserProperty("plan", "pro")
 UXCam.setUserProperty("signup_source", "google_ads")
 ```
 
----
+***
 
 ## 5 – Tag Events
 
@@ -166,7 +219,7 @@ val props = hashMapOf("plan" to "pro", "price_cents" to 1499)
 UXCam.logEvent("Payment_Succeeded", props)
 ```
 
----
+***
 
 ## Verification Checklist
 
@@ -176,7 +229,7 @@ UXCam.logEvent("Payment_Succeeded", props)
 * [ ] User profile populated with ID & properties
 * [ ] Events display with properties
 
----
+***
 
 ### Next Steps
 
