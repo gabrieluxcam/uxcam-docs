@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)               \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <ToggleList>
   <ToggleListItem title="What type of books do owls like to read?">
@@ -23,7 +23,11 @@ next:
   </ToggleListItem>
 </ToggleList>
 
-<br />
+<Accordion title="My Accordion Title" icon="fa-info-circle">
+  Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Ut enim
+  ad minim veniam, quis nostrud exercitation ullamco. Excepteur sint
+  occaecat cupidatat non proident!
+</Accordion>
 
 # Android SDK · Quickstart
 
