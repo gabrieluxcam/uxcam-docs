@@ -13,4 +13,48 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+
+## Step 1: Add the SDK
+
+In your module's **build.gradle**, add:
+
+```groovy build.gradle (app)
+repositories {
+  maven { url 'https://sdk.uxcam.com/android/' }
+}
+dependencies {
+  implementation 'com.uxcam:uxcam:3.+'
+}
+```
+
+<br />
+
+## 2 · Start Recording
+
+<br />
+
+<Tabs
+  labels={["Kotlin","Java"]}
+  values={[
+`import com.uxcam.UXCam
+import com.uxcam.datamodel.UXConfig
+
+class MyApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    val config = UXConfig.Builder(BuildConfig.UXCAM_KEY).build()
+    UXCam.startWithConfiguration(config)
+}`,
+`import com.uxcam.UXCam;
+import com.uxcam.datamodel.UXConfig;
+
+public class MyApp extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY).build();
+    UXCam.startWithConfiguration(config);
+  }
+}`]}
+/>
