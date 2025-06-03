@@ -104,10 +104,9 @@ Most teams complete the core install in **≈ 2 hours** with a single develo
   </tbody>
 </Table>
 
-> ★ **Optional but highly recommended.**\
-> Ship steps 1‑3 to start getting replays and heat‑maps, then add steps 4‑5 for deeper analytics.
+\<GitHubCallout type="note">> ★ \*\*Optional but highly recommended.\*\*\\
+\> Ship steps 1‑3 to start getting replays and heat‑maps, then add steps 4‑5 for deeper analytics.\</GitHubCallout>
 
-<br />
 
 ## Supported Platforms and Technical Integration Guides
 
