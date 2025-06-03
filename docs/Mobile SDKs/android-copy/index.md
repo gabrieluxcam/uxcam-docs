@@ -34,7 +34,7 @@ dependencies {
 
 <Tabs>
   <Tab title="Kotlin">
-    ```Welcome to the content that you can only see inside the first Tab.```
+wferged
   </Tab>
 
   <Tab title="Java">
