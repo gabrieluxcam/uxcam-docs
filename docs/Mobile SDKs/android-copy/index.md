@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)      \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)       \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -32,4 +32,29 @@ dependencies {
 
 ## 2 · Start Recording
 
-<TutorialTile emoji="🦉" slug="recipe-title" title="Recipe Title" />
+```kotlin Kotlin
+`import com.uxcam.UXCam
+import com.uxcam.datamodel.UXConfig
+
+class MyApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    val config = UXConfig.Builder(BuildConfig.UXCAM_KEY).build()
+    UXCam.startWithConfiguration(config)
+}`
+```
+```java Java
+import com.uxcam.UXCam; &#x20;
+import com.uxcam.datamodel.UXConfig;
+
+
+
+public class MyApp extends Application \{ &#x20;
+&#x20; @Override
+&#x20; public void onCreate() \{
+&#x20;   super.onCreate();
+&#x20;   UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM\_KEY).build();
+&#x20;   UXCam.startWithConfiguration(config);
+&#x20; }
+}
+```
