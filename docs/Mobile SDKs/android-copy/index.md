@@ -11,9 +11,21 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-# Android SDK · Quickstart
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)               \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)              \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<ToggleList>
+  <ToggleListItem title="What type of books do owls like to read?">
+    Hoooo-dunnits 🔎
+  </ToggleListItem>
+
+  <ToggleListItem title="What’s an owl’s favorite drink?">
+    Hoot beer 🥤
+  </ToggleListItem>
+</ToggleList>
+
+<br />
+
+# Android SDK · Quickstart
 
 ## Step 1: Add the SDK
 
