@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -32,29 +32,12 @@ dependencies {
 
 ## 2 · Start Recording
 
-<br />
+<Tabs>
+  <Tab title="Kotlin">
+    Welcome to the content that you can only see inside the first Tab.
+  </Tab>
 
-<Tabs
-  labels={["Kotlin","Java"]}
-  values={[
-`import com.uxcam.UXCam
-import com.uxcam.datamodel.UXConfig
-
-class MyApp : Application() {
-  override fun onCreate() {
-    super.onCreate()
-    val config = UXConfig.Builder(BuildConfig.UXCAM_KEY).build()
-    UXCam.startWithConfiguration(config)
-}`,
-`import com.uxcam.UXCam;
-import com.uxcam.datamodel.UXConfig;
-
-public class MyApp extends Application {
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY).build();
-    UXCam.startWithConfiguration(config);
-  }
-}`]}
-/>
+  <Tab title="Java">
+    Here's content that's only inside the second Tab.
+  </Tab>
+</Tabs>
