@@ -11,3 +11,6 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
+# Android SDK · Quickstart
+
+<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
