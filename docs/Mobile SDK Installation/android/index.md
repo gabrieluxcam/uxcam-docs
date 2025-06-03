@@ -92,3 +92,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 ## Next Steps ➡️
 
 You've successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let's go further into setting things up.
+
+<br />
+
+*
