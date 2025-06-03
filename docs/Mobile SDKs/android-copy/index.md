@@ -171,6 +171,19 @@ Look for **“Verification successful”** in Logcat.
 
 ***
 
+## 2 – Tag Screens
+
+Automatic tags usually suffice. Manual example:
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+  super.onCreate(savedInstanceState)
+  UXCam.tagScreenName("Checkout")
+}
+```
+
+For Jetpack-Compose navigation, use a `NavController` listener (see full guide).
+
 ## 2 – Mask PII & Sensitive Content
 
 Run a test session. If you spot passwords/card numbers in the replay, mask them:
@@ -184,21 +197,6 @@ UXCam.applyOcclusion(payOverlay)
 ```
 
 More options → see the *Masking PII* guide.
-
-***
-
-## 3 – Tag Screens
-
-Automatic tags usually suffice. Manual example:
-
-```kotlin
-override fun onCreate(savedInstanceState: Bundle?) {
-  super.onCreate(savedInstanceState)
-  UXCam.tagScreenName("Checkout")
-}
-```
-
-For Jetpack-Compose navigation, use a `NavController` listener (see full guide).
 
 ***
 
