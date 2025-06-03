@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -34,7 +34,7 @@ dependencies {
 
 <Tabs>
   <Tab title="Kotlin">
-    Welcome to the content that you can only see inside the first Tab.
+    ```Welcome to the content that you can only see inside the first Tab.```
   </Tab>
 
   <Tab title="Java">
