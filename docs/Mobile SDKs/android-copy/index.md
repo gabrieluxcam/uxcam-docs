@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)      \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -32,26 +32,4 @@ dependencies {
 
 ## 2 · Start Recording
 
-<Tabs>
-  <Tab title="Kotlin">
-    ```groovy build.gradle (app)
-    repositories {
-      maven { url 'https://sdk.uxcam.com/android/' }
-    }
-    dependencies {
-      implementation 'com.uxcam:uxcam:3.+'
-    }
-    ```
-  </Tab>
-
-  <Tab title="Java">
-    ```groovy build.gradle (app)
-    repositories {
-    maven { url 'https://sdk.uxcam.com/android/' }
-    }
-    dependencies {
-    implementation 'com.uxcam:uxcam:3.+'
-    }
-    ```
-  </Tab>
-</Tabs>
+<TutorialTile emoji="🦉" slug="recipe-title" title="Recipe Title" />
