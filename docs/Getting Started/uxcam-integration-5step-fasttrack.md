@@ -48,20 +48,6 @@ Most teams complete the core install in **≈ 2 hours** with a single develo
 
     <tr>
       <td>
-        **2**
-      </td>
-
-      <td>
-        **Mask PII & Sensitive Content**
-      </td>
-
-      <td>
-        Hide passwords and other GDPR/CCPA data
-      </td>
-    </tr>
-
-    <tr>
-      <td>
         **3**
       </td>
 
@@ -71,6 +57,20 @@ Most teams complete the core install in **≈ 2 hours** with a single develo
 
       <td>
         Enable heat‑maps & screen analytics
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        **2**
+      </td>
+
+      <td>
+        **Mask PII & Sensitive Content**
+      </td>
+
+      <td>
+        Hide passwords and other GDPR/CCPA data
       </td>
     </tr>
 
