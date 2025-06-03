@@ -13,7 +13,7 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)       \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)        \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
 
@@ -49,12 +49,12 @@ import com.uxcam.datamodel.UXConfig;
 
 
 
-public class MyApp extends Application \{ &#x20;
-&#x20; @Override
-&#x20; public void onCreate() \{
-&#x20;   super.onCreate();
-&#x20;   UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM\_KEY).build();
-&#x20;   UXCam.startWithConfiguration(config);
-&#x20; }
+public class MyApp extends Application \{ 
+@Override
+public void onCreate() \{
+super.onCreate();
+UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM\_KEY).build();
+UXCam.startWithConfiguration(config);
+ }
 }
 ```
