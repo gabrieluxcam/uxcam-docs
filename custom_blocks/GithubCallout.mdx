@@ -5,10 +5,14 @@ export const GitHubCallout = ({ type, children }) => {
   let color;
   let icon;
   switch (type) {
-    case 'tip':
+    case 'success':
       color = 'green';
+      icon = 'fa-check-circle';
+      break;
+    case 'tip':
+      color = 'cyan';
       icon = 'fa-lightbulb';
-     break;
+      break;
     case 'important':
       color = 'purple';
       icon = 'fa-message-exclamation';
@@ -44,3 +48,4 @@ export const GitHubCallout = ({ type, children }) => {
 <GitHubCallout type="important">Crucial information necessary for users to succeed.</GitHubCallout>
 <GitHubCallout type="warning">Critical content demanding immediate user attention due to potential risks.</GitHubCallout>
 <GitHubCallout type="caution">Negative potential consequences of an action.</GitHubCallout>
+<GitHubCallout type="success">Negative potential consequences of an action.</GitHubCallout>
