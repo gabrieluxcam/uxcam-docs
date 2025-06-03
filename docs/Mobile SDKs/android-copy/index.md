@@ -13,9 +13,11 @@ next:
 ---
 # Android SDK · Quickstart
 
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)         \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)          \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 ## Step 1: Add the SDK
+
+[![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
 
 In your module's **build.gradle**, add:
 
@@ -37,7 +39,7 @@ import com.uxcam.datamodel.UXConfig
 class MyApp : Application() {
   override fun onCreate() {
     super.onCreate()
-    val config = UXConfig.Builder(BuildConfig.UXCAM_KEY).build()
+    val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY).build()
     UXCam.startWithConfiguration(config)
 }`
 ```
@@ -50,7 +52,7 @@ public class MyApp extends Application {
 @Override
 public void onCreate() {
 super.onCreate();
-UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY).build();
+UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY).build();
 UXCam.startWithConfiguration(config);
  }
 }
