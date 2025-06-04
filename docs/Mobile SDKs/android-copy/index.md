@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)       \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)        \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -22,7 +22,7 @@ next:
   * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
 </Accordion>
 
-<Accordion title="Tips Before You Begin" icon="fa-lightbulb-o">
+<Accordion title="Tips Before You Begin" icon="fa fa-lightbulb-o">
   * Create **separate keys** for *debug* & *production* to keep data clean.
   * Use **feature flags** to toggle UXCam in staging builds.
   * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
