@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -126,11 +126,15 @@ next:
 
 ## Step 1: Find your App Key 🔑
 
+### 1.1: Grab your key
+
 If you don't already have it, grab it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
 <GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
 
-You can create
+### 1.2: Keep it out of source control:
+
+add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time so you never hard-code secrets
 
 ## Step 2: Add the SDK
 
