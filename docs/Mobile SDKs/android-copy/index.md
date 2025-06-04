@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)      \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -129,6 +129,8 @@ Use our configuration option `.enableIntegrationLogging(bool)` to view more verb
 ***
 
 # Next Steps
+
+You've successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let's go further into setting things up.
 
 <Cards columns={4}>
   <Card title="Tag Screens" href="https://readme.com" icon="fa-home" target="_blank">
