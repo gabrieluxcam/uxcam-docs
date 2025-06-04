@@ -11,25 +11,21 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)      \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
-
-<ToggleList>
-  <ToggleListItem title="What type of books do owls like to read?">
-    Hoooo-dunnits 🔎
-  </ToggleListItem>
-
-  <ToggleListItem title="What’s an owl’s favorite drink?">
-    Hoot beer 🥤
-  </ToggleListItem>
-</ToggleList>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
   * **Session Replay + Heat-maps** – watch every UX moment in context.
   * **Advanced Product Analytics** – funnels, retention, feature adoption.
   * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
   * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
+</Accordion>
+
+<Accordion title="Tips Before You Begin" icon="fa-info-circle">
+  * Create **separate keys** for *debug* & *production* to keep data clean.
+  * Use **feature flags** to toggle UXCam in staging builds.
+  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
 </Accordion>
 
 # Android SDK · Quickstart
