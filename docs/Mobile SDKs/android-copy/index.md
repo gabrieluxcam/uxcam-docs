@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -124,7 +124,11 @@ next:
 
 # Android SDK · Quickstart
 
-## Step 1: Add the SDK
+## Step 1: Find your App Key
+
+If you don't already have it, grab it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+
+## Step 2: Add the SDK
 
 [![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
 
@@ -139,9 +143,11 @@ dependencies {
 }
 ```
 
-## Step 2: Start Recording
+## Step 3: Start Recording
 
 From your Application Class or Launcher Activity, add the configuration and start the SDK.
+
+<br />
 
 <GitHubCallout type="important">Make sure to start the SDK at the earliest possible Context.</GitHubCallout>
 
@@ -152,7 +158,7 @@ import com.uxcam.datamodel.UXConfig
 class MyApp : Application() {
   override fun onCreate() {
     super.onCreate()
-    val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY).build()
+    val config = UXConfig.Builder(YOUR_UXCAM_KEY).build()
     UXCam.startWithConfiguration(config)
 }
 ```
@@ -165,13 +171,17 @@ public class MyApp extends Application {
 @Override
 public void onCreate() {
 super.onCreate();
-UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY).build();
+UXConfig config = new UXConfig.Builder(YOUR_UXCAM_KEY).build();
 UXCam.startWithConfiguration(config);
  }
 }
 ```
 
 <GitHubCallout type="success">This completes the most basic integration process.                          Watch Logcat for **“Verification successful”** – your first session should appear on the UXCam dashboard within \~2 minutes.</GitHubCallout>
+
+# Advanced SDK Configuration
+
+You can control
 
 # Next Steps
 
