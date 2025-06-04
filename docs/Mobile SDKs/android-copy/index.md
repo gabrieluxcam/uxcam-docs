@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -122,6 +122,8 @@ next:
   * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
 </Accordion>
 
+***
+
 # Android SDK · Quickstart
 
 ## Step 1: Find your App Key 🔑
@@ -135,6 +137,8 @@ If you don't already have it, grab it in App Settings -> App Key on your <a href
 ### 1.2: Keep it out of source control:
 
 add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time so you never hard-code secrets
+
+***
 
 ## Step 2: Add the SDK
 
@@ -151,11 +155,11 @@ dependencies {
 }
 ```
 
+***
+
 ## Step 3: Start Recording
 
 From your Application Class or Launcher Activity, add the configuration and start the SDK.
-
-<br />
 
 <GitHubCallout type="important">Make sure to start the SDK at the earliest possible Context.</GitHubCallout>
 
@@ -187,9 +191,24 @@ UXCam.startWithConfiguration(config);
 
 <GitHubCallout type="success">This completes the most basic integration process.                          Watch Logcat for **“Verification successful”** – your first session should appear on the UXCam dashboard within \~2 minutes.</GitHubCallout>
 
+***
+
 # Advanced SDK Configuration
 
-You can control
+You can control how the SDK is configured via the configuration object you create, the available parameters are below:
+
+## Want to debug?
+
+Use our configuration option `.enableIntegrationLogging(bool)` to view more verbose logs in your Logcat, this will help you verify everything and pinpoint possible hurdles you face down the line.
+
+## Rest of Options
+
+* `.enableAutomaticScreenNameTagging(bool)`  True by Default. Set to false if you want to disable automatic screen tagging.
+* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here]().
+* `.enableCrashHandling(bool)` True by Default. Set to false if you want to disable crash capture.
+* `.enableMultiSessionRecord(bool)` True by Default. Set to false to stop any session after the first one from being recorded.
+
+***
 
 # Next Steps
 
