@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -60,7 +60,7 @@ class MyApp : Application() {
     super.onCreate()
     val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY).build()
     UXCam.startWithConfiguration(config)
-}`
+}
 ```
 ```java Java
 import com.uxcam.UXCam;
