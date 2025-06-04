@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)           \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)            \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -89,14 +89,20 @@ UXCam.startWithConfiguration(config);
   </Card>
 
   <Card title="Mask PII Data" icon="fa-star">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
+    Protect your users’ privacy
+
+    > MAsk or Blur Screens, Views and Fields
   </Card>
 
   <Card title="Add User IDs and Properties" icon="fa-user">
-    > Ut enim ad minim veniam, quis nostrud ullamco
+    Identify Your Users and Get the Full Picture
+
+    > Assign custom identities and properties
   </Card>
 
   <Card title="Send Events" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
+    Gain Deeper Insights of Your Users' interactions
+
+    > Send Events and Properties
   </Card>
 </Cards>
