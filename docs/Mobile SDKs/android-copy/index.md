@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                    \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -81,18 +81,45 @@ UXCam.startWithConfiguration(config);
 
 # Next Steps
 
+<Cards columns={4}>
+  <Card title="Tag Screens" href="https://readme.com" icon="fa-home" target="_blank">
+    Take Full Advantage of Heatmaps and Screen Analytics
 
-\<Cards columns=\{4}>
-&#x20; \<Card title="Tag Screens" href="\[https\://readme.com]\(https\://readme.com)" icon="fa-home" target="\\\_blank">
+    > Review Automatic or Manual Tagging
+  </Card>
+
+  <Card title="Mask PII Data" icon="fa-user">
+    Protect Your Users’ Privacy and PII Data
+
+    > Mask or Blur Screens, Views and Fields
+  </Card>
+
+  <Card title="Assign User IDs" icon="fa-star">
+    Get The Full Picture with User Analytics
+
+    > Assign Custom User IDs and Properties
+  </Card>
+
+  <Card title="Send Events" icon="fa-question">
+    Gain Deeper Insights of Your Users' interactions
+
+    > Send Events and Add Properties
+  </Card>
+</Cards>
+
+<br />
+
+\<Cards columns=\{4}>\
+\<Card title="Tag Screens" href="\[[https://readme.com](https://readme.com)]\([https://readme.com](https://readme.com))" icon="fa-home" target="\_blank">
 Take Full Advantage of Heatmaps and Screen Analytics
-&#x20; \</Card>
-&#x20; \<Card title="Mask PII Data" icon="fa-star">
-Protect Your Users’ Privacy and PII Data
-\> MAsk or Blur Screens, Views and Fields
-&#x20; \</Card>
-&#x20; \<Card title="Assign User IDs" icon="fa-user">
-Get The Full Picture with User Analytics
-&#x20; \</Card>
-&#x20; \<Card title="Send Events" icon="fa-question">
-Gain Deeper Insights of Your Users' interactions
-&#x20; \</Card>
+\</Card>
+\<Card title="Mask PII Data" icon="fa-star">
+Protect Your Users’ Privacy and PII Data> MAsk or Blur Screens, Views and Fields
+
+> \</Card>\
+> \<Card title="Assign User IDs" icon="fa-user">
+> Get The Full Picture with User Analytics
+> \</Card>
+> \<Card title="Send Events" icon="fa-question">
+> Gain Deeper Insights of Your Users' interactions
+> \</Card>
