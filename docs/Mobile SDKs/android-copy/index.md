@@ -124,9 +124,13 @@ next:
 
 # Android SDK · Quickstart
 
-## Step 1: Find your App Key
+## Step 1: Find your App Key 🔑
 
 If you don't already have it, grab it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+
+<GitHubCallout type="important">Create separate keys for debug/production. Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
+
+You can create
 
 ## Step 2: Add the SDK
 
