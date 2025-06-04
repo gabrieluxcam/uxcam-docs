@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -25,10 +25,11 @@ next:
   </ToggleListItem>
 </ToggleList>
 
-<Accordion title="My Accordion Title" icon="fa-info-circle">
-  Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Ut enim
-  ad minim veniam, quis nostrud exercitation ullamco. Excepteur sint
-  occaecat cupidatat non proident!
+<Accordion title="Key Benefits After Setup" icon="fa-info-circle">
+  * **Session Replay + Heat-maps** – watch every UX moment in context.
+  * **Advanced Product Analytics** – funnels, retention, feature adoption.
+  * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
+  * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
 </Accordion>
 
 # Android SDK · Quickstart
