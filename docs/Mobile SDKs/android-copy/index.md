@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -79,20 +79,22 @@ UXCam.startWithConfiguration(config);
 
 <GitHubCallout type="success">Watch Logcat for **“Verification successful”** – your first session should appear on the UXCam dashboard within \~2 minutes.</GitHubCallout>
 
+# Next Steps
+
 <Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
+  <Card title="Tag Screens" href="https://readme.com" icon="fa-home" target="_blank">
     Neque porro quisquam est qui dolorem ipsum quia
   </Card>
 
-  <Card title="Second Card" icon="fa-user">
+  <Card title="Mask PII Data" icon="fa-user">
     *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
   </Card>
 
-  <Card title="Third Card" icon="fa-star">
+  <Card title="Add User IDs and Properties" icon="fa-star">
     > Ut enim ad minim veniam, quis nostrud ullamco
   </Card>
 
-  <Card title="Fourth Card" icon="fa-question">
+  <Card title="Send Events" icon="fa-question">
     **Excepteur sint occaecat cupidatat non proident**
   </Card>
 </Cards>
