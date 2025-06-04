@@ -7,7 +7,7 @@ metadata:
 ---
 # ✨ Why UXCam?
 
-UXCam turns every mobile moment into **actionable insight**: watch session replays, surface rage‑taps and UI freezes, measure funnels and retention — and then jump straight to the line of code that crashed. All of this works **out‑of‑the‑box across the entire mobile tech stack** you already ship with.
+UXCam turns every mobile moment into **actionable insight**: watch <Glossary>session</Glossary> replays, surface rage‑taps and UI freezes, measure funnels and retention — and then jump straight to the line of code that crashed. All of this works **out‑of‑the‑box across the entire mobile tech stack** you already ship with.
 
 ***
 
@@ -35,7 +35,7 @@ UXCam turns every mobile moment into **actionable insight**: watch session repla
 | **Cordova**               | `cordova-uxcam`       | [Quick‑start](../android/quick-start) |
 | **Web & SPA**             | `@uxcam/web-sdk`      | [Quick‑start](../android/quick-start) |
 
-> 📈 **37 000+** apps analyse millions of sessions every day with UXCam.
+> 📈 **37 000+** apps analyse millions of <Glossary>session</Glossary> every day with UXCam.
 
 ***
 
@@ -49,4 +49,4 @@ UXCam turns every mobile moment into **actionable insight**: watch session repla
 ***
 
 Ready to see your app through your users’ eyes?\
-Jump to the [Android Quick‑Start](../android/quick-start) (or iOS / Flutter / React Native) and record your first session in less than 15 minutes.
+Jump to the [Android Quick‑Start](../android/quick-start) (or iOS / Flutter / React Native) and record your first <Glossary>session</Glossary> in less than 15 minutes.
