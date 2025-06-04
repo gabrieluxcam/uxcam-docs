@@ -1,8 +1,8 @@
 ---
 title: Tag Screens
 excerpt: >-
-  Review auto-screen tagging and manually tag screens to get the most out of
-  UXCam's Heat Maps and advanced Screen Analytics
+  Automatic and Manually tagged screens to get the most out of UXCam's Heat Maps
+  and Screen Analytics
 deprecated: false
 hidden: false
 metadata:
@@ -24,11 +24,11 @@ This guide walks you through **reviewing the automatic tags first**, deciding wh
 2. Open any replay in the UXCam Dashboard and scan the **screen list** on the right.
 3. For each entry, ask:
 
-   | Check‑question                                       | Why it matters                                 |
-   | ---------------------------------------------------- | ---------------------------------------------- |
-   | Does the name describe the UI the user actually saw? | Makes funnels human‑readable.                  |
-   | Would a heat‑map over the frames make sense?         | Ensures events aggregate on the right surface. |
-   | Do any screens repeat with a **0 s** duration?       | Signals duplicate or missing tags.             |
+| Check‑question                                       | Why it matters                                 |
+| ---------------------------------------------------- | ---------------------------------------------- |
+| Does the name describe the UI the user actually saw? | Makes funnels human‑readable.                  |
+| Would a heat‑map over the frames make sense?         | Ensures events aggregate on the right surface. |
+| Do any screens repeat with a **0 s** duration?       | Signals duplicate or missing tags.             |
 
 > **If everything looks good** – simply rename screens in **Dashboard → Screens** (e.g. change `MainActivity` → **Home**) and you’re done. No code required.
 
