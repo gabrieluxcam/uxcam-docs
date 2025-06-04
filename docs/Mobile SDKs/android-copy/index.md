@@ -11,7 +11,9 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+
+<JumpCallout to="#Android SDK · Quickstart">Skip ahead</JumpCallout>
 
 <ToggleList>
   <ToggleListItem title="What type of books do owls like to read?">
