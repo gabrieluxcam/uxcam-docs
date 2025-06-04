@@ -15,6 +15,100 @@ next:
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
+# Integration Journey at a Glance
+
+<Table align={["left","left","left"]}>
+  <thead>
+    <tr>
+      <th>
+        #
+      </th>
+
+      <th>
+        Step
+      </th>
+
+      <th>
+        Goal
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <strong>1</strong>
+      </td>
+
+      <td>
+        <strong>Customise SDK Configuration</strong> <a href="#1-initialise-sdk--start-recording">Jump →</a>
+      </td>
+
+      <td>
+        Capture your first live session
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>3</strong>
+      </td>
+
+      <td>
+        <strong>Tag Screens</strong> <a href="#3-tag-screens">Jump →</a>
+      </td>
+
+      <td>
+        Enable heat-maps & screen analytics
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>2</strong>
+      </td>
+
+      <td>
+        <strong>Mask PII & Sensitive Content</strong> <a href="#2-mask-pii--sensitive-content">Jump →</a>
+      </td>
+
+      <td>
+        Hide passwords and other GDPR/CCPA data
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>4 ★</strong>
+      </td>
+
+      <td>
+        <strong>Set User Identity & Properties</strong> <a href="#4-set-user-identity--properties">Jump →</a>
+      </td>
+
+      <td>
+        Unify sessions, power funnels & cohorts
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <strong>5 ★</strong>
+      </td>
+
+      <td>
+        <strong>Tag Events</strong> <a href="#5-tag-events">Jump →</a>
+      </td>
+
+      <td>
+        Measure key actions & run final QA
+      </td>
+    </tr>
+  </tbody>
+</Table>
+
+<GitHubCallout type="tip">> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
   * **Session Replay + Heat-maps** – watch every UX moment in context.
   * **Advanced Product Analytics** – funnels, retention, feature adoption.
