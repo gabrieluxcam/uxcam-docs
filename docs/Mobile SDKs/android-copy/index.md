@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -41,7 +41,7 @@ next:
       </td>
 
       <td>
-        <strong>Customise SDK Configuration</strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>
+        <strong>Customise SDK Configuration</strong>  <a href="#1-initialise-sdk--start-recording"> Jump →</a>
       </td>
 
       <td>
@@ -55,7 +55,7 @@ next:
       </td>
 
       <td>
-        <strong>Tag Screens</strong>  <a href="#3-tag-screens">Jump →</a>
+        <strong>Tag Screens</strong>  <a href="#3-tag-screens"> Jump →</a>
       </td>
 
       <td>
@@ -69,7 +69,7 @@ next:
       </td>
 
       <td>
-        <strong>Mask PII & Sensitive Content</strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>
+        <strong>Mask PII & Sensitive Content</strong>  <a href="#2-mask-pii--sensitive-content"> Jump →</a>
       </td>
 
       <td>
@@ -83,7 +83,7 @@ next:
       </td>
 
       <td>
-        <strong>Set User Identity & Properties</strong>  <a href="#4-set-user-identity--properties">Jump →</a>
+        <strong>Set User Identity & Properties</strong>  <a href="#4-set-user-identity--properties"> Jump →</a>
       </td>
 
       <td>
@@ -97,7 +97,7 @@ next:
       </td>
 
       <td>
-        <strong>Tag Events</strong>  <a href="#5-tag-events">Jump →</a>
+        <strong>Tag Events</strong>  <a href="#5-tag-events"> Jump →</a>
       </td>
 
       <td>
