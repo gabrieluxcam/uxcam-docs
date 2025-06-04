@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)            \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)             \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
 
@@ -85,7 +85,7 @@ UXCam.startWithConfiguration(config);
   <Card title="Tag Screens" href="https://readme.com" icon="fa-home" target="_blank">
     Take Full Advantage of Heatmaps and Screen Analytics
 
-    > Review automatic tagging or manually tag screens
+    > Review automatic or manual screen tagging
   </Card>
 
   <Card title="Mask PII Data" icon="fa-star">
