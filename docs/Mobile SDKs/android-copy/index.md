@@ -2,7 +2,7 @@
 title: Android SDK Integration Guide
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
