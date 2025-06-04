@@ -11,7 +11,7 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -115,7 +115,7 @@ UXCam.startWithConfiguration(config);
 
 You can control how the SDK is configured via the configuration object you create, the available parameters are below:
 
-## Want to debug?
+## Want to Debug?
 
 Use our configuration option `.enableIntegrationLogging(bool)` to view more verbose logs in your Logcat, this will help you verify everything and pinpoint possible hurdles you face down the line.
 
