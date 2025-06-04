@@ -11,9 +11,9 @@ next:
       title: Initialise UXCam SDK and start recording
       type: basic
 ---
-<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
-<JumpCallout to="#android-sdk--quickstart">Skip to Quickstart</JumpCallout>
+<JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
 # Integration Journey at a Glance
 
@@ -107,7 +107,7 @@ next:
   </tbody>
 </Table>
 
-<GitHubCallout type="tip">> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
   * **Session Replay + Heat-maps** – watch every UX moment in context.
