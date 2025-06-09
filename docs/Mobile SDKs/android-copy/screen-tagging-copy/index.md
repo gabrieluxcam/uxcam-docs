@@ -149,3 +149,35 @@ If something is off, look for duplicate tag calls or a missing route handler.
 | **Deep‑link cold launch**                       | First screen appears before SDK start  | Initialise SDK in `Application` class                 |
 | **Internationalised tag strings**               | “Profile” vs “Perfil” split analytics  | Tag with a constant key, translate in Dashboard       |
 | **Rapid tab switching**                         | Tags \<  300 ms apart collapse to 0 s  | Debounce tag logic in nav listener                    |
+
+***
+
+## Next Steps:
+
+You've properly tagged screens and are ready to move on! Check below for the next steps.
+
+<Cards columns={4}>
+  <Card title="Tag Screens" href="https://developer.uxcam.com/v2.0-draft/update/docs/screen-tagging-copy#/" icon="fa-mobile">
+    Take Full Advantage of Heatmaps and Screen Analytics
+
+    > Review Automatic or Manual Tagging
+  </Card>
+
+  <Card title="Mask PII Data" icon="fa-credit-card">
+    Protect Your Users’ Privacy and PII Data
+
+    > Mask or Blur Screens, Views and Fields
+  </Card>
+
+  <Card title="Assign User IDs" icon="fa-user">
+    Get The Full Picture with User Analytics
+
+    > Assign Custom User IDs and Properties
+  </Card>
+
+  <Card title="Send Events" icon="fa-question">
+    Deeper Insights of Your Users' interactions
+
+    > Send Events and Add Properties
+  </Card>
+</Cards>
