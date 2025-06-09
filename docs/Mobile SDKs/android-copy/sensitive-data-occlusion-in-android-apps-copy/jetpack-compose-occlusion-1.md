@@ -11,11 +11,9 @@ metadata:
 >
 > If you are not using Jetpack Compose or you are interested in occluding views and data **outside of Jetpack Compose elements** please refer to the main occlusion guides [here](https://uxcam-documentation.readme.io/docs/screen-blurring)
 
+\<GitHubCallout type="warning"> 🚧 This page refers only to specific occlusion methods when using Jetpack Compose.
 
-\<GitHubCallout type="warning">> 🚧 This page refers only to specific occlusion methods when using Jetpack Compose.
-\>
-\> If you are not using Jetpack Compose or you are interested in occluding views and data \*\*outside of Jetpack Compose elements\*\* please refer to the main occlusion guides \[here]\(https\://uxcam-documentation.readme.io/docs/screen-blurring)\</GitHubCallout>
-
+&#x20;If you are not using Jetpack Compose or you are interested in occluding views and data \*\*outside of Jetpack Compose elements\*\* please refer to the main occlusion guides \</GitHubCallout>
 
 With the introduction of Jetpack Compose recording support on Android SDK v3.4.1 onward, we've made available a new module, **UXCamKtx**, which is required for occlusion for Jetpack Compose composables. It still depends on the com.uxcam:uxcam core maven artifact, so integration process is not altered and you still need to add the Android SDK (guide [here](https://uxcam-documentation.readme.io/docs/android))
 
