@@ -14,7 +14,7 @@ next:
       title: Users and Properties
       type: basic
 ---
-## Why this matters
+## Why This Matters
 
 Under GDPR / CCPA *you* are the data-controller.\
 UXCam records screens so you can debug and improve UX—but **it should never receive raw Personally Identifiable Information (PII)** such as:
@@ -28,7 +28,7 @@ The SDK lets you **mask or blur** that content **on the device, before the video
 
 ***
 
-## 1  Identify what needs to be hidden
+## Identify What Needs To Be Hidden
 
 Run the app once with full UXCam recording enabled, and go through all user flows in your app. Then answer:
 
