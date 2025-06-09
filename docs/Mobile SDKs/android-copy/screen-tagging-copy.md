@@ -38,15 +38,15 @@ For Android, UXCam's SDK automatically tags screens (i.e., activities), and this
 
 It will always be enabled by default, but you can disable this from your SDK configuration options as such:
 
-```Text Kotlin
+```coffeescript Kotlin
 val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
     .enableAutomaticScreenNameTagging(false) // true by default
     .build()
 UXCam.startWithConfiguration(config)
 ```
-```
+```Text Java
 UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
-    .enableAutomaticScreenNameTagging(false) // true by default
+    .enableAutomaticScreenNameTagging(false) // TRUE BY DEFAULT
     .build()
 UXCam.startWithConfiguration(config)
 ```
