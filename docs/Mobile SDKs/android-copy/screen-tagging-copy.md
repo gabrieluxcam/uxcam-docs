@@ -20,7 +20,9 @@ This guide walks you through **reviewing the automatic tags first**, deciding wh
 
 <GitHubCallout type="note">The UXCam Android SDK auto‑tags most screens for you, but you can override or extend this behaviour where needed.</GitHubCallout>
 
-## 1 Start with a quick reality check
+## Automatic Screen Tagging - The Recommended, Simple Approach
+
+For Android, UXCam's SDK automatically tags screens (i.e., activities), and this is the recommended default behaviour. Automatic tagging means that each activity your user navigates to is recorded automatically, without requiring you to manually intervene. This gives you the advantage of capturing user activity with minimal integration effort.
 
 1. Record **one or two sessions** in your debug build.
 2. Open any replay in the UXCam Dashboard and scan the **screen list** on the right.
@@ -36,13 +38,13 @@ This guide walks you through **reviewing the automatic tags first**, deciding wh
 
 ***
 
-## 2 When you *need* manual tags
+## Manual Tagging - When Do I Need It?
 
-| Symptom                                    | Typical cause                                | Fix                                                                |
-| ------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------ |
-| Same visual screen logged under two names  | Activity reused with different intent extras | Call `UXCam.tagScreenName("BetterName")` when you know the context |
-| A flow shows **0 s** steps                 | Auto‑tag & manual tag both fire in one frame | Disable automatic tagging **or** remove duplicate manual calls     |
-| Compose NavGraph only shows `MainActivity` | Single‑Activity architecture                 | Tag once per navigation change (see example)                       |
+| Symptom                                    | Typical cause                                   | Fix                                                                |
+| ------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------ |
+| Same visual screen logged under two names  | Activity reused with different intent extras    | Call `UXCam.tagScreenName("BetterName")` when you know the context |
+| You're using Jetpack Compose               | Traditional screen tagging requires extra setup | Please refer to this section to tag screens in Jetpack Compose     |
+| Compose NavGraph only shows `MainActivity` | Single‑Activity architecture                    | Tag once per navigation change (see example)                       |
 
 Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance.
 
