@@ -137,17 +137,3 @@ If something is off, look for duplicate tag calls or a missing route handler.
 | **Deep‑link cold launch**                       | First screen appears before SDK start  | Initialise SDK in `Application` class                 |
 | **Internationalised tag strings**               | “Profile” vs “Perfil” split analytics  | Tag with a constant key, translate in Dashboard       |
 | **Rapid tab switching**                         | Tags \<  300 ms apart collapse to 0 s  | Debounce tag logic in nav listener                    |
-
-***
-
-## 6 QA checklist
-
-Tick each box before handing the build to QA or releasing:
-
-* [ ] Every visually distinct screen appears **once** with duration **> 0 s**
-* [ ] Screen names are clean, without class names or typos
-* [ ] No duplicate names differing only by case or locale
-* [ ] Heat‑maps align with tappable areas on a random sample
-* [ ] Sensitive screens remain blurred / occluded after tagging changes
-
-Happy tagging! 🎯
