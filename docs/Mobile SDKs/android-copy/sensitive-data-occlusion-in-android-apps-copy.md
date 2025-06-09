@@ -26,6 +26,12 @@ UXCam records screens so you can debug and improve UX—but **it should never re
 
 The SDK lets you **mask or blur** that content **on the device, before the video is encoded**, so nothing sensitive ever leaves the user’s phone.
 
+## Out of The Box Occlusions:
+
+* Android `EditText` with `android:inputType="textPassword"` or\
+  `InputType.TYPE_TEXT_VARIATION_PASSWORD` is auto-occluded.
+* **Jetpack Compose** does **not** auto-occlude—use the KTX helper below.
+
 ***
 
 ## Identify What Needs To Be Hidden
@@ -60,11 +66,11 @@ excludeMentionedScreens(boolean)      // treat list as allow-list (false) or den
 
 ***
 
-## 3  Step-by-step examples
+## Step-by-step examples
 
 > Each snippet is self-contained—copy it into **`onCreate()`of your`Application`** or the target `Activity`.
 
-### 3.1  Hide one payment screen completely
+### Hide one payment screen completely
 
 ```java
 // 1) Build an overlay that hides touches too
@@ -80,9 +86,7 @@ UXCam.applyOcclusion(payOverlay);
 *Effect:* Every frame captured inside `PaymentActivity` is replaced by a red plate.\
 Touches are suppressed, guarding against key-logging.
 
-***
-
-### 3.2  Blur everything **except** Settings
+### Blur everything **except** Settings
 
 ```java
 UXCamBlur globalBlur = new UXCamBlur.Builder()
@@ -96,9 +100,7 @@ UXCam.applyOcclusion(globalBlur);
 
 *Effect:* All screens are blurred, but `SettingsActivity` remains crystal-clear—ideal when only one screen is non-sensitive.
 
-***
-
-### 3.3  Occlude **all text fields** on Checkout + Login
+### Occlude **all text fields** on Checkout + Login
 
 ```java
 UXCamOccludeAllTextFields hideText = new UXCamOccludeAllTextFields.Builder()
@@ -110,9 +112,7 @@ UXCam.applyOcclusion(hideText);
 
 *Effect:* Every `EditText` (even future ones) on the listed screens is boxed—no extra code per field.
 
-***
-
-### 3.4  Mask a single `EditText`
+### Mask a single `EditText`
 
 ```java
 EditText cardInput = findViewById(R.id.cardNumberInput);
@@ -123,7 +123,7 @@ UXCam.occludeSensitiveView(cardInput);
 
 ***
 
-## 4  Apply occlusions automatically at startup
+## Apply occlusions automatically at startup
 
 Put multiple rules in one list and pass them to the *initial* configuration:
 
@@ -137,19 +137,13 @@ UXCam.startWithConfiguration(config);
 
 ***
 
-## 5  Defaults you get for free
+## Jetpack Compose quick-start
 
-* Android `EditText` with `android:inputType="textPassword"` or\
-  `InputType.TYPE_TEXT_VARIATION_PASSWORD` is auto-occluded.
-* **Jetpack Compose** does **not** auto-occlude—use the KTX helper below.
-
-***
-
-## 🛠️ Jetpack Compose quick-start
+For a more in depth breakdown of occlusion in Jetpack Compose, see here.
 
 1. Add the Kotlin extensions:
 
-   ```gradle
+   ```coffeescript Kotlin
    implementation("com.uxcam:uxcam-ktx:1.+")
    ```
 
