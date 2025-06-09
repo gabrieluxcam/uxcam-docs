@@ -53,6 +53,8 @@ UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
 UXCam.startWithConfiguration(config)
 ```
 
+***
+
 ## Manual Tagging - When Do I Need It?
 
 <GitHubCallout type="tip">You can have automatic tagging enabled and manually tag some screens or fragments, both options work well together!</GitHubCallout>
