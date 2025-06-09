@@ -42,7 +42,7 @@ Run the app once with full UXCam recording enabled, and go through all user flow
 
 ***
 
-## 2  Pick an SDK helper
+## Pick an SDK helper
 
 | Helper class                       | Masks …                            | Keeps gestures? | When to choose                                                 |
 | ---------------------------------- | ---------------------------------- | --------------- | -------------------------------------------------------------- |
