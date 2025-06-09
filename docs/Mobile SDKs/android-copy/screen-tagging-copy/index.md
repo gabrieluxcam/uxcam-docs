@@ -154,7 +154,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 
 ## Next Steps:
 
-You've properly tagged screens and are ready to move on! Check below for the next steps.
+You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={4}>
   <Card title="Tag Screens" href="https://developer.uxcam.com/v2.0-draft/update/docs/screen-tagging-copy#/" icon="fa-mobile">
