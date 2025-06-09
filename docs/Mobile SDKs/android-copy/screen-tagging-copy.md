@@ -110,6 +110,8 @@ So you've decided to manually tag some or all your screens, making sure this is 
 
 If something is off, look for duplicate tag calls or a missing route handler.
 
+<GitHubCallout type="important">Having a solid screen tagging setup will make masking PII Data and occluding screens extremely easier.</GitHubCallout>
+
 ***
 
 ## 4 Troubleshooting cheat‑sheet
