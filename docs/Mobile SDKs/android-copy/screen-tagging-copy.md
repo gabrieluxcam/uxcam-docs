@@ -1,8 +1,8 @@
 ---
-title: Tag Screens
+title: Tagging Screens
 excerpt: >-
-  Automatic and Manually tagged screens to get the most out of UXCam's Heat Maps
-  and Screen Analytics
+  Configure automatic and manual screen tagging to unlock heat‑maps, funnels and
+  journey analytics.
 deprecated: false
 hidden: false
 metadata:
@@ -17,6 +17,8 @@ Good screen names turn raw replays into **actionable heat‑maps**, **screen ana
 This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
 ***
+
+<GitHubCallout type="note">The UXCam Android SDK auto‑tags most screens for you, but you can override or extend this behaviour where needed.</GitHubCallout>
 
 ## 1 Start with a quick reality check
 
