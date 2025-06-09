@@ -64,6 +64,37 @@ UXCam.startWithConfiguration(config)
 
 <br />
 
+### **Example**: **Tagging an Activity Manually**
+
+<GitHubCallout type="warning">Tag **once per navigation event** to avoid 0 s duplicates.</GitHubCallout>
+
+To tag a screen in an activity, use the following code in the `onCreate()` method of your activity:
+
+```coffeescript Android
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+  
+    UXCam.tagScreenName("Main Activity"); // Manually tag this activity with a screen name.
+}
+```
+
+### **Example: Tagging a Fragment Manually**
+
+Similarly, to tag a fragment, place the code in the `onResume()` method of the fragment:
+
+```coffeescript Android
+@Override
+public void onResume() {
+    super.onResume();
+    UXCam.tagScreenName("Fragment Name"); // Manually tag this fragment with a screen name.
+}
+
+```
+
+<br />
+
 ***
 
 <br />
