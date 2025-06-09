@@ -51,7 +51,7 @@ UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
 UXCam.startWithConfiguration(config)
 ```
 
-<GitHubCallout type="caution">Only disable automatic tagging if you experience incongruent behaviour in your session timeline or want to dedicate time to manually configure it.</GitHubCallout>
+<GitHubCallout type="caution">Only disable automatic tagging if you experience incongruent or meaningless names in your session timeline or want to dedicate time to manually configure it.</GitHubCallout>
 
 ## Manual Tagging - When Do I Need It?
 
