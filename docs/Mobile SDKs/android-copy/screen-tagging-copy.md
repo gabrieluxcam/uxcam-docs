@@ -40,7 +40,7 @@ It will always be enabled by default, but you can disable this from your SDK con
 
 ```coffeescript Kotlin
 val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
-    .enableAutomaticScreenNameTagging(false) // true by default
+    .enableAutomaticScreenNameTagging(false) // TRUE BY DEFAULT
     .build()
 UXCam.startWithConfiguration(config)
 ```
