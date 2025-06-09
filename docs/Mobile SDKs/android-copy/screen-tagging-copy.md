@@ -97,11 +97,9 @@ public void onResume() {
 
 ***
 
-<br />
+## 3 Verify Your Tags
 
-***
-
-## 3 Verify your tags
+So you've decided to manually tag some or all your screens, making sure this is properly set up is a fundamental part in ensuring heat-maps, funnels and user journey analytics is giving you full insights, so it is extremely important to verify everything works well before moving on:
 
 1. In your debug environment, run the app and visit all the manually tagged screens, then background the app.
 2. Once the session uploads, check:
