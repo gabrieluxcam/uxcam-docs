@@ -16,16 +16,14 @@ next:
 Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**.\
 This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
-***
+## Automatic Screen Tagging - The Recommended, Simple Approach
 
 <GitHubCallout type="note">The UXCam Android SDK auto‑tags most screens for you, but you can override or extend this behaviour where needed.</GitHubCallout>
-
-## Automatic Screen Tagging - The Recommended, Simple Approach
 
 For Android, UXCam's SDK automatically tags screens (i.e., activities), and this is the recommended default behaviour. Automatic tagging means that each activity your user navigates to is recorded automatically, without requiring you to manually intervene. This gives you the advantage of capturing user activity with minimal integration effort.
 
 1. Record **one or two sessions** in your debug build.
-2. Open any replay in the UXCam Dashboard and scan the **screen list** on the right.
+2. Open any replay in the UXCam Dashboard and review the **screen list** on the right.
 3. For each entry, ask:
 
 | Check‑question                                       | Why it matters                                 |
@@ -36,62 +34,41 @@ For Android, UXCam's SDK automatically tags screens (i.e., activities), and this
 
 > **If everything looks good** – simply rename screens in **Dashboard → Screens** (e.g. change `MainActivity` → **Home**) and you’re done. No code required.
 
+### How to Enable or Disable Automatic Tagging?
+
+It will always be enabled by default, but you can disable this from your SDK configuration options as such:
+
+```Text Kotlin
+val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
+    .enableAutomaticScreenNameTagging(false) // true by default
+    .build()
+UXCam.startWithConfiguration(config)
+```
+```
+UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
+    .enableAutomaticScreenNameTagging(false) // true by default
+    .build()
+UXCam.startWithConfiguration(config)
+```
+
+<br />
+
 ***
 
 ## Manual Tagging - When Do I Need It?
 
-| Symptom                                    | Typical cause                                   | Fix                                                                |
-| ------------------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------ |
-| Same visual screen logged under two names  | Activity reused with different intent extras    | Call `UXCam.tagScreenName("BetterName")` when you know the context |
-| You're using Jetpack Compose               | Traditional screen tagging requires extra setup | Please refer to this section to tag screens in Jetpack Compose     |
-| Compose NavGraph only shows `MainActivity` | Single‑Activity architecture                    | Tag once per navigation change (see example)                       |
+| Symptom                                                       | Typical cause                                                                      | Fix                                                                |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Same visual screen logged under two names                     | Activity reused with different intent extras                                       | Call `UXCam.tagScreenName("BetterName")` when you know the context |
+| You're using Jetpack Compose                                  | Traditional screen tagging requires extra setup                                    | Please refer to this section to tag screens in Jetpack Compose     |
+| Compose NavGraph only shows `MainActivity`                    | Single‑Activity architecture                                                       | Tag once per navigation change (see example)                       |
+| Same screen shows different interfaces/places within your app | You're using Fragments within some activities and are not automatically tagged yet | Tag the fragment or enable fragment based tagging                  |
 
 Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance.
 
 ***
 
-### 2.1 Disable automatic tagging (optional)
-
-```java
-UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY)
-        .enableAutomaticScreenNameTagging(false)
-        .build();
-
-UXCam.startWithConfiguration(config);
-```
-
-### 2.2 Manual tag in an Activity
-
-```java
-@Override protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_checkout);
-
-    UXCam.tagScreenName("Checkout");   // one clear tag
-}
-```
-
-### 2.3 Jetpack Compose navigation listener
-
-```kotlin
-@Composable
-fun AppNavHost(navController: NavHostController) {
-
-    LaunchedEffect(navController) {
-        navController.currentBackStackEntryFlow.collect { entry ->
-            when (entry.destination.route) {
-                "home"         -> UXCam.tagScreenName("Home")
-                "product/{id}" -> UXCam.tagScreenName("ProductDetail")
-                "settings"     -> UXCam.tagScreenName("Settings")
-            }
-        }
-    }
-
-    NavHost(navController, startDestination = "home") { /* … */ }
-}
-```
-
-*A single tag fires per navigation event, eliminating 0 s “ghost” screens.*
+<br />
 
 ***
 
