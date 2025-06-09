@@ -97,7 +97,7 @@ public void onResume() {
 
 ***
 
-## 3 Verify Your Tags
+## Verify Your Tags
 
 So you've decided to manually tag some or all your screens, making sure this is properly set up is a fundamental part in ensuring heat-maps, funnels and user journey analytics is giving you full insights, so it is extremely important to verify everything works well before moving on:
 
@@ -114,7 +114,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 
 ***
 
-## 4 Troubleshooting cheat‑sheet
+## Troubleshooting cheat‑sheet
 
 | Issue                         | Quick diagnosis                          | Solution                                 |
 | ----------------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -125,7 +125,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 
 ***
 
-## 5 Edge‑cases to watch for
+## Edge‑cases to watch for
 
 | Potential gap                                   | What can break                         | How to guard                                          |
 | ----------------------------------------------- | -------------------------------------- | ----------------------------------------------------- |
