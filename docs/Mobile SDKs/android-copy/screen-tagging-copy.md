@@ -36,6 +36,8 @@ For Android, UXCam's SDK automatically tags screens (i.e., activities), and this
 
 ### How to Enable or Disable Automatic Tagging?
 
+<GitHubCallout type="caution">Only disable automatic tagging if you experience incongruent or meaningless names in your session timeline or want to dedicate time to manually configure it.</GitHubCallout>
+
 It will always be enabled by default, but you can disable this from your SDK configuration options as such:
 
 ```coffeescript Kotlin
@@ -51,9 +53,9 @@ UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
 UXCam.startWithConfiguration(config)
 ```
 
-<GitHubCallout type="caution">Only disable automatic tagging if you experience incongruent or meaningless names in your session timeline or want to dedicate time to manually configure it.</GitHubCallout>
-
 ## Manual Tagging - When Do I Need It?
+
+<GitHubCallout type="tip">You can have automatic tagging enabled and manually tag some screens or fragments, both options work well together!</GitHubCallout>
 
 | Symptom                                                       | Typical cause                                                                      | Fix                                                                |
 | ------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -76,7 +78,7 @@ protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
   
-    UXCam.tagScreenName("Main Activity"); // Manually tag this activity with a screen name.
+    UXCam.tagScreenName("Main Page"); // Manually tag this activity with a screen name.
 }
 ```
 
@@ -93,8 +95,6 @@ public void onResume() {
 
 ```
 
-<br />
-
 ***
 
 <br />
@@ -103,11 +103,11 @@ public void onResume() {
 
 ## 3 Verify your tags
 
-1. Install a **debug** build, visit every tagged screen, then background the app.
+1. In your debug environment, run the app and visit all the manually tagged screens, then background the app.
 2. Once the session uploads, check:
 
-   * Each screen appears **exactly once**, with duration **> 0 s**.
-   * No “Unknown” or class‑name screens remain.
+   * Each screen appears **exactly once**, according to the user's navigation, with duration **> 0 s**.
+   * No “Unknown” or class‑name (if fully manual) screens remain.
    * Names match your analytics language.
 
 If something is off, look for duplicate tag calls or a missing route handler.
