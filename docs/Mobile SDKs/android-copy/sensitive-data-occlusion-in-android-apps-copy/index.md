@@ -137,7 +137,7 @@ UXCam.startWithConfiguration(config);
 
 ***
 
-## Jetpack Compose quick-start
+## Jetpack Compose Quick-Start
 
 For a more in depth breakdown of occlusion in Jetpack Compose, see here.
 
@@ -172,7 +172,7 @@ For a more in depth breakdown of occlusion in Jetpack Compose, see here.
 
 ***
 
-## Dashboard-only rules (no code)
+## Dashboard-only Rules (No Code)
 
 Prefer a zero-code workflow?\
 Open **App Settings → Video Recording Privacy** on the UXCam Dashboard:
@@ -180,6 +180,10 @@ Open **App Settings → Video Recording Privacy** on the UXCam Dashboard:
 * **Blur / occlude all screens** in one click.
 * Add **screen-specific rules** (e.g., blur Checkout, hide Login).
 * Toggle **“Record gestures on blurred screens”** if needed.
+
+![](https://files.readme.io/6b8810f-small-Staging_-_UXCam_Dashboard.png)
+
+<br />
 
 Dashboard rules override SDK calls in this order:
 
@@ -191,4 +195,4 @@ Dashboard rules override SDK calls in this order:
 
 ***
 
-✅ **Next step:** replay a test session to confirm every PII element is masked or blurred before pushing to production.
+**Verify:** replay a test session to confirm every PII element is masked or blurred before pushing to production.
