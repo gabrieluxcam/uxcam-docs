@@ -97,6 +97,16 @@ public void onResume() {
 
 ***
 
+## How to Tag WebViews
+
+WebViews can be a unique challenge when it comes to screen tagging, as they often contain dynamic content. To properly tag your WebView screens, you can follow our detailed guide that walks you through the best practices and methods for effective WebView tagging.
+
+For more information, click the button below:
+
+**Tagging Webview docs link TODO**
+
+***
+
 ## Verify Your Tags
 
 So you've decided to manually tag some or all your screens, making sure this is properly set up is a fundamental part in ensuring heat-maps, funnels and user journey analytics is giving you full insights, so it is extremely important to verify everything works well before moving on:
