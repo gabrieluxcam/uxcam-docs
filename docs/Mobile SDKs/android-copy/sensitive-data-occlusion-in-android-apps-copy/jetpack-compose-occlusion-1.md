@@ -15,7 +15,7 @@ With the introduction of Jetpack Compose recording support on Android SDK v3.4.1
 
 The process for including UXCamKtx in a project is almost exactly the same as the process to include the core UXCam module. The only difference is that you will have to use the uxcam-ktx artifact instead of the uxcam artifact:
 
-```java
+```java Kotlin
 // core module
 implementation "com.uxcam:uxcam:3.+"
 // ktx module
@@ -24,7 +24,7 @@ implementation "com.uxcam:uxcam-ktx:1.+"
 
 Then simply, import the UXCam artifact:
 
-```java
+```java Kotlin
 import com.uxcam.UXCamKt
 ```
 
@@ -38,7 +38,7 @@ Now you're ready to start setting the occlusion methods for your composables!
 
 The occlusion API is defined as follows:
 
-```java
+```java Kotlin
 fun occludeSensitiveComposable(
     identifier: Any,
     view: View,
@@ -92,7 +92,7 @@ This parameter represents if a composable is in a dialog or not. Default value i
 
 Here is a complete example of how the occlusion would be applied:
 
-```java
+```java Kotlin
 @Composable
 fun ExampleComposable(modifier: Modifier = Modifier) {
   Column(modifier = modifier) {
