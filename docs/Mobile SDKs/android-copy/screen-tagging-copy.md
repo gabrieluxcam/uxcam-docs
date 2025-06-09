@@ -44,7 +44,7 @@ val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
     .build()
 UXCam.startWithConfiguration(config)
 ```
-```Text Java
+```coffeescript Java
 UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
     .enableAutomaticScreenNameTagging(false) // TRUE BY DEFAULT
     .build()
@@ -62,7 +62,7 @@ UXCam.startWithConfiguration(config)
 | Compose NavGraph only shows `MainActivity`                    | Single‑Activity architecture                                                       | Tag once per navigation change (see example)                       |
 | Same screen shows different interfaces/places within your app | You're using Fragments within some activities and are not automatically tagged yet | Tag the fragment or enable fragment based tagging                  |
 
-Only tag manually **where automatic tagging fails**; keep the rest automatic to minimise maintenance.
+<br />
 
 ***
 
