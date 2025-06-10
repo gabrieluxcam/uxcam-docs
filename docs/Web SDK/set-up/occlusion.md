@@ -106,3 +106,13 @@ occlusion: {
 // Input: http://www.uxcam.com/invite/12345  
 // Output: http://www.uxcam.com/invite/:inviteId
 ```
+
+<br />
+
+**Occlusion of HTML Elements**
+
+To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to the elements you want to occlude.
+
+```javascript
+<div data-uxc="obfuscated">Sensitive Content</div>
+```
