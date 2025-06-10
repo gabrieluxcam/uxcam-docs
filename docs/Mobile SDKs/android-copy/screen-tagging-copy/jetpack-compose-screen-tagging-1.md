@@ -17,19 +17,24 @@ The approach is to listen to `LaunchedEffect` on the current route from `navCont
 
 ## Compose Screen Tagging Example:
 
-Below is an example of how to achieve "automatic" tagging of your compose screens by finding a `fun` where `navController` is created with the method `rememberNavController()`.
+Example Jetpack Compose Navigation listener:
 
 ```coffeescript Android
-val navController = rememberNavController()
+@Composable
+fun AppNavHost(navController: NavHostController) {
 
-// Snippet for tagging screen on route
-val navBackStackEntry by navController.currentBackStackEntryAsState()
-val currentRoute = navBackStackEntry?.destination?.route
-LaunchedEffect(currentRoute) {
-  currentRoute?.let { 
-    UXCam.tagScreenName(currentRoute)
-  }
-} 
+    LaunchedEffect(navController) {
+        navController.currentBackStackEntryFlow.collect { entry ->
+            when (entry.destination.route) {
+                "home"         -> UXCam.tagScreenName("Home")
+                "product/{id}" -> UXCam.tagScreenName("ProductDetail")
+                "settings"     -> UXCam.tagScreenName("Settings")
+            }
+        }
+    }
+
+    NavHost(navController, startDestination = "home") { /* … */ }
+}
 ```
 
 This approach, while requiring you to set it up, should allow you to tag screens in your app according to your routes.
