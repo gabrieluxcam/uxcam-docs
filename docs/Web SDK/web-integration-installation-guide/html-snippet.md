@@ -67,3 +67,7 @@ To integrate the Web SDK follow these steps:
 > * Angular
 > * Vue.js
 > * Next.Js
+
+<br />
+
+// Direct users to set up and configuration //
