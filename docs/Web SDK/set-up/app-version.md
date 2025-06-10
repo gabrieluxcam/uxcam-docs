@@ -1,5 +1,5 @@
 ---
-title: App version (Optional)
+title: Define App version (Optional)
 deprecated: false
 hidden: false
 metadata:
