@@ -109,8 +109,7 @@ occlusion: {
 
 <br />
 
-**Occlusion of HTML Elements**
-
+**Occlusion of HTML Elements**\
 To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to the elements you want to occlude.
 
 ```javascript
