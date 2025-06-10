@@ -82,7 +82,7 @@ android {
 
 ### 3.1 Pick the right spot
 
-> **Rule of thumb:** *Start the SDK**once**, at the earliest `Context` that lives for the whole app.*
+> **Rule of thumb:** *Start the SDK\*\* once\*\*, at the earliest`Context` that lives for the whole app.*
 
 | **If you …**                                | **Call`UXCam.startWithConfiguration()` in …**                   | **Why this spot?**                                                              |
 | ------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------- |
