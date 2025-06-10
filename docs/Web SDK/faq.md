@@ -12,9 +12,11 @@ next:
 ---
 ### 1. What defines the beginning and end of a session?
 
-The session starts as soon as the page loads and the WebSDK begins recording. There is no inactivity period per se; however, if there is no **incoming data\*** from the client for 3 minutes, the session is considered finished, and the recording is uploaded. 
+The session starts as soon as the page loads and the WebSDK begins recording. There is no inactivity period per se; however, if there is no **incoming data**\* from the client for 3 minutes, the session is considered finished, and the recording is uploaded.
 
-\*Incoming data = No internet connection, the OS being suspended or the browser/tab being closed. 
+\*Incoming data = No internet connection, the OS being suspended or the browser/tab being closed.
+
+<br />
 
 ### 2. Can events be sent directly from the script?
 
@@ -31,11 +33,15 @@ button.addEventListener('click', () => uxc.event('my_btn_clicked'));
 
 In this example, when the button with the ID mybtn is clicked, a custom event named my\_btn\_clicked is sent to UXCam.
 
+<br />
+
 ### 3. Why is my email not occluded automatically?
 
-The email input will only be occluded if the input type is explicitly set to email. If the input field has its type set to text instead of email, it will not be occluded by default. 
+The email input will only be occluded if the input type is explicitly set to email. If the input field has its type set to text instead of email, it will not be occluded by default.
 
 For email or any other input type that should be occluded automatically, please verify that the type is set to any of the options mentioned in the occlusion section. [Auto-occlusion](https://developer.uxcam.com/docs/installation#default-occlusion)
+
+<br />
 
 ### 4. Why does the replay look broken, and CSS Styles or images are not loading?
 
@@ -47,11 +53,15 @@ Common reasons why styles may not load:
 * The resource is inaccessible: It may require authentication or be restricted to an internal network.
 * The resource is blocked by the browser due to CORS: Browsers enforce cross-origin security checks, preventing UXCam from loading your assets if CORS is not properly configured.
 
+<br />
+
 # Fixing CORS Issues for UXCam
 
 If you're seeing missing fonts, broken icons, or layout issues in your session replays, it’s likely due to a CORS (Cross-Origin Resource Sharing) issue.
 
 CORS is a browser security feature that restricts how resources can be shared between websites. It’s designed to protect users by preventing one site from accessing sensitive content from another without permission.
+
+<br />
 
 **What’s causing this issue?**\
 During session replay, your website is loaded from a different domain — app.uxcam.com — so we can show you what the user experienced. But if your fonts, images, or styles are only allowed to load from your own domain, the browser may block them when the session is replayed.
@@ -62,20 +72,24 @@ You might see errors like this in your browser's console:
 
 This means the asset couldn’t load because it wasn’t allowed to be accessed from app.uxcam.com.
 
+<br />
+
 **How does it affect session replays?**
 
 If your website doesn’t explicitly allow assets to be loaded from app.uxcam.com, fonts may appear as empty boxes, images may not display, and some styles may break during playback.
+
+<br />
 
 ## How to fix it?
 
 To ensure all assets load correctly in session replays
 
 ✅ **1. Enable CORS on your server**\
-Update your server’s headers to allow requests from the replay domain:\
+Update your server’s headers to allow requests from the replay domain:
 Access-Control-Allow-Origin: [https://app.uxcam.com](https://app.uxcam.com)
 
 If needed, also include:\
-Access-Control-Allow-Credentials: true\
+Access-Control-Allow-Credentials: true
 Avoid using \* for Access-Control-Allow-Origin if your assets require credentials (like cookies).
 
 ✅ 2. Check Any Third-Party or CDN Assets\
