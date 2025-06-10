@@ -62,8 +62,8 @@ Inputs will be occluded by default if they meet any of the following criteria:
 
 > 📘 Note:
 >
-> Occluded input field texts are replaced by asterisks \*\*\
-> Occluded input field numbers are replaced by 0000
+> * Occluded input field texts are replaced with asterisks \*\*
+> * Occluded input field numbers are replaced with 0000
 
 <br />
 
