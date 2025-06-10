@@ -1,5 +1,5 @@
 ---
-title: Web Integration Installation guide
+title: Web Installation guide
 deprecated: false
 hidden: false
 metadata:
