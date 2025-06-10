@@ -1,12 +1,10 @@
 ---
-title: Why UXCam?
+title: UXCam Overview
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-# ✨ Why UXCam?
-
 UXCam turns every mobile moment into **actionable insight**: watch <Glossary>session</Glossary> replays, surface rage‑taps and UI freezes, measure funnels and retention — and then jump straight to the line of code that crashed. All of this works **out‑of‑the‑box across the entire mobile tech stack** you already ship with.
 
 ***
