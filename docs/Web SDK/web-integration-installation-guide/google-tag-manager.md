@@ -12,7 +12,7 @@ next:
 ---
 ## Overview
 
-To use UXCam with Google Tag Manager (GTM), you will need to follow these steps. This will allow you to efficiently manage and deploy the UXCam script across your website.
+Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage and deploy the UXCam script across your website.
 
 <br />
 
