@@ -1,12 +1,10 @@
 ---
-title: HTML snippet
+title: HTML inclusion
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-## HTML inclusion
-
 To integrate the Web SDK, include the following script in your HTML file before the closing \</head> tag:
 
 ```javascript
@@ -42,5 +40,3 @@ To integrate the Web SDK, include the following script in your HTML file before 
 })('Your_App_Key', {}); 
 </script>
 ```
-
-***
