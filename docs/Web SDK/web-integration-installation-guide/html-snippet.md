@@ -56,10 +56,14 @@ To integrate the Web SDK follow these steps:
 > * Your **plan includes web session recording.**\
 >   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
 
-> 📘 Please note
+> 📘 Note
 >
-> You will need to integrate this script in all of your HTML elements in order to get the session recording of your entire website.
+> In order to get the session recording of your entire website, there is a need to integrate the HTML script in all of the product's HTML elements
 >
-> **Example of supported technologies:** Basic web (HTML, CSS and Javascript), React.js, Angular, Vue.js, Next.Js
+> **Supported technologies**
 >
-> **Example of supported CMS:** Wordpress, Shopify and Magento
+> * Basic web (HTML, CSS and Javascript)
+> * React.js
+> * Angular
+> * Vue.js
+> * Next.Js
