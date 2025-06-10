@@ -92,7 +92,7 @@ occlusion: {
 
 <br />
 
-* Occluding URLs <br />\
+* Occluding URLs\
   A custom function can be used to occlude parts of the URL before the query parameters.
 
 ```javascript
