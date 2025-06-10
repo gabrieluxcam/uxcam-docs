@@ -77,8 +77,8 @@ Enables occlusion of sensitive data in URLs and query parameters.
 
 <br />
 
-* Occluding Query Parameters\
-  Query parameters to be occluded should be listed under queryParams.
+**Occluding Query Parameters**\
+Query parameters to be occluded should be listed under queryParams.
 
 ```javascript
 occlusion: {  
@@ -92,8 +92,8 @@ occlusion: {
 
 <br />
 
-* Occluding URLs\
-  A custom function can be used to occlude parts of the URL before the query parameters.
+**Occluding URLs**\
+A custom function can be used to occlude parts of the URL before the query parameters.
 
 ```javascript
 occlusion: {  
