@@ -5,3 +5,25 @@ hidden: false
 metadata:
   robots: index
 ---
+The SDK provides methods to log events and set user properties.
+
+### Logging an Event
+
+**uxc.event(eventName, properties)**
+
+Logs an event.
+
+* eventName (string): The name of the event.
+* properties (object, optional): A JSON object with event properties.
+
+```javascript
+uxc.event("your_amazing_event", { key: "value" });
+
+//Example
+<button id="mybtn">Click me</button>
+
+<script>
+const button = document.querySelector('#mybtn');
+button.addEventListener('click', () => uxc.event("your_amazing_event", { key: "value" }));
+</script>
+```
