@@ -1,5 +1,5 @@
 ---
-title: Define Pages & Properties to Simplify Data
+title: Define Pages & Properties
 excerpt: ''
 deprecated: false
 hidden: false
