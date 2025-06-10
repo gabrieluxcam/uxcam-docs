@@ -17,6 +17,8 @@ Sets the user identity.
 uxc.setUserIdentity("user_12345");
 ```
 
+<br />
+
 ### Setting a Single User Property
 
 **uxc.setUserProperty(key, value)**
@@ -29,6 +31,8 @@ Sets a single user property.
 ```javascript
 uxc.setUserProperty("age", 30);
 ```
+
+<br />
 
 ### Setting Multiple User Properties
 
