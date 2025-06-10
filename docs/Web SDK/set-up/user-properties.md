@@ -45,7 +45,3 @@ Sets multiple user properties.
 ```javascript
 uxc.setUserProperties({ name: "John", age: 30 });
 ```
-
-***
-
-##
