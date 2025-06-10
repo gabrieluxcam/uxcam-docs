@@ -71,21 +71,7 @@ Inputs will be occluded by default if they meet any of the following criteria:
 
 <br />
 
-## Configuration Options
-
-The SDK can be configured with optional parameters. The configuration object (opts) supports the following options:
-
-### appVersion
-
-Define the version of your application.
-
-```javascript
-{ appVersion: '1.0.0' }
-```
-
-<br />
-
-### Occlusion
+### Enabling Occlusion
 
 Enables occlusion of sensitive data in URLs and query parameters.
 
@@ -106,7 +92,7 @@ occlusion: {
 
 <br />
 
-* Occluding URLs<br />\
+* Occluding URLs <br />\
   A custom function can be used to occlude parts of the URL before the query parameters.
 
 ```javascript
