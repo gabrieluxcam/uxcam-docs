@@ -1,5 +1,5 @@
 ---
-title: AI Agent integration
+title: AI Agent
 deprecated: false
 hidden: false
 metadata:
