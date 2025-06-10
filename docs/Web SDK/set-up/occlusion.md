@@ -1,5 +1,5 @@
 ---
-title: Occlusion
+title: Occlusion - Hide Sensitive Data
 deprecated: false
 hidden: false
 metadata:
