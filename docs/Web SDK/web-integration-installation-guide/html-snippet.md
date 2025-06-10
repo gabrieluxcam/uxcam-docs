@@ -7,6 +7,8 @@ metadata:
 ---
 To integrate the Web SDK, include the following script in your HTML file before the closing \</head> tag:
 
+<br />
+
 ```javascript
 
 <script type="text/javascript" defer="">
