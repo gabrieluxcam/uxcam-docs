@@ -1,5 +1,5 @@
 ---
-title: Content Security Policy (CSP)
+title: Configure Content Security Policy (CSP)
 excerpt: ''
 deprecated: false
 hidden: false
