@@ -22,7 +22,7 @@ This guide walks you through **reviewing the automatic tags first**, deciding wh
 
 For Android, UXCam's SDK automatically tags screens (i.e., activities), and this is the recommended default behaviour. Automatic tagging means that each activity your user navigates to is recorded automatically, without requiring you to manually intervene. This gives you the advantage of capturing user activity with minimal integration effort.
 
-1. Record **one or two sessions** in your debug build.
+1. Record **one or multiple sessions** in your debug build where you are navigating all screens of your app.
 2. Open any replay in the UXCam Dashboard and review the **screen list** on the right.
 3. For each entry, ask:
 
