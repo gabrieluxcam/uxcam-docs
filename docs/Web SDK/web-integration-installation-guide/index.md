@@ -13,7 +13,7 @@ This document will guide you through the process of integrating the Web SDK into
 
 By default, the following events are captured:
 
-* **uxc\_input**: Triggered when an input loses focus after it has been modified.
+* **`uxc_input`**: Triggered when an input loses focus after it has been modified.
 * **uxc\_submit**: Triggered when a form is submitted.
 * **uxc\_u\_turn**: Triggered when a user goes back to the same page. The event is triggered on the page they went back to. Example: If a user navigates Home > About Us > Home, it will be triggered on Home.
 * **uxc\_page\_refresh**: Triggered when refreshing the page.
