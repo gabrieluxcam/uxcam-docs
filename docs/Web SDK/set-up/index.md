@@ -20,3 +20,9 @@ Define the version of your application.
 ```javascript
 { appVersion: '1.0.0' }
 ```
+
+<br />
+
+## Setup and configuration steps
+
+* [Occlusion](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
