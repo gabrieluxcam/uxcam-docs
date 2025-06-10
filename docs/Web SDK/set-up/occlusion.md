@@ -83,9 +83,13 @@ Define the version of your application.
 { appVersion: '1.0.0' }
 ```
 
+<br />
+
 ### Occlusion
 
 Enables occlusion of sensitive data in URLs and query parameters.
+
+<br />
 
 * Occluding Query Parameters\
   Query parameters to be occluded should be listed under queryParams.
@@ -99,6 +103,8 @@ occlusion: {
 // Input: http://www.uxcam.com/query?product=shoes&userId=321  
 // Output:http://www.uxcam.com/query?product=_occluded_&userId=_occluded
 ```
+
+<br />
 
 * Occluding URLs<br />\
   A custom function can be used to occlude parts of the URL before the query parameters.
@@ -114,7 +120,3 @@ occlusion: {
 // Input: http://www.uxcam.com/invite/12345  
 // Output: http://www.uxcam.com/invite/:inviteId
 ```
-
-***
-
-##
