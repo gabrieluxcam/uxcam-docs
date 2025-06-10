@@ -1,5 +1,5 @@
 ---
-title: 🙋‍♂️ Setting User Properties
+title: Setting User Properties
 deprecated: false
 hidden: false
 metadata:
