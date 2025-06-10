@@ -9,20 +9,6 @@ This guide provides an overview of the UXCam Web SDK’s key features and config
 
 <br />
 
-## Configuration Options
-
-The SDK can be configured with optional parameters. The configuration object (opts) supports the following options:
-
-### appVersion
-
-Define the version of your application.
-
-```javascript
-{ appVersion: '1.0.0' }
-```
-
-<br />
-
 ## Setup and configuration steps
 
 * [Occlusion](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
