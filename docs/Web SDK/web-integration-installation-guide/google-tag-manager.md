@@ -10,19 +10,11 @@ metadata:
 next:
   description: ''
 ---
-## Overview
-
 Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage and deploy the UXCam script across your website.
 
 <br />
 
-### Step 1: Integrate Google Tag Manager Script
-
-First, you must integrate the Google Tag Manager script into all of your web pages. Follow the instructions provided in the Google Tag Manager documentation to add the GTM script to your website.
-
-<br />
-
-### Step 2: Adding the UXCam Script via Custom HTML Tag
+### Step 1: Adding the UXCam Script via Custom HTML Tag to all web pages
 
 1. Create a New Tag in GTM:
 
@@ -84,7 +76,7 @@ First, you must integrate the Google Tag Manager script into all of your web pag
 
 <br />
 
-### Step 3: Adding UXCam Events with Google Tag Manager
+### Step 2: Adding UXCam Events with Google Tag Manager
 
 In addition to loading the UXCam script, you can also track specific events using GTM.
 
@@ -108,6 +100,8 @@ In addition to loading the UXCam script, you can also track specific events usin
 4. Save and Publish:
 
 * Save your tag configuration and publish the changes.
+
+<br />
 
 ### Additional Information
 
