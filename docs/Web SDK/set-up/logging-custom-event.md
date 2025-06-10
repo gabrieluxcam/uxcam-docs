@@ -7,14 +7,15 @@ metadata:
 ---
 The SDK provides methods to log events and set user properties.
 
+<br />
+
 ### Logging an Event
-
-**uxc.event(eventName, properties)**
-
-Logs an event.
 
 * eventName (string): The name of the event.
 * properties (object, optional): A JSON object with event properties.
+* Example: **uxc.event(eventName, properties)**
+
+<br />
 
 ```javascript
 uxc.event("your_amazing_event", { key: "value" });
