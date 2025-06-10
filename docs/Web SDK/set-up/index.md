@@ -12,3 +12,7 @@ This guide provides an overview of the UXCam Web SDK’s key features and config
 ## Setup and configuration steps
 
 * [Occlusion](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
+* [Setting User Properties](https://developer.uxcam.com/v2.0-draft/update/docs/user-properties)
+* [Logging Custom Event](https://developer.uxcam.com/v2.0-draft/update/docs/logging-custom-event#/)
+* [Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
+* [App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
