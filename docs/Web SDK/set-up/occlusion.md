@@ -9,6 +9,13 @@ Occlusion is a data privacy technique used to mask or hide sensitive information
 
 <br />
 
+> 📘 Note:
+>
+> * Occluded input field texts are replaced with asterisks \*\*
+> * Occluded input field numbers are replaced with 0000
+
+<br />
+
 ### Elements that are occluded by default
 
 Inputs will be occluded by default if they meet any of the following criteria:
@@ -57,13 +64,6 @@ Inputs will be occluded by default if they meet any of the following criteria:
     </tr>
   </tbody>
 </Table>
-
-<br />
-
-> 📘 Note:
->
-> * Occluded input field texts are replaced with asterisks \*\*
-> * Occluded input field numbers are replaced with 0000
 
 <br />
 
