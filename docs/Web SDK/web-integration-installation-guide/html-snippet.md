@@ -5,7 +5,17 @@ hidden: false
 metadata:
   robots: index
 ---
-To integrate the Web SDK follow these steps:
+\*\*Supported technologies \*\*
+
+* Basic web (HTML CSS and Javascript)
+* React.js
+* Angular
+* Vue.js
+* Next.js
+
+<br />
+
+**To integrate the Web SDK follow these steps:**
 
 1. Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
 2. Copy the edited HTML script and include it in all your HTML files before the closing \</head> tag:
@@ -47,14 +57,6 @@ To integrate the Web SDK follow these steps:
 ```
 
 <br />
-
-> 🚧 You've Integrated but did not receive sessions?
->
-> Please ensure that:
->
-> * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your dashboard.
-> * Your **plan includes web session recording.**\
->   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
 
 > 📘 Note
 >
