@@ -60,7 +60,7 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 <br />
 
-> 📘 Example
+> ☝️ Example
 >
 > On **Spotify**, each artist has a unique ID in the URL:
 >
@@ -85,7 +85,9 @@ To group URLs that include dynamic path parameters under a single page, follow t
 
 <br />
 
-## Tagging Fragments as distinct pages
+<br />
+
+## **Tagging Fragments as distinct pages**
 
 * Enter the URL that represents the page structure you want to define.
 * Select the checkbox to ensure the Fragment is extracted from the URL
@@ -96,7 +98,9 @@ To group URLs that include dynamic path parameters under a single page, follow t
 
 <br />
 
-## Renaming Pages for Cleaner Reports
+<br />
+
+## **Renaming Pages for Cleaner Reports**
 
 If you want to replace long URLs with short, customized page names for clearer reporting, follow these steps:
 
@@ -106,6 +110,12 @@ If you want to replace long URLs with short, customized page names for clearer r
 > In the example below, you can see [https://www.spotify.com/join/](https://www.spotify.com/join/) was renamed -> Join page
 
 <Image align="center" src="https://files.readme.io/2963d13b538a678b55a8fb52b91e3ce8014e40e7675ff99e47a17a0d98015743-Screenshot2B2025-03-042Bat2B08_11_01.png" />
+
+<br />
+
+<br />
+
+## **Cleaning pages name**
 
 If your URLs contain **fragments**, and **dynamic path parameters**, and you also want a clean page name, you can solve them all at once using Page Definition.
 
@@ -119,7 +129,13 @@ Follow these steps:
 
 <Image align="center" src="https://files.readme.io/59f2a79f3cb28eec613fe37424467694e93d248a99f9d8d7a878915220709964-Screenshot_2025-03-04_at_08.18.23.png" />
 
-When creating Rules, you can assign the same Page/Screen name to multiple rules, these will be processed and displayed by UXCam as a single screen.
+<br />
+
+<br />
+
+## **Assigning multiple rules**
+
+When creating rules, you can assign the same 'page name' to multiple rules, these will be processed and displayed by UXCam as a single screen.
 
 This can also be useful in case your URLs change but you want to keep your data consistent.
 
