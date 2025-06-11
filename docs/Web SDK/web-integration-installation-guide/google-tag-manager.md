@@ -132,7 +132,8 @@ Where:
 
 * Click on "Variables" in the left-hand menu
 * In the 'User-Defined Variables' section, click New, and select 'Data Layer Variable'
-* Give the variable a name - Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., Item, ItemPrice)
+* Give the variable a recognisable name in the top left of the screen #####(e.g. ItemPrice)
+* Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., Item, ItemPrice)
 * Save the Variable
 * Repeat this for each data layer value you want to use
 
