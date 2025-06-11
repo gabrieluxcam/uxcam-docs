@@ -12,7 +12,7 @@ With a handful of well‑chosen events (5‑15 is ideal) plus descriptive proper
 
 ***
 
-## 1  Choose the Right Moments to Track
+## Choose the Right Moments to Track
 
 | Event type           | Why tag it?              | Typical name examples                |
 | -------------------- | ------------------------ | ------------------------------------ |
@@ -25,7 +25,7 @@ With a handful of well‑chosen events (5‑15 is ideal) plus descriptive proper
 
 ***
 
-## 2  Send a Basic Event
+## Send a Basic Event
 
 ```java
 UXCam.logEvent("Signup_Started");
@@ -42,7 +42,7 @@ UXCam.logEvent("Signup_Started")
 
 ***
 
-## 3  Add Context with Properties
+## Add Context with Properties
 
 Attach up to **20** key‑value pairs to any event for richer analysis.
 
@@ -64,7 +64,7 @@ UXCam.logEvent("Payment_Succeeded", props);
 
 ***
 
-## 4  Automatic Events (No Code Needed)
+## Automatic Events (No Code Needed)
 
 | Auto event  | Fires when …                                              |
 | ----------- | --------------------------------------------------------- |
@@ -76,7 +76,7 @@ More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
 
 ***
 
-## 5  Verify in 3 Minutes
+## Verify in 3 Minutes
 
 1. Trigger the event in a **debug build** and wait for upload.
 2. Open **Dashboard → Events**.
@@ -85,7 +85,7 @@ More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
 
 ***
 
-## 6  Troubleshooting Cheat‑Sheet
+## Troubleshooting Cheat‑Sheet
 
 | Issue                 | Likely cause                         | Fix                                                                      |
 | --------------------- | ------------------------------------ | ------------------------------------------------------------------------ |
@@ -96,7 +96,7 @@ More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
 
 ***
 
-## 7  QA Checklist
+## QA Checklist
 
 * [ ] All custom events appear in **Events** and on session replays.
 * [ ] Properties display correct values, types, and casing.
