@@ -58,18 +58,4 @@ metadata:
 
 <br />
 
-> 📘 Note
->
-> In order to get the session recording of your entire website, there is a need to integrate the HTML script in all of the product's HTML elements
->
-> **Supported technologies**
->
-> * Basic web (HTML, CSS and Javascript)
-> * React.js
-> * Angular
-> * Vue.js
-> * Next.Js
-
-<br />
-
 // Direct users to set up and configuration //
