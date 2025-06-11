@@ -5,40 +5,47 @@ hidden: false
 metadata:
   robots: index
 ---
-# 🎯 Event Tagging
+# 🎯 Event Tracking with UXCam
 
-Screens tell you **where** users go; events reveal **what they do**.  
-With a handful of well‑chosen events and properties you can build funnels, spot drop‑offs and debug support tickets in minutes.
-
----
-
-## 1 Pick the right moments to log
-
-| Event type | Why tag it? | Typical name |
-|------------|-------------|--------------|
-| **Flow milestones** | Build conversion funnels | `Signup_Started`, `Signup_Completed` |
-| **Key feature use** | Measure adoption | `Video_Export`, `AR_Scan` |
-| **Errors / cancels** | Quantify friction | `Payment_Failed`, `Upload_Cancelled` |
-| **A/B variant exposure** | Compare cohorts | `Variant_Shown_A` |
-
-> **Aim for 5‑15 core events.** Too many dilute insight and blow up dashboards.
+Screens tell you **where** users go; **events show what they do**.  
+With a handful of well‑chosen events (5‑15 is ideal) plus descriptive properties, you can build funnels, spot drop‑offs, and debug support tickets in minutes.
 
 ---
 
-## 2 Log a basic event
+## 1  Choose the Right Moments to Track
+
+| Event type               | Why tag it?              | Typical name examples              |
+| ------------------------ | ------------------------ | ---------------------------------- |
+| **Flow milestones**      | Build conversion funnels | `Signup_Started`, `Signup_Completed` |
+| **Key feature use**      | Measure adoption         | `Video_Export`, `AR_Scan`            |
+| **Errors / cancels**     | Quantify friction        | `Payment_Failed`, `Upload_Cancelled` |
+| **A/B exposure**         | Compare cohorts          | `Variant_Shown_A`                    |
+
+> **Tip:** Too many events dilute insight and bloat dashboards—focus on what drives decisions.
+
+---
+
+## 2  Send a Basic Event
+
 ```java
 UXCam.logEvent("Signup_Started");
 ```
 ```kotlin
 UXCam.logEvent("Signup_Started")
 ```
-*Best practice*: keep names **PascalCase** or **snake_case** and store them as constants to avoid typos.
+
+**Best‑practice**
+
+* Use **PascalCase** or **snake_case**.  
+* Store names as **constants** to prevent typos.  
+* Remember that names are **case‑sensitive**: `signup_started` ≠ `Signup_Started`.
 
 ---
 
-## 3 Add context with properties
+## 3  Add Context with Properties
 
-Up to **20 key‑value pairs** per event give colour to each action.
+Attach up to **20** key‑value pairs to any event for richer analysis.
+
 ```java
 HashMap<String, Object> props = new HashMap<>();
 props.put("plan",        "pro");
@@ -48,51 +55,53 @@ props.put("price_cents", 1499);
 UXCam.logEvent("Payment_Succeeded", props);
 ```
 
-| Rule | Reason |
-|------|--------|
-| **Keys are case‑sensitive** | `Plan` ≠ `plan`. Pick one style. |
-| **Values stored as String or Number** | Cast complex objects to JSON if needed. |
-| **No PII** | Avoid GDPR headaches—use IDs or hashed values. |
+Rule | Reason
+---- | ------
+Keys are **case‑sensitive** | `Plan` and `plan` create separate properties.
+Values must be **String or Number** | Serialize complex objects to JSON if needed.
+Avoid **PII** | Use hashed values or IDs to stay GDPR‑safe.
+Stop at **20 properties** | Extras are discarded and a warning is logged.
 
 ---
 
-## 4 Built‑in automatic events
+## 4  Automatic Events (No Code Needed)
 
-| Auto event | Captured when… |
-|------------|----------------|
-| `Rage Tap` | User taps more than 3 times in less than 300 ms at same spot |
-| `UI Freeze` | Main thread blocked more than 2 s |
+| Auto event  | Fires when …                                                |
+| ----------- | ----------------------------------------------------------- |
+| `Rage Tap`  | User taps ≥ 3 times within 300 ms at the same coordinates   |
+| `UI Freeze` | Main thread blocked for ≥ 2 s                               |
 
-These fire without code; add your own tags **in addition** for business logic.
+Use these alongside your custom events for a complete picture.  
+More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
 
 ---
 
-## 5 Verify in 3 minutes
+## 5  Verify in 3 Minutes
 
-1. Trigger the event in a debug build and upload session.  
+1. Trigger the event in a **debug build** and wait for upload.  
 2. Open **Dashboard → Events**.  
-3. Confirm your new event and its properties appear correctly.  
-4. Check a replay: event pin should align with the correct moment.
+3. Confirm the new event and its properties appear.  
+4. Play a session replay—the event pin should align with the exact moment.
 
 ---
 
-## 6 Troubleshooting cheat‑sheet
+## 6  Troubleshooting Cheat‑Sheet
 
-| Issue | Likely cause | Fix |
-|-------|--------------|-----|
-| Event missing | Name typo, fire before SDK start | Store names in constants; ensure call happens after `UXCam.startWithConfiguration()` |
-| Property not shown | Sent > 20 props | Trim to 20; aggregate extras into one JSON string |
-| Duplicate events | Called in loop or retry logic | Add guard (e.g. send once per session) |
-| Mixed‑case duplicates | `Signup_started` vs `Signup_Started` | Standardise naming convention |
+| Issue                    | Likely cause                               | Fix                                                         |
+| ------------------------ | ------------------------------------------ | ----------------------------------------------------------- |
+| Event missing            | Name typo or called before SDK start       | Use constants; ensure call occurs after `UXCam.startWithConfiguration()` |
+| Property not shown       | Sent > 20 props                             | Trim to 20; bundle extras in one JSON string                |
+| Duplicate events         | Called inside loops / retries               | Add guards (e.g., send once per session)                    |
+| Mixed‑case duplicates    | `Signup_started` vs `Signup_Started`       | Standardise naming casing                                   |
 
 ---
 
-## 7 QA checklist
+## 7  QA Checklist
 
-- [ ] All events in recorded sessions appear in **Event** page and in Nav bar of session replay.
-- [ ] Properties show correct values and casing.  
-- [ ] No unwanted duplicate names (case or spelling).  
-- [ ] Replaying a session shows event pins at the right second.  
-- [ ] No PII present in names or properties.
+* [ ] All custom events appear in **Events** and on session replays.  
+* [ ] Properties display correct values, types, and casing.  
+* [ ] No unwanted duplicates (case or spelling).  
+* [ ] Event pins align with the correct second in replay.  
+* [ ] No PII present in names or properties.
 
-Happy tracking! 📊
+---
