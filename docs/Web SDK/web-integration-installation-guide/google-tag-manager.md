@@ -81,43 +81,57 @@ Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage 
 
 <br />
 
+<br />
+
 ### Step 2: Adding UXCam Events with Google Tag Manager
 
 In addition to loading the UXCam script, you can also track specific events using GTM.
+
+<br />
 
 1. Create a New Tag for Events:
 
 * Go to "Tags" in GTM and click on "New."
 * Select "Custom HTML" as the tag type.
 
+<br />
+
 2. Add Event Script:
 
-* Inside the HTML box, add your UXCam event tracking code. Remember to wrap the code inside `<HTMLBlock>{` and `}</HTMLBlock>` tags. Here is an example where the event is fired when a button with the class submitButton is clicked:
+* Inside the HTML box, add your UXCam event tracking code. Remember to wrap the code inside `<HTMLBlock>{` and `}</HTMLBlock>` tags. Here is an example where the event is fired when a button with the class submitButton is clicked
+* You can configure multiple events similarly by changing the event name and properties.
 
 ```html
 <script>uxc.event("your_amazing_event", { key: "value" }) </script>
 ```
 
+<br />
+
 3. Set the Trigger:
 
 * In this case, you want the event to fire when a user clicks a button. Configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
 
-4. Save and Publish:
+<br />
+
+4. Test:
+
+* Use GTM's Preview mode to test and ensure that your tags are firing correctly before publishing.
+
+<br />
+
+5. Save and Publish:
 
 * Save your tag configuration and publish the changes.
 
 <br />
-
-### Additional Information
-
-* Custom Events: You can configure additional events similarly by changing the event name and properties.
-* Debugging: Use GTM's Preview mode to test and ensure that your tags are firing correctly before publishing.
 
 <br />
 
 # Send Events and properties to UXCam through GTM using data layer variables
 
 You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending data layer variables as event properties to help you track meaningful user actions with context.
+
+<br />
 
 ### What You'll Need
 
