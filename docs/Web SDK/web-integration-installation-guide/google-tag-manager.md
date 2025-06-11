@@ -228,3 +228,9 @@ Please note that **when referencing variable names, you refer to the name you ga
 * Make sure the UXCam script is loaded before the event fires.
 * Always sanitize and validate dynamic values being pushed to UXCam.
 * Use clear naming for events and properties to stay consistent in UXCam reports.
+
+<br />
+
+<br />
+
+// Add section to links to other configuration and set up //
