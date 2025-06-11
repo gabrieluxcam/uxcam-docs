@@ -18,6 +18,15 @@ next:
 
 <br />
 
+### V. 3.6.42 - Jun 11, 2025
+
+* Fix: Google ads not being clickable
+* Fix: Fixed tag on Integration log
+* Fix: Crash due to PixelCopyRequest
+* Fix: Session shows 00 time stamp
+* Fix: Delayed Occlusion elements make PII Data show in screen transitions
+* Fix: Flutter Occluded view is being visible while scrolling or navigating
+
 ### V. 3.6.41 - April 29, 2025
 
 * Fixed occlusion being removed if bottom sheet is presented
@@ -25,15 +34,15 @@ next:
 
 ### V. 3.6.40 - April 16, 2025
 
-* **Fix:** Prevent capturing occluded screens information. 
+* **Fix:** Prevent capturing occluded screens information.
 * **Fix:** ANRs on Android.
 * **Fix:** Flutter crash.
 * **Improvement**: Implement cancel Api.
 
 ### V. 3.6.39 - March 5, 2025
 
-* **Fix:** Flutter crash issue due to v2 embedding. 
-* **Fix:** Debug logs not reporting correctly. 
+* **Fix:** Flutter crash issue due to v2 embedding.
+* **Fix:** Debug logs not reporting correctly.
 * **Fix:** Black screen on few frames.
 
 ### V. 3.6.38 - February 14, 2025
@@ -45,8 +54,8 @@ next:
 ### V. 3.6.37 - January 21, 2025
 
 * **Added**: Added Integration Log
-* **Fix**: crash on Google ad view. 
-* **Fix**: Occlusion persists in React Native 
+* **Fix**: crash on Google ad view.
+* **Fix**: Occlusion persists in React Native
 
 ### V. 3.6.36 - December 17, 2024
 
