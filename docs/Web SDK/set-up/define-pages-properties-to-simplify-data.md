@@ -58,12 +58,16 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 To ensure consistent tracking and analysis, it’s important to group URLs with dynamic path parameters—like user or product IDs—under a single, logical page name. This helps avoid treating every variation as a separate page and simplifies data reporting.
 
-For example, on **Spotify**, each artist has a unique ID in the URL:
+<br />
 
-* /artist/**5K79FLRUCSysQnVESLcTdb**
-* /artist/**1HY2Jd0NmPuamShAr6KMms**
-
-Even though the artist ID changes, these are all versions of the same **Artist Page**, and should not be considered separate pages.
+> 📘 Example
+>
+> On **Spotify**, each artist has a unique ID in the URL:
+>
+> * /artist/**5K79FLRUCSysQnVESLcTdb**
+> * /artist/**1HY2Jd0NmPuamShAr6KMms**
+>
+> Even though the artist ID changes, these are all versions of the same **Artist Page**, and should not be considered separate pages.
 
 <br />
 
