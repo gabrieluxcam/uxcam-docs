@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-This following snippet is an example on how to sets your app key, configures optional settings like versioning and data occlusion, and prepares the SDK to track events and user properties.
+This following snippet is an example of how to sets your app key, configure versioning, data occlusion, and prepares the SDK to track events and user properties.
 
 ```javascript
 <script type="text/javascript" defer="">
