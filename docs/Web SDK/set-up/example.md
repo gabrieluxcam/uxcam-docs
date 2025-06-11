@@ -50,5 +50,3 @@ Here is an example of initialising the SDK with an application version and occlu
 });
 </script>
 ```
-
-##
