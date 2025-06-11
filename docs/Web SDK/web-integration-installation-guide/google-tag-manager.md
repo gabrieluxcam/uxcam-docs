@@ -16,16 +16,21 @@ Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage 
 
 ### Step 1: Adding the UXCam Script via Custom HTML Tag to all web pages
 
+<br />
+
 1. Create a New Tag in GTM:
 
 * Log in to your Google Tag Manager account.
 * Go to the workspace for the website where you want to integrate UXCam.
 * Click on "Tags" in the left-hand menu, then click on "New."
 
+<br />
+
 2. Configure the Tag:
 
-* Tag Type: Select "Custom HTML."
-* HTML Content: Paste the UXCam script into the HTML section, as shown below:
+* Select Tag Type: "Custom HTML."
+* Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
+* Paste the UXCam script into the HTML section, as shown below:
 
 ```html
 <script type="text/javascript" defer="">
@@ -60,14 +65,14 @@ Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage 
 </script>
 ```
 
-> 📘 Please note:
->
-> Your App Key can be found in the dashboard, for more information you can check [here](https://developer.uxcam.com/docs/locate-your-api-key)
+<br />
 
 3. Set the Trigger:
 
 * For the UXCam script to run on all pages, configure the trigger as "Page View - All Pages."
 * This will ensure that the script is executed whenever a page is viewed on your website.
+
+<br />
 
 4. Save and Publish:
 
