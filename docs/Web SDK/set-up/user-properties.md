@@ -5,6 +5,10 @@ hidden: false
 metadata:
   robots: index
 ---
+To personalise analytics and enable richer user insights, the SDK allows you to set a user’s identity and assign custom properties. These methods help track user behaviour more meaningfully by associating events with specific users and attributes.
+
+<br />
+
 ### Setting User Identity
 
 **uxc.setUserIdentity(userId)**
