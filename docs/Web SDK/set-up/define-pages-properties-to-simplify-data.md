@@ -12,7 +12,9 @@ next:
 ---
 ### Overview
 
-Page definition allows you to define your pages/screens by setting up matching rules for URLs to:
+Defining pages allows you to organize and streamline your analytics by creating rules that group similar URLs under consistent page or screen names. This not only simplifies your reports but also unlocks deeper insights through cleaner data, enhanced filtering, and improved cross-platform tracking.
+
+Page definition allows you to define your pages by setting up matching rules for URLs to:
 
 * Group similar pages under a single name. (e.g. Product page)
 * Define and save properties based on URL data (e.g. Product name, product category)
@@ -54,12 +56,16 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 ## **Grouping Similar Content (Dynamic IDs in URLs)**
 
+To ensure consistent tracking and analysis, it’s important to group URLs with dynamic path parameters—like user or product IDs—under a single, logical page name. This helps avoid treating every variation as a separate page and simplifies data reporting.
+
 For example, on **Spotify**, each artist has a unique ID in the URL:
 
 * /artist/**5K79FLRUCSysQnVESLcTdb**
 * /artist/**1HY2Jd0NmPuamShAr6KMms**
 
 Even though the artist ID changes, these are all versions of the same **Artist Page**, and should not be considered separate pages.
+
+<br />
 
 To group URLs that include dynamic path parameters under a single page, follow these steps:
 
