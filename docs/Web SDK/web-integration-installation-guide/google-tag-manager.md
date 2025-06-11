@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Using UXCam with Google Tag Manager (GTM)  will allow you to efficiently manage and deploy the UXCam script across your website.
+Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage and deploy the UXCam script across your website.
 
 <br />
 
@@ -124,6 +124,8 @@ In addition to loading the UXCam script, you can also track specific events usin
 * Save your tag configuration and publish the changes.
 
 <br />
+
+***
 
 <br />
 
