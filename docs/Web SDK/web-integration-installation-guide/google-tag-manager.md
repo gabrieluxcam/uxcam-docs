@@ -131,9 +131,9 @@ Where:
 ## Step 3: Define Variables in GTM
 
 * Click on "Variables" in the left-hand menu
-* In the 'User-Defined Variables' section, click New, and select 'Data Layer Variable'
-* Give the variable a recognisable name in the top left of the screen #####(e.g. ItemPrice)
-* Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., Item, ItemPrice)
+* In the 'User-Defined Variables' section, click on 'New', and select 'Data Layer Variable'
+* Give the variable a recognisable name in the top left of the screen (e.g. Item\_Price)
+* Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., item, itemPrice)
 * Save the Variable
 * Repeat this for each data layer value you want to use
 
@@ -153,8 +153,8 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 1. Create a New Tag for Events:
 
-* Go to "Tags" in GTM and click on "New."
-* Select "Custom HTML" as the tag type.
+* Navigate to  "Tags" in the left-hand menu, then click on "New."
+* Select 'Tag configuration' - Tag Type: "Custom HTML."
 
 <br />
 
