@@ -60,6 +60,12 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 <br />
 
+> Example: On Spotify, each artist has a unique ID represented in the URL
+>
+> * <br />
+
+<br />
+
 > ☝️ Example
 >
 > On **Spotify**, each artist has a unique ID in the URL:
