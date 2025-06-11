@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-\*\*Supported technologies \*\*
+**Supported technologies**
 
 * Basic web (HTML CSS and Javascript)
 * React.js
