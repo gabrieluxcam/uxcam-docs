@@ -158,7 +158,7 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 <br />
 
-2. Add Event Script inside the HTML box, add your UXCam event tracking code. Remember to wrap the code inside `<HTMLBlock>{` and `}</HTMLBlock>` tags. Here is an example where the event is fired when a button with the class submitButton is clicked
+2. Add Event Script inside the HTML box with the relevant values
 
 > You can configure multiple events similarly by changing the event name and properties.
 
@@ -177,9 +177,9 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 <br />
 
-3. Set the Trigger:
+3. Set the Trigger: ######
 
-* In this case, you want the event to fire when a user clicks a button. Configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
+* In this case you want the event to fire when a user clicks a button, configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
 
 <br />
 
