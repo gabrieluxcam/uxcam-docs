@@ -14,7 +14,7 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 <br />
 
-### Step 1: Adding the UXCam Script via Custom HTML Tag to all web pages
+## Step 1: Adding the UXCam Script via Custom HTML Tag to all web pages
 
 <br />
 
@@ -81,44 +81,6 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 <br />
 
-<br />
-
-### Step 2: Adding UXCam Events with Google Tag Manager
-
-In addition to loading the UXCam script, you can also track specific events using GTM.
-
-<br />
-
-1. Create a New Tag for Events:
-
-* Go to "Tags" in GTM and click on "New."
-* Select "Custom HTML" as the tag type.
-
-<br />
-
-2. Add Event Script:
-
-* Inside the HTML box, add your UXCam event tracking code. Remember to wrap the code inside `<HTMLBlock>{` and `}</HTMLBlock>` tags. Here is an example where the event is fired when a button with the class submitButton is clicked
-* You can configure multiple events similarly by changing the event name and properties.
-
-```html
-<script>uxc.event("your_amazing_event", { key: "value" }) </script>
-```
-
-<br />
-
-3. Set the Trigger:
-
-* In this case, you want the event to fire when a user clicks a button. Configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
-
-<br />
-
-4. Test:
-
-* Use GTM's Preview mode to test and ensure that your tags are firing correctly before publishing.
-
-<br />
-
 5. Save and Publish:
 
 * Save your tag configuration and publish the changes.
@@ -129,7 +91,7 @@ In addition to loading the UXCam script, you can also track specific events usin
 
 <br />
 
-# Send Events and properties to UXCam through GTM using data layer variables
+## Send Events and properties to UXCam through GTM using data layer variables
 
 You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending data layer variables as event properties to help you track meaningful user actions with context.
 
@@ -144,6 +106,8 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
   (If you’re reusing triggers and variables that already exist on your GTM account, you don’t need access to your website code)
 
 > 📔 Note: If you’ve already set up the Data layer variables in GTM, skip to step 3.
+
+<br />
 
 <br />
 
@@ -173,6 +137,8 @@ Where:
 
 <br />
 
+<br />
+
 ## Step 2: Define Variables in GTM
 
 * In GTM, go to Variables → User-Defined Variables
@@ -189,11 +155,22 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 <br />
 
+<br />
+
 ## Step 3: Create the UXCam Event Tag
 
-Go to Tags → New → Choose Custom HTML
+1. Create a New Tag for Events:
 
-Paste the following code, adjusting the event name and variable names:
+* Go to "Tags" in GTM and click on "New."
+* Select "Custom HTML" as the tag type.
+
+<br />
+
+2. Add Event Script inside the HTML box, add your UXCam event tracking code. Remember to wrap the code inside `<HTMLBlock>{` and `}</HTMLBlock>` tags. Here is an example where the event is fired when a button with the class submitButton is clicked
+
+> You can configure multiple events similarly by changing the event name and properties.
+
+<br />
 
 <HTMLBlock>{`
 <script>
@@ -206,6 +183,14 @@ Paste the following code, adjusting the event name and variable names:
 
 <Image align="center" src="https://files.readme.io/19f54eaca76f3a5cbde508f13cabc2d44d84638d3044c4917763d565fc4759ca-tag_uxcam_.png" />
 
+<br />
+
+3. Set the Trigger:
+
+* In this case, you want the event to fire when a user clicks a button. Configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
+
+<br />
+
 Under Triggering, select an existing trigger or create a trigger for your event (e.g., Custom Event → event name: AddToCart)
 
 Please note that **when referencing variable names, you refer to the name you gave to the variable in GTM** (top-left-corner)
@@ -214,7 +199,9 @@ Please note that **when referencing variable names, you refer to the name you ga
 
 <br />
 
-## Step 4: Test Before Publishing
+<br />
+
+## Step 4: Test
 
 * Use Preview mode in GTM
 * Trigger the event on your website
@@ -223,6 +210,16 @@ Please note that **when referencing variable names, you refer to the name you ga
   * Variables are populated correctly
   * Events show up in UXCam (in the session timeline or event page)\
     Once confirmed, Publish your GTM container.
+
+<br />
+
+<br />
+
+## Step 5: Publish
+
+* Save your tag configuration and publish the changes.
+
+<br />
 
 <br />
 
