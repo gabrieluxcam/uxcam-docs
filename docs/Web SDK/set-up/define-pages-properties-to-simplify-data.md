@@ -21,12 +21,6 @@ Page definition allows you to define your pages/screens by setting up matching r
 
 <br />
 
-Without any dev dependency, with simple and intuitive UI, immediate changes and rule testing capabilities.
-
-<Image align="center" src="https://files.readme.io/c700417c7780aa316cd061043db4146dafc14ef012aa638c986f6bd5e626dbbf-Page-Defined.gif" />
-
-<br />
-
 ### Benefits of defining pages
 
 * **Cleaner & More Actionable Data**: Reduce URL clutter by storing dynamic values (e.g., product ID, user ID) as properties instead of separate pages.
@@ -39,8 +33,6 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 > 👍 **Tip**: We highly recommend that you always define your pages if you have Dynamic path parameters or fragments on your URLs.
 
-<br />
-
 > 📘 **Note**: If screen names have not been defined, UXCam will display the URL path as ‘screen name.
 
 <br />
@@ -49,8 +41,12 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 ## **Accessing the Page Definition Section**
 
+Without any dev dependency, with simple and intuitive UI, immediate changes and rule testing capabilities.
+
 1. Clicking on the web app you created from the left side bar and opening the 'App setting'
 2. Navigating to the 'Page definition' tab
+
+<Image align="center" src="https://files.readme.io/c700417c7780aa316cd061043db4146dafc14ef012aa638c986f6bd5e626dbbf-Page-Defined.gif" />
 
 <br />
 
