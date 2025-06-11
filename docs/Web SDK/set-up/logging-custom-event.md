@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-The SDK provides methods to log events and set user properties.
+To track user interactions and key behaviours within your application, the SDK allows you to log custom events. By capturing event names and optional properties, you can generate actionable insights tied to specific user actions.
 
 <br />
 
