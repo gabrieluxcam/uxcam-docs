@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-## Example Initialisation with Configuration
-
 Here is an example of initialising the SDK with an application version and occlusion settings:
 
 ```javascript
