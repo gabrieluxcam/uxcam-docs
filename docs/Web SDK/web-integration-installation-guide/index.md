@@ -1,5 +1,5 @@
 ---
-title: Web Inteagration
+title: Web Integration
 deprecated: false
 hidden: false
 metadata:
