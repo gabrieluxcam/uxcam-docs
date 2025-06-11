@@ -10,6 +10,16 @@ metadata:
 next:
   description: ''
 ---
+> 🚧 You've Integrated but did not receive sessions?
+>
+> Please ensure that:
+>
+> * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your dashboard.
+> * Your **plan includes web session recording.**\
+>   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
+
+<br />
+
 ### 1. What defines the beginning and end of a session?
 
 The session starts as soon as the page loads and the WebSDK begins recording. There is no inactivity period per se; however, if there is no **incoming data**\* from the client for 3 minutes, the session is considered finished, and the recording is uploaded.
