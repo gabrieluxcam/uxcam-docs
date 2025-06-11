@@ -5,7 +5,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Here is an example of initialising the SDK with an application version and occlusion settings:
+This following snippet is an example on how to sets your app key, configures optional settings like versioning and data occlusion, and prepares the SDK to track events and user properties.
 
 ```javascript
 <script type="text/javascript" defer="">
