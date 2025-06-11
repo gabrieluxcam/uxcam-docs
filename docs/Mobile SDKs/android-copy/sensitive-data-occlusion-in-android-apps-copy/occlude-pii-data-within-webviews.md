@@ -42,6 +42,4 @@ Remember to test the updated implementation and review the recordings again to c
 
 ***
 
-> 👍
->
-> By following this guide, you can easily utilize UXCam's `uxcam-occlude` class to handle webview occlusion effectively. Adding the class to sensitive HTML elements ensures their privacy and protection in UXCam recordings, providing a seamless user experience without compromising data security.
+<GitHubCallout type="success">> 👍 By following this guide, you can easily utilize UXCam's `uxcam-occlude` class to handle webview occlusion effectively. Adding the class to sensitive HTML elements ensures their privacy and protection in UXCam recordings, providing a seamless user experience without compromising data security..</GitHubCallout>
