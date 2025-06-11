@@ -14,7 +14,7 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 <br />
 
-## Step 1: Adding the UXCam Script via Custom HTML Tag to all web pages
+## Step 1: Adding the UXCam Script via Custom HTML Tag
 
 <br />
 
@@ -91,7 +91,7 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 <br />
 
-## Send Events and properties to UXCam through GTM using data layer variables
+### Send Events and properties to UXCam through GTM using data layer variables
 
 You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending data layer variables as event properties to help you track meaningful user actions with context.
 
@@ -111,7 +111,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
 
 <br />
 
-## Step 1: Push Data to the Data Layer
+## Step 2: Push Data to the Data Layer
 
 On your website, push values to the GTM data layer when a user action happens.
 
@@ -139,7 +139,7 @@ Where:
 
 <br />
 
-## Step 2: Define Variables in GTM
+## Step 3: Define Variables in GTM
 
 * In GTM, go to Variables → User-Defined Variables
 * Click New, and select Data Layer Variable
@@ -157,7 +157,7 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 <br />
 
-## Step 3: Create the UXCam Event Tag
+## Step 4: Create the UXCam Event Tag
 
 1. Create a New Tag for Events:
 
