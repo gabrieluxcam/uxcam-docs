@@ -1,5 +1,5 @@
 ---
-title: Setup and Configuration
+title: Setup & Configuration
 deprecated: false
 hidden: false
 metadata:
