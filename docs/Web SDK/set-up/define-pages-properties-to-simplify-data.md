@@ -27,7 +27,7 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 <br />
 
-### Why should you define your pages/screens?
+### Benefits of defining pages
 
 * **Cleaner & More Actionable Data**: Reduce URL clutter by storing dynamic values (e.g., product ID, user ID) as properties instead of separate pages.
 * **Standardized Reporting**: Group similar pages (e.g., Product Page, Category Page) under a common name for clearer analytics.
