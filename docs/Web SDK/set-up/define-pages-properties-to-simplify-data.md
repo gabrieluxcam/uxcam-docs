@@ -47,11 +47,12 @@ Without any dev dependency, with simple and intuitive UI, immediate changes and 
 
 <br />
 
-## How to use Page Definition for different use cases
+## **Accessing the Page Definition Section**
 
-* [Grouping Similar Content (Dynamic IDs in URLs)](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_11e7c1795b)
-* [Tagging Fragments as distinct pages](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_924d5533fc)
-* [Renaming pages for cleaner reports](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_3bf133bcdf)
+1. Clicking on the web app you created from the left side bar and opening the 'App setting'
+2. Navigating to the 'Page definition' tab
+
+<br />
 
 <br />
 
@@ -123,3 +124,15 @@ E.g. if you used to have `domain.com/products/product-name` defined as Products 
 [Resolving conflicting Page Definition rules for ismilar URL structures with dynamic values](https://help.uxcam.com/en/articles/11145060-resolving-conflicting-page-definition-rules-for-similar-url-structures-with-dynamic-values)
 
 To learn more about Page definition, rule hierarchy and rule management please visit our **[Help Center.](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_bc701cd1b1)**
+
+<br />
+
+***
+
+<br />
+
+## How to use Page Definition for different use cases
+
+* [Grouping Similar Content (Dynamic IDs in URLs)](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_11e7c1795b)
+* [Tagging Fragments as distinct pages](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_924d5533fc)
+* [Renaming pages for cleaner reports](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_3bf133bcdf)
