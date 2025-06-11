@@ -28,7 +28,7 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 2. Configure the Tag:
 
-* Select Tag Type: "Custom HTML."
+* Select tag configuration - Tag Type: "Custom HTML."
 * Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
 * Paste the UXCam script into the HTML section, as shown below:
 
@@ -81,17 +81,11 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 <br />
 
-5. Save and Publish:
-
-* Save your tag configuration and publish the changes.
-
-<br />
-
 ***
 
 <br />
 
-### Send Events and properties to UXCam through GTM using data layer variables
+### Sending Events and properties to UXCam through GTM using data layer variables
 
 You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending data layer variables as event properties to help you track meaningful user actions with context. Make sure that:
 
@@ -136,15 +130,17 @@ Where:
 
 ## Step 3: Define Variables in GTM
 
-* In GTM, go to Variables → User-Defined Variables
-* Click New, and select Data Layer Variable
-* Name your Variable (top-left) - (e.g. cart\_item)
-* Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., Item, ItemPrice)
+* Click on "Variables" in the left-hand menu
+* In the 'User-Defined Variables' section, click New, and select 'Data Layer Variable'
+* Give the variable a name - Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., Item, ItemPrice)
+* Save the Variable
 * Repeat this for each data layer value you want to use
 
 <Image align="center" src="https://files.readme.io/4252334dd396f15ddd8d9caff6aa569204f2f8caf9daf7606853f830be8e8a81-Cart_item_2.png" />
 
-**💡 Tip: Give your GTM variables clear names to stay organized.**
+<br />
+
+> 👍 Tip: Give your GTM variables clear names to stay organized.
 
 Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer).
 
