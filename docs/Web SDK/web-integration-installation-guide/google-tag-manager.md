@@ -112,7 +112,7 @@ dataLayer.push({'variable_name': 'variable_value'})
 
 <br />
 
-Example:
+**Example**
 
 `**event**`: The name used to trigger your tag in GTM (e.g., ‘AddToCart)\
 `**Item, ItemPrice**`: Values you want to send as event properties
@@ -125,10 +125,6 @@ window.dataLayer.push({
   ItemPrice: 49.99  
 });
 ```
-
-Where:
-
-<br />
 
 <br />
 
