@@ -18,7 +18,7 @@ metadata:
 **To integrate the Web SDK follow these steps:**
 
 1. Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
-2. Copy the edited HTML script and include it in all your HTML files before the closing \</head> tag:
+2. Copy the snippet and include it in all your HTML files before the closing \</head> tag:
 
 <br />
 
