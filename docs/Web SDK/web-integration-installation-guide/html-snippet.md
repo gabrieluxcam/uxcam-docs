@@ -1,5 +1,5 @@
 ---
-title: HTML inclusion
+title: Install with code snippet
 deprecated: false
 hidden: false
 metadata:
