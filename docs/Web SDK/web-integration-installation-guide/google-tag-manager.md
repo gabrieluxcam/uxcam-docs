@@ -179,15 +179,21 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 <br />
 
-3. Set the Trigger: ######
+3. Set the Trigger:
 
-* In this case you want the event to fire when a user clicks a button, configure the trigger as "Click - All Elements" and add a condition where the "Click Classes" equals submitButton.
+* In case you want the event to fire when a user clicks a button; Select from the list or create a trigger:
+  * Click on 'Triggering' and add a new trigger by clicking on the plus (+) button
+  * Select 'Click - All Elements' from the list and select 'Some clicks' option on when the trigger fires
+  * Select the Click classes -> equals -> submitButton, and click 'Save'
+  * Select the new trigger to be added to the Tag, and Save
 
 <br />
 
-Under Triggering, select an existing trigger or create a trigger for your event (e.g., Custom Event → event name: AddToCart)
+> 📘 Note
+>
+> When referencing variable names, you refer to the name you gave to the variable in GTM (top-left-corner)
 
-Please note that **when referencing variable names, you refer to the name you gave to the variable in GTM** (top-left-corner)
+<br />
 
 <Image align="center" src="https://files.readme.io/61c35516267e9c55d2476e4d65e51008a0b1b81c7b05cabee2624f6ce80269f9-Cart_item.png" />
 
