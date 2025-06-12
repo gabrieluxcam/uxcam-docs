@@ -104,11 +104,18 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
 
 On your website, push values to the GTM data layer when a user action happens.
 
+<br />
+
 ```javascript
 dataLayer.push({'variable_name': 'variable_value'})
 ```
 
+<br />
+
 Example:
+
+`**event**`: The name used to trigger your tag in GTM (e.g., ‘AddToCart)\
+`**Item, ItemPrice**`: Values you want to send as event properties
 
 ```javascript
 window.dataLayer = window.dataLayer || [];
@@ -121,8 +128,7 @@ window.dataLayer.push({
 
 Where:
 
-**event:** The name used to trigger your tag in GTM (e.g., ‘AddToCart)\
-**Item, ItemPrice:** Values you want to send as event properties
+<br />
 
 <br />
 
