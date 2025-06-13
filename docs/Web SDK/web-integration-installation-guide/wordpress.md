@@ -49,7 +49,7 @@ To add Google Tab Manager integration plugin to your WordPress site:
 ### Add the UXCam Script - Through JavaScript Plugin
 
 1. Open the plugin settings (e.g., Settings > Insert Headers and Footers).
-2. Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
+2. Replace `'Your_App_Key'` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
 3. In the Global Header or Before \<body> section, paste the following script, and save the changes:
 
 ```javascript
