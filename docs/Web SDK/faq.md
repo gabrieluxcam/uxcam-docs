@@ -20,7 +20,23 @@ next:
 
 <br />
 
-## Fixing CORS Issues for UXCam
+## Resolving CORS Issues for UXCam Session Replays
+
+If you’re noticing missing fonts, broken icons, or layout issues in UXCam session replays, it’s likely due to CORS (Cross-Origin Resource Sharing) restrictions.
+
+<br />
+
+**What is CORS?**
+
+CORS is a browser security mechanism that blocks resources (like fonts, images, or stylesheets) from loading if they’re not explicitly allowed to be accessed from another domain. This is meant to prevent unauthorized cross-site access.
+
+<br />
+
+**Why It Happens in UXCam**
+
+During session replay, your website is loaded inside a different domain ([https://app.uxcam.com](https://app.uxcam.com)) to simulate the user experience. If your assets are restricted to load only from your own domain, browsers may block them during playback.
+
+<br />
 
 If you're seeing missing fonts, broken icons, or layout issues in your session replays, it’s likely due to a CORS (Cross-Origin Resource Sharing) issue.
 
