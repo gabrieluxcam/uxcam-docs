@@ -233,6 +233,9 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-<br />
+## Next steps - Setup and configuration
 
-// Add section to links to other configuration and set up //
+* [Occlusion - Hide Sensitive Data](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
+* [Define Pages & Properties](https://developer.uxcam.com/v2.0-draft/update/docs/define-pages-properties-to-simplify-data)
+* [Configure Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
+* [Define App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
