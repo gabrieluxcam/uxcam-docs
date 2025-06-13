@@ -239,3 +239,11 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 * [Define Pages & Properties](https://developer.uxcam.com/v2.0-draft/update/docs/define-pages-properties-to-simplify-data)
 * [Configure Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
 * [Define App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
+
+<br />
+
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
