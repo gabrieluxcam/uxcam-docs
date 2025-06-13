@@ -159,6 +159,13 @@ To send page view events depending on the type of page, helps to send different 
 
 ### Identify Users
 
+To associate session data with known users, you can dynamically set user identity and attributes using Liquid tags. This is especially useful if your Shopify store includes a customer login system. This ensures UXCam sessions are tied to individual users, enabling more precise filtering, retention tracking, and user-level insights.
+
+**Setting User Identity and Properties**
+
+1. In your theme file (e.g., theme.liquid), insert the following script inside the \<head> or just before the closing \</body> tag.
+2. Use Liquid conditions to check for a logged-in customer and inject their details:
+
 If you have a customer login system, use Liquid tags to set the user identity dynamically:
 
 ```javascript
