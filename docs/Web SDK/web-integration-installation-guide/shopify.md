@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Integrate the UXCam Web SDK into your Shopify site and track custom events using Liquid tags by following the steps below. Liquid tags let you insert Shopify data (like product or customer info) into JavaScript. This ensures events sent to UXCam are relevant and personalized.
+Integrate the UXCam Web SDK into your Shopify site and track custom events using Liquid tags by following the steps below. Liquid tags let you insert Shopify data (like product or customer info) into JavaScript. This ensures events sent to UXCam are relevant and personalised.
 
 ### Prerequisites
 
@@ -20,8 +20,6 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 <br />
 
 ## Step 1: Adding UXCam Web SDK to Shopify
-
-<br />
 
 ### Access the Shopify Theme Editor
 
