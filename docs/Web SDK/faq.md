@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: Troubleshooting and FAQs
 excerpt: ''
 deprecated: false
 hidden: false
