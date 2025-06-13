@@ -12,34 +12,39 @@ next:
 ---
 ### Overview
 
-Defining pages allows you to organize and streamline your analytics by creating rules that group similar URLs under consistent page or screen names. This not only simplifies your reports but also unlocks deeper insights through cleaner data, enhanced filtering, and improved cross-platform tracking.
+Defining pages helps you simplify your analytics by grouping similar URLs under consistent and meaningful names. This ensures cleaner data, easier reporting, and better insights across web and mobile platforms.
 
-Page definition allows you to define your pages by setting up matching rules for URLs to:
+**With page definitions, you can:**
 
-* Group similar pages under a single name. (e.g. Product page)
-* Define and save properties based on URL data (e.g. Product name, product category)
-* Create clean and consistent Page/Screen names
-* Tag pages/screens based on Fragments
+* Group related URLs under a single page or screen name (e.g., “Product Page”).
+* Extract and store dynamic values (like product name or category) as properties.
+* Standardise naming conventions for pages and screens.
+* Tag pages using URL fragments or parameters.
 
 <br />
 
-### Benefits of defining pages
+### Benefits of Defining Pages
 
-* **Cleaner & More Actionable Data**: Reduce URL clutter by storing dynamic values (e.g., product ID, user ID) as properties instead of separate pages.
-* **Standardized Reporting**: Group similar pages (e.g., Product Page, Category Page) under a common name for clearer analytics.
-* **Enhanced Filtering & Segmentation**: Use saved properties like product name or category to refine searches and uncover specific insights.
-* **Seamless Cross-Platform Tracking**: Maintain consistency between web and mobile analytics with structured, unified page nameSmarter Alerts & Insights – Grouped pages enable more accurate anomaly detection and performance monitoring.
-* **Smarter Alerts & Insights** – Grouped pages enable more accurate anomaly detection and performance monitoring.
+* **Cleaner, More Actionable Data**\
+  Eliminate clutter by treating dynamic values (e.g., IDs) as properties rather than separate pages.
+* **Standardized Reporting**\
+  Aggregate similar pages (e.g., all product pages) under one name for clearer, more concise analytics.
+* **Improved Filtering and Segmentation**\
+  Filter sessions by saved properties like product category or name to discover specific insights.
+* **Consistent Cross-Platform Tracking**\
+  Align naming across web and mobile to maintain structured analytics.
+* **Smarter Alerts and Insights**\
+  Grouping pages enables more accurate anomaly detection and performance monitoring.
 
 <br />
 
 > 👍 **Tip**
 >
-> We highly recommend that you always define your pages if you have Dynamic path parameters or fragments on your URLs.
+> Always define your pages if your URLs contain dynamic path parameters or fragments.
 
 > 📘 **Note**
 >
-> If screen names have not been defined, UXCam will display the URL path as ‘screen name.
+> If screen names are not manually defined, UXCam defaults to displaying the URL path as the screen name.
 
 <br />
 
