@@ -32,32 +32,28 @@ CORS is a browser security mechanism that blocks resources (like fonts, images, 
 
 <br />
 
-**Why It Happens in UXCam**
+**Why It Happens in UXCam?**
 
 During session replay, your website is loaded inside a different domain ([https://app.uxcam.com](https://app.uxcam.com)) to simulate the user experience. If your assets are restricted to load only from your own domain, browsers may block them during playback.
 
 <br />
 
-If you're seeing missing fonts, broken icons, or layout issues in your session replays, it’s likely due to a CORS (Cross-Origin Resource Sharing) issue.
+**Typical browser console error:**
 
-CORS is a browser security feature that restricts how resources can be shared between websites. It’s designed to protect users by preventing one site from accessing sensitive content from another without permission.
-
-<br />
-
-**What’s causing this issue?**\
-During session replay, your website is loaded from a different domain — app.uxcam.com — so we can show you what the user experienced. But if your fonts, images, or styles are only allowed to load from your own domain, the browser may block them when the session is replayed.
-
-You might see errors like this in your browser's console:
-
-> ❗️ Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at [https://yourdomain.com/assets/something](https://yourdomain.com/assets/something)
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://yourdomain.com/assets/file
+```
 
 This means the asset couldn’t load because it wasn’t allowed to be accessed from app.uxcam.com.
 
 <br />
 
-**How does it affect session replays?**
+**How It Affects Replays**
 
-If your website doesn’t explicitly allow assets to be loaded from app.uxcam.com, fonts may appear as empty boxes, images may not display, and some styles may break during playback.
+Without proper CORS configuration:\
+•	Fonts may not render (showing empty boxes)
+•	Images and styles may not appear
+•	Layouts can break
 
 <br />
 
