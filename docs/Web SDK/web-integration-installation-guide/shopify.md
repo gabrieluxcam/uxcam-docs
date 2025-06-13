@@ -34,7 +34,8 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 ### Add the Web SDK Script
 
 1. Replace `'Your_App_Key'` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
-2. Navigate to the Layout folder, locate the theme.liquid file, and add the following script before the closing \</head> tag:
+2. Navigate to the Layout folder, locate the theme.liquid file, and add the following script before the closing \</head> tag
+3. Save the changes.
 
 ```javascript
 <script type="text/javascript" defer="">
@@ -69,13 +70,11 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 </script>
 ```
 
-3. Save the changes.
-
-<br />
-
 > 📘 **Note**
 >
 > Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.
+
+<br />
 
 <br />
 
