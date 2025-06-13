@@ -19,10 +19,6 @@ This guide will walk you through integrating the UXCam Web SDK into your Shopify
 
 > 📘 **Note**
 >
-> **Note**
->
-> Note:
->
 > Liquid tags allow you to dynamically insert Shopify data (such as product details or customer information) into your JavaScript code. This ensures that events sent to UXCam are accurate and relevant to the context of the page being viewed. They are particularly useful for tracking user-specific data and page-specific events.
 
 # Step 1: Adding UXCam Web SDK to Shopify
