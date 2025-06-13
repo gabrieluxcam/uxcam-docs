@@ -38,7 +38,7 @@ During session replay, your website is loaded inside a different domain ([https:
 
 <br />
 
-**Typical browser console error:**
+**Typical browser console error**
 
 ```
 Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://yourdomain.com/assets/file
@@ -59,23 +59,38 @@ Without proper CORS configuration:\
 
 ## How to fix it?
 
-To ensure all assets load correctly in session replays
+<br />
 
-✅ **1. Enable CORS on your server**\
-Update your server’s headers to allow requests from the replay domain:
-Access-Control-Allow-Origin: [https://app.uxcam.com](https://app.uxcam.com)
+**1. Enable CORS on your server**\
+Set the following header to allow asset access from UXCam:
 
-If needed, also include:\
+```
+Access-Control-Allow-Origin: https://app.uxcam.com
+```
+
+If your assets require credentials (like cookies), also include:
+
+```
 Access-Control-Allow-Credentials: true
+```
+
 Avoid using \* for Access-Control-Allow-Origin if your assets require credentials (like cookies).
 
-✅ 2. Check Any Third-Party or CDN Assets\
-If you're hosting fonts, images, or styles via a CDN or third-party service, make sure they also allow cross-origin requests from app.uxcam.com.
+<br />
 
-✅ 3. (Optional) Use a Proxy Server\
-If you can’t change the CORS settings on the asset server, another approach is to serve those assets through your own server or a proxy that adds the required CORS headers.
+**2. Update Third-Party or CDN Asset Settings**\
+Ensure any CDN or external services hosting your fonts, images, or styles also permit access from [https://app.uxcam.com](https://app.uxcam.com).
 
-For more help with CORS, check out [MDN Web Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
+<br />
+
+**3. Use a Proxy Server (Optional)**\
+If CORS settings can’t be changed on the asset server, you can proxy the assets through your own server and attach the necessary headers.
+
+<br />
+
+> 📘 Note
+>
+> For more help with CORS, check out [MDN Web Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 
 <br />
 
