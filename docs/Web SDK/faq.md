@@ -126,3 +126,11 @@ app.use(cors({ origin: "<https://app.uxcam.com"> }));
 ```
 
 Reference: [https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+<br />
+
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
