@@ -80,16 +80,16 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 
 ## Step 2: Sending Custom Events
 
-You can use Shopify’s Liquid conditions to load JavaScript on specific pages and send custom events based on user actions.
+To track user interactions across different pages on your Shopify store, use Shopify’s Liquid syntax to conditionally inject JavaScript that triggers UXCam custom events.
 
 <br />
 
-## Example: Sending Events on Product Pages
+### Tracking Product Page Views
 
-To track interactions specific to product pages, use Liquid tags to dynamically insert product information:
+To send events when users view product pages, helps monitor whenever a product page is viewed, including the product's name, ID, and price:
 
-1. Open the **product.liquid** file under Templates.
-2. Add the following script:
+1. Open the product.liquid template under the Templates directory.
+2. Insert a script that sends a custom event using product-specific data, such as:
 
 ```javascript
 <script>
@@ -102,13 +102,14 @@ To track interactions specific to product pages, use Liquid tags to dynamically 
 </script>
 ```
 
-This will send an event whenever a product page is viewed, including the product's name, ID, and price.
-
 <br />
 
-## Example: Sending Events on the Checkout Page
+### Tracking Checkout Interactions
 
-To track checkout-specific actions, modify the checkout.liquid template:
+To capture user activity during checkout, helps monitor checkout behaviour, such as total value and number of items:
+
+1. Open the checkout.liquid template.
+2. Add a script to send an event with checkout information:
 
 ```javascript
 <script>
@@ -123,9 +124,12 @@ To track checkout-specific actions, modify the checkout.liquid template:
 
 <br />
 
-## Example: Sending a Page View Event on All Pages
+### Tracking Page Views Based on Template
 
-You can conditionally load JavaScript for specific pages in the theme.liquid file. For example:
+To send page view events depending on the type of page, helps to send different events for each page type, making your session recordings and analytics more actionable.
+
+1. Open the theme.liquid layout file.
+2. Add conditional JavaScript based on the current template:
 
 ```javascript
 <script>
@@ -149,9 +153,11 @@ You can conditionally load JavaScript for specific pages in the theme.liquid fil
 
 <br />
 
+<br />
+
 ## Step 3: User ID and Properties
 
-## Identify Users
+### Identify Users
 
 If you have a customer login system, use Liquid tags to set the user identity dynamically:
 
