@@ -33,24 +33,24 @@ To add custom JavaScript globally to your WordPress site:
 
 ### Option 2: Install a Google Tag Manager Plugin
 
-> 📘 Note
->
-> Make sure you have a Google Tag Manager account set up with your WordPress site.
-
 To add Google Tab Manager integration plugin to your WordPress site:
 
 1. Log in to your WordPress admin dashboard.
 2. Navigate to Plugins
 3. Install a plugin like “Insert Headers and Footers” or “Site Kit by Google”.
 4. Activate the plugin.
-5. Open your site in a new tab, and use the Tag Assistant (by Google) Chrome extension or GTM’s Preview mode to confirm GTM is working.
+
+> 📘 Note
+>
+> For setting up UXCam through Google Tag Manager, make sure you have a Google Tag Manager account set up with your WordPress site, and continue that installation and set up steps described in the [Google Tag Manager page](https://developer.uxcam.com/v2.0-draft/update/docs/google-tag-manager)
 
 <br />
 
-### Add the UXCam Script
+### Add the UXCam Script - Through JavaScript Plugin
 
 1. Open the plugin settings (e.g., Settings > Insert Headers and Footers).
-2. In the Global Header or Before \<body> section, paste the following script:
+2. Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
+3. In the Global Header or Before \<body> section, paste the following script, and save the changes:
 
 ```javascript
 <script type="text/javascript" defer="">
@@ -87,12 +87,9 @@ To add Google Tab Manager integration plugin to your WordPress site:
 
 <br />
 
-3. Replace YOUR\_APP\_KEY with your UXCam App Key.
-4. Save your changes.
-
 <br />
 
-## Step 2: Sending Events
+## Step 2: Sending Events through the JavaScript Plugin
 
 ## Example: Tracking Page Views
 
