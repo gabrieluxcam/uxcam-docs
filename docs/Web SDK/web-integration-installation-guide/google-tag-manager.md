@@ -155,7 +155,7 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 1. Create a New Tag for Events:
 
-* Navigate to  "Tags" in the left-hand menu, then click on "New."
+* Navigate to "Tags" in the left-hand menu, then click on "New."
 * Select 'Tag configuration' - Tag Type: "Custom HTML."
 
 <br />
@@ -181,7 +181,7 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 3. Set the Trigger:
 
-* In case you want the event to fire when a user clicks a button; Select from the list or create a trigger:
+* In case you want the event to fire when a user clicks a button; select from the list or create the trigger:
   * Click on 'Triggering' and add a new trigger by clicking on the plus (+) button
   * Select 'Click - All Elements' from the list and select 'Some clicks' option on when the trigger fires
   * Select the Click classes -> equals -> submitButton, and click 'Save'
@@ -203,13 +203,12 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 ## Step 4: Test
 
-* Use Preview mode in GTM
-* Trigger the event on your website
-* Confirm:
-  * The tag fires when expected
-  * Variables are populated correctly
-  * Events show up in UXCam (in the session timeline or event page)\
-    Once confirmed, Publish your GTM container.
+Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
+
+* The tag fires when expected
+* Variables are populated correctly
+* Events show up in UXCam (in the session timeline or event page)
+* Once confirmed, publish your GTM container.
 
 <br />
 
@@ -217,17 +216,20 @@ Read more about GTM variables [here](https://developers.google.com/tag-platform/
 
 ## Step 5: Publish
 
-* Save your tag configuration and publish the changes.
+* Publish your GTM container by clicking on 'Submit' button
+* Review the changes and click on 'Publish'
 
 <br />
 
 <br />
 
-### Final Notes
+> 📘 ### Notes
+>
+> * Make sure the UXCam script is loaded before the event fires.
+> * Always sanitize and validate dynamic values being pushed to UXCam.
+> * Use clear naming for events and properties to stay consistent in UXCam reports.
 
-* Make sure the UXCam script is loaded before the event fires.
-* Always sanitize and validate dynamic values being pushed to UXCam.
-* Use clear naming for events and properties to stay consistent in UXCam reports.
+<br />
 
 <br />
 
