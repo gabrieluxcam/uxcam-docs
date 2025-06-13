@@ -163,10 +163,8 @@ To associate session data with known users, you can dynamically set user identit
 
 **Setting User Identity and Properties**
 
-1. In your theme file (e.g., theme.liquid), insert the following script inside the \<head> or just before the closing \</body> tag.
+1. In your theme file (e.g., theme.liquid), insert the following script inside the \<head> tag.
 2. Use Liquid conditions to check for a logged-in customer and inject their details:
-
-If you have a customer login system, use Liquid tags to set the user identity dynamically:
 
 ```javascript
 <script>
@@ -184,6 +182,8 @@ If you have a customer login system, use Liquid tags to set the user identity dy
 
 <br />
 
-# Conclusion
+<br />
 
-This concludes the documentation for integrating the Web SDK. If you have any questions or need further assistance, please contact [team@uxcam.com](mailto:team@uxcam.com).
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
