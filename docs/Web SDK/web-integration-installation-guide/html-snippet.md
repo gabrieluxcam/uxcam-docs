@@ -1,5 +1,5 @@
 ---
-title: Install with code snippet
+title: Install Code Snippet
 deprecated: false
 hidden: false
 metadata:
