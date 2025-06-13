@@ -98,23 +98,17 @@ If CORS settings can’t be changed on the asset server, you can proxy the asset
 
 <br />
 
-### How to Allow UXCam to Access Your Assets via CORS
-
-You must configure your server or cloud storage to include this CORS rule:
-
-```Text http
-Access-Control-Allow-Origin: https://app.uxcam.com
-```
+## CORS Setup Examples
 
 <br />
 
-### If Your Assets Are Hosted on AWS S3
+### Using AWS S3
 
 For Amazon S3 buckets, update the CORS configuration:
 
-1. Go to AWS S3 Console.
-2. Navigate to Permissions > CORS Configuration.
-3. Add this JSON rule
+1. Open your AWS S3 Console
+2. Navigate to: Permissions > CORS Configuration
+3. Add the following JSON:
 
 ```Text JSON
 [
@@ -127,17 +121,17 @@ For Amazon S3 buckets, update the CORS configuration:
 ]
 ```
 
-4. Save changes and test if styles now load in UXCam replays.
+4. Save and verify if assets now load in replays.
 
 Reference: [https://repost.aws/knowledge-center/s3-configure-cors](https://repost.aws/knowledge-center/s3-configure-cors)
 
 <br />
 
-### If Your Assets Are Hosted on a Custom Web Server
+### Using a Custom Web Server
 
-If you host assets on your own web server (Apache or Node.js), modify the server settings:
+In case you host assets on your own web server (Apache or Node.js), modify the server settings:
 
-✔ For Apache (.htaccess file)
+**For Apache (.htaccess file)**
 
 ```Text Apache
 <IfModule mod_headers.c>
@@ -145,7 +139,7 @@ If you host assets on your own web server (Apache or Node.js), modify the server
 </IfModule>
 ```
 
-✔ For Express.js (Node.js)
+**Node.js (Express)**
 
 ```javascript
 const cors = require('cors');  
