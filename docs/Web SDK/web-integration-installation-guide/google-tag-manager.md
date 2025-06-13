@@ -29,7 +29,7 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 2. Configure the Tag:
 
 * Select tag configuration - Tag Type: "Custom HTML."
-* Replace `Your_App_Key` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
+* Replace `'Your_App_Key'` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
 * Paste the UXCam script into the HTML section, as shown below:
 
 ```html
