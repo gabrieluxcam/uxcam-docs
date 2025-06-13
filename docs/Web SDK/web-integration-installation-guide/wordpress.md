@@ -25,7 +25,7 @@ You can inject code snippets into your WordPress site by either installing a Jav
 To add custom JavaScript globally to your WordPress site:
 
 1. Log in to your WordPress admin dashboard.
-2. Navigate to Plugins > Add New.
+2. Navigate to Plugins
 3. Search for and install a plugin that allows you to add custom JavaScript and CSS, such as Insert Headers and Footers or similar plugins.
 4. Activate the plugin.
 
@@ -33,7 +33,17 @@ To add custom JavaScript globally to your WordPress site:
 
 ### Option 2: Install a Google Tag Manager Plugin
 
-<br />
+> 📘 Note
+>
+> Make sure you have a Google Tag Manager account set up with your WordPress site.
+
+To add Google Tab Manager integration plugin to your WordPress site:
+
+1. Log in to your WordPress admin dashboard.
+2. Navigate to Plugins
+3. Install a plugin like “Insert Headers and Footers” or “Site Kit by Google”.
+4. Activate the plugin.
+5. Open your site in a new tab, and use the Tag Assistant (by Google) Chrome extension or GTM’s Preview mode to confirm GTM is working.
 
 <br />
 
