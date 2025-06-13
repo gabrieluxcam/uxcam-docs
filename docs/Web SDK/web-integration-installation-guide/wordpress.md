@@ -91,7 +91,7 @@ To add Google Tab Manager integration plugin to your WordPress site:
 
 ## Step 2: Sending Events through the JavaScript Plugin
 
-## Example: Tracking Page Views
+**Tracking Page Views**
 
 To track page views globally, use the following script:
 
@@ -107,9 +107,11 @@ To track page views globally, use the following script:
 </script>
 ```
 
-## Example: Tracking Button Clicks
+<br />
 
-To track button clicks (e.g., a "Buy Now" button), add this script globally:
+**Tracking Button Clicks**
+
+To track when users click a specific button (e.g., “Buy Now”), use this script and adjust the selector to match your button, and add this script globally:
 
 ```javascript
 <script>
@@ -128,7 +130,9 @@ To track button clicks (e.g., a "Buy Now" button), add this script globally:
 </script>
 ```
 
-# Step 3: Setting User Properties
+<br />
+
+## Step 3: Setting User Properties
 
 If your website includes logged-in users, you can set user identity and properties dynamically:
 
