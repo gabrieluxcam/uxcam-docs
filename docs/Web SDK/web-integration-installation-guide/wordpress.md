@@ -14,11 +14,13 @@ Integrate the UXCam Web SDK into your WordPress site and start tracking custom u
 
 <br />
 
-## Step 1:Adding UXCam Web SDK to WordPress
+## Step 1: Adding UXCam Web SDK to WordPress
+
+You can inject code snippets into your WordPress site by either installing a JavaScript injection plugin or using a Google Tag Manager integration plugin.
 
 <br />
 
-### Install a JavaScript Plugin
+### Option 1: Install a JavaScript Plugin
 
 To add custom JavaScript globally to your WordPress site:
 
@@ -26,6 +28,12 @@ To add custom JavaScript globally to your WordPress site:
 2. Navigate to Plugins > Add New.
 3. Search for and install a plugin that allows you to add custom JavaScript and CSS, such as Insert Headers and Footers or similar plugins.
 4. Activate the plugin.
+
+<br />
+
+### Option 2: Install a Google Tag Manager Plugin
+
+<br />
 
 <br />
 
