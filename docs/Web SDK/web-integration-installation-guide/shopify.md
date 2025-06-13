@@ -10,16 +10,16 @@ metadata:
 next:
   description: ''
 ---
-This guide will walk you through integrating the UXCam Web SDK into your Shopify website and sending custom events using Liquid tags. Follow the steps below to set up the SDK and capture key user interactions.
+Integrate the UXCam Web SDK into your Shopify site and track custom events using Liquid tags by following the steps below. Liquid tags let you insert Shopify data (like product or customer info) into JavaScript. This ensures events sent to UXCam are relevant and personalized.
 
-## Prerequisites
+<br />
 
-* An active Shopify account with access to theme editing.
-* Your UXCam App Key. You can find this in your UXCam dashboard under Settings > Project Settings.
+### Prerequisites
 
-> 📘 **Note**
->
-> Liquid tags allow you to dynamically insert Shopify data (such as product details or customer information) into your JavaScript code. This ensures that events sent to UXCam are accurate and relevant to the context of the page being viewed. They are particularly useful for tracking user-specific data and page-specific events.
+* Active Shopify account with theme editing access
+* UXCam App Key (found in UXCam dashboard under Settings > Project Settings)
+
+<br />
 
 <br />
 
