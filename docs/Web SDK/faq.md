@@ -10,13 +10,13 @@ metadata:
 next:
   description: ''
 ---
-> 🚧 You've Integrated but did not receive sessions?
+> 🚧 You've Installed UXCam but did not receive sessions yet?
 >
 > Please ensure that:
 >
 > * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your [UXCam platform](https://app.uxcam.com/integration)
 > * Your **plan includes web session recording.**\
->   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
+>   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team via [team@uxcam.com](mailto:team@uxcam.com).
 
 <br />
 
