@@ -33,9 +33,13 @@ Page definition allows you to define your pages by setting up matching rules for
 
 <br />
 
-> 👍 **Tip**: We highly recommend that you always define your pages if you have Dynamic path parameters or fragments on your URLs.
+> 👍 **Tip**
+>
+> We highly recommend that you always define your pages if you have Dynamic path parameters or fragments on your URLs.
 
-> 📘 **Note**: If screen names have not been defined, UXCam will display the URL path as ‘screen name.
+> 📘 **Note**
+>
+> If screen names have not been defined, UXCam will display the URL path as ‘screen name.
 
 <br />
 
