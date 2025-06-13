@@ -10,11 +10,15 @@ metadata:
 next:
   description: ''
 ---
-This guide will walk you through integrating the UXCam Web SDK into your WordPress website, tracking user events, and optionally integrating it via Google Tag Manager as well. Follow the steps below to start capturing valuable user interaction data.
+Integrate the UXCam Web SDK into your WordPress site and start tracking custom user events by following the steps below. You can implement the SDK directly or via Google Tag Manager, depending on your setup. This allows you to capture relevant user interactions and gain deeper insights into visitor behaviour.
 
-# Step 1:Adding UXCam Web SDK to WordPress
+<br />
 
-## 1. Install a JavaScript Plugin
+## Step 1:Adding UXCam Web SDK to WordPress
+
+<br />
+
+### Install a JavaScript Plugin
 
 To add custom JavaScript globally to your WordPress site:
 
@@ -23,7 +27,9 @@ To add custom JavaScript globally to your WordPress site:
 3. Search for and install a plugin that allows you to add custom JavaScript and CSS, such as Insert Headers and Footers or similar plugins.
 4. Activate the plugin.
 
-## 2) Add the UXCam Script
+<br />
+
+### Add the UXCam Script
 
 1. Open the plugin settings (e.g., Settings > Insert Headers and Footers).
 2. In the Global Header or Before \<body> section, paste the following script:
@@ -66,7 +72,9 @@ To add custom JavaScript globally to your WordPress site:
 3. Replace YOUR\_APP\_KEY with your UXCam App Key.
 4. Save your changes.
 
-# Step 2: Sending Events
+<br />
+
+## Step 2: Sending Events
 
 ## Example: Tracking Page Views
 
