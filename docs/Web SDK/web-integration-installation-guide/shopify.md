@@ -84,7 +84,7 @@ To track user interactions across different pages on your Shopify store, use Sho
 
 ### Tracking Product Page Views
 
-To send events when users view product pages, helps monitor whenever a product page is viewed, including the product's name, ID, and price:
+To send events when users view pages, helps monitor whenever a product page is viewed, including the product's name, ID, and price:
 
 1. Open the product.liquid template under the Templates directory.
 2. Insert a script that sends a custom event using product-specific data, such as:
