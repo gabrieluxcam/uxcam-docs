@@ -87,8 +87,6 @@ To add Google Tab Manager integration plugin to your WordPress site:
 
 <br />
 
-<br />
-
 ## Step 2: Sending Events through the JavaScript Plugin
 
 **Tracking Page Views**
@@ -134,6 +132,10 @@ To track when users click a specific button (e.g., “Buy Now”), use this scri
 
 ## Step 3: Setting User Properties
 
+To associate session data with known users, you can dynamically set user identity and attributes using Liquid tags. This is especially useful if your Shopify store includes a customer login system. This ensures UXCam sessions are tied to individual users, enabling more precise filtering, retention tracking, and user-level insights.
+
+<br />
+
 If your website includes logged-in users, you can set user identity and properties dynamically:
 
 ```javascript
@@ -148,12 +150,6 @@ If your website includes logged-in users, you can set user identity and properti
   });
 </script>
 ```
-
-# Google Tag Manager
-
-You can integrate Google Tag Manager (GTM) into your WordPress site by searching for a GTM plugin and adding your GTM container ID. Once the plugin is configured, your GTM scripts will be integrated with your website.
-
-<br />
 
 <br />
 
