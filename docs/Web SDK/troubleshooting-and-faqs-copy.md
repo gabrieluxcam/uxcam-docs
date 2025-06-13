@@ -7,15 +7,21 @@ metadata:
 ---
 ### 1. What defines the beginning and end of a session?
 
-The session starts as soon as the page loads and the WebSDK begins recording. There is no inactivity period per se; however, if there is no **incoming data**\* from the client for 3 minutes, the session is considered finished, and the recording is uploaded.
+A session begins as soon as the page loads and the UXCam Web SDK starts recording. There’s no defined inactivity timeout, but if no data is received from the client for 3 minutes, the session is automatically ended and the recording is uploaded.
 
-\*Incoming data = No internet connection, the OS being suspended or the browser/tab being closed.
+<br />
+
+**“No data” can mean:**
+
+* No internet connection
+* The device is suspended (e.g., sleep mode)
+* The browser or tab is closed
 
 <br />
 
 ### 2. Can events be sent directly from the script?
 
-While clicks are captured as gestures by default, you can send custom events directly from the script by adding event listeners. For example:
+Yes. While UXCam captures click gestures by default, you can send custom events manually using JavaScript event listeners. In this example, a custom event named my\_btn\_clicked is sent whenever the button is clicked.
 
 ```html
 <button id="mybtn">Click me</button>
@@ -26,13 +32,11 @@ button.addEventListener('click', () => uxc.event('my_btn_clicked'));
 </script>
 ```
 
-In this example, when the button with the ID mybtn is clicked, a custom event named my\_btn\_clicked is sent to UXCam.
-
 <br />
 
 ### 3. Why is my email not occluded automatically?
 
-The email input will only be occluded if the input type is explicitly set to email. If the input field has its type set to text instead of email, it will not be occluded by default.
+For automatic occlusion to work, the input field must have its type set to "email". If it’s set to "text" or another type, UXCam will not hide it by default.
 
 For email or any other input type that should be occluded automatically, please verify that the type is set to any of the options mentioned in the occlusion section. [Auto-occlusion](https://developer.uxcam.com/docs/installation#default-occlusion)
 
