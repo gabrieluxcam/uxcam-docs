@@ -23,9 +23,11 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 
 <br />
 
-# Step 1: Adding UXCam Web SDK to Shopify
+## Step 1: Adding UXCam Web SDK to Shopify
 
-## 1. Access the Shopify Theme Editor
+<br />
+
+### Access the Shopify Theme Editor
 
 1. Log in to your Shopify Admin.
 2. Go to Online Store > Themes.
@@ -35,7 +37,7 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 
 <br />
 
-## 2. Add the Web SDK Script
+### Add the Web SDK Script
 
 1. Replace `'Your_App_Key'` in the following HTML code with the App Key from your [UXCam platform](https://app.uxcam.com/integration)
 2. Navigate to the Layout folder, locate the theme.liquid file, and add the following script before the closing \</head> tag:
@@ -73,20 +75,21 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 </script>
 ```
 
-3. Replace **YOUR\_APP\_KEY** with your actual UXCam App Key.
-4. Save the changes.
+3. Save the changes.
+
+<br />
 
 > 📘 **Note**
 >
-> **Note**
->
-> Important:
->
 > Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.
 
-# Step 2: Sending Custom Events
+<br />
+
+## Step 2: Sending Custom Events
 
 You can use Shopify’s Liquid conditions to load JavaScript on specific pages and send custom events based on user actions.
+
+<br />
 
 ## Example: Sending Events on Product Pages
 
@@ -108,6 +111,8 @@ To track interactions specific to product pages, use Liquid tags to dynamically 
 
 This will send an event whenever a product page is viewed, including the product's name, ID, and price.
 
+<br />
+
 ## Example: Sending Events on the Checkout Page
 
 To track checkout-specific actions, modify the checkout.liquid template:
@@ -122,6 +127,8 @@ To track checkout-specific actions, modify the checkout.liquid template:
   });
 </script>
 ```
+
+<br />
 
 ## Example: Sending a Page View Event on All Pages
 
@@ -147,7 +154,9 @@ You can conditionally load JavaScript for specific pages in the theme.liquid fil
 </script>
 ```
 
-# Step 3: User ID and Properties
+<br />
+
+## Step 3: User ID and Properties
 
 ## Identify Users
 
@@ -166,6 +175,8 @@ If you have a customer login system, use Liquid tags to set the user identity dy
   });
 </script>
 ```
+
+<br />
 
 # Conclusion
 
