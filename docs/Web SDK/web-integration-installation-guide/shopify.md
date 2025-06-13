@@ -76,8 +76,6 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 
 <br />
 
-<br />
-
 ## Step 2: Sending Custom Events
 
 To track user interactions across different pages on your Shopify store, use Shopify’s Liquid syntax to conditionally inject JavaScript that triggers UXCam custom events.
@@ -153,8 +151,6 @@ To send page view events depending on the type of page, helps to send different 
 
 <br />
 
-<br />
-
 ## Step 3: User ID and Properties
 
 ### Identify Users
@@ -179,8 +175,6 @@ To associate session data with known users, you can dynamically set user identit
   });
 </script>
 ```
-
-<br />
 
 <br />
 
