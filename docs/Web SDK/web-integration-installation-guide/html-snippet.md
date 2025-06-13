@@ -66,3 +66,9 @@ metadata:
 * [Logging Custom Event](https://developer.uxcam.com/v2.0-draft/update/docs/logging-custom-event#/)
 * [Configure Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
 * [Define App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
+
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
