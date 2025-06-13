@@ -223,7 +223,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-> 📘 ### Notes
+> 📘 Notes
 >
 > * Make sure the UXCam script is loaded before the event fires.
 > * Always sanitise and validate dynamic values being pushed to UXCam.
