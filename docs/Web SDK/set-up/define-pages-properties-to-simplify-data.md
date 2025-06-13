@@ -43,8 +43,6 @@ Page definition allows you to define your pages by setting up matching rules for
 
 <br />
 
-<br />
-
 ## **Accessing the Page Definition Section**
 
 Without any dev dependency, with simple and intuitive UI, immediate changes and rule testing capabilities.
@@ -87,8 +85,6 @@ To group URLs that include dynamic path parameters under a single page, follow t
 
 <br />
 
-<br />
-
 ## **Tagging Fragments as distinct pages**
 
 * Enter the URL that represents the page structure you want to define.
@@ -115,8 +111,6 @@ If you want to replace long URLs with short, customized page names for clearer r
 
 <br />
 
-<br />
-
 ## **Cleaning pages name**
 
 If your URLs contain **fragments**, and **dynamic path parameters**, and you also want a clean page name, you can solve them all at once using Page Definition.
@@ -130,8 +124,6 @@ Follow these steps:
 5. Review and test the rule to ensure it applies correctly.
 
 <Image align="center" src="https://files.readme.io/59f2a79f3cb28eec613fe37424467694e93d248a99f9d8d7a878915220709964-Screenshot_2025-03-04_at_08.18.23.png" />
-
-<br />
 
 <br />
 
