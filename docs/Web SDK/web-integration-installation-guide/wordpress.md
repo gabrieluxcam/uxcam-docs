@@ -18,15 +18,15 @@ This guide will walk you through integrating the UXCam Web SDK into your WordPre
 
 To add custom JavaScript globally to your WordPress site:
 
-1. Log in to your WordPress admin dashboard. 
+1. Log in to your WordPress admin dashboard.
 2. Navigate to Plugins > Add New.
 3. Search for and install a plugin that allows you to add custom JavaScript and CSS, such as Insert Headers and Footers or similar plugins.
 4. Activate the plugin.
 
-## 2. Add the UXCam Script
+## 2) Add the UXCam Script
 
 1. Open the plugin settings (e.g., Settings > Insert Headers and Footers).
-2. In the Global Header or Before &lt;body&gt; section, paste the following script:
+2. In the Global Header or Before \<body> section, paste the following script:
 
 ```javascript
 <script type="text/javascript" defer="">
@@ -126,6 +126,10 @@ If your website includes logged-in users, you can set user identity and properti
 
 You can integrate Google Tag Manager (GTM) into your WordPress site by searching for a GTM plugin and adding your GTM container ID. Once the plugin is configured, your GTM scripts will be integrated with your website.
 
-## Conclusion
+<br />
 
-This concludes the documentation for integrating the Web SDK. If you have any questions or need further assistance, please contact [team@uxcam.com](mailto:team@uxcam.com).
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
