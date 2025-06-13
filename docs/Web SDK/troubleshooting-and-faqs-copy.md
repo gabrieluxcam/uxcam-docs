@@ -47,3 +47,11 @@ Common reasons why styles may not load:
 * The resource no longer exists: It was part of a previous deployment and is no longer hosted on your server.
 * The resource is inaccessible: It may require authentication or be restricted to an internal network.
 * The resource is blocked by the browser due to CORS: Browsers enforce cross-origin security checks, preventing UXCam from loading your assets if CORS is not properly configured.
+
+<br />
+
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
