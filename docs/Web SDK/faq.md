@@ -14,7 +14,7 @@ next:
 >
 > Please ensure that:
 >
-> * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your UXCam platform
+> * You've **replaced 'Your\_App\_Key'** at the bottom of the snippet with the app key located in your [UXCam platform](https://app.uxcam.com/integration)
 > * Your **plan includes web session recording.**\
 >   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team.
 
