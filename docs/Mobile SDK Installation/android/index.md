@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -142,7 +142,7 @@ You've successfully integrated UXCam and sent some sessions, great job! 🎉 But
     > Review Automatic or Manual Tagging
   </Card>
 
-  <Card title="Mask PII Data" icon="fa-credit-card">
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
     Protect Your Users’ Privacy and PII Data
 
     > Mask or Blur Screens, Views and Fields
