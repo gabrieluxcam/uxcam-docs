@@ -3,7 +3,7 @@ title: Opt-in / Opt-out
 deprecated: false
 hidden: false
 metadata:
-  robots: noindex
+  robots: index
 ---
 The SDK by default opts-in users for UXCam recording on app installs. You can now disable and enable recording at runtime by the following API.
 
