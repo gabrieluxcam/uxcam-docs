@@ -14,81 +14,149 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-So you've got your account set up, now let's make sure your Android app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)            \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
-## What Does a Successful Integration Look Like?
+<JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
-With a solid integration, you'll have a complete picture of how users interact with your app. From screen journeys and user behaviours to session replays and user properties, you'll be able to understand and enhance every aspect of your product's user experience. Follow along with this quick guide, and you'll be up and running in no time.
+# Integration Journey at a Glance
 
-<br />
+| Step                 | Task                                                                                                    | Goal                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
+| <strong>1</strong>   | <strong>Customise SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
+| <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
+| <strong>2</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
+| <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
+| <strong>5 ★</strong> | <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA      |
 
-<SimpleStepper>
-  <SimpleStep header="Step 1: Install And Initialize">
-    Add the UXCam SDK to your project, obtain your app key from the UXCam dashboard, and initialize the SDK in your app’s entry point.
-  </SimpleStep>
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
-  <SimpleStep header="Step 2: Customize Your Data">
-    Configure screen tagging, custom events, user identities, their properties and occlusion of any sensitive views or data shown in your app.
-  </SimpleStep>
+<Accordion title="Key Benefits After Setup" icon="fa-info-circle">
+  * **Session Replay + Heat-maps** – watch every UX moment in context.
+  * **Advanced Product Analytics** – funnels, retention, feature adoption.
+  * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
+  * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
+</Accordion>
 
-  <SimpleStep header="Step 3: Test And Review">
-    Run through critical user journeys in a test build to verify that sessions are recorded and events are logged correctly and iteratively refine your event tags, screen names, and occlusion rules based on the insights you uncover.
-  </SimpleStep>
-</SimpleStepper>
+<Accordion title="Tips Before You Begin" icon="fa-bolt">
+  * Create **separate keys** for *debug* & *production* to keep data clean.
+  * Use **feature flags** to toggle UXCam in staging builds.
+  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
+</Accordion>
 
-<br />
+***
 
-### Quick Start: Only a Couple of Lines of Code
+# Android SDK · Quickstart
+
+## Step 1: Find your App Key 🔑
+
+### 1.1: Grab your key
+
+If you don't already have it, grab it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+
+<GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
+
+### 1.2: Keep it out of source control:
+
+add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time so you never hard-code secrets
+
+***
+
+## Step 2: Add the SDK
 
 [![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
 
-Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
+In your module's **build.gradle**, add:
 
-#### Adding The Dependencies:
+```groovy build.gradle (app)
+repositories {
+  maven { url 'https://sdk.uxcam.com/android/' }
+}
+dependencies {
+  implementation 'com.uxcam:uxcam:3.+'
+}
+```
 
-1. In the **module's build.gradle** file add UXCam:
-   ```java
-   repositories {
-     maven{ 
-        url 'https://sdk.uxcam.com/android/' 
-     } 
-   } 
-   dependencies { 
-        implementation 'com.uxcam:uxcam:3.+' 
-   }
-   ```
+***
 
-#### Initializing UXCam:
+## Step 3: Start Recording
 
-1. In your launcher activity, import UXCam:
-   ```java
-   import com.uxcam.UXCam;
-   import com.uxcam.datamodel.UXConfig;
-   ```
+From your Application Class or Launcher Activity, add the configuration and start the SDK.
 
-2. Now, you need to create a configuration object with desired settings and then start UXCam using this configuration object:
+<GitHubCallout type="important">Make sure to start the SDK at the earliest possible Context.</GitHubCallout>
 
-   ```java Kotlin
-   val config = UXConfig.Builder("yourAppKey")
-       .build()
-   ```
-   ```coffeescript Java
-   UXConfig config = new UXConfig.Builder("yourAppKey").build();
-   ```
+```kotlin Kotlin
+import com.uxcam.UXCam
+import com.uxcam.datamodel.UXConfig
 
-   ```java
-   UXCam.startWithConfiguration(config);
-   ```
+class MyApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    val config = UXConfig.Builder(YOUR_UXCAM_KEY).build()
+    UXCam.startWithConfiguration(config)
+}
+```
+```java Java
+import com.uxcam.UXCam;
+import com.uxcam.datamodel.UXConfig;
 
-<br />
 
-> 👍 As Simple As That!
->
-> This will complete the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
->
-> We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
+public class MyApp extends Application { 
+@Override
+public void onCreate() {
+super.onCreate();
+UXConfig config = new UXConfig.Builder(YOUR_UXCAM_KEY).build();
+UXCam.startWithConfiguration(config);
+ }
+}
+```
 
-## Next Steps ➡️
+<GitHubCallout type="success">This completes the most basic integration process.                          Watch Logcat for **“Verification successful”** – your first session should appear on the UXCam dashboard within \~2 minutes.</GitHubCallout>
 
-You've successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let's go further into setting things up.
+***
+
+# Advanced SDK Configuration
+
+You can control how the SDK is configured via the configuration object you create, the available parameters are below:
+
+## Want to Debug?
+
+Use our configuration option `.enableIntegrationLogging(bool)` to view more verbose logs in your Logcat, this will help you verify everything and pinpoint possible hurdles you face down the line.
+
+## Rest of Options
+
+* `.enableAutomaticScreenNameTagging(bool)`  True by Default. Set to false if you want to disable automatic screen tagging.
+* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here]().
+* `.enableCrashHandling(bool)` True by Default. Set to false if you want to disable crash capture.
+* `.enableMultiSessionRecord(bool)` True by Default. Set to false to stop any session after the first one from being recorded.
+
+***
+
+# Next Steps
+
+You've successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let's go further into setting things up.
+
+<Cards columns={4}>
+  <Card title="Tag Screens" href="https://developer.uxcam.com/v2.0-draft/update/docs/screen-tagging-copy#/" icon="fa-mobile">
+    Take Full Advantage of Heatmaps and Screen Analytics
+
+    > Review Automatic or Manual Tagging
+  </Card>
+
+  <Card title="Mask PII Data" icon="fa-credit-card">
+    Protect Your Users’ Privacy and PII Data
+
+    > Mask or Blur Screens, Views and Fields
+  </Card>
+
+  <Card title="Assign User IDs" icon="fa-user">
+    Get The Full Picture with User Analytics
+
+    > Assign Custom User IDs and Properties
+  </Card>
+
+  <Card title="Send Events" icon="fa-question">
+    Deeper Insights of Your Users' interactions
+
+    > Send Events and Add Properties
+  </Card>
+</Cards>
