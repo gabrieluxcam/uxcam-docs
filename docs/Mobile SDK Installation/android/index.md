@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -154,7 +154,7 @@ You've successfully integrated UXCam and sent some sessions, great job! 🎉 But
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" icon="fa-question">
+  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events#/" icon="fa-question">
     Deeper Insights of Your Users' interactions
 
     > Send Events and Add Properties
