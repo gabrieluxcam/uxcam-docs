@@ -10,6 +10,15 @@ metadata:
     info on tagged screen data.
   robots: index
 ---
+### V. 3.6.42 - Jun 11, 2025
+
+* Fix: Google ads not being clickable
+* Fix: Fixed tag on Integration log
+* Fix: Crash due to PixelCopyRequest
+* Fix: Session shows 00 time stamp
+* Fix: Delayed Occlusion elements make PII Data show in screen transitions
+* Fix: Flutter Occluded view is being visible while scrolling or navigating
+
 ### V. 3.6.41 - April 29, 2025
 
 * Fixed occlusion being removed if bottom sheet is presented
