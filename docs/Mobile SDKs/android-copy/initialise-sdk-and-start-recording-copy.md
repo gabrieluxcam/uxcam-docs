@@ -151,19 +151,23 @@ public class MainActivity extends AppCompatActivity {
 
 ## 4 Verify the integration
 
-### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `uxcam`).
+<br />
+
+### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `UXCam tag`).
 
 You should see:
 
-* `Verification successful`
-* `Session recording started`
+* `Session Verification for [your appKey] succeeded`
+* `Session and Screen Recording has started`
 
 ### 4.2 **Background the app** (don’t terminate the process).\\
 
 You should see upload logs:
 
-* `Session upload started` / `Video upload started`
-* `Session upload successful` / `Video upload successful`
+* `Started uploading session file`
+* `video.zip upload has succeeded.`
+* `data.zip upload has succeeded.`
+* `UXCam [version] : session data sent successfully`
 
 ### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
 
