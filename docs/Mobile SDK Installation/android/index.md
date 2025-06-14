@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -148,7 +148,7 @@ You've successfully integrated UXCam and sent some sessions, great job! 🎉 But
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" icon="fa-user">
+  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties#/" icon="fa-user">
     Get The Full Picture with User Analytics
 
     > Assign Custom User IDs and Properties
