@@ -1,5 +1,5 @@
 ---
-title: '> Changelog'
+title: Android SDK Changelog
 deprecated: false
 hidden: false
 metadata:
