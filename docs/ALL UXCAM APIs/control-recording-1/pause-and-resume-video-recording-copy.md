@@ -19,44 +19,14 @@ Use this API in case you want to stop the screen recording of a session indefini
 * Avoid recording some parts of the app that are not relevant.
 * Omit some screens and gestures that you want to avoid in your recordings.
 
-```swift iOS
-UXCam.pauseScreenRecording()
-```
 ```java Android
 UXCam.pauseScreenRecording();
-```
-```javascript React Native
-RNUxcam.pauseScreenRecording: () => void
-```
-```javascript Flutter
-void pauseScreenRecording()
-```
-```csharp Xamarin
-void UXCam.PauseScreenRecording()
-```
-```javascript Cordova
-UXCam.pauseScreenRecording: () => void
 ```
 
 ### Resume Video Recording
 
 Use this API to resume the recording of the screen and gestures where the recording has been previously paused.
 
-```swift iOS
-UXCam.resumeScreenRecording()
-```
 ```java Android
 UXCam.resumeScreenRecording();
-```
-```javascript React Native
-RNUxcam.resumeScreenRecording: () => void
-```
-```javascript Flutter
-void resumeScreenRecording()
-```
-```csharp Xamarin
-void UXCam.ResumeScreenRecording()
-```
-```javascript Cordova
-UXCam.resumeScreenRecording: () => void
 ```
