@@ -1,6 +1,6 @@
 ---
-title: Occlude Sensitive Data
-excerpt: ''
+title: Mask PII & Sensitive Content
+excerpt: Protect your users’ privacy before the first session hits the dashboard.
 deprecated: false
 hidden: false
 metadata:
