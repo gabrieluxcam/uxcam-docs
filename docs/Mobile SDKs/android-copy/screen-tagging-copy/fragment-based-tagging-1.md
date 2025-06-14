@@ -1,7 +1,7 @@
 ---
 title: Fragment Based Tagging
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
