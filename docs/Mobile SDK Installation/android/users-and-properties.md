@@ -1,5 +1,5 @@
 ---
-title: Set user IDs and properties
+title: Set User Identity & Properties
 excerpt: ''
 deprecated: false
 hidden: false
@@ -10,60 +10,93 @@ metadata:
 next:
   description: ''
 ---
-By default, UXCam generates a random alias name to identify your users based on the Install ID. We also show you other properties about the user such as location, device used, network type, and app version. However, you can send up to 100 additional user properties with our API.
+## Identify Users Reliably with `setUserIdentity`
 
-**Sending user properties allows you to:**
+UXCam gives every fresh install a random alias name based on unique **Install ID**.\
+That works—until:
 
-Gain deeper insights into user behaviour, enabling you to create segments and compare behaviour across different audiences.
+* The same person **re-installs** the app or shares the same device with another user.
+* The same account signs-in on **multiple devices** (one Install ID per device).
 
-* Easily identify users using a unique User ID, which can help you diagnose user issues and offer better support.
-* Track users across multiple devices, ensuring a unified view of their journey.
-* Have a better understanding of your users’ actions, create segments, and discover how behavior changes between different audiences.
+**Fix:** call **`UXCam.setUserIdentity()`once per session as soon as the real user is known** (login, sign‑up, deep‑link token, silent auth).
 
-We recommend avoiding the use of Personally Identifiable Information (PII), such as email addresses or phone numbers. Instead, use a unique User ID to identify your users in UXCam. If you need to send PII, you must sign a Data Processing Agreement (DPA) with us. Please contact [team@uxcam.com](mailto:team@uxcam.com) for further discussion.
+***
 
-<br />
+### When to call `setUserIdentity`
 
-## Set Custom User Identity
+| Trigger                                          | Why it works                                                       |
+| ------------------------------------------------ | ------------------------------------------------------------------ |
+| **Immediately after successful login / sign‑up** | Backend‑verified identifier—safe to map to the Install ID.         |
+| **Every app launch** (recommended, idempotent)   | Catches silent/S‑SO log‑ins and reinstalls; the call is debounced. |
 
-You can replace the default alias with your own user ID using this method:
+> One call per session is enough. After UXCam links **Install ID ↔︎ User ID**, the value persists; extra calls noop.
 
-```java Android
-UXCam.setUserIdentity(String userIdentity);
+***
+
+### Code snippet
+
+```java
+// After the auth flow succeeds
+String uid = authResult.getUserId();      // e.g. "user_42"
+UXCam.setUserIdentity(uid);
 ```
 
-**API Parameter:**
-
-`userIdentity`: The custom identifier for the user.
-
-<br />
-
-## Sending Custom User Information
-
-Additional custom user properties help you group sessions, users, or events based on specific attributes such as roles, company names, subscription types, and more. You can use this data to refine your analysis and tailor user experiences effectively.
-
-**Example User Properties:**
-
-* Role
-* Company Name
-* Acquisition Source
-* Subscription Type
-* Loyalty Membership
-* NPS Score or Rating
-
-```coffeescript Android
-setUserProperty(String propertyName, String value);
-
-// Example
-UXCam.setUserProperty("role", "user-role");
-UXCam.setUserProperty("subscription_type", "premium");
-UXCam.setUserProperty("company_name", "your-company");
-
+```kotlin
+UXCam.setUserIdentity(authResult.userId)
 ```
 
-**API Parameters:**
+***
 
-`propertyName`: The name of the property to attach to the user.\
-`value`: A value to associate with the property. String or Number are accepted for value.
+## Enrich Users with Custom Properties
 
-> 🚧 Note: User IDs and properties are case sensitive. Please ensure consistent naming conventions when using them.
+Attach up to **100** key–value pairs per user to segment funnels and heat‑maps by plan, cohort, geography, and more.
+
+```java
+UXCam.setUserProperty("plan",            "pro");
+UXCam.setUserProperty("signup_source",   "google_ads");
+UXCam.setUserProperty("nps_score",       "9");  // Cast numbers to strings
+```
+
+| **Best-practice**                    | **Why**                                                                  |
+| ------------------------------------ | ------------------------------------------------------------------------ |
+| Use stable, **non‑PII IDs / enums**  | Avoid GDPR headaches; you can always map to an email in your own DB.     |
+| Prefer **snake\_case keys**          | Prevents duplicates (`planType` vs `plan_type`).                         |
+| Update **only when a value changes** | The SDK overwrites the previous value—no need to resend unchanged props. |
+
+> 🚧 Need to send PII (e.g. email)? Sign a DPA with UXCam first: [team@uxcam.com](mailto:team@uxcam.com).
+
+***
+
+## Verify Your Work
+
+1. Log in with a test account on a debug build.
+2. Wait for the session to upload.
+3. In the Dashboard, open **Users → Search** and enter the test *User ID*.
+4. You should see **one merged user** with sessions from all devices and reinstalls.
+
+If the user is missing:
+
+* Check Logcat for `UXCam: setUserIdentity called with ...`.
+* Ensure the call runs **after** `UXCam.startWithConfiguration()`.
+* Confirm the ID is **non‑null & non‑empty** (empty strings are ignored).
+
+***
+
+## Troubleshooting Cheat‑Sheet
+
+| Issue                           | Likely cause                                   | Fix                                                             |
+| ------------------------------- | ---------------------------------------------- | --------------------------------------------------------------- |
+| Two records for the same user   | Different casing (`User42` vs `user42`)        | Convert IDs to lower‑case before sending.                       |
+| User disappears after reinstall | `setUserIdentity` only called on first install | Also call it on every app launch or after silent token refresh. |
+| Property not visible            | Sent as `int`; dashboard expects strings       | Cast all numeric values to strings.                             |
+
+***
+
+## QA Checklist
+
+* `UXCam.setUserIdentity()` fires **once per session** after auth.
+* Key properties (`plan`, `signup_source`, …) appear under **user properties**.
+* No PII stored unless a DPA is in place.
+* Re‑install the app → first session links correctly after login.
+
+***
