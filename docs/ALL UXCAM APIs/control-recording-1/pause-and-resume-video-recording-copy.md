@@ -1,5 +1,5 @@
 ---
-title: Pause and Resume Video Recording (COPY)
+title: Pause and Resume Video Recording
 deprecated: false
 hidden: false
 metadata:
