@@ -39,7 +39,7 @@ dependencies {
 
 ### 2.1 **Grab the key** in **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
-> **Tip ✏️**  Create separate keys for **debug** and **production** to keep data clean.
+> \*\*Tip \*\*  Create separate keys for **debug** and **production** to keep data clean.
 
 ### 2.2 **Add the key to`local.properties`** (already in the default `.gitignore`):
 
@@ -162,7 +162,7 @@ You should see upload logs:
 * `data.zip upload has succeeded.`
 * `UXCam [version] : session data sent successfully`
 
-### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com). 🎉
+### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com).
 
 ***
 
