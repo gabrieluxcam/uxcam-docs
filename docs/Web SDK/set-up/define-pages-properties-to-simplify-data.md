@@ -143,17 +143,48 @@ Dynamic URLs with path parameters or fragments can clutter your reports and make
 
 <br />
 
-## **Assigning multiple rules**
+## **Managing Consistent Page Names Across Rules**
 
-When creating rules, you can assign the same 'page name' to multiple rules, these will be processed and displayed by UXCam as a single screen.
+When URLs evolve over time or share similar patterns, maintaining clean and consistent page names in your reports becomes essential. With UXCam’s Page Definition rules, you can assign the same page name to multiple rules, ensuring that sessions are grouped and displayed under a unified screen name - even if the URLs differ.
 
-This can also be useful in case your URLs change but you want to keep your data consistent.
+<br />
 
-E.g. if you used to have `domain.com/products/product-name` defined as Products Page and now you have `domain.com/category/products/product-name `you can name it as Products Page and archive your previous rule.
+**How It Works**
 
-💡 If you have dynamic URLs that share the same URL structure e.g. `domain.com/{dynamic-category-id} `vs `domain.com/{dynamic-product-id}.` Read the guides below:
+* You can define multiple URL rules that point to the same page name.
+* UXCam will treat all matching URLs as a single screen in your reports.
+* This is particularly helpful if your URLs change over time, but you want to preserve historical continuity in your analytics.
+
+<br />
+
+> Example: If you previously defined
+>
+> * domain.com/products/product-name → **Products Page**
+>
+> But your new structure is
+>
+> * domain.com/category/products/product-name
+>
+> You can define a new rule for the updated URL and still name it **Products Page**. You may also archive the outdated rule to keep your rule list tidy.
+
+<br />
+
+> 📘 Noe
+>
+> If your site includes dynamic segments with similar structures—such as:
+>
+> •	domain.com/`dynamic-category-id`\
+> •	domain.com/`dynamic-product-id`
+>
+> You should follow best practices for avoiding rule conflicts.
+
+**Recommended reading**
 
 [Resolving conflicting Page Definition rules for similar URL structures with dynamic values](https://help.uxcam.com/en/articles/11145060-resolving-conflicting-page-definition-rules-for-similar-url-structures-with-dynamic-values)
+
+<br />
+
+<br />
 
 To learn more about Page definition, rule hierarchy and rule management please visit our **[Help Center.](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_bc701cd1b1)**
 
