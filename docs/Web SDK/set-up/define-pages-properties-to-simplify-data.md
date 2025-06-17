@@ -129,17 +129,15 @@ To make your reports more readable and consistent, you can rename long or comple
 
 <br />
 
-## **Cleaning pages name**
+## **Defining pages name with dynamic path and fragments**
 
-If your URLs contain **fragments**, and **dynamic path parameters**, and you also want a clean page name, you can solve them all at once using Page Definition.
+Dynamic URLs with path parameters or fragments can clutter your reports and make it harder to analyse user behaviour. With UXCam’s Page Definition feature, you can group similar URLs, extract useful data, and assign clean, readable page or screen names - all in one step. This ensures your analytics remain consistent, easy to interpret, and aligned with your naming conventions.
 
-Follow these steps:
-
-1. Enter a URL that follows the structure of the page you want to define.
-2. Select my URL contains fragments
-3. Select the dynamic part  (e.g. \{RestaurantName}  and optionally save it as a property.
-4. Define a meaningful name for your screen/page  (e.g. “Restaurant Choose items”).
-5. Review and test the rule to ensure it applies correctly.
+1. **Enter a Sample URL** - Use a URL that reflects the structure of the page you want to define.
+2. **Enable Fragment Matching** - Select the option indicating that your URL contains a fragment (e.g., #item-choice).
+3. **Identify the Dynamic Segment** - Select the changing part of the path (e.g., `b12`) and optionally store it as a property (e.g., `RestaurantName`) for later filtering.
+4. **Assign a Clear Page Name** - Enter a meaningful name that describes the screen (e.g., "Restaurant – Choose Items").
+5. **Review and Test** - Validate your rule against different URL variations to ensure consistent tagging.
 
 <Image align="center" src="https://files.readme.io/59f2a79f3cb28eec613fe37424467694e93d248a99f9d8d7a878915220709964-Screenshot_2025-03-04_at_08.18.23.png" />
 
