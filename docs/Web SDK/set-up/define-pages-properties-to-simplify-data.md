@@ -136,7 +136,7 @@ Dynamic URLs with path parameters or fragments can clutter your reports and make
 1. **Enter a Sample URL** - Use a URL that reflects the structure of the page you want to define.
 2. **Enable Fragment Matching** - Select the option indicating that your URL contains a fragment (e.g., #item-choice).
 3. **Identify the Dynamic Segment** - Select the changing part of the path (e.g., `b12`) and optionally store it as a property (e.g., `RestaurantName`) for later filtering.
-4. **Assign a Clear Page Name** - Enter a meaningful name that describes the screen (e.g., "Restaurant – Choose Items").
+4. **Assign a Clear Page Name** - Enter a meaningful name that describes the screen (e.g., "Restaurant Choose Items").
 5. **Review and Test** - Validate your rule against different URL variations to ensure consistent tagging.
 
 <Image align="center" src="https://files.readme.io/59f2a79f3cb28eec613fe37424467694e93d248a99f9d8d7a878915220709964-Screenshot_2025-03-04_at_08.18.23.png" />
