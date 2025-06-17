@@ -88,6 +88,8 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 > * Artist ID - 1HY2Jd0NmPuamShAr6KMms - Part of the URL path that is dynamic
 > * Assigning a placeholder name (e.g., `artist-id`) to capture it as a property for later filtering and segmentation purposes.
 
+<br />
+
 3. **Define the Page Name**
 
 > Example: Artist Page
