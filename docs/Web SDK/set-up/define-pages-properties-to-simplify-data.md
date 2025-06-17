@@ -67,21 +67,14 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 <br />
 
-> Example: On Spotify, each artist has a unique ID represented in the URL
->
-> * /artist/**5K79FLRUCSysQnVESLcTdb**
-> * /artist/**1HY2Jd0NmPuamShAr6KMms**
->
-> Even though the artist ID changes, these are all versions of the same **Artist Page**, and should not be considered separate pages.
-
-<br />
-
 1. **Add a Representative URL**\
    Add a URL that reflects the structure of the pages you want to group
 
-> Example:
+> Example: On Spotify, each artist has a unique ID represented in the URL. Even though the artist ID changes, these are all versions of the same **Artist Page**, and should not be considered separate pages.
 >
 > * /artists/1HY2Jd0NmPuamShAr6KMms).
+
+<br />
 
 2. **Configure the Dynamic Segment**
 
@@ -107,6 +100,8 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 <br />
 
 ## **Tagging Fragments as distinct pages**
+
+URL fragments (the part after # in a URL) can be used to represent different views or states within a single page. By defining them as distinct pages in UXCam, you can improve the granularity of your session data and better segment user behaviour.
 
 * Enter the URL that represents the page structure you want to define.
 * Select the checkbox to ensure the Fragment is extracted from the URL
