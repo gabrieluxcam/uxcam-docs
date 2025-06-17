@@ -123,7 +123,7 @@ To make your reports more readable and consistent, you can rename long or comple
 1. **Enter a URL** that represents the page you want to customise.
 2. **Assign a clear, concise name** that reflects the page’s purpose (e.g., “Join Page” for a sign-up URL).
 
-> Example: [https://www.spotify.com/join/](https://www.spotify.com/join/) renamed to -> **Join page**
+> Example: '[https://www.spotify.com/join/](https://www.spotify.com/join/)' renamed to -> **Join page**
 
 <Image align="center" src="https://files.readme.io/2963d13b538a678b55a8fb52b91e3ce8014e40e7675ff99e47a17a0d98015743-Screenshot2B2025-03-042Bat2B08_11_01.png" />
 
