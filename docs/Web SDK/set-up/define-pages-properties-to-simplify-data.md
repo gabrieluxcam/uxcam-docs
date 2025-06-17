@@ -78,14 +78,14 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 2. **Configure the Dynamic Segment**
 
-* Define the part of the dynamic path that varies
-  * **To retain as a property:** Assign a placeholder name (e.g., `artist-id`) to capture it as a property for filtering and segmentation.
-  * **To ignore it:** Use a wildcard (\*) to match any value without saving it as a property.
+* Define the part of the dynamic path that varies and name it for later filtering and segmentation.
+* To name dynamic URL part, clicking on it and give it a name
+* It is also possible to use a wildcard (\*) instead to define consistent path without a name
 
 > Example:
 >
 > * Album - Part of the URL path that is static
-> * Artist ID - 1HY2Jd0NmPuamShAr6KMms - Part of the URL path that is dynamic
+> * Artist ID - Part of the URL path that is dynamic (1HY2Jd0NmPuamShAr6KMms)
 > * Assigning a placeholder name (e.g., `artist-id`) to capture it as a property for later filtering and segmentation purposes.
 
 <br />
@@ -93,6 +93,8 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 3. **Define the Page Name**
 
 > Example: Artist Page
+
+<br />
 
 4. **Review and Test the Rule**\
    Validate the rule by previewing it with multiple URL variations to ensure accurate grouping before saving.
