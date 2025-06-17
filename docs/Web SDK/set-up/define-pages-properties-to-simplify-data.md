@@ -107,10 +107,10 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 URL fragments (the part after # in a URL) can be used to represent different views or states within a single page. By defining them as distinct pages in UXCam, you can improve the granularity of your session data and better segment user behaviour.
 
-* Enter the URL that represents the page structure you want to define.
-* Select the checkbox to ensure the Fragment is extracted from the URL
-* Define the Page Name
-* Confirm the pattern and test it with different URL variations.
+1. Enter the URL that represents the page structure you want to define.
+2. Select the checkbox to ensure the Fragment is extracted from the URL
+3. Define the Page Name
+4. Confirm the pattern and test it with different URL variations before saving
 
 <Image align="center" src="https://files.readme.io/85435ee8f436f4dbce978c491667d4a810dad88d3923d4934d0618d11d196ed1-Screenshot2025-03-04at08_15_47.png" />
 
@@ -120,7 +120,7 @@ URL fragments (the part after # in a URL) can be used to represent different vie
 
 ## **Renaming Pages for Cleaner Reports**
 
-If you want to replace long URLs with short, customized page names for clearer reporting, follow these steps:
+If you want to replace long URLs with short, customised page names for clearer reporting, follow these steps:
 
 1. **Enter a URL** that follows the structure of the page you want to define.
 2. **Define a clear page name** that aligns with your naming conventions.
@@ -157,7 +157,7 @@ E.g. if you used to have `domain.com/products/product-name` defined as Products 
 
 💡 If you have dynamic URLs that share the same URL structure e.g. `domain.com/{dynamic-category-id} `vs `domain.com/{dynamic-product-id}.` Read the guides below:
 
-[Resolving conflicting Page Definition rules for ismilar URL structures with dynamic values](https://help.uxcam.com/en/articles/11145060-resolving-conflicting-page-definition-rules-for-similar-url-structures-with-dynamic-values)
+[Resolving conflicting Page Definition rules for similar URL structures with dynamic values](https://help.uxcam.com/en/articles/11145060-resolving-conflicting-page-definition-rules-for-similar-url-structures-with-dynamic-values)
 
 To learn more about Page definition, rule hierarchy and rule management please visit our **[Help Center.](https://help.uxcam.com/en/articles/10652702-define-pages-properties-to-simplify-data#h_bc701cd1b1)**
 
