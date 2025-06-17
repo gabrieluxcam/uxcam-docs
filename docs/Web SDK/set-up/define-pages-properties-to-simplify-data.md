@@ -116,16 +116,14 @@ URL fragments (the part after # in a URL) can be used to represent different vie
 
 <br />
 
-<br />
-
 ## **Renaming Pages for Cleaner Reports**
 
-If you want to replace long URLs with short, customised page names for clearer reporting, follow these steps:
+To make your reports more readable and consistent, you can rename long or complex URLs with short, descriptive page names. This helps streamline analytics and aligns your data with internal naming conventions.
 
-1. **Enter a URL** that follows the structure of the page you want to define.
-2. **Define a clear page name** that aligns with your naming conventions.
+1. **Enter a URL** that represents the page you want to customize.
+2. **Assign a clear, concise name** that reflects the page’s purpose (e.g., “Join Page” for a sign-up URL).
 
-> In the example below, you can see [https://www.spotify.com/join/](https://www.spotify.com/join/) was renamed -> Join page
+> Example: [https://www.spotify.com/join/](https://www.spotify.com/join/) renamed to -> **Join page**
 
 <Image align="center" src="https://files.readme.io/2963d13b538a678b55a8fb52b91e3ce8014e40e7675ff99e47a17a0d98015743-Screenshot2B2025-03-042Bat2B08_11_01.png" />
 
