@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams finish this setup in **\< 15 min**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -47,7 +47,7 @@ next:
 
 # Android SDK · Quickstart
 
-## Step 1: Find your App Key 🔑
+## Step 1: Find your App Key
 
 ### 1.1: Grab your key
 
@@ -110,7 +110,7 @@ UXCam.startWithConfiguration(config);
 }
 ```
 
-<GitHubCallout type="success">This completes the most basic integration process.                          Watch Logcat for **“Verification successful”** – your first session should appear on the UXCam dashboard within \~2 minutes.</GitHubCallout>
+<GitHubCallout type="success">This completes the most basic integration process.                     Your first session will be uploaded as soon as you background your app and will be shown in your dashboard after a couple of minutes</GitHubCallout>
 
 ***
 
