@@ -76,15 +76,31 @@ To ensure consistent tracking and analysis, it’s important to group URLs with 
 
 <br />
 
-To group URLs that include dynamic path parameters under a single page, follow these steps:
+1. **Add a Representative URL**\
+   Add a URL that reflects the structure of the pages you want to group
 
-1. Choose a URL that follows the structure of the pages you want to group.
-2. Select the Dynamic Part
-   1. Identify the changing section (e.g. artist ID: 1HY2Jd0NmPuamShAr6KMms).
-   2. Decide whether to name it and save it as a **property** (e.g. \{artist-Id} so you can filter later) or ignore it (replace it with a wildcard \* )
-3. Define the Page Name (e.g. Artist Page)
-4. Review & Test the Rule
-   1. Confirm the pattern and test it with different URL variations.
+> Example:
+>
+> * /artists/1HY2Jd0NmPuamShAr6KMms).
+
+2. **Configure the Dynamic Segment**
+
+* Define the part of the dynamic path that varies
+  * **To retain as a property:** Assign a placeholder name (e.g., `artist-id`) to capture it as a property for filtering and segmentation.
+  * **To ignore it:** Use a wildcard (\*) to match any value without saving it as a property.
+
+> Example:
+>
+> * Album - Part of the URL path that is static
+> * Artist ID - 1HY2Jd0NmPuamShAr6KMms - Part of the URL path that is dynamic
+> * Assigning a placeholder name (e.g., `artist-id`) to capture it as a property for later filtering and segmentation purposes.
+
+3. **Define the Page Name**
+
+> Example: Artist Page
+
+4. **Review and Test the Rule**\
+   Validate the rule by previewing it with multiple URL variations to ensure accurate grouping before saving.
 
 <Image align="center" src="https://files.readme.io/b0d59cf8b623ff685a5a420795fa1eddbc3ee7aee8e88313d09c452ef77bd490-Screenshot2025-03-04at08_07_35.png" />
 
