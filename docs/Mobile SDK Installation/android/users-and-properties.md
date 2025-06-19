@@ -12,11 +12,9 @@ next:
 ---
 ## Identify Users Reliably with `setUserIdentity`
 
-UXCam gives every fresh install a random alias name based on unique **Install ID**.\
-That works—until:
+UXCam gives every fresh install a random alias name based on unique **Install ID**.
 
-* The same person **re-installs** the app or shares the same device with another user.
-* The same account signs-in on **multiple devices** (one Install ID per device).
+That works... until issues arise, such as when the same person **re-installs** the app, shares a device with another user, or signs into their account on **multiple devices** (which creates a different Install ID for each).
 
 **Fix:** call **`UXCam.setUserIdentity()`once per session as soon as the real user is known** (login, sign‑up, deep‑link token, silent auth).
 
@@ -24,14 +22,16 @@ That works—until:
 
 ### When to call `setUserIdentity`
 
-| Trigger                                          | Why it works                                                       |
-| ------------------------------------------------ | ------------------------------------------------------------------ |
-| **Immediately after successful login / sign‑up** | Backend‑verified identifier—safe to map to the Install ID.         |
-| **Every app launch** (recommended, idempotent)   | Catches silent/S‑SO log‑ins and reinstalls; the call is debounced. |
+| Trigger                                          | Why it works                                                                                                               |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| **Immediately after successful login / sign‑up** | Backend‑verified identifier—safe to map to the Install ID.                                                                 |
+| **Every app launch** (recommended, idempotent)   | Catches silent or SSO (Single Sign-On) logins and reinstalls; the call is debounced to prevent unnecessary repeated calls. |
 
-> One call per session is enough. After UXCam links **Install ID ↔︎ User ID**, the value persists; extra calls noop.
+<GitHubCallout type="note">One call per session is sufficient. Once UXCam links an Install ID to a User ID, the value persists, and subsequent calls with the same ID are ignored.</GitHubCallout>
 
 ***
+
+<br />
 
 ### Code snippet
 
