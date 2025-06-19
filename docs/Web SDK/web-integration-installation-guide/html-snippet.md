@@ -71,10 +71,11 @@ metadata:
 | <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
 
+★ **Optional step**
+
 <br />
 
-<GitHubCallout type="note">★ **Optional step**\
-Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
+<GitHubCallout type="note">Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 
 <br />
 
