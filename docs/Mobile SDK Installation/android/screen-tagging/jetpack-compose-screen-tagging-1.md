@@ -10,17 +10,15 @@ metadata:
 next:
   description: ''
 ---
-When working with a Jetpack Compose Android app, UXCam's Automatic Screen Name Tagging is not supported because directly tracking composition routes is not as straightforward as in traditional Android architectures like Fragments or Activities due to Composables being functional components that don't have lifecycle-based callbacks like onStart(), onStop(), etc where the automatic tagging takes place. However, there are ways to achieve this by leveraging state management libraries.
+UXCam's Automatic Screen Name Tagging is not supported out-of-the-box in Jetpack Compose. Unlike traditional Android views, Composables are functional components that lack lifecycle callbacks (like `onStart()`), which the automatic tagging relies on. However, you can manually tag screens by integrating with Compose's navigation and state management.
 
-> 📘 `navigation-compose` library is the recommended approach for navigation on Android official docs.
->
-> Because of this, the below examples take into consideration the usage of said library.
+> 📘 Since `navigation-compose` is the officially recommended library for handling navigation in Compose, the following examples are based on its implementation.
 
-Among all the possible ways the simplest way to tag the route as a screen from the highest level Composable. Generally, this is where `NavHostController` is created. There can be multiple `navController` within a single app and this should be added for all where screen tagging is expected.
+The simplest approach is to tag the screen from your highest-level Composable where the `NavHostController` is created. This logic should be applied to every`navController` in your app where you want screen tagging to occur. The recommended method is to create a listener that observes the navigation controller's back stack for changes.
 
 The approach is to listen to `LaunchedEffect` on the current route from `navController`.
 
-## Compose Screen Tagging Example:
+## Example: Screen Tagging with a Navigation Listener
 
 Example Jetpack Compose Navigation listener:
 
@@ -51,8 +49,8 @@ fun AppNavHost(navController: NavHostController) {
 
 #### **Potential Cons**
 
-* Loss of per-item detail – all product/id pages look identical in analytics; if you need product-level metrics you’ll have to add a separate event.
+* Loss of per-item detail – All `product/{id}` pages look identical in analytics. If you need product-level metrics, you will need to track them with a separate custom event.
 * Multiple NavHosts – if your app has several controllers (e.g., bottom-nav, modal graph) you must duplicate or abstract this collector for each one.
 * Manual mapping – you maintain the when block; missing a route means missed analytics until it’s added.
 
-**Bottom line:** placing UXCam.tagScreenName() inside the currentBackStackEntryFlow collector gives you precise, de-duplicated screen events with clean names, at the cost of losing per-argument granularity and a bit of mapping upkeep.
+**The takeaway:** Placing `UXCam.tagScreenName()`inside the`currentBackStackEntryFlow` collector gives you precise, de-duplicated screen events with clean names, but it comes at the cost of losing per-argument granularity and requires some manual mapping.
