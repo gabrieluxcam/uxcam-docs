@@ -14,10 +14,6 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 <br />
 
-<GitHubCallout type="important">Flutter Web is at the moment not supported</GitHubCallout>
-
-<br />
-
 <Accordion title="Supported technologies" icon="fa-duotone fa-solid fa-code">
   But not limited to..
 
@@ -27,6 +23,10 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
   * Vue.js
   * Next.js
 </Accordion>
+
+<br />
+
+<GitHubCallout type="important">Flutter Web is at the moment not supported</GitHubCallout>
 
 <br />
 
