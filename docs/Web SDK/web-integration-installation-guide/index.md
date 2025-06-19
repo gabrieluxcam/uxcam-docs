@@ -15,25 +15,15 @@ This document will guide you through the process of integrating the Web SDK into
 <br />
 
 <Cards columns={4}>
-  <Card title="Basic web" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank">
-    HTML CSS and Javascript
-  </Card>
+  <Card title="HTML CSS & Javascript" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank" />
 
-  <Card title="* React.js" icon="fa-user">
-    *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
-  </Card>
+  <Card title="React.js" icon="fa-user" />
 
-  <Card title="Angular" icon="fa-star">
-    > Ut enim ad minim veniam, quis nostrud ullamco
-  </Card>
+  <Card title="Angular" icon="fa-star" />
 
-  <Card title="Vue.js" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
-  </Card>
+  <Card title="Vue.js" icon="fa-question" />
 
-  <Card title="Next.js" icon="fa-question">
-    **Excepteur sint occaecat cupidatat non proident**
-  </Card>
+  <Card title="Next.js" icon="fa-question" />
 </Cards>
 
 <br />
