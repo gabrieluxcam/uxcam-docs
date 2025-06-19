@@ -64,7 +64,7 @@ metadata:
 
 | Step                 | Task                                                                                                    | Goal                                    |
 | :------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| <strong>1</strong>   | <strong>Customise SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
+| <strong>1</strong>   | <strong>Occlusion </strong>  <a href="occlusion#">Jump →</a>                                            | Hide sensitive data                     |
 | <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
 | <strong>2</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
 | <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
