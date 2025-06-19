@@ -60,10 +60,10 @@ After the initial integration, UXCam automatically collects a variety of user in
   ➜ [Learn how to add custom event tagging](logging-custom-event#)
 * **Page Visits**\
   All page views are captured automatically.
-  ➜ Use code-less page definition to organise your pages without touching code.
+  ➜ [Use code-less page definition to organise your pages without touching code](define-pages-properties-to-simplify-data#)
 * **Sensitive Data Protection**\
   Inputs such as passwords and email fields are auto-occluded to protect user privacy.
-  ➜ Explore additional occlusion options
+  ➜ [Explore additional occlusion options](occlusion#)
 * **User Identification**\
   We identify users based on anonymous browser/device IDs by default.
-  ➜ You can enhance this by using functions to set user identity and properties
+  ➜ [You can enhance this by using functions to set user identity and properties](user-properties#)
