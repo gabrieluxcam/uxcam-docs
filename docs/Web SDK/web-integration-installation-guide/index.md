@@ -10,7 +10,7 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
-# Integration methods at a Glance
+# Integration Methods at a Glance
 
 | <strong>Install Code Snippet </strong>  <a href="html-snippet#">Jump →</a>       |
 | :------------------------------------------------------------------------------- |
