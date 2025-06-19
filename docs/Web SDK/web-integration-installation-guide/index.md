@@ -16,14 +16,6 @@ This document will guide you through the process of integrating the Web SDK into
 
 <Cards columns={4}>
   <Card title="HTML CSS & Javascript" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank" />
-
-  <Card title="React.js" icon="fa-user" />
-
-  <Card title="Angular" icon="fa-star" />
-
-  <Card title="Vue.js" icon="fa-question" />
-
-  <Card title="Next.js" icon="fa-question" />
 </Cards>
 
 <br />
