@@ -15,48 +15,26 @@ This document will guide you through the process of integrating the Web SDK into
 <br />
 
 <Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank">
-    Neque porro quisquam est qui dolorem ipsum quia
+  <Card title="Basic web" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank">
+    HTML CSS and Javascript
   </Card>
 
-  <Card title="Second Card" icon="fa-user">
+  <Card title="* React.js" icon="fa-user">
     *Lorem ipsum dolor sit amet, consectetur adipiscing elit*
   </Card>
 
-  <Card title="Third Card" icon="fa-star">
+  <Card title="Angular" icon="fa-star">
     > Ut enim ad minim veniam, quis nostrud ullamco
   </Card>
 
-  <Card title="Fourth Card" icon="fa-question">
+  <Card title="Vue.js" icon="fa-question">
+    **Excepteur sint occaecat cupidatat non proident**
+  </Card>
+
+  <Card title="Next.js" icon="fa-question">
     **Excepteur sint occaecat cupidatat non proident**
   </Card>
 </Cards>
-
-<br />
-
-<br />
-
-<i class="fa-duotone fa-solid fa-house" />
-
-<i class="fa-duotone fa-solid fa-copyright" />
-
-<i class="fa-duotone fa-solid fa-bomb" />
-
-<i class="fa-duotone fa-solid fa-umbrella" />
-
-<i class="fa-duotone fa-solid fa-paper-plane" />
-
-<i class="fa-duotone fa-solid fa-computer-classic" />
-
-<i class="fa-duotone fa-solid fa-crab" />
-
-<i class="fa-duotone fa-solid fa-bullseye-pointer" />
-
-<i class="fa-duotone fa-solid fa-wheelchair-move" />
-
-<i class="fa-duotone fa-solid fa-table-tennis-paddle-ball" />
-
-<br />
 
 <br />
 
