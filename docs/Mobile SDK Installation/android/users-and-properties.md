@@ -77,7 +77,7 @@ UXCam.setUserProperty("nps_score",       "9");  // Cast numbers to strings
 If the user is missing:
 
 * Check Logcat for `UXCam: setUserIdentity called with ...`.
-* Ensure the call runs **after** `UXCam.startWithConfiguration()`.
+* Ensure the call runs **after** the SDK has been initialized with `UXCam.startWithConfiguration()`.
 * Confirm the ID is **non‑null & non‑empty** (empty strings are ignored).
 
 ***
@@ -94,9 +94,9 @@ If the user is missing:
 
 ## QA Checklist
 
-* `UXCam.setUserIdentity()` fires **once per session** after auth.
+* `UXCam.setUserIdentity()` is called once per session after authentication.
 * Key properties (`plan`, `signup_source`, …) appear under **user properties**.
 * No PII stored unless a DPA is in place.
-* Re‑install the app → first session links correctly after login.
+* Re-installing the app and logging in links the new session to the correct user.
 
 ***
