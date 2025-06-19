@@ -68,12 +68,12 @@ metadata:
 | <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a> | Group similar URLs under consistent names  |
 | <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="user-properties#">Jump →</a>         | Unify sessions, power funnels & cohorts    |
 | <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-event#">Jump →</a>                | Track user interactions and key behaviours |
-| <strong>5 ★</strong> | <strong>Configure Content Security Policy </strong>  <a href="csp#">Jump →</a>                 | Ensure the Web SDK functions correctly     |
+| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
 
 <br />
 
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-4 to start getting replays, then add steps 5-6 for deeper analytics.</GitHubCallout>
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-5, then add step 6 for deeper analytics.</GitHubCallout>
 
 <br />
 
