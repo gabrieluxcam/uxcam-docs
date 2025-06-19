@@ -12,12 +12,11 @@ This document will guide you through the process of integrating the Web SDK into
 
 # Choose your methods of integration
 
-| Install Code Snippet                                                             | <a href="html-snippet#">Jump →</a>      |
-| :------------------------------------------------------------------------------- | :-------------------------------------- |
-| Google Tag Manager                                                               | <a href="google-tag-manage#">Jump →</a> |
-| <strong>shopify </strong>  <a href="#">Jump →</a>                                |                                         |
-| <strong>Shopify </strong>  <a href="#4-set-user-identity--properties">Jump →</a> |                                         |
-| <strong>Wordpress </strong>  <a href="#">Jump →</a>                              |                                         |
+| Install Code Snippet   | <a href="html-snippet#">Jump →</a>      |
+| :--------------------- | :-------------------------------------- |
+| **Google Tag Manager** | <a href="google-tag-manage#">Jump →</a> |
+| **Shopify**            | <a href="shopify#">Jump →</a>           |
+| **Wordpress**          | <a href="wordpress#">Jump →</a>         |
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
