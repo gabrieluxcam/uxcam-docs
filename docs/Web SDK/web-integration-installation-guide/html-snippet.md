@@ -64,7 +64,7 @@ metadata:
 
 | Step                 | Task                                                                                           | Goal                                       |
 | :------------------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------- |
-| <strong>1</strong>   | <strong>Congigure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
+| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
 | <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a> | Group similar URLs under consistent names  |
 | <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="user-properties#">Jump →</a>         | Unify sessions, power funnels & cohorts    |
 | <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-event#">Jump →</a>                | Track user interactions and key behaviours |
