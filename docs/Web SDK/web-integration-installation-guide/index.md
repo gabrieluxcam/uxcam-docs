@@ -15,7 +15,7 @@ This document will guide you through the process of integrating the Web SDK into
 <br />
 
 <Cards columns={4}>
-  <Card title="First Card" href="https://readme.com" icon="fa-home" target="_blank">
+  <Card title="First Card" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank">
     Neque porro quisquam est qui dolorem ipsum quia
   </Card>
 
