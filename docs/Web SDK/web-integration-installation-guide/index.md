@@ -15,17 +15,17 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 <br />
 
 \<Accordion title="Supported technologies" icon="fa-duotone fa-solid fa-code">
-&#x20; But not limited to..
+But not limited to..
+\* Basic web (HTML CSS and Javascript)
+\* React.js
+\* Angular
+\* Vue.js
+\* Next.js
+\\\</Accordion>
 
-&#x20; \* Basic web (HTML CSS and Javascript)
-&#x20; \* React.js
-&#x20; \* Angular
-&#x20; \* Vue.js
-&#x20; \* Next.js
+<br />
 
-<GitHubCallout type="important">Flutter web is not supported</GitHubCallout>
-
-\</Accordion>
+<GitHubCallout type="important">Flutter Web is at the moment not supported</GitHubCallout>
 
 <br />
 
