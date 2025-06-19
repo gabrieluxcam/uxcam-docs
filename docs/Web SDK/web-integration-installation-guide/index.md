@@ -14,6 +14,10 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
+<br />
+
+<br />
+
 <Accordion title="Supported technologies (but not limited to..)" icon="fa-duotone fa-solid fa-code">
   * Basic web (HTML CSS and Javascript)
   * React.js
@@ -21,12 +25,6 @@ This document will guide you through the process of integrating the Web SDK into
   * Vue.js
   * Next.js
 </Accordion>
-
-<br />
-
-**Supported technologies (but not limited to..)**
-
-* <br />
 
 <br />
 
@@ -43,10 +41,32 @@ By default, the following events are captured:
 
 <br />
 
-# Choose your methods of integration
+# Choose your Method of Integration
 
 | Install Code Snippet   | <a href="html-snippet#">Jump →</a>      |
 | :--------------------- | :-------------------------------------- |
 | **Google Tag Manager** | <a href="google-tag-manage#">Jump →</a> |
 | **Shopify**            | <a href="shopify#">Jump →</a>           |
 | **Wordpress**          | <a href="wordpress#">Jump →</a>         |
+
+<br />
+
+# What is automatically captured?
+
+After the initial integration, UXCam automatically collects a variety of user interactions and technical properties without requiring additional setup.
+
+**User Events**\
+We automatically capture key interaction events such as taps, clicks, scrolls, and page navigations.
+➜ Learn how to add custom event tagging
+
+**Page Visits**\
+All page views are captured automatically.
+➜ Use code-less page definition to organise your pages without touching code.
+
+**Sensitive Data Protection**\
+Inputs such as passwords and email fields are auto-occluded to protect user privacy.
+➜ Explore additional occlusion options
+
+**User Identification**\
+We identify users based on anonymous browser/device IDs by default.
+➜ You can enhance this by using functions to set user identity and properties
