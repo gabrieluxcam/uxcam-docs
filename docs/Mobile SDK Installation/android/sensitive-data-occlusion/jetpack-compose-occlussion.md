@@ -58,42 +58,21 @@ fun occludeSensitiveComposable(
 
 Where:
 
-<p style={{ fontSize: "16px" }}>
-  <code>Identifier</code>
+<br />
 
-  <br />
-</p>
+* **`identifier: Any`**: A unique identifier for the Composable, which can be of any type. It must not be used for any other occluded Composable on the same screen.
 
-This identifier needs to be unique, at least in the screen, i.e. there should be no other composable being occluded using the same identifier in the same screen. The identifier can be of any type.
+* **`view: View`**: The `View` object that hosts the Composable. You can get this with `LocalView.current`.
 
-<p style={{ fontSize: "16px" }}>
-  <code>View</code>
+* **`coordinates: LayoutCoordinates`**: The Composable's current layout coordinates, which must be obtained from an `onGloballyPositioned` Modifier callback.
 
-  <br />
-</p>
-
-The occlusion API needs the view object that represents the current composable view. You can obtain this using <br />\
-<code>val view = LocalView\.current</code>
-
-<p style={{ fontSize: "16px" }}>
-  <code>LayoutCoordinates</code>
-
-  <br />
-</p>
-
-This parameter represents the current coordinates of the composable. This can only be obtained by using an onGloballyPositioned callback on a Modifier.
-
-<p style={{ fontSize: "16px" }}>
-  <code>isInDialog</code>
-
-  <br />
-</p>
+* **`isInDialog: Boolean`**: Set this to `true` if the Composable is inside a dialog. The default value is `false`.
 
 This parameter represents if a composable is in a dialog or not. Default value is false. True should be passed if the composable is placed in the dialog.
 
 ***
 
-#### Example:
+#### Example Usage:
 
 Here is a complete example of how the occlusion would be applied:
 
