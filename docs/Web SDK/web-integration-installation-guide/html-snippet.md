@@ -62,13 +62,13 @@ metadata:
 
 ## Next steps - Setup and configuration
 
-| Step                 | Task                                                                                                    | Goal                                                        |
-| :------------------- | :------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------- |
-| <strong>1</strong>   | <strong>Occlusion </strong>  <a href="occlusion#">Jump →</a>                                            | Hide sensitive data                                         |
-| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a>          | Grouping similar URLs under consistent and meaningful names |
-| <strong>3</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data                     |
-| <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts                     |
-| <strong>5 ★</strong> | <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA                          |
+| Step                 | Task                                                                                                    | Goal                                      |
+| :------------------- | :------------------------------------------------------------------------------------------------------ | :---------------------------------------- |
+| <strong>1</strong>   | <strong>Congigure occlusion </strong>  <a href="occlusion#">Jump →</a>                                  | Hide sensitive user data                  |
+| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a>          | Group similar URLs under consistent names |
+| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="user-properties#">Jump →</a>                  | Unify sessions, power funnels & cohorts   |
+| <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts   |
+| <strong>5 ★</strong> | <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA        |
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
