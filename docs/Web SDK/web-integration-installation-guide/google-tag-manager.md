@@ -143,7 +143,7 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)       .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer).</GitHubCallout>
 
 <br />
 
@@ -219,7 +219,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\\\
+<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\
 Always sanitise and validate dynamic values being pushed to UXCam.\
 Use clear naming for events and properties to stay consistent in UXCam reports.</GitHubCallout>
 
