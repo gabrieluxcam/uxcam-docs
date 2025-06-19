@@ -145,11 +145,11 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                         .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                          .</GitHubCallout>
 
 <br />
 
-### Create Event Tag
+### Create Event Tags
 
 1. Create a New Tag for Events:
 
