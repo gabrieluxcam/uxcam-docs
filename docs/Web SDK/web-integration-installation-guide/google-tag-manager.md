@@ -248,12 +248,12 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 | Step                 | Task                                                                                           | Goal                                      |
 | :------------------- | :--------------------------------------------------------------------------------------------- | :---------------------------------------- |
-| <strong>1</strong>   | <strong>Congigure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                  |
+| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                  |
 | <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a> | Group similar URLs under consistent names |
 | <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
 | <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases    |
 
-<GitHubCallout type="note">★ **Optional step**\
+<GitHubCallout type="note">★ **Optional step**
 Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
