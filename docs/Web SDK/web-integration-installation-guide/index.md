@@ -1,11 +1,26 @@
 ---
 title: Web Integration
+excerpt: How to Get Started with UXCam for Web
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
 This document will guide you through the process of integrating the Web SDK into your website. Through the setup and configuration phase, the SDK allows for tracking user events, setting user identities, page views, and configuring user properties, with additional options for occlusion of sensitive data in URLs and query parameters.
+
+<br />
+
+# Integration methods at a Glance
+
+| Task                                                                                                    | Goal                                    |
+| :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
+| <strong>Install Code Snippet </strong>  <a href="#html-snippet">Jump →</a>                              | Capture your first live session         |
+| <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
+| <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
+| <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
+| <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA      |
+
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <br />
 
