@@ -1,18 +1,18 @@
 ---
-title: Initialise SDK and Start Recording
+title: Initialize SDK and Start Recording
 excerpt: Implement the SDK and record your first session.
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-Follow the **four mini-steps** below and you’ll have your first test session on the UXCam Dashboard in minutes.
+Follow the **four quick steps** below and you’ll have your first test session on the UXCam Dashboard in minutes.
 
 ***
 
-## 1 Add the UXCam dependency
+## 1. Add the UXCam dependency
 
-Add UXCam’s Maven repo **and** dependency in your *module-level* Gradle file.
+Add the UXCam dependency to your module-level Gradle file.
 
 ```kotlin build.gradle.kts (Kotlin DSL)
 repositories {
@@ -35,9 +35,9 @@ dependencies {
 
 ***
 
-## 2 Find & store your **UXCAM\_KEY** safely
+## 2. Securely Store Your App Key
 
-### 2.1 **Grab the key** in **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+### 2.1 **Get your key** from **App Settings → App Key** on the <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
 > \*\*Tip \*\*  Create separate keys for **debug** and **production** to keep data clean.
 
@@ -48,7 +48,7 @@ dependencies {
 UXCAM_KEY=your_app_key
 ```
 
-### 2.3 **Expose the key via`BuildConfig`** so you never hard-code secrets.
+### 2.3 **Expose the key via`BuildConfig`** to avoid hard-coding secrets.
 
 ```kotlin Kotlin DSL
 // app/build.gradle.kts
@@ -73,11 +73,11 @@ android {
 
 ***
 
-## 3 Configure **and** initialise the SDK
+## 3 Configure **and** initialize the SDK
 
-### 3.1 Pick the right spot
+### 3.1 Choose the Right Place to Initialize
 
-> **Rule of thumb:** *Start the SDK\*\* once\*\*, at the earliest`Context` that lives for the whole app.*
+<GitHubCallout type="note"> \_Start the SDK\*\* once\*\*, from the earliest available `Context` that persists for the entire application lifecycle..</GitHubCallout>
 
 | **If you …**                                | **Call`UXCam.startWithConfiguration()` in …**                   | **Why this spot?**                                                              |
 | ------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------- |
