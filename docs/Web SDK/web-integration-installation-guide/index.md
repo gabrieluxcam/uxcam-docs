@@ -14,14 +14,15 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 <br />
 
-\<Accordion title="Supported technologies" icon="fa-duotone fa-solid fa-code">
-But not limited to..
-\* Basic web (HTML CSS and Javascript)
-\* React.js
-\* Angular
-\* Vue.js
-\* Next.js
-\\\</Accordion>
+<Accordion title="Supported technologies" icon="fa-duotone fa-solid fa-code">
+  But not limited to..
+
+  * Basic web (HTML CSS and Javascript)
+  * React.js
+  * Angular
+  * Vue.js
+  * Next.js
+</Accordion>
 
 <br />
 
