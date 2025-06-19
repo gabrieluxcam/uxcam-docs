@@ -9,11 +9,18 @@ This guide provides an overview of the UXCam Web SDK’s key features and config
 
 <br />
 
-## Setup and configuration steps
+## Next steps - Setup and configuration
 
-* [Occlusion - Hide Sensitive Data](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
-* [Define Pages & Properties](https://developer.uxcam.com/v2.0-draft/update/docs/define-pages-properties-to-simplify-data)
-* [Setting User Properties](https://developer.uxcam.com/v2.0-draft/update/docs/user-properties)
-* [Logging Custom Event](https://developer.uxcam.com/v2.0-draft/update/docs/logging-custom-event#/)
-* [Configure Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
-* [Define App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
+| Step                 | Task                                                                                           | Goal                                       |
+| :------------------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------- |
+| <strong>1</strong>   | <strong>Congigure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
+| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a> | Group similar URLs under consistent names  |
+| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="user-properties#">Jump →</a>         | Unify sessions, power funnels & cohorts    |
+| <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-event#">Jump →</a>                | Track user interactions and key behaviours |
+| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
+| <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
+
+<br />
+
+<GitHubCallout type="note">★ **Optional step**\\\\\
+Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
