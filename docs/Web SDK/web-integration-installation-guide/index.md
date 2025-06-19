@@ -14,15 +14,15 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
-<Cards columns={4}>
-  <Card title="HTML CSS & Javascript" href="https://readme.com" icon="fa-duotone fa-solid fa-code" target="_blank" />
-</Cards>
+<Accordion title="Supported technologies (but not limited to..)" icon="fa-duotone fa-solid fa-code">
+  Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Ut enim
+  ad minim veniam, quis nostrud exercitation ullamco. Excepteur sint
+  occaecat cupidatat non proident!
+</Accordion>
 
 <br />
 
-<br />
-
-**Supported technologies**
+**Supported technologies (but not limited to..)**
 
 * Basic web (HTML CSS and Javascript)
 * React.js
