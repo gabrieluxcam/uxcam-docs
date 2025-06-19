@@ -14,7 +14,7 @@ This document will guide you through the process of integrating the Web SDK into
 
 | Task                                                                                                    | Goal                                    |
 | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| <strong>Install Code Snippet </strong>  <a href="#html-snippet">Jump →</a>                              | Capture your first live session         |
+| <strong>Install Code Snippet </strong>  <a href="html-snippet#">Jump →</a>                              | Capture your first live session         |
 | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
 | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
 | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
