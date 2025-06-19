@@ -73,7 +73,7 @@ android {
 
 ***
 
-## 3 Configure **and** initialize the SDK
+## 3. Configure **and** initialize the SDK
 
 ### 3.1 Choose the Right Place to Initialize
 
@@ -82,7 +82,7 @@ android {
 | **If you …**                                | **Call`UXCam.startWithConfiguration()` in …**                   | **Why this spot?**                                                              |
 | ------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | Have (or can add) an **`Application`class** | `MyApp : Application → onCreate()`                              | Earliest lifecycle hook → captures the first screen & crashes. *(Recommended.)* |
-| Don’t have an `Application` class           | **Launcher`Activity` → onCreate()** **before** `setContentView` | Still early enough for the first screen; zero extra classes.                    |
+| Don’t have an `Application` class           | **Launcher`Activity` → onCreate()** **before** `setContentView` | Captures the first screen without requiring a custom `Application` class.       |
 | Use **single-Activity / Jetpack Compose**   | Either of the above **or** the first `@Composable` rendered     | Compose is launched from the activity’s `onCreate()`.                           |
 | Rely on **MultiDex**                        | `Application.onCreate()` **after** `MultiDex.install(this)`     | Ensures secondary DEX files are loaded before UXCam.                            |
 
@@ -106,7 +106,7 @@ class MyApp : Application() {
         val config = UXConfig.Builder(BuildConfig.UXCAM_KEY)
             .enableAutomaticScreenNameTagging(true)   // remove if you tag screens manually
             .apply {
-                // Verbose integration logs only in debug builds
+                // Enable Verbose logs for debug builds
                 if (BuildConfig.DEBUG) enableIntegrationLogging(true)
             }
             .build()
@@ -124,7 +124,7 @@ Add the class reference to **`AndroidManifest.xml`** (skip if already present):
     … >
 ```
 
-#### 3.3 Java fallback (launcher `Activity`)
+#### 3.3 Java Alternaive (In a Launcher `Activity`)
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -144,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
 
 ***
 
-## 4 Verify the integration
+## 4. Verify Your Integration
 
-### 4.1 **Run the app** on a device/emulator, explore it for \~20 s and open **Logcat** (filter by `UXCam tag`).
+### 4.1 **Run the app** on a device/emulator, interact with it for about 20 seconds, then open **Logcat** and filter by the `UXCam` tag.
 
 You should see:
 
@@ -162,7 +162,7 @@ You should see upload logs:
 * `data.zip upload has succeeded.`
 * `UXCam [version] : session data sent successfully`
 
-### 4.3 Within **1–2 minutes** the recording appears on your [UXCam Dashboard](https://app.uxcam.com).
+### 4.3 Within a few minutes, the session recording will appear on your [UXCam Dashboard](https://app.uxcam.com).
 
 ***
 
