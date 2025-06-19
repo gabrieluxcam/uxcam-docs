@@ -14,10 +14,6 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
-<br />
-
-<br />
-
 <Accordion title="Supported technologies (but not limited to..)" icon="fa-duotone fa-solid fa-code">
   * Basic web (HTML CSS and Javascript)
   * React.js
