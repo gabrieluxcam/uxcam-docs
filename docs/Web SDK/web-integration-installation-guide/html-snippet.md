@@ -71,18 +71,9 @@ metadata:
 | <strong>5 ★</strong> | <strong>Configure Content Security Policy </strong>  <a href="csp#">Jump →</a>                 | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
 
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
-
 <br />
 
-## Next steps - Setup and configuration
-
-* [Occlusion - Hide Sensitive Data](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
-* [Define Pages & Properties](https://developer.uxcam.com/v2.0-draft/update/docs/define-pages-properties-to-simplify-data)
-* [Setting User Properties](https://developer.uxcam.com/v2.0-draft/update/docs/user-properties)
-* [Logging Custom Event](https://developer.uxcam.com/v2.0-draft/update/docs/logging-custom-event#/)
-* [Configure Content Security Policy (CSP)](https://developer.uxcam.com/v2.0-draft/update/docs/csp#/)
-* [Define App version (Optional)](https://developer.uxcam.com/v2.0-draft/update/docs/app-version#/)
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <br />
 
