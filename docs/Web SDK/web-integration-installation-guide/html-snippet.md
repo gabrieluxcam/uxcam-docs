@@ -1,17 +1,19 @@
 ---
-title: Install Code Snippet
+title: HTML Code snippet
 deprecated: false
 hidden: false
 metadata:
   robots: index
 ---
-**Supported technologies**
+<Accordion title="Supported technologies" icon="fa-duotone fa-solid fa-code">
+  But not limited to..
 
-* Basic web (HTML CSS and Javascript)
-* React.js
-* Angular
-* Vue.js
-* Next.js
+  * Basic web (HTML CSS and Javascript)
+  * React.js
+  * Angular
+  * Vue.js
+  * Next.js
+</Accordion>
 
 <br />
 
