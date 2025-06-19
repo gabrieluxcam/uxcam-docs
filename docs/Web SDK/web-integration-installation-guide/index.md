@@ -10,7 +10,7 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
-
+<GitHubCallout type="note">Need an account? \*\*<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup">Start free</Anchor>            \*\* – most teams finish this setup in **\< 15 min**.</GitHubCallout>
 
 <br />
 
