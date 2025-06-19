@@ -76,12 +76,11 @@ UXCam.logEvent("Payment_Succeeded", props);
 | `Rage Tap`  | User taps ≥ 3 times within 300 ms at the same coordinates |
 | `UI Freeze` | Main thread blocked for ≥ 2 s                             |
 
-Use these alongside your custom events for a complete picture.\
-More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
+Combine these with your custom events for a complete picture of the user experience. You can find more details about *Rage Tap* and *UI Freeze* in the UXCam Help Center.
 
 ***
 
-## Verify in 3 Minutes
+## Verify Your Events
 
 1. Trigger the event in a **debug build** and wait for upload.
 2. Open **Dashboard → Events**.
@@ -92,18 +91,18 @@ More details in the UXCam Help Center: *Rage Tap* and *UI Freeze* articles.
 
 ## Troubleshooting Cheat‑Sheet
 
-| Issue                 | Likely cause                         | Fix                                                                      |
-| --------------------- | ------------------------------------ | ------------------------------------------------------------------------ |
-| Event missing         | Name typo or called before SDK start | Use constants; ensure call occurs after `UXCam.startWithConfiguration()` |
-| Property not shown    | Sent > 20 props                      | Trim to 20; bundle extras in one JSON string                             |
-| Duplicate events      | Called inside loops / retries        | Add guards (e.g., send once per session)                                 |
-| Mixed‑case duplicates | `Signup_started` vs `Signup_Started` | Standardise naming casing                                                |
+| Issue                 | Likely cause                                                     | Fix                                                                                                    |
+| --------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Event missing         | Name typo or the event was logged before the SDK was initialized | Use constants; ensure the event is logged only after `UXCam.startWithConfiguration()` has been called. |
+| Property not shown    | Sent > 20 props                                                  | Trim to 20; bundle extras in one JSON string                                                           |
+| Duplicate events      | Called inside loops / retries                                    | Add guards (e.g., send once per session)                                                               |
+| Mixed‑case duplicates | `Signup_started` vs `Signup_Started`                             | Standardise naming casing                                                                              |
 
 ***
 
 ## QA Checklist
 
-* [ ] All custom events appear in **Events** and on session replays.
+* [ ] All custom events appear in the **Events** dashboard and on session replays.
 * [ ] Properties display correct values, types, and casing.
 * [ ] No unwanted duplicates (case or spelling).
 * [ ] Event pins align with the correct second in replay.
