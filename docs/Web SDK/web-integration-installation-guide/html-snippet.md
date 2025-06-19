@@ -73,7 +73,7 @@ metadata:
 
 <br />
 
-<GitHubCallout type="note">★ **Optional step**\\\
+<GitHubCallout type="note">★ **Optional step**\
 Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 
 <br />
