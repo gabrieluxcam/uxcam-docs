@@ -34,6 +34,34 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
+<br />
+
+<i class="fa-duotone fa-solid fa-house" />
+
+<i class="fa-duotone fa-solid fa-copyright" />
+
+<i class="fa-duotone fa-solid fa-bomb" />
+
+<i class="fa-duotone fa-solid fa-umbrella" />
+
+<i class="fa-duotone fa-solid fa-paper-plane" />
+
+<i class="fa-duotone fa-solid fa-computer-classic" />
+
+<i class="fa-duotone fa-solid fa-crab" />
+
+<i class="fa-duotone fa-solid fa-bullseye-pointer" />
+
+<i class="fa-duotone fa-solid fa-wheelchair-move" />
+
+<i class="fa-duotone fa-solid fa-table-tennis-paddle-ball" />
+
+<br />
+
+<br />
+
+<br />
+
 **Supported technologies**
 
 * Basic web (HTML CSS and Javascript)
