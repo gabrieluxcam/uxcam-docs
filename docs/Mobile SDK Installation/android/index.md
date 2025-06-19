@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -147,7 +147,7 @@ Set our configuration option `.enableIntegrationLogging(bool)` as `true` to see 
 
 # Next Steps
 
-You've successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let's go further into setting things up.
+You've successfully integrated UXCam and sent some sessions, great job! But there's so much more you can do. Now, let's go further into setting things up.
 
 <Cards columns={4}>
   <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
