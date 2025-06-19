@@ -14,21 +14,11 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
 # Integration Journey at a Glance
-
-| Step                 | Task                                                                                                     | Goal                                    |
-| :------------------- | :------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| <strong>1</strong>   | <strong>Customize SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>   | Capture your first live session         |
-| <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                       | Enable heat-maps & screen analytics     |
-| <strong>2</strong>   | <strong>Mask Sensitive Data</strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>                | Hide passwords and other GDPR/CCPA data |
-| <strong>4 ★</strong> | <strong>Identify Users & Set Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
-| <strong>5 ★</strong> | <strong>Track Custom Events</strong>  <a href="#5-tag-events">Jump →</a>                                 | Measure key actions & run final QA      |
-
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <SimpleStepper>
   <SimpleStep header="Step 1: Customize SDK Configuration">
@@ -51,6 +41,8 @@ next:
     Measure key actions & run final QA
   </SimpleStep>
 </SimpleStepper>
+
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
   * **Session Replay + Heatmaps** – Watch every user experience moment in full context.
