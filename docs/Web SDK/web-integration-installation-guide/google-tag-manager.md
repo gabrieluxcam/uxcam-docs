@@ -95,10 +95,10 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
 
 <br />
 
-|       | Approaches                                                                                          |
-| :---- | :-------------------------------------------------------------------------------------------------- |
-| **1** | **Teams Without a Data Layer Setup** - Need to configure Data Layer, User variables, and Event Tags |
-| **2** | **Teams with Data Layer and User Variable already Setup** - Need to add only Event Tags             |
+|       | Approaches                                                                                                                                                                                                                                                                                                                                         |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | **Teams Without a Data Layer Setup** - Need to [Push Data to Data Layer](https://developer.uxcam.com/docs/google-tag-manager#push-data-to-the-data-layer), [Define variables](https://developer.uxcam.com/docs/google-tag-manager#define-variables-in-gtm), and [Event Tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tag) |
+| **2** | **Teams with Data Layer and User Variable already Setup** - Need to add only [Event Tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tag)                                                                                                                                                                                    |
 
 <br />
 
@@ -145,7 +145,7 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                       .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                        .</GitHubCallout>
 
 <br />
 
