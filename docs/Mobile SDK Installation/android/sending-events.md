@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-# 🎯 Event Tracking with UXCam
+# Event Tracking with UXCam
 
 Screens tell you **where** users go; **events show what they do**.\
 With a handful of well‑chosen events (5‑15 is ideal) plus descriptive properties, you can build funnels, spot drop‑offs, and debug support tickets in minutes.
@@ -60,12 +60,12 @@ props.put("price_cents", 1499);
 UXCam.logEvent("Payment_Succeeded", props);
 ```
 
-| Rule                                | Reason                                        |
-| ----------------------------------- | --------------------------------------------- |
-| Keys are **case‑sensitive**         | `Plan` and `plan` create separate properties. |
-| Values must be **String or Number** | Serialize complex objects to JSON if needed.  |
-| Avoid **PII**                       | Use hashed values or IDs to stay GDPR‑safe.   |
-| Stop at **20 properties**           | Extras are discarded and a warning is logged. |
+| Rule                                  | Reason                                        |
+| ------------------------------------- | --------------------------------------------- |
+| Keys are **case‑sensitive**           | `Plan` and `plan` create separate properties. |
+| Values must be a **String or Number** | Serialize complex objects to JSON if needed.  |
+| Avoid **PII**                         | Use hashed values or IDs to stay GDPR‑safe.   |
+| Stop at **20 properties**             | Extras are discarded and a warning is logged. |
 
 ***
 
