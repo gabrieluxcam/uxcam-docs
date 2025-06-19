@@ -93,10 +93,33 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. Whether you
 
 <GitHubCallout type="important">Choose on the foloowing approaches based on your product set up</GitHubCallout>
 
-| Approaches                                                                                                                                 |
-| :----------------------------------------------------------------------------------------------------------------------------------------- |
-| **<strong>Teams with Data Layer and User Variable already Setup</strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a>** |
-| **<strong>Teams Without a Data Layer Setup</strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a>**                      |
+<br />
+
+<Table align={["left"]}>
+  <thead>
+    <tr>
+      <th>
+        Approaches
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        Teams with Data Layer and User Variable already Setup
+        <a href="define-pages-properties-to-simplify-data#">Jump →</a>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Teams Without a Data Layer Setup
+        <a href="define-pages-properties-to-simplify-data#">Jump →</a>
+      </td>
+    </tr>
+  </tbody>
+</Table>
 
 <br />
 
@@ -147,7 +170,7 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)        .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)         .</GitHubCallout>
 
 <br />
 
@@ -223,7 +246,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\\\\\\\\\\\\\\\\\
+<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\\\\\\\\\\\\\\\\\\\
 Always sanitise and validate dynamic values being pushed to UXCam.\
 Use clear naming for events and properties to stay consistent in UXCam reports.</GitHubCallout>
 
@@ -240,7 +263,7 @@ Use clear naming for events and properties to stay consistent in UXCam reports.<
 | <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
 | <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases    |
 
-<GitHubCallout type="note">★ **Optional step**\\\\\\\\\\\\\\\\\
+<GitHubCallout type="note">★ **Optional step**\\\\\\\\\\\\\\\\\\\
 Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
