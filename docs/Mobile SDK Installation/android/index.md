@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)  \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -22,7 +22,7 @@ next:
 
 | Step                 | Task                                                                                                    | Goal                                    |
 | :------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| <strong>1</strong>   | <strong>Customise SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
+| <strong>1</strong>   | <strong>Customize SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
 | <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
 | <strong>2</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
 | <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
