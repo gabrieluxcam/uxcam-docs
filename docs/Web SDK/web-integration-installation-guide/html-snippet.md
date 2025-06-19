@@ -62,6 +62,8 @@ metadata:
 
 ## Next steps - Setup and configuration
 
+★ **Optional step**
+
 | Step                 | Task                                                                                           | Goal                                       |
 | :------------------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------- |
 | <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
@@ -70,8 +72,6 @@ metadata:
 | <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-event#">Jump →</a>                | Track user interactions and key behaviours |
 | <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
-
-★ **Optional step**
 
 <br />
 
