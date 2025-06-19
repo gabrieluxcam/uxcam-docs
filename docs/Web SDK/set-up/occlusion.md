@@ -7,9 +7,9 @@ metadata:
 ---
 Occlusion is a data privacy technique used to mask or hide sensitive information from being recorded or exposed during analytics tracking. In the context of the UXCam SDK, occlusion ensures that user inputs—such as passwords, credit card numbers, emails, and other personal data—are automatically or manually hidden from session recordings and logs. This helps protect user privacy and maintain compliance with data protection regulations like GDPR and CCPA.
 
-<br />
+<GitHubCallout type="note">Need an account? \**<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup">Start free</Anchor>* Occluded input field texts are replaced with asterisks \* Occluded input field numbers are replaced with 0000.</GitHubCallout>
 
-\<GitHubCallout type="note">\*\*Occluded input field texts are replaced with asterisks\*\* \<br> \*\*Occluded input field numbers are replaced with 0000\*\* \</GitHubCallout>
+\<GitHubCallout type="note">**Occluded input field texts are replaced with asterisks** \<br> **Occluded input field numbers are replaced with 0000** \</GitHubCallout>
 
 > 📘 Note:
 >
