@@ -55,18 +55,15 @@ By default, the following events are captured:
 
 After the initial integration, UXCam automatically collects a variety of user interactions and technical properties without requiring additional setup.
 
-**User Events**\
-We automatically capture key interaction events such as taps, clicks, scrolls, and page navigations.
-➜ Learn how to add custom event tagging
-
-**Page Visits**\
-All page views are captured automatically.
-➜ Use code-less page definition to organise your pages without touching code.
-
-**Sensitive Data Protection**\
-Inputs such as passwords and email fields are auto-occluded to protect user privacy.
-➜ Explore additional occlusion options
-
-**User Identification**\
-We identify users based on anonymous browser/device IDs by default.
-➜ You can enhance this by using functions to set user identity and properties
+* **User Events**\
+  We automatically capture key interaction events such as taps, clicks, scrolls, and page navigations.
+  ➜ [Learn how to add custom event tagging](logging-custom-event#)
+* **Page Visits**\
+  All page views are captured automatically.
+  ➜ Use code-less page definition to organise your pages without touching code.
+* **Sensitive Data Protection**\
+  Inputs such as passwords and email fields are auto-occluded to protect user privacy.
+  ➜ Explore additional occlusion options
+* **User Identification**\
+  We identify users based on anonymous browser/device IDs by default.
+  ➜ You can enhance this by using functions to set user identity and properties
