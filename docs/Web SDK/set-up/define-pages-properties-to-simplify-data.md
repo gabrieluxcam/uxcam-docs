@@ -38,13 +38,13 @@ Defining pages helps you simplify your analytics by grouping similar URLs under 
 
 <br />
 
-> 👍 **Tip**
->
-> Always define your pages if your URLs contain dynamic path parameters or fragments.
+<GitHubCallout type="tip">Always define your pages if your URLs contain dynamic path parameters or fragments.</GitHubCallout>
 
-> 📘 **Note**
->
-> If screen names are not manually defined, UXCam defaults to displaying the URL path as the screen name.
+<br />
+
+<GitHubCallout type="note">If screen names are not manually defined, UXCam defaults to displaying the URL path as the screen name.</GitHubCallout>
+
+<br />
 
 <br />
 
