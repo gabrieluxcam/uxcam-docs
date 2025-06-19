@@ -91,7 +91,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. Whether you
 
 <br />
 
-<GitHubCallout type="important">Choose one of the following approaches based on the set up of your product</GitHubCallout>
+<GitHubCallout type="important">Allpy one of the following approaches based on the set up of your product</GitHubCallout>
 
 <br />
 
@@ -115,7 +115,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. Whether you
       </td>
 
       <td>
-        **Teams Without a Data Layer Setup** - Need to configure Data Layer, User variables, and Events
+        **Teams Without a Data Layer Setup** - Need to configure Data Layer, User variables, and Events Tags
 
         <a href="define-pages-properties-to-simplify-data#">Jump →</a>
       </td>
@@ -127,7 +127,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. Whether you
       </td>
 
       <td>
-        **Teams with Data Layer and User Variable already Setup** - Need to add only Events
+        **Teams with Data Layer and User Variable already Setup** - Need to add only Events Tags
 
         <a href="define-pages-properties-to-simplify-data#">Jump →</a>
       </td>
@@ -139,9 +139,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. Whether you
 
 <br />
 
-<br />
-
-## Step 2: Push Data to the Data Layer
+### Push Data to the Data Layer
 
 On your website, push values to the GTM data layer when a user action happens.
 
@@ -169,9 +167,7 @@ window.dataLayer.push({
 
 <br />
 
-<br />
-
-## Step 3: Define Variables in GTM
+### Define Variables in GTM
 
 * Click on "Variables" in the left-hand menu
 * In the 'User-Defined Variables' section, click on 'New', and select 'Data Layer Variable'
@@ -184,13 +180,11 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)             .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)              .</GitHubCallout>
 
 <br />
 
-<br />
-
-## Step 4: Create the UXCam Event Tag
+### Create Event Tag
 
 1. Create a New Tag for Events:
 
@@ -232,15 +226,11 @@ window.dataLayer.push({
 
 <br />
 
-<br />
-
 <Image align="center" src="https://files.readme.io/61c35516267e9c55d2476e4d65e51008a0b1b81c7b05cabee2624f6ce80269f9-Cart_item.png" />
 
 <br />
 
-<br />
-
-## Step 4: Test
+## Step 3: Test
 
 Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
@@ -251,16 +241,14 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-<br />
-
-## Step 5: Publish
+## Step 4: Publish
 
 * Publish your GTM container by clicking on 'Submit' button
 * Review the changes and click on 'Publish'
 
 <br />
 
-<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<GitHubCallout type="note">Make sure the UXCam script is loaded before the event fires.\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Always sanitise and validate dynamic values being pushed to UXCam.\
 Use clear naming for events and properties to stay consistent in UXCam reports.</GitHubCallout>
 
@@ -277,7 +265,7 @@ Use clear naming for events and properties to stay consistent in UXCam reports.<
 | <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
 | <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases    |
 
-<GitHubCallout type="note">★ **Optional step**\\\\\\\\\\\\\\\\\\\\\\\\\\\
+<GitHubCallout type="note">★ **Optional step**\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
