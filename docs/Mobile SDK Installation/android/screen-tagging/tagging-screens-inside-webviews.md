@@ -5,9 +5,9 @@ hidden: false
 metadata:
   robots: index
 ---
-### Step 1:  Create a Java WebAppInterface
+### Step 1:  Create a Native JavaScript Interface
 
-To expose a method to JavaScript, create a Java class that acts as a bridge between the webview and the Android native code.
+First, create a class in your native Android code that will act as a bridge to your WebView. This interface will contain the methods you want to expose to JavaScript.
 
 ```java
 public class WebAppInterface {
@@ -18,18 +18,18 @@ public class WebAppInterface {
 }
 ```
 
-### Step 2: Attach the Interface Class to the Webview
+### Step 2: Attach the Interface to the WebView
 
-Attach the interface class to the webview, allowing JavaScript to call native methods.
+Next, attach an instance of your interface class to the WebView, giving it a name (e.g., "UXCamBridge") that your JavaScript code will use to call it.
 
 ```java
 WebView webView = (WebView) findViewById(R.id.webview);
 webView.addJavascriptInterface(new WebAppInterface(), "UXCamBridge");
 ```
 
-### Step 3: Call the Java Method Through the Bridge
+### Step 3: Call the Native Method from JavaScript
 
-In your HTML code, call the Java method through the bridge you attached.
+Finally, within your web content's JavaScript, you can now call the native method using the bridge name you defined in the previous step.
 
 ```html
 <input type="button" value="Tag Screen" onClick="tagScreenName('screenName')" />
