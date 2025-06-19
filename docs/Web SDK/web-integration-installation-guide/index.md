@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-Get up and running with UXCam in minutes—no complex setup required. This guide covers everything you need to integrate the UXCam Web SDK into your website or web app.
+Get up and running with UXCam in minutes - no complex setup required. This guide covers everything you need to integrate the UXCam Web SDK into your website or web app.
 
 <br />
 
