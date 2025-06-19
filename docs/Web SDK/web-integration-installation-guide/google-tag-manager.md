@@ -143,7 +143,7 @@ window.dataLayer.push({
 
 <br />
 
-> 👍 Tip: Give your GTM variables clear names to stay organized.
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized.</GitHubCallout>
 
 Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer).
 
@@ -253,7 +253,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 | <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
 | <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases    |
 
-<GitHubCallout type="note">★ **Optional step**\\\
+<GitHubCallout type="note">★ **Optional step**\\\\\
 Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
