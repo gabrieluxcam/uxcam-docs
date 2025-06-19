@@ -14,54 +14,54 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
 # Integration Journey at a Glance
 
-| Step                 | Task                                                                                                    | Goal                                    |
-| :------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
-| <strong>1</strong>   | <strong>Customize SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
-| <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
-| <strong>2</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
-| <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
-| <strong>5 ★</strong> | <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA      |
+| Step                 | Task                                                                                                     | Goal                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| <strong>1</strong>   | <strong>Customize SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>   | Capture your first live session         |
+| <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                       | Enable heat-maps & screen analytics     |
+| <strong>2</strong>   | <strong>Mask Sensitive Data</strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>                | Hide passwords and other GDPR/CCPA data |
+| <strong>4 ★</strong> | <strong>Identify Users & Set Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
+| <strong>5 ★</strong> | <strong>Track Custom Events</strong>  <a href="#5-tag-events">Jump →</a>                                 | Measure key actions & run final QA      |
 
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
-  * **Session Replay + Heat-maps** – watch every UX moment in context.
+  * **Session Replay + Heatmaps** – Watch every user experience moment in full context.
   * **Advanced Product Analytics** – funnels, retention, feature adoption.
   * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
-  * **Engineering Analytics** – client-side performance tied to real sessions, monitoring crashes, ANRs and handled exceptions with session replay & developer logs for faster debugging.
+  * **Engineering Analytics** – Connect client-side performance to real sessions. Monitor crashes, ANRs, and handled exceptions with session replay and developer logs for faster debugging.
 </Accordion>
 
 <Accordion title="Tips Before You Begin" icon="fa-bolt">
   * Create **separate keys** for *debug* & *production* to keep data clean.
   * Use **feature flags** to toggle UXCam in staging builds.
-  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm everything is wired up.
+  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm the integration is working correctly.
 </Accordion>
 
 ***
 
 # Android SDK · Quickstart
 
-## Step 1: Find your App Key
+## Step 1: Get your App Key
 
-### 1.1: Grab your key
+### 1.1: Find your app key
 
-If you don't already have it, grab it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
 <GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
 
 ### 1.2: Keep it out of source control:
 
-add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time so you never hard-code secrets
+add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time and avoid hard-coding secrets in your codebase.
 
 ***
 
-## Step 2: Add the SDK
+## Step 2: Add the SDK Dependency
 
 [![pod version](https://img.shields.io/badge/Maven-3.+-green)](#)
 
@@ -82,7 +82,7 @@ dependencies {
 
 From your Application Class or Launcher Activity, add the configuration and start the SDK.
 
-<GitHubCallout type="important">Make sure to start the SDK at the earliest possible Context.</GitHubCallout>
+<GitHubCallout type="important">Make sure to initialize the SDK from the earliest possible Context.</GitHubCallout>
 
 ```kotlin Kotlin
 import com.uxcam.UXCam
@@ -110,7 +110,7 @@ UXCam.startWithConfiguration(config);
 }
 ```
 
-<GitHubCallout type="success">This completes the most basic integration process.                     Your first session will be uploaded as soon as you background your app and will be shown in your dashboard after a couple of minutes</GitHubCallout>
+<GitHubCallout type="success">This completes the most basic integration process.                     Your first session recording will appear on your dashboard a few minutes after the app is sent to the background.</GitHubCallout>
 
 ***
 
@@ -118,11 +118,11 @@ UXCam.startWithConfiguration(config);
 
 You can control how the SDK is configured via the configuration object you create, the available parameters are below:
 
-## Want to Debug?
+## Enable Debug Logs?
 
-Use our configuration option `.enableIntegrationLogging(bool)` to view more verbose logs in your Logcat, this will help you verify everything and pinpoint possible hurdles you face down the line.
+Set our configuration option `.enableIntegrationLogging(bool)` as `true` to see detailed UXCam logs in Logcat. This is useful for verifying your setup and troubleshooting any issues.
 
-## Rest of Options
+## Other Configuration Options
 
 * `.enableAutomaticScreenNameTagging(bool)`  True by Default. Set to false if you want to disable automatic screen tagging.
 * `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here]().
@@ -137,25 +137,25 @@ You've successfully integrated UXCam and sent some sessions, great job! 🎉 But
 
 <Cards columns={4}>
   <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
-    Take Full Advantage of Heatmaps and Screen Analytics
+    Take full advantage of heatmaps and screen analytics.
 
     > Review Automatic or Manual Tagging
   </Card>
 
   <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
-    Protect Your Users’ Privacy and PII Data
+    Protect your users’ privacy by masking sensitive data.
 
     > Mask or Blur Screens, Views and Fields
   </Card>
 
   <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties#/" icon="fa-user">
-    Get The Full Picture with User Analytics
+    Get the full picture with user-level analytics.
 
     > Assign Custom User IDs and Properties
   </Card>
 
   <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events#/" icon="fa-question">
-    Deeper Insights of Your Users' interactions
+    Gain deeper insights into your users' interactions.
 
     > Send Events and Add Properties
   </Card>
