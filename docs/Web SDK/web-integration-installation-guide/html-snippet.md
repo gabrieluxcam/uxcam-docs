@@ -73,7 +73,7 @@ metadata:
 
 <br />
 
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-4 to start getting replays, then add steps 4-5 for deeper analytics.</GitHubCallout>
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-4 to start getting replays, then add steps 5-6 for deeper analytics.</GitHubCallout>
 
 <br />
 
