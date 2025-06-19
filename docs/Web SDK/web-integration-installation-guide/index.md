@@ -52,3 +52,15 @@ After the initial integration, UXCam automatically collects a variety of user in
 * **User Identification**\
   We identify users based on anonymous browser/device IDs by default.
   ➜ [You can enhance this by using functions to set user identity and properties](user-properties#)
+
+<br />
+
+# Content Security Policy (CSP)
+
+If your website uses a Content Security Policy (CSP), you’ll need to explicitly allow UXCam resources for the Web SDK to function properly. Without this, session recordings and script loading may be blocked. ➜ [Learn how to configure your CSP to safely enable UXCam in our Content Security Policy setup guide](csp#)
+
+<br />
+
+## Support
+
+For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
