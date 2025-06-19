@@ -12,9 +12,8 @@ This document will guide you through the process of integrating the Web SDK into
 
 # Integration methods at a Glance
 
-| Task                                                                             |
-| :------------------------------------------------------------------------------- |
 | <strong>Install Code Snippet </strong>  <a href="html-snippet#">Jump →</a>       |
+| :------------------------------------------------------------------------------- |
 | <strong>Google Tag Manager </strong>  <a href="google-tag-manage#">Jump →</a>    |
 | <strong>shopify </strong>  <a href="#">Jump →</a>                                |
 | <strong>Shopify </strong>  <a href="#4-set-user-identity--properties">Jump →</a> |
