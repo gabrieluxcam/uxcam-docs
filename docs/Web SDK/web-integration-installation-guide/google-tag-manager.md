@@ -94,9 +94,10 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
   👉 View Integration Guide above
 * Access to edit your website’s code and GTM container (If you’re reusing triggers and variables that already exist on your GTM account, you don’t need access to your website code)
 
-> 📘 Note: If you’ve already set up the Data layer variables in GTM, skip to step 3.
-
 <br />
+
+<GitHubCallout type="note">★ **Note**\\\\\
+If you’ve already set up the Data layer variables in GTM, skip to step 3.</GitHubCallout>
 
 <br />
 
@@ -253,7 +254,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 | <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
 | <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases    |
 
-<GitHubCallout type="note">★ **Optional step**
+<GitHubCallout type="note">★ **Optional step**\
 Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
