@@ -9,6 +9,8 @@ Occlusion is a data privacy technique used to mask or hide sensitive information
 
 <br />
 
+\<GitHubCallout type="note">\*\*Occluded input field texts are replaced with asterisks\*\* \<br> \*\*Occluded input field numbers are replaced with 0000\*\* \</GitHubCallout>
+
 > 📘 Note:
 >
 > * Occluded input field texts are replaced with asterisks \*\*
