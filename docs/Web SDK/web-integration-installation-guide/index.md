@@ -6,7 +6,7 @@ hidden: false
 metadata:
   robots: index
 ---
-This document will guide you through the process of integrating the Web SDK into your website. Through the setup and configuration phase, the SDK allows for tracking user events, setting user identities, page views, and configuring user properties, with additional options for occlusion of sensitive data in URLs and query parameters.
+Get up and running with UXCam in minutes—no complex setup required. This guide covers everything you need to integrate the UXCam Web SDK into your website or web app.
 
 <br />
 
