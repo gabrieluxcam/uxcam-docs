@@ -62,6 +62,20 @@ metadata:
 
 ## Next steps - Setup and configuration
 
+| Step                 | Task                                                                                                    | Goal                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------------ | :-------------------------------------- |
+| <strong>1</strong>   | <strong>Customise SDK Configuration </strong>  <a href="#1-initialise-sdk--start-recording">Jump →</a>  | Capture your first live session         |
+| <strong>3</strong>   | <strong>Tag Screens </strong>  <a href="#3-tag-screens">Jump →</a>                                      | Enable heat-maps & screen analytics     |
+| <strong>2</strong>   | <strong>Mask PII & Sensitive Content </strong>  <a href="#2-mask-pii--sensitive-content">Jump →</a>     | Hide passwords and other GDPR/CCPA data |
+| <strong>4 ★</strong> | <strong>Set User Identity & Properties </strong>  <a href="#4-set-user-identity--properties">Jump →</a> | Unify sessions, power funnels & cohorts |
+| <strong>5 ★</strong> | <strong>Tag Events </strong>  <a href="#5-tag-events">Jump →</a>                                        | Measure key actions & run final QA      |
+
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+
+<br />
+
+## Next steps - Setup and configuration
+
 * [Occlusion - Hide Sensitive Data](https://developer.uxcam.com/v2.0-draft/update/docs/occlusion#/)
 * [Define Pages & Properties](https://developer.uxcam.com/v2.0-draft/update/docs/define-pages-properties-to-simplify-data)
 * [Setting User Properties](https://developer.uxcam.com/v2.0-draft/update/docs/user-properties)
