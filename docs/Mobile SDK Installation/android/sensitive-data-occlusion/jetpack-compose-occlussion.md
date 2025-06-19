@@ -10,9 +10,9 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="warning"> 🚧 This page refers only to specific occlusion methods when using Jetpack Compose.                                                                                                      If you are not using Jetpack Compose or you are interested in occluding views and data **outside of Jetpack Compose elements** please refer to the main occlusion guides. </GitHubCallout>
+<GitHubCallout type="warning"> 🚧 This guide covers occlusion methods specifically for Jetpack Compose. For occluding traditional Android Views, please refer to our main occlusion documentation.</GitHubCallout>
 
-With the introduction of Jetpack Compose recording support on Android SDK v3.4.1 onward, we've made available a new module, **UXCamKtx**, which is required for occlusion for Jetpack Compose composables. It still depends on the com.uxcam:uxcam core maven artifact, so integration process is not altered and you still need to add the Android SDK (guide [here](https://uxcam-documentation.readme.io/docs/android))
+To support occlusion in Jetpack Compose, we have introduced a new helper module: **UXCamKtx**. This module is required to occlude Composables and is available for Android SDK v3.4.1 and newer. The standard UXCam SDK is still a required dependency. (guide [here](https://uxcam-documentation.readme.io/docs/android))
 
 ***
 
@@ -37,7 +37,7 @@ Now you're ready to start setting the occlusion methods for your composables!
 
 > 📘 **Note**
 >
-> If you do not need the Kotlin specific APIs provided by the uxcam-ktx artifact, you can simply just use the uxcam artifact from the regular integration. However, if you need the APIs provided by the uxcam-ktx artifact, then you will have to use that instead.
+> The `uxcam-ktx`artifact is only required if you need to use the Jetpack Compose occlusion APIs. Otherwise, you only need the core`uxcam` dependency.
 
 ### Occluding Composables
 
