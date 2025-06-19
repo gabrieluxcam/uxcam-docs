@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? **[Start free](/signup)** – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup) \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -29,6 +29,28 @@ next:
 | <strong>5 ★</strong> | <strong>Track Custom Events</strong>  <a href="#5-tag-events">Jump →</a>                                 | Measure key actions & run final QA      |
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+
+<SimpleStepper>
+  <SimpleStep header="Step 1: Customize SDK Configuration">
+    Capture your first live session.
+  </SimpleStep>
+
+  <SimpleStep header="Step 2: Tag Screens">
+    Enable heat-maps & screen analytics.
+  </SimpleStep>
+
+  <SimpleStep header="Step 3: Mask Sensitive Data">
+    Hide passwords and other GDPR/CCPA data.
+  </SimpleStep>
+
+  <SimpleStep header="Step 4: Identify Users & Set Properties">
+    Unify sessions, power funnels & cohorts
+  </SimpleStep>
+
+  <SimpleStep header="Step 5: Track Custom Events">
+    Measure key actions & run final QA
+  </SimpleStep>
+</SimpleStepper>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
   * **Session Replay + Heatmaps** – Watch every user experience moment in full context.
