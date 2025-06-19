@@ -10,15 +10,7 @@ This document will guide you through the process of integrating the Web SDK into
 
 <br />
 
-# Choose your methods of integration
 
-| Install Code Snippet   | <a href="html-snippet#">Jump →</a>      |
-| :--------------------- | :-------------------------------------- |
-| **Google Tag Manager** | <a href="google-tag-manage#">Jump →</a> |
-| **Shopify**            | <a href="shopify#">Jump →</a>           |
-| **Wordpress**          | <a href="wordpress#">Jump →</a>         |
-
-<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting replays and heat-maps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <br />
 
@@ -33,10 +25,12 @@ By default, the following events are captured:
 
 <br />
 
-## Choose your methods of integration
+<br />
 
-* [AI Agent](https://developer.uxcam.com/v2.0-draft/update/docs/ai-agent-integration#/)
-* [HTML inclusion](https://developer.uxcam.com/v2.0-draft/update/docs/html-snippet#/)
-* [Google Tag Manager](https://developer.uxcam.com/v2.0-draft/update/docs/google-tag-manager#/)
-* [Shopify](https://developer.uxcam.com/v2.0-draft/update/docs/shopify#/)
-* [Wordpress](https://developer.uxcam.com/v2.0-draft/update/docs/wordpress#/)
+# Choose your methods of integration
+
+| Install Code Snippet   | <a href="html-snippet#">Jump →</a>      |
+| :--------------------- | :-------------------------------------- |
+| **Google Tag Manager** | <a href="google-tag-manage#">Jump →</a> |
+| **Shopify**            | <a href="shopify#">Jump →</a>           |
+| **Wordpress**          | <a href="wordpress#">Jump →</a>         |
