@@ -14,6 +14,8 @@ next:
 
 Defining pages helps you simplify your analytics by grouping similar URLs under consistent and meaningful names. This ensures cleaner data, easier reporting, and better insights across web and mobile platforms.
 
+<br />
+
 **With page definitions, you can:**
 
 * Group related URLs under a single page or screen name (e.g., “Product Page”).
