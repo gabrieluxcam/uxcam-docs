@@ -182,6 +182,10 @@ When URLs evolve over time or share similar patterns, maintaining clean and cons
 
 <br />
 
+<GitHubCallout type="note">If your site includes dynamic segments with similar structures—such as: omain.com/`dynamic-category-id` and domain.com/`dynamic-product-id` - You should follow best practices for avoiding rule conflicts.</GitHubCallout>
+
+<br />
+
 **Recommended reading**
 
 [Resolving conflicting Page Definition rules for similar URL structures with dynamic values](https://help.uxcam.com/en/articles/11145060-resolving-conflicting-page-definition-rules-for-similar-url-structures-with-dynamic-values)
