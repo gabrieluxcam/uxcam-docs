@@ -93,7 +93,7 @@ You can use Google Tag Manager (GTM) to send custom events to UXCam. This includ
 
 **Using`dataLayer`**
 
-To track user interactions using Google Tag Manager (GTM), there’s no need to manually implement a `dataLayer` if you’re only using GTM’s built-in triggers such as clicks, form submissions, scroll depth, element visibility, or timers. GTM handles these natively and can detect and fire tags based on these events without requiring any custom JavaScript or code changes. Manual `dataLayer.push()` are only necessary when tracking custom events or variables that aren’t detectable through GTM’s built-in functionality, such as backend-driven logic or specific user states.
+To track user interactions using Google Tag Manager (GTM), there’s no need to manually implement a `dataLayer` if you’re only using GTM’s built-in triggers such as clicks, form submissions, scroll depth, element visibility, or timers. GTM handles these natively and can detect and fire tags based on these events without requiring any custom JavaScript or code changes. Manual `dataLayer.push()` are only necessary when tracking custom events or variables that aren’t detectable through GTM’s built-in functionality, such as backend-driven logic or specific user states (e.g user authentication state, purchase confirmation, checkout completion etc.)
 
 <br />
 
@@ -154,7 +154,7 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)         .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)          .</GitHubCallout>
 
 <br />
 
