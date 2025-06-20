@@ -171,18 +171,7 @@ When URLs evolve over time or share similar patterns, maintaining clean and cons
 
 <br />
 
-> 📘 Note
->
-> If your site includes dynamic segments with similar structures—such as:
->
-> •	domain.com/`dynamic-category-id`\
-> •	domain.com/`dynamic-product-id`
->
-> You should follow best practices for avoiding rule conflicts.
-
-<br />
-
-<GitHubCallout type="note">If your site includes dynamic segments with similar structures—such as: omain.com/`dynamic-category-id` and domain.com/`dynamic-product-id` - You should follow best practices for avoiding rule conflicts.</GitHubCallout>
+<GitHubCallout type="note">If your site includes dynamic segments with similar structures—such as: domain.com/`dynamic-category-id` and domain.com/`dynamic-product-id` - You should follow best practices for avoiding rule conflicts.</GitHubCallout>
 
 <br />
 
