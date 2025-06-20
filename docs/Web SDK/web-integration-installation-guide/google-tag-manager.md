@@ -154,7 +154,7 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)        .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)         .</GitHubCallout>
 
 <br />
 
@@ -243,7 +243,7 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 <br />
 
-<GitHubCallout type="note">Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
+<GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
 <br />
 
