@@ -88,9 +88,9 @@ If CORS settings can’t be changed on the asset server, you can proxy the asset
 
 <br />
 
-> 📘 Note
->
-> For more help with CORS, check out [MDN Web Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
+<GitHubCallout type="note">For more help with CORS, check out [MDN Web Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)</GitHubCallout>
+
+<br />
 
 <br />
 
