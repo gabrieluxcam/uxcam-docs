@@ -70,9 +70,9 @@ Integrate the UXCam Web SDK into your Shopify site and track custom events using
 </script>
 ```
 
-> 📘 **Note**
->
-> Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.
+<br />
+
+<GitHubCallout type="info">Adding this script to the **theme.liquid** file ensures that the UXCam functionality is applied to every screen on your Shopify website.</GitHubCallout>
 
 <br />
 
