@@ -153,11 +153,11 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)  .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)   .</GitHubCallout>
 
 <br />
 
-### Create Event Tags
+### Create Event Tags and set the triggers
 
 The event tag defines the action of sending the event to UXCam
 
@@ -189,7 +189,7 @@ The event tag defines the action of sending the event to UXCam
 
 3. Set the Trigger:
 
-* In case you want the event to fire when a user clicks a button; select from the list or create the trigger:
+* In case you want the event to fire when a user clicks a button; select from the list or create a new trigger:
 * Click on 'Triggering' and add a new trigger by clicking on the plus (+) button
 * Select 'Click - All Elements' from the list and select 'Some clicks' option on when the trigger fires
 * Select the Click classes -> equals -> submitButton, and click 'Save'
