@@ -87,7 +87,13 @@ Using UXCam with Google Tag Manager (GTM) will allow you to efficiently manage a
 
 ## Step 2: Sending Events and properties to UXCam
 
-You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending data layer variables as event properties to help you track meaningful user actions with context. Whether you already have a data layer and variables configured, or you’re working with a basic setup, this guide covers both approaches:
+You can use Google Tag Manager (GTM) to send custom events to UXCam. This includes sending `dataLayer` variables as event properties to help you track meaningful user actions with context. Whether you already have a data layer and variables configured, or you’re working with a basic setup, this guide covers both approaches:
+
+<br />
+
+**Using`dataLayer`**
+
+To track user interactions using Google Tag Manager (GTM), there’s no need to manually implement a `dataLayer` if you’re only using GTM’s built-in triggers such as clicks, form submissions, scroll depth, element visibility, or timers. GTM handles these natively and can detect and fire tags based on these events without requiring any custom JavaScript or code changes. Manual `dataLayer` pushes are only necessary when tracking custom events or variables that aren’t detectable through GTM’s built-in functionality, such as backend-driven logic or specific user states.
 
 <br />
 
@@ -145,7 +151,7 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                           .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                            .</GitHubCallout>
 
 <br />
 
