@@ -1,5 +1,5 @@
 ---
-title: Web Integration
+title: Web Installation
 excerpt: How to Get Started with UXCam for Web
 deprecated: false
 hidden: false
