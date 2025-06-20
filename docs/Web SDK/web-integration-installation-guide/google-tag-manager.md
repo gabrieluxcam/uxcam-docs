@@ -101,11 +101,11 @@ To track user interactions using Google Tag Manager (GTM), there’s no need to 
 
 <br />
 
-|       | Approaches                                                                                                                                                                                                                                                                                                                                          |
-| :---- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1** | **Teams Without a Data Layer Setup** - Need to [Push Data to Data Layer](https://developer.uxcam.com/docs/google-tag-manager#push-data-to-the-data-layer), [Define variables](https://developer.uxcam.com/docs/google-tag-manager#define-variables-in-gtm), and [Event Tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags) |
-| **2** | **Teams with Data Layer and User Variable already Setup** - Need to add only [Event Tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                    |
-| **3** | **Using GMT built-in triggers** - Need to add only [Event Tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                                              |
+|       | Approaches                                                                                                                                                                                                                                                                                                                                                 |
+| :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | **Teams Without a Data Layer Setup** - Need to [Push Data to Data Layer](https://developer.uxcam.com/docs/google-tag-manager#push-data-to-the-data-layer), [Define variables](https://developer.uxcam.com/docs/google-tag-manager#define-variables-in-gtm), and [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags) |
+| **2** | **Teams with Data Layer and User Variable already Setup** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                        |
+| **3** | **Using GMT built-in triggers** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                                                  |
 
 <br />
 
@@ -154,7 +154,7 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)      .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)       .</GitHubCallout>
 
 <br />
 
