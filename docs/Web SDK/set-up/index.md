@@ -20,5 +20,4 @@ This guide provides an overview of the UXCam Web SDK’s key features and config
 | <strong>5 ★</strong> | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
 
-<GitHubCallout type="note">★ **Optional step**\\\\\
-Ship steps 1-4, to get the most value out of UXCam</GitHubCallout>
+<GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-4, to get the most value out of UXCam</GitHubCallout>
