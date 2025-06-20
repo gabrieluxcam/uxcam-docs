@@ -112,7 +112,7 @@ To track user interactions using Google Tag Manager (GTM), there’s no need to 
 
 ### Push Data to the Data Layer
 
-On your website, push values to the GTM data layer when a user action happens.
+`dataLayer` push is used to defines the event and supplies Data values to the GTM data layer when a user action happens.
 
 <br />
 
@@ -140,6 +140,8 @@ window.dataLayer.push({
 
 ### Define Variables in GTM
 
+Variables pull specific pieces of information out of the `dataLayer` so they can be used inside Tags and Triggers.
+
 * Click on "Variables" in the left-hand menu
 * In the 'User-Defined Variables' section, click on 'New', and select 'Data Layer Variable'
 * Give the variable a recognisable name in the top left of the screen (e.g. Item\_Price)
@@ -151,11 +153,13 @@ window.dataLayer.push({
 
 <br />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer).</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer) .</GitHubCallout>
 
 <br />
 
 ### Create Event Tags
+
+The event tag defines the action of sending the event to UXCam
 
 1. Create a New Tag for Events:
 
