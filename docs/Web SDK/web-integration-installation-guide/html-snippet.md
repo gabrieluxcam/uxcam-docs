@@ -66,8 +66,6 @@ metadata:
 
 ## Next steps - Setup and configuration
 
-★ **Optional step**
-
 | Step                 | Task                                                                                           | Goal                                       |
 | :------------------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------- |
 | <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
