@@ -77,7 +77,7 @@ android {
 
 ### 3.1 Choose the Right Place to Initialize
 
-<GitHubCallout type="note"> \_Start the SDK\*\* once\*\*, from the earliest available `Context` that persists for the entire application lifecycle..</GitHubCallout>
+<GitHubCallout type="note"> Start the SDK\*\* once\*\*, from the earliest available `Context` that persists for the entire application lifecycle.</GitHubCallout>
 
 | **If you …**                                | **Call`UXCam.startWithConfiguration()` in …**                   | **Why this spot?**                                                              |
 | ------------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------- |
