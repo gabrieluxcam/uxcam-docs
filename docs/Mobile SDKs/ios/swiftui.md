@@ -1,5 +1,5 @@
 ---
-title: SwiftUI
+title: SwiftUI UXCam package
 excerpt: ''
 deprecated: false
 hidden: false
