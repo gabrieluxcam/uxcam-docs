@@ -116,7 +116,7 @@ For a full walk‑through—including regex URL matching—see [**WebView Taggin
 
 ***
 
-# 4 · Verify your tags
+# Verify your tags
 
 1. In Debug, navigate through every manually tagged screen; then background the app.
 2. Once the session uploads, confirm:
@@ -129,7 +129,7 @@ A solid screen‑naming strategy makes **PII masking** and **heat‑map analysis
 
 ***
 
-# 5 · Troubleshooting cheat‑sheet
+# Troubleshooting cheat‑sheet
 
 | Issue                             | Quick diagnosis                       | Solution                                                         |
 | --------------------------------- | ------------------------------------- | ---------------------------------------------------------------- |
