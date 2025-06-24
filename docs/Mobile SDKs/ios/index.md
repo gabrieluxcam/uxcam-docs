@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)     \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -77,8 +77,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-              $ pod install
-            `}
+                  $ pod install
+                `}
 </Terminal>
 
 #### Swift Package Manager
@@ -102,7 +102,7 @@ import UXCam
 Add the following initialisation to `application:didFinishLaunchingWithOptions:` in your `AppDelegate`:
 
 ```swift
-let configuration = UXCamConfiguration(appKey: "YourAppKey")
+let configuration = UXCamConfiguration(appKey: "YOUR_APP_KEY")
 ```
 
 > Replace "YourAppKey" with the app key available on your UXCam dashboard.
