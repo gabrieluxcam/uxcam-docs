@@ -1,5 +1,5 @@
 ---
-title: Screen Tagging
+title: Tagging Screens
 excerpt: ''
 deprecated: false
 hidden: false
