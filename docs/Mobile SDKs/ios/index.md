@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)    \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -59,10 +59,6 @@ next:
 >
 > If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/v1.1/docs/swiftui).
 
-# What Does a Successful Integration Look Like?
-
-With a solid integration, you’ll have a complete picture of how users interact with your app. From screen journeys and user behaviors to session replays and user properties, you’ll be able to understand and enhance every aspect of your product’s user experience. Follow along with this quick guide, and you’ll be up and running in no time.
-
 ## Quick Start: Only a Couple of Lines of Code
 
 <GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
@@ -81,8 +77,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-          $ pod install
-        `}
+              $ pod install
+            `}
 </Terminal>
 
 #### Swift Package Manager
@@ -114,8 +110,22 @@ let configuration = UXCamConfiguration(appKey: "YourAppKey")
 3. Then, start the SDK with your configuration object
 
 ```swift
-UXCam.optIntoSchematicRecordings()
-UXCam.start(with: configuration)
+import UXCam
+
+func application(_ application: UIApplication,
+                 didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    let config = UXCamConfiguration(appKey: "YOUR_APP_KEY")
+
+    UXCam.optIntoSchematicRecordings()
+
+    #if DEBUG
+    // 🔍 Enable verbose integration logs in Debug builds only
+    config.enableIntegrationLogging = true
+    #endif
+
+    UXCam.start(with: config)
+    return true
+}
 ```
 
 ***
@@ -146,6 +156,12 @@ UXCam.start(with: configuration)
   <em style={{ fontSize: "13px" }}>Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em>
 </p>
 
+<br />
+
+## Build & Test
+
+Run the app on a simulator or device, navigate a few screens, then send it to the background. Your first session replay will appear on the UXCam dashboard within seconds.
+
 > 👍 As Simple As That!
 >
 > This will complete the integration process.\
@@ -155,14 +171,34 @@ UXCam.start(with: configuration)
 
 <br />
 
-> 📘 Additional Resources
->
-> **[SDK Updates](https://developer.uxcam.com/docs/changelog):** Stay up to date with the latest features and improvements.
->
-> **[Tailor for Success](https://help.uxcam.com/hc/en-us/articles/360022226651-How-to-customize-the-UXCam-account):** Learn how to use advanced features such as identifying users, tagging sessions, or hiding sensitive views.
-
-<br />
-
 ## Next Steps ➡️
 
 You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
+
+<br />
+
+<Cards columns={4}>
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
+    Take full advantage of heatmaps and screen analytics.
+
+    > Review Automatic or Manual Tagging
+  </Card>
+
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
+    Protect your users’ privacy by masking sensitive data.
+
+    > Mask or Blur Screens, Views and Fields
+  </Card>
+
+  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties#/" icon="fa-user">
+    Get the full picture with user-level analytics.
+
+    > Assign Custom User IDs and Properties
+  </Card>
+
+  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events#/" icon="fa-question">
+    Gain deeper insights into your users' interactions.
+
+    > Send Events and Add Properties
+  </Card>
+</Cards>
