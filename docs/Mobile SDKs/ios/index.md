@@ -10,7 +10,50 @@ metadata:
 next:
   description: ''
 ---
-So you've got your account set up, now let’s make sure your iOS app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)   \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+
+<JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
+
+# Integration Journey at a Glance
+
+<SimpleStepper>
+  <SimpleStep header="Step 1: Customize SDK Configuration">
+    Capture your first live session.
+  </SimpleStep>
+
+  <SimpleStep header="Step 2: Tag Screens">
+    Enable heat-maps & screen analytics.
+  </SimpleStep>
+
+  <SimpleStep header="Step 3: Mask Sensitive Data">
+    Hide passwords and other GDPR/CCPA data.
+  </SimpleStep>
+
+  <SimpleStep header="Step 4: Identify Users & Set Properties">
+    Unify sessions, power funnels & cohorts
+  </SimpleStep>
+
+  <SimpleStep header="Step 5: Track Custom Events">
+    Measure key actions & run final QA
+  </SimpleStep>
+</SimpleStepper>
+
+<GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
+
+<Accordion title="Key Benefits After Setup" icon="fa-info-circle">
+  * **Session Replay + Heatmaps** – Watch every user experience moment in full context.
+  * **Advanced Product Analytics** – funnels, retention, feature adoption.
+  * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
+  * **Engineering Analytics** – Connect client-side performance to real sessions. Monitor crashes, ANRs, and handled exceptions with session replay and developer logs for faster debugging.
+</Accordion>
+
+<Accordion title="Tips Before You Begin" icon="fa-bolt">
+  * Create **separate keys** for *debug* & *production* to keep data clean.
+  * Use **feature flags** to toggle UXCam in staging builds.
+  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm the integration is working correctly.
+</Accordion>
+
+<br />
 
 > 🚧 Note for SwiftUI developers:
 >
@@ -38,8 +81,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-      $ pod install
-    `}
+          $ pod install
+        `}
 </Terminal>
 
 #### Swift Package Manager
