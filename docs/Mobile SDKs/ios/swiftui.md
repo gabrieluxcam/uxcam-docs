@@ -65,16 +65,4 @@ init(){
 
 > 🚧 **Warning**
 >
-> **Warning**
->
-> Automatic Screen Tagging is available only from SDK plugin v1.0.7
->
 > **Screen Tagging** and **Hiding Sensitive Data** for Swift UI have some differences and you can check some examples on the documentation, all other customization APIs provided by UXCam can be called regularly done with iOS by importing UXCam and calling the desired method.
-
-> 📘 **Note**
->
-> **Note**
->
-> SDK Updates
->
-> To check all the information on the fixes and improvements on the latest versions of the SDK, please visit [this page](https://help.uxcam.com/hc/en-us/articles/4404509626509--SDK-UPDATES).
