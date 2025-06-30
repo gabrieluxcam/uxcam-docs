@@ -16,9 +16,18 @@ next:
 ---
 # UXCam iOS Changelog
 
+<br />
+
+### V. 3.6.25 - April 10, 2025
+
+* While calling allowshortbreak api, 0 sec screen is being shown in the timeline
+* Crash fixes
+* App Crashes on page with Youtube Link
+* Improved ANR stacktrace
+
 ### V. 3.6.24 - April 10, 2025
 
-* **Fix** Fixed crash issue due to invalid json in data file 
+* **Fix** Fixed crash issue due to invalid json in data file
 * **Fix** Fixed crash issue if video recording is cancelled by system
 * **Fix** Fixed large values for app start metrics due to sdk starting in background state
 * **Fix** Fixed 0 secs screens for UIKit controllers hosting SwiftUI views
@@ -27,7 +36,7 @@ next:
 
 ### V. 3.6.23 - March 20, 2025
 
-* **Fix** Occlusion not working for few offline session during startup 
+* **Fix** Occlusion not working for few offline session during startup
 * **Fix** Prevent capturing occluded screens element information
 * **Fix** Crash on iOS 3.6.20
 * **Fix** Crashed sessions is not being uploaded
