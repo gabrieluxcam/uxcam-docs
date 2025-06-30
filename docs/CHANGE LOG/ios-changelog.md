@@ -18,7 +18,7 @@ next:
 
 <br />
 
-### V. 3.6.25 - April 10, 2025
+### V. 3.6.25 - June 4, 2025
 
 * While calling allowshortbreak api, 0 sec screen is being shown in the timeline
 * Crash fixes
