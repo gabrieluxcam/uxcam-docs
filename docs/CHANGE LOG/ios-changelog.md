@@ -18,6 +18,10 @@ next:
 
 <br />
 
+### V. 3.6.26 - June 17, 2025
+
+* Fixed crash due to unhandled exception while parsing ANR stacktrace
+
 ### V. 3.6.25 - June 4, 2025
 
 * While calling allowshortbreak api, 0 sec screen is being shown in the timeline
