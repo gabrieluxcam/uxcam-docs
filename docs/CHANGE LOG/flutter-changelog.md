@@ -10,6 +10,10 @@ metadata:
 next:
   description: ''
 ---
+#### June 16, 2025, - V. 2.6.1
+
+* Update iOS to 3.6.25 and Android to 3.6.43
+
 #### April 18, 2025, - V. 2.6.0
 
 * Update iOS to 3.6.24 and Android to 3.6.40
@@ -140,7 +144,7 @@ next:
 #### April 27, 2022 - V. 2.1.0
 
 * iOS SDK updated to v 3.4.1 & Android SDK updated to v3.4.0
-* Contains iOS Fix for 4XX error fallback to offline session recordings 🧙️ [IMPORTANT]
+* Contains iOS Fix for 4XX error fallback to offline session recordings 🧙️ \[IMPORTANT]
 * Start with configuration support
 * Blur/Occlusion support
 * Supports app logs
