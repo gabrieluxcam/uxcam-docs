@@ -1,7 +1,7 @@
 ---
 title: Sensitive Data Occlusion In iOS Apps (COPY)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   description: >-
     The document outlines how to handle sensitive data in iOS applications using
