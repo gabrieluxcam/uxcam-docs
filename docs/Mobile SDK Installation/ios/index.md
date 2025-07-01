@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                     \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                      \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -71,7 +71,7 @@ If you don't already have it, find it in App Settings -> App Key on your <a href
 
 ### 1.2: Keep it out of source control:
 
-Put the key in an ignored .xcconfig file or pass it in as an environment variable from your CI, then reference it via a build-setting placeholder (e.g. $(UXCAM\_APP\_KEY)) so the value is injected at compile-time and never hard-coded in source.
+Put the key in an ignored `.xcconfig` file or pass it in as an environment variable from your CI, then reference it via a build-setting placeholder (e.g. `$(UXCAM_APP_KEY)`) so the value is injected at compile-time and never hard-coded in source.
 
 ## Quick Start: Only a Couple of Lines of Code
 
@@ -91,8 +91,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                                                  $ pod install
-                                                                                `}
+                                                                                      $ pod install
+                                                                                    `}
 </Terminal>
 
 #### Swift Package Manager
