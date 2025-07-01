@@ -109,7 +109,7 @@ If nothing arrives after 30 seconds, confirm the device has internet and your p
 
 # Troubleshooting table
 
-<Table>
+<Table align={["left","left","left"]}>
   <thead>
     <tr>
       <th>
@@ -180,20 +180,6 @@ If nothing arrives after 30 seconds, confirm the device has internet and your p
 
       <td>
         Adopt exact naming convention & audit codebase
-      </td>
-    </tr>
-
-    <tr>
-      <td>
-        **Flood of identical events**
-      </td>
-
-      <td>
-        Called in a loop / animation
-      </td>
-
-      <td>
-        Debounce or throttle calls (e.g. once per screen)
       </td>
     </tr>
   </tbody>
