@@ -58,6 +58,10 @@ Automatic and manual tagging can **co‑exist**. Leave auto‑tagging ON and cal
 | Same screen shows different tabs / segments          | TabBar or segmented control not auto‑detected       | Tag on tab‑switch callback                                               |
 | **0 s** duplicates                                   | Both auto‑tag and manual tag fire in the same frame | Remove extra tag or disable auto for that VC                             |
 
+<Image align="center" border={false} caption="Tagging screens lets you separate your users interactions with meaningful structure." src="https://files.readme.io/d6821404d9ca1b8b12d78a50a9a036e1b9cad815defdfec3e18c5dc91c138d1b-image.png" width="30% " />
+
+<br />
+
 ### Example A · Tagging a View Controller
 
 Tag **once per navigation event** to avoid 0 s duplicates.
