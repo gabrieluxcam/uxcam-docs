@@ -53,7 +53,7 @@ No code required—these never reach UXCam servers.
 > 🛠️ **Priority ladder**\
 > Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
 
-<Image align="center" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
+<Image align="center" border={false} caption="You can add screen specific rules with different occlusion types" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
 
 <Image align="center" src="https://files.readme.io/3a9d7654b24bb774443f0dd6f44b297f90c668016bc954e25f9d488e389baba3-textDash.png" />
 
