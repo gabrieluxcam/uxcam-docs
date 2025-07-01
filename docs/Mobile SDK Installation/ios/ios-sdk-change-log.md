@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# UXCam iOS Changelog
-
 ### V. 3.6.26 - June 17, 2025
 
 * Fixed crash due to unhandled exception while parsing ANR stacktrace
