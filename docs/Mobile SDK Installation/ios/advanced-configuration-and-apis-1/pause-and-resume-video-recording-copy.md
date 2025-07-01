@@ -1,5 +1,5 @@
 ---
-title: Pause and Resume Video Recording (COPY)
+title: Pause and Resume Video Recording
 deprecated: false
 hidden: false
 metadata:
@@ -19,7 +19,7 @@ Use this API in case you want to stop the screen recording of a session indefini
 * Avoid recording some parts of the app that are not relevant.
 * Omit some screens and gestures that you want to avoid in your recordings.
 
-```java Android
+```swift iOS
 UXCam.pauseScreenRecording();
 ```
 
@@ -27,6 +27,6 @@ UXCam.pauseScreenRecording();
 
 Use this API to resume the recording of the screen and gestures where the recording has been previously paused.
 
-```java Android
+```swift iOS
 UXCam.resumeScreenRecording();
 ```
