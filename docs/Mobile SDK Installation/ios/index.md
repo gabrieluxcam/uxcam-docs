@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)           \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)            \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -75,8 +75,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                          $ pod install
-                                        `}
+                                              $ pod install
+                                            `}
 </Terminal>
 
 #### Swift Package Manager
@@ -180,7 +180,7 @@ You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  
     > Review Automatic or Manual Tagging
   </Card>
 
-  <Card title="Mask PII Data" href="https://developer.uxcam.com/update/docs/sensitive-data-occlusion-ios#/" icon="fa-credit-card">
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion-ios#/" icon="fa-credit-card">
     Protect your users’ privacy by masking sensitive data.
 
     > Mask or Blur Screens, Views and Fields
