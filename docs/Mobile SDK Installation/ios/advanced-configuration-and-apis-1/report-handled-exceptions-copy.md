@@ -1,5 +1,5 @@
 ---
-title: Report Handled Exceptions (COPY)
+title: Report Handled Exceptions
 deprecated: false
 hidden: false
 metadata:
