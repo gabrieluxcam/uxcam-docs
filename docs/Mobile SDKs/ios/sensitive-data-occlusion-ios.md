@@ -26,7 +26,7 @@ next:
 ---
 Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA and Apple’s App Store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 
-> 📘 **UIKit vs SwiftUI** The APIs below come in *both* flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
+> 📘 **UIKit vs SwiftUI** The APIs below come in  *both*  flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
 
 ***
 
@@ -129,13 +129,12 @@ var body: some View {
 # Verification checklist
 
 1. Record a debug session through sensitive flows.
-2. Play it back—passwords & cards must be *red‑boxed or blurred*.
-3. Check **Screen list**: no 0 s duplicates.
-4. Use the “Record gestures” toggle if taps should *not* be shown.
+2. Play it back, passwords & cards must be *red‑boxed or blurred*.
+3. Use the “Record gestures” toggle if taps should *not* be shown.
 
 ***
 
-# Troubleshooting quick‑ref
+# Troubleshooting
 
 | Issue                                    | Cause                               | Fix                                    |
 | ---------------------------------------- | ----------------------------------- | -------------------------------------- |
