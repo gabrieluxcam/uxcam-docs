@@ -1,5 +1,5 @@
 ---
-title: Opt-in / Opt-out (COPY)
+title: Opt-in / Opt-out
 deprecated: false
 hidden: false
 metadata:
@@ -15,10 +15,9 @@ Use this if:
 
 * The user has chosen not to enable analytics (screen recording)
 
-```java Android
+```swift iOS
 UXCam.optOutOverall()
 ```
-
 
 > 📘
 >
@@ -28,7 +27,7 @@ UXCam.optOutOverall()
 
 The SDK by default opts-in users for UXCam recording on app installs. If the user has been disabled for UXCam recording by using the optOut method, you can use this method to enable recording at runtime.
 
-```javascript Android
+```swift iOS
 UXCam.optInOverall()
 ```
 
@@ -36,6 +35,6 @@ UXCam.optInOverall()
 
 This method returns the status of the user indicating whether they are currently opted in or opted out.
 
-```java Android
-boolean UXCam.optInOverallStatus()
+```swift iOS
+UXCam.optInOverallStatus()->Bool
 ```
