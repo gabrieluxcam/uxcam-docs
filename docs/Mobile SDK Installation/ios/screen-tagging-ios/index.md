@@ -36,6 +36,10 @@ For iOS, UXCam automatically tags view controllers the moment they appear. This 
 > **If everything looks good** – simply rename screens in **Dashboard → Screens** (e.g. change `SettingsViewController` → **Settings**) and you’re done. No code required.\
 > Names changed in the dashboard auto‑apply to **future** sessions as well.
 
+<Image align="center" border={false} caption="Automatic Tagging will capture the ViewController's name by default" src="https://files.readme.io/e87935f5d16a8bee8f3e5a136f9eef12c2a2551286cb5cfe632afc9be3ddf9ef-image.png" />
+
+<br />
+
 ### Enable or disable automatic tagging
 
 Only turn it off if you see duplicate / meaningless names in your timeline *and* you are ready to maintain manual tags.
