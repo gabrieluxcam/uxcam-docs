@@ -28,18 +28,18 @@ Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA an
 
 > 📘 **UIKit vs SwiftUI** The APIs below come in *both* flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
 
----
+***
 
 # 1 · What’s hidden by default?
 
-| Platform    | Auto‑occluded out‑of‑the‑box                                                                           |
+| Platform    | Occluded out of the box                                                                                |
 | ----------- | ------------------------------------------------------------------------------------------------------ |
 | **UIKit**   | `UITextField` with `UITextContentType` of `password`, `creditCardNumber`, `newPassword`, `oneTimeCode` |
 | **SwiftUI** | Any `TextField` or `SecureField` wrapped in `.uxcamOcclude()`                                          |
 
 No code required—these never reach UXCam servers.
 
----
+***
 
 # 2 · Dashboard‑first rules (zero‑code)
 
@@ -48,10 +48,10 @@ No code required—these never reach UXCam servers.
 3. (Optional) **Blur radius** selector and **Record gestures** toggle.
 4. Save → record a test session to verify.
 
-> 🛠️ **Priority ladder**
+> 🛠️ **Priority ladder**\
 > Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
 
----
+***
 
 # 3 · One‑liner occlusion APIs
 
@@ -90,7 +90,7 @@ UXCam.removeOcclusion()            // everything
 UXCam.removeOcclusion(of: .blur)   // just blurs
 ```
 
----
+***
 
 # 4 · Apply at config time (recommended)
 
@@ -106,7 +106,7 @@ UXCam.start(with: config)
 
 This keeps all rules **in one place** and avoids race conditions.
 
----
+***
 
 # 5 · Sample SwiftUI snippet
 
@@ -124,7 +124,7 @@ var body: some View {
 }
 ```
 
----
+***
 
 # 6 · Verification checklist
 
@@ -133,7 +133,7 @@ var body: some View {
 3. Check **Screen list**: no 0 s duplicates.
 4. Use the “Record gestures” toggle if taps should *not* be shown.
 
----
+***
 
 # 7 · Troubleshooting quick‑ref
 
@@ -144,4 +144,4 @@ var body: some View {
 | Text inputs still visible                | Custom `UITextField` subclass       | Call `uxcamOcclude()` manually         |
 | WebView leaks card numbers               | Bridge not injected                 | See *Sensitive Data in WebViews* guide |
 
----
+***
