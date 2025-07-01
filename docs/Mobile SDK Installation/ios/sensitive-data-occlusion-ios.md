@@ -71,6 +71,10 @@ UXCam.applyOcclusion(yellow) // UIKit
 // SwiftUI: UXCamCore.applyOcclusion(yellow)
 ```
 
+<Image align="center" border={false} caption="You'll see the desired screen completely hidden while your users navigate trough it." src="https://files.readme.io/a96f4d9bacac9f2662cea981b3f7f3e3c04ebfc58f76759a9b17772643b302cb-image.png" />
+
+<br />
+
 ### Blur with custom radius
 
 ```swift
