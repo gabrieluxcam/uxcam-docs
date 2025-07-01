@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)              \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)               \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -75,8 +75,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                      $ pod install
-                                                    `}
+                                                          $ pod install
+                                                        `}
 </Terminal>
 
 #### Swift Package Manager
@@ -192,7 +192,7 @@ You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-ios#/" icon="fa-question">
+  <Card title="Send Events" href="https://developer.uxcam.com/update/docs/custom-events-and-properties-ios#/" icon="fa-question">
     Gain deeper insights into your users' interactions.
 
     > Send Events and Add Properties
