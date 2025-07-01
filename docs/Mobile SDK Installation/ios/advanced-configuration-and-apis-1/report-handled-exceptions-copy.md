@@ -32,21 +32,22 @@ In addition to the handled exception, you can send additional key-value properti
 
 Use the following API to send handled exceptions in UXCam.
 
-```java Android
-UXCam.reportExceptionEvent(Throwable exception) 
-
-// With custom properties
-UXCam.reportExceptionEvent(Throwable exception, Map<String, Object> properties)
+```swift iOS
+-(void)reportExceptionEvent:(NSException*)exception 
+properties(NSDictionary<NSString*,id>*)properties;
 
 //Example
-try {
-    throw new Exception("Forced exception");
-} catch (Exception e) {
-    Map<String, Object> map = new HashMap<>();
-    map.put("bug_sample_param_1", "bug_sample_value_1");
-    map.put("bug_sample_param_2", "bug_sample_value_2");
-    UXCam.reportExceptionEvent(e, map);
-}
+@try
+	{
+		// Exception crash
+		NSArray* junk = @[@0,@1,@2];
+		NSLog(@"Array 3 = %@", junk[3]);
+	}
+	@catch (NSException *exception)
+	{
+		NSDictionary *map = @{@"bug_sample_param_1": @"bug_sample_value_1", @"bug_sample_param_2": @"bug_sample_value_2"};
+		[UXCam reportExceptionEvent:exception properties: map];
+	}
 ```
 
 > 📘
