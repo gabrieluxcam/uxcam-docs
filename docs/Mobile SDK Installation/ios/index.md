@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)         \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)          \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -75,8 +75,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                  $ pod install
-                                `}
+                                      $ pod install
+                                    `}
 </Terminal>
 
 #### Swift Package Manager
@@ -174,7 +174,7 @@ Run the app on a simulator or device, navigate a few screens, then send it to th
 You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
 
 <Cards columns={4}>
-  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging-ios#/" icon="fa-mobile">
     Take full advantage of heatmaps and screen analytics.
 
     > Review Automatic or Manual Tagging
