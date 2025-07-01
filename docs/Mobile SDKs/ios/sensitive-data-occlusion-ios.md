@@ -1,5 +1,5 @@
 ---
-title: Sensitive Data Occlusion In iOS Apps
+title: Mask PII & Sensitive Content
 excerpt: ''
 deprecated: false
 hidden: false
