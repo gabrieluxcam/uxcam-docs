@@ -73,14 +73,18 @@ UXCam.applyOcclusion(yellow) // UIKit
 
 <Image align="center" border={false} caption="You'll see the desired screen completely hidden while your users navigate trough it." src="https://files.readme.io/a96f4d9bacac9f2662cea981b3f7f3e3c04ebfc58f76759a9b17772643b302cb-image.png" />
 
-<br />
-
 ### Blur with custom radius
 
 ```swift
 let blur = UXCamBlurSetting(radius: 6, hideGestures: false)
 UXCam.applyOcclusion(blur)
 ```
+
+<Image align="center" border={false} caption="You'll see the chosen screens with a blur applied on top" src="https://files.readme.io/18a9a5d2c25698585101efd6c5e495151a3ad7649c8686872b62e0a84868b43b-UXCam_Dashboard_May_24_2022.gif" />
+
+<Image align="center" border={false} caption="Blur radios strength examples" src="https://files.readme.io/7e030fe3e85402cffea6959bbfa70cf985b6cfd53ddb7ce61f0bd23cbef6d6bc-Blur_Results_Comparison_-_Sensitive_Data_Occlusion.png" />
+
+<br />
 
 ### Hide *all* text inputs
 
