@@ -30,7 +30,7 @@ Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA an
 
 ***
 
-# 1 · What’s hidden by default?
+# What’s hidden by default?
 
 | Platform    | Occluded out of the box                                                                                |
 | ----------- | ------------------------------------------------------------------------------------------------------ |
@@ -41,7 +41,7 @@ No code required—these never reach UXCam servers.
 
 ***
 
-# 2 · Dashboard‑first rules (zero‑code)
+# Dashboard‑first rules (zero‑code)
 
 1. **Settings → Video Recording Privacy** in your UXCam dashboard.
 2. Choose **Record • Occlude • Blur** globally *or* per screen.
@@ -53,9 +53,9 @@ No code required—these never reach UXCam servers.
 
 ***
 
-# 3 · One‑liner occlusion APIs
+# One‑liner occlusion APIs
 
-### 3.1 Overlay an entire screen
+### Overlay an entire screen
 
 ```swift
 let yellow = UXCamOverlaySetting(color: .systemYellow)
@@ -63,27 +63,27 @@ UXCam.applyOcclusion(yellow) // UIKit
 // SwiftUI: UXCamCore.applyOcclusion(yellow)
 ```
 
-### 3.2 Blur with custom radius
+### Blur with custom radius
 
 ```swift
 let blur = UXCamBlurSetting(radius: 6, hideGestures: false)
 UXCam.applyOcclusion(blur)
 ```
 
-### 3.3 Hide *all* text inputs
+### Hide *all* text inputs
 
 ```swift
 UXCam.applyOcclusion(UXCamOccludeAllTextFields())
 ```
 
-### 3.4 Hide a single sensitive view
+### Hide a single sensitive view
 
 ```swift
 passwordField.uxcamOcclude()                 // SwiftUI
 UXCam.occludeSensitiveView(cardNumberView)   // UIKit
 ```
 
-### 3.5 Remove occlusion
+### Remove occlusion
 
 ```swift
 UXCam.removeOcclusion()            // everything
@@ -92,7 +92,7 @@ UXCam.removeOcclusion(of: .blur)   // just blurs
 
 ***
 
-# 4 · Apply at config time (recommended)
+# Apply at config time (recommended)
 
 ```swift
 let blur = UXCamBlurSetting(radius: 5)
@@ -108,7 +108,7 @@ This keeps all rules **in one place** and avoids race conditions.
 
 ***
 
-# 5 · Sample SwiftUI snippet
+# Sample SwiftUI snippet
 
 ```swift
 init() {
@@ -126,7 +126,7 @@ var body: some View {
 
 ***
 
-# 6 · Verification checklist
+# Verification checklist
 
 1. Record a debug session through sensitive flows.
 2. Play it back—passwords & cards must be *red‑boxed or blurred*.
@@ -135,7 +135,7 @@ var body: some View {
 
 ***
 
-# 7 · Troubleshooting quick‑ref
+# Troubleshooting quick‑ref
 
 | Issue                                    | Cause                               | Fix                                    |
 | ---------------------------------------- | ----------------------------------- | -------------------------------------- |
