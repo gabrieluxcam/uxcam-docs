@@ -55,7 +55,7 @@ No code required—these never reach UXCam servers.
 
 <Image align="center" border={false} caption="You can add screen specific rules with different occlusion types" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
 
-<Image align="center" src="https://files.readme.io/3a9d7654b24bb774443f0dd6f44b297f90c668016bc954e25f9d488e389baba3-textDash.png" />
+<Image align="center" border={false} caption="You can also choose to occlude all **text input** fields on one or multiple screens." src="https://files.readme.io/3a9d7654b24bb774443f0dd6f44b297f90c668016bc954e25f9d488e389baba3-textDash.png" />
 
 ***
 
