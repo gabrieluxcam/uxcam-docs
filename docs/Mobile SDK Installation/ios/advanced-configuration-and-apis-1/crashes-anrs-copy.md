@@ -23,7 +23,7 @@ UXCam ships with a **lightweight diagnostics layer** that automatically records:
 
 Call **before** `UXCam.startWithConfiguration()`:
 
-```java
+```swift
 // Disable UXCam crash, ANR and freeze capture
 UXCam.disableCrashHandling(true);
 ```
