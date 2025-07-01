@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                   \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                    \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -55,7 +55,7 @@ next:
 
 > 🚧 Note for SwiftUI developers:
 >
-> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/v1.1/docs/swiftui).
+> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui#/).
 
 <br />
 
@@ -91,8 +91,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                                          $ pod install
-                                                                        `}
+                                                                              $ pod install
+                                                                            `}
 </Terminal>
 
 #### Swift Package Manager
