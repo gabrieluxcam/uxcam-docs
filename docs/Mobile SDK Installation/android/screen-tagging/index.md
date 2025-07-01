@@ -73,8 +73,6 @@ UXCam.startWithConfiguration(config)
 
 <br />
 
-<br />
-
 ### **Example**: **Tagging an Activity Manually**
 
 <GitHubCallout type="warning">Tag **once per navigation event** to avoid 0 s duplicates.</GitHubCallout>
