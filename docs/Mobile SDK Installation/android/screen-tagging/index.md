@@ -37,6 +37,10 @@ For Android, UXCam's SDK automatically tags screens (i.e., activities), and this
 
 > **If everything looks good** – simply rename screens in **Dashboard → Screens** (e.g. change `MainActivity` → **Home**) and you’re done. No code required.
 
+<Image align="center" border={false} caption="Automatic tagging will capture the activity names by default." src="https://files.readme.io/6a2b269df3f3c0045437e962ef8d70f063962a54838a12a2f76189eb84041854-image.png" />
+
+<br />
+
 ### How to Enable or Disable Automatic Tagging?
 
 <GitHubCallout type="caution">Only disable automatic tagging if you experience incongruent or meaningless names in your session timeline or want to dedicate time to manually configure it.</GitHubCallout>
