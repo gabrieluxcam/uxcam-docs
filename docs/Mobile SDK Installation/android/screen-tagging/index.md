@@ -69,6 +69,12 @@ UXCam.startWithConfiguration(config)
 | Compose NavGraph only shows `MainActivity`                    | Single‑Activity architecture                                                       | Tag once per navigation change (see example)                       |
 | Same screen shows different interfaces/places within your app | You're using Fragments within some activities and are not automatically tagged yet | Tag the fragment or enable fragment based tagging                  |
 
+<Image align="center" border={false} caption="Tagging screens keeps your users interactions in their correct place in your app." src="https://files.readme.io/04ce3751285f2d2386cbdc66bc33d9320dea5ddf9f55c7ab60e9a1a604f729dc-image.png" width="50% " />
+
+<br />
+
+<br />
+
 ### **Example**: **Tagging an Activity Manually**
 
 <GitHubCallout type="warning">Tag **once per navigation event** to avoid 0 s duplicates.</GitHubCallout>
