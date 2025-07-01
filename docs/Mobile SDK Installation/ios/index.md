@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                 \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -57,6 +57,22 @@ next:
 >
 > If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/v1.1/docs/swiftui).
 
+<br />
+
+## Step 1: Get your App Key
+
+### 1.1: Find your app key
+
+If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
+
+![](https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png)
+
+<GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
+
+### 1.2: Keep it out of source control:
+
+add it to `local.properties` (already in the default `.gitignore`) or inject it via your CI, then expose it safely at compile-time and avoid hard-coding secrets in your codebase.
+
 ## Quick Start: Only a Couple of Lines of Code
 
 <GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
@@ -75,8 +91,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                              $ pod install
-                                                            `}
+                                                                  $ pod install
+                                                                `}
 </Terminal>
 
 #### Swift Package Manager
