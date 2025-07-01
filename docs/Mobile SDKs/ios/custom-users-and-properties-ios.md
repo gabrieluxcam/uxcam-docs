@@ -20,7 +20,7 @@ next:
 
 ---
 
-#Set the user identity
+# Set the user identity
 
 Assign a **stable, non‑PII** identifier—e.g. the primary key from your auth service—so you can trace sessions across devices and releases.
 
@@ -40,7 +40,7 @@ UXCamCore.setUserIdentity("your_user_id")
 
 ---
 
-#Attach user properties (maximum 100 different properties)
+# Attach user properties (maximum 100 different properties)
 
 Give each user richer context—plan, cohort, A/B bucket, etc.—for filtering and segmentation.
 
@@ -68,7 +68,7 @@ for (key, value) in traits {
 
 ---
 
-#Naming & PII checklist
+# Naming & PII checklist
 
 | ✅ Do                                   | 🚫 Don’t                           |
 | -------------------------------------- | ---------------------------------- |
@@ -80,7 +80,7 @@ for (key, value) in traits {
 
 ---
 
-#Verify in Dashboard
+# Verify in Dashboard
 
 1. Run the app, log in as a test user, then background it.
 2. Open **Dashboard → Users** and search for your `user_id`.
@@ -95,7 +95,7 @@ If nothing appears after 30 s, make sure:
 
 ---
 
-#Troubleshooting table
+# Troubleshooting table
 
 | Symptom                    | Cause                                 | Fix                                                |
 | -------------------------- | ------------------------------------- | -------------------------------------------------- |
