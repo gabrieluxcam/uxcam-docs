@@ -48,10 +48,18 @@ No code required—these never reach UXCam servers.
 3. (Optional) **Blur radius** selector and **Record gestures** toggle.
 4. Save → record a test session to verify.
 
+<Image align="center" border={false} caption="Selecting the Blur option will also enable you to select the blur radius once applied." src="https://files.readme.io/0ab7d3d80f51c44741d7eeaa809c94228d1783c5f4e58a79583c430466674cc7-screenDash.png" />
+
 > 🛠️ **Priority ladder**\
 > Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
 
+<Image align="center" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
+
+<Image align="center" src="https://files.readme.io/3a9d7654b24bb774443f0dd6f44b297f90c668016bc954e25f9d488e389baba3-textDash.png" />
+
 ***
+
+<br />
 
 # One‑liner occlusion APIs
 
