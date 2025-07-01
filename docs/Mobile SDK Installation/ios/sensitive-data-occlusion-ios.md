@@ -19,10 +19,6 @@ next:
   description: >-
     Excellent! You can record some test sessions and once you're finalised with
     occlusion, we can move onto custom events and user properties!
-  pages:
-    - type: basic
-      slug: custom-users-and-properties-copy
-      title: Custom Users and Properties (COPY)
 ---
 Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA and Apple’s App Store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 
