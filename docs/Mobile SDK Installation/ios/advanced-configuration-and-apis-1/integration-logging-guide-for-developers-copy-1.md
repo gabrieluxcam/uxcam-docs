@@ -1,5 +1,5 @@
 ---
-title: Integration Logging Guide for Developers (COPY)
+title: Integration Logging Guide for Developers
 deprecated: false
 hidden: false
 metadata:
