@@ -14,59 +14,95 @@ metadata:
 next:
   description: ''
 ---
-By default, UXCam generates a random alias name to identify your users based on the Install ID. We also show you other properties about the user such as location, device used, network type, and app version. However, you can send up to 100 additional user properties with our API.
+> 🛡️ **Privacy first**
+>
+> By default UXCam assigns a random alias per install. Override it **only** when you have a stable internal ID. Skip email / phone unless you have a signed DPA.
 
-**Sending user properties allows you to:**
+---
 
-Gain deeper insights into user behaviour, enabling you to create segments and compare behaviour across different audiences.
+# 1 · Set the user identity
 
-* Easily identify users using a unique User ID, which can help you diagnose user issues and offer better support.
-* Track users across multiple devices, ensuring a unified view of their journey.
-* Have a better understanding of your users’ actions, create segments, and discover how behavior changes between different audiences.
+Assign a **stable, non‑PII** identifier—e.g. the primary key from your auth service—so you can trace sessions across devices and releases.
 
-We recommend avoiding the use of Personally Identifiable Information (PII), such as email addresses or phone numbers. Instead, use a unique User ID to identify your users in UXCam. If you need to send PII, you must sign a Data Processing Agreement (DPA) with us. Please contact [team@uxcam.com](mailto:team@uxcam.com) for further discussion.
+### UIKit / Objective‑C / Swift
 
-<br />
-
-## Set Custom User Identity
-
-You can replace the default alias with your own user ID using this method:
-
-```java iOS
-UXCam.setUserIdentity(_ userIdentity: String);
+```swift
+UXCam.setUserIdentity("your_user_id")
 ```
 
-**API Parameter:**
+### SwiftUI (no extra import)
 
-`userIdentity`: The custom identifier for the user.
-
-<br />
-
-## Sending Custom User Information
-
-Additional custom user properties help you group sessions, users, or events based on specific attributes such as roles, company names, subscription types, and more. You can use this data to refine your analysis and tailor user experiences effectively.
-
-**Example User Properties:**
-
-* Role
-* Company Name
-* Acquisition Source
-* Subscription Type
-* Loyalty Membership
-* NPS Score or Rating
-
-```coffeescript iOS
-setUserProperty(_ propertyName: String, value: Any)
-    
-//Example
-UXCam.setUserProperty("role", value: "your-role")
-UXCam.setUserProperty("subscription_type", value: "premium")
-UXCam.setUserProperty("company_name", value: "your-company")
+```swift
+UXCamCore.setUserIdentity("your_user_id")
 ```
 
-**API Parameters:**
+> ⏱️ **When to call** – as early as you know who the user is (post‑login, token refresh, deep‑link resume). Re‑calling with the *same* ID is a no‑op; with a **different** ID it starts a new session.
 
-`propertyName`: The name of the property to attach to the user.\
-`value`: A value to associate with the property. String or Number are accepted for value.
+---
 
-> 🚧 Note: User IDs and properties are case sensitive. Please ensure consistent naming conventions when using them.
+# 2 · Attach user properties (≤ 100)
+
+Give each user richer context—plan, cohort, A/B bucket, etc.—for filtering and segmentation.
+
+```swift
+let traits: [String: Any] = [
+    "plan": "Pro",
+    "signup_source": "apple_search_ads",
+    "projects": 7,
+    "email_verified": true
+]
+for (key, value) in traits {
+    UXCam.setUserProperty(key, value: value)
+}
+```
+
+*Accepted value types* — `String`, `NSNumber` (`Int`, `Double`, `Bool`), `NSNull`. Complex objects should be flattened.
+
+| Limit                   | Value       |
+| ----------------------- | ----------- |
+| **Max properties/user** | 100         |
+| **Key length**          | ≤ 32 chars  |
+| **Value length**        | ≤ 512 chars |
+
+> 🚧 **Case‑sensitive keys** – `Plan` and `plan` create two columns. Stick to one convention.
+
+---
+
+# 3 · Naming & PII checklist
+
+| ✅ Do                                   | 🚫 Don’t                           |
+| -------------------------------------- | ---------------------------------- |
+| Use stable IDs (`auth0_id`, `crm_id`). | Store plain emails / phone numbers |
+| Prefer enums (`plan = free/premium`).  | Log free‑form text (`bio`).        |
+| Compress ranges (`age_band = 25‑34`).  | Send exact DOB (`1994‑04‑17`).     |
+| Store booleans (`has_card = true`).    | Encode as strings (`"true"`).      |
+| Rotate IDs if a leak is suspected.     | Hard‑code IDs in the app.          |
+
+---
+
+# 4 · Verify in Dashboard
+
+1. Run the app, log in as a test user, then background it.
+2. Open **Dashboard → Users** and search for your `user_id`.
+3. Confirm identity and each property appear under **User Details**.
+4. Open a session replay; the header should show the same ID.
+
+If nothing appears after 30 s, make sure:
+
+- The device has internet.
+- Dashboard project hasn’t **Disabled UXCam**.
+- You didn’t exceed the 100‑property cap (console warns when `enableIntegrationLogging = true`).
+
+---
+
+# 5 · Troubleshooting table
+
+| Symptom                    | Cause                                 | Fix                                                |
+| -------------------------- | ------------------------------------- | -------------------------------------------------- |
+| **ID not stored**          | Called *after* session started        | Set before `UXCam.start()` or in a new session     |
+| **Property discarded**     | > 32‑char key / > 512‑char value      | Shorten / summarise                                |
+| **Duplicate users**        | Mixed `nil` and real IDs between runs | Always set identity once user is known             |
+| **Sensitive data flagged** | Email or phone without DPA            | Hash or switch to surrogate ID; sign DPA if needed |
+| **Traits not searchable**  | Upper/lower‑case mismatch             | Standardise casing                                 |
+
+---
