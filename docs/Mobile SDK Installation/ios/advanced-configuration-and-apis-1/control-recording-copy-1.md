@@ -1,5 +1,5 @@
 ---
-title: Control Recording (COPY)
+title: Control Recording
 deprecated: false
 hidden: false
 metadata:
