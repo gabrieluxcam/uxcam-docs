@@ -93,6 +93,10 @@ UXCam.startWithConfiguration(cfg);
 >
 > Detection happens **on-device** only; raw text never leaves the phone.
 
+![](https://files.readme.io/ba6679bb52f557f5cbb443bca898e3c8074996811fc53b9d9edd79cde2fd9ca5-image.png)
+
+<br />
+
 ### Hide one payment screen completely
 
 ```java
