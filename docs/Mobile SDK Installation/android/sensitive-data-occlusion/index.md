@@ -54,6 +54,7 @@ Run the app once with full UXCam recording enabled, and go through all user flow
 
 | Helper class                       | Masks …                            | Keeps gestures? | When to choose                                                 |
 | ---------------------------------- | ---------------------------------- | --------------- | -------------------------------------------------------------- |
+| `UXCamAITextOcclusion`             | Any on-screen text                 | Optional        | You don’t know every field beforehand or the UI keeps changing |
 | `UXCamOverlay`                     | Solid colour (red by default)      | Optional        | You must *fully* cover PII and don’t care about screen context |
 | `UXCamBlur`                        | Adjustable Gaussian blur (1-25)    | Optional        | You need to see layout & movement, but not the actual data     |
 | `UXCamOccludeAllTextFields`        | Every `EditText` on chosen screens | Always keeps    | Quick win if all PII sits in text fields                       |
@@ -71,6 +72,26 @@ excludeMentionedScreens(boolean)      // treat list as allow-list (false) or den
 ## Step-by-step examples
 
 > Each snippet is self-contained—copy it into **`onCreate()`of your`Application`** or the target `Activity`.
+
+<br />
+
+### Apply AI Text Occlusion to all screens  *(SDK v3.7.0+)*
+
+```java
+// In Application.onCreate()
+UXCamAITextOcclusion aiOcclusion =
+        new UXCamAITextOcclusion.Builder().build();
+
+UXConfig cfg = new UXConfig.Builder(BuildConfig.UXCAM_KEY)
+        .occlusions(Collections.singletonList(aiOcclusion))
+        .build();
+
+UXCam.startWithConfiguration(cfg);
+```
+
+> 🔍 **How it works**
+>
+> Detection happens **on-device** only; raw text never leaves the phone.
 
 ### Hide one payment screen completely
 
@@ -131,7 +152,7 @@ Put multiple rules in one list and pass them to the *initial* configuration:
 
 ```java
 UXConfig config = new UXConfig.Builder(BuildConfig.UXCAM_KEY)
-        .occlusions(Arrays.asList(globalBlur, hideText))  // from examples above
+        .occlusions(Arrays.asList(globalBlur, hideText, aiOcclusion))  // from examples above
         .build();
 
 UXCam.startWithConfiguration(config);
