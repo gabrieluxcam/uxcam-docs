@@ -7,7 +7,7 @@ metadata:
 ---
 # UXCam Android Changelog
 
-### V. 3.6.42 - Jun 11, 2025
+### V. 3.6.43 - Jun 11, 2025
 
 * Fix: Google ads not being clickable
 * Fix: Fixed tag on Integration log
