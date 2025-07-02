@@ -7,6 +7,10 @@ metadata:
 ---
 # UXCam Android Changelog
 
+### V. 3.7.0 - Jul 1, 2025
+
+* Added: AI Occlusion feature
+
 ### V. 3.6.43 - Jun 11, 2025
 
 * Fix: Google ads not being clickable
