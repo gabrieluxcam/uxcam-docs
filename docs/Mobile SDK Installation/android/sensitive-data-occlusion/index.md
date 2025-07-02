@@ -109,6 +109,10 @@ UXCam.applyOcclusion(payOverlay);
 *Effect:* Every frame captured inside `PaymentActivity` is replaced by a red plate.\
 Touches are suppressed, guarding against key-logging.
 
+![](https://files.readme.io/dad47be9ae16a42e3a3e5d6089fd48025936bf137d6dac8e2edd81c98553898e-image.png)
+
+<br />
+
 ### Blur everything **except** Settings
 
 ```java
@@ -122,6 +126,8 @@ UXCam.applyOcclusion(globalBlur);
 ```
 
 *Effect:* All screens are blurred, but `SettingsActivity` remains crystal-clear—ideal when only one screen is non-sensitive.
+
+<Image align="center" src="https://files.readme.io/a2d653198751969c8510da63b73dcfd8042eeae68257197078d00e88f0a0b7f5-UXCam_Dashboard_May_24_2022.gif" />
 
 ### Occlude **all text fields** on Checkout + Login
 
