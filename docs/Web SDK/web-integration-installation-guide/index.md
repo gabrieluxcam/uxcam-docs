@@ -32,11 +32,11 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 # Choose your Method of Integration
 
-| HTML Code snippet      | <a href="html-snippet#">Jump →</a>      |
-| :--------------------- | :-------------------------------------- |
-| **Google Tag Manager** | <a href="google-tag-manage#">Jump →</a> |
-| **Shopify**            | <a href="shopify#">Jump →</a>           |
-| **Wordpress**          | <a href="wordpress#">Jump →</a>         |
+| HTML Code snippet      | <a href="html-snippet#">Jump →</a>       |
+| :--------------------- | :--------------------------------------- |
+| **Google Tag Manager** | <a href="google-tag-manager#">Jump →</a> |
+| **Shopify**            | <a href="shopify#">Jump →</a>            |
+| **Wordpress**          | <a href="wordpress#">Jump →</a>          |
 
 <br />
 
