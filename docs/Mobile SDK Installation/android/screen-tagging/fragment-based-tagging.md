@@ -42,4 +42,4 @@ Here you can check an example where the fragments are automatically tagged.
 >
 > Please keep in mind that at the moment this is only supported for AndroidX
 
-In case you have any questions, please feel free to favourite support team at [team@uxcam.com]()
+In case you have any questions, please feel free to favourite support team at [team@uxcam.com](mailto:team@uxcam.com)

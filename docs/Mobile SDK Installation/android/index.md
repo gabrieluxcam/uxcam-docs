@@ -143,7 +143,7 @@ Set our configuration option `.enableIntegrationLogging(bool)` as `true` to see 
 ## Other Configuration Options
 
 * `.enableAutomaticScreenNameTagging(bool)`  True by Default. Set to false if you want to disable automatic screen tagging.
-* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here]().
+* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here](sensitive-data-occlusion/).
 * `.enableCrashHandling(bool)` True by Default. Set to false if you want to disable crash capture.
 * `.enableMultiSessionRecord(bool)` True by Default. Set to false to stop any session after the first one from being recorded.
 
