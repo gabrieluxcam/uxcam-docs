@@ -167,6 +167,16 @@ Get started with just a few lines of code:
 
 ### 1. Installation
 
+<Terminal>
+  {`
+  # Using npm
+  npm install react-native-ux-cam
+
+  # Using yarn
+  yarn add react-native-ux-cam
+  `}
+</Terminal>
+
 ```bash Terminal
 # Using npm
 npm install react-native-ux-cam
