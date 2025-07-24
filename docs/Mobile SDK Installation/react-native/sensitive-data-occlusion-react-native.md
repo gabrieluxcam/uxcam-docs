@@ -1,5 +1,5 @@
 ---
-title: Sensitive Data Occlusion In React Native Apps
+title: Mask PII & Sensitive Content
 excerpt: ''
 deprecated: false
 hidden: false
@@ -17,230 +17,1149 @@ metadata:
 next:
   description: ''
 ---
-In this section, we focus on how to handle sensitive data within your React Native application using UXCam's features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
 
-UXCam ensures that as a controller you can use our platform and fulfil your obligations under GDPR. However, if you collect any **PII data** in your app such as email address, phone, or credit card number you should use our API to hide it.
+# 🔒 Phase 3: Privacy Protection (PII Occlusion)
 
-You can choose to hide:
+## Overview
 
-* **Text Fields**: Hide PII collected through text input fields
-* **Views**: Hide specific views on the screen.
-* **Screens:** Hide entire screens, such as payment pages
+Privacy protection ensures GDPR/CCPA compliance by preventing sensitive user data from appearing in session recordings. **This phase leverages the screen names from Phase 2 for efficient, maintainable privacy rules.**
 
-<br />
+**Estimated time: 1-2 hours**  
+**Prerequisites: Phase 1 (Bootstrap Setup) and Phase 2 (Screen Tagging) completed**
 
-Sensitive information is hidden directly on the device by applying red boxes or blurring, meaning this data is never sent to UXCam servers. Ensure that all sensitive data is hidden before releasing your app to production.
+## Why Privacy Protection is Critical
 
-> **Note**: When occluding sensitive data, you still have the option to record gestures for those views or screens. If you're occluding passwords or other sensitive inputs, we recommend also disabling gesture recording.
+**Legal Compliance**: GDPR, CCPA, and other privacy regulations require protecting personally identifiable information (PII) in user recordings.
 
-***
+**User Trust**: Demonstrating privacy protection builds user confidence and reduces privacy concerns.
 
-## Are there any elements occluded right out of the box?
+**Security**: Prevents sensitive data from being transmitted or stored in analytics systems.
 
-React Native provides the following occlusion behaviour by default:
+## 1. Sensitive Data Identification
 
-* Any text input tagged with `uxcam-occlude` or `&lt;&gt;` is occluded.
+### Critical Data to Protect
 
-***
+**Authentication Data:**
 
-# Add Occlusions Directly From Your Dashboard:
+- Passwords, PINs, security codes
+- Biometric authentication flows
+- Two-factor authentication codes
+- Security questions and answers
 
-You can now add occlusion rules to your app directly from your dashboard. Simply go into your app's settings in your dashboard and enable the rules you need, below is a breakdown of how to take full advantage of this feature, without having to resort to adding additional code in your app for most scenarios:
+**Financial Information:**
 
-### Occlude All Screens from Dashboard
+- Credit card numbers and CVV codes
+- Bank account details and routing numbers
+- Payment information and transaction details
+- Cryptocurrency addresses and keys
+- Account balances and financial history
 
-From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
+**Personal Information:**
 
-<Image align="center" alt="Blur option will also enable you to select the blur radius (strength) once selected." border={false} caption="Blur option will also enable you to select the blur radius (strength) once selected." src="https://files.readme.io/751b737-image.png" />
+- Social security numbers and tax IDs
+- Government-issued ID numbers
+- Driver's license and passport details
+- Home addresses and contact information
+- Phone numbers and email addresses
 
-### Screen Specific Occlusion Rules from Dashboard
+**Health Data:**
 
-You can also customise which screens you want to apply occlusion rules to, and can create multiple rules, for example, blurring a particular screen but occluding others:
+- Medical records and health information
+- Prescription details and medical history
+- Insurance information
+- Health tracking data
 
-![](https://files.readme.io/6b8810f-small-Staging_-_UXCam_Dashboard.png)
+**User-Generated Content:**
 
-### Occlude Text Input Fields from Dashboard
+- Private messages and communications
+- Personal notes and documents
+- Uploaded photos and files
+- Search history and preferences
 
-You can also choose to occlude all text input fields on a specific or multiple screens by simply checking the option and selecting the screens you'd like to occlude the text inputs in.
+### Privacy Audit Checklist
 
-![](https://files.readme.io/253cbf0-small-Staging_-_UXCam_Dashboard.png)
+Use this checklist to identify sensitive data in your app:
 
-> 📘 **Note**
->
-> **Note**
->
-> Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option
->
-> ![](https://files.readme.io/33bf4ad-image.png)
+```javascript utils/privacyAudit.js
+export const PRIVACY_AUDIT_CHECKLIST = {
+  authentication: [
+    'Login forms with password fields',
+    'Registration forms with personal data',
+    'Password reset and change screens',
+    'Biometric authentication prompts',
+    'Two-factor authentication screens',
+  ],
 
-### Occlusion priority:
+  financial: [
+    'Payment forms and credit card entry',
+    'Bank account setup screens',
+    'Transaction history and account balances',
+    'Billing and invoice screens',
+    'Cryptocurrency wallet interfaces',
+  ],
 
-* Screen specific overlay from Dashboard
-* Screen specific blur from Dashboard
-* Global blur/overlay from Dashboard that is applied to all screens
-* Screen specific Overlay from SDK
-* Screen specific Blur from SDK
-* Global blur/overlay from SDK that is applied to all screens
-* Global blur/overlay from SDK that has Record exception screens
+  personal: [
+    'User profile editing screens',
+    'Contact information forms',
+    'Address and location entry',
+    'Government ID verification',
+    'Personal settings and preferences',
+  ],
 
-### Limitations:
+  userGenerated: [
+    'Text input fields for private content',
+    'File upload and photo selection',
+    'Chat and messaging interfaces',
+    'Notes and document creation',
+    'Search bars and query inputs',
+  ],
 
-* Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
+  thirdParty: [
+    'Social media login flows',
+    'Payment processor interfaces',
+    'Maps with location data',
+    'WebViews with sensitive content',
+    'External authentication providers',
+  ],
+};
 
-# Occlusion Setup from SDK Code
+// Audit helper function
+export const auditScreenForSensitiveData = (screenName, components) => {
+  const sensitiveElements = [];
 
-If you prefer to manually handle occlusions in your app or [occlude specific views](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view) instead of entire screens, read below for guidance on how to set it up.
+  components.forEach((component) => {
+    if (component.type === 'TextInput' && component.props.secureTextEntry) {
+      sensitiveElements.push('Password field detected');
+    }
 
-## Occlude The Entire Screen with Overlay
+    if (
+      component.props.keyboardType === 'numeric' &&
+      component.props.placeholder?.includes('card')
+    ) {
+      sensitiveElements.push('Credit card field detected');
+    }
 
-You can configure different overlay options with the following:
+    if (component.props.autoCompleteType === 'email') {
+      sensitiveElements.push('Email field detected');
+    }
+  });
 
-```javascript
-// Apply an overlay to the entire screen
-RNUxcam.applyOcclusion();
-
-// Remove the overlay
-RNUxcam.removeOcclusion();
+  return {
+    screenName,
+    sensitiveElements,
+    requiresProtection: sensitiveElements.length > 0,
+  };
+};
 ```
 
-**Available overlay options are:**
+## 2. Privacy Protection Strategies
 
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
-Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.
+### Strategy Decision Matrix
 
-<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
-Allows you to define the screens where the overlay is to either be applied or not, depending on the value passed to <strong>excludeMentionedScreens(boolean excludeMentionedScreens)</strong>.
+| Sensitivity Level            | Protection Method         | Implementation                  | Maintenance                              |
+| ---------------------------- | ------------------------- | ------------------------------- | ---------------------------------------- |
+| **Entire sensitive screens** | Screen-based overlay/blur | `screens: ['Login', 'Payment']` | **Low** - Uses screen names from Phase 2 |
+| **Form sections**            | Screen-based blur         | `screens: ['ProfileEdit']`      | **Low** - Covers entire form areas       |
+| **Individual fields**        | View-level occlusion      | `occludeSensitiveView(ref)`     | **High** - Requires per-component setup  |
+| **Dynamic content**          | Text field occlusion      | `occludeAllTextFields()`        | **Medium** - Affects all text inputs     |
 
-By default, if no screens are passed, the overlay is applied to all the screens unless explicitly removed. This acts as a global setting and will override all other occlusion settings defined for all screens. The occlusion must be removed to revert this action.
+> 💡 **Best Practice**: Start with screen-based protection using the names from Phase 2, then add granular view-level occlusion only where needed.
 
-If screens are passed, you have the ability to either apply overlay on the mentioned screens or to exclude the mentioned screens from being overlayed.
+## 3. Screen-Based Privacy Protection
 
-<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
-This option should be used in conjunction with <strong>screens(List screens)</strong>.
+### Dashboard Configuration (Recommended)
 
-If the passed in value is true, it tells the SDK to exclude the mentioned screens from occlusion, while applying the occlusion to the rest of the screens in the app.
+The most efficient approach is configuring privacy rules directly in your UXCam dashboard:
 
-If the passed in value is false, it tells the SDK to apply occlusion only to the screens that have been passed.
+#### Global Privacy Settings
 
-Default value is false.
+1. **Navigate to App Settings** → Video Recording Privacy
+2. **Configure global rules** for all screens:
+   - **Record**: Normal recording (default)
+   - **Blur**: Apply blur with configurable radius
+   - **Overlay**: Apply solid color overlay
 
-<Image align="center" alt="2534" border={false} caption="You'll see the desired screen completely hidden while your users navigate through it." title="Overlay.png" src="https://files.readme.io/095be49-Overlay.png" width="80%" />
+#### Screen-Specific Rules
 
-## Blur The Entire Screen
+1. **Add screen-specific rules** using your Phase 2 screen names:
 
-Blur is an occlusion API that allows you to blur screen records of screens. This lets you obtain information regarding the state of the screen and user interaction, while also maintaining privacy in sensitive screens.
+   ```
+   Screen Names: Login Form, Payment Details, User Profile Settings
+   Action: Overlay with gesture recording disabled
+   ```
 
-This is useful to set all the occlusion/Blur from one place of the application without having to set it individually in different screens.
+2. **Create multiple rule sets** for different sensitivity levels:
+   ```
+   High Sensitivity: Login Form, Payment Details → Overlay
+   Medium Sensitivity: User Profile, Settings → Blur (radius: 10)
+   Forms Only: Registration, Contact → Text Fields Only
+   ```
 
-You can configure different options using the following:
+#### Privacy Rule Priority
 
-```javascript
-// Apply a blur to a screen
-RNUxcam.applyBlur();
+Privacy rules are applied in this order (highest to lowest priority):
 
-// Remove the blur
-RNUxcam.removeBlur();
-```
+1. Screen-specific overlay from Dashboard
+2. Screen-specific blur from Dashboard
+3. Global blur/overlay from Dashboard
+4. Screen-specific overlay from SDK code
+5. Screen-specific blur from SDK code
+6. Global SDK privacy settings
 
-**Available blur options are:**
+### SDK-Based Screen Protection
 
-<p style={{fontSize: "17px"}}><code>blurRadius(int blurRadius)</code><br /></p>
-This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be.
-
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
-Same as overlay. Please refer to overlay section.
-
-<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
-Same as overlay. Please refer to overlay section.
-
-<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
-Same as overlay. Please refer to overlay section.
-
-<Image align="center" alt="736" border={false} caption="You'll see your desired screens with a blur on top." title="UXCam Dashboard - 24 May 2022 (1) (1).gif" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif" />
-
-**Examples on blur radius property customization:**
-
-<Image align="center" alt="Blur radius customization examples" border={false} caption="Blur radius customization examples" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png" />
-
-***
-
-## Occlude all Text Fields
-
-Similar to the new Overlay and Blur APIs:
-
-```javascript
-// Apply an occlusion to all text fields
-RNUxcam.occludeAllTextFields();
-
-// Stop occluding text fields
-RNUxcam.stopOccludingAllTextFields();
-```
-
-> **NOTE:** Please keep in mind that this API will only hide `TextInput`\
-> components. If you wish to hide `View` components, refer to hiding Views below.
-
-<br />
-
-<Image align="center" alt="2534" border={false} caption="All fields identified as text will be occluded." title="TextFields.png" src="https://files.readme.io/9caa54d-TextFields.png" width="80%" />
-
-## Hide Sensitive View
-
-Use it to hide specific views with sensitive information that you don't want to record.
-
-The API parameters are:
-
-**sensitiveView**: A View object that contains sensitive information.
-
-```javascript
-RNUxcam.occludeSensitiveView: (sensitiveView: any) => void
-    
-//Example
-<Button ref= {view => RNUxcam.occludeSensitiveView(view)}/>
-```
-
-## Usage from configuration object
-
-It's also possible to pass a list of occlusions (except Sensitive View) to be applied during configuration.  For example:
-
-```javascript
+```javascript config/privacyConfig.js
 import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
 
-// IF USING SDK VERSION 6.0.0 PLEASE USE:
-// import { OcclusionType } from 'react-native-ux-cam/src/types';
+// Define sensitive screens from Phase 2
+export const PRIVACY_SCREEN_CONFIG = {
+  // High sensitivity - complete overlay
+  overlay: {
+    type: UXCamOcclusionType.Overlay,
+    color: 0x000000, // Black overlay
+    hideGestures: true, // Disable gesture recording
+    screens: [
+      'Login Form',
+      'Registration Form',
+      'Payment Details',
+      'Credit Card Entry',
+      'Bank Account Setup',
+      'Password Change',
+      'Security Settings',
+    ],
+  },
 
-const blur = {
-    type: UXCamOcclusionType.Blur, // compulsory to determine blur type
-    blurRadius: 20, // optional default 10
-    hideGestures: true, // optional, default true
-    screens: ["screen1", "screen2"] // optional, default all screens 
-}
- 
-const overlay = {
-   type: UXCamOcclusionType.Overlay, // compulsory to determine blur type
-   color: 0xff00ee, // hex integers in 0xrrggbb format
-   hideGestures: true, // optional, default true
-   screens: ["screen1", "screen2"] // optional, default all screens
-}
+  // Medium sensitivity - blur with gesture recording
+  blur: {
+    type: UXCamOcclusionType.Blur,
+    blurRadius: 15,
+    hideGestures: false, // Keep gesture insights
+    screens: [
+      'User Profile Settings',
+      'Account Overview',
+      'Personal Information',
+      'Contact Details',
+      'Address Settings',
+    ],
+  },
 
-const textFields = {
-    type: UXCamOcclusionType.OccludeAllTextFields, // compulsory to determine blur type
-    screens: ["screen1", "screen2"] // optional, default all screens
-}
+  // Text fields only - for mixed content screens
+  textFields: {
+    type: UXCamOcclusionType.OccludeAllTextFields,
+    screens: ['Search Results', 'Product Reviews', 'Customer Support Chat'],
+  },
+};
 
-const configuration = {
-  userAppKey: 'YOUR UXCAM API KEY GOES HERE',
-  occlusions: [overlay, blur, textFields]
-}
+// Apply privacy configuration
+export const applyPrivacyConfiguration = () => {
+  const configuration = {
+    userAppKey: 'YOUR_API_KEY',
+    enableAutomaticScreenNameTagging: false,
+    enableImprovedScreenCapture: true,
+    occlusions: [
+      PRIVACY_SCREEN_CONFIG.overlay,
+      PRIVACY_SCREEN_CONFIG.blur,
+      PRIVACY_SCREEN_CONFIG.textFields,
+    ],
+  };
 
-RNUxcam.startWithConfiguration(configuration);
+  return configuration;
+};
 ```
 
-<br />
+### Runtime Privacy Control
 
-### Sensitive Data Occlusion Inside WebViews
+```javascript utils/dynamicPrivacy.js
+import RNUxcam from 'react-native-ux-cam';
 
-When dealing with sensitive data in WebViews, it's essential to ensure that any personal or sensitive information is properly occluded to maintain user privacy. Our guide provides step-by-step instructions on how to handle occlusion within WebViews effectively.
+export class DynamicPrivacyManager {
+  static currentPrivacyLevel = 'normal';
 
-For more information, click the button below:
+  static setPrivacyLevel(level) {
+    this.currentPrivacyLevel = level;
 
-[Sensitive Data Occlusion in WebViews Documentation](/docs/sensitive-views-inside-webviews)
+    switch (level) {
+      case 'high':
+        this.enableHighPrivacyMode();
+        break;
+      case 'medium':
+        this.enableMediumPrivacyMode();
+        break;
+      case 'normal':
+        this.disablePrivacyMode();
+        break;
+    }
+  }
+
+  static enableHighPrivacyMode() {
+    // Apply overlay to all screens
+    RNUxcam.applyOcclusion({
+      color: 0x333333,
+      hideGestures: true,
+    });
+  }
+
+  static enableMediumPrivacyMode() {
+    // Apply blur to all screens
+    RNUxcam.applyBlur({
+      blurRadius: 10,
+      hideGestures: false,
+    });
+  }
+
+  static disablePrivacyMode() {
+    // Remove all occlusion
+    RNUxcam.removeOcclusion();
+    RNUxcam.removeBlur();
+  }
+
+  static applyScreenSpecificPrivacy(screenName) {
+    // Apply privacy based on screen name
+    const sensitiveScreens = [
+      'Login Form',
+      'Payment Details',
+      'Password Change',
+    ];
+
+    if (sensitiveScreens.includes(screenName)) {
+      RNUxcam.applyOcclusion({
+        color: 0x000000,
+        hideGestures: true,
+      });
+    }
+  }
+}
+
+// Usage in screens
+export const useScreenPrivacy = (screenName) => {
+  useFocusEffect(
+    React.useCallback(() => {
+      DynamicPrivacyManager.applyScreenSpecificPrivacy(screenName);
+
+      return () => {
+        // Clean up privacy settings when leaving screen
+        if (DynamicPrivacyManager.currentPrivacyLevel === 'normal') {
+          DynamicPrivacyManager.disablePrivacyMode();
+        }
+      };
+    }, [screenName])
+  );
+};
+```
+
+## 4. View-Level Privacy Protection
+
+### Individual Component Occlusion
+
+```javascript components/SensitiveForm.js
+import React, { useRef, useEffect } from 'react';
+import { TextInput, View } from 'react-native';
+import RNUxcam from 'react-native-ux-cam';
+
+function SensitiveForm() {
+  const passwordRef = useRef(null);
+  const creditCardRef = useRef(null);
+  const ssnRef = useRef(null);
+
+  useEffect(() => {
+    // Occlude specific sensitive fields
+    if (passwordRef.current) {
+      RNUxcam.occludeSensitiveView(passwordRef.current);
+    }
+
+    if (creditCardRef.current) {
+      RNUxcam.occludeSensitiveView(creditCardRef.current);
+    }
+
+    if (ssnRef.current) {
+      RNUxcam.occludeSensitiveView(ssnRef.current);
+    }
+  }, []);
+
+  return (
+    <View>
+      <TextInput
+        ref={passwordRef}
+        placeholder="Password"
+        secureTextEntry={true}
+        autoCompleteType="password"
+      />
+
+      <TextInput
+        ref={creditCardRef}
+        placeholder="Credit Card Number"
+        keyboardType="numeric"
+        autoCompleteType="cc-number"
+      />
+
+      <TextInput
+        ref={ssnRef}
+        placeholder="Social Security Number"
+        keyboardType="numeric"
+        maxLength={11}
+      />
+    </View>
+  );
+}
+```
+
+### Automatic Sensitive Field Detection
+
+```javascript hooks/useSensitiveFieldProtection.js
+import { useEffect, useRef } from 'react';
+import RNUxcam from 'react-native-ux-cam';
+
+export const useSensitiveFieldProtection = (props = {}) => {
+  const fieldRef = useRef(null);
+
+  useEffect(() => {
+    const shouldOcclude = detectSensitiveField(props);
+
+    if (shouldOcclude && fieldRef.current) {
+      RNUxcam.occludeSensitiveView(fieldRef.current);
+    }
+  }, [props]);
+
+  return fieldRef;
+};
+
+const detectSensitiveField = (props) => {
+  const sensitiveKeywords = [
+    'password',
+    'pin',
+    'ssn',
+    'social',
+    'credit',
+    'card',
+    'cvv',
+    'cvc',
+    'bank',
+    'account',
+    'routing',
+  ];
+
+  const sensitiveAutoComplete = [
+    'password',
+    'cc-number',
+    'cc-csc',
+    'cc-exp',
+    'tel',
+    'email',
+    'postal-code',
+  ];
+
+  // Check placeholder text
+  if (props.placeholder) {
+    const placeholder = props.placeholder.toLowerCase();
+    if (sensitiveKeywords.some((keyword) => placeholder.includes(keyword))) {
+      return true;
+    }
+  }
+
+  // Check autoCompleteType
+  if (
+    props.autoCompleteType &&
+    sensitiveAutoComplete.includes(props.autoCompleteType)
+  ) {
+    return true;
+  }
+
+  // Check if it's a secure text entry
+  if (props.secureTextEntry) {
+    return true;
+  }
+
+  // Check keyboard type for financial data
+  if (
+    props.keyboardType === 'numeric' &&
+    props.placeholder &&
+    (props.placeholder.includes('card') ||
+      props.placeholder.includes('account'))
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+// Usage
+function SmartForm() {
+  const passwordRef = useSensitiveFieldProtection({
+    secureTextEntry: true,
+    placeholder: 'Password',
+  });
+
+  const emailRef = useSensitiveFieldProtection({
+    autoCompleteType: 'email',
+    placeholder: 'Email Address',
+  });
+
+  return (
+    <View>
+      <TextInput
+        ref={passwordRef}
+        placeholder="Password"
+        secureTextEntry={true}
+        autoCompleteType="password"
+      />
+
+      <TextInput
+        ref={emailRef}
+        placeholder="Email Address"
+        keyboardType="email-address"
+        autoCompleteType="email"
+      />
+    </View>
+  );
+}
+```
+
+### All Text Fields Occlusion
+
+```javascript components/FormWithTextFieldOcclusion.js
+import React, { useEffect } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+import RNUxcam from 'react-native-ux-cam';
+
+function FormWithTextFieldOcclusion() {
+  useFocusEffect(
+    React.useCallback(() => {
+      // Occlude all text fields on this screen
+      RNUxcam.occludeAllTextFields();
+
+      return () => {
+        // Stop occluding when leaving screen
+        RNUxcam.stopOccludingAllTextFields();
+      };
+    }, [])
+  );
+
+  return (
+    // Form components - all TextInput fields will be occluded
+  );
+}
+```
+
+## 5. WebView Privacy Protection
+
+### Basic WebView Occlusion
+
+```javascript components/SecureWebView.js
+import React, { useRef, useEffect } from 'react';
+import { WebView } from 'react-native-webview';
+import RNUxcam from 'react-native-ux-cam';
+
+function SecureWebView({ source }) {
+  const webViewRef = useRef(null);
+
+  useEffect(() => {
+    // Occlude entire WebView for sensitive content
+    if (webViewRef.current) {
+      RNUxcam.occludeSensitiveView(webViewRef.current);
+    }
+  }, []);
+
+  return (
+    <WebView
+      ref={webViewRef}
+      source={source}
+      javaScriptEnabled={true}
+      domStorageEnabled={false} // Security consideration
+    />
+  );
+}
+```
+
+### Dynamic WebView Privacy
+
+```javascript components/DynamicWebView.js
+import React, { useRef, useState } from 'react';
+import { WebView } from 'react-native-webview';
+import RNUxcam from 'react-native-ux-cam';
+
+function DynamicWebView() {
+  const webViewRef = useRef(null);
+  const [isOccluded, setIsOccluded] = useState(false);
+
+  const handleNavigationStateChange = (navState) => {
+    const { url } = navState;
+
+    // Define sensitive URL patterns
+    const sensitivePatterns = [
+      '/payment',
+      '/checkout',
+      '/login',
+      '/register',
+      '/profile',
+      '/settings',
+    ];
+
+    const shouldOcclude = sensitivePatterns.some((pattern) =>
+      url.includes(pattern)
+    );
+
+    if (shouldOcclude && !isOccluded) {
+      RNUxcam.occludeSensitiveView(webViewRef.current);
+      setIsOccluded(true);
+    } else if (!shouldOcclude && isOccluded) {
+      // Note: Cannot un-occlude individual views once occluded
+      // Consider using screen-based occlusion instead
+      setIsOccluded(false);
+    }
+  };
+
+  return (
+    <WebView
+      ref={webViewRef}
+      source={{ uri: 'https://your-webapp.com' }}
+      onNavigationStateChange={handleNavigationStateChange}
+    />
+  );
+}
+```
+
+### WebView with JavaScript Privacy Bridge
+
+```javascript components/AdvancedSecureWebView.js
+import React, { useRef } from 'react';
+import { WebView } from 'react-native-webview';
+import RNUxcam from 'react-native-ux-cam';
+
+function AdvancedSecureWebView() {
+  const webViewRef = useRef(null);
+
+  const injectedJavaScript = `
+    // Privacy protection JavaScript
+    (function() {
+      // Hide sensitive elements by class/ID
+      const hideSensitiveElements = () => {
+        const sensitiveSelectors = [
+          'input[type="password"]',
+          'input[type="email"]',
+          'input[name*="credit"]',
+          'input[name*="card"]',
+          '.sensitive-data',
+          '#personal-info'
+        ];
+
+        sensitiveSelectors.forEach(selector => {
+          document.querySelectorAll(selector).forEach(element => {
+            element.style.background = '#000';
+            element.style.color = '#000';
+          });
+        });
+      };
+
+      // Monitor for dynamic content
+      const observer = new MutationObserver(hideSensitiveElements);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+
+      // Initial hide
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', hideSensitiveElements);
+      } else {
+        hideSensitiveElements();
+      }
+
+      // Communicate privacy state to React Native
+      window.ReactNativeWebView.postMessage(JSON.stringify({
+        type: 'PRIVACY_STATUS',
+        hasSensitiveContent: document.querySelectorAll('input[type="password"]').length > 0
+      }));
+    })();
+
+    true; // Required for injectedJavaScript
+  `;
+
+  const handleMessage = (event) => {
+    try {
+      const data = JSON.parse(event.nativeEvent.data);
+
+      if (data.type === 'PRIVACY_STATUS' && data.hasSensitiveContent) {
+        // Apply additional protection for sensitive WebView content
+        RNUxcam.occludeSensitiveView(webViewRef.current);
+      }
+    } catch (error) {
+      console.warn('WebView privacy message parsing failed:', error);
+    }
+  };
+
+  return (
+    <WebView
+      ref={webViewRef}
+      source={{ uri: 'https://your-webapp.com' }}
+      injectedJavaScript={injectedJavaScript}
+      onMessage={handleMessage}
+      javaScriptEnabled={true}
+    />
+  );
+}
+```
+
+## 6. Privacy Testing and Validation
+
+### Privacy Compliance Checker
+
+```javascript utils/privacyValidator.js
+import RNUxcam from 'react-native-ux-cam';
+
+export class PrivacyValidator {
+  static async validatePrivacyCompliance() {
+    const validationResults = {
+      screenBasedProtection: false,
+      textFieldProtection: false,
+      webViewProtection: false,
+      sensitiveDataExposure: [],
+      recommendations: [],
+    };
+
+    try {
+      // Check if privacy rules are active
+      validationResults.screenBasedProtection =
+        await this.checkScreenProtection();
+      validationResults.textFieldProtection =
+        await this.checkTextFieldProtection();
+      validationResults.webViewProtection = await this.checkWebViewProtection();
+
+      // Generate recommendations
+      validationResults.recommendations =
+        this.generateRecommendations(validationResults);
+
+      return validationResults;
+    } catch (error) {
+      console.error('Privacy validation failed:', error);
+      return validationResults;
+    }
+  }
+
+  static async checkScreenProtection() {
+    // This would need to be implemented based on your screen tracking
+    const sensitiveScreens = [
+      'Login Form',
+      'Payment Details',
+      'User Profile Settings',
+    ];
+
+    // Check if sensitive screens have protection
+    return sensitiveScreens.length > 0; // Simplified check
+  }
+
+  static async checkTextFieldProtection() {
+    // Check if text field occlusion is configured
+    return true; // Would implement actual check
+  }
+
+  static async checkWebViewProtection() {
+    // Check WebView occlusion status
+    return true; // Would implement actual check
+  }
+
+  static generateRecommendations(results) {
+    const recommendations = [];
+
+    if (!results.screenBasedProtection) {
+      recommendations.push(
+        'Enable screen-based protection for sensitive screens'
+      );
+    }
+
+    if (!results.textFieldProtection) {
+      recommendations.push('Configure text field occlusion for forms');
+    }
+
+    if (!results.webViewProtection) {
+      recommendations.push('Review WebView content for sensitive data');
+    }
+
+    return recommendations;
+  }
+}
+
+// Usage in development
+export const runPrivacyAudit = async () => {
+  if (__DEV__) {
+    const results = await PrivacyValidator.validatePrivacyCompliance();
+
+    console.log('🔒 Privacy Compliance Audit Results:');
+    console.log(
+      'Screen Protection:',
+      results.screenBasedProtection ? '✅' : '❌'
+    );
+    console.log(
+      'Text Field Protection:',
+      results.textFieldProtection ? '✅' : '❌'
+    );
+    console.log('WebView Protection:', results.webViewProtection ? '✅' : '❌');
+
+    if (results.recommendations.length > 0) {
+      console.log('📋 Recommendations:');
+      results.recommendations.forEach((rec) => console.log(`  • ${rec}`));
+    }
+  }
+};
+```
+
+### Visual Privacy Testing
+
+```javascript components/PrivacyTestingPanel.js
+import React, { useState } from 'react';
+import { View, Text, Button, Switch } from 'react-native';
+import RNUxcam from 'react-native-ux-cam';
+import { DynamicPrivacyManager } from '../utils/dynamicPrivacy';
+
+function PrivacyTestingPanel() {
+  const [overlayEnabled, setOverlayEnabled] = useState(false);
+  const [blurEnabled, setBlurEnabled] = useState(false);
+  const [textFieldsOccluded, setTextFieldsOccluded] = useState(false);
+
+  const toggleOverlay = () => {
+    if (!overlayEnabled) {
+      RNUxcam.applyOcclusion({ color: 0xff0000, hideGestures: true });
+    } else {
+      RNUxcam.removeOcclusion();
+    }
+    setOverlayEnabled(!overlayEnabled);
+  };
+
+  const toggleBlur = () => {
+    if (!blurEnabled) {
+      RNUxcam.applyBlur({ blurRadius: 15, hideGestures: false });
+    } else {
+      RNUxcam.removeBlur();
+    }
+    setBlurEnabled(!blurEnabled);
+  };
+
+  const toggleTextFields = () => {
+    if (!textFieldsOccluded) {
+      RNUxcam.occludeAllTextFields();
+    } else {
+      RNUxcam.stopOccludingAllTextFields();
+    }
+    setTextFieldsOccluded(!textFieldsOccluded);
+  };
+
+  if (!__DEV__) {
+    return null; // Only show in development
+  }
+
+  return (
+    <View style={{ padding: 20, backgroundColor: '#f8f8f8' }}>
+      <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 15 }}>
+        🔒 Privacy Testing Panel
+      </Text>
+
+      <View
+        style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}
+      >
+        <Text style={{ flex: 1 }}>Screen Overlay</Text>
+        <Switch value={overlayEnabled} onValueChange={toggleOverlay} />
+      </View>
+
+      <View
+        style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}
+      >
+        <Text style={{ flex: 1 }}>Screen Blur</Text>
+        <Switch value={blurEnabled} onValueChange={toggleBlur} />
+      </View>
+
+      <View
+        style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15 }}
+      >
+        <Text style={{ flex: 1 }}>Text Field Occlusion</Text>
+        <Switch value={textFieldsOccluded} onValueChange={toggleTextFields} />
+      </View>
+
+      <Button
+        title="Test High Privacy Mode"
+        onPress={() => DynamicPrivacyManager.setPrivacyLevel('high')}
+      />
+    </View>
+  );
+}
+
+export default PrivacyTestingPanel;
+```
+
+## 7. Privacy Best Practices
+
+### Configuration Strategy
+
+```javascript config/privacyBestPractices.js
+// Centralized privacy configuration
+export const PRIVACY_BEST_PRACTICES = {
+  // Use screen-based protection as primary strategy
+  screenBased: {
+    // High sensitivity screens - complete overlay
+    criticalScreens: [
+      'Login Form',
+      'Registration Form',
+      'Payment Details',
+      'Credit Card Entry',
+      'Bank Account Setup',
+      'Password Change',
+      'Two Factor Authentication',
+    ],
+
+    // Medium sensitivity - blur with gestures
+    sensitiveScreens: [
+      'User Profile Settings',
+      'Personal Information',
+      'Account Overview',
+      'Transaction History',
+      'Contact Details',
+    ],
+
+    // Low sensitivity - text fields only
+    formScreens: [
+      'Search Results',
+      'Product Reviews',
+      'Customer Support',
+      'Feedback Forms',
+    ],
+  },
+
+  // Fallback view-level protection
+  viewBased: {
+    // Always protect these input types
+    alwaysProtect: [
+      'secureTextEntry',
+      'password fields',
+      'credit card inputs',
+      'SSN fields',
+      'phone numbers',
+      'email addresses',
+    ],
+  },
+
+  // WebView protection strategy
+  webView: {
+    // Patterns that trigger protection
+    sensitiveUrlPatterns: [
+      '/login',
+      '/register',
+      '/payment',
+      '/checkout',
+      '/profile',
+      '/settings',
+      '/account',
+    ],
+
+    // Always occlude WebViews with these domains
+    sensitiveDomainsPatterns: ['payment.com', 'bank.com', 'secure.com'],
+  },
+};
+
+// Implementation helper
+export const implementPrivacyBestPractices = () => {
+  return {
+    type: 'configuration',
+    occlusions: [
+      {
+        type: 'Overlay',
+        screens: PRIVACY_BEST_PRACTICES.screenBased.criticalScreens,
+        color: 0x000000,
+        hideGestures: true,
+      },
+      {
+        type: 'Blur',
+        screens: PRIVACY_BEST_PRACTICES.screenBased.sensitiveScreens,
+        blurRadius: 15,
+        hideGestures: false,
+      },
+      {
+        type: 'OccludeAllTextFields',
+        screens: PRIVACY_BEST_PRACTICES.screenBased.formScreens,
+      },
+    ],
+  };
+};
+```
+
+### Privacy Documentation
+
+```javascript utils/privacyDocumentation.js
+export const generatePrivacyReport = () => {
+  const report = {
+    timestamp: new Date().toISOString(),
+    privacyMeasures: {
+      screenBasedProtection: {
+        enabled: true,
+        protectedScreens: [
+          'Login Form',
+          'Payment Details',
+          'User Profile Settings',
+        ],
+      },
+      viewLevelProtection: {
+        enabled: true,
+        protectedComponents: [
+          'Password inputs',
+          'Credit card fields',
+          'Personal information forms',
+        ],
+      },
+      webViewProtection: {
+        enabled: true,
+        protectionMethods: [
+          'Full WebView occlusion for sensitive domains',
+          'JavaScript-based element hiding',
+          'URL pattern-based protection',
+        ],
+      },
+    },
+    complianceStandards: [
+      'GDPR Article 25 - Data Protection by Design',
+      'CCPA Section 1798.100 - Consumer Privacy Rights',
+      'SOC 2 Type II - Privacy Controls',
+    ],
+    dataRetention: {
+      sessionRecordings: '90 days maximum',
+      personalData: 'Excluded from recordings',
+      analyticsData: 'Aggregated only',
+    },
+  };
+
+  return report;
+};
+
+// Generate privacy documentation for compliance
+export const exportPrivacyDocumentation = () => {
+  if (__DEV__) {
+    const report = generatePrivacyReport();
+    console.log('📄 Privacy Compliance Report:');
+    console.log(JSON.stringify(report, null, 2));
+  }
+};
+```
+
+## 8. Troubleshooting Privacy Issues
+
+### Common Issues and Solutions
+
+#### Issue: Privacy Rules Not Working
+
+**Symptoms**: Sensitive data still visible in recordings
+**Debugging Steps**:
+
+```javascript
+// Debug privacy configuration
+const debugPrivacySetup = () => {
+  console.log('🔍 Privacy Debug Information:');
+
+  // Check if occlusion is applied
+  try {
+    RNUxcam.applyOcclusion({ color: 0xff0000 }); // Red overlay for testing
+    console.log('✅ Occlusion API working');
+
+    setTimeout(() => {
+      RNUxcam.removeOcclusion();
+      console.log('✅ Occlusion removal working');
+    }, 3000);
+  } catch (error) {
+    console.error('❌ Occlusion API failed:', error);
+  }
+
+  // Verify screen names match privacy configuration
+  const currentScreen = 'Login Form'; // Get from your screen tracking
+  console.log(`Current screen: ${currentScreen}`);
+
+  const privacyScreens = ['Login Form', 'Payment Details'];
+  const isProtected = privacyScreens.includes(currentScreen);
+  console.log(`Screen should be protected: ${isProtected}`);
+};
+```
+
+#### Issue: Text Fields Not Occluded
+
+**Solution**: Ensure proper TextInput component usage:
+
+```javascript
+// ✅ Correct - will be occluded by occludeAllTextFields()
+<TextInput placeholder="Enter password" />
+
+// ❌ Incorrect - custom component won't be detected
+<CustomInput placeholder="Enter password" />
+
+// ✅ Solution for custom components
+const CustomInputWithOcclusion = React.forwardRef((props, ref) => (
+  <TextInput {...props} ref={ref} />
+));
+
+// Then occlude manually
+const customInputRef = useRef();
+useEffect(() => {
+  RNUxcam.occludeSensitiveView(customInputRef.current);
+}, []);
+```
+
+#### Issue: WebView Privacy Not Working
+
+**Solution**: Verify WebView reference and timing:
+
+```javascript
+const DebugWebView = () => {
+  const webViewRef = useRef(null);
+
+  useEffect(() => {
+    // Add delay to ensure WebView is mounted
+    const timer = setTimeout(() => {
+      if (webViewRef.current) {
+        RNUxcam.occludeSensitiveView(webViewRef.current);
+        console.log('✅ WebView occlusion applied');
+      } else {
+        console.error('❌ WebView ref is null');
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <WebView
+      ref={webViewRef}
+      source={{ uri: 'https://example.com' }}
+      onLoad={() => console.log('WebView loaded')}
+    />
+  );
+};
+```
+
+## Success Criteria ✅
+
+Before proceeding to Phase 4, verify:
+
+- [ ] All sensitive screens have appropriate protection (overlay/blur)
+- [ ] Form fields with PII are properly occluded
+- [ ] WebViews containing sensitive content are protected
+- [ ] Privacy rules work consistently across iOS and Android
+- [ ] No sensitive data visible in test session recordings
+- [ ] Privacy configuration matches your compliance requirements
+- [ ] Testing panel confirms all protection methods work
+
+## Next Steps
+
+🛡️ **Privacy Protection Complete!** Your React Native app now complies with GDPR/CCPA requirements and protects sensitive user data.
+
+**Continue to Phase 4**: [Event Tracking](event-tracking-react-native) to capture business-critical user actions while maintaining privacy compliance.
+
+### What You'll Build Next:
+
+- Business event tracking with contextual properties
+- Conversion funnel event implementation
+- User interaction analytics
+- Custom event validation and testing
+
+### Privacy Protection Benefits:
+
+- **Legal Compliance**: GDPR/CCPA compliant data collection
+- **User Trust**: Demonstrable privacy protection measures
+- **Selective Analytics**: Insights without compromising sensitive data
+- **Flexible Rules**: Screen-based and component-level protection strategies
+
+---
+
+**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com) for privacy compliance support.
