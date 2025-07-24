@@ -5,216 +5,129 @@ hidden: false
 metadata:
   robots: index
 ---
-### V. 6.0.0 - December 2024
+#### April 30, 2025 - V. 6.0.6
 
-* **New**: Added support for TypeScript declarations
-* **New**: Enhanced occlusion configuration with UXCamOcclusionType
-* **Fix**: Improved WebView occlusion handling
-* **Fix**: Resolved memory leaks in long-running sessions
-* **Improvement**: Better error handling for network failures
+* Updated iOS SDK version to 3.6.24 and Android SDK version to 3.6.41
 
-### V. 5.2.1 - November 2024
+#### February 24, 2025 - V. 6.0.4
 
-* **Fix**: Fixed crash issue when applying occlusion to null views
-* **Fix**: Resolved WebView tagging issues on Android
-* **Improvement**: Enhanced session upload reliability
-* **Fix**: Corrected TypeScript type definitions
+* Updated iOS SDK version to 3.6.22 and Android SDK version to 3.6.38
 
-### V. 5.2.0 - October 2024
+#### February 7, 2025 - V. 6.0.3
 
-* **New**: Added support for React Native 0.72+
-* **New**: Enhanced configuration object with additional options
-* **Fix**: Resolved iOS schematic recording issues
-* **Improvement**: Better handling of app lifecycle events
-* **Fix**: Corrected screen tagging for React Navigation v6
+* Updated iOS SDK version to 3.6.21 and Android SDK version to 3.6.37
 
-### V. 5.1.0 - September 2024
+#### December 18, 2024 - V. 6.0.2
 
-* **New**: Added automatic text field occlusion
-* **New**: Enhanced WebView content occlusion
-* **Fix**: Resolved memory issues in large applications
-* **Improvement**: Better performance on low-end devices
-* **Fix**: Corrected session upload timing issues
+* Updated iOS SDK version to 3.6.20 and Android SDK version to 3.6.36
 
-### V. 5.0.0 - August 2024
+#### October 30, 2024 - V. 6.0.1
 
-* **Breaking**: Updated configuration object structure
-* **New**: Added support for React Native 0.71+
-* **New**: Enhanced occlusion API with better TypeScript support
-* **Fix**: Resolved Android crash issues
-* **Improvement**: Better integration with React Navigation
+* Updated iOS SDK version to 3.6.17 and Android SDK version to 3.6.33
 
-### V. 4.3.2 - July 2024
+#### August 1, 2024 - V. 6.0.0
 
-* **Fix**: Resolved WebView occlusion flickering
-* **Fix**: Corrected screen tagging for modal screens
-* **Improvement**: Enhanced error reporting
-* **Fix**: Resolved memory leaks in long sessions
+* Added support for React Native new architecture
+* Updated iOS SDK version to 3.6.15 and Android SDK version to 3.6.26
 
-### V. 4.3.1 - June 2024
+#### May 21, 2024 - V. 5.4.16
 
-* **Fix**: Corrected iOS schematic recording
-* **Fix**: Resolved Android ANR issues
-* **Improvement**: Better handling of app backgrounding
-* **Fix**: Corrected WebView content occlusion
+* Updated iOS version to 3.6.13 and Android version to 3.6.26
 
-### V. 4.3.0 - May 2024
+#### March 21, 2024 - V. 5.4.15
 
-* **New**: Added support for React Native 0.70+
-* **New**: Enhanced WebView occlusion capabilities
-* **Fix**: Resolved session upload failures
-* **Improvement**: Better performance optimization
-* **Fix**: Corrected screen tagging for nested navigators
+* Updated Android and iOS dependency to 3.6.23 and 3.6.11
+* Updated compile version to 33
 
-### V. 4.2.0 - April 2024
+#### February 15, 2024 - V. 5.4.14
 
-* **New**: Added configuration object support
-* **New**: Enhanced occlusion API
-* **Fix**: Resolved memory issues
-* **Improvement**: Better error handling
-* **Fix**: Corrected WebView integration issues
+* Updated Android and iOS dependency to 3.6.21 and 3.6.9
+* Fixed fatal exception on logging event with nested map as a parameter on Android
 
-### V. 4.1.0 - March 2024
+#### November 24, 2023 - V. 5.4.13
 
-* **New**: Added support for React Native 0.69+
-* **New**: Enhanced screen tagging capabilities
-* **Fix**: Resolved iOS crash issues
-* **Improvement**: Better WebView support
-* **Fix**: Corrected session upload timing
+* Updated Android and iOS dependency
+* Updated minSdkVersion to 21 for Android
 
-### V. 4.0.0 - February 2024
+#### October 11, 2023 - V. 5.4.12
 
-* **Breaking**: Updated API structure for better consistency
-* **New**: Added comprehensive TypeScript support
-* **New**: Enhanced occlusion features
-* **Fix**: Resolved Android performance issues
-* **Improvement**: Better React Navigation integration
+* Updated Android and iOS dependency to 3.6.16 and 3.6.6
 
-### V. 3.2.1 - January 2024
+#### September 4, 2023 - V. 5.4.11
 
-* **Fix**: Resolved WebView occlusion issues
-* **Fix**: Corrected screen tagging for modal screens
-* **Improvement**: Enhanced error reporting
-* **Fix**: Resolved memory leaks
+* Updated Android and iOS dependency to 3.6.14 and 3.6.5
 
-### V. 3.2.0 - December 2023
+#### August 8, 2023 - V. 5.4.10
 
-* **New**: Added support for React Native 0.68+
-* **New**: Enhanced WebView occlusion
-* **Fix**: Resolved iOS schematic recording issues
-* **Improvement**: Better performance on low-end devices
-* **Fix**: Corrected session upload reliability
+* Updated Android and iOS dependency
 
-### V. 3.1.0 - November 2023
+#### June 29, 2023 - V. 5.4.8
 
-* **New**: Added configuration object support
-* **New**: Enhanced occlusion API
-* **Fix**: Resolved Android crash issues
-* **Improvement**: Better error handling
-* **Fix**: Corrected WebView integration
+* Updated Android and iOS dependency
+* Updated build gradle
 
-### V. 3.0.0 - October 2023
+#### June 15, 2023 - V. 5.4.7
 
-* **Breaking**: Major API restructuring for better consistency
-* **New**: Added comprehensive TypeScript support
-* **New**: Enhanced screen tagging capabilities
-* **Fix**: Resolved memory issues in long sessions
-* **Improvement**: Better React Navigation integration
+* Updated iOS SDK version to 3.6.3 and Android SDK version to 3.6.7
 
-### V. 2.5.0 - September 2023
+#### May 5, 2023 - V. 5.4.6
 
-* **New**: Added support for React Native 0.67+
-* **New**: Enhanced WebView occlusion features
-* **Fix**: Resolved iOS performance issues
-* **Improvement**: Better error reporting
-* **Fix**: Corrected session upload timing
+* Updated iOS SDK version to 3.6.2 and Android SDK version to 3.6.4
 
-### V. 2.4.0 - August 2023
+#### February 9, 2023 - V. 5.4.5
 
-* **New**: Added configuration object support
-* **New**: Enhanced occlusion API
-* **Fix**: Resolved Android ANR issues
-* **Improvement**: Better WebView support
-* **Fix**: Corrected screen tagging for nested navigators
+* Increased version for release
 
-### V. 2.3.0 - July 2023
+#### December 14, 2022 - V. 5.4.4
 
-* **New**: Added support for React Native 0.66+
-* **New**: Enhanced screen tagging capabilities
-* **Fix**: Resolved memory leaks
-* **Improvement**: Better performance optimization
-* **Fix**: Corrected WebView integration issues
+* Increased version for release
+* Updated minSdkVersion to 19
+* Updated Android SDK dependency to 3.5.2
+* Fixed compatibility issue with React Native 0.7
 
-### V. 2.2.0 - June 2023
+#### November 14, 2022 - V. 5.4.3
 
-* **New**: Added comprehensive TypeScript support
-* **New**: Enhanced occlusion features
-* **Fix**: Resolved iOS crash issues
-* **Improvement**: Better error handling
-* **Fix**: Corrected session upload reliability
+* Updated native Android SDK dependency to 3.5.1
+* Updated iOS version to 3.4.5
 
-### V. 2.1.0 - May 2023
+#### September 7, 2022 - V. 5.4.2
 
-* **New**: Added support for React Native 0.65+
-* **New**: Enhanced WebView occlusion
-* **Fix**: Resolved Android performance issues
-* **Improvement**: Better React Navigation integration
-* **Fix**: Corrected screen tagging for modal screens
+* Updated native Android SDK dependency to 3.4.4
+* Updated iOS version to 3.4.3
 
-### V. 2.0.0 - April 2023
+#### August 9, 2022 - V. 5.4.1
 
-* **Breaking**: Major API restructuring
-* **New**: Added configuration object support
-* **New**: Enhanced occlusion API
-* **Fix**: Resolved memory issues
-* **Improvement**: Better error handling
-* **Fix**: Corrected WebView integration
+* Updated native Android SDK dependency to 3.4.3
+* Updated iOS version to 3.4.2
+* Fixed webviews not being captured
 
-### V. 1.5.0 - March 2023
+#### June 27, 2022 - V. 5.4.0
 
-* **New**: Added support for React Native 0.64+
-* **New**: Enhanced screen tagging capabilities
-* **Fix**: Resolved iOS schematic recording issues
-* **Improvement**: Better performance on low-end devices
-* **Fix**: Corrected session upload timing
+* Updated iOS and Android SDK to include configuration and occlusion changes
+* Supports app logs feature
+* Updated iOS SDK to the latest version that includes fixes for 4XX error and other minor bug fixes
+* Fixed crash issue while integrating video library
 
-### V. 1.4.0 - February 2023
+#### November 12, 2021 - V. 5.3.4
 
-* **New**: Added comprehensive TypeScript support
-* **New**: Enhanced occlusion features
-* **Fix**: Resolved Android crash issues
-* **Improvement**: Better WebView support
-* **Fix**: Corrected screen tagging for nested navigators
+* Examples updated to the latest React Native versions
+* Added TypeScript example
+* Updated iOS SDK to 3.3.9 and Android SDK to 3.3.7
 
-### V. 1.3.0 - January 2023
+#### July 5, 2021 - V. 5.3.3
 
-* **New**: Added support for React Native 0.63+
-* **New**: Enhanced WebView occlusion
-* **Fix**: Resolved memory leaks in long sessions
-* **Improvement**: Better error reporting
-* **Fix**: Corrected React Navigation integration
+* Updated iOS SDK to v3.3.5
+* Updated Android SDK to v3.3.6
+* Added interface to the missing method `disableCrashHandling`
 
-### V. 1.2.0 - December 2022
+#### February 23, 2021 - V. 5.3.2
 
-* **New**: Added configuration object support
-* **New**: Enhanced occlusion API
-* **Fix**: Resolved iOS performance issues
-* **Improvement**: Better error handling
-* **Fix**: Corrected session upload reliability
+* Added API to handle React Native gesture issues
 
-### V. 1.1.0 - November 2022
+#### February 8, 2019 - V. 5.0.1
 
-* **New**: Added support for React Native 0.62+
-* **New**: Enhanced screen tagging capabilities
-* **Fix**: Resolved Android ANR issues
-* **Improvement**: Better WebView support
-* **Fix**: Corrected screen tagging for modal screens
+* SDK released to use Android v3.0.6 and iOS v3.0.6
 
-### V. 1.0.0 - October 2022
+#### November 2, 2018 - V. 5.0.0
 
-* **Initial Release**: First stable release of React Native SDK
-* **New**: Basic session recording functionality
-* **New**: Screen tagging support
-* **New**: Event logging capabilities
-* **New**: User property tracking
-* **New**: Basic occlusion features
+* SDK released to use Android v3.0.4 and iOS v3.0.5
