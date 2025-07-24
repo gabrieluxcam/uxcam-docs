@@ -1,5 +1,5 @@
 ---
-title: React Native
+title: React Native SDK Integration Guide
 excerpt: ''
 deprecated: false
 hidden: false
