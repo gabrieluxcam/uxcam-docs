@@ -169,12 +169,12 @@ Get started with just a few lines of code:
 
 <Terminal>
   {`
-      # Using npm
-      npm install react-native-ux-cam
+          # Using npm
+          npm install react-native-ux-cam
 
-      # Using yarn
-      yarn add react-native-ux-cam
-      `}
+          # Using yarn
+          yarn add react-native-ux-cam
+          `}
 </Terminal>
 
 ### 2. Basic Setup
@@ -327,8 +327,6 @@ if (Platform.OS === 'android') {
 
 📖 **[Expo Integration Guide](expo-installation)** - Complete Expo-specific setup\
 🔧 **[Troubleshooting Guide](troubleshooting-react-native)** - Common issues and solutions
-📋 **[Validation Checklist](validation-testing-react-native)** - Verify your integration
-📚 **[API Reference](advanced-configuration-react-native)** - Complete method documentation
 
 ***
 
