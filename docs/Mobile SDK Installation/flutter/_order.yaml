@@ -1,7 +1,7 @@
-- screen-tagging
-- sensitive-data-occlusion
-- users-and-properties
-- sending-events
+- screen-tagging-flutter
+- sensitive-data-occlusion-flutter
+- users-and-properties-flutter
+- sending-events-flutter
 - advanced-configuration-and-apis
 - flutter-sdk-changelog
 - troubleshooting-flutter

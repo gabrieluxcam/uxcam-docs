@@ -60,12 +60,12 @@ metadata:
 
 | Step                 | Task                                                                                           | Goal                                       |
 | :------------------- | :--------------------------------------------------------------------------------------------- | :----------------------------------------- |
-| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion#">Jump →</a>                         | Hide sensitive user data                   |
-| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties-to-simplify-data#">Jump →</a> | Group similar URLs under consistent names  |
-| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="user-properties#">Jump →</a>         | Unify sessions, power funnels & cohorts    |
-| <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-event#">Jump →</a>                | Track user interactions and key behaviours |
-| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
-| <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="app-version#">Jump →</a>                        | Debug issues across different releases     |
+| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="../setup-configuration/occlusion-hide-sensitive-data#">Jump →</a>                         | Hide sensitive user data                   |
+| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="../setup-configuration/define-pages-properties#">Jump →</a> | Group similar URLs under consistent names  |
+| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="../setup-configuration/setting-user-properties#">Jump →</a>         | Unify sessions, power funnels & cohorts    |
+| <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="../setup-configuration/logging-custom-events#">Jump →</a>                | Track user interactions and key behaviours |
+| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="../setup-configuration/configure-content-security-policy-csp#">Jump →</a>                     | Ensure the Web SDK functions correctly     |
+| <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="../setup-configuration/define-app-version-optional#">Jump →</a>                        | Debug issues across different releases     |
 
 <GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 

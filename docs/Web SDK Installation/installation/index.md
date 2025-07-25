@@ -28,11 +28,11 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 # Choose your Method of Integration
 
-| HTML Code snippet      | <a href="html-snippet#">Jump →</a>       |
+| HTML Code snippet      | <a href="html-code-snippet#">Jump →</a>       |
 | :--------------------- | :--------------------------------------- |
-| **Google Tag Manager** | <a href="google-tag-manager#">Jump →</a> |
-| **Shopify**            | <a href="shopify#">Jump →</a>            |
-| **Wordpress**          | <a href="wordpress#">Jump →</a>          |
+| **Google Tag Manager** | <a href="google-tag-manager-1#">Jump →</a> |
+| **Shopify**            | <a href="shopify-1#">Jump →</a>            |
+| **Wordpress**          | <a href="wordpress-1#">Jump →</a>          |
 
 # What is automatically captured?
 
@@ -40,20 +40,20 @@ After the initial integration, UXCam automatically collects a variety of user in
 
 * **User Events**\
   We automatically capture key interaction events such as taps, clicks, scrolls, and page navigations.
-  ➜ [Learn how to add custom event tagging](logging-custom-event#)
+  ➜ [Learn how to add custom event tagging](../setup-configuration/logging-custom-events#)
 * **Page Visits**\
   All page views are captured automatically.
-  ➜ [Use code-less page definition to organise your pages without touching code](define-pages-properties-to-simplify-data#)
+  ➜ [Use code-less page definition to organise your pages without touching code](../setup-configuration/define-pages-properties#)
 * **Sensitive Data Protection**\
   Inputs such as passwords and email fields are auto-occluded to protect user privacy.
-  ➜ [Explore additional occlusion options](occlusion#)
+  ➜ [Explore additional occlusion options](../setup-configuration/occlusion-hide-sensitive-data#)
 * **User Identification**\
   We identify users based on anonymous browser/device IDs by default.
-  ➜ [You can enhance this by using functions to set user identity and properties](user-properties#)
+  ➜ [You can enhance this by using functions to set user identity and properties](../setup-configuration/setting-user-properties#)
 
 # Content Security Policy (CSP)
 
-If your website uses a Content Security Policy (CSP), you’ll need to explicitly allow UXCam resources for the Web SDK to function properly. Without this, session recordings and script loading may be blocked. ➜ [Learn how to configure your CSP to safely enable UXCam in our Content Security Policy setup guide](csp#)
+If your website uses a Content Security Policy (CSP), you’ll need to explicitly allow UXCam resources for the Web SDK to function properly. Without this, session recordings and script loading may be blocked. ➜ [Learn how to configure your CSP to safely enable UXCam in our Content Security Policy setup guide](../setup-configuration/configure-content-security-policy-csp#)
 
 ## Support
 

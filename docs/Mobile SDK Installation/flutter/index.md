@@ -173,10 +173,10 @@ Within 5 minutes of running your app:
 
 🚀 **Ready to unlock the full potential?** Continue with our comprehensive feature guides:
 
-1. **[Screen Tagging](screen-tagging)** - Implement detailed screen analytics and navigation tracking
-2. **[Privacy Protection](sensitive-data-occlusion)** - Ensure GDPR/CCPA compliance with data masking  
-3. **[User Analytics](users-and-properties)** - Enable user-level insights and segmentation
-4. **[Event Tracking](sending-events)** - Capture business-critical user actions and conversions
+1. **[Screen Tagging](screen-tagging-flutter)** - Implement detailed screen analytics and navigation tracking
+2. **[Privacy Protection](sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking  
+3. **[User Analytics](users-and-properties-flutter)** - Enable user-level insights and segmentation
+4. **[Event Tracking](sending-events-flutter)** - Capture business-critical user actions and conversions
 5. **[Advanced Configuration](advanced-configuration-and-apis/)** - Optimize and customize for complex use cases
 
 ### Quick Links
