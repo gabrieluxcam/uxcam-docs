@@ -7,6 +7,11 @@ metadata:
 ---
 # UXCam Android Changelog
 
+### V. 3.7.1 - Jul 29, 2025
+
+* Added: Screen Action / Smart Events support for Jetpack Compose
+* Fix: Google Maps ClassNotFoundException
+
 ### V. 3.7.0 - Jul 1, 2025
 
 * Added: AI Occlusion feature
