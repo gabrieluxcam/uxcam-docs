@@ -10,6 +10,7 @@ metadata:
 next:
   description: ''
 ---
+
 # Flutter UXCam Integration Guide
 
 Transform your Flutter app into a data-driven product with comprehensive user session analytics, heatmaps, and behavioral insights. This guide provides a complete integration roadmap from basic setup to advanced customization.
@@ -20,11 +21,11 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 **Key Benefits:**
 
-* **Session Recordings**: Visual replays of user interactions with Flutter widgets
-* **Screen Analytics**: Heat maps and engagement metrics per screen/route
-* **User Journey Analysis**: Complete flow tracking across your app's navigation
-* **Privacy Compliance**: GDPR/CCPA compliant data collection with granular consent
-* **Cross-Platform Insights**: Unified analytics for iOS and Android from single codebase
+- **Session Recordings**: Visual replays of user interactions with Flutter widgets
+- **Screen Analytics**: Heat maps and engagement metrics per screen/route
+- **User Journey Analysis**: Complete flow tracking across your app's navigation
+- **Privacy Compliance**: GDPR/CCPA compliant data collection with granular consent
+- **Cross-Platform Insights**: Unified analytics for iOS and Android from single codebase
 
 ## Integration Complexity Assessment
 
@@ -35,11 +36,13 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 ### Prerequisites Checklist
 
-* [ ] Flutter 3.10+ with Dart 3.0+
-* [ ] UXCam account with app key
-* [ ] iOS deployment target 12.0+ / Android minSdkVersion 21+
-* [ ] Development environment configured (for debug validation)
-* [ ] Network access to uxcam.com domain
+- [ ] Flutter and Dart SDK
+- [ ] UXCam account with app key
+- [ ] iOS deployment target 12.0+ / Android minSdkVersion 21+
+- [ ] Development environment configured (for debug validation)
+- [ ] Network access to uxcam.com domain
+
+For the latest Flutter and Dart version requirements, please refer to the [flutter_uxcam pub.dev page](https://pub.dev/packages/flutter_uxcam).
 
 ### Project Type Decision Matrix
 
@@ -59,18 +62,19 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 1. Add the UXCam package to your Flutter app:
    <Terminal>
-     {`
-                         $ flutter pub add flutter_uxcam
-                       `}
+   {`                    $ flutter pub add flutter_uxcam
+           `}
    </Terminal>
 
 2. This will add a line similar to this to your package's pubspec.yaml file
+
    ```yaml
    dependencies:
      flutter_uxcam: ^x.x.x
    ```
 
 3. Import UXCam in your app:
+
    ```dart
    import 'package:flutter_uxcam/flutter_uxcam.dart';
    ```
@@ -125,9 +129,9 @@ class _MyAppState extends State<MyApp> {
 >
 > If you have successfully integrated the Flutter SDK but are still seeing "Waiting for data to arrive" in your dashboard, here are some common causes and solutions:
 >
-> * App State: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
-> * SDK Version: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
-> * Check Logs: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
+> - App State: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
+> - SDK Version: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
+> - Check Logs: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
 
 ## Integration Verification
 
@@ -141,17 +145,17 @@ class UXCamValidator {
     // Check if UXCam is recording
     final isRecording = await FlutterUxcam.isRecording();
     print('UXCam Recording Status: $isRecording');
-    
+
     if (isRecording) {
       // Test screen tagging
       FlutterUxcam.tagScreenName('Integration Test Screen');
-      
+
       // Test event logging
       FlutterUxcam.logEvent('integration_validated', {
         'timestamp': DateTime.now().toIso8601String(),
-        'flutter_version': '3.16.0', // Your Flutter version
+        'flutter_version': 'Your Flutter version',
       });
-      
+
       print('✅ UXCam integration validated successfully');
     } else {
       print('❌ UXCam is not recording - check your configuration');
@@ -187,11 +191,11 @@ Within 5 minutes of running your app:
 
 ### Support Resources
 
-* **Integration Issues**: [troubleshooting-flutter](troubleshooting-flutter)
-* **API Questions**: [team@uxcam.com](mailto:team@uxcam.com)
-* **Feature Requests**: GitHub Issues
-* **Community**: Join our developer Discord
+- **Integration Issues**: [troubleshooting-flutter](troubleshooting-flutter)
+- **API Questions**: [team@uxcam.com](mailto:team@uxcam.com)
+- **Feature Requests**: GitHub Issues
+- **Community**: Join our developer Discord
 
-***
+---
 
-*Happy analyzing with UXCam! 🎉*
+_Happy analyzing with UXCam! 🎉_

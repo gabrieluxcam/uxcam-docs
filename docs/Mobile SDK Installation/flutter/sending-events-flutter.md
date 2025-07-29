@@ -14,57 +14,216 @@ metadata:
 next:
   description: ''
 ---
-Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 
-<br />
+# Event Tracking with UXCam
 
-> 📘 Note:
->
-> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
+Screens tell you **where** users go; **events show what they do**.\
+With a handful of well‑chosen events (5‑15 is ideal) plus descriptive properties, you can build funnels, spot drop‑offs, and debug support tickets in minutes.
 
-## How to Send Events
+---
 
-To send an event, use the following method in your code:
+## Choose the Right Moments to Track
 
-```coffeescript Flutter
-logEvent(String eventName)
+| Event type           | Why tag it?              | Typical name examples                |
+| -------------------- | ------------------------ | ------------------------------------ |
+| **Flow milestones**  | Build conversion funnels | `Signup_Started`, `Signup_Completed` |
+| **Key feature use**  | Measure adoption         | `Video_Export`, `AR_Scan`            |
+| **Errors / cancels** | Quantify friction        | `Payment_Failed`, `Upload_Cancelled` |
+| **A/B exposure**     | Compare cohorts          | `Variant_Shown_A`                    |
 
-// Example
-FlutterUxcam.logEvent("purchased");
+> **Tip:** Too many events dilute insight and bloat dashboards—focus on what drives decisions.
+
+---
+
+## Send a Basic Event
+
+```dart
+FlutterUxcam.logEvent("Signup_Started");
 ```
 
-Replace `"EventName"` with a meaningful name that describes the action being tracked, such as `"ButtonClicked" `or` "UserLoggedIn"`. Naming your events consistently will make your analytics easier to understand.
+**Best‑practice**
 
-## Sending Events with Properties
+- Use **PascalCase** or **snake_case**.
+- Store names as **constants** to prevent typos.
+- Remember that names are **case‑sensitive**: `signup_started` ≠ `Signup_Started`.
 
-Events can also have properties associated with them to provide additional context. For example, if you have an event called "`Purchase`", you might include properties like the product ID, product category, or price.
+**Example with Constants:**
 
-To send an event with properties, use the following method:
+```dart
+class EventNames {
+  static const String signupStarted = "Signup_Started";
+  static const String signupCompleted = "Signup_Completed";
+  static const String paymentSucceeded = "Payment_Succeeded";
+  static const String videoExport = "Video_Export";
+}
 
-```coffeescript Flutter
-logEventWithProperties(String eventName, Map<String, dynamic> properties)
-
-FlutterUxcam.logEvent("purchased"); // Event without properties
-FlutterUxcam.logEventWithProperties("purchased", {
-    "size": 7,
-    "brand": "Nike"
-});
+// Usage
+FlutterUxcam.logEvent(EventNames.signupStarted);
 ```
 
-This approach gives you a richer dataset and helps in better segmenting and understanding your users' behaviour.
+---
 
-### Important Considerations
+## Add Context with Properties
 
-**Properties Limit**: Each event can include up to 20 properties. If you exceed this limit, any extra properties will not be shown, and you'll receive a message indicating that there's an excess of properties.
+Attach up to **20** key‑value pairs to any event for richer analysis.
 
-**Case Sensitivity**: Event names and property keys are case sensitive. This means "purchase" and "Purchase" will be treated as two different events, so be consistent with naming to avoid confusion.
+```dart
+Map<String, dynamic> properties = {
+  'plan': 'pro',
+  'source': 'google_ads',
+  'price_cents': 1499,
+  'user_type': 'premium',
+};
 
-### Best Practices
+FlutterUxcam.logEvent("Payment_Succeeded", properties);
+```
 
-**Be Consistent**: Use consistent naming conventions for event names and properties. This makes it easier to search and analyze your events in UXCam.
+| Rule                                          | Reason                                        |
+| --------------------------------------------- | --------------------------------------------- |
+| Keys are **case‑sensitive**                   | `Plan` and `plan` create separate properties. |
+| Values must be **String, Number, or Boolean** | Serialize complex objects to JSON if needed.  |
+| Avoid **PII**                                 | Use hashed values or IDs to stay GDPR‑safe.   |
+| Stop at **20 properties**                     | Extras are discarded and a warning is logged. |
 
-**Keep Properties Relevant:** Only add properties that provide meaningful context. Overloading events with unnecessary properties can make your analytics harder to interpret.
+**Complex Object Example:**
 
-**Test Your Implementation**: Before rolling out your analytics to production, thoroughly test your events and properties to ensure they are correctly logged and appear as expected.
+```dart
+class Product {
+  final String id;
+  final String name;
+  final double price;
+
+  Product({required this.id, required this.name, required this.price});
+
+  Map<String, dynamic> toEventProperties() {
+    return {
+      'product_id': id,
+      'product_name': name,
+      'price': price,
+    };
+  }
+}
+
+// Usage
+final product = Product(id: '123', name: 'Premium Plan', price: 29.99);
+FlutterUxcam.logEvent("Product_Viewed", product.toEventProperties());
+```
+
+---
+
+## Automatic Events (No Code Needed)
+
+| Auto event  | Fires when …                                              |
+| ----------- | --------------------------------------------------------- |
+| `Rage Tap`  | User taps ≥ 3 times within 300 ms at the same coordinates |
+| `UI Freeze` | Main thread blocked for ≥ 2 s                             |
+
+Combine these with your custom events for a complete picture of the user experience. You can find more details about _Rage Tap_ and _UI Freeze_ in the UXCam Help Center.
+
+---
+
+## Flutter-Specific Examples
+
+### Navigation Events
+
+```dart
+// Track screen navigation
+void onScreenChanged(String screenName) {
+  FlutterUxcam.logEvent("Screen_Viewed", {
+    'screen_name': screenName,
+    'timestamp': DateTime.now().toIso8601String(),
+  });
+}
+```
+
+### User Interaction Events
+
+```dart
+// Track button taps
+void onButtonTapped(String buttonName) {
+  FlutterUxcam.logEvent("Button_Tapped", {
+    'button_name': buttonName,
+    'screen': ModalRoute.of(context)?.settings.name ?? 'unknown',
+  });
+}
+```
+
+### Form Events
+
+```dart
+// Track form interactions
+void onFormSubmitted(String formName, Map<String, dynamic> formData) {
+  FlutterUxcam.logEvent("Form_Submitted", {
+    'form_name': formName,
+    'field_count': formData.length,
+    'has_errors': formData.values.any((value) => value == null),
+  });
+}
+```
+
+---
+
+## Verify Your Events
+
+1. Trigger the event in a **debug build** and wait for upload.
+2. Open **Dashboard → Events**.
+3. Confirm the new event and its properties appear.
+4. Play a session replay—the event pin should align with the exact moment.
+
+**Testing Example:**
+
+```dart
+// Add this to your debug builds for testing
+void testEventLogging() {
+  FlutterUxcam.logEvent("Test_Event", {
+    'test_property': 'test_value',
+    'timestamp': DateTime.now().toIso8601String(),
+  });
+}
+```
+
+---
+
+## Troubleshooting Cheat‑Sheet
+
+| Issue                 | Likely cause                                                     | Fix                                                                                                           |
+| --------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Event missing         | Name typo or the event was logged before the SDK was initialized | Use constants; ensure the event is logged only after `FlutterUxcam.startWithConfiguration()` has been called. |
+| Property not shown    | Sent > 20 props                                                  | Trim to 20; bundle extras in one JSON string                                                                  |
+| Duplicate events      | Called inside loops / retries                                    | Add guards (e.g., send once per session)                                                                      |
+| Mixed‑case duplicates | `Signup_started` vs `Signup_Started`                             | Standardise naming casing                                                                                     |
+
+**Example Guard Implementation:**
+
+```dart
+class EventGuard {
+  static final Set<String> _sentEvents = {};
+
+  static void logEventOnce(String eventName, [Map<String, dynamic>? properties]) {
+    if (!_sentEvents.contains(eventName)) {
+      FlutterUxcam.logEvent(eventName, properties);
+      _sentEvents.add(eventName);
+    }
+  }
+
+  static void reset() {
+    _sentEvents.clear();
+  }
+}
+```
+
+---
+
+## QA Checklist
+
+- [ ] All custom events appear in the **Events** dashboard and on session replays.
+- [ ] Properties display correct values, types, and casing.
+- [ ] No unwanted duplicates (case or spelling).
+- [ ] Event pins align with the correct second in replay.
+- [ ] No PII present in names or properties.
+- [ ] Events are logged only after SDK initialization.
+- [ ] Property count stays under 20 per event.
+
+---
 
 By leveraging events and properties effectively, you can unlock valuable insights into how users interact with your app, leading to better product decisions and enhanced user experiences.
