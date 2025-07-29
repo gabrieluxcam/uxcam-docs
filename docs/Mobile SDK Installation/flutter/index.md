@@ -60,8 +60,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 1. Add the UXCam package to your Flutter app:
    <Terminal>
      {`
-                 $ flutter pub add flutter_uxcam
-               `}
+                         $ flutter pub add flutter_uxcam
+                       `}
    </Terminal>
 
 2. This will add a line similar to this to your package's pubspec.yaml file
@@ -133,7 +133,7 @@ class _MyAppState extends State<MyApp> {
 
 ### Validate Your Setup
 
-After initialization, verify UXCam is working correctly:
+After initialization, if you want to verify UXCam is working correctly, you can validate manually such as:
 
 ```dart
 class UXCamValidator {
@@ -167,7 +167,7 @@ Within 5 minutes of running your app:
 1. **Dashboard Activity**: New session appears in UXCam dashboard
 2. **Screen Analytics**: Screen names show in session replay
 3. **Event Tracking**: Custom events appear in session timeline
-4. **Debug Logs**: Console shows UXCam initialization messages
+4. **Debug Logs**: Console shows UXCam initialization messages in Android Studio or XCode
 
 ## What's Next?
 
