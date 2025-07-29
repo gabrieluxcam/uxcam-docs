@@ -10,7 +10,6 @@ metadata:
 next:
   description: ''
 ---
-
 # Flutter UXCam Integration Guide
 
 Transform your Flutter app into a data-driven product with comprehensive user session analytics, heatmaps, and behavioral insights. This guide provides a complete integration roadmap from basic setup to advanced customization.
@@ -30,8 +29,8 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 ## Integration Complexity Assessment
 
 **Effort Level**: Low-Medium (2-4 hours total)\
-**Technical Complexity**: Low (Flutter package integration)\
-**Team Coordination**: Minimal (primarily mobile team)\
+**Technical Complexity**: Low (Flutter package integration)
+**Team Coordination**: Minimal (primarily mobile team)
 **Risk Level**: Very Low (non-breaking additions)
 
 ### Prerequisites Checklist
@@ -44,11 +43,11 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 ### Project Type Decision Matrix
 
-| Project Type         | Setup Approach            | Key Considerations                         | Integration Time |
-|---------------------|---------------------------|-------------------------------------------|------------------|
-| **Standard Flutter** | Direct pub.dev integration | Full feature access, straightforward setup | 2-3 hours        |
-| **Flutter + Native** | Standard integration      | Works with platform channels, no conflicts | 2-3 hours        |
-| **Complex Navigation** | Manual screen tagging    | Custom route handling may be needed       | 3-4 hours        |
+| Project Type           | Setup Approach             | Key Considerations                         | Integration Time |
+| ---------------------- | -------------------------- | ------------------------------------------ | ---------------- |
+| **Standard Flutter**   | Direct pub.dev integration | Full feature access, straightforward setup | 0-1 hours        |
+| **Flutter + Native**   | Standard integration       | Works with platform channels, no conflicts | 2-3 hours        |
+| **Complex Navigation** | Manual screen tagging      | Custom route handling may be needed        | 3-4 hours        |
 
 ### Quick Start: Only a Couple of Lines of Code
 
@@ -61,8 +60,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 1. Add the UXCam package to your Flutter app:
    <Terminal>
      {`
-             $ flutter pub add flutter_uxcam
-           `}
+                 $ flutter pub add flutter_uxcam
+               `}
    </Terminal>
 
 2. This will add a line similar to this to your package's pubspec.yaml file
@@ -164,6 +163,7 @@ class UXCamValidator {
 ### Expected Results
 
 Within 5 minutes of running your app:
+
 1. **Dashboard Activity**: New session appears in UXCam dashboard
 2. **Screen Analytics**: Screen names show in session replay
 3. **Event Tracking**: Custom events appear in session timeline
@@ -174,7 +174,7 @@ Within 5 minutes of running your app:
 🚀 **Ready to unlock the full potential?** Continue with our comprehensive feature guides:
 
 1. **[Screen Tagging](screen-tagging-flutter)** - Implement detailed screen analytics and navigation tracking
-2. **[Privacy Protection](sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking  
+2. **[Privacy Protection](sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking
 3. **[User Analytics](users-and-properties-flutter)** - Enable user-level insights and segmentation
 4. **[Event Tracking](sending-events-flutter)** - Capture business-critical user actions and conversions
 5. **[Advanced Configuration](advanced-configuration-and-apis/)** - Optimize and customize for complex use cases
@@ -182,16 +182,16 @@ Within 5 minutes of running your app:
 ### Quick Links
 
 📖 **[Changelog](flutter-sdk-changelog)** - Version history and breaking changes\
-🔧 **[Troubleshooting Guide](troubleshooting-flutter)** - Common issues and solutions\
+🔧 **[Troubleshooting Guide](troubleshooting-flutter)** - Common issues and solutions
 ⚙️ **[Advanced APIs](advanced-configuration-and-apis/)** - Recording control, crash handling, and more
 
 ### Support Resources
 
-- **Integration Issues**: [troubleshooting-flutter](troubleshooting-flutter)
-- **API Questions**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Feature Requests**: GitHub Issues
-- **Community**: Join our developer Discord
+* **Integration Issues**: [troubleshooting-flutter](troubleshooting-flutter)
+* **API Questions**: [team@uxcam.com](mailto:team@uxcam.com)
+* **Feature Requests**: GitHub Issues
+* **Community**: Join our developer Discord
 
----
+***
 
 *Happy analyzing with UXCam! 🎉*
