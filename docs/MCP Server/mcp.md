@@ -4,7 +4,11 @@ hidden: true
 ---
 The UXCam Documentation Model Context Protocol (MCP) server enables AI-powered code editors like Cursor and Windsurf, plus general-purpose tools like Claude Desktop, to interact directly with your UXCam Documentation API and documentation.
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=uxcam\&config=JTdCJTIydHlwZSUyMiUzQSUyMnN0cmVhbWFibGUtaHR0cCUyMiUyQyUyMnVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGaW50ZWdyYXRpb24ubWNwLnV4Y2FtLmNvbSUyRm1jcCUyRmh0dHAlMjIlMkMlMjJoZWFkZXJzJTIyJTNBJTdCJTIyQWNjZXB0JTIyJTNBJTIyYXBwbGljYXRpb24lMkZqc29uJTJDJTIwdGV4dCUyRmV2ZW50LXN0cmVhbSUyMiUyQyUyMkNvbnRlbnQtVHlwZSUyMiUzQSUyMmFwcGxpY2F0aW9uJTJGanNvbiUyMiU3RCU3RA%3D%3D)
+<br />
+
+<a href="https://cursor.com/install-mcp?name=uxcam-integration&config=JTdCJTIydHlwZSUyMiUzQSUyMnN0cmVhbWFibGUtaHR0cCUyMiUyQyUyMnVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGaW50ZWdyYXRpb24ubWNwLnV4Y2FtLmNvbSUyRm1jcCUyRmh0dHAlMjIlMkMlMjJoZWFkZXJzJTIyJTNBJTdCJTIyQWNjZXB0JTIyJTNBJTIyYXBwbGljYXRpb24lMkZqc29uJTJDJTIwdGV4dCUyRmV2ZW50LXN0cmVhbSUyMiUyQyUyMkNvbnRlbnQtVHlwZSUyMiUzQSUyMmFwcGxpY2F0aW9uJTJGanNvbiUyMiU3RCU3RA%3D%3D">
+  <img src="https://cursor.com/deeplink/mcp-install-light.svg" alt="Add uxcam-integration MCP server to Cursor" height="32" />
+</a>
 
 <br />
 
