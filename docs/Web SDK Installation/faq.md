@@ -37,7 +37,7 @@ button.addEventListener('click', () => uxc.event('my_btn_clicked'));
 
 For automatic occlusion to work, the input field must have its type set to "email". If it’s set to "text" or another type, UXCam will not hide it by default.
 
-For email or any other input type that should be occluded automatically, please verify that the type is set to any of the options mentioned in the occlusion section → [Occlusion - Hide Sensitive Data](occlusion#)
+For email or any other input type that should be occluded automatically, please verify that the type is set to any of the options mentioned in the occlusion section → [Occlusion - Hide Sensitive Data](occlusion-hide-sensitive-data#/)
 
 ### 4. Why does the replay look broken, and CSS Styles or images are not loading?
 
