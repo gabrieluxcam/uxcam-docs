@@ -117,7 +117,7 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 <Image align="center" src="https://files.readme.io/4252334dd396f15ddd8d9caff6aa569204f2f8caf9daf7606853f830be8e8a81-Cart_item_2.png" />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)              .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)               .</GitHubCallout>
 
 ### Create Event Tags and set the triggers
 
@@ -173,12 +173,12 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 
 ## Next steps - Setup and configuration
 
-| Step                 | Task                                                                                           | Goal                                      |
-| :------------------- | :--------------------------------------------------------------------------------------------- | :---------------------------------------- |
-| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="../setup-configuration/occlusion-hide-sensitive-data#">Jump →</a>                         | Hide sensitive user data                  |
-| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="../setup-configuration/define-pages-properties#">Jump →</a> | Group similar URLs under consistent names |
-| <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="../setup-configuration/configure-content-security-policy-csp#">Jump →</a>                     | Ensure the Web SDK functions correctly    |
-| <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="../setup-configuration/define-app-version-optional#">Jump →</a>                        | Debug issues across different releases    |
+| Step                 | Task                                                                                                         | Goal                                      |
+| :------------------- | :----------------------------------------------------------------------------------------------------------- | :---------------------------------------- |
+| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion-hide-sensitive-data#">Jump →</a>                   | Hide sensitive user data                  |
+| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties#">Jump →</a>                                | Group similar URLs under consistent names |
+| <strong>3 </strong>  | <strong>Check Content Security Policy </strong>  <a href="configure-content-security-policy-csp#">Jump →</a> | Ensure the Web SDK functions correctly    |
+| <strong>4 ★</strong> | <strong>Define App version </strong>  <a href="define-app-version-optional#">Jump →</a>                      | Debug issues across different releases    |
 
 <GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-3, to get the most value out of UXCam</GitHubCallout>
 
