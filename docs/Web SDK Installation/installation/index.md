@@ -43,17 +43,17 @@ After the initial integration, UXCam automatically collects a variety of user in
   ➜ [Learn how to add custom event tagging](logging-custom-events#)
 * **Page Visits**\
   All page views are captured automatically.
-  ➜ [Use code-less page definition to organise your pages without touching code](../setup-configuration/define-pages-properties#)
+  ➜ [Use code-less page definition to organise your pages without touching code](define-pages-properties#)
 * **Sensitive Data Protection**\
   Inputs such as passwords and email fields are auto-occluded to protect user privacy.
-  ➜ [Explore additional occlusion options](../setup-configuration/occlusion-hide-sensitive-data#)
+  ➜ [Explore additional occlusion options](occlusion-hide-sensitive-data#)
 * **User Identification**\
   We identify users based on anonymous browser/device IDs by default.
-  ➜ [You can enhance this by using functions to set user identity and properties](../setup-configuration/setting-user-properties#)
+  ➜ [You can enhance this by using functions to set user identity and properties](setting-user-properties#)
 
 # Content Security Policy (CSP)
 
-If your website uses a Content Security Policy (CSP), you’ll need to explicitly allow UXCam resources for the Web SDK to function properly. Without this, session recordings and script loading may be blocked. ➜ [Learn how to configure your CSP to safely enable UXCam in our Content Security Policy setup guide](../setup-configuration/configure-content-security-policy-csp#)
+If your website uses a Content Security Policy (CSP), you’ll need to explicitly allow UXCam resources for the Web SDK to function properly. Without this, session recordings and script loading may be blocked. ➜ [Learn how to configure your CSP to safely enable UXCam in our Content Security Policy setup guide](configure-content-security-policy-csp#)
 
 ## Support
 
