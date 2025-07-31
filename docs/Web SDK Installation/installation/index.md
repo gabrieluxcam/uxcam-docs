@@ -28,8 +28,8 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 # Choose your Method of Integration
 
-| HTML Code snippet      | <a href="html-code-snippet#">Jump →</a>       |
-| :--------------------- | :--------------------------------------- |
+| HTML Code snippet      | <a href="html-code-snippet#">Jump →</a>    |
+| :--------------------- | :----------------------------------------- |
 | **Google Tag Manager** | <a href="google-tag-manager-1#">Jump →</a> |
 | **Shopify**            | <a href="shopify-1#">Jump →</a>            |
 | **Wordpress**          | <a href="wordpress-1#">Jump →</a>          |
@@ -40,7 +40,7 @@ After the initial integration, UXCam automatically collects a variety of user in
 
 * **User Events**\
   We automatically capture key interaction events such as taps, clicks, scrolls, and page navigations.
-  ➜ [Learn how to add custom event tagging](../setup-configuration/logging-custom-events#)
+  ➜ [Learn how to add custom event tagging](logging-custom-events#)
 * **Page Visits**\
   All page views are captured automatically.
   ➜ [Use code-less page definition to organise your pages without touching code](../setup-configuration/define-pages-properties#)
