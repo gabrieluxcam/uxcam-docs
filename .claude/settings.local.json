@@ -4,7 +4,8 @@
       "mcp__sequential-thinking__sequentialthinking",
       "Bash(find:*)",
       "Bash(mkdir:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "WebFetch(domain:docs.readme.com)"
     ],
     "deny": []
   }

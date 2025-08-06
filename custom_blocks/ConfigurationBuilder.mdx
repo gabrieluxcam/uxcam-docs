@@ -1,0 +1,303 @@
+---
+name: ConfigurationBuilder
+---
+import React, { useState, useCallback, useMemo } from 'react';
+
+export const ConfigurationBuilder = ({ platforms = ['android', 'ios', 'react-native', 'flutter', 'web'] }) => {
+  const [selectedPlatform, setSelectedPlatform] = useState(platforms[0] || 'android');
+  const [config, setConfig] = useState({
+    apiKey: '',
+    enableCrashHandling: true,
+    enableAutomaticScreenNameTagging: true,
+    enableImprovedScreenCapture: false,
+    enableNetworkLogging: true,
+    enableAdvancedGestureRecognition: true,
+    userAppKey: ''
+  });
+  const [copied, setCopied] = useState(false);
+
+  const platformConfigs = {
+    android: {
+      imports: ['import com.uxcam.UXCam;', 'import com.uxcam.datamodel.UXConfig;'],
+      configMethod: 'UXConfig.Builder',
+      startMethod: 'UXCam.startWithConfiguration',
+      language: 'java'
+    },
+    ios: {
+      imports: ['import UXCam'],
+      configMethod: 'UXCamConfiguration',
+      startMethod: 'UXCam.start',
+      language: 'swift'
+    },
+    'react-native': {
+      imports: ['import RNUxcam from \'react-native-uxcam\';'],
+      configMethod: 'RNUxcam.optIntoSchematicRecordings',
+      startMethod: 'RNUxcam.startWithConfiguration',
+      language: 'javascript'
+    },
+    flutter: {
+      imports: ['import \'package:flutter_uxcam/flutter_uxcam.dart\';'],
+      configMethod: 'FlutterUxcam.optIntoSchematicRecordings',
+      startMethod: 'FlutterUxcam.startWithConfiguration',
+      language: 'dart'
+    },
+    web: {
+      imports: ['import UXCam from \'@uxcam/web-sdk\';'],
+      configMethod: 'UXCam.configuration',
+      startMethod: 'UXCam.startWithConfiguration',
+      language: 'javascript'
+    }
+  };
+
+  const generateCode = useCallback(() => {
+    const platformConfig = platformConfigs[selectedPlatform];
+    const { imports, configMethod, startMethod, language } = platformConfig;
+
+    if (language === 'java') {
+      return `${imports.join('\n')}
+
+${configMethod} config = new ${configMethod}("${config.apiKey}")
+    .enableCrashHandling(${config.enableCrashHandling})
+    .enableAutomaticScreenNameTagging(${config.enableAutomaticScreenNameTagging})
+    .enableImprovedScreenCapture(${config.enableImprovedScreenCapture})
+    .enableNetworkLogging(${config.enableNetworkLogging})
+    .enableAdvancedGestureRecognition(${config.enableAdvancedGestureRecognition});
+
+${startMethod}(config);`;
+    } else if (language === 'swift') {
+      return `${imports.join('\n')}
+
+let config = ${configMethod}(appKey: "${config.apiKey}")
+config.enableCrashHandling = ${config.enableCrashHandling}
+config.enableAutomaticScreenNameTagging = ${config.enableAutomaticScreenNameTagging}
+config.enableImprovedScreenCapture = ${config.enableImprovedScreenCapture}
+config.enableNetworkLogging = ${config.enableNetworkLogging}
+config.enableAdvancedGestureRecognition = ${config.enableAdvancedGestureRecognition}
+
+${startMethod}(configuration: config)`;
+    } else if (language === 'dart') {
+      return `${imports.join('\n')}
+
+await ${startMethod}("${config.apiKey}");
+${config.enableCrashHandling ? `await ${configMethod}(true);` : ''}
+${config.enableAutomaticScreenNameTagging ? 'await FlutterUxcam.setAutomaticScreenNameTagging(true);' : ''}
+${config.enableImprovedScreenCapture ? 'await FlutterUxcam.enableImprovedScreenCapture(true);' : ''}
+${config.enableNetworkLogging ? 'await FlutterUxcam.setNetworkURLFilter([]);' : ''}`;
+    } else {
+      return `${imports.join('\n')}
+
+const configuration = {
+  appKey: "${config.apiKey}",
+  enableCrashHandling: ${config.enableCrashHandling},
+  enableAutomaticScreenNameTagging: ${config.enableAutomaticScreenNameTagging},
+  enableImprovedScreenCapture: ${config.enableImprovedScreenCapture},
+  enableNetworkLogging: ${config.enableNetworkLogging},
+  enableAdvancedGestureRecognition: ${config.enableAdvancedGestureRecognition}
+};
+
+${startMethod}(configuration);`;
+    }
+  }, [selectedPlatform, config]);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(generateCode()).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const containerStyle = {
+    maxWidth: '800px',
+    margin: '20px auto',
+    padding: '24px',
+    border: '1px solid #e1e5e9',
+    borderRadius: '12px',
+    backgroundColor: '#ffffff',
+    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+    fontFamily: 'system-ui, -apple-system, sans-serif'
+  };
+
+  const sectionStyle = {
+    marginBottom: '24px'
+  };
+
+  const labelStyle = {
+    display: 'block',
+    marginBottom: '8px',
+    fontWeight: '600',
+    color: '#374151'
+  };
+
+  const selectStyle = {
+    width: '100%',
+    padding: '10px 12px',
+    border: '1px solid #d1d5db',
+    borderRadius: '6px',
+    fontSize: '14px',
+    backgroundColor: '#ffffff'
+  };
+
+  const inputStyle = {
+    width: '100%',
+    padding: '10px 12px',
+    border: '1px solid #d1d5db',
+    borderRadius: '6px',
+    fontSize: '14px'
+  };
+
+  const checkboxStyle = {
+    marginRight: '8px'
+  };
+
+  const codeBlockStyle = {
+    backgroundColor: '#f8fafc',
+    border: '1px solid #e2e8f0',
+    borderRadius: '8px',
+    padding: '16px',
+    fontFamily: 'Monaco, Consolas, monospace',
+    fontSize: '13px',
+    lineHeight: '1.5',
+    whiteSpace: 'pre-wrap',
+    overflow: 'auto',
+    position: 'relative'
+  };
+
+  const copyButtonStyle = {
+    position: 'absolute',
+    top: '12px',
+    right: '12px',
+    padding: '6px 12px',
+    backgroundColor: copied ? '#10b981' : '#6366f1',
+    color: 'white',
+    border: 'none',
+    borderRadius: '4px',
+    fontSize: '12px',
+    cursor: 'pointer',
+    fontWeight: '500'
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h3 style={{ margin: '0 0 24px 0', color: '#1f2937', fontSize: '24px', fontWeight: '700' }}>
+        UXCam Configuration Builder
+      </h3>
+      
+      <div style={sectionStyle}>
+        <label style={labelStyle}>Platform</label>
+        <select 
+          style={selectStyle}
+          value={selectedPlatform}
+          onChange={(e) => setSelectedPlatform(e.target.value)}
+        >
+          {platforms.map(platform => (
+            <option key={platform} value={platform}>
+              {platform.charAt(0).toUpperCase() + platform.slice(1)}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div style={sectionStyle}>
+        <label style={labelStyle}>API Key</label>
+        <input
+          type="text"
+          style={inputStyle}
+          placeholder="Enter your UXCam API key"
+          value={config.apiKey}
+          onChange={(e) => setConfig({...config, apiKey: e.target.value})}
+        />
+      </div>
+
+      <div style={sectionStyle}>
+        <h4 style={{ margin: '0 0 16px 0', color: '#374151', fontSize: '16px', fontWeight: '600' }}>
+          Configuration Options
+        </h4>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '12px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', fontSize: '14px', color: '#4b5563' }}>
+            <input
+              type="checkbox"
+              style={checkboxStyle}
+              checked={config.enableCrashHandling}
+              onChange={(e) => setConfig({...config, enableCrashHandling: e.target.checked})}
+            />
+            Enable Crash Handling
+          </label>
+          
+          <label style={{ display: 'flex', alignItems: 'center', fontSize: '14px', color: '#4b5563' }}>
+            <input
+              type="checkbox"
+              style={checkboxStyle}
+              checked={config.enableAutomaticScreenNameTagging}
+              onChange={(e) => setConfig({...config, enableAutomaticScreenNameTagging: e.target.checked})}
+            />
+            Automatic Screen Name Tagging
+          </label>
+          
+          <label style={{ display: 'flex', alignItems: 'center', fontSize: '14px', color: '#4b5563' }}>
+            <input
+              type="checkbox"
+              style={checkboxStyle}
+              checked={config.enableImprovedScreenCapture}
+              onChange={(e) => setConfig({...config, enableImprovedScreenCapture: e.target.checked})}
+            />
+            Improved Screen Capture
+          </label>
+          
+          <label style={{ display: 'flex', alignItems: 'center', fontSize: '14px', color: '#4b5563' }}>
+            <input
+              type="checkbox"
+              style={checkboxStyle}
+              checked={config.enableNetworkLogging}
+              onChange={(e) => setConfig({...config, enableNetworkLogging: e.target.checked})}
+            />
+            Network Logging
+          </label>
+          
+          <label style={{ display: 'flex', alignItems: 'center', fontSize: '14px', color: '#4b5563' }}>
+            <input
+              type="checkbox"
+              style={checkboxStyle}
+              checked={config.enableAdvancedGestureRecognition}
+              onChange={(e) => setConfig({...config, enableAdvancedGestureRecognition: e.target.checked})}
+            />
+            Advanced Gesture Recognition
+          </label>
+        </div>
+      </div>
+
+      <div style={sectionStyle}>
+        <h4 style={{ margin: '0 0 16px 0', color: '#374151', fontSize: '16px', fontWeight: '600' }}>
+          Generated Code
+        </h4>
+        <div style={{ position: 'relative' }}>
+          <pre style={codeBlockStyle}>
+            <code>{generateCode()}</code>
+          </pre>
+          <button
+            style={copyButtonStyle}
+            onClick={copyToClipboard}
+            title="Copy to clipboard"
+          >
+            {copied ? '✓ Copied!' : 'Copy'}
+          </button>
+        </div>
+      </div>
+      
+      <div style={{ 
+        marginTop: '20px', 
+        padding: '12px 16px', 
+        backgroundColor: '#f0f9ff', 
+        border: '1px solid #bae6fd',
+        borderRadius: '8px',
+        fontSize: '14px',
+        color: '#0369a1'
+      }}>
+        <strong>💡 Tip:</strong> Copy the generated code and paste it into your app's initialization section. 
+        Make sure to replace the API key with your actual UXCam API key from your dashboard.
+      </div>
+    </div>
+  );
+};
+
+<ConfigurationBuilder />
