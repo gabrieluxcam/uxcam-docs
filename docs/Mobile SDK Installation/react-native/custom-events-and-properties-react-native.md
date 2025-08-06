@@ -26,8 +26,8 @@ Events are powerful tools for tracking user interactions within your application
 
 To send an event, use the following method in your code:
 
-```coffeescript React Native
-RNUxcam.logEvent: (eventName: string, properties?: any) => void
+```javascript React Native
+RNUxcam.logEvent(eventName, properties)
 ```
 
 Replace `"EventName"` with a meaningful name that describes the action being tracked, such as `"ButtonClicked" `or` "UserLoggedIn"`. Naming your events consistently will make your analytics easier to understand.
@@ -38,7 +38,9 @@ Events can also have properties associated with them to provide additional conte
 
 To send an event with properties, use the following method:
 
-```coffeescript React Native
+```javascript React Native
+import RNUxcam from 'react-native-ux-cam';
+
 RNUxcam.logEvent("purchased"); // Event without properties
 RNUxcam.logEvent("purchased", {
   "size": 7,

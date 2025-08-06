@@ -848,7 +848,7 @@ Before proceeding to Phase 3, verify:
 
 🎯 **Screen Analytics Complete!** Your React Native app now provides meaningful screen-level insights.
 
-**Continue to Phase 3**: [Privacy Protection](privacy-protection-react-native) to implement GDPR/CCPA compliant data collection using the screen names you've established.
+**Continue to Phase 3**: [Privacy Protection](sensitive-data-occlusion-react-native/) to implement GDPR/CCPA compliant data collection using the screen names you've established.
 
 ### What You'll Build Next:
 

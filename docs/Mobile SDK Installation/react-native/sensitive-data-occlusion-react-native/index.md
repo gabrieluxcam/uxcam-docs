@@ -1144,7 +1144,7 @@ Before proceeding to Phase 4, verify:
 
 🛡️ **Privacy Protection Complete!** Your React Native app now complies with GDPR/CCPA requirements and protects sensitive user data.
 
-**Continue to Phase 4**: [Event Tracking](event-tracking-react-native) to capture business-critical user actions while maintaining privacy compliance.
+**Continue to Phase 4**: [Event Tracking](../custom-events-and-properties-react-native) to capture business-critical user actions while maintaining privacy compliance.
 
 ### What You'll Build Next:
 

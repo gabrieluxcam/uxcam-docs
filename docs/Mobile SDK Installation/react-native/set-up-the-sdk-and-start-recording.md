@@ -126,13 +126,13 @@ const App = () => {
     initializeUXCam();
   }, []);
 
-  const initializeUXCam = async () => {
+  const initializeUXCam = () => {
     try {
       // Always enable schematic recordings for screen capture
       RNUxcam.optIntoSchematicRecordings();
       
       const config = getUXCamConfig();
-      await RNUxcam.startWithConfiguration(config);
+      RNUxcam.startWithConfiguration(config);
       
       console.log('UXCam initialized successfully');
       
@@ -161,18 +161,18 @@ import { Platform } from 'react-native';
 import getUXCamConfig from '../config/uxcam';
 
 class UXCamManager {
-  private static instance: UXCamManager;
-  private isInitialized = false;
-  private initializationPromise: Promise<boolean> | null = null;
+  static instance = null;
+  isInitialized = false;
+  initializationPromise = null;
 
-  static getInstance(): UXCamManager {
+  static getInstance() {
     if (!UXCamManager.instance) {
       UXCamManager.instance = new UXCamManager();
     }
     return UXCamManager.instance;
   }
 
-  async initialize(): Promise<boolean> {
+  async initialize() {
     if (this.isInitialized) {
       return true;
     }
@@ -185,7 +185,7 @@ class UXCamManager {
     return this.initializationPromise;
   }
 
-  private async performInitialization(): Promise<boolean> {
+  async performInitialization() {
     try {
       // Enable screen recordings (required for both platforms)
       RNUxcam.optIntoSchematicRecordings();
@@ -199,7 +199,7 @@ class UXCamManager {
         // Android-specific configuration
       }
 
-      await RNUxcam.startWithConfiguration(config);
+      RNUxcam.startWithConfiguration(config);
       
       this.isInitialized = true;
       
@@ -297,7 +297,7 @@ export const verifyUXCamIntegration = async () => {
 
     // Verify session URL is available (indicates successful initialization)
     try {
-      const sessionUrl = await RNUxcam.urlForCurrentSession();
+      const sessionUrl = RNUxcam.urlForCurrentSession();
       checks.sessionStarted = sessionUrl && sessionUrl.length > 0;
       checks.apiKeyValid = !sessionUrl.includes('invalid');
     } catch (error) {
@@ -458,7 +458,7 @@ rm -rf node_modules && npm install
 import RNUxcam from 'react-native-ux-cam';
 
 describe('UXCam Integration', () => {
-  test('SDK initializes without errors', async () => {
+  test('SDK initializes without errors', () => {
     const mockConfig = {
       userAppKey: 'test-key-12345',
       enableAutomaticScreenNameTagging: false,

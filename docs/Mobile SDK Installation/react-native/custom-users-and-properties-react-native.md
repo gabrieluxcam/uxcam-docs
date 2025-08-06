@@ -32,8 +32,10 @@ We recommend avoiding the use of Personally Identifiable Information (PII), such
 
 You can replace the default alias with your own user ID using this method:
 
-```coffeescript React Native
-RNUxcam.setUserIdentity: (userIdentity: string) => void
+```javascript React Native
+import RNUxcam from 'react-native-ux-cam';
+
+RNUxcam.setUserIdentity(userIdentity);
 ```
 
 **API Parameter:**
@@ -55,13 +57,16 @@ Additional custom user properties help you group sessions, users, or events base
 * Loyalty Membership
 * NPS Score or Rating
 
-```Text React Native
-RNUxcam.setUserProperty: (propertyName: string, value: string | number) => void
+```javascript React Native
+import RNUxcam from 'react-native-ux-cam';
+
+// Set user property
+RNUxcam.setUserProperty(propertyName, value);
     
 //Example
-RNUxcam.setUserProperty("role","your-role")
-RNUxcam.setUserProperty("subscription_type","premium")
-RNUxcam.setUserProperty("company_name","your-company")
+RNUxcam.setUserProperty("role", "your-role");
+RNUxcam.setUserProperty("subscription_type", "premium");
+RNUxcam.setUserProperty("company_name", "your-company");
 
 ```
 

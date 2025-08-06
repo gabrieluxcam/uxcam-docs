@@ -189,7 +189,6 @@ const configuration = {
   userAppKey: 'YOUR_API_KEY',
   enableAutomaticScreenNameTagging: false, // Manual tagging recommended
   enableImprovedScreenCapture: true,
-  // enableCrashHandling: true by default - no need to specify
 };
 
 RNUxcam.startWithConfiguration(configuration);
@@ -207,12 +206,16 @@ Your first session will appear in the UXCam dashboard within 30 seconds after th
 ### React Navigation v6 (Recommended)
 
 ```javascript
+import React from 'react';
 import { useFocusEffect } from '@react-navigation/native';
+import RNUxcam from 'react-native-ux-cam';
 
 function HomeScreen() {
-  useFocusEffect(() => {
-    RNUxcam.tagScreenName('Home Screen');
-  });
+  useFocusEffect(
+    React.useCallback(() => {
+      RNUxcam.tagScreenName('Home Screen');
+    }, [])
+  );
 
   return <YourScreenContent />;
 }
@@ -221,7 +224,9 @@ function HomeScreen() {
 ### Expo Router
 
 ```javascript
+import React, { useEffect } from 'react';
 import { useSegments } from 'expo-router';
+import RNUxcam from 'react-native-ux-cam';
 
 export default function Layout() {
   const segments = useSegments();
@@ -229,6 +234,8 @@ export default function Layout() {
   useEffect(() => {
     RNUxcam.tagScreenName(segments.join('/') || 'Home');
   }, [segments]);
+
+  return <YourLayoutContent />;
 }
 ```
 
@@ -241,8 +248,6 @@ interface UXCamConfiguration {
   userAppKey: string;
   enableAutomaticScreenNameTagging?: boolean;
   enableImprovedScreenCapture?: boolean;
-  enableMultiSessionRecord?: boolean;
-  enableIntegrationLogging?: boolean;
 }
 
 const configuration: UXCamConfiguration = {
@@ -268,7 +273,6 @@ const getUXCamConfig = () => {
   };
 
   if (__DEV__) {
-    config.enableMultiSessionRecord = true;
     config.enableIntegrationLogging = true; // Debug logs visible in Xcode/Android Studio only
   }
 
@@ -285,7 +289,7 @@ const initializeUXCam = async () => {
   try {
     RNUxcam.optIntoSchematicRecordings();
     const config = getUXCamConfig();
-    await RNUxcam.startWithConfiguration(config);
+    RNUxcam.startWithConfiguration(config);
     console.log('UXCam initialized successfully');
   } catch (error) {
     console.error('UXCam initialization failed:', error);
@@ -298,6 +302,7 @@ const initializeUXCam = async () => {
 
 ```javascript
 import { Platform } from 'react-native';
+import RNUxcam from 'react-native-ux-cam';
 
 // Required for both iOS and Android - enables screen recordings
 RNUxcam.optIntoSchematicRecordings();

@@ -124,13 +124,13 @@ class _MainScreenState extends State<MainScreen> {
           // Manual tagging for tab changes
           switch (index) {
             case 0:
-              UXCam.tagScreenName("Home Tab");
+              FlutterUxcam.tagScreenName("Home Tab");
               break;
             case 1:
-              UXCam.tagScreenName("Profile Tab");
+              FlutterUxcam.tagScreenName("Profile Tab");
               break;
             case 2:
-              UXCam.tagScreenName("Settings Tab");
+              FlutterUxcam.tagScreenName("Settings Tab");
               break;
           }
         },
@@ -178,13 +178,13 @@ class _TabScreenState extends State<TabScreen> with SingleTickerProviderStateMix
   void _tagCurrentTab() {
     switch (_tabController.index) {
       case 0:
-        UXCam.tagScreenName("Products Tab");
+        FlutterUxcam.tagScreenName("Products Tab");
         break;
       case 1:
-        UXCam.tagScreenName("Orders Tab");
+        FlutterUxcam.tagScreenName("Orders Tab");
         break;
       case 2:
-        UXCam.tagScreenName("Analytics Tab");
+        FlutterUxcam.tagScreenName("Analytics Tab");
         break;
     }
   }
@@ -275,7 +275,7 @@ class _AppWithBottomNavState extends State<AppWithBottomNav> {
       _ => "Unknown Screen"
     };
 
-    UXCam.tagScreenName(screenName);
+    FlutterUxcam.tagScreenName(screenName);
   }
 }
 ```
@@ -313,7 +313,7 @@ In Flutter, tagging a screen manually is straightforward. You can use the follow
 ```coffeescript Flutter
 import 'package:flutter_uxcam/flutter_uxcam.dart';
 
-UXCam.tagScreenName("Home Screen");
+FlutterUxcam.tagScreenName("Home Screen");
 ```
 
 **Example**: **The Recommended Place to Tag**
@@ -333,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    UXCam.tagScreenName("Home Screen");
+    FlutterUxcam.tagScreenName("Home Screen");
   }
 
   @override
@@ -385,7 +385,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 | **0 s screens**               | Duplicate tag same frame (auto + manual) | Disable auto tagging or remove extra tag |
 | **Screen missing**            | NavController route not handled          | Add case in `when(route)`                |
 | **Random class names**        | Forgot to rename in Dashboard            | Edit in **Screens** tab                  |
-| **Stale name after refactor** | Hard‑coded tag string                    | Update `UXCam.tagScreenName()` constant  |
+| **Stale name after refactor** | Hard‑coded tag string                    | Update `FlutterUxcam.tagScreenName()` constant  |
 
 ---
 
@@ -402,17 +402,17 @@ For more information, click the button below:
 You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={3}>
-    <Card title="Mask PII Data" href="/docs/sensitive-data-occlusion-flutter" icon="fa-credit-card">
+    <Card title="Mask PII Data" href="../sensitive-data-occlusion-flutter/" icon="fa-credit-card">
     Protect Your Users' Privacy and PII Data
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="/docs/users-and-properties-flutter" icon="fa-user">
+  <Card title="Assign User IDs" href="../users-and-properties-flutter" icon="fa-user">
     Get The Full Picture with User Analytics
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="/docs/sending-events-flutter" icon="fa-question">
+  <Card title="Send Events" href="../sending-events-flutter" icon="fa-question">
     Deeper Insights of Your Users' interactions
     > Send Events and Add Properties
   </Card>

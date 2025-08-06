@@ -32,8 +32,10 @@ We recommend avoiding the use of Personally Identifiable Information (PII), such
 
 You can replace the default alias with your own user ID using this method:
 
-```coffeescript Flutter
-void setUserIdentity(String userIdentity)
+```dart Flutter
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+
+FlutterUxcam.setUserIdentity(userIdentity);
 ```
 
 **API Parameter:**
@@ -55,13 +57,16 @@ Additional custom user properties help you group sessions, users, or events base
 * Loyalty Membership
 * NPS Score or Rating
 
-```coffeescript Flutter
-void setUserProperty(String key, String value)
+```dart Flutter
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+
+// Set user property
+FlutterUxcam.setUserProperty(key, value);
     
 //Example
-FlutterUxcam.setUserProperty("role","your-role")
-FlutterUxcam.setUserProperty("subscription_type","premium")
-FlutterUxcam.setUserProperty("company_name","your-company")
+FlutterUxcam.setUserProperty("role", "your-role");
+FlutterUxcam.setUserProperty("subscription_type", "premium");
+FlutterUxcam.setUserProperty("company_name", "your-company");
 ```
 
 **API Parameters:**
