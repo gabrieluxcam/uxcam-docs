@@ -81,3 +81,5 @@ Once configured, you can test your MCP server connection:
    * "Create a \[integration type] using UXCam Documentation"
 
 The AI should now have access to your UXCam Documentation account data and documentation through the MCP server.
+
+<ConfigurationBuilder />
