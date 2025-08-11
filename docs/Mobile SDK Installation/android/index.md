@@ -14,7 +14,7 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)      \*\* – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
+<GitHubCallout type="note">Need an account? \*\*<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup">Start free</Anchor>       \*\* – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
