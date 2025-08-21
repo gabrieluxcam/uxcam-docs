@@ -7,6 +7,14 @@ metadata:
 ---
 # UXCam Android Changelog
 
+<br />
+
+### V. 3.7.2 - Aug 21, 2025
+
+* Fix: Red screen appearing when pause/resuming recording and when short breaks are created
+* Fix: Occlusion skipping on WebView
+* Improve: Shipping AI Text Occlusion as a new optional module
+
 ### V. 3.7.1 - Jul 29, 2025
 
 * Added: Screen Action / Smart Events support for Jetpack Compose
