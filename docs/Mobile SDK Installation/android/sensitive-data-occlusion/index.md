@@ -75,7 +75,15 @@ excludeMentionedScreens(boolean)      // treat list as allow-list (false) or den
 
 <br />
 
-### Apply AI Text Occlusion to all screens  *(SDK v3.7.0+)*
+### Apply AI Text Occlusion to all screens  (SDK v3.7.2+)
+
+In order to use the AI Text Occlusion module, you need to add the dependency to your build.gradle:
+
+```java
+implementation "com.uxcam:uxcam-ai-text-occlusion:1.0.0"
+```
+
+Then afterwards you can use the new AI module:
 
 ```java
 // In Application.onCreate()
@@ -89,9 +97,11 @@ UXConfig cfg = new UXConfig.Builder(BuildConfig.UXCAM_KEY)
 UXCam.startWithConfiguration(cfg);
 ```
 
-> 🔍 **How it works**
->
-> Detection happens **on-device** only; raw text never leaves the phone.
+<Callout icon="🔍" theme="default">
+  ### **How it works**
+
+  Detection happens **on-device** only; raw text never leaves the phone.
+</Callout>
 
 ![](https://files.readme.io/ba6679bb52f557f5cbb443bca898e3c8074996811fc53b9d9edd79cde2fd9ca5-image.png)
 
