@@ -26,7 +26,7 @@ Events are powerful tools for tracking user interactions within your application
 
 ## Smart Event for Flutter SDK:
 
-In order to enable Smart Events in your UXCam Dashboard, it's required to add the following to your code: 
+In order to enable Smart Events in your UXCam Dashboard, it's required to add the following to your code:
 
 Wrap the root widget of your app with **UxCamGestureHandler**. Preferably, inside runApp()
 
@@ -61,7 +61,7 @@ The SDK calculates interactivity based on widget bounds, making it heavily depen
 
 As a result, the SDK cannot detect Sliver widgets.
 
-## How to Send Events
+# How to Send Events
 
 To send an event, use the following method in your code:
 
