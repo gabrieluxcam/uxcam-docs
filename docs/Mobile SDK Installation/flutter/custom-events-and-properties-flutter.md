@@ -14,13 +14,52 @@ metadata:
 next:
   description: ''
 ---
+> 📘 Note:
+>
+> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
+
 Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 
 <GitHubCallout type="important">Smart Events for Flutter SDK require an additional configuration from your code, see below for details.</GitHubCallout>
 
-> 📘 Note:
->
-> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
+<JumpCallout to="#next">Jump to Regular Coded Events</JumpCallout>
+
+## Smart Event for Flutter SDK:
+
+In order to enable Smart Events in your UXCam Dashboard, it's required to add the following to your code: 
+
+Wrap the root widget of your app with **UxCamGestureHandler**. Preferably, inside runApp()
+
+```go Flutter
+  runApp(
+    UXCamGestureHandler(
+      child: const YourApp(),
+    ),
+  );
+```
+
+Now every gesture should be tracked in the app in order to utilize smart events in the UXCam Dashboard.
+
+### Working Principle
+
+The SDK tracks widgets that users interact with and captures their class, type, ID, and value (when applicable).
+
+The Element ID is generated from the widget’s class hierarchy within the widget tree.
+
+### Developer Note
+
+Because Flutter is highly flexible, there are scenarios where the SDK’s detection may not perfectly align with what you see in a session replay.
+
+For example, if a developer wraps an entire Scaffold widget inside an InkWell, the SDK may classify the interaction as tapping an InkWell (or another button-like widget), even though the replay visually shows a Text or Image being clicked.
+
+Since IDs, classes, and types are determined by the widget’s class hierarchy, this can occasionally lead to mismatches.
+👉 As a best practice, double-check that any widget receiving gestures does not contain a button-like widget in its hierarchy unless that’s intended.
+
+### Limitations
+
+The SDK calculates interactivity based on widget bounds, making it heavily dependent on Box widgets.
+
+As a result, the SDK cannot detect Sliver widgets.
 
 ## How to Send Events
 
