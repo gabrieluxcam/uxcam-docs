@@ -16,7 +16,7 @@ next:
 ---
 Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 
-<br />
+<GitHubCallout type="important">Smart Events for Flutter SDK require an additional configuration from your code, see below for details.</GitHubCallout>
 
 > 📘 Note:
 >
