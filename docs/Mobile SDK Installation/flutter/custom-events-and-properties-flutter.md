@@ -22,7 +22,7 @@ Events are powerful tools for tracking user interactions within your application
 
 <GitHubCallout type="important">Smart Events for Flutter SDK require an additional configuration from your code, see below for details.</GitHubCallout>
 
-<JumpCallout to="#next">Jump to Regular Coded Events</JumpCallout>
+<JumpCallout to="#how-to-send-events">Jump to Regular Coded Events</JumpCallout>
 
 ## Smart Event for Flutter SDK:
 
@@ -46,14 +46,12 @@ The SDK tracks widgets that users interact with and captures their class, type, 
 
 The Element ID is generated from the widget’s class hierarchy within the widget tree.
 
-
 \<GitHubCallout type="caution">Because Flutter is highly flexible, there are scenarios where the SDK’s detection may not perfectly align with what you see in a session replay.
 
 For example, if a developer wraps an entire Scaffold widget inside an InkWell, the SDK may classify the interaction as tapping an InkWell (or another button-like widget), even though the replay visually shows a Text or Image being clicked.
 
 Since IDs, classes, and types are determined by the widget’s class hierarchy, this can occasionally lead to mismatches.
 👉 As a best practice, double-check that any widget receiving gestures does not contain a button-like widget in its hierarchy unless that’s intended.\</GitHubCallout>
-
 
 <br />
 
