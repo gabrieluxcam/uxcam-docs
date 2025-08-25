@@ -46,14 +46,16 @@ The SDK tracks widgets that users interact with and captures their class, type, 
 
 The Element ID is generated from the widget’s class hierarchy within the widget tree.
 
-### Developer Note
 
-Because Flutter is highly flexible, there are scenarios where the SDK’s detection may not perfectly align with what you see in a session replay.
+\<GitHubCallout type="caution">Because Flutter is highly flexible, there are scenarios where the SDK’s detection may not perfectly align with what you see in a session replay.
 
 For example, if a developer wraps an entire Scaffold widget inside an InkWell, the SDK may classify the interaction as tapping an InkWell (or another button-like widget), even though the replay visually shows a Text or Image being clicked.
 
 Since IDs, classes, and types are determined by the widget’s class hierarchy, this can occasionally lead to mismatches.
-👉 As a best practice, double-check that any widget receiving gestures does not contain a button-like widget in its hierarchy unless that’s intended.
+👉 As a best practice, double-check that any widget receiving gestures does not contain a button-like widget in its hierarchy unless that’s intended.\</GitHubCallout>
+
+
+<br />
 
 ### Limitations
 
