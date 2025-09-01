@@ -16,6 +16,37 @@ export const ConfigurationBuilder = ({ platforms = ['android', 'ios', 'react-nat
   });
   const [copied, setCopied] = useState(false);
 
+  // Check for dark mode
+  const [isDark, setIsDark] = useState(false);
+  
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    
+    // Check initial theme
+    const checkDarkMode = () => {
+      const isDarkMode = document.documentElement.classList.contains('dark') || 
+                        document.body.classList.contains('dark') ||
+                        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      setIsDark(isDarkMode);
+    };
+    
+    checkDarkMode();
+    
+    // Listen for theme changes
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    mediaQuery.addListener(checkDarkMode);
+    
+    return () => {
+      observer.disconnect();
+      mediaQuery.removeListener(checkDarkMode);
+    };
+  }, []);
+
   const platformConfigs = {
     android: {
       imports: ['import com.uxcam.UXCam;', 'import com.uxcam.datamodel.UXConfig;'],
