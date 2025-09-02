@@ -185,7 +185,7 @@ Within 5 minutes of running your app:
 
 ### Quick Links
 
-📖 **[Changelog](flutter-sdk-changelog)** - Version history and breaking changes\
+📖 **[Changelog](flutter-sdk-changelog-flutter)** - Version history and breaking changes\
 🔧 **[Troubleshooting Guide](troubleshooting-flutter)** - Common issues and solutions
 ⚙️ **[Advanced APIs](advanced-configuration-and-apis/)** - Recording control, crash handling, and more
 

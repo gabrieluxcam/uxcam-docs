@@ -203,8 +203,8 @@ Explore the detailed guides for each advanced feature:
 1. **[Recording Control](control-recording-flutter.md)** - Master session lifecycle management
 2. **[Crash Handling](crashes-and-anrs-flutter.md)** - Implement comprehensive error tracking
 3. **[User Consent](opt-in-opt-out-flutter.md)** - Build privacy-compliant experiences
-4. **[Integration Logging](integration-logging-guide.md)** - Debug and validate your setup
-5. **[Troubleshooting](troubleshooting-faqs.md)** - Solve complex integration challenges
+4. **[Integration Logging](integration-logging-guide-flutter.md)** - Debug and validate your setup
+5. **[Troubleshooting](troubleshooting-faqs-flutter.md)** - Solve complex integration challenges
 
 ## Support Resources
 

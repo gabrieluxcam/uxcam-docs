@@ -599,8 +599,8 @@ class ErrorRateMonitor {
 ## Next Steps
 
 - **[User Consent](opt-in-opt-out-flutter.md)** - Implement privacy controls
-- **[Integration Logging](integration-logging-guide.md)** - Debug your setup
-- **[Troubleshooting](troubleshooting-faqs.md)** - Solve integration issues
+- **[Integration Logging](integration-logging-guide-flutter.md)** - Debug your setup
+- **[Troubleshooting](troubleshooting-faqs-flutter.md)** - Solve integration issues
 
 ---
 

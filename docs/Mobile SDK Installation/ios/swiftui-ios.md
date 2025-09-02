@@ -14,7 +14,7 @@ next:
 >
 > All UXCam properties and methods are also available in UXCamSwiftUI without additional import of UXCam and can be accessed using `UXCamCore`. For eg. UXCam.isRecording() can be accessed into UXCamSwiftUI as UXCamCoreSwiftUI.isRecording()
 
-[![pod version](https://img.shields.io/cocoapods/v/UXCamSwiftUI)](https://github.com/uxcam/ios-swiftui/tree/1.0.1)
+[![pod version](https://img.shields.io/cocoapods/v/UXCamSwiftUI)](https://github.com/uxcam/ios-swiftui-ios/tree/1.0.1)
 
 # SDK Integration
 
@@ -36,7 +36,7 @@ pod 'UXCamSwiftUI'
 
 <Image align="center" width="80%" src="https://files.readme.io/25df998-Screenshot_25_3_24__09_25.jpg" />
 
-[https://github.com/uxcam/uxcam-ios-swiftui](https://github.com/uxcam/uxcam-ios-swiftui)
+[https://github.com/uxcam/uxcam-ios-swiftui-ios](https://github.com/uxcam/uxcam-ios-swiftui-ios)
 
 ## Securely load your App Key
 

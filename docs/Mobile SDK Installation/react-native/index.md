@@ -321,7 +321,7 @@ if (Platform.OS === 'android') {
 
 🚀 **Ready to dive deeper?** Continue with our phase-by-phase integration:
 
-1. **[Bootstrap Setup](set-up-the-sdk-and-start-recording)** - Secure configuration and environment setup
+1. **[Bootstrap Setup](set-up-the-sdk-and-start-recording-react-native)** - Secure configuration and environment setup
 2. **[Screen Tagging](screen-tagging-react-native)** - Implement comprehensive screen analytics
 3. **[Privacy Protection](sensitive-data-occlusion-react-native/)** - Ensure GDPR/CCPA compliance
 4. **[Event Tracking](custom-events-and-properties-react-native)** - Capture business-critical user actions
@@ -330,8 +330,8 @@ if (Platform.OS === 'android') {
 
 ### Quick Links
 
-📖 **[Expo Integration Guide](expo-installation)** - Complete Expo-specific setup\
-🔧 **[Troubleshooting Guide](troubleshooting-react-native)** - Common issues and solutions
+📖 **[Expo Integration Guide](expo-installation-react-native)** - Complete Expo-specific setup\
+🔧 **[Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native)** - Common issues and solutions
 
 ***
 

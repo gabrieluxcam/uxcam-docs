@@ -866,4 +866,4 @@ Before proceeding to Phase 3, verify:
 
 ---
 
-**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).
+**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).

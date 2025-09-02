@@ -1,7 +1,7 @@
-- initialise-sdk-and-start-recording
+- initialise-sdk-and-start-recording-android
 - screen-tagging
 - sensitive-data-occlusion
-- users-and-properties
-- sending-events
+- users-and-properties-android
+- sending-events-android
 - advanced-configuration-and-apis
-- android-sdk-changelog
+- android-sdk-changelog-android

@@ -266,7 +266,7 @@ When dealing with sensitive data in WebViews, it's essential to ensure that any 
 
 For more information, click the button below:
 
-[Sensitive Data Occlusion in WebViews Documentation](/docs/sensitive-views-inside-webviews)
+[Sensitive Data Occlusion in WebViews Documentation](/docs/ALL UXCAM APIs/screen-blurring/sensitive-views-inside-webviews)
 
 # Summary:
 

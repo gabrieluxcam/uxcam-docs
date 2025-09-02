@@ -21,29 +21,54 @@ export const ConfigurationBuilder = ({ platforms = ['android', 'ios', 'react-nat
   
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    
+
     // Check initial theme
     const checkDarkMode = () => {
-      const isDarkMode = document.documentElement.classList.contains('dark') || 
-                        document.body.classList.contains('dark') ||
-                        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      setIsDark(isDarkMode);
+      const prefersDark = typeof window.matchMedia !== 'undefined' &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDarkMode = (typeof document !== 'undefined' && (document.documentElement.classList.contains('dark') || document.body.classList.contains('dark'))) || prefersDark;
+      setIsDark(!!isDarkMode);
     };
-    
+
     checkDarkMode();
-    
-    // Listen for theme changes
-    const observer = new MutationObserver(checkDarkMode);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addListener(checkDarkMode);
-    
+
+    // Listen for theme changes via DOM (if available)
+    let observer;
+    if (typeof MutationObserver !== 'undefined' && typeof document !== 'undefined') {
+      observer = new MutationObserver(checkDarkMode);
+      try {
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+      } catch (e) {
+        // ignore observer errors in restricted environments
+      }
+    }
+
+    // Listen for system theme changes (if supported)
+    let mediaQuery;
+    if (typeof window.matchMedia === 'function') {
+      try {
+        mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        if (mediaQuery.addEventListener) {
+          mediaQuery.addEventListener('change', checkDarkMode);
+        } else if (mediaQuery.addListener) {
+          mediaQuery.addListener(checkDarkMode);
+        }
+      } catch (e) {
+        // ignore
+      }
+    }
+
     return () => {
-      observer.disconnect();
-      mediaQuery.removeListener(checkDarkMode);
+      if (observer && observer.disconnect) observer.disconnect();
+      if (mediaQuery) {
+        try {
+          if (mediaQuery.removeEventListener) mediaQuery.removeEventListener('change', checkDarkMode);
+          else if (mediaQuery.removeListener) mediaQuery.removeListener(checkDarkMode);
+        } catch (e) {
+          // ignore
+        }
+      }
     };
   }, []);
 
@@ -81,7 +106,7 @@ export const ConfigurationBuilder = ({ platforms = ['android', 'ios', 'react-nat
   };
 
   const generateCode = useCallback(() => {
-    const platformConfig = platformConfigs[selectedPlatform];
+    const platformConfig = platformConfigs[selectedPlatform] || platformConfigs['android'];
     const { imports, configMethod, startMethod, language } = platformConfig;
 
     if (language === 'java') {
@@ -131,10 +156,40 @@ ${startMethod}(configuration);`;
   }, [selectedPlatform, config]);
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(generateCode()).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    const text = generateCode();
+    if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }).catch(() => {
+        // fallback to older method
+        try {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        } catch (e) {
+          // ignore failures
+        }
+      });
+    } else {
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } catch (e) {
+        // no-op
+      }
+    }
   };
 
   const containerStyle = {

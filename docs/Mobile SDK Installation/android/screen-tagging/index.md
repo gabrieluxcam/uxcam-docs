@@ -166,7 +166,7 @@ If something is off, look for duplicate tag calls or a missing route handler.
 You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={4}>
-  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/update/docs/jetpack-compose-screen-tagging-1#/" icon="fa-mobile">
+  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/update/docs/jetpack-compose-screen-tagging-1-android-android#/" icon="fa-mobile">
     If applicable, make sure screen tagging is properly done in your Compose App.
   </Card>
 
@@ -176,13 +176,13 @@ You've properly tagged screens and are ready to move on! Let's review some next 
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties#/" icon="fa-user">
+  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties-android-android#/" icon="fa-user">
     Get The Full Picture with User Analytics
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events#/" icon="fa-question">
+  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-android-android#/" icon="fa-question">
     Deeper Insights of Your Users' interactions
 
     > Send Events and Add Properties

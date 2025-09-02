@@ -189,4 +189,4 @@ class _WebViewScreenState extends State<WebViewScreen> {
 
 <br />
 
-This approach can be extended to other methods such as [sending events](https://developer.uxcam.com/docs/send-events) and occluding [sensitive views within the webview](https://developer.uxcam.com/docs/sensitive-views-inside-webviews).
+This approach can be extended to other methods such as [sending events](https://developer.uxcam.com/docs/send-events) and occluding [sensitive views within the webview](https://developer.uxcam.com/docs/ALL UXCAM APIs/screen-blurring/sensitive-views-inside-webviews).

@@ -433,7 +433,7 @@ flutter pub deps
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
 - **Documentation**: [Flutter Integration Guide](index.md)
-- **Changelog**: [Version History](flutter-sdk-changelog.md)
+- **Changelog**: [Version History](flutter-sdk-changelog-flutter.md)
 
 ### Community Resources
 
