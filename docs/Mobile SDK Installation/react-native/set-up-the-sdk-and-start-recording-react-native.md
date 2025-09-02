@@ -55,7 +55,7 @@ expo install react-native-ux-cam
 npx expo install --fix
 ```
 
-**Important for Expo**: UXCam requires native code, so you'll need EAS Build. See our [Expo Installation Guide](expo-installation) for complete setup.
+**Important for Expo**: UXCam requires native code, so you'll need EAS Build. See our [Expo Installation Guide](expo-installation-react-native) for complete setup.
 
 ## 2. Secure API Key Management
 
@@ -506,4 +506,4 @@ Before proceeding to Phase 2, verify:
 
 ---
 
-**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).
+**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).

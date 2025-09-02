@@ -1162,4 +1162,4 @@ Before proceeding to Phase 4, verify:
 
 ---
 
-**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com) for privacy compliance support.
+**Need Help?** Check our [Troubleshooting Guide](../troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com) for privacy compliance support.

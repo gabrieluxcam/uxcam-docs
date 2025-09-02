@@ -55,7 +55,7 @@ next:
 
 > 🚧 Note for SwiftUI developers:
 >
-> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui#/).
+> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios-ios#/).
 
 <br />
 
