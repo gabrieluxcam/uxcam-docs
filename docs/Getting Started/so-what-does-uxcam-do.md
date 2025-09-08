@@ -71,11 +71,3 @@ Explore our powerful analytics features and start uncovering how users experienc
 ## Next Steps ➡️
 
 Now that you’re all set up with your App Key, it’s time to integrate the UXCam SDK. Just identify your platform below (or in the side panel) and follow the step-by-step guides in the **SDKs section**.
-
-<br />
-
-Happy analyzing with UXCam! 🎉
-
-<HTMLBlock>{`
-
-`}</HTMLBlock>
