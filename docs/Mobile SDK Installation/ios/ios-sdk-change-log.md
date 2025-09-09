@@ -5,6 +5,12 @@ hidden: false
 metadata:
   robots: index
 ---
+### V. 3.7.0 - Sept 9, 2025
+
+* implementation of AI Occlusion
+* Expose APIs for Flutter support of smart events
+* General performance and stability improvements.
+
 ### V. 3.6.26 - June 17, 2025
 
 * Fixed crash due to unhandled exception while parsing ANR stacktrace
@@ -50,7 +56,7 @@ metadata:
 
 ### V. 3.6.20 - December 12, 2024
 
-* **New**: Add Integration log api\
+* **New**: Add Integration log api
   -configuration.enableIntegrationLogging=true (By default, it will be disabled)
 * **Fix**: crash on iOS due to failed video recording
 * **Improvement**: Show actual reason for technical error for failed video recording
