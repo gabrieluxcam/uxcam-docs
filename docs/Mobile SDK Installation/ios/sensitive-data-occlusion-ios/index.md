@@ -22,7 +22,7 @@ next:
 ---
 Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA and Apple’s App Store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 
-> 📘 **UIKit vs SwiftUI** The APIs below come in  *both*  flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
+> 📘 **UIKit vs SwiftUI** The APIs below come in  _both_  flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
 
 ***
 
@@ -40,14 +40,16 @@ No code required—these never reach UXCam servers.
 # Dashboard‑first rules (zero‑code)
 
 1. **Settings → Video Recording Privacy** in your UXCam dashboard.
-2. Choose **Record • Occlude • Blur** globally *or* per screen.
+2. Choose **Record • Occlude • Blur** globally _or_ per screen.
 3. (Optional) **Blur radius** selector and **Record gestures** toggle.
 4. Save → record a test session to verify.
 
 <Image align="center" border={false} caption="Selecting the Blur option will also enable you to select the blur radius once applied." src="https://files.readme.io/0ab7d3d80f51c44741d7eeaa809c94228d1783c5f4e58a79583c430466674cc7-screenDash.png" />
 
-> 🛠️ **Priority ladder**\
-> Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
+<Callout icon="🛠️" theme="default">
+  ### **Priority ladder**
+  Screen‑specific Dashboard rule → Global Dashboard rule → SDK overlay/blur → SDK text‑field occlusion.
+</Callout>
 
 <Image align="center" border={false} caption="You can add screen specific rules with different occlusion types" src="https://files.readme.io/18aa14ac96aa32728172235b5acb170702461517bbaca44a50e76eefc9075a6a-ruleDash.png" />
 
@@ -80,9 +82,25 @@ UXCam.applyOcclusion(blur)
 
 <Image align="center" border={false} caption="Blur radios strength examples" src="https://files.readme.io/7e030fe3e85402cffea6959bbfa70cf985b6cfd53ddb7ce61f0bd23cbef6d6bc-Blur_Results_Comparison_-_Sensitive_Data_Occlusion.png" />
 
-<br />
+### Apply AI Text Occlusion to all screens  (SDK v3.7.0+)
 
-### Hide *all* text inputs
+```swift
+//Swift
+        let occlusion = UXCamOcclusion()
+        let textOcclusionSetting = UXCamAITextOcclusionSetting()
+            occlusion.apply(textOcclusionSetting, screens: ["Screen1","Screen2"])
+        configuration.occlusion=occlusion
+```
+```objectivec
+//Objective C
+   UXCamOcclusion *occlusion = [[UXCamOcclusion alloc] init];
+    UXCamAITextOcclusionSetting *textOcclusionSetting = [[UXCamAITextOcclusionSetting alloc] init];
+    [occlusion applySetting:textOcclusionSetting screens:@[@"Screen1",@"Screen2"]];
+
+    configuration.occlusion = occlusion;
+```
+
+### Hide _all_ text inputs
 
 ```swift
 UXCam.applyOcclusion(UXCamOccludeAllTextFields())
@@ -141,8 +159,8 @@ var body: some View {
 # Verification checklist
 
 1. Record a debug session through sensitive flows.
-2. Play it back, passwords & cards must be *red‑boxed or blurred*.
-3. Use the “Record gestures” toggle if taps should *not* be shown.
+2. Play it back, passwords & cards must be _red‑boxed or blurred_.
+3. Use the “Record gestures” toggle if taps should _not_ be shown.
 
 ***
 
@@ -153,6 +171,6 @@ var body: some View {
 | Overlay shows but gestures still visible | `hideGestures` defaulted to `false` | Set `hideGestures = true`              |
 | Blur only on some devices                | `radius` too low on @3x screens     | Use ≥ 5 or switch to overlay           |
 | Text inputs still visible                | Custom `UITextField` subclass       | Call `uxcamOcclude()` manually         |
-| WebView leaks card numbers               | Bridge not injected                 | See *Sensitive Data in WebViews* guide |
+| WebView leaks card numbers               | Bridge not injected                 | See _Sensitive Data in WebViews_ guide |
 
 ***
