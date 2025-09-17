@@ -9,6 +9,10 @@ metadata:
 
 <br />
 
+### V. 3.7.3 - Sept 17, 2025
+
+* Fix: resolve session upload issue in release mode
+
 ### V. 3.7.2 - Aug 21, 2025
 
 * Fix: Red screen appearing when pause/resuming recording and when short breaks are created
