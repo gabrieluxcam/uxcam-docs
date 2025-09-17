@@ -28,11 +28,11 @@ Events are powerful tools for tracking user interactions within your application
 
 In order to enable Smart Events in your UXCam Dashboard, it's required to add the following to your code:
 
-Wrap the root widget of your app with **UxCamGestureHandler**. Preferably, inside runApp()
+Wrap the root widget of your app with **UXCamHandler**. Preferably, inside runApp()
 
 ```go Flutter
   runApp(
-    UXCamGestureHandler(
+    UXCamHandler(
       child: const YourApp(),
     ),
   );
@@ -46,9 +46,7 @@ The SDK tracks widgets that users interact with and captures their class, type, 
 
 The Element ID is generated from the widget’s class hierarchy within the widget tree.
 
-<Callout icon="🚧">
-
-
+<Callout icon="🚧" theme="warn">
   Because Flutter is highly flexible, there are scenarios where the SDK’s detection may not perfectly align with what you see in a session replay.
 
   For example, if a developer wraps an entire Scaffold widget inside an InkWell, the SDK may classify the interaction as tapping an InkWell (or another button-like widget), even though the replay visually shows a Text or Image being clicked.
