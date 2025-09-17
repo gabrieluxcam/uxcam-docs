@@ -5,11 +5,14 @@ hidden: false
 metadata:
   robots: index
 ---
-### V. 3.7.0 - Sept 9, 2025
+### V. 3.7.1 - Sept 12, 2025
 
 * implementation of AI Occlusion
 * Expose APIs for Flutter support of smart events
 * General performance and stability improvements.
+* Fixed views not occluding for brief period while transitioning
+* Fixed gesture incorrectly being captured on flutter
+* Fixed screens not occluding at the beginning for manually tagged screen
 
 ### V. 3.6.26 - June 17, 2025
 
