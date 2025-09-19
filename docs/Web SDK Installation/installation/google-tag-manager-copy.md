@@ -1,7 +1,7 @@
 ---
 title: Google Tag Manager (COPY)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
