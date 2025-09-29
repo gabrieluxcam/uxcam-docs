@@ -12,6 +12,11 @@ next:
 ---
 ### MAUI
 
+#### V. 1.1.0 (September 26, 2025)
+
+* Update Android dependencies to 3.7.4
+* Update iOS dependencies to 3.7.1
+
 #### V. 1.0.1 (May 14, 2025)
 
 * First stable version for MAUI users
@@ -33,7 +38,7 @@ next:
 #### V. 3.4.2 (September 12, 2022)
 
 * Android SDK updated to v 3.4.4
-* Fix: Null pointer issue on occlusion application 🪲 \[IMPORTANT]
+* Fix: Null pointer issue on occlusion application 🪲 [IMPORTANT]
 * New: Screen level control for OccludeAllTextFields
 
 #### V. 3.4.1 (August 11, 2022)
