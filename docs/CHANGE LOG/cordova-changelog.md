@@ -12,6 +12,11 @@ next:
 ---
 ### Cordova
 
+#### V. 3.7.0 (September 25, 2025)
+
+* Update Android and iOS dependencies to 3.7.4 and 3.7.1
+* AI Text Occlusion
+
 #### V. 3.6.5 (April 7, 2025)
 
 * Updated iOS dependency to 3.6.23
