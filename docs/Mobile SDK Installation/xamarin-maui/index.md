@@ -22,10 +22,10 @@ With a complete UXCam integration, you'll be able to track user journeys, analyz
 
 ## Quick Start Guide
 
-Please download the latest Xamarin UXCam component from here\
+Please download the latest Xamarin UXCam component from here
 For reference on including a component into your project visit here.
 
-<GitHubCallout type="important"> 📘 If you're implementing the SDK using .NET MAUI instead of regular Xamarin, you'll have to download the package from [this link](https://www.nuget.org/packages/UXCamDotNet/1.0.1)     instead, all other implementation steps are identical as seen below.</GitHubCallout>
+<GitHubCallout type="important"> 📘 If you're implementing the SDK using .NET MAUI instead of regular Xamarin, you'll have to download the package from [this link](https://www.nuget.org/packages/UXCamDotNet)      instead, all other implementation steps are identical as seen below.</GitHubCallout>
 
 1. Import the UXCam agent header at the top of your MauiProgram.cs
 
@@ -97,7 +97,7 @@ UXCam.Start(configuration);
 
 ## Next Steps ➞
 
-Now that you have UXCam integrated, your sessions will start appearing on the dashboard within a few seconds after the app goes into the background. We encourage you to explore customization options such as identifying users, tagging sessions, or hiding sensitive views.\
+Now that you have UXCam integrated, your sessions will start appearing on the dashboard within a few seconds after the app goes into the background. We encourage you to explore customization options such as identifying users, tagging sessions, or hiding sensitive views.
 Check out our additional documentation to learn how to further tailor UXCam to your needs!
 
 > 👍 **As Simple As That!**
