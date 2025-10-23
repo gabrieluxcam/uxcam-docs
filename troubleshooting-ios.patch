@@ -1,0 +1,22 @@
+diff --git a/docs/Mobile SDK Installation/ios/troubleshooting-ios.md b/docs/Mobile SDK Installation/ios/troubleshooting-ios.md
+--- a/docs/Mobile SDK Installation/ios/troubleshooting-ios.md
++++ b/docs/Mobile SDK Installation/ios/troubleshooting-ios.md
+@@ -519,17 +519,17 @@
+ UXCam.start(withKey: "YOUR_APP_KEY")  // First
+ FirebaseCrashlytics.crashlytics()  // After
+ ```
+ 
+ 3. **Ensure crash symbolication is set up**:
+    - Upload dSYM files to UXCam
+    - Check Build Settings → Debug Information Format → DWARF with dSYM File
+ 
+-For more details, see: [Crash Symbolication Guide](advanced-configuration-and-apis-1/crash-symbolication-copy-ios.md)
++For more details, see: [Crash Symbolication Guide](advanced-configuration-and-apis-1/crash-symbolication-ios.md)
+ 
+ ---
+ 
+ ## Platform-Specific Issues
+ 
+ ### iOS 14+ App Tracking Transparency
+ 
+ **Symptoms:**

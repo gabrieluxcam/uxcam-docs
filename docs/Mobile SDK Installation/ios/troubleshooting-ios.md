@@ -524,7 +524,7 @@ FirebaseCrashlytics.crashlytics()  // After
    - Upload dSYM files to UXCam
    - Check Build Settings → Debug Information Format → DWARF with dSYM File
 
-For more details, see: [Crash Symbolication Guide](advanced-configuration-and-apis-1/crash-symbolication-copy-ios.md)
+For more details, see: [Crash Symbolication Guide](advanced-configuration-and-apis-1/crash-symbolication-ios.md)
 
 ---
 
