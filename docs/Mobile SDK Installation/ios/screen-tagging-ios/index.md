@@ -21,6 +21,15 @@ The UXCam iOS SDK automatically tags most screens (i.e., **UIViewControllers** o
 
 For iOS, UXCam automatically tags view controllers the moment they appear. This is the **default and recommended** workflow because it captures user journeys with **zero extra code**.
 
+### What's Tagged Automatically?
+
+| UI Framework | Automatic Tagging | Configuration Required | Manual Tagging |
+|--------------|-------------------|------------------------|----------------|
+| **UIKit ViewControllers** | ✅ Tagged automatically by default | None - works out of the box | Optional - for custom names |
+| **SwiftUI Views** | ✅ Tagged automatically with config | `enableAutomaticScreenNameTagging = true` (SDK v1.0.7+) | Optional - for edge cases |
+
+<GitHubCallout type="note">**SwiftUI automatic tagging** captures screen names from `navigationTitle` or `tabItem` modifiers. For views without these modifiers, use manual tagging. [Learn more about SwiftUI automatic tagging](automatic-screen-tagging-swiftui-ios.md)</GitHubCallout>
+
 **Review the default names**
 
 1. Record **one or more sessions** in your Debug build while you navigate every main screen.

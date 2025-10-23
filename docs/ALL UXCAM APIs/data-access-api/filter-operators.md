@@ -128,8 +128,6 @@ aggregation=[{"attribute":"event_custom_property","property_name":"duration","op
 
 ```
 
-[Example](Link)
-
 ### Comparison (Optional)(For analytics endpoints only)
 
 In the case of the comparison parameter, if it’s set to **true**, the response will include a percentage change compared to the previous date. The previous date is a specific time period before the selected range. 

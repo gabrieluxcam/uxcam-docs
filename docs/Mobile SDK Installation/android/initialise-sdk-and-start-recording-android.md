@@ -95,6 +95,7 @@ android {
 package com.example
 
 import android.app.Application
+import android.util.Log
 import com.uxcam.UXCam
 import com.uxcam.datamodel.UXConfig
 
@@ -102,16 +103,48 @@ class MyApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        initializeUXCam()
+    }
 
-        val config = UXConfig.Builder(BuildConfig.UXCAM_KEY)
-            .enableAutomaticScreenNameTagging(true)   // remove if you tag screens manually
-            .apply {
-                // Enable Verbose logs for debug builds
-                if (BuildConfig.DEBUG) enableIntegrationLogging(true)
+    private fun initializeUXCam() {
+        try {
+            // Validate API key exists and is not a placeholder
+            val apiKey = BuildConfig.UXCAM_KEY
+            if (apiKey.isEmpty() || apiKey == "your_app_key") {
+                Log.w(TAG, "UXCam: Invalid or missing API key. Skipping initialization.")
+                return
             }
-            .build()
 
-        UXCam.startWithConfiguration(config)
+            // Configure the SDK
+            val config = UXConfig.Builder(apiKey)
+                .enableAutomaticScreenNameTagging(true)  // Remove if you tag screens manually
+                .apply {
+                    // Enable verbose logging for debug builds to help troubleshooting
+                    if (BuildConfig.DEBUG) {
+                        enableIntegrationLogging(true)
+                    }
+                }
+                .build()
+
+            // Initialize UXCam
+            UXCam.startWithConfiguration(config)
+
+            // Confirm initialization in debug builds
+            if (BuildConfig.DEBUG) {
+                Log.d(TAG, "UXCam initialized successfully")
+            }
+
+        } catch (e: Exception) {
+            // Log the error but don't crash - analytics should never break your app
+            Log.e(TAG, "UXCam initialization failed", e)
+
+            // Optional: Report to your crash reporting service
+            // FirebaseCrashlytics.getInstance().recordException(e)
+        }
+    }
+
+    companion object {
+        private const val TAG = "UXCam"
     }
 }
 ```

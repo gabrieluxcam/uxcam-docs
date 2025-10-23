@@ -38,7 +38,12 @@ Good screen names unlock powerful UXCam features:
 
 ### Manual vs Automatic Tagging
 
-> ⚠️ **Important**: For React Native, **manual tagging is strongly recommended** over automatic tagging due to React Native's navigation architecture.
+| Tagging Method | React Native Support | Recommendation |
+|----------------|----------------------|----------------|
+| **Automatic Screen Tagging** | ❌ Not reliable - React Native's navigation doesn't expose native screen changes | Not recommended |
+| **Manual Screen Tagging** | ✅ Fully supported and reliable | ✅ **Strongly recommended** |
+
+> ⚠️ **Important**: For React Native, **manual tagging is strongly recommended** over automatic tagging due to React Native's navigation architecture. Unlike native iOS/Android apps, React Native screens are JavaScript-based and don't trigger native screen lifecycle events that automatic tagging depends on.
 
 ```javascript
 // Always set this in your configuration
