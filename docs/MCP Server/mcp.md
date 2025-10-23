@@ -2,7 +2,7 @@
 title: MCP
 hidden: true
 ---
-The UXCam Documentation Model Context Protocol (MCP) server enables AI-powered code editors like Cursor and Windsurf, plus general-purpose tools like Claude Desktop, to interact directly with your UXCam Documentation API and documentation.
+The UXCam Documentation Model Context Protocol (MCP) server enables AI-powered code editors like Cursor and Windsurf, plus general-purpose tools like Claude Desktop, to interact directly with your UXCam Documentation API and documentation. 
 
 ## What is MCP?
 
