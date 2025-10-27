@@ -12,9 +12,7 @@ The UXCam Integration Model Context Protocol (MCP) server enables AI-powered cod
 
 <br />
 
-<a href="https://cursor.com/install-mcp?name=uxcam-integration&config=eyJ0eXBlIjogInN0cmVhbWFibGUtaHR0cCIsICJ1cmwiOiAiaHR0cHM6Ly9pbnRlZ3JhdGlvbi5tY3AudXhjYW0uY29tL21jcC9odHRwIn0%3D">
-  <img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Add UXCam Integration MCP server to Cursor" height="32" />
-</a>
+<a href="https://cursor.com/en-US/install-mcp?name=uxcam-integration&config=eyJ0eXBlIjoic3RyZWFtYWJsZS1odHRwIiwidXJsIjoiaHR0cHM6Ly9pbnRlZ3JhdGlvbi5tY3AudXhjYW0uY29tL21jcC9odHRwIn0%3D"><img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Add uxcam-integration MCP server to Cursor" height="32" /></a>
 
 <br />
 
