@@ -2,82 +2,179 @@
 title: MCP
 hidden: true
 ---
-The UXCam Documentation Model Context Protocol (MCP) server enables AI-powered code editors like Cursor and Windsurf, plus general-purpose tools like Claude Desktop, to interact directly with your UXCam Documentation API and documentation.
+# UXCam Integration MCP Server
+
+> **⚠️ Beta Release**
+> 
+> This MCP server is currently in beta. We appreciate your feedback! Please report any issues or suggestions to [support@uxcam.com](mailto:support@uxcam.com) or through your UXCam dashboard.
+
+The UXCam Integration Model Context Protocol (MCP) server enables AI-powered code editors like Cursor and Windsurf, plus general-purpose tools like Claude Desktop, to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts.
 
 <br />
-
-<a href="https://cursor.com/install-mcp?name=uxcam&config=JTdCJTIydHlwZSUyMiUzQSUyMnN0cmVhbWFibGUtaHR0cCUyMiUyQyUyMnVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGaW50ZWdyYXRpb24ubWNwLnV4Y2FtLmNvbSUyRm1jcCUyRmh0dHAlMjIlN0Q%3D">
-  <img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Add uxcam MCP server to Cursor" height="32" />
+<a href="https://cursor.com/install-mcp?name=uxcam-integration&config=JTdCJTIydHlwZSUyMiUzQSUyMnN0cmVhbWFibGUtaHR0cCUyMiUyQyUyMnVybCUyMiUzQSUyMmh0dHBzJTNBJTJGJTJGaW50ZWdyYXRpb24ubWNwLnV4Y2FtLmNvbSUyRm1jcCUyRmh0dHAlMjIlN0Q%3D">
+  <img src="https://cursor.com/deeplink/mcp-install-dark.svg" alt="Add UXCam Integration MCP server to Cursor" height="32" />
 </a>
-
 <br />
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is an open standard that allows AI applications to securely access external data sources and tools. The UXCam Documentation MCP server provides AI agents with:
+Model Context Protocol (MCP) is an open standard that allows AI applications to securely access external data sources and tools. The UXCam Integration MCP server provides AI agents with:
 
-* **Direct API access** to UXCam Documentation functionality
-* **Documentation search** capabilities
-* **Real-time data** from your UXCam Documentation account
-* **Code generation** assistance for UXCam Documentation integrations
+* **Guided SDK integration** through 5 progressive prompts
+* **Platform-specific code generation** for Android (Kotlin/Java) and iOS (Swift/Objective-C)
+* **Implementation validation** to ensure correct SDK setup
+* **Best practices enforcement** for session recording, privacy, and analytics
 
-## UXCam Documentation MCP Server Setup
+## What It Does
 
-UXCam Documentation hosts a remote MCP server at `https://developer.uxcam.com/mcp`. Configure your AI development tools to connect to this server. If your APIs require authentication, you can pass in headers via query parameters or however headers are configured in your MCP client.
+Instead of manually implementing the UXCam SDK, this MCP server guides your AI assistant through a complete integration workflow with 5 specialized prompts:
+
+1. **@integration_setup** - Add SDK dependencies and initialize UXCam
+2. **@screen_tagging** - Track screen views and user navigation
+3. **@mask_sensitive_data** - Protect sensitive data (passwords, credit cards, PII)
+4. **@event_tracking** - Log custom events and user actions
+5. **@user_properties** - Set user identity and custom properties
+
+Each prompt provides platform-specific code examples, validates your implementation, and guides you to the next step.
+
+**Note:** You'll need your UXCam app key to begin the integration. Find it at **Dashboard → Settings → App Key** or [sign up for free](https://dashboard.uxcam.com/signup).
+
+## Supported Platforms
+
+- ✅ Android (Kotlin/Java)
+- ✅ iOS (Swift/Objective-C)
+- 🚧 React Native (Coming Soon)
+- 🚧 Flutter (Coming Soon)
+
+## UXCam Integration MCP Server Setup
+
+UXCam hosts a remote MCP server at `https://integration.mcp.uxcam.com/mcp/http`. Configure your AI development tools to connect to this server.
 
 <Tabs>
   <Tab title="Cursor">
-    **Add to`~/.cursor/mcp.json`:**
-
+    **Add to `~/.cursor/mcp.json`:**
     ```json
     {
       "mcpServers": {
-        "uxcam-documentation": {
-          "url": "https://developer.uxcam.com/mcp"
+        "uxcam-integration": {
+          "type": "streamable-http",
+          "url": "https://integration.mcp.uxcam.com/mcp/http",
+          "headers": {
+            "Accept": "application/json, text/event-stream",
+            "Content-Type": "application/json"
+          }
         }
       }
     }
     ```
   </Tab>
-
   <Tab title="Windsurf">
-    **Add to`~/.codeium/windsurf/mcp_config.json`:**
-
+    **Add to `~/.codeium/windsurf/mcp_config.json`:**
     ```json
     {
       "mcpServers": {
-        "uxcam-documentation": {
-          "url": "https://developer.uxcam.com/mcp"
+        "uxcam-integration": {
+          "type": "streamable-http",
+          "url": "https://integration.mcp.uxcam.com/mcp/http",
+          "headers": {
+            "Accept": "application/json, text/event-stream",
+            "Content-Type": "application/json"
+          }
         }
       }
     }
     ```
   </Tab>
-
   <Tab title="Claude Desktop">
-    **Add to`claude_desktop_config.json`:**
-
+    **Add to `claude_desktop_config.json`:**
     ```json
     {
       "mcpServers": {
-        "uxcam-documentation": {
-          "url": "https://developer.uxcam.com/mcp"
+        "uxcam-integration": {
+          "type": "streamable-http",
+          "url": "https://integration.mcp.uxcam.com/mcp/http",
+          "headers": {
+            "Accept": "application/json, text/event-stream",
+            "Content-Type": "application/json"
+          }
         }
       }
     }
+    ```
+  </Tab>
+  <Tab title="Claude CLI">
+    **Run this command:**
+    ```bash
+    claude mcp add --transport http uxcam-integration-mcp https://integration-uat.mcp.uxcam.com/mcp/http
     ```
   </Tab>
 </Tabs>
 
 ## Testing Your MCP Setup
 
-Once configured, you can test your MCP server connection:
+Once configured, test your MCP server connection:
 
-1. **Open your AI editor** (Cursor, Windsurf, etc.)
+1. **Open your AI editor** (Cursor, Windsurf, etc.) with an Android or iOS project
 2. **Start a new chat** with the AI assistant
-3. **Ask about UXCam Documentation** - try questions like:
-   * "How do I \[common use case]?"
-   * "Show me an example of \[API functionality]"
-   * "Create a \[integration type] using UXCam Documentation"
+3. **Begin the integration** by typing: `@integration_setup`
+4. **Follow the prompts** - the AI will ask for your UXCam app key and guide you through each step
 
-The AI should now have access to your UXCam Documentation account data and documentation through the MCP server.
+The AI should recognize the prompts and begin the guided integration workflow.
+
+## Available Prompts
+
+### @integration_setup
+**Start here for new integrations.** Adds SDK dependencies, initializes UXCam with your app key, and validates the build configuration.
+
+**Required:** Your UXCam app key from Dashboard → Settings → App Key
+
+### @screen_tagging
+**Use after:** Phase 1 is complete
+
+Implements automatic screen tracking and names screens for better analytics visibility.
+
+### @mask_sensitive_data
+**Use for:** Login screens, payment forms, personal information
+
+Adds privacy protection to prevent sensitive data from being recorded in session replays.
+
+### @event_tracking
+**Use for:** Button clicks, purchases, form submissions
+
+Implements custom event logging for tracking business-critical user actions.
+
+### @user_properties
+**Use for:** User segmentation, cohort analysis
+
+Sets user identity and custom properties for advanced analytics and filtering.
+
+## Troubleshooting
+
+**Prompts not appearing?**
+- Verify the MCP server URL in your configuration file
+- Ensure `type` is set to `"streamable-http"` (for Cursor)
+- Restart your AI editor completely
+- Check that headers are properly configured
+
+**"Platform not supported" error?**
+- Only Android and iOS projects are currently supported
+- React Native and Flutter support is coming soon
+- Ensure you're working in an Android or iOS project directory
+- Check that your project has the standard structure (build.gradle, Podfile, etc.)
+
+**Integration not working?**
+- Verify your UXCam app key is correct
+- Check that you completed previous steps in order
+- Review the AI's validation messages for specific errors
+- Ensure your project builds successfully before proceeding
+
+## Get Your UXCam App Key
+
+Don't have a UXCam account yet? [Sign up for free](https://dashboard.uxcam.com/signup)
+
+Find your app key at: **Dashboard → Settings → App Key**
+
+## Additional Resources
+
+- [UXCam Documentation](https://docs.uxcam.com)
+- [MCP Specification](https://modelcontextprotocol.io)
