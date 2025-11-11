@@ -32,7 +32,7 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 | :--------------------- | :--------------------------------------- |
 | **Google Tag Manager** | <a href="google-tag-manager#">Jump →</a> |
 | **Shopify**            | <a href="shopify-1#">Jump →</a>          |
-| **Wordpress**          | <a href="wordpress-1#">Jump →</a>        |
+| **WordPress**          | <a href="wordpress-1#">Jump →</a>        |
 
 # What is automatically captured?
 
