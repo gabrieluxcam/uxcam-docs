@@ -9,7 +9,7 @@ metadata:
 
 <br />
 
-### V. 4.8.1 - Nov 7, 2025
+### V. 3.8.1 - Nov 7, 2025
 
 * Refactored Android Project to improve: Session Upload, Screen Tagging, Video Recording, Compose Occlusion, Frame Pipeline, ServiceHandler and many more.
 
