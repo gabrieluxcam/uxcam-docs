@@ -5,6 +5,12 @@ hidden: false
 metadata:
   robots: index
 ---
+<br />
+
+#### November 19, 2025 - V. 6.0.8
+
+* Update iOS SDK 3.7.1 and android SDK 3.8.2
+
 #### April 30, 2025 - V. 6.0.6
 
 * Updated iOS SDK version to 3.6.24 and Android SDK version to 3.6.41
