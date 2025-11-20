@@ -5,6 +5,16 @@ hidden: false
 metadata:
   robots: index
 ---
+<br />
+
+### V. 3.7.2 - Nov 20, 2025
+
+* Fixed sessions capturing gestures on occluded screens 
+* Fixed crash in UXCam due to encryption functionality 
+* Fixed crash in UXFrameConsumer during system snapshot operation 
+* Fixed crash due to null folder when uploading pending sessions
+* Fixed freezing in iOS apps in flutter impeller
+
 ### V. 3.7.1 - Sept 12, 2025
 
 * implementation of AI Occlusion
