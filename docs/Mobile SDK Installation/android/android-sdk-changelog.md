@@ -9,6 +9,20 @@ metadata:
 
 <br />
 
+<br />
+
+### V. 3.8.2 - Nov 19, 2025
+
+* Improve: Add UploadService fallback when WorkManager unavailable
+* Improve: Add session clock for data/video synchronization
+* Refactor: Unify session stop into single path
+* Refactor: Replace bitmap with FramePacket for better frame handling
+* Fix: Deadlock when app going to background
+* Fix: Flutter not drawing issue on PixelCopy
+* Fix: Video duration not matching actual session time
+* Fix: Session not uploading on Wi-Fi only mode
+* Fix: Occlusion issue in screen and view
+
 ### V. 3.8.1 - Nov 7, 2025
 
 * Refactored Android Project to improve: Session Upload, Screen Tagging, Video Recording, Compose Occlusion, Frame Pipeline, ServiceHandler and many more.
