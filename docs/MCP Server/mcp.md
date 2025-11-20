@@ -1,6 +1,6 @@
 ---
 title: MCP
-hidden: true
+hidden: false
 ---
 # UXCam Integration MCP Server
 
