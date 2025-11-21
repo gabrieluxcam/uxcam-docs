@@ -9,7 +9,14 @@ metadata:
 
 <br />
 
-<br />
+### V. 3.8.3 - Nov 21, 2025
+
+* Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
+* Fix: Delete session if s3 token is missing from backend
+* Fix: Crash due to R8 inlining code
+* Improve: Flutter occlusion handling
+* Improve: Add implementation for flutter occlusion
+* Improve: Add support for app key in ae region
 
 ### V. 3.8.2 - Nov 19, 2025
 
