@@ -1,5 +1,5 @@
 ---
-title: MCP
+title: AI Integration
 hidden: false
 ---
 # UXCam Integration MCP Server
