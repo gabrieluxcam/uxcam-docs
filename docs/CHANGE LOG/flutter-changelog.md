@@ -10,6 +10,11 @@ metadata:
 next:
   description: ''
 ---
+#### November 21, 2025 - V. 2.7.2
+
+* Update Android dependency to 3.8.3
+* Update iOS dependency to 3.7.2
+
 #### September 17, 2025 - V. 2.7.1
 
 * iOS : Smart Event (with this now we can proceed with monitoring Smart Event.)
