@@ -9,6 +9,22 @@ metadata:
 
 <br />
 
+### V. 3.8.4 - Dec 3, 2025
+
+<br />
+
+* Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
+* Fix: Manual screen name being reset on session reset
+* Fix: Video orientation not changing correctly
+* Fix: Timeline not matching video playback
+* Fix: Alert dialogs not appearing in video recordings
+* Fix: Session upload not rescheduling when app returns to foreground with WiFi
+* Improve: AI text occlusion feature flag auto-enabled when added to config
+* Improve: New upload architecture for better reliability
+* Improve: Flutter initial screen tagging and navigation handling
+* Improve: Remove WorkManager dependency - apps can upload without it
+* Improve: Unified occlusion state management across SDK
+
 ### V. 3.8.3 - Nov 21, 2025
 
 * Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
