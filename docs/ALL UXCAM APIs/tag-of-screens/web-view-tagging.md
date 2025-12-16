@@ -108,40 +108,81 @@ extension WebViewController: WKScriptMessageHandler {
 
 ## React Native Example:
 
-Here we're just grabbing the HTML title element and sending it to the tagScreenName:
+There are two approaches to tag screens within a WebView:
+
+<br />
+
+### Option 1: Using URL path (recommended)
+
+Automatically tag screens based on the URL path when navigation changes:
 
 ```javascript
-render() {
-    const injectedJs = `
-      window.alert(document.title);
-      ReactNativeWebView.postMessage(document.title);`
+import React from 'react';
+import { WebView } from 'react-native-webview';
+import RNUxcam from 'react-native-ux-cam';
 
-    return (
-      <WebView
-        ref="webview"
-        source={{
-          uri: 'https://uxcam.com/',
-        }}
-        onNavigationStateChange={this._onNavigationStateChange.bind(this)}
-        javaScriptEnabled={true}
-        injectedJavaScript={injectedJs}
-        onMessage={this._onMessage}
-      />
-    );
-  }
-  _onNavigationStateChange() { }
-  _onMessage(data) {
-    var element = data.nativeEvent.data;
-    RNUxcam.tagScreenName(element);
-  }
-}
+const MyWebView = () => {
+  const handleNavigationChange = (navState) => {
+    if (navState.url) {
+      const url = new URL(navState.url);
+      const screenName = url.pathname || '/home';
+      RNUxcam.tagScreenName(`WebView${screenName}`);
+    }
+  };
+
+  return (
+    <WebView
+      source={{ uri: 'https://example.com/' }}
+      onNavigationStateChange={handleNavigationChange}
+    />
+  );
+};
+```
+
+<br />
+
+### Option 2: Using page title
+
+Tag screens based on the HTML document title:
+
+```javascript
+import React, { useRef } from 'react';
+import { WebView } from 'react-native-webview';
+import RNUxcam from 'react-native-ux-cam';
+
+const MyWebView = () => {
+  const webviewRef = useRef(null);
+
+  const handleMessage = (event) => {
+    const title = event.nativeEvent.data;
+    RNUxcam.tagScreenName(title);
+  };
+
+  const handleNavigationChange = (navState) => {
+    if (!navState.loading) {
+      webviewRef.current?.injectJavaScript(`
+        ReactNativeWebView.postMessage(document.title);
+        true;
+      `);
+    }
+  };
+
+  return (
+    <WebView
+      ref={webviewRef}
+      source={{ uri: 'https://example.com/' }}
+      onNavigationStateChange={handleNavigationChange}
+      onMessage={handleMessage}
+    />
+  );
+};
 ```
 
 <br />
 
 ## Flutter Example:
 
-Webview has a delegate which gets called whenever the URL changes, which can be tracked to tag the screen name: 
+Webview has a delegate which gets called whenever the URL changes, which can be tracked to tag the screen name:
 
 ```javascript Dart
 import 'package:flutter/material.dart';
