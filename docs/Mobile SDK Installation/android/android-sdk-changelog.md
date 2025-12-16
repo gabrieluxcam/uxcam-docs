@@ -11,8 +11,6 @@ metadata:
 
 ### V. 3.8.4 - Dec 3, 2025
 
-<br />
-
 * Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
 * Fix: Manual screen name being reset on session reset
 * Fix: Video orientation not changing correctly
