@@ -126,38 +126,38 @@ Once configured, test your MCP server connection:
 
 1. **Open your AI editor** (Cursor, Windsurf, etc.) with an Android or iOS project
 2. **Start a new chat** with the AI assistant
-3. **Begin the integration** by typing: `@integration_setup`
+3. **Begin the integration** by typing: `/uxcam-integration/integration_setup`
 4. **Follow the prompts** - the AI will ask for your UXCam app key and guide you through each step
 
 The AI should recognize the prompts and begin the guided integration workflow.
 
 ## Available Prompts
 
-### @integration_setup
+### /uxcam-integration/integration_setup
 
 **Start here for new integrations.** Adds SDK dependencies, initializes UXCam with your app key, and validates the build configuration.
 
 **Required:** Your UXCam app key from Dashboard → Settings → App Key
 
-### @screen_tagging
+### /uxcam-integration/screen_tagging
 
 **Use after:** Phase 1 is complete
 
 Implements automatic screen tracking and names screens for better analytics visibility.
 
-### @mask_sensitive_data
+### /uxcam-integration/mask_sensitive_data
 
 **Use for:** Login screens, payment forms, personal information
 
 Adds privacy protection to prevent sensitive data from being recorded in session replays.
 
-### @event_tracking
+### /uxcam-integration/event_tracking
 
 **Use for:** Button clicks, purchases, form submissions
 
 Implements custom event logging for tracking business-critical user actions.
 
-### @user_properties
+### /uxcam-integration/user_properties
 
 **Use for:** User segmentation, cohort analysis
 
