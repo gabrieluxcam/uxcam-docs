@@ -32,10 +32,10 @@ Model Context Protocol (MCP) is an open standard that allows AI applications to 
 Instead of manually implementing the UXCam SDK, this MCP server guides your AI assistant through a complete integration workflow with 5 specialized prompts:
 
 1. **/uxcam-integration/integration_setup** - Add SDK dependencies and initialize UXCam
-2. **/uxcam-integration/screen_tagging** - Track screen views and user navigation
-3. **/uxcam-integration/mask_sensitive_data** - Protect sensitive data (passwords, credit cards, PII)
-4. **/uxcam-integration/event_tracking** - Log custom events and user actions
-5. **/uxcam-integration/user_properties** - Set user identity and custom properties
+2. **/screen_tagging** - Track screen views and user navigation
+3. **/mask_sensitive_data** - Protect sensitive data (passwords, credit cards, PII)
+4. **/event_tracking** - Log custom events and user actions
+5. **/user_properties** - Set user identity and custom properties
 
 Each prompt provides platform-specific code examples, validates your implementation, and guides you to the next step.
 
@@ -133,31 +133,31 @@ The AI should recognize the prompts and begin the guided integration workflow.
 
 ## Available Prompts
 
-### /uxcam-integration/integration_setup
+### /integration_setup
 
 **Start here for new integrations.** Adds SDK dependencies, initializes UXCam with your app key, and validates the build configuration.
 
 **Required:** Your UXCam app key from Dashboard → Settings → App Key
 
-### /uxcam-integration/screen_tagging
+### /screen_tagging
 
 **Use after:** Phase 1 is complete
 
 Implements automatic screen tracking and names screens for better analytics visibility.
 
-### /uxcam-integration/mask_sensitive_data
+### /mask_sensitive_data
 
 **Use for:** Login screens, payment forms, personal information
 
 Adds privacy protection to prevent sensitive data from being recorded in session replays.
 
-### /uxcam-integration/event_tracking
+### /event_tracking
 
 **Use for:** Button clicks, purchases, form submissions
 
 Implements custom event logging for tracking business-critical user actions.
 
-### /uxcam-integration/user_properties
+### /user_properties
 
 **Use for:** User segmentation, cohort analysis
 
