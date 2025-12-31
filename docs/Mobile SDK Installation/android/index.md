@@ -14,7 +14,9 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="note">Need an account? \*\*<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup#email">Start free</Anchor>       \*\* – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
+<GitHubCallout type="important">Recommended approach: Rather than manually integrating the UXCam SDK, we recommend using the UXCam Integration Model Context Protocol (MCP) server (AI Integration). The MCP server enables AI-powered code editors to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts, reducing setup time and minimizing integration errors. For details on how to use this approach, see the **<Anchor label="MCP_integration" target="_blank" href="/mcp">AI Integration) guide</Anchor>       ** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
+
+<GitHubCallout type="note">Need an account? **<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup#email">Start free</Anchor>       ** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -67,7 +69,7 @@ next:
 
 If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
-<Image align="center" src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
 
 <br />
 
