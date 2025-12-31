@@ -31,11 +31,11 @@ Model Context Protocol (MCP) is an open standard that allows AI applications to 
 
 Instead of manually implementing the UXCam SDK, this MCP server guides your AI assistant through a complete integration workflow with 5 specialized prompts:
 
-1. **@integration_setup** - Add SDK dependencies and initialize UXCam
-2. **@screen_tagging** - Track screen views and user navigation
-3. **@mask_sensitive_data** - Protect sensitive data (passwords, credit cards, PII)
-4. **@event_tracking** - Log custom events and user actions
-5. **@user_properties** - Set user identity and custom properties
+1. **/uxcam-integration/integration_setup** - Add SDK dependencies and initialize UXCam
+2. **/uxcam-integration/screen_tagging** - Track screen views and user navigation
+3. **/uxcam-integration/mask_sensitive_data** - Protect sensitive data (passwords, credit cards, PII)
+4. **/uxcam-integration/event_tracking** - Log custom events and user actions
+5. **/uxcam-integration/user_properties** - Set user identity and custom properties
 
 Each prompt provides platform-specific code examples, validates your implementation, and guides you to the next step.
 
