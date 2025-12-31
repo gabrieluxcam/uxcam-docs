@@ -10,7 +10,11 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](/signup)                      \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="important">Recommended approach: Rather than manually integrating the UXCam SDK, we recommend using the UXCam Integration Model Context Protocol (MCP) server (AI Integration). The MCP server enables AI-powered code editors to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts, reducing setup time and minimizing integration errors. For details on how to use this approach, see the <Anchor label="MCP_integration" target="_blank" href="mcp#">AI Integration guide</Anchor></GitHubCallout>
+
+<br />
+
+<GitHubCallout type="note">Need an account? **[Start free](/signup)                       ** – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
 
@@ -65,7 +69,7 @@ next:
 
 If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
-<Image align="center" src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
+<Image align="center" border={false} src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
 
 <GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
 
@@ -91,8 +95,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                                                      $ pod install
-                                                                                    `}
+                                                                                        $ pod install
+                                                                                      `}
 </Terminal>
 
 #### Swift Package Manager
@@ -176,7 +180,7 @@ Run the app on a simulator or device, navigate a few screens, then send it to th
 
 > 👍 As Simple As That!
 >
-> This will complete the integration process.\
+> This will complete the integration process.  
 > Your session will be shown on the dashboard within a few seconds after the app goes in the background.
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
