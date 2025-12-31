@@ -14,7 +14,9 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
-<GitHubCallout type="important">Recommended approach: Rather than manually integrating the UXCam SDK, we recommend using the UXCam Integration Model Context Protocol (MCP) server (AI Integration). The MCP server enables AI-powered code editors to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts, reducing setup time and minimizing integration errors. For details on how to use this approach, see the **<Anchor label="MCP_integration" target="_blank" href="/mcp">AI Integration) guide</Anchor>       ** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
+<GitHubCallout type="important">Recommended approach: Rather than manually integrating the UXCam SDK, we recommend using the UXCam Integration Model Context Protocol (MCP) server (AI Integration). The MCP server enables AI-powered code editors to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts, reducing setup time and minimizing integration errors. For details on how to use this approach, see the **<Anchor label="MCP_integration" target="_blank" href="docs/mcp">AI Integration guide</Anchor>       ** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
+
+<br />
 
 <GitHubCallout type="note">Need an account? **<Anchor label="Start free" target="_blank" href="https://app.uxcam.com/signup#email">Start free</Anchor>       ** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
 
