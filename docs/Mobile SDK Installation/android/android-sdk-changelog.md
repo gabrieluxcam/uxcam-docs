@@ -7,7 +7,27 @@ metadata:
 ---
 # UXCam Android Changelog
 
-<br />
+### V. 3.8.7 - Dec 29, 2025
+
+* Fix: Screen recording on full-screen occlusion
+* Fix: Crashed sessions uploading when filtered by dashboard settings
+
+### V. 3.8.6 - Dec 22, 2025
+
+* Fix: ANR issues caused by blocking SharedPreferences operations
+* Fix: Manual occlusion being lost in RecyclerView detach/reattach cycles
+* Fix: Flutter occlusion rect alignment with native coordinates
+
+### V. 3.8.5 - Dec 18, 2025
+
+* Fix: RecyclerView occlusion disappearing
+* Fix: Manual occlusion being lost
+* Fix: Cross-platform occlusion rects transformation issues
+* Fix: Bitmap dimensions don't match on rotation
+* Fix: Flutter bar cutout and release compile issue
+* Fix: Dex errors (localiza)
+* Fix: Screen tagging skipped when screen recording is paused (reverted)
+* Improve: Reduce delta when fast scrolling
 
 ### V. 3.8.4 - Dec 3, 2025
 
