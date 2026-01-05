@@ -10,6 +10,13 @@ metadata:
 next:
   description: ''
 ---
+#### December 22, 2025 - V. 2.7.4
+
+* Improved Occlusion Processing
+* Improved Smart Events
+* Bug fixes and improvements
+* Code refactors
+
 #### November 21, 2025 - V. 2.7.2
 
 * Update Android dependency to 3.8.3
