@@ -7,6 +7,10 @@ metadata:
 ---
 <br />
 
+#### December 26, 2025 - V. 6.0.9
+
+* Update iOS SDK 3.7.5 and android SDK 3.8.6
+
 #### November 19, 2025 - V. 6.0.8
 
 * Update iOS SDK 3.7.1 and android SDK 3.8.2
