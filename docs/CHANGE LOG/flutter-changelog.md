@@ -10,6 +10,11 @@ metadata:
 next:
   description: ''
 ---
+#### December 29, 2025 - V. 2.7.5
+
+* Update iOS to 3.7.5 and Android to 3.8.7
+* Fix issue with smart event freezing apps in release build
+
 #### December 22, 2025 - V. 2.7.4
 
 * Improved Occlusion Processing
