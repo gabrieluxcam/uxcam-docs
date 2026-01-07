@@ -10,6 +10,10 @@ metadata:
 next:
   description: ''
 ---
+#### January 6, 2026 - V. 2.7.6
+
+* Update iOS to 3.7.6 and Android to 3.8.8
+
 #### December 29, 2025 - V. 2.7.5
 
 * Update iOS to 3.7.5 and Android to 3.8.7
