@@ -7,6 +7,11 @@ metadata:
 ---
 # UXCam Android Changelog
 
+### V. 3.8.8 - Jan 6, 2026
+
+* Improve: Synchronously stop session to ensure crash data and crash video are properly captured
+* Fix: Total session time and video length mismatch
+
 ### V. 3.8.7 - Dec 29, 2025
 
 * Fix: Screen recording on full-screen occlusion
