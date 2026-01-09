@@ -15,7 +15,7 @@ next:
       title: Screen Tagging
 ---
 <Cards columns={1}>
-  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-magic" width="100%">
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-bolt" width="100%">
     Take full advantage of heatmaps and screen analytics.
 
     > Review Automatic or Manual Tagging
