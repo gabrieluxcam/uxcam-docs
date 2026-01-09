@@ -15,16 +15,12 @@ next:
       title: Screen Tagging
 ---
 <Cards columns={1}>
-  <Card title="AI Integration - UXCam MCP Server" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-bolt" iconColor="light-yellow" width="100%">
+  <Card title="AI Integration - UXCam MCP Server" href="https://developer.uxcam.com/docs/mcp#/" icon="fa-bolt" iconColor="yellow" width="100%">
     <br />
 
     > Get fully integrated with UXCam MCP in **under 30 minutes**. Quickly enable screen tagging, protect user privacy with occlusion, enrich sessions with user properties, and track meaningful interactions using custom events — all with minimal setup and immediate insights.
   </Card>
 </Cards>
-
-<br />
-
-<GitHubCallout type="important">Recommended approach: Rather than manually integrating the UXCam SDK, we recommend using the UXCam Integration Model Context Protocol (MCP) server (AI Integration). The MCP server enables AI-powered code editors to automatically integrate the UXCam SDK into your mobile applications through guided, step-by-step prompts, reducing setup time and minimizing integration errors. For details on how to use this approach, see the <Anchor label="MCP_integration" target="_blank" href="mcp#">AI Integration guide</Anchor></GitHubCallout>
 
 <br />
 
