@@ -19,10 +19,11 @@ next:
 </Cards>
 
 
-
-<GitHubCallout type="note">Need an account? **[Start free](/signup)                         ** – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? **[Start free](/signup)                          ** – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
 <JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
+
+<br />
 
 # Integration Journey at a Glance
 
@@ -101,8 +102,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                                                            $ pod install
-                                                                                          `}
+                                                                                              $ pod install
+                                                                                            `}
 </Terminal>
 
 #### Swift Package Manager
