@@ -14,7 +14,7 @@ next:
   <Card title="AI Integration - UXCam MCP Server" href="https://developer.uxcam.com/docs/mcp#/" icon="fa-bolt" iconColor="yellow" width="100%">
     <br />
 
-    > Get fully integrated with UXCam MCP in **under 30 minutes**. Quickly enable screen tagging, protect user privacy with occlusion, enrich sessions with user properties, and track meaningful interactions using custom events — all with minimal setup and immediate insights.
+    > Get fully integrated with UXCam MCP in **under 30 minutes**. Quickly enable screen tagging, protect user privacy with occlusion, enrich sessions with user properties, and track meaningful interactions using custom events.
   </Card>
 </Cards>
 
@@ -101,8 +101,8 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 <Terminal>
   {`
-                                                                                                  $ pod install
-                                                                                                `}
+                                                                                                    $ pod install
+                                                                                                  `}
 </Terminal>
 
 #### Swift Package Manager
