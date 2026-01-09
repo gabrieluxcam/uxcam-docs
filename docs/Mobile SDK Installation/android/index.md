@@ -14,7 +14,13 @@ next:
       slug: screen-tagging
       title: Screen Tagging
 ---
+<Cards columns={4}>
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
+    Take full advantage of heatmaps and screen analytics.
 
+    > Review Automatic or Manual Tagging
+  </Card>
+</Cards>
 
 <br />
 
