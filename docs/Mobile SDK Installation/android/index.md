@@ -15,8 +15,7 @@ next:
       title: Screen Tagging
 ---
 <Cards columns={1}>
-  <Card title="AI Integration - UXCam MCP Server" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-bolt" width="100%">
-
+  <Card title="AI Integration - UXCam MCP Server" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-bolt" width="100%"><br />
     > Get fully integrated with UXCam MCP in under 30 minutes. Quickly enable screen tagging, protect user privacy with occlusion, enrich sessions with user properties, and track meaningful interactions using custom events — all with minimal setup and immediate insights.
   </Card>
 </Cards>
