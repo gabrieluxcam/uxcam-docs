@@ -10,6 +10,19 @@ metadata:
 next:
   description: ''
 ---
+<br />
+
+#### January 21, 2026 - V. 2.7.8
+
+* Update iOS to 3.7.8 and Android to 3.8.10
+
+#### January 14, 2026 - V. 2.7.7
+
+* Fixed sensitive view not occluding due to multiple engine in Android
+* Fixed occlusion rect not clearing when opening webview on iOS
+* Added semantic information for smart events
+* Updated Android to v3.8.9 and iOS to v3.7.7
+
 #### January 6, 2026 - V. 2.7.6
 
 * Update iOS to 3.7.6 and Android to 3.8.8
