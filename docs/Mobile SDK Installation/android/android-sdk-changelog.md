@@ -9,6 +9,13 @@ metadata:
 
 <br />
 
+### V. 3.8.10 - Jan 21, 2026
+
+* Fix: ANR on app startup by deferring CoreModule initialization and using IO dispatcher
+* Fix: Prevent app crashes when preconditions are not met
+* Improve: Upload debug log file after successful verification with configurable pause toggle
+* Refactor: Removed Xamarin wrapper, unused HttpPostService and redundant permission/storage checks
+
 ### V. 3.8.9 - Jan 14, 2026
 
 * Fix: Integration logs not showing in release mode
