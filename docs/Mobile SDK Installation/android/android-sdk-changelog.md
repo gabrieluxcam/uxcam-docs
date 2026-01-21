@@ -7,6 +7,19 @@ metadata:
 ---
 # UXCam Android Changelog
 
+<br />
+
+### V. 3.8.9 - Jan 14, 2026
+
+* Fix: Integration logs not showing in release mode
+* Improve: Added two-level logging system for cleaner debug and diagnostic log separation
+* Fix: Active session being accidentally deleted during cleanup operations
+* Fix: Video encoder failures and orphan cleanup causing crashes
+* Fix: WebView content exposed when alert dialogs appear over WebView
+* Fix: Toolbar key not appearing in Flutter datafile for non-navigation scenarios
+* Fix: WorkManager crash when uploading sessions from older SDK versions
+* Fix: Missing zip extensions on uploaded data and video files
+
 ### V. 3.8.8 - Jan 6, 2026
 
 * Improve: Synchronously stop session to ensure crash data and crash video are properly captured
