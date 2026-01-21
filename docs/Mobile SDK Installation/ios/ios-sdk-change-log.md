@@ -7,6 +7,25 @@ metadata:
 ---
 <br />
 
+<br />
+
+### V. 3.7.8 - Jan 21, 2026
+
+* Fixed crash while occluding search bar in SwiftUI
+* Disabled schematic recording for unsupported platforms
+
+### V. 3.7.7 - Dec 26, 2025
+
+* Fixed size overflow crash resulting in EXC_BAD_ACCESS (KERN_INVALID_ADDRESS) in sensitive rect provider
+* Fixed crash due to deleted video if app moves to background after allowShortBreak is applied
+* Refactored startWithConfiguration api to make it thread independent
+
+### V. 3.7.6 - Dec 26, 2025
+
+* Fixed random crash while detecting sensitive views
+* Fixed occlusion mismatch issue on webview
+* Fixed old screen name not being reset after session resume on foreground
+
 ### V. 3.7.5 - Dec 26, 2025
 
 * Fixed occlusion issue on RN Fabric views
