@@ -194,5 +194,5 @@ Find your app key at: **Dashboard → Settings → App Key**
 
 ## Additional Resources
 
-* [UXCam Documentation](https://docs.uxcam.com)
+* <Anchor label="UXCam Documentation" target="_blank" href="https://developer.uxcam.com/docs/so-what-does-uxcam-do">UXCam Documentation</Anchor>
 * [MCP Specification](https://modelcontextprotocol.io)
