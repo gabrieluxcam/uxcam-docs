@@ -7,7 +7,14 @@ metadata:
 ---
 # UXCam Android Changelog
 
-<br />
+### V. 3.8.11 - Jan 27, 2026
+
+* Fix: isRecording() now uses SessionStartGateway with explicit state checks
+* Fix: Handle null values before creating JSON object
+* Fix: Handle non-fragment activity when fragment tagging is enabled
+* Fix: Add null check for context_ before upload to prevent crash
+* Improve logging: Added new parameter debugMode to enableIntegrationLogging function to display debug logs
+* Improve: removed Timber logging infrastructure and migrated all logs to Verbose logging
 
 ### V. 3.8.10 - Jan 21, 2026
 
