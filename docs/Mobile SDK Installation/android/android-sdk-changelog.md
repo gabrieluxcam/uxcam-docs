@@ -2,6 +2,7 @@
 title: Android SDK Changelog
 deprecated: false
 hidden: false
+icon: fab fa-android
 metadata:
   robots: index
 ---
