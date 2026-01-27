@@ -10,6 +10,45 @@ metadata:
 next:
   description: ''
 ---
+<br />
+
+#### January 21, 2026 - V. 2.7.8
+
+* Update iOS to 3.7.8 and Android to 3.8.10
+
+#### January 14, 2026 - V. 2.7.7
+
+* Fixed sensitive view not occluding due to multiple engine in Android
+* Fixed occlusion rect not clearing when opening webview on iOS
+* Added semantic information for smart events
+* Updated Android to v3.8.9 and iOS to v3.7.7
+
+#### January 6, 2026 - V. 2.7.6
+
+* Update iOS to 3.7.6 and Android to 3.8.8
+
+#### December 29, 2025 - V. 2.7.5
+
+* Update iOS to 3.7.5 and Android to 3.8.7
+* Fix issue with smart event freezing apps in release build
+
+#### December 22, 2025 - V. 2.7.4
+
+* Improved Occlusion Processing
+* Improved Smart Events
+* Bug fixes and improvements
+* Code refactors
+
+#### November 21, 2025 - V. 2.7.2
+
+* Update Android dependency to 3.8.3
+* Update iOS dependency to 3.7.2
+
+#### September 17, 2025 - V. 2.7.1
+
+* iOS : Smart Event (with this now we can proceed with monitoring Smart Event.)
+* Includes android 'resolve of session upload issue'
+
 #### June 16, 2025, - V. 2.6.1
 
 * Update iOS to 3.6.25 and Android to 3.6.43
@@ -67,7 +106,7 @@ next:
 #### August 30, 2023 - V. 2.4.4
 
 * Update Android and iOS dependencies
-* Updated ios\_deployment\_target to 11.0
+* Updated ios_deployment_target to 11.0
 * Updated polling time to 50ms
 
 #### August 3, 2023 - V. 2.4.3
@@ -144,7 +183,7 @@ next:
 #### April 27, 2022 - V. 2.1.0
 
 * iOS SDK updated to v 3.4.1 & Android SDK updated to v3.4.0
-* Contains iOS Fix for 4XX error fallback to offline session recordings 🧙️ \[IMPORTANT]
+* Contains iOS Fix for 4XX error fallback to offline session recordings 🧙️ [IMPORTANT]
 * Start with configuration support
 * Blur/Occlusion support
 * Supports app logs
@@ -161,4 +200,4 @@ next:
 
 #### January 25, 2019 - V. 1.0.0
 
-* flutter\_uxcam v1.0.0 with Android SDK v3.0.6 and iOS SDK v3.0.6 has been published to Flutter package repository.
+* flutter_uxcam v1.0.0 with Android SDK v3.0.6 and iOS SDK v3.0.6 has been published to Flutter package repository.

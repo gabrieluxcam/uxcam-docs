@@ -5,6 +5,52 @@ hidden: false
 metadata:
   robots: index
 ---
+<br />
+
+<br />
+
+### V. 3.7.8 - Jan 21, 2026
+
+* Fixed crash while occluding search bar in SwiftUI
+* Disabled schematic recording for unsupported platforms
+
+### V. 3.7.7 - Dec 26, 2025
+
+* Fixed size overflow crash resulting in EXC_BAD_ACCESS (KERN_INVALID_ADDRESS) in sensitive rect provider
+* Fixed crash due to deleted video if app moves to background after allowShortBreak is applied
+* Refactored startWithConfiguration api to make it thread independent
+
+### V. 3.7.6 - Dec 26, 2025
+
+* Fixed random crash while detecting sensitive views
+* Fixed occlusion mismatch issue on webview
+* Fixed old screen name not being reset after session resume on foreground
+
+### V. 3.7.5 - Dec 26, 2025
+
+* Fixed occlusion issue on RN Fabric views
+
+### V. 3.7.4 - Dec 22, 2025
+
+* Optimized SDK performance for scrolling behavior
+
+### V. 3.7.2 - Nov 20, 2025
+
+* Fixed sessions capturing gestures on occluded screens
+* Fixed crash in UXCam due to encryption functionality
+* Fixed crash in UXFrameConsumer during system snapshot operation
+* Fixed crash due to null folder when uploading pending sessions
+* Fixed freezing in iOS apps in flutter impeller
+
+### V. 3.7.1 - Sept 12, 2025
+
+* implementation of AI Occlusion
+* Expose APIs for Flutter support of smart events
+* General performance and stability improvements.
+* Fixed views not occluding for brief period while transitioning
+* Fixed gesture incorrectly being captured on flutter
+* Fixed screens not occluding at the beginning for manually tagged screen
+
 ### V. 3.6.26 - June 17, 2025
 
 * Fixed crash due to unhandled exception while parsing ANR stacktrace
@@ -50,7 +96,7 @@ metadata:
 
 ### V. 3.6.20 - December 12, 2024
 
-* **New**: Add Integration log api\
+* **New**: Add Integration log api
   -configuration.enableIntegrationLogging=true (By default, it will be disabled)
 * **Fix**: crash on iOS due to failed video recording
 * **Improvement**: Show actual reason for technical error for failed video recording

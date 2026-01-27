@@ -2,10 +2,119 @@
 title: Android SDK Changelog
 deprecated: false
 hidden: false
+icon: fab fa-android
 metadata:
   robots: index
 ---
 # UXCam Android Changelog
+
+### V. 3.8.11 - Jan 27, 2026
+
+* Fix: isRecording() now uses SessionStartGateway with explicit state checks
+* Fix: Handle null values before creating JSON object
+* Fix: Handle non-fragment activity when fragment tagging is enabled
+* Fix: Add null check for context_ before upload to prevent crash
+* Improve logging: Added new parameter debugMode to enableIntegrationLogging function to display debug logs
+* Improve: removed Timber logging infrastructure and migrated all logs to Verbose logging
+
+### V. 3.8.10 - Jan 21, 2026
+
+* Fix: ANR on app startup by deferring CoreModule initialization and using IO dispatcher
+* Fix: Prevent app crashes when preconditions are not met
+* Improve: Upload debug log file after successful verification with configurable pause toggle
+* Refactor: Removed Xamarin wrapper, unused HttpPostService and redundant permission/storage checks
+
+### V. 3.8.9 - Jan 14, 2026
+
+* Fix: Integration logs not showing in release mode
+* Improve: Added two-level logging system for cleaner debug and diagnostic log separation
+* Fix: Active session being accidentally deleted during cleanup operations
+* Fix: Video encoder failures and orphan cleanup causing crashes
+* Fix: WebView content exposed when alert dialogs appear over WebView
+* Fix: Toolbar key not appearing in Flutter datafile for non-navigation scenarios
+* Fix: WorkManager crash when uploading sessions from older SDK versions
+* Fix: Missing zip extensions on uploaded data and video files
+
+### V. 3.8.8 - Jan 6, 2026
+
+* Improve: Synchronously stop session to ensure crash data and crash video are properly captured
+* Fix: Total session time and video length mismatch
+
+### V. 3.8.7 - Dec 29, 2025
+
+* Fix: Screen recording on full-screen occlusion
+* Fix: Crashed sessions uploading when filtered by dashboard settings
+
+### V. 3.8.6 - Dec 22, 2025
+
+* Fix: ANR issues caused by blocking SharedPreferences operations
+* Fix: Manual occlusion being lost in RecyclerView detach/reattach cycles
+* Fix: Flutter occlusion rect alignment with native coordinates
+
+### V. 3.8.5 - Dec 18, 2025
+
+* Fix: RecyclerView occlusion disappearing
+* Fix: Manual occlusion being lost
+* Fix: Cross-platform occlusion rects transformation issues
+* Fix: Bitmap dimensions don't match on rotation
+* Fix: Flutter bar cutout and release compile issue
+* Fix: Dex errors (localiza)
+* Fix: Screen tagging skipped when screen recording is paused (reverted)
+* Improve: Reduce delta when fast scrolling
+
+### V. 3.8.4 - Dec 3, 2025
+
+* Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
+* Fix: Manual screen name being reset on session reset
+* Fix: Video orientation not changing correctly
+* Fix: Timeline not matching video playback
+* Fix: Alert dialogs not appearing in video recordings
+* Fix: Session upload not rescheduling when app returns to foreground with WiFi
+* Improve: AI text occlusion feature flag auto-enabled when added to config
+* Improve: New upload architecture for better reliability
+* Improve: Flutter initial screen tagging and navigation handling
+* Improve: Remove WorkManager dependency - apps can upload without it
+* Improve: Unified occlusion state management across SDK
+
+### V. 3.8.3 - Nov 21, 2025
+
+* Fix: Skip KeyboardInsetsTracker reinstall if already attached to activity
+* Fix: Delete session if s3 token is missing from backend
+* Fix: Crash due to R8 inlining code
+* Improve: Flutter occlusion handling
+* Improve: Add implementation for flutter occlusion
+* Improve: Add support for app key in ae region
+
+### V. 3.8.2 - Nov 19, 2025
+
+* Improve: Add UploadService fallback when WorkManager unavailable
+* Improve: Add session clock for data/video synchronization
+* Refactor: Unify session stop into single path
+* Refactor: Replace bitmap with FramePacket for better frame handling
+* Fix: Deadlock when app going to background
+* Fix: Flutter not drawing issue on PixelCopy
+* Fix: Video duration not matching actual session time
+* Fix: Session not uploading on Wi-Fi only mode
+* Fix: Occlusion issue in screen and view
+
+### V. 3.8.1 - Nov 7, 2025
+
+* Refactored Android Project to improve: Session Upload, Screen Tagging, Video Recording, Compose Occlusion, Frame Pipeline, ServiceHandler and many more.
+
+### V. 3.7.3 - Sept 17, 2025
+
+* Fix: resolve session upload issue in release mode
+
+### V. 3.7.2 - Aug 21, 2025
+
+* Fix: Red screen appearing when pause/resuming recording and when short breaks are created
+* Fix: Occlusion skipping on WebView
+* Improve: Shipping AI Text Occlusion as a new optional module
+
+### V. 3.7.1 - Jul 29, 2025
+
+* Added: Screen Action / Smart Events support for Jetpack Compose
+* Fix: Google Maps ClassNotFoundException
 
 ### V. 3.7.0 - Jul 1, 2025
 
