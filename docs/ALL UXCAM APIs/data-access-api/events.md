@@ -324,7 +324,7 @@ To authenticate the List event API, App ID and API key are required. See [authen
 
 The List event API provides information about events in several key-value pairs grouped under different keys: session properties data are under the "**sessionProperty**" key, device information is under the "**device**" key, user properties are under the "**userProperty**" key, and event custom properties information is under the "**eventProperty**" key.
 
-```coffeescript Example
+```json Example
 {
   "success": true,
   "data": [
@@ -413,7 +413,7 @@ To authenticate the event analytics API, app id and API key are required. See [a
 
 The event analytics API provides aggregated data of sessions based on the event query, which is grouped by grouping attributes. It gives us all of the session aggregate data in the output so it can be used to plot statistical charts.
 
-```coffeescript Example
+```json Example
 {
   "success": true,
   "data": [

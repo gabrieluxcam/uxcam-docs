@@ -18,10 +18,9 @@ To occlude the sensitive views, you simply need to add the `uxcam-occlude` class
 **Example:**\
 Let's assume you have a login form with two input fields for username and password. To occlude these fields, modify the HTML code as follows:
 
-```coffeescript HTML
+```html HTML
 <input type="text" class="uxcam-occlude" name="username" placeholder="Username">
 <input type="password" class="uxcam-occlude" name="password" placeholder="Password">
-
 ```
 
 In the example above, we added the `uxcam-occlude` class to both input fields. Now, UXCam will hide these fields in the recorded sessions, ensuring sensitive information remains confidential.

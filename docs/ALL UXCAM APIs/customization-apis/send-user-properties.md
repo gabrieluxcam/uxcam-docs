@@ -1,6 +1,6 @@
 ---
 title: Send User Properties
-excerpt: ''
+excerpt: 'API reference for identifying users and setting custom properties'
 deprecated: false
 hidden: false
 metadata:
@@ -14,97 +14,114 @@ next:
       slug: send-events
       title: Send Events and Properties
 ---
-By default, UXCam generates a random alias name to identify your users based on the Install ID. We also show you other properties about the user such as location, device used, network type, and app version. However, you can send up to 100 additional user properties with our API. 
+Identify users with custom IDs and attach properties for filtering, segmentation, and analytics.
 
-**Sending additional user properties will help you:**
+## Use Cases
 
-* Have a better understanding of your users’ actions, create segments, and discover how behavior changes between different audiences.
-* Easily identify your users with a unique User ID to pinpoint their issues and provide better support.
-* Identify your users across multiple devices.
+- Identify users across sessions and devices
+- Segment users by role, subscription, or other attributes
+- Filter sessions by user properties
+- Provide better support by finding specific users
 
-We recommend not sending **PII data**, such as email address or phone number, and instead, send your own and unique User ID to UXCam. However, if you do need to send PII data, you will need to sign a DPA agreement with us. Please contact [team@uxcam.com](mailto:team@uxcam.com) to discuss it.
+> **Privacy Note**: Avoid sending PII (email, phone) unless you have a DPA with UXCam. Use internal user IDs instead. Contact [team@uxcam.com](mailto:team@uxcam.com) for DPA details.
 
-### Set user Identity
+---
 
-You can replace the default alias with your own user ID using this method:
+## Set User Identity
+
+Replace UXCam's auto-generated alias with your own user ID.
 
 ```swift iOS
-UXCam.setUserIdentity(_ userIdentity: String)
+UXCam.setUserIdentity("user-123")
 ```
 ```java Android
-UXCam.setUserIdentity(String userIdentity);
+UXCam.setUserIdentity("user-123");
+```
+```dart Flutter
+FlutterUxcam.setUserIdentity("user-123");
 ```
 ```javascript React Native
-RNUxcam.setUserIdentity: (userIdentity: string) => void
-```
-```javascript Flutter
-void setUserIdentity(String userIdentity)
+RNUxcam.setUserIdentity("user-123");
 ```
 ```csharp Xamarin
-void UXCam.SetUserIdentity(string userIdentity)
+UXCam.SetUserIdentity("user-123");
 ```
 ```javascript Cordova
-UXCam.setUserIdentity: (userIdentity: string) => void
+UXCam.setUserIdentity("user-123");
 ```
 
-> 📘 The API parameters are:\
-> **userIdentity**: The new name for the user.
+**Parameter**: `userIdentity` (String) - Your unique identifier for the user.
 
-### Send Additional User Information
+---
 
-You can send additional user properties to gather more insights or to easily filter or group sessions, users, or events by specific user properties.
+## Set User Property
 
-> 📘 E.g.  Role, Company name, Acquisition source, Subscription type, Loyalty membership, NPS score or rating, etc.
+Attach custom properties to users for filtering and segmentation.
 
 ```swift iOS
-setUserProperty(_ propertyName: String, value: Any)
-    
-//Example
-UXCam.setUserProperty("role", value: "your-role")
 UXCam.setUserProperty("subscription_type", value: "premium")
-UXCam.setUserProperty("company_name", value: "your-company")
+UXCam.setUserProperty("company_name", value: "Acme Inc")
 ```
 ```java Android
-setUserProperty(String propertyName, String value)
-    
-//Example
-UXCam.setUserProperty("role","your-role")
-UXCam.setUserProperty("subscription_type","premium")
-UXCam.setUserProperty("company_name","your-company")
+UXCam.setUserProperty("subscription_type", "premium");
+UXCam.setUserProperty("company_name", "Acme Inc");
+```
+```dart Flutter
+FlutterUxcam.setUserProperty("subscription_type", "premium");
+FlutterUxcam.setUserProperty("company_name", "Acme Inc");
 ```
 ```javascript React Native
-RNUxcam.setUserProperty: (propertyName: string, value: string | number) => void
-    
-//Example
-RNUxcam.setUserProperty("role","your-role")
-RNUxcam.setUserProperty("subscription_type","premium")
-RNUxcam.setUserProperty("company_name","your-company")
-```
-```javascript Flutter
-void setUserProperty(String key, String value)
-    
-//Example
-FlutterUxcam.setUserProperty("role","your-role")
-FlutterUxcam.setUserProperty("subscription_type","premium")
-FlutterUxcam.setUserProperty("company_name","your-company")
+RNUxcam.setUserProperty("subscription_type", "premium");
+RNUxcam.setUserProperty("company_name", "Acme Inc");
 ```
 ```csharp Xamarin
-void UXCam.SetUserProperty(string propertyName, string value)
-    
-//Example
-UXCam.setUserProperty("role","your-role")
-UXCam.setUserProperty("subscription_type","premium")
-UXCam.setUserProperty("company_name","your-company")
+UXCam.SetUserProperty("subscription_type", "premium");
+UXCam.SetUserProperty("company_name", "Acme Inc");
 ```
-```swift Cordova
-setUserProperty(_ propertyName: String, value: Any)
-    
-//Example
-UXCam.setUserProperty("role","your-role")
-UXCam.setUserProperty("subscription_type","premium")
-UXCam.setUserProperty("company_name","your-company")
+```javascript Cordova
+UXCam.setUserProperty("subscription_type", "premium");
+UXCam.setUserProperty("company_name", "Acme Inc");
 ```
 
-> 📘 The API parameters are:\
-> **propertyName**: The name of the property to attach to the user.\
-> **value**: A value to associate with the property. String or Number are accepted for value.
+---
+
+## API Parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `propertyName` | String | Name of the property |
+| `value` | String or Number | Value to associate |
+
+---
+
+## Limits
+
+| Limit | Value |
+|-------|-------|
+| User properties per user | 100 |
+| Property value types | String, Number |
+
+---
+
+## Example Properties
+
+Common user properties to consider:
+
+| Property | Example |
+|----------|---------|
+| `role` | `admin`, `user`, `guest` |
+| `subscription_type` | `free`, `premium`, `enterprise` |
+| `company_name` | Company identifier |
+| `acquisition_source` | `organic`, `paid`, `referral` |
+| `nps_score` | Numeric rating |
+
+---
+
+## Platform Implementation Guides
+
+| Platform | Guide |
+|----------|-------|
+| Android | [Users and Properties](/docs/users-and-properties-android) |
+| iOS | [Custom Users and Properties](/docs/custom-users-and-properties-ios) |
+| Flutter | [Users and Properties](/docs/users-and-properties-flutter) |
+| React Native | [Custom Users and Properties](/docs/custom-users-and-properties-react-native) |

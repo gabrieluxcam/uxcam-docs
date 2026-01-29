@@ -63,7 +63,7 @@ Filters are valid for all [User Data](https://developer.uxcam.com/docs/users-1) 
 
 In case of Attribute data type JSON filters need to be passed in the given format below. There are two data attributes having JSON type [user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)
 
-```coffeescript Example
+```text Example
 filters=[{"attribute":"user_custom_property","operator":
 "<Operator Name>","property_name":"<custom property Name>","value":"<property value>"}]
 filters=[{"attribute":"event_custom_property","operator":
@@ -78,7 +78,7 @@ Grouping is a method of organizing data attributes into groups and then displayi
 
 Groupings are valid for all User Data categories, Session Data categories, and Event Data categories having attribute data type (**string, bool, and  DateTime String**)
 
-```coffeescript Example
+```text Example
 Single grouping:
 group_by=[{"attribute":"<Attribute Name>"}]
 group_by=[{"attribute":"<Attribute Name>","max_group_number":500}]
@@ -91,7 +91,7 @@ Two groupings:group_by=[{"attribute":"<Attribute Name 1>","max_group_number":500
 
 In case of Attribute data type JSON, this need to be passed in the given format below. There are two data attributes having JSON type [user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)
 
-```coffeescript Example
+```text Example
 group_by=[{"attribute":"user_custom_property","property_name":"<custom property Name>"}]
 group_by=[{"attribute":"event_custom_property","property_name":"<custom property Name>"}]
  
@@ -121,7 +121,7 @@ Here are the valid aggregation functions:
 
 **Note:**  For JSON ([user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)) attribute data type, this supports aggregation functions like(sum/avg/min/max) as well if property\_name values contain integer values. If aggregation functions are used with string value then this will return an empty response \[[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&aggregation=\[%7B%22attribute%22:%22user_custom_property%22,%22operator%22:%22avg%22,%22property_name%22:%22age_group%22%7D]\&page=1\&page_size=20)]
 
-```coffeescript Sample for JSON type aggregation:
+```text JSON Aggregation Example
 aggregation=[{"attribute":"user_custom_property","property_name":"price","operator":"avg"}]
 
 aggregation=[{"attribute":"event_custom_property","property_name":"duration","operator":"avg"}]

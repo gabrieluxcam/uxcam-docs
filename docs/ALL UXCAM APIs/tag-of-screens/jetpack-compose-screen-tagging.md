@@ -24,17 +24,17 @@ The approach is to listen to `LaunchedEffect` on the current route from `navCont
 
 Below is an example of how to achieve "automatic" tagging of your compose screens by finding a `fun` where `navController` is created with the method `rememberNavController()`.
 
-```coffeescript Android
+```kotlin Android
 val navController = rememberNavController()
 
 // Snippet for tagging screen on route
 val navBackStackEntry by navController.currentBackStackEntryAsState()
 val currentRoute = navBackStackEntry?.destination?.route
 LaunchedEffect(currentRoute) {
-  currentRoute?.let { 
+  currentRoute?.let {
     UXCam.tagScreenName(currentRoute)
   }
-} 
+}
 ```
 
 This approach, while requiring you to set it up, should allow you to tag screens in your app according to your routes.

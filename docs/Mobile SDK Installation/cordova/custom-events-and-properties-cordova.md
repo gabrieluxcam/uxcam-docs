@@ -26,7 +26,7 @@ Events are powerful tools for tracking user interactions within your application
 
 To send an event, use the following method in your code:
 
-```coffeescript Cordova
+```javascript Cordova
 UXCam.logEvent: (eventName: string) => void
 ```
 
@@ -38,7 +38,7 @@ Events can also have properties associated with them to provide additional conte
 
 To send an event with properties, use the following method:
 
-```coffeescript Cordova
+```javascript Cordova
 UXCam.logEventWithProperties: (eventName: string, properties: any) => void
 
 UXCam.logEventWithProperties("purchased", {

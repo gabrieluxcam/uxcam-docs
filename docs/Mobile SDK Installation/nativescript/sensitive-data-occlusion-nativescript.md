@@ -244,7 +244,7 @@ The API parameters are:
 
 **sensitiveView**: A View object that contains sensitive information.
 
-```coffeescript
+```typescript
 import { NSUXCam } from 'nativescript-uxcam';
 
 NSUXCam.occludeSensitiveView(viewElement); // Occlude specific view element

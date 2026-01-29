@@ -188,7 +188,7 @@ Use it to hide specific views with sensitive information that you don't want to 
 
 You can occlude sensitive elements in your app by adding uxcam-occlude as your element class name
 
-```coffeescript
+```html
 <label for="email">Email:</label>
 <input type="email" id="email" class="uxcam-occlude" name="email">
 ```

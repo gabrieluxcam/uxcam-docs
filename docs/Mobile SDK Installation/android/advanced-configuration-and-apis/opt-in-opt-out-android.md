@@ -28,7 +28,7 @@ UXCam.optOutOverall()
 
 The SDK by default opts-in users for UXCam recording on app installs. If the user has been disabled for UXCam recording by using the optOut method, you can use this method to enable recording at runtime.
 
-```javascript Android
+```java Android
 UXCam.optInOverall()
 ```
 

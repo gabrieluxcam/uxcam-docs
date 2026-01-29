@@ -70,7 +70,7 @@ try {
     UXCam.reportExceptionEvent(e, map);
 }
 ```
-```coffeescript Flutter
+```dart Flutter
 PlatformDispatcher.instance.onError = (error, StackTrace stackTrace) {
     // ... other code
     FlutterUxcam.reportExceptionEvent(error, stackTrace);

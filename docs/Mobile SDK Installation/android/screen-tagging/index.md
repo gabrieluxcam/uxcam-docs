@@ -57,17 +57,17 @@ For Android, UXCam's SDK automatically tags screens (i.e., activities), and this
 
 It will always be enabled by default, but you can disable this from your SDK configuration options as such:
 
-```coffeescript Kotlin
+```kotlin Kotlin
 val config = UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
     .enableAutomaticScreenNameTagging(false) // TRUE BY DEFAULT
     .build()
 UXCam.startWithConfiguration(config)
 ```
-```coffeescript Java
+```java Java
 UXConfig config = new UXConfig.Builder(BuildConfig.YOUR_UXCAM_KEY)
     .enableAutomaticScreenNameTagging(false) // TRUE BY DEFAULT
-    .build()
-UXCam.startWithConfiguration(config)
+    .build();
+UXCam.startWithConfiguration(config);
 ```
 
 ***
@@ -93,7 +93,7 @@ UXCam.startWithConfiguration(config)
 
 To tag a screen in an activity, use the following code in the `onCreate()` method of your activity:
 
-```coffeescript Android
+```java Android
 @Override
 protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -107,7 +107,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 Similarly, to tag a fragment, place the code in the `onResume()` method of the fragment:
 
-```coffeescript Android
+```java Android
 @Override
 public void onResume() {
     super.onResume();
@@ -176,23 +176,23 @@ If something is off, look for duplicate tag calls or a missing route handler.
 You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={4}>
-  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/update/docs/jetpack-compose-screen-tagging-1-android-android#/" icon="fa-mobile">
+  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/docs/jetpack-compose-screen-tagging-1-android#/" icon="fa-mobile">
     If applicable, make sure screen tagging is properly done in your Compose App.
   </Card>
 
   <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
-    Protect Your Users’ Privacy and PII Data
+    Protect Your Users' Privacy and PII Data
 
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties-android-android#/" icon="fa-user">
+  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties-android#/" icon="fa-user">
     Get The Full Picture with User Analytics
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-android-android#/" icon="fa-question">
+  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-android#/" icon="fa-question">
     Deeper Insights of Your Users' interactions
 
     > Send Events and Add Properties

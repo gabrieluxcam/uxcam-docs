@@ -32,35 +32,29 @@ What do you need to do in order to implement this new feature?
 
 1. **First of all (IMPORTANT), import the library that contains this new wrapper**
 
-<pre>
-  <code class="language-java">
-    import 'package:flutter\_uxcam/flutter\_uxcam.dart';
-  </code>
-</pre>
+```dart
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+```
 
 2. **Decide which is the widget that you would like to occlude and wrap it with an occlusion container (OccludeWrapper Widget).**
 
-<pre>
-  <code class="language-java">
-    const OccludeWrapper(\
-    child:
+```dart
+const OccludeWrapper(
+  child:
     // Here goes your widget
-    ),
-  </code>
-</pre>
+),
+```
 
 Example on how to get a Text widget occluded
 
-<pre>
-  <code class="language-java">
-    //Example\
-    const OccludeWrapper(\
-    child: Text(\
-    'Sensitive data that will be occluded by the Wrapper',\
-    ),\
-    ),
-  </code>
-</pre>
+```dart
+// Example
+const OccludeWrapper(
+  child: Text(
+    'Sensitive data that will be occluded by the Wrapper',
+  ),
+),
+```
 
 3. **Now you are all set, you should start getting video recordings with your widgets being occluded properly.**
 

@@ -1,9 +1,16 @@
-- tag-of-screens
-- screen-blurring
+# Core Customization (Most Used)
 - customization-apis
-- control-recording-1
+- tag-of-screens
+
+# Privacy & Compliance
+- screen-blurring
 - opt-in-opt-out
+
+# Session Management
+- control-recording-1
 - control-crash-handling
 - report-handled-exceptions
-- data-access-api
+
+# Debugging & Advanced
 - integration-logging-guide-for-developers
+- data-access-api

@@ -176,7 +176,7 @@ For a more in depth breakdown of occlusion in Jetpack Compose, see here.
 
 1. Add the Kotlin extensions:
 
-   ```coffeescript Kotlin
+   ```kotlin Kotlin
    implementation("com.uxcam:uxcam-ktx:1.+")
    ```
 

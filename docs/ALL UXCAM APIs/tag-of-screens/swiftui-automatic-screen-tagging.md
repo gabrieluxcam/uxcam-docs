@@ -28,7 +28,7 @@ In SwiftUI, screens and views are the same, and multiple screens can be presente
 
 To achieve this, please enable the configuration option `configuration.enableAutomaticScreenNameTagging = true` when setting up UXCam to start
 
-```coffeescript
+```swift
 init(){
      UXCamCore.optIntoSchematicRecordings()
      let config = Configuration(appKey: "YOUR APP KEY")
@@ -45,7 +45,7 @@ If you want to tag screens in the UXCam dashboard without showing the title in t
 
 #### Example of the manual approach
 
-```coffeescript
+```swift
 struct NavigationItem: Identifiable, Hashable {
     var id = UUID()
     var title: String

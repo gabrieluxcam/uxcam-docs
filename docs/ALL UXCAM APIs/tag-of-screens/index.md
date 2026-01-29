@@ -109,41 +109,41 @@ NSUXCam.tagScreenName: (screenName: string) => void
 
 By default, automatic screen name tagging is set to true, so to **enable** or **disable** the automatic screen tagging you should do so from the configuration object at SDK startup:
 
-```c iOS
+```swift iOS
 let configuration = UXCamConfiguration(appKey: "YourAppKey")
 
-//Example      
+//Example
 configuration.enableAutomaticScreenNameTagging = true // call it False in order to disable the Automatic Screen taggin
 ```
-```coffeescript Android
+```kotlin Android
 UXConfig config = new UXConfig.Builder('yourAppKey')
     .enableAutomaticScreenNameTagging(true) // call it False in order to disable the Automatic Screen tagging
     .enableImprovedScreenCapture(true)
     .build()
 ```
-```coffeescript Flutter
+```dart Flutter
 FlutterUxConfig config = FlutterUxConfig(
       userAppKey: "UXCAM_APP_KEY",
       enableAutomaticScreenNameTagging: false);
-   
+
 ```
-```coffeescript React Native
+```javascript React Native
 const configuration = {
     userAppKey: 'YOUR API KEY',
     enableAutomaticScreenNameTagging: false,
     enableImprovedScreenCapture: true
  }
 ```
-```coffeescript Cordova
+```javascript Cordova
 const configuration = {
     userAppKey: 'YOUR API KEY',
     enableAutomaticScreenNameTagging:false, // default is true
     enableImprovedScreenCapture:true,
 }
 ```
-```coffeescript Xamarin
+```csharp Xamarin
 UXCamConfiguration configuration = new UXCamConfiguration(
-     userAppKey: ‘userAppKey’,
+     userAppKey: 'userAppKey',
      enableImprovedScreenCapture: true,
      enableAutomaticScreenNameTagging:false, //default is true
 );

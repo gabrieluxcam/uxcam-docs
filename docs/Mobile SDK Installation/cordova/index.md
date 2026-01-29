@@ -44,17 +44,16 @@ Add UXCam to your Cordova project by running the following command:
 
 To initialize UXCam, you need to call its configuration method once the device is ready. You can typically do this in the `onDeviceReady()` function. Replace `'YOUR APP KEY'` with the actual key from your UXCam dashboard.
 
-```coffeescript Cordova
+```javascript Cordova
+UXCam.optIntoSchematicRecordings(); // Enable session video recording on iOS
 
-    UXCam.optIntoSchematicRecordings(); // Enable session video recording on iOS
+const configuration = {
+    userAppKey: 'YOUR APP KEY',
+    enableAutomaticScreenNameTagging: false,
+    enableImprovedScreenCapture: true,
+};
 
-    const configuration = {
-        userAppKey: 'YOUR APP KEY',
-        enableAutomaticScreenNameTagging: false,
-        enableImprovedScreenCapture: true,
-    };
-    
-    UXCam.startWithConfiguration(configuration);
+UXCam.startWithConfiguration(configuration);
 ```
 
 ## Integration for Different Frameworks in Cordova:
@@ -65,7 +64,7 @@ If you're using Ionic, here are the steps to integrate UXCam:
 
 1. **Install UXCam for Ionic**
 
-   ```coffeescript Ionic
+   ```bash Ionic
    ionic cordova plugin add cordova-uxcam
    ```
 

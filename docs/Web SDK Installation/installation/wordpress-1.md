@@ -29,7 +29,7 @@ To add Google Tab Manager integration plugin to your WordPress site:
 3. Install a plugin like “Insert Headers and Footers” or “Site Kit by Google”.
 4. Activate the plugin.
 
-<GitHubCallout type="note">For setting up UXCam through Google Tag Manager, make sure you have a Google Tag Manager account set up with your WordPress site, and continue that installation and set up steps described in the [Google Tag Manager page](https://developer.uxcam.com/v2.0-draft/update/docs/google-tag-manager)   </GitHubCallout>
+<GitHubCallout type="note">For setting up UXCam through Google Tag Manager, make sure you have a Google Tag Manager account set up with your WordPress site, and continue that installation and set up steps described in the [Google Tag Manager page](https://developer.uxcam.com/docs/google-tag-manager-1)</GitHubCallout>
 
 ### Add the UXCam Script - Through JavaScript Plugin
 

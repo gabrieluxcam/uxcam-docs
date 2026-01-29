@@ -25,7 +25,7 @@ Events are powerful tools for tracking user interactions within your application
 
 To send an event, use the following method in your code:
 
-```coffeescript Nativescript
+```typescript NativeScript
 NSUXCam.logEvent: (eventName: string) => void
 ```
 
@@ -37,7 +37,7 @@ Events can also have properties associated with them to provide additional conte
 
 To send an event with properties, use the following method:
 
-```coffeescript NAtivescript
+```typescript NativeScript
 NSUXCam.logEventWithProperties: (eventName: string, properties: any) => void
 
 NSUXCam.logEventWithProperties("purchased", {

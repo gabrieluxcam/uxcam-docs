@@ -321,7 +321,7 @@ The response is in JSON format and includes a data array with multiple objects e
 
 The List user API provides information about a user in several key-value pairs grouped under different keys: user custom properties are under the "**property**" key, user device information is under the "**device**" key, user engagement metrics are under the "**usage**" key, and user location information is under the "**location**" key.
 
-```coffeescript Example
+```json Example
 {
 
   "success": true,
@@ -451,7 +451,7 @@ To authenticate the event analytics API, app id and API key are required. See [a
 
 The user analytics API provides aggregated data of users based on the user’s query which is grouped by grouping attributes. It gives us all of the user aggregate data in the output so it can be used to plot statistical charts.
 
-```coffeescript Example
+```json Example
 {
   "success": true,
   "data": [

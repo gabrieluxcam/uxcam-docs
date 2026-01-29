@@ -56,7 +56,7 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
 3. **Add the Navigation Observer**
    - **Using Navigator 1.0:**\ <br />\
      Add the `FlutterUxcamNavigatorObserver` to the `navigatorObservers` of your \`MaterialApp
-     ```coffeescript Flutter
+     ```dart Flutter
      MaterialApp(
        ...
        navigatorObservers: [
@@ -67,7 +67,7 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
      ```
    - **Using Navigator 2.0:**\ <br />\
      Add it to the observers for your router. Below is an example using GoRouter:
-     ```coffeescript Flutter
+     ```dart Flutter
      final GoRouter router = GoRouter(
        ...
        observers: [
@@ -323,7 +323,7 @@ After implementing hybrid tagging, verify:
 
 In Flutter, tagging a screen manually is straightforward. You can use the following line of code to tag a screen:
 
-```coffeescript Flutter
+```dart Flutter
 import 'package:flutter_uxcam/flutter_uxcam.dart';
 
 FlutterUxcam.tagScreenName("Home Screen");
@@ -333,7 +333,7 @@ FlutterUxcam.tagScreenName("Home Screen");
 
 To ensure your screens are tagged consistently, we recommend placing the tagging code inside the initState() method of your widget or using a navigation listener to call the screen tagging method every time the screen appears.
 
-```coffeescript Flutter
+```dart Flutter
 import 'package:flutter/material.dart';
 import 'package:flutter_uxcam/flutter_uxcam.dart';
 

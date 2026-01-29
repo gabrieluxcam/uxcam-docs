@@ -1,6 +1,6 @@
 ---
 title: Sensitive Data Occlusion and Screen Blurring
-excerpt: ''
+excerpt: 'API reference for hiding sensitive data in session recordings'
 deprecated: false
 hidden: false
 metadata:
@@ -10,601 +10,233 @@ metadata:
 next:
   description: ''
 ---
-UXCam ensures that as a controller you can use our platform and fulfil your obligations under GDPR. However, if you collect any **PII data** in your app such as email address, phone, or credit card number you should use our API to hide it.
+UXCam ensures you can fulfil GDPR obligations. If you collect **PII data** (email, phone, credit card), use our APIs to hide it before it reaches UXCam servers.
 
-You can choose to hide:
+## Occlusion Methods Overview
 
-* **Texts**: when you only collect PII data with text fields
-* **Screen Views**: when you need to hide a specific section of your screen.
-* **Screens:** when you need to hide the whole screen, e.g. payment screen.
+| Method | Purpose | Platforms |
+|--------|---------|-----------|
+| **Overlay** | Cover entire screen with solid color | All |
+| **Blur** | Blur entire screen (adjustable radius) | All |
+| **Occlude All Text Fields** | Hide all text inputs | All except Flutter |
+| **Occlude Sensitive View** | Hide specific UI elements | All |
 
-Sensitive information will be hidden under red boxes or blurred screens on the device before rendering the video and therefore never sent to UXCam. Make sure that all this info is hidden before releasing your app to production to make sure your users' PII is never recorded.
+## Default Occlusions (No Code Required)
 
-Please keep in mind that when hiding sensitive information you can still record gestures for that view or screen, however, if you're hiding passwords or keywords you should enable the option to hide gestures as well.
+| Platform | Auto-Occluded Elements |
+|----------|----------------------|
+| **iOS** | Text fields with `password`, `creditCardNumber`, `newPassword`, `oneTimeCode` content types |
+| **Android** | Password fields with `textPassword` input type |
+| **React Native / SwiftUI / Ionic** | Elements with `uxcam-occlude` class or `type="password"` |
+| **Flutter** | None by default (requires wrapper) |
+| **Jetpack Compose** | None (requires manual setup) |
 
-***
+## Dashboard Configuration (Recommended)
 
-## Are there any elements occluded right out of the box?
+Configure occlusion rules without code changes via **App Settings > Video Recording Privacy**:
 
-**iOS**
+- **Global rules**: Record, occlude, or blur all screens
+- **Screen-specific rules**: Different rules per screen
+- **Text field occlusion**: Hide all inputs on selected screens
 
-* Occlusion of textfields based on `UITextContentType` property, if the textfield has any of `password`, `creditcardnumber`, `newpassword` or `onetimecode`it will be occluded by default, regardless of if it's shown at some point in the app. 
+Requires: iOS 3.6.0+, Android 3.6.0+, Flutter 2.3.1+, React Native 5.4.6+
 
-**Android**: 
+---
 
-* Password fields with `android:inputType="textPassword"` or `InputType.TYPE_TEXT_VARIATION_PASSWORD` are occluded.
+## SDK API Reference
 
-For **Ionic, React Native, and SwiftUI**, any text input tagged with `uxcam-occlude` or `<input type="password">` is occluded.
+### Apply Overlay
 
-For **Flutter**, occlusion is not enabled by default and requires a wrapper class to be used.
-
-**Jetpack Compose** does not support default occlusion right out of the box at the moment.
-
-***
-
-Password fields in Cordova and web views are also occluded.
-
-> 🚧 Dashboard Occlusion Support
->
-> In order to enable occlusion rules from your dashboard, it is necessary that the SDK has a version equal or above to: **iOS v3.6.0**, **Android v3.6.0**, **Flutter v2.3.1** and **React Native v5.4.6**
->
-> Additional supported SDKs will be added in these documents once the supported versions release.
->
-> Read below for more information on how to take advantage of this feature
-
-# Add Occlusions Directly From Your Dashboard:
-
-You can now add occlusion rules to your app directly from your dashboard. Simply go into your app's settings in your dashboard and enable the rules you need, below is a breakdown of how to take full advantage of this feature, without having to resort to adding additional code in your app for most scenarios:
-
-### Occlude All Screens from Dashboard
-
-From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
-
-<Image alt="Blur option will also enable you to select the blur radius (strength) once selected." align="center" src="https://files.readme.io/751b737-image.png">
-  Blur option will also enable you to select the blur radius (strength) once selected.
-</Image>
-
-### Screen Specific Occlusion Rules from Dashboard
-
-You can also customise which screens you want to apply occlusion rules to, and can create multiple rules, for example, blurring a particular screen but occluding others:
-
-![](https://files.readme.io/6b8810f-small-Staging_-_UXCam_Dashboard.png)
-
-### Occlude Text Input Fields from Dashboard
-
-You can also choose to occlude all text input fields on a specific or multiple screens by simply checking the option and selecting the screens you'd like to occlude the text inputs in. 
-
-**IMPORTANT:** Flutter does **not support** text input occlusion, if you want to occlude specific parts of your screens in Flutter, see the [Flutter Occlusion Approach](https://developer.uxcam.com/docs/flutter-occlusion-feature) page.
-
-![](https://files.readme.io/253cbf0-small-Staging_-_UXCam_Dashboard.png)
-
-> 📘
->
-> Additionally, you can opt to record gestures on all blurred/occluded screens by toggling on the option 
->
-> ![](https://files.readme.io/33bf4ad-image.png)
-
-## Dashboard Occlusion Limitations and Supported SDKs
-
-| UXCam SDK    | Supported Version |
-| :----------- | :---------------- |
-| iOS          | 3.6.0+            |
-| Android      | 3.6.0+            |
-| Flutter      | 2.3.1+            |
-| React Native | 5.4.6+            |
-
-### Occlusion priority:
-
-* Screen specific overlay from Dashboard
-* Screen specific blur from Dashboard
-* Global blur/overlay from Dashboard that is applied to all screens
-* Screen specific Overlay from SDK
-* Screen specific Blur from SDK
-* Global blur/overlay from SDK that is applied to all screens
-* Global blur/overlay from SDK that has Record exception screens
-
-### Limitations:
-
-* Flutter does not support text input occlusion, either from dashboard or code. 
-* Hiding sensitive **Views** needs to be handled from code (see [here](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view))
-
-# Occlusion Setup from SDK Code
-
-If you desire to manually handle occlusions in your app or [occlude specific views](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view) instead of entire screens, read below for guidance on how to set it up. 
-
-## Occlude The Entire Screen with Overlay
-
-You can configure different overlay options with the following:
+Covers the screen with a solid color. Sensitive content is never recorded.
 
 ```java Android
 UXCamOverlay overlay = new UXCamOverlay.Builder()
-                              .withoutGesture(false)
-                              .build();
-
-UXCam.applyOcclusion(overlay); //To apply overlay
-UXCam.removeOcclusion(overlay); //To remove overlay
+    .withoutGesture(false)  // true = hide gestures (default)
+    .screens(Arrays.asList("Screen1"))  // optional
+    .build();
+UXCam.applyOcclusion(overlay);
+UXCam.removeOcclusion(overlay);
 ```
 ```swift iOS
 let overlay = UXCamOverlaySetting(color: .yellow)
-
 UXCam.applyOcclusion(overlay)
-
-UXCam.removeOcclusion() // This removes all manual occlusion
-UXCam.removeOcclusion(of: .overlay)  // This removes manual occlusion of type overlay
+UXCam.removeOcclusion(of: .overlay)
 ```
 ```dart Flutter
-import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
-
-FlutterUXOverlay overlay = FlutterUXOverlay(
-   		color: Colors.red,
-		hideGestures: true // optional, default true
-	);
-
-FlutterUxcam.applyOcclusion(overlay); //To apply overlay
-FlutterUxcam.removeOcclusion(overlay); //To remove overlay
+FlutterUXOverlay overlay = FlutterUXOverlay(color: Colors.red, hideGestures: true);
+FlutterUxcam.applyOcclusion(overlay);
+FlutterUxcam.removeOcclusion(overlay);
 ```
 ```javascript React Native
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
-
-// IF USING SDK VERSION 6.0.0 PLEASE USE:
-// import { OcclusionType } from 'react-native-ux-cam/src/types';
-
-const overlay = {
-   type: UXCamOcclusionType.Overlay, // compulsory to determine overlay type
-   color: 0xff00ee, // hex integers in 0xrrggbb format
-   hideGestures: true, // optional, default true
-   screens: ["screen1", "screen2"] // optional, default all screens
- }
-
-RNUxcam.applyOcclusion(overlay); // apply overlay
-RNUxcam.removeOcclusion(overlay); // remove overlay
+const overlay = { type: UXCamOcclusionType.Overlay, color: 0xff00ee, hideGestures: true };
+RNUxcam.applyOcclusion(overlay);
+RNUxcam.removeOcclusion(overlay);
 ```
 ```swift SwiftUI
-let overlay = OverlaySetting()
-// To apply at any point without considering screen
-UXCamCore.applyOcclusion(overlay)
-
-// To stop the occlusion that was applied before
+UXCamCore.applyOcclusion(OverlaySetting())
 UXCamCore.removeOcclusion()
 ```
 ```csharp Xamarin
-UXCamOverlaySetting overlay = new UXCamOverlaySetting (UIColor.Yellow);
-
-UXCam.applyOcclusion(overlay); // apply overlay
-UXCam.removeOcclusion(overlay); // remove overlay
-
+UXCam.applyOcclusion(new UXCamOverlaySetting(UIColor.Yellow));
 ```
 ```javascript Cordova
-const overlay = {
-  type: UXCamOcclusionType.Overlay, // compulsory to determine overlay type
-  color: 0xff00ee, // hex integers in 0xrrggbb format
-  hideGestures: true, // optional, default true
-  screens: ["screen1", "screen2"] // optional, default all screens
-}
-UXCam.applyOcclusion(overlay) // apply overlay
-UXCam.removeOcclusion(overlay) // remove overlay
+UXCam.applyOcclusion({ type: UXCamOcclusionType.Overlay, color: 0xff00ee });
 ```
 
-**Available overlay options are:**
+**Parameters:**
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `color` | Color | Overlay color |
+| `hideGestures` / `withoutGesture` | Boolean | Hide gesture recording (default: true) |
+| `screens` | List | Apply to specific screens only |
+| `excludeMentionedScreens` | Boolean | If true, apply to all screens *except* listed ones |
 
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
-<p style={{fontSize: "12px"}}>Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.</p>
+---
 
-<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
-<p style={{fontSize: "12px"}}>Allows you to define the screens where the overlay is to either be applied or not, depending on the value passed to <strong>excludeMentionedScreens(boolean excludeMentionedScreens)</strong>.</p>
+### Apply Blur
 
-<p style={{fontSize: "12px"}}>By default, if no screens are passed, the overlay is applied to all the screens unless explicitly removed. This acts as a global setting and will override all other occlusion settings defined for all screens. The occlusion must be removed to revert this action.</p>
-
-<p style={{fontSize: "12px"}}>If screens are passed, you have the ability to either apply overlay on the mentioned screens or to exclude the mentioned screens from being overlayed.</p>
-
-<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
-<p style={{fontSize: "12px"}}>This option should be used in conjunction with <strong>screens(List screens)</strong>.</p>
-
-<p style={{fontSize: "12px"}}>If the passed in value is true, it tells the SDK to exclude the mentioned screens from occlusion, while applying the occlusion to the rest of the screens in the app.</p>
-
-<p style={{fontSize: "12px"}}>If the passed in value is false, it tells the SDK to apply occlusion only to the screens that have been passed.</p>
-
-<p style={{fontSize: "12px"}}>Default value is false.</p>
-
-<Image title="Overlay.png" alt="2534" align="center" width="80%" src="https://files.readme.io/095be49-Overlay.png">
-  You'll see the desired screen completely hidden while your users navigate through it.
-</Image>
-
-## Blur The Entire Screen
-
-Blur is a new occlusion API that allows you to blur screen records of screens. This lets you obtain information regarding the state of the screen and user interaction, while also maintaining privacy in sensitive screens.
-
-This is useful to set all the occlusion/Blur from one place of the application without having to set it individually in different screens. 
-
-You can configure different options using the following: 
+Blurs the screen while preserving layout visibility. Useful for maintaining context without exposing details.
 
 ```java Android
-UXCamBlur blur = new UXCamBlur.Builder().build();
-
-//Example
 UXCamBlur blur = new UXCamBlur.Builder()
-                      .blurRadius(10) //default 20
-                      .withoutGesture(false)
-                      .build();
-
-UXCam.applyOcclusion(blur); //To apply the Blurring
+    .blurRadius(10)  // default 20
+    .withoutGesture(false)
+    .build();
+UXCam.applyOcclusion(blur);
 ```
 ```swift iOS
-let blurSetting = UXCamBlurSetting(radius: 5)
-UXCam.applyOcclusion(blurSetting)
-
-UXCam.removeOcclusion() // This removes all manual occlusion
-UXCam.removeOcclusion(of: .blur) // This removes manual occlusion of type blur
+let blur = UXCamBlurSetting(radius: 5)
+UXCam.applyOcclusion(blur)
+UXCam.removeOcclusion(of: .blur)
 ```
 ```dart Flutter
-//Import this on the screen you are trying to Blur
-import 'package:flutter_uxcam/uxblur.dart';
-
-FlutterUXBlur blur = FlutterUXBlur(
-   		blurRadius: 10,
-   		blurType: BlurType.gaussian,
-		hideGestures: true // optional, default true
-	);
-
-FlutterUxcam.applyOcclusion(blur); //To apply blur
-FlutterUxcam.removeOcclusion(blur); //To remove blur
+FlutterUXBlur blur = FlutterUXBlur(blurRadius: 10, blurType: BlurType.gaussian);
+FlutterUxcam.applyOcclusion(blur);
 ```
 ```javascript React Native
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
-
-// IF USING SDK VERSION 6.0.0 PLEASE USE:
-// import { OcclusionType } from 'react-native-ux-cam/src/types';
-
-const blur = {
-   type: UXCamOcclusionType.Blur, // compulsory to determine blur type
-   blurRadius: 20, // optional default 10
-   hideGestures: true, // optional, default true
-   screens: ["screen1", "screen2"] // optional, default all screens
- }
- 
-RNUxcam.applyOcclusion(blur); // apply blur
-RNUxcam.removeOcclusion(blur); // remove blur
+const blur = { type: UXCamOcclusionType.Blur, blurRadius: 20, hideGestures: true };
+RNUxcam.applyOcclusion(blur);
 ```
 ```swift SwiftUI
-let blur = BlurSetting()
-// To apply at any point without considering screen
-UXCamCore.applyOcclusion(blur)
-
-// To stop the occlusion that was applied before
-UXCamCore.removeOcclusion()
+UXCamCore.applyOcclusion(BlurSetting())
 ```
 ```csharp Xamarin
-UXCamBlurSetting blur = new UXCamBlurSetting (10);
-
-UXCam.applyOcclusion(blur); // apply blur
-UXCam.removeOcclusion(blur); // remove blur
+UXCam.applyOcclusion(new UXCamBlurSetting(10));
 ```
 ```javascript Cordova
-const blur = {
-  type: 3,
-  blurRadius: 20, // optional default 10
-  hideGestures: true, // optional, default true
-  screens: ["screen1", "screen2"] // optional, default all screens
-}
-
-UXCam.applyOcclusion(blur) // apply overlay
-UXCam.removeOcclusion(blur) // remove overlay
+UXCam.applyOcclusion({ type: 3, blurRadius: 20 });
 ```
 
-**Available blur options are:**
+**Parameters:**
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `blurRadius` | Integer | Blur strength (higher = more blur) |
+| `hideGestures` | Boolean | Hide gesture recording (default: true) |
+| `screens` | List | Apply to specific screens only |
 
-<p style={{fontSize: "17px"}}><code>blurRadius(int blurRadius)</code><br /></p>
-<p style={{fontSize: "12px"}}>This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be.</p>
+---
 
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
-<p style={{fontSize: "12px"}}>Same as overlay. Please refer to overlay section.</p>
+### Occlude All Text Fields
 
-<p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
-<p style={{fontSize: "12px"}}>Same as overlay. Please refer to overlay section.</p>
-
-<p style={{fontSize: "17px"}}><code>excludeMentionedScreens(boolean excludeMentionedScreens)</code><br /></p>
-<p style={{fontSize: "12px"}}>Same as overlay. Please refer to overlay section.</p>
-
-<Image title="UXCam Dashboard - 24 May 2022 (1) (1).gif" alt="736" align="center" src="https://files.readme.io/4b4c4ce-UXCam_Dashboard_-_24_May_2022_1_1.gif">
-  You'll see your desired screens with a blur on top.
-</Image>
-
-**Examples on blur radius property customization:**
-
-<Image alt="Blur radius customization examples" align="center" src="https://files.readme.io/72a8f8d-Blur_Results_Comparison_-_Product_Development_-_Confluence.png">
-  Blur radius customization examples
-</Image>
-
-***
-
-## Occlude all Text Fields
-
-Similar to the new Overlay and Blur APIs:
+Hides all text input fields on screen.
 
 ```java Android
-//Create the object
-UXCamOccludeAllTextFields occludeFields = new UXCamOccludeAllTextFields();
-
-UXCam.applyOcclusion(occludeFields); //To apply occlusion
-UXCam.removeOcclusion(occludeFields); //To remove the occlusion
+UXCam.applyOcclusion(new UXCamOccludeAllTextFields());
 ```
 ```swift iOS
-let hideTextfields = UXCamOccludeAllTextFields()
-
-UXCam.applyOcclusion(hideTextfields) //To apply occlusion
-
-UXCam.removeOcclusion() //This removes all manual occlusion
-UXCam.removeOcclusion(of: .occludeAllTextFields) // This removes manual occlusion of type occlude text fields
+UXCam.applyOcclusion(UXCamOccludeAllTextFields())
 ```
 ```text Flutter
-Not supported
+Not supported - use OccludeWrapper instead
 ```
 ```javascript React Native
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
-
-// IF USING SDK VERSION 6.0.0 PLEASE USE:
-// import { OcclusionType } from 'react-native-ux-cam/src/types';
-
-const hideTextFields = {
-   type: UXCamOcclusionType.OccludeAllTextFields,
-   screens: ["screen1", "screen2"] // optional, default all screens
- }
- 
-RNUxcam.applyOcclusion(hideTextFields); // apply hide text fields
-RNUxcam.removeOcclusion(hideTextFields); // remove hide text fields
-
-// IMPORTANT: Please keep in mind that this API will only hide <TextInput>
-// components. If you wish to hide <Text> components, refer to hiding Views.
+RNUxcam.applyOcclusion({ type: UXCamOcclusionType.OccludeAllTextFields });
 ```
 ```swift SwiftUI
-let hide = OccludeAllTextFields()
-// To apply at any point without considering screen
-UXCamCore.applyOcclusion(hide)
-
-// To stop the occlusion that was applied before
-UXCamCore.removeOcclusion()
+UXCamCore.applyOcclusion(OccludeAllTextFields())
 ```
 ```csharp Xamarin
-UXCamOccludeAllTextFields hideTextFields = new UXCamOccludeAllTextFields ();
-
-UXCam.applyOcclusion(hideTextFields); // apply hide text fields
-UXCam.removeOcclusion(hideTextFields); // remove hide text fields
+UXCam.applyOcclusion(new UXCamOccludeAllTextFields());
 ```
 
-<Image title="TextFields.png" alt="2534" align="center" width="80%" src="https://files.readme.io/9caa54d-TextFields.png">
-  All fields identified as text will be occluded.
-</Image>
+---
 
-## Hide Sensitive View
+### Occlude Sensitive View
 
-Use it to hide specific views with sensitive information that you don't want to record.
+Hides specific UI elements containing sensitive data.
 
-The API parameters are:
-
-**sensitiveView**: A View object that contains sensitive information.
-
-```swift iOS
-UXCam.occludeSensitiveView(_ sensitiveView: UIView)
-```
 ```java Android
 UXCam.occludeSensitiveView(View sensitiveView);
 ```
-```javascript React Native
-RNUxcam.occludeSensitiveView: (sensitiveView: any) => void
-    
-//Example
-<Button ref= {view => RNUxcam.occludeSensitiveView(view)}/>
+```swift iOS
+UXCam.occludeSensitiveView(sensitiveView)
 ```
 ```dart Flutter
-const OccludeWrapper(     
-   child:
-   // Here goes your widget that you want to occlude
-),
-//Example  
-const OccludeWrapper(  
-   child: Text(  
-       'Sensitive data that will be occluded by the Wrapper',  
-    ),
-),
+OccludeWrapper(child: YourSensitiveWidget())
+```
+```javascript React Native
+<Button ref={view => RNUxcam.occludeSensitiveView(view)} />
 ```
 ```swift SwiftUI
-uxcamOcclude() -> some View
-
-
-//eg.
-var body: some View  
-{  
-	VStack
-	{
-		Text("Personal data: XYZ")  
-	 		.uxcamOcclude()  
-
-		Text("Personal data: Gestures seen")  
-			.uxcamOcclude(blockGestures: false)
-	}
-}
+Text("Sensitive").uxcamOcclude()
+Text("With gestures").uxcamOcclude(blockGestures: false)
 ```
 ```csharp Xamarin
-void UXCam.OccludeSensitiveView(View sensitiveView)
+UXCam.OccludeSensitiveView(sensitiveView);
 ```
-```javascript Cordova
-You can occlude sensitive elements in your app by adding uxcam-occlude as your element class name.
-// Example
-<label for="email">Email:</label>
-<input type="email" id="email" class="uxcam-occlude" name="email">
+```html Cordova
+<input class="uxcam-occlude" type="text" />
 ```
 
-## Usage from configuration object
+---
 
-It's also possible to pass a list of occlusions (except Sensitive View) to be applied during configuration.  For example:
+### Configuration Object Setup
+
+Apply multiple occlusions at SDK initialization:
 
 ```java Android
-UXCamBlur blur = new UXCamBlur.Builder()
-        .blurRadius(20)
-        .screens(Arrays.asList("ActivitySecret", "LoginActivity"))
-        .build();
-
-UXCamOverlay overlay = new UXCamOverlay.Builder()
-        .screens(Arrays.asList("PaymentActivity", "ProfileActivity"))
-        .build();
-
-UXCamOccludeAllTextFields textFields = new UXCamOccludeAllTextFields.Builder()
-        .screens(Arrays.asList("PaymentActivity", "ProfileActivity"))
-        .build();
-        
 UXConfig config = new UXConfig.Builder(appKey)
-        .occlusions(Arrays.asList(blur, overlay, textFields))
-        .enableImprovedScreenCapture(true)
-        .build();
+    .occlusions(Arrays.asList(blur, overlay, textFields))
+    .build();
 UXCam.startWithConfiguration(config);
 ```
 ```swift iOS
-let configuration = UXCamConfiguration(appKey: "YourAppKey")
-
-let blurSetting = UXCamBlurSetting(radius: 5)
-let overlay = UXCamOverlaySetting(color: .yellow)
-let hideTextfields = UXCamOccludeAllTextFields()
-
 let occlusion = UXCamOcclusion()
-    
-blurSetting.hideGestures = false 
-
-occlusion.apply(blurSetting, screens: ["LoginViewController"]) 
-occlusion.apply(hideTextfields, screens: ["LoginViewController"])
-
+occlusion.apply(blurSetting, screens: ["LoginViewController"])
 configuration.occlusion = occlusion
-
-UXCam.optIntoSchematicRecordings()
 UXCam.start(with: configuration)
 ```
 ```dart Flutter
-import 'package:flutter_uxcam/uxblur.dart'; //Import this for Blurring
-import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
-
-FlutterUXBlur blur = FlutterUXBlur(
-   	blurRadius: 10, 
-   	blurType: BlurType.gaussian, 
-	hideGestures: true, 
-	screens: ["LoginScreen", "PaymentScreen"] 
-);
-
-FlutterUXOverlay overlay = FlutterUXOverlay(
-   color: Colors.red, 
-   hideGestures: true, 
-   screens: ["LoginScreen", "PaymentScreen"]
-);
-
-FlutterUxConfig config = FlutterUxConfig(
-	userAppKey: "UXCAM_APP_KEY", 
-	occlusions: [blur] // can contain blur and overlay
-); 
-
+FlutterUxConfig config = FlutterUxConfig(userAppKey: "KEY", occlusions: [blur, overlay]);
 FlutterUxcam.startWithConfiguration(config);
 ```
 ```javascript React Native
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
-
-// IF USING SDK VERSION 6.0.0 PLEASE USE:
-// import { OcclusionType } from 'react-native-ux-cam/src/types';
-
-const blur = {
-    type: UXCamOcclusionType.Blur, // compulsory to determine blur type
-    blurRadius: 20, // optional default 10
-    hideGestures: true, // optional, default true
-    screens: ["screen1", "screen2"] // optional, default all screens 
-}
- 
-const overlay = {
-   type: UXCamOcclusionType.Overlay, // compulsory to determine blur type
-   color: 0xff00ee, // hex integers in 0xrrggbb format
-   hideGestures: true, // optional, default true
-   screens: ["screen1", "screen2"] // optional, default all screens
-}
-
-const textFields = {
-    type: UXCamOcclusionType.OccludeAllTextFields, // compulsory to determine blur type
-    screens: ["screen1", "screen2"] // optional, default all screens
-}
-
-const configuration = {
-  userAppKey: 'YOUR UXCAM API KEY GOES HERE',
-  occlusions: [overlay, blur, textFields]
-}
-
-RNUxcam.startWithConfiguration(configuration);
-```
-```swift SwiftUI
-//Please make sure that you have tagged your screens in SwiftUI
-
- let blur = BlurSetting(radius: 5)
- let occlusion = Occlusion()
- let config = Configuration(appKey: "USER-API-KEY")
-        
- occlusion.apply(blur, screens: ["Item Detail Page"])
- config.occlusion = occlusion
- UXCamSwiftUI.start(with: config)
-```
-```csharp Xamarin
-UXCamBlurSetting blur = new UXCamBlurSetting (10);
-UXCamConfiguration configuration = new UXCamConfiguration('User Api Key');
-
-configuration.Occlusion = new UXCamOcclusion(blur);
-
-UXCam.startWithConfiguration(configuration);
-```
-```javascript Cordova
-const blur = {
-  type: 3,
-  blurRadius: 20, // optional default 10
-  hideGestures: true, // optional, default true
-  screens: ["screen1", "screen2"] // optional, default all screens
-}
-
-const configuration = {
-  userAppKey: 'YOUR API KEY',
-  enableMultiSessionRecord: true,
-  enableCrashHandling: true,
-  enableAutomaticScreenNameTagging: false,
-  enableImprovedScreenCapture: true,
-  occlusions: [blur] 
-}
-UXCam.startWithConfiguration(configuration);
+RNUxcam.startWithConfiguration({ userAppKey: 'KEY', occlusions: [overlay, blur] });
 ```
 
-## Occlusion In Previous SDK Versions
+---
 
-> 🚧 Outdated SDK occlusion
->
-> For older SDK versions, please refer to the below occlusion methods. 
->
-> Note: outdated SDKs do not support the blurring feature.
->
-> **important**: It is highly recommended to upgrade your SDK as soon as possible.
+## Platform Implementation Guides
 
-### Hide Sensitive Screen
+For detailed implementation guides with best practices and troubleshooting:
 
-The API parameters are:  
-**occlude**: Set TRUE to hide the screen from the recording, FALSE to start recording the screen contents again. 
+| Platform | Guide |
+|----------|-------|
+| Android | [Sensitive Data Occlusion](/docs/sensitive-data-occlusion) |
+| iOS | [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-ios) |
+| Flutter | [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-flutter) |
+| React Native | [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-react-native) |
+| Cordova | [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-cordova) |
 
-```csharp Xamarin
-void UXCam.OccludeSensitiveScreen(bool occlude)
-```
-```javascript Cordova
-UXCam.occludeSensitiveScreen: (occlude: boolean) => void
-```
+---
 
-### Hide All TextFields
+## Occlusion Priority Order
 
-The API parameters are:  
-**occludeAll**: Set TRUE to hide all TextFields in the recording, FALSE to stop occluding them from the screen recording.
+When multiple rules apply, priority is (highest to lowest):
 
-```csharp Xamarin
-void UXCam.occludeAllTextFields(bool occludeAll)
-```
-```javascript Cordova
-UXCam.occludeAllTextFields: (occludeAll: boolean) => void
-```
-
-### Hide Sensitive View
-
-Please refer to the [above steps](https://developer.uxcam.com/docs/screen-blurring#hide-sensitive-view) for sensitive views hiding.
+1. Dashboard: Screen-specific overlay
+2. Dashboard: Screen-specific blur
+3. Dashboard: Global blur/overlay
+4. SDK: Screen-specific overlay
+5. SDK: Screen-specific blur
+6. SDK: Global blur/overlay

@@ -34,7 +34,7 @@ struct HomeView: View {
 
 To achieve this, please enable the configuration option `configuration.enableAutomaticScreenNameTagging = true` when setting up UXCam to start
 
-```coffeescript
+```swift
 init(){
      UXCamCore.optIntoSchematicRecordings()
      let config = Configuration(appKey: "YOUR APP KEY")

@@ -50,7 +50,7 @@ The SDK by default opts-in users for UXCam recording on app installs. If the use
 ```swift iOS
 UXCam.optInOverall()
 ```
-```javascript Android
+```java Android
 UXCam.optInOverall()
 ```
 ```javascript React Native

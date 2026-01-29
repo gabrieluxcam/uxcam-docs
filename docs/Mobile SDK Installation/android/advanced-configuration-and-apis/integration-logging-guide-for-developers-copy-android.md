@@ -17,7 +17,7 @@ When you integrate our SDK, sessions and data are recorded and uploaded automati
 
 Simply set to true the configuration parameter as such:
 
-```coffeescript Code
+```java Android
 UXCam.enableIntegrationLogging(true);
 ```
 

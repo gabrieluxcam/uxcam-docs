@@ -326,7 +326,7 @@ The List session API provides information about sessions in several key-value pa
 
 Here in the response, their **video** key contains the session video link and this link has an expiry date of **one week**.
 
-```coffeescript Example
+```json Example
 {
   "success": true,
   "data": [
@@ -437,7 +437,7 @@ To authenticate the event analytics API, app id and API key are required. See [a
 
 The session analytics API provides aggregated data of session based on the session query which is grouped by grouping attributes. It gives us all of the session aggregate data in the output so it can be used to plot statistical charts.
 
-```coffeescript
+```json
 {
 
   "success": true,

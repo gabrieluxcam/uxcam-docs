@@ -35,7 +35,7 @@ UXCam.StartNewSession()
 ```javascript Cordova
 UXCam.startNewSession()
 ```
-```coffeescript SwiftUI
+```swift SwiftUI
 UXCamCore.startNewSession()
 
 ```
@@ -70,7 +70,7 @@ void UXCam.StopSessionAndUploadData()
 ```text Cordova
 UXCam.stopSessionAndUploadData: () => void
 ```
-```coffeescript SwiftUI
+```swift SwiftUI
 UXCamCore.stopSessionAndUploadData()
 
 //With completion handler

@@ -32,7 +32,7 @@ We recommend avoiding the use of Personally Identifiable Information (PII), such
 
 You can replace the default alias with your own user ID using this method:
 
-```coffeescript Xamarin
+```csharp Xamarin
 void UXCam.SetUserIdentity(string userIdentity)
 ```
 
@@ -55,7 +55,7 @@ Additional custom user properties help you group sessions, users, or events base
 * Loyalty Membership
 * NPS Score or Rating
 
-```coffeescript Xamarin
+```csharp Xamarin
 void UXCam.SetUserProperty(string propertyName, string value)
     
 //Example

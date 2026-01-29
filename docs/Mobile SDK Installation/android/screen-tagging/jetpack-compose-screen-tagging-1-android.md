@@ -22,7 +22,7 @@ The approach is to listen to `LaunchedEffect` on the current route from `navCont
 
 Example Jetpack Compose Navigation listener:
 
-```coffeescript Android
+```kotlin Android
 @Composable
 fun AppNavHost(navController: NavHostController) {
 

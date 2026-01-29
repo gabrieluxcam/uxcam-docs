@@ -25,7 +25,7 @@ Events are powerful tools for tracking user interactions within your application
 
 To send an event, use the following method in your code:
 
-```coffeescript Xamarin
+```csharp Xamarin
 void UXCam.LogEvent(string eventName)
 ```
 
@@ -37,10 +37,10 @@ Events can also have properties associated with them to provide additional conte
 
 To send an event with properties, use the following method:
 
-```coffeescript MAUI
+```csharp MAUI
 UXCam.LogEvent("Event Name", new Dictionary<string, object> { { "stringValue", "value" }, {"numeric", 1} });
 ```
-```coffeescript Xamarin
+```csharp Xamarin
 void UXCam.LogEvent(string eventName, JSONObject properties) //Android
 void UXCam.LogEvent(string eventName, NSObject properties) //iOS
 ```

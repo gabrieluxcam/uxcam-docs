@@ -32,7 +32,7 @@ We recommend avoiding the use of Personally Identifiable Information (PII), such
 
 You can replace the default alias with your own user ID using this method:
 
-```coffeescript Nativescript
+```typescript NativeScript
 NSUXCam.setUserIdentity: (userIdentity: string) => void
 ```
 
@@ -55,7 +55,7 @@ Additional custom user properties help you group sessions, users, or events base
 * Loyalty Membership
 * NPS Score or Rating
 
-```coffeescript Nativescript
+```typescript NativeScript
 setUserProperty(_ propertyName: String, value: Any)
     
 //Example

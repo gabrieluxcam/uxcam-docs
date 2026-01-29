@@ -29,13 +29,13 @@ For reference on including a component into your project visit here.
 
 1. Import the UXCam agent header at the top of your MauiProgram.cs
 
-```coffeescript Code
+```csharp
 using Com.UXCam;
 ```
 
 2. Add this call in your `CreateMauiApp` method in MauiProgram.cs
 
-```coffeescript Code
+```csharp
 UXCam.OptIntoSchematicRecordings();
 var configuration = new UXCamConfiguration("YOUR_APP_KEY");
 
@@ -85,7 +85,7 @@ UXCam.Start(configuration);
    ```
 
 4. Add UXCam.startApplicationWithConfiguration("App-key") inside onCreate method
-   ```coffeescript
+   ```csharp
    using Com.UXCam;
    using Com.Uxcam.Datamodel;
    UXCam.OptIntoVideoRecording();

@@ -107,7 +107,7 @@ Specify the exact version to ensure compatibility.
 
 1. Imports:
 
-```coffeescript Swift
+```swift
 import UXCam
 ```
 
@@ -147,7 +147,7 @@ func application(_ application: UIApplication,
 ## Available Configuration Options:
 
 <p style={{ fontSize: "18px" }}>
-  <code class="language-java">enableAutomaticScreenNameTagging</code>
+  <code className="language-swift">enableAutomaticScreenNameTagging</code>
 
   <br />
 
@@ -155,7 +155,7 @@ func application(_ application: UIApplication,
 </p>
 
 <p style={{ fontSize: "18px" }}>
-  <code class="language-java">enableAdvancedGestureRecognition</code>
+  <code className="language-swift">enableAdvancedGestureRecognition</code>
 
   <br />
 
@@ -163,7 +163,7 @@ func application(_ application: UIApplication,
 </p>
 
 <p style={{ fontSize: "18px" }}>
-  <code class="language-java">enableCrashHandling:</code>
+  <code className="language-swift">enableCrashHandling</code>
 
   <br />
 
