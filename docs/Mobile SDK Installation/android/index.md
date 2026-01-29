@@ -170,13 +170,13 @@ You've successfully integrated UXCam and sent some sessions, great job! But ther
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties-android#/" icon="fa-user">
+  <Card title="Assign User IDs" href="user-properties" icon="fa-user">
     Get the full picture with user-level analytics.
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-android#/" icon="fa-question">
+  <Card title="Send Events" href="events" icon="fa-question">
     Gain deeper insights into your users' interactions.
 
     > Send Events and Add Properties

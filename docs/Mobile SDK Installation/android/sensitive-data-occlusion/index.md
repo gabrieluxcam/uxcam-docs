@@ -13,7 +13,7 @@ next:
     occlusion, we can move onto custom events and user properties!
   pages:
     - type: basic
-      slug: users-and-properties-android
+      slug: user-properties
       title: Users and Properties
 ---
 ## Why This Matters

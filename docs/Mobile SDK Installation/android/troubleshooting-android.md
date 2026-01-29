@@ -567,8 +567,8 @@ adb logcat -d | grep -E "UXCam|UXCAM" > uxcam_logs.txt
 
 - [Screen Tagging Guide](screen-tagging/index.md)
 - [Sensitive Data Occlusion](sensitive-data-occlusion/index.md)
-- [Users and Properties](users-and-properties-android.md)
-- [Sending Events](sending-events-android.md)
+- [Users and Properties](user-properties.md)
+- [Sending Events](events.md)
 
 ---
 

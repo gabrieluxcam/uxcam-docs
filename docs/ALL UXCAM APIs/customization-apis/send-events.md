@@ -125,7 +125,7 @@ When sending dates as event properties, use these formats:
 
 | Platform | Guide |
 |----------|-------|
-| Android | [Sending Events](/docs/sending-events-android) |
-| iOS | [Custom Events](/docs/custom-events-and-properties-ios) |
-| Flutter | [Sending Events](/docs/sending-events-flutter) |
-| React Native | [Custom Events](/docs/custom-events-and-properties-react-native) |
+| Android | [Events](/docs/android/events) |
+| iOS | [Events](/docs/ios/events) |
+| Flutter | [Events](/docs/flutter/events) |
+| React Native | [Events](/docs/react-native/events) |

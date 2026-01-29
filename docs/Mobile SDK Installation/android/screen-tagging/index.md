@@ -186,13 +186,13 @@ You've properly tagged screens and are ready to move on! Let's review some next 
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="https://developer.uxcam.com/docs/users-and-properties-android#/" icon="fa-user">
+  <Card title="Assign User IDs" href="../user-properties" icon="fa-user">
     Get The Full Picture with User Analytics
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="https://developer.uxcam.com/docs/sending-events-android#/" icon="fa-question">
+  <Card title="Send Events" href="../events" icon="fa-question">
     Deeper Insights of Your Users' interactions
 
     > Send Events and Add Properties

@@ -1,8 +1,8 @@
 - initialise-sdk-and-start-recording-android
 - screen-tagging
 - sensitive-data-occlusion
-- users-and-properties-android
-- sending-events-android
+- user-properties
+- events
 - advanced-configuration-and-apis
 - android-sdk-changelog
 - troubleshooting-android

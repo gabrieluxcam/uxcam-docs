@@ -1,4 +1,6 @@
 - screen-tagging-cordova
 - sensitive-data-occlusion-cordova
-- custom-users-and-properties-cordova
-- custom-events-and-properties-cordova
+- user-properties
+- events
+- cordova-sdk-changelog
+- troubleshooting-cordova

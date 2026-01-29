@@ -634,8 +634,8 @@ When contacting support, include:
 - [SwiftUI Guide](swiftui-ios.md)
 - [Screen Tagging Guide](screen-tagging-ios/index.md)
 - [Sensitive Data Occlusion](sensitive-data-occlusion-ios/index.md)
-- [Custom Users and Properties](custom-users-and-properties-ios.md)
-- [Custom Events and Properties](custom-events-and-properties-ios.md)
+- [User Properties](user-properties.md)
+- [Events](events.md)
 
 ---
 

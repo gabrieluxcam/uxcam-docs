@@ -324,8 +324,8 @@ if (Platform.OS === 'android') {
 1. **[Bootstrap Setup](set-up-the-sdk-and-start-recording-react-native)** - Secure configuration and environment setup
 2. **[Screen Tagging](screen-tagging-react-native)** - Implement comprehensive screen analytics
 3. **[Privacy Protection](sensitive-data-occlusion-react-native/)** - Ensure GDPR/CCPA compliance
-4. **[Event Tracking](custom-events-and-properties-react-native)** - Capture business-critical user actions
-5. **[User Analytics](custom-users-and-properties-react-native)** - Enable user-level insights
+4. **[Event Tracking](events)** - Capture business-critical user actions
+5. **[User Analytics](user-properties)** - Enable user-level insights
 6. **[Advanced Configuration](advanced-configuration-and-apis-2/)** - Optimize and customize
 
 ### Quick Links
