@@ -1,22 +1,60 @@
 ---
-title: iOS
-excerpt: ''
+title: iOS SDK Changelog
+excerpt: 'Release history and version notes for the UXCam iOS SDK'
 deprecated: false
 hidden: false
+icon: fab fa-apple
 metadata:
-  title: ''
+  title: 'iOS SDK Changelog'
   description: >-
-    The UXCam iOS Changelog documents various updates from March 2022 to October
-    2024, including numerous bug fixes, performance improvements, and new
-    features such as support for app logs in release builds, privacy manifest
-    files, and enhanced session recording capabilities.
+    The UXCam iOS Changelog documents various updates including bug fixes,
+    performance improvements, and new features such as AI Occlusion, privacy
+    manifest files, and enhanced session recording capabilities.
   robots: index
-next:
-  description: ''
 ---
 # UXCam iOS Changelog
 
-<br />
+### V. 3.7.8 - Jan 21, 2026
+
+* Fixed crash while occluding search bar in SwiftUI
+* Disabled schematic recording for unsupported platforms
+
+### V. 3.7.7 - Dec 26, 2025
+
+* Fixed size overflow crash resulting in EXC_BAD_ACCESS (KERN_INVALID_ADDRESS) in sensitive rect provider
+* Fixed crash due to deleted video if app moves to background after allowShortBreak is applied
+* Refactored startWithConfiguration api to make it thread independent
+
+### V. 3.7.6 - Dec 26, 2025
+
+* Fixed random crash while detecting sensitive views
+* Fixed occlusion mismatch issue on webview
+* Fixed old screen name not being reset after session resume on foreground
+
+### V. 3.7.5 - Dec 26, 2025
+
+* Fixed occlusion issue on RN Fabric views
+
+### V. 3.7.4 - Dec 22, 2025
+
+* Optimized SDK performance for scrolling behavior
+
+### V. 3.7.2 - Nov 20, 2025
+
+* Fixed sessions capturing gestures on occluded screens
+* Fixed crash in UXCam due to encryption functionality
+* Fixed crash in UXFrameConsumer during system snapshot operation
+* Fixed crash due to null folder when uploading pending sessions
+* Fixed freezing in iOS apps in flutter impeller
+
+### V. 3.7.1 - Sept 12, 2025
+
+* Implementation of AI Occlusion
+* Expose APIs for Flutter support of smart events
+* General performance and stability improvements
+* Fixed views not occluding for brief period while transitioning
+* Fixed gesture incorrectly being captured on flutter
+* Fixed screens not occluding at the beginning for manually tagged screen
 
 ### V. 3.6.26 - June 17, 2025
 
@@ -63,8 +101,8 @@ next:
 
 ### V. 3.6.20 - December 12, 2024
 
-* **New**: Add Integration log api\
-  -configuration.enableIntegrationLogging=true (By default, it will be disabled)
+* **New**: Add Integration log api
+  - configuration.enableIntegrationLogging=true (By default, it will be disabled)
 * **Fix**: crash on iOS due to failed video recording
 * **Improvement**: Show actual reason for technical error for failed video recording
 * **Fix**: negative timeline of screens
@@ -89,7 +127,7 @@ next:
 * **Fix**: Fixed sessions cancelling incorrectly due to background verify.
 * **Improvement**: Improved console logs not capturing ASCII characters.
 
-***
+---
 
 ### V. 3.6.16 - September 3, 2024
 
@@ -99,7 +137,7 @@ next:
 * **Fix**: Fixed random crash issue at the beginning due to null value in logs captured.
 * **Fix**: Fixed UI freeze issue due to incorrect bit rate while capturing session videos.
 
-***
+---
 
 ### V. 3.6.15 - July 23, 2024
 
@@ -107,7 +145,7 @@ next:
 * **Fix**: Fixed irregular crash due to semaphore when app goes to background.
 * **Fix**: Fixed screen tag mismatch for child controllers.
 
-***
+---
 
 ### V. 3.6.14 - June 20, 2024
 
@@ -115,7 +153,7 @@ next:
 * **Fix**: Fixed occlusion misplacement on SwiftUI views.
 * **Fix**: Fixed occlusion issue while screen transition in Flutter.
 
-***
+---
 
 ### V. 3.6.13 - May 17, 2024
 
@@ -123,7 +161,7 @@ next:
 * **Fix**: Fixed unknown name showing on dashboard when app comes to foreground for manual tagging.
 * **Fix**: Fixed app crash due to deadlock condition while cancelling session.
 
-***
+---
 
 ### V. 3.6.12 - April 23, 2024
 
@@ -132,7 +170,7 @@ next:
 * **Fix**: Fixed crash issue when multi-session record is disabled.
 * **Fix**: Fixed crash issue when tabbar consists of more navigation controller.
 
-***
+---
 
 ### V. 3.6.11 - March 14, 2024
 
@@ -143,7 +181,7 @@ next:
 * **Fix**: Fixed crash issue occurring on schematic recording due to custom fonts used in NSAttributedString.
 * **Fix**: Removed capture of mobile carrier information from iOS 16 as Apple has restricted the gathering of mobile carrier information.
 
-***
+---
 
 ### V. 3.6.10 - February 28, 2024
 
@@ -152,7 +190,7 @@ next:
 * **Fix**: Fixed zero seconds sessions showing in dashboard for sessions that have longer video duration in video replay.
 * **Improvement**: Improved occlusions related logic.
 
-***
+---
 
 ### V. 3.6.9 - January 29, 2024
 
@@ -161,13 +199,13 @@ next:
 * **New**: Expose method in SDK to handle caught exceptions from cross-platform plugins.
 * **New**: Expose new Flutter module to handle Flutter-specific methods.
 
-***
+---
 
 ### V. 3.6.8 - December 8, 2023
 
 * **Fix**: Fixed crash issue due to ineffective screen rendering.
 
-***
+---
 
 ### V. 3.6.7 - November 10, 2023
 
@@ -181,7 +219,7 @@ next:
 * **Fix**: Fixed elements for bottom navigation bar showing different name for each screen.
 * **New**: Enabled multi-region verify functionality in SDK.
 
-***
+---
 
 ### V. 3.6.6 - September 25, 2023
 
@@ -191,7 +229,7 @@ next:
 * **Fix**: Fixed text detection not working for double tap and rage tap in Flutter.
 * **New**: Added new configuration key `enableImprovedScreenCapture` to give option to switch between old and new rendering methods.
 
-***
+---
 
 ### V. 3.6.5 - August 23, 2023
 
@@ -204,14 +242,14 @@ next:
 * **Fix**: Fixed crash issue related to rendering empty views.
 * **Fix**: Fixed blur removing issue on React Native before screen changes.
 
-***
+---
 
 ### V. 3.6.4 - July 6, 2023
 
 * **Fix**: Fixed performance issue in Cordova and other webview-related frameworks.
 * **Fix**: Fixed random flickering occlusion screen showing in Cordova framework.
 
-***
+---
 
 ### V. 3.6.3 - June 13, 2023
 
@@ -224,7 +262,7 @@ next:
 * **Fix**: Fixed event time greater than session length issue for some sessions.
 * **Fix**: Fixed app termination issue due to not properly ending the background task.
 
-***
+---
 
 ### V. 3.6.2 - May 5, 2023
 
@@ -233,7 +271,7 @@ next:
 * **Fix**: Fixed crash if segment control segments are less than the total number of segments.
 * **Improvement**: Prevent tagging of blank screen name in manual tagging.
 
-***
+---
 
 ### V. 3.6.1 - April 19, 2023
 
@@ -249,7 +287,7 @@ next:
 * **Improvement**: Reset rage tap if the user navigates to a new screen.
 * **Improvement**: Improved showing correct screens for cross-platform plugins.
 
-***
+---
 
 ### V. 3.6.0 - March 24, 2023
 
@@ -258,12 +296,12 @@ next:
 * **Fix**: Fixed an issue where device size was not correctly calculated for some applications.
 * **Fix**: Fixed an issue where blurring was not applied in SwiftUI if no screens are tagged.
 * **Fix**: Fixed an issue where `excludeMentionedScreens` was not working while occluding some of the screens.
-* **Improvement**: Now occlusion applied from SDK can’t be removed from the dashboard.
+* **Improvement**: Now occlusion applied from SDK can't be removed from the dashboard.
 * **Fix**: Fixed an issue related to gesture being not recorded for occluded screens on cross-platforms (Flutter).
 * **Fix**: Fixed a crash issue due to the SDK while using custom `UIContentConfiguration` objects in the app.
 * **Improvement**: Improved automatic screen name capturing for `UIPageViewController` (Now child screens are shown instead of `UIPageViewController`).
 
-***
+---
 
 ### V. 3.5.3 - February 9, 2023
 
@@ -275,7 +313,7 @@ next:
 * **New**: Added UXCam prefix to avoid the plcrash reporter namespace clash with apps.
 * **Fix**: Fixed an issue related to app logs unable to parse some of the UTF-8 characters.
 
-***
+---
 
 ### V. 3.5.2 - January 16, 2023
 
@@ -283,7 +321,7 @@ next:
 * **Fix**: Fixed occlusion issue for manually tagged screens in automatic tagging.
 * **Improvement**: Updated crash reporting logic to show correct crash information in the dashboard.
 
-***
+---
 
 ### V. 3.5.1 - December 26, 2022
 
@@ -291,20 +329,20 @@ next:
 * **New**: Allow manual tagging for screens in automatically tagged screens.
 * **Fix**: Fixed a crash occurring in Apple/Google maps.
 
-***
+---
 
 ### V. 3.5.0 - November 14, 2022
 
 * **Improvement**: Improved app performance on native session recording.
 * **Fix**: Fixed hitching issue while scrolling in native recording.
 
-***
+---
 
 ### V. 3.4.5 - October 5, 2022
 
 * **Fix**: Fixed app freezing and random crash issue due to enabling app logs.
 
-***
+---
 
 ### V. 3.4.4 - September 2, 2022
 
@@ -312,13 +350,13 @@ next:
 * **Fix**: Fixed issue regarding gestures not captured in paused state on the same screen.
 * **Improvement**: Refactor native screen logic to decrease CPU usage.
 
-***
+---
 
 ### V. 3.4.3 - August 17, 2022
 
 * **Fix**: Fixed random crash issue while saving heatmap.
 
-***
+---
 
 ### V. 3.4.2 - July 15, 2022
 
@@ -328,7 +366,7 @@ next:
 * **Fix**: Fixed an issue where a webview was occluded as a sensitive view on `occludeAllTextFields`.
 * **Fix**: Fixed an issue where certain crashes were not uploading to the dashboard.
 
-***
+---
 
 ### V. 3.4.1 - April 13, 2022
 
@@ -336,7 +374,7 @@ next:
 * **Fix**: 4XX error fallback to offline session recordings.
 * **New**: App log in JSON format.
 
-***
+---
 
 ### V. 3.4.0 - March 16, 2022
 
