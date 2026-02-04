@@ -58,7 +58,7 @@ metadata:
 * Fix: Cross-platform occlusion rects transformation issues
 * Fix: Bitmap dimensions don't match on rotation
 * Fix: Flutter bar cutout and release compile issue
-* Fix: Dex errors (localiza)
+* Fix: Dex errors 
 * Fix: Screen tagging skipped when screen recording is paused (reverted)
 * Improve: Reduce delta when fast scrolling
 
