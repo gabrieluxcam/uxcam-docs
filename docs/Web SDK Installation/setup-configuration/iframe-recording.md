@@ -33,8 +33,6 @@ Record user interactions inside iframes with UXCam Web SDK.
 
 Same-site iframes share the same origin as the parent (same protocol, domain, and port). **Recording is enabled by default** — no extra setup needed.
 
-The parent SDK accesses the iframe's `contentDocument` directly and attaches a `MutationObserver` to capture all changes.
-
 ### Setup
 
 Initialize the SDK on the parent page. Same-site iframes are recorded automatically:
@@ -246,16 +244,6 @@ body > div#app > iframe.outer >>> body > div > iframe.inner >>> body > div.conte
 ```
 
 Each `>>>` marks the crossing from one document into an iframe's document. This helps identify exactly which iframe boundary an element lives behind when reviewing session data.
-
-### Dynamically Inserted Iframes
-
-Iframes added after page load are automatically detected via `MutationObserver`:
-
-```javascript
-const iframe = document.createElement('iframe');
-iframe.src = '/embedded-content.html';
-document.body.appendChild(iframe);  // Automatically recorded
-```
 
 ---
 
