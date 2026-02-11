@@ -9,6 +9,13 @@ metadata:
 
 <br />
 
+### 3.7.9 - Feb 11, 2026
+
+* Fixed crash on Webview Instrumentation. 
+* Fixed Crash on frame consumer due to off queue mutation during active processing. 
+* Fixed sessions failing to upload due to file path change.
+* Fixed occlusion skipping for first frame of web view.
+
 ### V. 3.7.8 - Jan 21, 2026
 
 * Fixed crash while occluding search bar in SwiftUI
