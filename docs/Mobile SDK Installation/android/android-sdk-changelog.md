@@ -8,6 +8,22 @@ metadata:
 ---
 # UXCam Android Changelog
 
+<br />
+
+### V. 3.8.12 - Feb 10, 2026
+
+* Fix: excludeMentionedScreens not working on applyOcclusion
+* Fix: cancel session if app goes to background before verification response received
+* Fix: video not uploading on Force Close
+* Fix: batch upload progress flag not resetting on exceptions
+* Fix: log formatting issues
+* Fix: memory leaks from unclaimed frames, H.264 encoder, and runBlocking operations
+* Fix: UI thread blocking when closing debug log files
+* Improve: non-blocking verification cancel
+* Refactor: session upload pipeline with centralized lifecycle state machine and single gateway
+* Refactor: frame capture using callback-based approach instead of complex pooling mechanism
+* Refactor: removed VerificationUtil, redundant backend session recovery files, deprecated Gradle properties, and unused bitmap/webview occlusion code
+
 ### V. 3.8.11 - Jan 27, 2026
 
 * Fix: isRecording() now uses SessionStartGateway with explicit state checks
@@ -58,7 +74,7 @@ metadata:
 * Fix: Cross-platform occlusion rects transformation issues
 * Fix: Bitmap dimensions don't match on rotation
 * Fix: Flutter bar cutout and release compile issue
-* Fix: Dex errors 
+* Fix: Dex errors
 * Fix: Screen tagging skipped when screen recording is paused (reverted)
 * Improve: Reduce delta when fast scrolling
 
