@@ -1,11 +1,11 @@
 ---
 title: Android SDK Changelog
-excerpt: 'Release history and version notes for the UXCam Android SDK'
+excerpt: Release history and version notes for the UXCam Android SDK
 deprecated: false
 hidden: false
 icon: fab fa-android
 metadata:
-  title: 'Android SDK Changelog'
+  title: Android SDK Changelog
   description: >-
     The UXCam Android Changelog details various fixes and improvements across
     multiple versions, including resolving crashes, enhancing occlusion
@@ -14,6 +14,20 @@ metadata:
   robots: index
 ---
 # UXCam Android Changelog
+
+### V. 3.8.12 - Feb 10, 2026
+
+* Fix: excludeMentionedScreens not working on applyOcclusion
+* Fix: cancel session if app goes to background before verification response received
+* Fix: video not uploading on Force Close
+* Fix: batch upload progress flag not resetting on exceptions
+* Fix: log formatting issues
+* Fix: memory leaks from unclaimed frames, H.264 encoder, and runBlocking operations
+* Fix: UI thread blocking when closing debug log files
+* Improve: non-blocking verification cancel
+* Refactor: session upload pipeline with centralized lifecycle state machine and single gateway
+* Refactor: frame capture using callback-based approach instead of complex pooling mechanism
+* Refactor: removed VerificationUtil, redundant backend session recovery files, deprecated Gradle properties, and unused bitmap/webview occlusion code
 
 ### V. 3.8.11 - Jan 27, 2026
 
@@ -176,14 +190,14 @@ metadata:
 * **Fix**: App crash on launch in multidex projects
 * **Fix**: Handled NoSuchMethodError when using reflection
 
----
+***
 
 ### V. 3.6.34 - November 14, 2024
 
 * **Fix**: Jetpack Compose Views were tagged with incorrect information. SDK now detects clicks on Compose View and tag with null information.
 * **Fix**: Flutter Android - Crash when applying multiple occlusions.
 
----
+***
 
 ### V. 3.6.33 - October 29, 2024
 
@@ -191,7 +205,7 @@ metadata:
 * **Fix**: Resolve manually tagged screen not being recorded on first start.
 * **New**: Added App launch time metrics.
 
----
+***
 
 ### V. 3.6.32 - September 20, 2024
 
@@ -199,7 +213,7 @@ metadata:
 * **Fix**: Handled `DeadSystemException` when retrieving app version name.
 * **Fix**: Resolved issue where user properties were not registered.
 
----
+***
 
 ### V. 3.6.31 - September 11, 2024
 
@@ -209,7 +223,7 @@ metadata:
 * **Improvement**: Reduced main thread usage during SDK initialization to fix ANR.
 * **Fix**: Fixed issue where session ended after set time, even with `allowShortBreak` set to false.
 
----
+***
 
 ### V. 3.6.30 - August 7, 2024
 
@@ -217,13 +231,13 @@ metadata:
 * **Fix**: Ignored screen set on dashboard was not reflected on warm start of the app.
 * **Fix**: Safely handle fatal crash, `ArrayIndexOutOfBoundsException @ ScreenTagManagerImpl`.
 
----
+***
 
 ### V. 3.6.29 - July 19, 2024
 
 * **Fix**: Session was not stopped correctly when `androidx.startup.InitializationProvider` is removed from the manifest. SDK now falls back to the legacy approach for app lifecycle detection when `InitializationProvider` is unavailable.
 
----
+***
 
 ### V. 3.6.28 - June 27, 2024
 
@@ -232,7 +246,7 @@ metadata:
 * **Fix**: Resolved WebView rendering black session video frames in Flutter apps.
 * **Fix**: Fixed dialogs not rendering correctly in Flutter hybrid applications.
 
----
+***
 
 ### V. 3.6.27 - May 31, 2024
 
@@ -241,13 +255,13 @@ metadata:
 * **Improvement**: Improved exception handling on screen action implementation.
 * **Fix**: Handled `FileNotFoundException`.
 
----
+***
 
 ### V. 3.6.26 - May 13, 2024
 
 * **Fix**: Fixed an issue where sessions were not stopping correctly from cross-platform plugins, which was present in the previous version.
 
----
+***
 
 ### V. 3.6.24 - April 1, 2024
 
@@ -256,21 +270,21 @@ metadata:
 * **Fix**: UI properties were tracked on full-screen occlusion.
 * **Fix**: Screen Action for `ListPreference` data was not captured on click.
 
----
+***
 
 ### V. 3.6.23 - March 18, 2024
 
 * **Fix**: Prevent `NoSuchElementException` due to race condition on preparing screen bitmap.
 * **Fix**: Get Screen action of responsive view.
 
----
+***
 
 ### V. 3.6.22 - February 29, 2024
 
 * **Fix**: `PixelCopy` error log printed while navigating through activities.
 * **Fix**: Previous screen action details were registered for new screen actions in some specific scenarios.
 
----
+***
 
 ### V. 3.6.21 - February 1, 2024
 
@@ -278,7 +292,7 @@ metadata:
 * **Fix**: View type was sent for occluded view.
 * **New**: Ability to add wrapper info on the tagged screen data.
 
----
+***
 
 ### V. 3.6.20 - January 23, 2024
 
@@ -288,7 +302,7 @@ metadata:
 * **Fix**: Not disabling screen action when accessibility service is enabled.
 * **Fix**: Occluding parent view did not prevent screen action tracking of its child view.
 
----
+***
 
 ### V. 3.6.19 - December 13, 2023
 
@@ -298,7 +312,7 @@ metadata:
 * **New**: Added pending session count to verification request.
 * **Fix**: Internal debug logs were only cleared when verification response has status true.
 
----
+***
 
 ### V. 3.6.18 - November 9, 2023
 
@@ -307,7 +321,7 @@ metadata:
 * **Fix**: `Surface` isn't valid, `IllegalArgumentException` when SDK tries to take screenshot of invalid surface.
 * **Fix**: Fatal crash `ArrayIndexOutOfBoundsException` and `ConcurrentModificationException` on `ScreenActionViewsRepositoryImpl`.
 
----
+***
 
 ### V. 3.6.17 - October 20, 2023
 
@@ -315,7 +329,7 @@ metadata:
 * **Fix**: View time of screen being 0 with gesture time being greater than view arrival time.
 * **Fix**: GLSurfaceView rendered black.
 
----
+***
 
 ### V. 3.6.16 - October 6, 2023
 
@@ -324,7 +338,7 @@ metadata:
 * **Fix**: Fatal crash "IllegalStateException: Underflow in restore - more restores than saves".
 * **Fix**: Multi-region infrastructure support.
 
----
+***
 
 ### V. 3.6.15 - September 15, 2023
 
@@ -333,7 +347,7 @@ metadata:
 * **Fix**: React Native - `MapView` not recorded on screen video.
 * **New**: Send app environment variable in the verification request.
 
----
+***
 
 ### V. 3.6.14 - August 28, 2023
 
