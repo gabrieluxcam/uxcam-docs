@@ -1,17 +1,23 @@
 ---
 title: React Native SDK Changelog
-excerpt: 'Release history and version notes for the UXCam React Native SDK'
+excerpt: Release history and version notes for the UXCam React Native SDK
 deprecated: false
 hidden: false
 icon: fab fa-react
 metadata:
-  title: 'React Native SDK Changelog'
+  title: React Native SDK Changelog
   description: >-
     The UXCam React Native Changelog documents version updates including native
     SDK dependency updates, new architecture support, and bug fixes.
   robots: index
 ---
 # UXCam React Native Changelog
+
+<br />
+
+### V. 6.0.12 - February 11, 2026
+
+* Update iOS SDK 3.7.9 and android SDK 3.8.12
 
 ### V. 6.0.6 - April 30, 2025
 
