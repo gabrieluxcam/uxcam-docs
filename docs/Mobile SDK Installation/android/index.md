@@ -77,7 +77,7 @@ next:
 
 If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
-<Image align="center" border={false} src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
+<Image align="center" src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
 
 <br />
 
@@ -96,13 +96,14 @@ add it to `local.properties` (already in the default `.gitignore`) or inject it
 In your module's **build.gradle**, add:
 
 ```groovy build.gradle (app)
-repositories {
-  maven { url 'https://sdk.uxcam.com/android/' }
-}
+
 dependencies {
   implementation 'com.uxcam:uxcam:3.+'
 }
 ```
+
+<GitHubCallout type="important">If you're working with an SDK version lower than 3.8.12, you'll have to add the 
+ https://sdk.uxcam.com/android/</GitHubCallout>
 
 ***
 
