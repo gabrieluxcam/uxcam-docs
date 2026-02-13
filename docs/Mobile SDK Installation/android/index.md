@@ -102,8 +102,7 @@ dependencies {
 }
 ```
 
-<GitHubCallout type="important">If you're working with an SDK version lower than 3.8.12, you'll have to add the 
- https://sdk.uxcam.com/android/</GitHubCallout>
+<GitHubCallout type="important">If you're working with an SDK version lower than 3.8.12, you'll have to add the UXCam maven repo: https://sdk.uxcam.com/android/</GitHubCallout>
 
 ***
 
