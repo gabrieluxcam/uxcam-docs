@@ -12,6 +12,13 @@ next:
 ---
 <br />
 
+<br />
+
+#### January 27, 2026 - V. 2.7.9
+
+* Update iOS to 3.7.8 and Android to 3.8.11
+* NPE in window insets listener by using callback parameter and adding null checks
+
 #### January 21, 2026 - V. 2.7.8
 
 * Update iOS to 3.7.8 and Android to 3.8.10
