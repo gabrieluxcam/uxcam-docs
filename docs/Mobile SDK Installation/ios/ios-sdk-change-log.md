@@ -11,7 +11,7 @@ metadata:
 
 ### 3.7.10 - Feb 27, 2026
 
-* Reduce image capture frequency for video generation to improve performance
+* Reduced image capture frequency for video generation to improve performance
 * Fix crash issue due to upload network exception
 
 ### 3.7.9 - Feb 11, 2026
