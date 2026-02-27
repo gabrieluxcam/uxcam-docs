@@ -10,6 +10,17 @@ metadata:
 
 <br />
 
+<br />
+
+### V. 3.8.13 - Feb 26, 2026
+
+* fix(pixelcopy): capture surface view for overlay window
+* fix: initialize gesture detector in main looper
+* fix: defer orientation state update until session is running to preserve initial orientation
+* fix(memory-leak): prevent memory leak due to retaining activity context
+* fix(session-lifecycle): start session when app comes to foreground after failed state 
+* fix: resolve orientation-related occlusion issues
+
 ### V. 3.8.12 - Feb 10, 2026
 
 * Fix: excludeMentionedScreens not working on applyOcclusion
