@@ -10,7 +10,11 @@ metadata:
 
 <br />
 
-<br />
+### V. 3.8.14 - March 16, 2026
+
+* fix(response): prevent NPE when null data is received from server
+* fix: Session Cancelling due to Out of Memory exception
+* fix: allow per-view occlusion to apply alongside full-screen occlusion
 
 ### V. 3.8.13 - Feb 26, 2026
 
@@ -18,7 +22,7 @@ metadata:
 * fix: initialize gesture detector in main looper
 * fix: defer orientation state update until session is running to preserve initial orientation
 * fix(memory-leak): prevent memory leak due to retaining activity context
-* fix(session-lifecycle): start session when app comes to foreground after failed state 
+* fix(session-lifecycle): start session when app comes to foreground after failed state
 * fix: resolve orientation-related occlusion issues
 
 ### V. 3.8.12 - Feb 10, 2026
