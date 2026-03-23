@@ -14,7 +14,7 @@ next:
 
 #### March 17, 2026 - V. 2.7.11
 
-* Update iOS to 3.7.11 and Android to 3.8.1
+* Update iOS to 3.7.11 and Android to 3.8.14
 
 #### February 27, 2026 - V. 2.7.10
 
