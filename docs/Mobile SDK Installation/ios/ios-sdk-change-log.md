@@ -9,6 +9,11 @@ metadata:
 
 <br />
 
+### 3.7.11 - March 12, 2026
+
+* Optimized crash symbolication report to indicate crashed line.
+* Made DateFormatter thread safe for date utility
+
 ### 3.7.10 - Feb 27, 2026
 
 * Reduced image capture frequency for video generation to improve performance
