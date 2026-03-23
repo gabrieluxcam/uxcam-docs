@@ -12,6 +12,10 @@ next:
 ---
 ### MAUI
 
+#### V. 1.1.3 (March 19th, 2026)
+
+* Updated iOS to 3.7.11 and Android to 3.8.14
+
 #### V. 1.1.1 (December 30, 2025)
 
 * Updated iOS to 3.7.5 and Android to 3.8.7
