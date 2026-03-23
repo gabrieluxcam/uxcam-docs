@@ -12,6 +12,11 @@ next:
 ---
 ### Cordova
 
+#### V. 3.8.2 (March 17, 2026)
+
+* Update Android and iOS dependencies to 3.8.14 and 3.7.11
+* Fixed issue with sdk not being integrated for some cordova apps
+
 #### V. 3.7.0 (September 25, 2025)
 
 * Update Android and iOS dependencies to 3.7.4 and 3.7.1
