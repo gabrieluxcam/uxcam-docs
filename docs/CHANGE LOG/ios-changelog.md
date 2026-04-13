@@ -18,6 +18,13 @@ next:
 
 <br />
 
+### V. 3.8.0 - Apr 8, 2026
+
+* Schematic recording information is now shared in the datafile (keyword: `rt`)
+* Deprecated `optIntoSchematicRecordings`, `optOutOfSchematicRecordings`, and `optInSchematicRecordingStatus` — replaced by new APIs: `optIntoVideoRecordings`, `optOutOfVideoRecordings`, and `optInVideoRecordingStatus`
+* `AppVersion` and `AppVersionBuildNumber` are now separated
+* Improved session-upload logic to reduce missing sessions
+
 ### V. 3.6.26 - June 17, 2025
 
 * Fixed crash due to unhandled exception while parsing ANR stacktrace

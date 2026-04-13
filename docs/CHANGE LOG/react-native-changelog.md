@@ -14,6 +14,10 @@ next:
 
 <br />
 
+#### April 3, 2026 - V. 6.0.15
+
+* Updated iOS SDK to 3.7.12 and Android SDK to 3.9.0
+
 #### April 30, 2025 - V. 6.0.6
 
 * Updated iOS SDK version to 3.6.24 and Android SDK version to 3.6.41

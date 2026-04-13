@@ -18,6 +18,17 @@ next:
 
 <br />
 
+### V. 3.9.1 - Apr 9, 2026
+
+* Fix: ANR in `ReflectionUtil.findField` caused by `getDeclaredFields()` iterating all fields per class level
+* Fix (rage-tap): use server rage-click config instead of hardcoded defaults
+* Fix: skip `canScrollVertically` on `AndroidComposeView` to prevent `ConcurrentModificationException` in Compose semantics tree traversal
+* Fix: resolve ANR caused by checkpoint writing on main thread during `logEvent()` calls
+* Fix (uxcamlib): make cancel lifecycle-owned
+* Fix (thread-safety): use `ConcurrentHashMap` and `ConcurrentSkipListSet` for public API data structures
+* Fix (ANR): prevent ANR by moving blocking public APIs off main thread
+* Fix: ANR in `ScreenActionTracker` due to repeated reflection on every view scan
+
 ### V. 3.6.42 - Jun 11, 2025
 
 * Fix: Google ads not being clickable

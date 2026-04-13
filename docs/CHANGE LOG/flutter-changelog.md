@@ -12,6 +12,10 @@ next:
 ---
 <br />
 
+#### April 9, 2026 - V. 2.7.13
+
+* Updated iOS to 3.8.0 and Android to 3.9.1
+
 #### March 17, 2026 - V. 2.7.11
 
 * Update iOS to 3.7.11 and Android to 3.8.14
