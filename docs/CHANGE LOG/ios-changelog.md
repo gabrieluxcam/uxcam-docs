@@ -14,6 +14,25 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.0 - Apr 8, 2026
+
+* Schematic recording information is now shared in the datafile (keyword: `rt`)
+* Deprecated `optIntoSchematicRecordings`, `optOutOfSchematicRecordings`, and `optInSchematicRecordingStatus` — replaced by new APIs: `optIntoVideoRecordings`, `optOutOfVideoRecordings`, and `optInVideoRecordingStatus`
+* `AppVersion` and `AppVersionBuildNumber` are now separated
+* Improved session-upload logic to reduce missing sessions
+
+### V. 3.7.12 - Apr 1, 2026
+
+* No changelog published for this release.
+
+### V. 3.7.11 - Mar 12, 2026
+
+* Interim release. Detailed notes pending — see [live changelog](https://developer.uxcam.com/docs/ios-sdk-change-log).
+
+### V. 3.7.10 - Mar 6, 2026
+
+* Interim release (bundled by Cordova 3.8.1). Detailed notes pending — see [live changelog](https://developer.uxcam.com/docs/ios-sdk-change-log).
+
 ### 3.7.9 - Feb 11, 2026
 
 * Fixed crash on Webview Instrumentation.

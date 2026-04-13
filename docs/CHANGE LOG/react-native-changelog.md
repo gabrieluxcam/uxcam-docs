@@ -15,9 +15,41 @@ metadata:
 
 <br />
 
+### V. 6.0.15 - April 3, 2026
+
+* Updated iOS SDK to 3.7.12 and Android SDK to 3.9.0
+
+### V. 6.0.14 - March 18, 2026
+
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log).
+
+### V. 6.0.13 - March 3, 2026
+
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log).
+
 ### V. 6.0.12 - February 11, 2026
 
 * Update iOS SDK 3.7.9 and android SDK 3.8.12
+
+### V. 6.0.11 - January 30, 2026
+
+* Native SDK dependency update (between 6.0.10 and 6.0.12).
+
+### V. 6.0.10 - January 22, 2026
+
+* Native SDK dependency update (between 6.0.9 and 6.0.11).
+
+### V. 6.0.9 - December 26, 2025
+
+* Updated iOS SDK to 3.7.5 and Android SDK to 3.8.6
+
+### V. 6.0.8 - November 19, 2025
+
+* Updated iOS SDK to 3.7.1 and Android SDK to 3.8.2
+
+### V. 6.0.7 - June 19, 2025
+
+* Published to npm (no detailed changelog available).
 
 ### V. 6.0.6 - April 30, 2025
 

@@ -12,6 +12,27 @@ next:
 ---
 <br />
 
+#### April 9, 2026 - V. 2.7.13
+
+* Updated iOS to 3.8.0 and Android to 3.9.1
+
+#### March 17, 2026 - V. 2.7.12
+
+* No changelog published for this release.
+
+#### March 17, 2026 - V. 2.7.11
+
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/flutter-changelog).
+
+#### February 27, 2026 - V. 2.7.10
+
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/flutter-changelog).
+
+#### January 27, 2026 - V. 2.7.9
+
+* Updated iOS to 3.7.8 and Android to 3.8.11
+* Fixed null pointer exception in window insets listener with callback parameter and null checks
+
 #### January 21, 2026 - V. 2.7.8
 
 * Update iOS to 3.7.8 and Android to 3.8.10
