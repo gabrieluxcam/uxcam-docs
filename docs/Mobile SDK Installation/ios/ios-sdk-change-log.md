@@ -9,6 +9,18 @@ metadata:
 
 <br />
 
+### V. 3.8.0 - Apr 8, 2026
+
+* Schematic recording information is now shared in the datafile (keyword: `rt`)
+* Deprecated `optIntoSchematicRecordings`, `optOutOfSchematicRecordings`, and `optInSchematicRecordingStatus` — replaced by new APIs: `optIntoVideoRecordings`, `optOutOfVideoRecordings`, and `optInVideoRecordingStatus`
+* `AppVersion` and `AppVersionBuildNumber` are now separated
+* Improved session-upload logic to reduce missing sessions
+
+### 3.7.12 April 1, 2026
+
+* Fixed crash related to NSFileHandleOperationException, NSInvalidArgumentException, internal logging, setupDisplaylink and status bar orientation. 
+* Updated occlusion metadata.
+
 ### 3.7.11 - March 12, 2026
 
 * Optimized crash symbolication report to indicate crashed line.
