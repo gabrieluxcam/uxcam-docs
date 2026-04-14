@@ -12,7 +12,6 @@ metadata:
 
 ### V. 3.9.1 - Apr 9, 2026
 
-
 * Fix: ANR in ReflectionUtil.findField caused by getDeclaredFields() iterating all fields per class level
 * Fix (rage-tap): use server rage-click config instead of hardcoded defaults
 * Fix: skip canScrollVertically on AndroidComposeView to prevent ConcurrentModificationException in Compose semantics tree traversal
@@ -22,9 +21,9 @@ metadata:
 * Fix (ANR): prevent ANR by moving blocking public APIs off main thread
 * Fix: ANR in ScreenActionTracker due to repeated reflection on every view scan
 
-### V. 3.9.0 - March 31, 2026
-
 <br />
+
+### V. 3.9.0 - March 31, 2026
 
 * fix(uxcamlib): simplify deferred startup lifecycle handling
 * fix(screenshot): centralize blur backend routing
