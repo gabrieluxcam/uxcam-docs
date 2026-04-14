@@ -7,8 +7,6 @@ metadata:
 ---
 <br />
 
-<br />
-
 ### V. 3.8.0 - Apr 8, 2026
 
 * Schematic recording information is now shared in the datafile (keyword: `rt`)
