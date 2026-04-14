@@ -10,6 +10,30 @@ metadata:
 
 <br />
 
+### V. 3.9.1 - Apr 9, 2026
+
+
+* Fix: ANR in ReflectionUtil.findField caused by getDeclaredFields() iterating all fields per class level
+* Fix (rage-tap): use server rage-click config instead of hardcoded defaults
+* Fix: skip canScrollVertically on AndroidComposeView to prevent ConcurrentModificationException in Compose semantics tree traversal
+* Fix: resolve ANR caused by checkpoint writing on main thread during logEvent() calls
+* Fix (uxcamlib): make cancel lifecycle-owned
+* Fix (thread-safety): use ConcurrentHashMap and ConcurrentSkipListSet for public API data structures
+* Fix (ANR): prevent ANR by moving blocking public APIs off main thread
+* Fix: ANR in ScreenActionTracker due to repeated reflection on every view scan
+
+### V. 3.9.0 - March 31, 2026
+
+<br />
+
+* fix(uxcamlib): simplify deferred startup lifecycle handling
+* fix(screenshot): centralize blur backend routing
+* feat(identity): make user identity in-memory only and decouple from session restart
+* fix: redact screen action details for occluded EditTexts
+* fix: allow gesture tracking on auto-occluded EditTexts
+* fix(cordova): textfields get automatically occluded
+* fix: add support for blur radius greater than 25px
+
 ### V. 3.8.14 - March 16, 2026
 
 * fix(response): prevent NPE when null data is received from server
