@@ -45,8 +45,8 @@ Each prompt provides platform-specific code examples, validates your implementat
 
 * ✅ Android (Kotlin/Java)
 * ✅ iOS (Swift/Objective-C)
+* :white_check_mark: Flutter 
 * 🚧 React Native (Coming Soon)
-* 🚧 Flutter (Coming Soon)
 * 🚧 Web (Coming Soon)
 
 ## UXCam Integration MCP Server Setup
