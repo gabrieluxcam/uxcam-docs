@@ -5,167 +5,31 @@ deprecated: false
 hidden: false
 metadata:
   title: ''
-  description: ''
+  description: >-
+    Complete guide to integrating the UXCam React Native SDK for session
+    recordings, screen analytics, heat maps, and user journey insights.
   robots: index
 next:
   description: ''
 ---
 # React Native UXCam Integration Guide
 
-Transform your React Native app into a data-driven product with comprehensive user session analytics, heatmaps, and behavioral insights. This guide provides a complete integration roadmap from basic setup to advanced customization.
-
-## What Does a Successful Integration Look Like?
-
-With a properly integrated UXCam SDK, you'll have complete visibility into user behavior across your React Native app. From detailed session replays and screen analytics to conversion funnels and user journey mapping, you'll understand exactly how users interact with your product.
-
-**Key Benefits:**
-
-* **Session Recordings**: Visual replays of user interactions
-* **Screen Analytics**: Heat maps and engagement metrics per screen
-* **User Journey Analysis**: Complete flow tracking and funnel analytics
-* **Privacy Compliance**: GDPR/CCPA compliant data collection
-* **Cross-Platform Insights**: Unified analytics for iOS and Android
-
-## Integration Complexity Assessment
-
-**Effort Level**: Medium (4-6 hours total)\
-**Technical Complexity**: Moderate
-**Team Coordination**: Low (primarily mobile team)
-**Risk Level**: Low (non-breaking additions)
-
-### Prerequisites Checklist
-
-* [ ] React Native 0.68+ or Expo SDK 47+
-* [ ] Node.js 16+ with npm/yarn package manager
-* [ ] UXCam account with app key
-* [ ] iOS deployment target 12.0+ / Android minSdkVersion 21+
-* [ ] Development environment configured (Xcode/Android Studio for debug logs)
-
-### Project Type Decision Matrix
-
-| Project Type         | Setup Approach            | Key Considerations                         | Integration Time |
-| -------------------- | ------------------------- | ------------------------------------------ | ---------------- |
-| **React Native CLI** | Standard npm installation | Full native access, all features available | 4-5 hours        |
-| **Expo Managed**     | Requires EAS Build        | Limited to managed workflow features       | 5-6 hours        |
-| **Expo Bare**        | Standard installation     | Full customization, requires ejection      | 4-5 hours        |
-
-## Phase-by-Phase Integration Roadmap
-
-### Phase 1: Foundation Setup (1-2 hours) ➡️
-
-**Goal**: Get basic session recording working\
-**Output**: First session visible in UXCam dashboard
-
-**Key Tasks:**
-
-* SDK installation and dependency setup
-* Secure API key configuration
-* Basic initialization and verification
-* Performance validation
-
-**Success Criteria:**
-
-* Session appears in dashboard within 30 seconds
-* No initialization errors in logs
-* App performance remains unaffected
-
-### Phase 2: Screen Analytics (1-2 hours) ➡️
-
-**Goal**: Enable meaningful screen tracking\
-**Output**: All major screens properly named and timed
-
-**Key Tasks:**
-
-* Configure screen tagging strategy
-* Implement navigation framework integration
-* Handle WebView and modal screens
-* Validate screen flow accuracy
-
-**Success Criteria:**
-
-* All major app screens have descriptive names
-* Screen durations > 0 seconds consistently
-* Navigation flows make logical sense
-
-### Phase 3: Privacy Protection (1-2 hours) ➡️
-
-**Goal**: Ensure GDPR/CCPA compliance\
-**Output**: All sensitive data properly occluded
-
-**Key Tasks:**
-
-* Identify sensitive data elements
-* Implement occlusion strategies
-* Configure WebView privacy
-* Test compliance thoroughly
-
-**Success Criteria:**
-
-* No PII visible in session recordings
-* Forms and sensitive screens properly masked
-* Privacy audit passes completely
-
-### Phase 4: Event Tracking (1 hour) ➡️
-
-**Goal**: Capture business-critical user actions\
-**Output**: Key conversion events tracked with context
-
-**Key Tasks:**
-
-* Define business-critical events
-* Implement event tracking with properties
-* Set up conversion funnels
-* Validate event accuracy
-
-**Success Criteria:**
-
-* Business events captured reliably
-* Event properties provide meaningful context
-* Funnel analysis becomes possible
-
-### Phase 5: User Analytics (30 minutes) ➡️
-
-**Goal**: Enable user-level insights and segmentation\
-**Output**: Users identified and tracked across sessions
-
-**Key Tasks:**
-
-* Implement user identity mapping
-* Configure user properties
-* Test cross-session tracking
-* Validate user flows
-
-**Success Criteria:**
-
-* Users properly identified across sessions
-* Key user attributes tracked consistently
-* User journey analysis enabled
-
-### Phase 6: Advanced Configuration (30 minutes)
-
-**Goal**: Optimize performance and customize behavior\
-**Output**: Production-ready configuration
-
-**Key Tasks:**
-
-* Configure session control settings
-* Optimize performance parameters
-* Set up third-party integrations
-* Implement custom validation
-
-**Success Criteria:**
-
-* Performance optimized for production
-* Advanced features configured properly
-* Monitoring and alerting in place
-
-## Quick Start: Basic Integration
+Add session recordings, heat maps, and user journey analytics to your React Native app. This guide takes you from installation to your first recorded session.
 
 <GitHubReleaseBadge owner="uxcam" repo="react-native-ux-cam" />
 
-Get started with just a few lines of code:
+## Prerequisites
 
-### 1. Installation
+- React Native 0.68+ or Expo SDK 47+
+- Node.js 16+ with npm or yarn
+- UXCam account with app key ([sign up](https://uxcam.com))
+- iOS deployment target 12.0+ / Android minSdkVersion 21+
+
+> 📘 **Expo projects** require EAS Build for native modules. See our [Expo Installation Guide](expo-installation-react-native) for the complete setup.
+
+***
+
+## Step 1: Install the SDK
 
 <Terminal>
   {`
@@ -177,87 +41,134 @@ Get started with just a few lines of code:
           `}
 </Terminal>
 
-### 2. Basic Setup
+For iOS, install CocoaPods dependencies:
 
-```javascript App.js
-import RNUxcam from 'react-native-ux-cam';
-
-// Enable video recording for both iOS and Android
-RNUxcam.optIntoVideoRecordings();
-
-const configuration = {
-  userAppKey: 'YOUR_API_KEY',
-  enableAutomaticScreenNameTagging: false, // Manual tagging recommended
-};
-
-RNUxcam.startWithConfiguration(configuration);
+```bash
+cd ios && pod install && cd ..
 ```
 
-### 3. Verification
+## Step 2: Initialize UXCam
 
-Your first session will appear in the UXCam dashboard within 30 seconds after the app goes to background.
+```javascript App.js
+import React, { useEffect } from 'react';
+import RNUxcam from 'react-native-ux-cam';
 
-> 👍 **Integration Success!**\
-> This basic setup gets you session recording immediately. Continue with the phase-by-phase approach below for complete functionality.
+const App = () => {
+  useEffect(() => {
+    // Enable video recording (required for both iOS and Android)
+    RNUxcam.optIntoVideoRecordings();
 
-## Navigation Framework Support
+    const configuration = {
+      userAppKey: 'YOUR_API_KEY',
+      enableAutomaticScreenNameTagging: false, // Manual tagging recommended for RN
+      enableImprovedScreenCapture: true,
+    };
 
-### React Navigation v6 (Recommended)
+    RNUxcam.startWithConfiguration(configuration);
+  }, []);
 
-```javascript
-import React from 'react';
+  return (/* Your app */);
+};
+
+export default App;
+```
+
+## Step 3: Tag Your Screens
+
+React Native requires manual screen tagging. Use `useFocusEffect` with React Navigation:
+
+```javascript screens/HomeScreen.js
 import { useFocusEffect } from '@react-navigation/native';
 import RNUxcam from 'react-native-ux-cam';
 
 function HomeScreen() {
   useFocusEffect(
     React.useCallback(() => {
-      RNUxcam.tagScreenName('Home Screen');
+      RNUxcam.tagScreenName('Home Dashboard');
     }, [])
   );
 
-  return <YourScreenContent />;
+  return (/* Screen content */);
 }
 ```
 
-### Expo Router
+Or create a reusable hook:
+
+```javascript hooks/useScreenTracking.js
+import { useFocusEffect } from '@react-navigation/native';
+import RNUxcam from 'react-native-ux-cam';
+import { useCallback } from 'react';
+
+export const useScreenTracking = (screenName) => {
+  useFocusEffect(
+    useCallback(() => {
+      if (screenName) {
+        RNUxcam.tagScreenName(screenName);
+      }
+    }, [screenName])
+  );
+};
+```
+
+## Step 4: Protect Sensitive Data
+
+Configure privacy rules at initialization time:
 
 ```javascript
-import React, { useEffect } from 'react';
-import { useSegments } from 'expo-router';
-import RNUxcam from 'react-native-ux-cam';
+import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
 
-export default function Layout() {
-  const segments = useSegments();
-
-  useEffect(() => {
-    RNUxcam.tagScreenName(segments.join('/') || 'Home');
-  }, [segments]);
-
-  return <YourLayoutContent />;
-}
-```
-
-## TypeScript Support
-
-```typescript
-import RNUxcam from 'react-native-ux-cam';
-
-interface UXCamConfiguration {
-  userAppKey: string;
-  enableAutomaticScreenNameTagging?: boolean;
-}
-
-const configuration: UXCamConfiguration = {
+const configuration = {
   userAppKey: 'YOUR_API_KEY',
   enableAutomaticScreenNameTagging: false,
+  occlusions: [
+    {
+      type: UXCamOcclusionType.Overlay,
+      color: 0x000000,
+      hideGestures: true,
+      screens: ['Login Form', 'Payment Details'],
+    },
+  ],
 };
-
-RNUxcam.optIntoVideoRecordings();
-RNUxcam.startWithConfiguration(configuration);
 ```
 
-## Development vs Production Configuration
+Or configure screen-level rules from the **UXCam Dashboard → Settings → Video Recording Privacy** (no code required).
+
+## Step 5: Build & Test
+
+1. **Run the app** on a device or simulator
+2. **Navigate through 3-4 screens** for at least 30 seconds
+3. **Background the app** — this triggers session upload
+4. **Check the UXCam dashboard** — your session should appear within 60 seconds
+
+> 👍 **Verification tip**: Enable `enableIntegrationLogging: true` in your config and check native IDE logs (Xcode for iOS, Android Studio for Android) to see `Verification successful` and `Session uploaded` messages.
+
+***
+
+## Configuration Options
+
+```javascript
+const configuration = {
+  userAppKey: 'YOUR_API_KEY',
+
+  // Screen tagging
+  enableAutomaticScreenNameTagging: false,  // default: true (set false for RN)
+
+  // Recording behavior
+  enableImprovedScreenCapture: true,        // default: false
+  enableMultiSessionRecord: true,           // default: true
+  enableCrashHandling: true,                // default: true
+
+  // Debugging (development only)
+  enableIntegrationLogging: __DEV__,        // default: false
+
+  // Privacy — applied at startup
+  occlusions: [/* overlay, blur, or text field rules */],
+};
+```
+
+***
+
+## Development vs Production
 
 ```javascript
 const getUXCamConfig = () => {
@@ -269,66 +180,71 @@ const getUXCamConfig = () => {
   };
 
   if (__DEV__) {
-    config.enableIntegrationLogging = true; // Debug logs visible in Xcode/Android Studio only
+    config.enableIntegrationLogging = true;
+    config.enableMultiSessionRecord = true;
   }
 
   return config;
 };
 ```
 
-## Common Integration Patterns
-
-### Error Handling
-
-```javascript
-const initializeUXCam = async () => {
-  try {
-    RNUxcam.optIntoVideoRecordings();
-    const config = getUXCamConfig();
-    RNUxcam.startWithConfiguration(config);
-    console.log('UXCam initialized successfully');
-  } catch (error) {
-    console.error('UXCam initialization failed:', error);
-    // Implement fallback behavior
-  }
-};
-```
-
-### Platform-Specific Setup
-
-```javascript
-import { Platform } from 'react-native';
-import RNUxcam from 'react-native-ux-cam';
-
-// Required for both iOS and Android - enables video recording
-RNUxcam.optIntoVideoRecordings();
-
-// Platform-specific configuration (if needed)
-if (Platform.OS === 'ios') {
-  // iOS-specific setup can go here
-}
-
-if (Platform.OS === 'android') {
-  // Android-specific setup can go here
-}
-```
-
-## What's Next?
-
-🚀 **Ready to dive deeper?** Continue with our phase-by-phase integration:
-
-1. **[Bootstrap Setup](set-up-the-sdk-and-start-recording-react-native)** - Secure configuration and environment setup
-2. **[Screen Tagging](screen-tagging-react-native)** - Implement comprehensive screen analytics
-3. **[Privacy Protection](sensitive-data-occlusion-react-native/)** - Ensure GDPR/CCPA compliance
-4. **[Event Tracking](events)** - Capture business-critical user actions
-5. **[User Analytics](user-properties)** - Enable user-level insights
-6. **[Advanced Configuration](advanced-configuration-and-apis-2/)** - Optimize and customize
-
-### Quick Links
-
-📖 **[Expo Integration Guide](expo-installation-react-native)** - Complete Expo-specific setup\
-🔧 **[Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native)** - Common issues and solutions
+**Security best practices:**
+- Never commit API keys to version control
+- Use different keys for development and production
+- Store production keys in CI/CD environment variables
 
 ***
 
-**Need Help?** Our Customer Success team is available at [team@uxcam.com](mailto:team@uxcam.com) for integration support and best practices guidance.
+## TypeScript Support
+
+```typescript
+import RNUxcam from 'react-native-ux-cam';
+
+interface UXCamConfig {
+  userAppKey: string;
+  enableAutomaticScreenNameTagging?: boolean;
+  enableImprovedScreenCapture?: boolean;
+}
+
+const config: UXCamConfig = {
+  userAppKey: 'YOUR_API_KEY',
+  enableAutomaticScreenNameTagging: false,
+};
+
+RNUxcam.optIntoVideoRecordings();
+RNUxcam.startWithConfiguration(config);
+```
+
+***
+
+## Next Steps
+
+<Cards columns={3}>
+  <Card title="Expo Installation" href="expo-installation-react-native" icon="fa-mobile">
+    Complete Expo-specific setup with EAS Build configuration.
+  </Card>
+
+  <Card title="Screen Tagging" href="screen-tagging-react-native/" icon="fa-tags">
+    Comprehensive screen tagging with React Navigation, Expo Router, and WebViews.
+  </Card>
+
+  <Card title="Mask PII Data" href="sensitive-data-occlusion-react-native/" icon="fa-eye-slash">
+    Protect your users' privacy — mask or blur screens, views and fields.
+  </Card>
+
+  <Card title="Send Events" href="events" icon="fa-bolt">
+    Capture business-critical user actions with custom events.
+  </Card>
+
+  <Card title="User Properties" href="user-properties" icon="fa-user">
+    Identify users and track properties across sessions.
+  </Card>
+
+  <Card title="Advanced Configuration" href="advanced-configuration-and-apis-2/" icon="fa-cog">
+    Recording control, crash handling, opt-in/opt-out, and more.
+  </Card>
+</Cards>
+
+***
+
+**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).

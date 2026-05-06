@@ -1,3 +1,6 @@
-- control-recording-2
-- crashes-and-anrs
-- opt-in-opt-out-your-users
+- control-recording-2-react-native
+- pause-and-resume-react-native
+- crashes-and-anrs-react-native
+- report-handled-exceptions-react-native
+- opt-in-opt-out-your-users-react-native
+- integration-logging-react-native
