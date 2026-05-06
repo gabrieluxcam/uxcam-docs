@@ -54,8 +54,8 @@ In your `App.js` or entry file:
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
 
-// Enable screen recordings (required)
-RNUxcam.optIntoSchematicRecordings();
+// Enable video recording (required)
+RNUxcam.optIntoVideoRecordings();
 
 // Start UXCam
 RNUxcam.startWithConfiguration({
@@ -81,7 +81,7 @@ const config: UXCamConfig = {
   enableImprovedScreenCapture: true,
 };
 
-RNUxcam.optIntoSchematicRecordings();
+RNUxcam.optIntoVideoRecordings();
 RNUxcam.startWithConfiguration(config);
 ```
 </Accordion>

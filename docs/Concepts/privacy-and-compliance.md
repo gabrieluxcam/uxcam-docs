@@ -183,8 +183,8 @@ UXCam does not sell personal information. Session data is used solely for the an
 ```javascript
 // 1. Check for consent before starting
 if (userHasConsented) {
-  // 2. Use schematic recordings for maximum privacy
-  UXCam.optIntoSchematicRecordings();
+  // 2. Use video recording for maximum privacy
+  UXCam.optIntoVideoRecordings();
 
   // 3. Configure occlusion upfront
   const config = {

@@ -112,7 +112,7 @@ using Com.Uxcam.Screenshot.Model;
 // Add in the CreateMaui method
 
 // Your SDK Init
-UXCam.OptIntoSchematicRecordings();
+UXCam.OptIntoVideoRecordings();
 var config = new UXCamConfiguration("yourAppKey");
          
 // Occlusion:

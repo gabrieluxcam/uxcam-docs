@@ -87,13 +87,13 @@ export const ConfigurationBuilder = ({ platforms = ['android', 'ios', 'react-nat
     },
     'react-native': {
       imports: ['import RNUxcam from \'react-native-uxcam\';'],
-      configMethod: 'RNUxcam.optIntoSchematicRecordings',
+      configMethod: 'RNUxcam.optIntoVideoRecordings',
       startMethod: 'RNUxcam.startWithConfiguration',
       language: 'javascript'
     },
     flutter: {
       imports: ['import \'package:flutter_uxcam/flutter_uxcam.dart\';'],
-      configMethod: 'FlutterUxcam.optIntoSchematicRecordings',
+      configMethod: 'FlutterUxcam.optIntoVideoRecordings',
       startMethod: 'FlutterUxcam.startWithConfiguration',
       language: 'dart'
     },

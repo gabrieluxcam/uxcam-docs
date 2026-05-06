@@ -17,6 +17,19 @@ metadata:
 
 <br />
 
+### V. 3.10.0 - May 5, 2026
+
+* **New**: Readable fragment screen tagging — fragment screens now show as `Activity/Fragment` (e.g. `MainActivity/HomeFragment`) instead of hex hashes (e.g. `MainActivity/0xa1b2c3`) in the dashboard timeline
+* **New**: Opt-out available via `UXConfig.Builder.enableReadableFragmentNames(false)` for customers with analytics tied to legacy hash names
+* **Note**: Existing occlusion rules using old hex hash names continue to work — the SDK matches against both names
+* Feat (frame-sync): marker-based occlusion via `FrameSyncManager`
+* Fix (occlusion): evict detached Compose occlusions on read
+* Fix (capture): skip captures when activity view tree isn't laid out yet
+* Fix (occlusion): key `autoByRoot` by `View` to prevent silent bucket loss
+* Fix (logcat): use `ProcessBuilder` to process logcat data across all API levels
+
+<br />
+
 ### V. 3.9.1 - Apr 9, 2026
 
 * Fix: ANR in `ReflectionUtil.findField` caused by `getDeclaredFields()` iterating all fields per class level
@@ -30,9 +43,23 @@ metadata:
 
 <br />
 
-### V. 3.9.0 - Mar 2026
+### V. 3.9.0 - Mar 31, 2026
 
-* Interim release (bundled by React Native 6.0.15). Detailed notes pending.
+* Feat (identity): user identity is now in-memory only, decoupled from session restart
+* Fix: simplified deferred startup lifecycle handling
+* Fix (screenshot): centralized blur backend routing
+* Fix: redact screen action details for occluded `EditText` views
+* Fix: allow gesture tracking on auto-occluded `EditText` views
+* Fix (Cordova): text fields get automatically occluded
+* Fix: add support for blur radius greater than 25px
+
+<br />
+
+### V. 3.8.14 - Mar 13, 2026
+
+* Fix (response): prevent NPE when null data is received from server
+* Fix: session cancelling due to `OutOfMemoryException`
+* Fix: allow per-view occlusion to apply alongside full-screen occlusion
 
 <br />
 

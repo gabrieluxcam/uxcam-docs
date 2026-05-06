@@ -153,7 +153,7 @@ if (purchased) {
 ```javascript React Native
 import { NativeModules, NativeEventEmitter } from 'react-native';
     
-RNUxcam.optIntoSchematicRecordings();
+RNUxcam.optIntoVideoRecordings();
 RNUxcam.startWithKey("your app key");
     
 //Setup listener

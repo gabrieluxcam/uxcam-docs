@@ -90,7 +90,7 @@ import * as NSUXCam from 'nativescript-uxcam';
 Application.on(Application.launchEvent, () => {
     console.log('Initializing UXCam...');
 
-    NSUXCam.optIntoSchematicRecordings();
+    NSUXCam.optIntoVideoRecordings();
     NSUXCam.startWithKey('YOUR_APP_KEY');
 
     console.log('UXCam initialized');
@@ -247,7 +247,7 @@ NSUXCam.occludeSensitiveScreen(false);
 **Solution:**
 ```typescript
 // Required for iOS
-NSUXCam.optIntoSchematicRecordings();
+NSUXCam.optIntoVideoRecordings();
 NSUXCam.startWithKey('YOUR_APP_KEY');
 ```
 

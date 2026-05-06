@@ -125,7 +125,7 @@ import UXCamSwiftUI
 struct MyApp: App {
     init() {
         // 1. Opt‑in for wireframe screenshots (App Store review safe)
-        UXCamCore.optIntoSchematicRecordings()
+        UXCamCore.optIntoVideoRecordings()
 
         // 2. Build configuration
         var config = Configuration(appKey: appKey)

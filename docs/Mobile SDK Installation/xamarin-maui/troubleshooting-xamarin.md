@@ -94,7 +94,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 {
     System.Diagnostics.Debug.WriteLine("Initializing UXCam...");
 
-    UXCam.OptIntoSchematicRecordings();
+    UXCam.OptIntoVideoRecordings();
 
     var config = new UXCamConfiguration("YOUR_APP_KEY");
     UXCam.StartWithConfiguration(config);
@@ -130,10 +130,10 @@ protected override void OnCreate(Bundle savedInstanceState)
 
 **Common Solutions:**
 
-**Missing OptIntoSchematicRecordings (iOS):**
+**Missing OptIntoVideoRecordings (iOS):**
 ```csharp
 // Required for iOS screen capture
-UXCam.OptIntoSchematicRecordings();  // Add this before StartWithConfiguration
+UXCam.OptIntoVideoRecordings();  // Add this before StartWithConfiguration
 ```
 
 **Wrong namespace:**
@@ -174,7 +174,7 @@ public class AppDelegate : MauiUIApplicationDelegate
 
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
-        UXCam.OptIntoSchematicRecordings();
+        UXCam.OptIntoVideoRecordings();
         var config = new UXCamConfiguration("YOUR_APP_KEY");
         UXCam.StartWithConfiguration(config);
 

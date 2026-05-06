@@ -14,6 +14,15 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.1 - May 2026
+
+* Optimized video recording flow — major internal refactoring of video pipeline architecture for improved performance and stability
+* Added missing public headers: `UXCamOcclusionParameter` and `UXCamOcclusionScreen`
+* Fix: video duration drift under backpressure
+* Fix: sensitive animation occlusion handling for modal/popover presentation and dismissal
+* Fix: image rotation issue for image-only mode
+* Fix: Flutter late-attach and capture pipeline improvements
+
 ### V. 3.8.0 - Apr 8, 2026
 
 * Schematic recording information is now shared in the datafile (keyword: `rt`)
@@ -23,7 +32,8 @@ metadata:
 
 ### V. 3.7.12 - Apr 1, 2026
 
-* No changelog published for this release.
+* Fixed crash related to `NSFileHandleOperationException`, `NSInvalidArgumentException`, internal logging, `setupDisplayLink`, and status bar orientation
+* Updated occlusion metadata
 
 ### V. 3.7.11 - Mar 12, 2026
 

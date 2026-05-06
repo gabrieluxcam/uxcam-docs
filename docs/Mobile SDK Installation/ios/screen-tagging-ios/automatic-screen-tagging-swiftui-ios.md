@@ -36,7 +36,7 @@ To achieve this, please enable the configuration option `configuration.enableAut
 
 ```swift
 init(){
-     UXCamCore.optIntoSchematicRecordings()
+     UXCamCore.optIntoVideoRecordings()
      let config = Configuration(appKey: "YOUR APP KEY")
      config.enableAutomaticScreenNameTagging = true
      UXCamSwiftUI.start(with: config)

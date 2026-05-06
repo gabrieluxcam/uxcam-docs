@@ -19,7 +19,7 @@ This guide covers common issues encountered when integrating UXCam with Flutter 
 
 Before diving into specific issues, verify these basics:
 
-- [ ] Flutter SDK version 3.10+ is installed
+- [ ] Flutter framework version 3.10+ is installed
 - [ ] UXCam Flutter package is latest version (`flutter pub outdated`)
 - [ ] Valid UXCam app key is configured
 - [ ] Internet connectivity is available
@@ -51,7 +51,7 @@ flutter pub get
 
 3. **Check Flutter version compatibility**:
 ```bash
-flutter --version  # Must be 3.10+
+flutter --version  # Flutter framework must be 3.10+
 ```
 
 ### Build Failures After Adding UXCam
@@ -443,4 +443,31 @@ flutter pub deps
 
 ---
 
-*Last updated: December 2024*
+## Flutter-Specific Issues
+
+### Hot Reload vs. Hot Restart
+
+UXCam initializes once during app startup. **Hot reload** preserves the SDK state, but **hot restart** will re-initialize. If you see duplicate sessions during development, this is expected behavior with hot restart.
+
+### Impeller Rendering Engine
+
+Flutter's Impeller rendering engine (default on iOS since Flutter 3.16) is fully supported by UXCam. If you experience video recording issues:
+1. Ensure you're on UXCam Flutter SDK **v2.7.2+**
+2. Check that your iOS native SDK is **v3.7.2+** (resolved freezing with Impeller)
+
+### Release Build ProGuard (Android)
+
+If your Android release build crashes or UXCam doesn't initialize, ensure your ProGuard rules include:
+
+```
+-keep class com.uxcam.** { *; }
+-dontwarn com.uxcam.**
+```
+
+### Occlusion Not Working After Navigation
+
+If occlusion disappears when navigating between screens, ensure you are applying occlusion rules **per screen** rather than globally, or use the `UXCamOcclusion` configuration at SDK initialization time.
+
+---
+
+*Last updated: May 2026*

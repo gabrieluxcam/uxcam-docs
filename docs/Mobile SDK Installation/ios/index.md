@@ -130,7 +130,7 @@ func application(_ application: UIApplication,
                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     let config = UXCamConfiguration(appKey: "YOUR_APP_KEY")
 
-    UXCam.optIntoSchematicRecordings()
+    UXCam.optIntoVideoRecordings()
 
     #if DEBUG
     // 🔍 Enable verbose integration logs in Debug builds only
@@ -168,6 +168,46 @@ func application(_ application: UIApplication,
   <br />
 
   <em style={{ fontSize: "13px" }}>Crash handling is enabled by default, to let you capture all the sessions with crashes and see the corresponding crash logs.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code className="language-swift">enableMultiSessionRecord</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Enable or disable recording of multiple sessions per app launch. Default is true.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code className="language-swift">enableIntegrationLogging</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Enable verbose SDK logs in the console for debugging. Default is false. Enable only in DEBUG builds.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code className="language-swift">enableNetworkLogging</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Capture per-request network data (URL, method, status code, timing) for timeline correlation. Available since v3.7.9. Default is false.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code className="language-swift">occlusion</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Set a <code>UXCamOcclusion</code> object to pre-configure sensitive data masking at SDK start. See <a href="https://developer.uxcam.com/docs/sensitive-data-occlusion-ios">Sensitive Data Occlusion</a>.</em>
+</p>
+
+<p style={{ fontSize: "18px" }}>
+  <code className="language-swift">environment</code>
+
+  <br />
+
+  <em style={{ fontSize: "13px" }}>Set the app environment: <code>.alpha</code>, <code>.beta</code>, or <code>.release</code>. Useful for filtering sessions by build type on the dashboard.</em>
 </p>
 
 ## Build & Test

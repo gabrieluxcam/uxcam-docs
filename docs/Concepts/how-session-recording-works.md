@@ -96,7 +96,7 @@ Captures screen structure as wireframes without actual content.
 **Enable with:**
 ```javascript
 // This is required for iOS and Android to enable recordings
-UXCam.optIntoSchematicRecordings();
+UXCam.optIntoVideoRecordings();
 ```
 
 ### Full Recording

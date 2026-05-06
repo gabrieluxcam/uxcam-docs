@@ -76,3 +76,19 @@ RNUxcam.setUserProperty("company_name", "your-company");
 `value`: A value to associate with the property. String or Number are accepted for value.
 
 > 🚧 Note: User IDs and properties are case sensitive. Please ensure consistent naming conventions when using them.
+
+## User Properties vs. Session Properties
+
+| Feature | User Property | Session Property |
+|---------|--------------|-----------------|
+| Scope | Persists across all sessions | Applies to current session only |
+| Use case | User identity, plan type, role | A/B test group, build variant, QA flag |
+| API | `setUserProperty(key, value)` | Passed in configuration or set per-session |
+| Dashboard | Filter users across sessions | Filter individual sessions |
+
+## Tips
+
+- Call `setUserIdentity()` as soon as you know who the user is (e.g. after login). This links all their anonymous sessions to a single identity.
+- Set user properties **after** `setUserIdentity()` for best results — properties are associated with the identified user.
+- Property keys are case-sensitive. `email` and `Email` are treated as different properties.
+- Maximum **100 unique property keys** per app. Plan your property schema before going to production.

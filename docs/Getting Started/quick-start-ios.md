@@ -60,7 +60,7 @@ func application(_ application: UIApplication,
                  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     let config = UXCamConfiguration(appKey: "YOUR_APP_KEY")
-    UXCam.optIntoSchematicRecordings()
+    UXCam.optIntoVideoRecordings()
     UXCam.start(with: config)
 
     return true
@@ -74,7 +74,7 @@ func application(_ application: UIApplication,
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     UXCamConfiguration *config = [[UXCamConfiguration alloc] initWithAppKey:@"YOUR_APP_KEY"];
-    [UXCam optIntoSchematicRecordings];
+    [UXCam optIntoVideoRecordings];
     [UXCam startWithConfiguration:config];
 
     return YES;

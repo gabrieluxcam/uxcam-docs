@@ -42,7 +42,7 @@ Add this to your `deviceready` handler:
 ```javascript
 document.addEventListener('deviceready', function() {
 
-  UXCam.optIntoSchematicRecordings();
+  UXCam.optIntoVideoRecordings();
 
   UXCam.startWithConfiguration({
     userAppKey: 'YOUR_APP_KEY'

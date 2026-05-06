@@ -46,3 +46,58 @@ So in case you have an Expo application and want to check the possibility of int
 For more reference on how to add EAS into your Expo application, please visit the following link: [https://docs.expo.dev/build/setup/](https://docs.expo.dev/build/setup/)
 
 Please reach out to our Customer Success Team at [team@uxcam.com](mailto:team@uxcam.com) if you need any additional help.
+
+## Why Expo Go Doesn't Work
+
+UXCam uses native modules (Objective-C/Swift on iOS, Java/Kotlin on Android) that Expo Go cannot load. You **must** use a [development build](https://docs.expo.dev/develop/development-builds/introduction/) or [EAS Build](https://docs.expo.dev/build/introduction/) to use UXCam.
+
+## Setting Up with EAS Build
+
+### 1. Install the EAS CLI
+
+```bash
+npm install -g eas-cli
+eas login
+```
+
+### 2. Configure `eas.json`
+
+If you don't already have one, create `eas.json` in your project root:
+
+```json
+{
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "production": {}
+  }
+}
+```
+
+### 3. Create a Development Build
+
+```bash
+eas build --profile development --platform ios
+# or
+eas build --profile development --platform android
+```
+
+### 4. Install and Run
+
+Once the build completes, install it on your device/simulator and start the development server:
+
+```bash
+npx expo start --dev-client
+```
+
+UXCam will now initialize correctly with native module access.
+
+## Common Expo Issues
+
+| Issue | Solution |
+|-------|----------|
+| `RNUxcam is null` or `undefined` | You're running in Expo Go. Switch to a development build. |
+| Build fails with missing native module | Run `npx expo prebuild` then rebuild. |
+| Sessions not appearing after EAS build | Ensure your app key is correct and the app goes to background to trigger upload. |

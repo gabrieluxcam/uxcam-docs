@@ -97,7 +97,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    FlutterUxcam.optIntoSchematicRecordings();
+    FlutterUxcam.optIntoVideoRecordings();
     FlutterUxConfig config = FlutterUxConfig(
       userAppKey: "UXCAM_APP_KEY",
       enableAutomaticScreenNameTagging: false,

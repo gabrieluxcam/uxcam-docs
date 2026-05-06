@@ -111,7 +111,7 @@ Manifest merger failed : uses-sdk:minSdkVersion 19 cannot be smaller than versio
 document.addEventListener('deviceready', function() {
     console.log('Device ready - initializing UXCam');
 
-    UXCam.optIntoSchematicRecordings();
+    UXCam.optIntoVideoRecordings();
     UXCam.startWithConfiguration({
         userAppKey: 'YOUR_APP_KEY'
     });
@@ -250,11 +250,11 @@ function hidePaymentScreen() {
 
 ### iOS: Recording Not Starting
 
-**Solution** - Ensure schematic recordings are enabled:
+**Solution** - Ensure video recording is enabled:
 ```javascript
 document.addEventListener('deviceready', function() {
     // Required for iOS screen capture
-    UXCam.optIntoSchematicRecordings();
+    UXCam.optIntoVideoRecordings();
 
     UXCam.startWithConfiguration({
         userAppKey: 'YOUR_APP_KEY'

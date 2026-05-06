@@ -48,7 +48,7 @@ UXCam.addVerificationListener(new OnVerificationListener() {
 ```
 ```typescript Xamarin
 //IOS:
-UXCam.OptIntoSchematicRecordings();
+UXCam.OptIntoVideoRecordings();
 UXCam.StartWithKey("your app key", null, (status)=>
 {
     if (status){
@@ -78,7 +78,7 @@ class IOnVerificationListener : Java.Lang.Object, Com.UXCam.IOnVerificationListe
 ```javascript React Native
 import { NativeModules, NativeEventEmitter } from 'react-native';
     
-RNUxcam.optIntoSchematicRecordings();
+RNUxcam.optIntoVideoRecordings();
 RNUxcam.startWithConfiguration(config);
     
 //Setup listener
@@ -90,7 +90,7 @@ this.uxcamEvent = emitter.addListener('UXCam_Verification_Event', async () => {
 });
 ```
 ```javascript Cordova
-UXCam.optIntoSchematicRecordings();
+UXCam.optIntoVideoRecordings();
 UXCam.startWithKey("your app key", success, failure);
 Example:
 UXCam.startWithKey("your app key", ()=>{

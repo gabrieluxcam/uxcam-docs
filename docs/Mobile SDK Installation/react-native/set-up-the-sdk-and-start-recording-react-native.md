@@ -80,7 +80,6 @@ const getUXCamConfig = () => {
         process.env.UXCAM_PROD_KEY || 'your-prod-key-here'
     ),
     enableAutomaticScreenNameTagging: false, // Manual tagging recommended
-    enableImprovedScreenCapture: true,
     // enableCrashHandling: true by default - no need to specify
   };
   
@@ -128,8 +127,8 @@ const App = () => {
 
   const initializeUXCam = () => {
     try {
-      // Always enable schematic recordings for screen capture
-      RNUxcam.optIntoSchematicRecordings();
+      // Always enable video recording for screen capture
+      RNUxcam.optIntoVideoRecordings();
       
       const config = getUXCamConfig();
       RNUxcam.startWithConfiguration(config);
@@ -187,8 +186,8 @@ class UXCamManager {
 
   async performInitialization() {
     try {
-      // Enable screen recordings (required for both platforms)
-      RNUxcam.optIntoSchematicRecordings();
+      // Enable video recording (required for both platforms)
+      RNUxcam.optIntoVideoRecordings();
       
       const config = getUXCamConfig();
       
@@ -304,7 +303,7 @@ export const verifyUXCamIntegration = async () => {
       console.warn('Session URL not available yet');
     }
 
-    // Screen recording is enabled via optIntoSchematicRecordings
+    // Screen recording is enabled via optIntoVideoRecordings()
     checks.screenRecordingEnabled = true;
 
     // Log verification results (only in development)
@@ -462,11 +461,10 @@ describe('UXCam Integration', () => {
     const mockConfig = {
       userAppKey: 'test-key-12345',
       enableAutomaticScreenNameTagging: false,
-      enableImprovedScreenCapture: true,
     };
 
     expect(() => {
-      RNUxcam.optIntoSchematicRecordings();
+      RNUxcam.optIntoVideoRecordings();
       RNUxcam.startWithConfiguration(mockConfig);
     }).not.toThrow();
   });

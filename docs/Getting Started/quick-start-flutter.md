@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
-    FlutterUxcam.optIntoSchematicRecordings();
+    FlutterUxcam.optIntoVideoRecordings();
 
     FlutterUxConfig config = FlutterUxConfig(
       userAppKey: "YOUR_APP_KEY",

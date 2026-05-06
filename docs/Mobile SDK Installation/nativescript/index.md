@@ -51,7 +51,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
        userAppKey: 'YOUR APP KEY',
    };
 
-   NSUXCam.optIntoSchematicRecordings(); // Enable iOS screen recordings
+   NSUXCam.optIntoVideoRecordings(); // Enable video recording on iOS
    NSUXCam.startWithConfiguration(config); // Start UXCam with the configuration
    ```
 
@@ -74,7 +74,7 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
               enableAutomaticScreenNameTagging: false,
           };
           
-          NSUXCam.optIntoSchematicRecordings();
+          NSUXCam.optIntoVideoRecordings();
           NSUXCam.startWithConfiguration(config);
       },
   });
@@ -96,7 +96,7 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
   })
   export class AppComponent implements OnInit {
       constructor() {
-          NSUXCam.optIntoSchematicRecordings(); // Enable iOS screen recordings
+          NSUXCam.optIntoVideoRecordings(); // Enable video recording on iOS
           NSUXCam.startWithConfiguration(config);
       }
   }
@@ -109,6 +109,6 @@ If you're using Angular or Vue with your NativeScript project, here's how you sh
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, you explore the customisation features UXCam offers. Let's move on to the next steps!
 
-## Next Steps ➡️
+## Next Steps
 
-You’ve successfully integrated UXCam and sent some sessions, great job! 🎉 But there's so much more you can do. Now, let’s go further into setting things up, like identifying users, tagging sessions, and protecting sensitive data.
+You’ve successfully integrated UXCam and sent some sessions, great job! But there's so much more you can do. Now, let’s go further into setting things up, like identifying users, tagging sessions, and protecting sensitive data.

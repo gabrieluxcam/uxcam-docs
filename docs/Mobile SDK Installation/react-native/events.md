@@ -66,3 +66,26 @@ This approach gives you a richer dataset and helps in better segmenting and unde
 **Test Your Implementation**: Before rolling out your analytics to production, thoroughly test your events and properties to ensure they are correctly logged and appear as expected.
 
 By leveraging events and properties effectively, you can unlock valuable insights into how users interact with your app, leading to better product decisions and enhanced user experiences.
+
+## Best Practices
+
+### Event Naming
+- Use **consistent casing** — we recommend `snake_case` (e.g. `purchase_completed`, `signup_started`)
+- Keep names **descriptive but concise** — under 100 characters
+- Prefix by feature area if your app is large (e.g. `checkout_payment_added`, `checkout_completed`)
+- Avoid dynamic values in event names (e.g. don't do `screen_viewed_HomeScreen` — use properties instead)
+
+### Event Properties
+- Property values can be `string`, `number`, or `boolean`
+- Nested objects are serialized as JSON strings
+- Maximum of **512 characters** per property value
+- Use properties for context: `RNUxcam.logEvent('purchase_completed', { amount: 49.99, currency: 'USD' })`
+
+### Events vs. Session Properties
+| Use Case | Mechanism |
+|----------|-----------|
+| User completed checkout | `logEvent('checkout_completed', { total: 99 })` |
+| User is on a paid plan | `setUserProperty('plan', 'premium')` |
+| This session is from QA | `setSessionProperty('is_qa', 'true')` |
+
+Events track **actions**. User properties describe **who** the user is. Session properties describe **this particular session**.

@@ -19,6 +19,16 @@ next:
 
 Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
+> 📘 **Which Approach Should I Use?**
+>
+> **For most Flutter apps, use the `FlutterUxcamNavigatorObserver`** with `enableAutomaticScreenNameTagging: false`. The Navigator Observer tracks Flutter route changes accurately, while automatic screen name tagging is designed for native UIKit/Activity hierarchies and may not reflect Flutter navigation correctly.
+>
+> | Approach | Best For | Config |
+> |----------|----------|--------|
+> | **Navigator Observer** (recommended) | Most Flutter apps using `Navigator` or `GoRouter` | `enableAutomaticScreenNameTagging: false` + add `FlutterUxcamNavigatorObserver` |
+> | **Automatic Tagging** | Apps with heavy native screens or platform views | `enableAutomaticScreenNameTagging: true` (default) |
+> | **Manual Tagging** | Complex navigation or custom route systems | Call `FlutterUxcam.tagScreenName('ScreenName')` explicitly |
+
 # Screen Tagging in Flutter
 
 Flutter's architecture requires a different approach to screen tagging compared to native frameworks. You have two options:

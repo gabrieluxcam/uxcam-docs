@@ -24,7 +24,7 @@ This reference documents UXCam SDK methods available across all platforms. For p
 | Method | Description |
 |--------|-------------|
 | `startWithConfiguration(config)` | Initialize the SDK with configuration options |
-| `optIntoSchematicRecordings()` | Enable screen recording (required for iOS/Android) |
+| `optIntoVideoRecordings()` | Enable screen recording (required for iOS/Android) |
 
 <Card title="Configuration Options" href="/docs/android" icon="fa-solid fa-gear">
   See platform guides for all configuration parameters

@@ -124,7 +124,7 @@ This keeps all rules **in one place** and avoids race conditions.
 
 ```swift
 init() {
-  UXCamCore.optIntoSchematicRecordings()
+  UXCamCore.optIntoVideoRecordings()
   let cfg = Configuration(appKey: key)
   cfg.enableAutomaticScreenNameTagging = true
   UXCamSwiftUI.start(with: cfg)

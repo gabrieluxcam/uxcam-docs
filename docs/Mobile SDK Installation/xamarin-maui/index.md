@@ -36,7 +36,7 @@ using Com.UXCam;
 2. Add this call in your `CreateMauiApp` method in MauiProgram.cs
 
 ```csharp
-UXCam.OptIntoSchematicRecordings();
+UXCam.OptIntoVideoRecordings();
 var configuration = new UXCamConfiguration("YOUR_APP_KEY");
 
 UXCam.Start(configuration);
@@ -44,7 +44,7 @@ UXCam.Start(configuration);
 
 <GitHubCallout type="note">Done! Your MAUI app should now have the SDK installed and ready to record some sessions. Please check our following pages for information on screens, properties, and privacy.</GitHubCallout>
 
-## SDK Installation - Xmarin Deprecated Verdsion
+## SDK Installation — Xamarin (Deprecated)
 
 [![NuGet version](https://badge.fury.io/nu/UXCam.svg)](https://badge.fury.io/nu/UXCam/3.5.1)
 
@@ -57,11 +57,10 @@ UXCam.Start(configuration);
 
 2. Add this call as the first line of your AppDelegate FinishedLaunching method
    ```objectivec
-   UXCam.optIntoSchematicRecordings();
+   UXCam.optIntoVideoRecordings();
 
    UXCamConfiguration configuration = new UXCamConfiguration(
         userAppKey: 'userAppKey',
-        enableImprovedScreenCapture: true,
    );
    UXCam.startWithConfiguration(configuration);
    ```
@@ -106,4 +105,4 @@ Check out our additional documentation to learn how to further tailor UXCam to y
 >
 > 📜 **SDK Updates**
 >
-> To stay up to date with the latest SDK improvements, visit [this link](https://help.uxcam.com/hc/en-us/articles/4404509626509--SDK-UPDATES).
+> To stay up to date with the latest SDK improvements, visit [this link](https://developer.uxcam.com/docs/xamarin-changelog).

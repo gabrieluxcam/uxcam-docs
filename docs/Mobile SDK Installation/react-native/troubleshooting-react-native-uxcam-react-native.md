@@ -13,7 +13,7 @@ Before diving into specific issues, run through this quick checklist:
 
 * [ ] UXCam SDK version is compatible with your React Native version
 * [ ] API key is valid and properly configured
-* [ ] `optIntoSchematicRecordings()` is called before initialization
+* [ ] `optIntoVideoRecordings()` is called before initialization (replaces deprecated `optIntoSchematicRecordings()`)
 * [ ] App backgrounds for at least 5 seconds to trigger session upload
 * [ ] Network connection is available during session upload
 * [ ] Debug logs are checked in **Xcode/Android Studio** (not other IDEs)
@@ -46,13 +46,12 @@ const debugUXCamInit = async () => {
     }
 
     // Always call this first
-    RNUxcam.optIntoSchematicRecordings();
-    console.log('✅ Schematic recordings enabled');
+    RNUxcam.optIntoVideoRecordings();
+    console.log('✅ Video recording enabled');
 
     const config = {
       userAppKey: apiKey,
       enableAutomaticScreenNameTagging: false,
-      enableImprovedScreenCapture: true,
       enableIntegrationLogging: __DEV__, // Only in development
     };
 
@@ -94,10 +93,10 @@ const debugUXCamInit = async () => {
    };
    ```
 
-2. **Missing optIntoSchematicRecordings()**
+2. **Missing optIntoVideoRecordings()** (formerly `optIntoSchematicRecordings()`)
    ```javascript
    // ✅ Always call before startWithConfiguration
-   RNUxcam.optIntoSchematicRecordings();
+   RNUxcam.optIntoVideoRecordings();
    RNUxcam.startWithConfiguration(config);
    ```
 
@@ -226,17 +225,17 @@ const debugSessionUpload = () => {
 
 **Solutions:**
 
-1. **Verify Schematic Recordings**
+1. **Verify Video Recording**
    ```javascript
    // Must be called before initialization
    const initWithProperRecording = () => {
      // ✅ Correct order
-     RNUxcam.optIntoSchematicRecordings(); // FIRST
+     RNUxcam.optIntoVideoRecordings(); // FIRST
      RNUxcam.startWithConfiguration(config); // SECOND
      
      // ❌ Wrong order
      // RNUxcam.startWithConfiguration(config);
-     // RNUxcam.optIntoSchematicRecordings(); // Too late
+     // RNUxcam.optIntoVideoRecordings(); // Too late!
    };
    ```
 
@@ -244,7 +243,7 @@ const debugSessionUpload = () => {
    ```javascript
    const config = {
      userAppKey: 'YOUR_API_KEY',
-     enableImprovedScreenCapture: true, // Essential for visual recording
+     // enableImprovedScreenCapture is no longer needed (always on)
    };
    ```
 
@@ -668,7 +667,6 @@ const monitorUXCamPerformance = () => {
    const config = {
      userAppKey: 'YOUR_API_KEY',
      enableAutomaticScreenNameTagging: false, // Reduces overhead
-     enableImprovedScreenCapture: true,
      enableMultiSessionRecord: false, // Disable in production
      enableIntegrationLogging: false, // Disable in production
    };
@@ -897,7 +895,7 @@ export const runUXCamIntegrationTest = async () => {
 
   try {
     // Test 1: Initialization
-    RNUxcam.optIntoSchematicRecordings();
+    RNUxcam.optIntoVideoRecordings();
     await RNUxcam.startWithConfiguration({
       userAppKey: 'test-key-12345',
       enableIntegrationLogging: true

@@ -90,9 +90,9 @@ if (!hasConsent) {
   bool userConsent = await showConsentDialog();
   
   if (userConsent) {
-    FlutterUxcam.optIntoSchematicRecordings();
+    FlutterUxcam.optIntoVideoRecordings();
   } else {
-    FlutterUxcam.optOutOfSchematicRecordings();
+    FlutterUxcam.optOutOfVideoRecordings();
   }
 }
 ```

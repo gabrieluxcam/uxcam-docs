@@ -45,12 +45,11 @@ Add UXCam to your Cordova project by running the following command:
 To initialize UXCam, you need to call its configuration method once the device is ready. You can typically do this in the `onDeviceReady()` function. Replace `'YOUR APP KEY'` with the actual key from your UXCam dashboard.
 
 ```javascript Cordova
-UXCam.optIntoSchematicRecordings(); // Enable session video recording on iOS
+UXCam.optIntoVideoRecordings(); // Enable video recording on iOS
 
 const configuration = {
     userAppKey: 'YOUR APP KEY',
     enableAutomaticScreenNameTagging: false,
-    enableImprovedScreenCapture: true,
 };
 
 UXCam.startWithConfiguration(configuration);
@@ -85,12 +84,11 @@ If you're using Ionic, here are the steps to integrate UXCam:
    ...
    constructor(private platform: Platform) {
        this.platform.ready().then(() => {
-           UXCam.optIntoSchematicRecordings(); // Enable session video recording on iOS
+           UXCam.optIntoVideoRecordings(); // Enable video recording on iOS
 
            const configuration = {
                userAppKey: 'YOUR APP KEY',
                enableAutomaticScreenNameTagging: false,
-               enableImprovedScreenCapture: true,
            };
 
            UXCam.startWithConfiguration(configuration);
@@ -125,12 +123,11 @@ To integrate UXCam with Capacitor:
    ...
    constructor(private platform: Platform) {
        this.platform.ready().then(() => {
-           UXCam.optIntoSchematicRecordings(); // Enable session video recording on iOS
+           UXCam.optIntoVideoRecordings(); // Enable video recording on iOS
 
            const configuration = {
                userAppKey: 'YOUR APP KEY',
                enableAutomaticScreenNameTagging: false,
-               enableImprovedScreenCapture: true,
            };
 
            UXCam.startWithConfiguration(configuration);
@@ -165,4 +162,4 @@ Check out our additional documentation to learn how to further tailor UXCam to y
 
 > 📜 **SDK Updates**
 >
-> To stay up to date with the latest SDK improvements, visit [this page](https://help.uxcam.com/hc/en-us/articles/4404509626509--SDK-UPDATES).
+> To stay up to date with the latest SDK improvements, visit [this page](https://developer.uxcam.com/docs/cordova-changelog).

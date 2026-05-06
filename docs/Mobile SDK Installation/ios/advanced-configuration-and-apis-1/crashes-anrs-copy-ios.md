@@ -21,16 +21,18 @@ UXCam ships with a **lightweight diagnostics layer** that automatically records:
 
 ### Enable / Disable Crash Handling
 
-Call **before** `UXCam.startWithConfiguration()`:
+Set `enableCrashHandling` to `false` in your configuration **before** starting the SDK:
 
 ```swift
-// Disable UXCam crash, ANR and freeze capture
-UXCam.disableCrashHandling(true);
+// Using UXCamConfiguration (recommended since v3.4.0)
+let config = UXCamConfiguration(appKey: "YOUR_APP_KEY")
+config.enableCrashHandling = false  // default: true
+UXCam.start(with: config)
 ```
 
-| Parameter  | Default | Meaning                                                                              |
-| ---------- | ------- | ------------------------------------------------------------------------------------ |
-| `disabled` | `false` | `true` stops UXCam from recording crashes, ANRs and freezes for the current session. |
+| Property              | Default | Meaning                                                                              |
+| --------------------- | ------- | ------------------------------------------------------------------------------------ |
+| `enableCrashHandling` | `true`  | `false` stops UXCam from recording crashes, ANRs and freezes for the current session. |
 
 ***
 

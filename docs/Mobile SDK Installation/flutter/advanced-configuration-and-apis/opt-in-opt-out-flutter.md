@@ -45,8 +45,8 @@ class ConsentManager {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool(CONSENT_KEY, true);
     
-    // Opt into schematic recordings
-    FlutterUxcam.optIntoSchematicRecordings();
+    // Opt into video recordings
+    FlutterUxcam.optIntoVideoRecordings();
     
     // Start UXCam with configuration
     FlutterUxConfig config = FlutterUxConfig(
@@ -64,7 +64,7 @@ class ConsentManager {
     await prefs.setBool(CONSENT_KEY, false);
     
     // Opt out of recordings
-    FlutterUxcam.optOutOfSchematicRecordings();
+    FlutterUxcam.optOutOfVideoRecordings();
     
     // Stop current session
     await FlutterUxcam.stopSessionAndUploadData();
@@ -321,7 +321,7 @@ class GranularConsentManager {
     
     if (analyticsConsent || crashConsent || performanceConsent) {
       // User has granted some form of consent
-      FlutterUxcam.optIntoSchematicRecordings();
+      FlutterUxcam.optIntoVideoRecordings();
       
       FlutterUxConfig config = FlutterUxConfig(
         userAppKey: "YOUR_APP_KEY",
@@ -333,7 +333,7 @@ class GranularConsentManager {
       await FlutterUxcam.startWithConfiguration(config);
     } else {
       // User has denied all consent
-      FlutterUxcam.optOutOfSchematicRecordings();
+      FlutterUxcam.optOutOfVideoRecordings();
       await FlutterUxcam.stopSessionAndUploadData();
     }
   }
@@ -360,7 +360,7 @@ class GranularConsentManager {
     await prefs.remove(CONSENT_VERSION_KEY);
     
     // Stop UXCam and clear data
-    FlutterUxcam.optOutOfSchematicRecordings();
+    FlutterUxcam.optOutOfVideoRecordings();
     await FlutterUxcam.stopSessionAndUploadData();
   }
 }

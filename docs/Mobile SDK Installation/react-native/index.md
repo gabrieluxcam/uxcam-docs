@@ -182,13 +182,12 @@ Get started with just a few lines of code:
 ```javascript App.js
 import RNUxcam from 'react-native-ux-cam';
 
-// Enable screen recordings for both iOS and Android
-RNUxcam.optIntoSchematicRecordings();
+// Enable video recording for both iOS and Android
+RNUxcam.optIntoVideoRecordings();
 
 const configuration = {
   userAppKey: 'YOUR_API_KEY',
   enableAutomaticScreenNameTagging: false, // Manual tagging recommended
-  enableImprovedScreenCapture: true,
 };
 
 RNUxcam.startWithConfiguration(configuration);
@@ -247,16 +246,14 @@ import RNUxcam from 'react-native-ux-cam';
 interface UXCamConfiguration {
   userAppKey: string;
   enableAutomaticScreenNameTagging?: boolean;
-  enableImprovedScreenCapture?: boolean;
 }
 
 const configuration: UXCamConfiguration = {
   userAppKey: 'YOUR_API_KEY',
   enableAutomaticScreenNameTagging: false,
-  enableImprovedScreenCapture: true,
 };
 
-RNUxcam.optIntoSchematicRecordings();
+RNUxcam.optIntoVideoRecordings();
 RNUxcam.startWithConfiguration(configuration);
 ```
 
@@ -269,7 +266,6 @@ const getUXCamConfig = () => {
       ? process.env.UXCAM_DEV_KEY
       : process.env.UXCAM_PROD_KEY,
     enableAutomaticScreenNameTagging: false,
-    enableImprovedScreenCapture: true,
   };
 
   if (__DEV__) {
@@ -287,7 +283,7 @@ const getUXCamConfig = () => {
 ```javascript
 const initializeUXCam = async () => {
   try {
-    RNUxcam.optIntoSchematicRecordings();
+    RNUxcam.optIntoVideoRecordings();
     const config = getUXCamConfig();
     RNUxcam.startWithConfiguration(config);
     console.log('UXCam initialized successfully');
@@ -304,8 +300,8 @@ const initializeUXCam = async () => {
 import { Platform } from 'react-native';
 import RNUxcam from 'react-native-ux-cam';
 
-// Required for both iOS and Android - enables screen recordings
-RNUxcam.optIntoSchematicRecordings();
+// Required for both iOS and Android - enables video recording
+RNUxcam.optIntoVideoRecordings();
 
 // Platform-specific configuration (if needed)
 if (Platform.OS === 'ios') {
