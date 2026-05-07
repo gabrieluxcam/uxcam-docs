@@ -2,16 +2,16 @@
 title: Quick Start - Web
 excerpt: Get UXCam running on your website in 5 minutes
 deprecated: false
-hidden: true
+hidden: false
 metadata:
-  title: Web Quick Start - UXCam
-  description: Fastest way to add UXCam session recording to your website
+  title: 'Web Quick Start - UXCam'
+  description: 'Fastest way to add UXCam session recording to your website'
   robots: index
 next:
   description: ''
   pages:
     - type: basic
-      slug: web-sdk-installation
+      slug: installation
       title: Full Web Guide
 ---
 
@@ -21,74 +21,70 @@ Get session recording working on your website in under 5 minutes.
 
 ## Prerequisites
 
-- A website or web application
+- A website or web app (HTML, React, Angular, Vue, Next.js, etc.)
 - A [UXCam account](https://app.uxcam.com/signup) with an app key
 
-<GitHubCallout type="note">Works with React, Angular, Vue, Next.js, and any HTML/JS site. Flutter Web is not currently supported.</GitHubCallout>
+<GitHubCallout type="important">Flutter Web is not currently supported.</GitHubCallout>
 
 ---
 
-## Option 1: HTML Code Snippet (Recommended)
+## Step 1: Add the SDK Snippet
 
-Add this script tag to your HTML `<head>`:
+Copy this script and include it in your HTML before the closing `</head>` tag. Replace `'YOUR_APP_KEY'` with your key from the [UXCam dashboard](https://app.uxcam.com/integration):
 
 ```html
-<script type="text/javascript">
-(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
-p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
-};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
-n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//websdk.uxcam.com/uxcam.min.js","uxcam"));
-
-uxcam("newTracker", "uxcamTracker", {
-  appKey: "YOUR_APP_KEY"
-});
+<script type="text/javascript" defer="">
+(function(appKey, opts) {
+    window.uxc = {
+        __t: [],
+        __ak: appKey,
+        __o: opts,
+        event: function(n, p) {
+            this.__t.push(['event', n, p]);
+        },
+        setUserIdentity: function(i) {
+            this.__t.push(['setUserIdentity', i]);
+        },
+        setUserProperty: function(k, v) {
+            this.__t.push(['setUserProperty', k, v]);
+        },
+        setUserProperties: function(p) {
+            this.__t.push(['setUserProperties', p]);
+        },
+    };
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = '//websdk-recording.uxcam.com/index.js';
+    script.async = true;
+    script.defer = true;
+    script.id = 'uxcam-web-sdk';
+    script.crossOrigin = 'anonymous';
+    head.appendChild(script);
+})('YOUR_APP_KEY', {});
 </script>
 ```
 
----
-
-## Option 2: Google Tag Manager
-
-1. Create a new **Custom HTML** tag
-2. Paste the code snippet above
-3. Set trigger to **All Pages**
-4. Publish your container
-
-See [Google Tag Manager setup](/docs/google-tag-manager-1) for detailed instructions.
+> 📘 Include this snippet in **all** your HTML pages to record your entire website. SPAs (single-page apps) are supported automatically.
 
 ---
 
-## Option 3: npm Package
+## Step 2: Verify It Works
 
-```bash
-npm install @uxcam/web-sdk
-```
-
-```javascript
-import uxcam from '@uxcam/web-sdk';
-
-uxcam("newTracker", "uxcamTracker", {
-  appKey: "YOUR_APP_KEY"
-});
-```
+1. Deploy or serve your site locally
+2. Browse a few pages for at least 30 seconds
+3. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear within 60 seconds
 
 ---
 
-## Verify It Works
+## What's Captured Automatically
 
-1. Load your website
-2. Navigate through a few pages
-3. Check your [UXCam Dashboard](https://app.uxcam.com) - your session should appear within 30 seconds
+Once the snippet is live, UXCam captures these out of the box — no extra code needed:
 
-<GitHubCallout type="tip">Open browser DevTools Network tab and filter by "uxcam" to see SDK requests.</GitHubCallout>
-
----
-
-## What's Captured Automatically?
-
-- Page views and navigation
-- Clicks, scrolls, and user interactions
-- Password and email fields are auto-occluded
+- **User interactions** — clicks, scrolls, page navigations
+- **Page visits** — all page views
+- **Sensitive data protection** — password, email, tel, and credit card inputs are auto-occluded
+- **User identification** — anonymous browser/device IDs
 
 ---
 
@@ -97,25 +93,19 @@ uxcam("newTracker", "uxcamTracker", {
 You're recording sessions! Now customize your integration:
 
 <Cards columns={2}>
-  <Card title="Full Web Guide" href="/docs/web-sdk-installation" icon="fa-solid fa-globe">
-    Complete setup with all configuration options
-  </Card>
-
-  <Card title="Define Pages" href="/docs/define-pages-properties" icon="fa-solid fa-file">
-    Organize pages without code changes
+  <Card title="Full Web Guide" href="/docs/installation" icon="fa-solid fa-globe">
+    All installation methods (HTML, GTM, Shopify, WordPress)
   </Card>
 
   <Card title="Hide Sensitive Data" href="/docs/occlusion-hide-sensitive-data" icon="fa-solid fa-eye-slash">
-    Additional privacy protection
+    Configure occlusion for inputs, URLs, and HTML elements
+  </Card>
+
+  <Card title="Define Pages" href="/docs/define-pages-properties" icon="fa-solid fa-file">
+    Group similar URLs under consistent page names
   </Card>
 
   <Card title="Track Events" href="/docs/logging-custom-events" icon="fa-solid fa-bolt">
-    Capture custom user actions
+    Log custom events and user properties
   </Card>
 </Cards>
-
----
-
-## Content Security Policy
-
-If your site uses CSP, you'll need to allow UXCam resources. See [CSP configuration](/docs/configure-content-security-policy-csp).
