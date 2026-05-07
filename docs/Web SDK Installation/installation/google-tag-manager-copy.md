@@ -1,7 +1,7 @@
 ---
-title: Google Tag Manager
+title: Google Tag Manager (COPY)
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
@@ -76,11 +76,11 @@ To track user interactions using Google Tag Manager (GTM), there’s no need to 
 
 <GitHubCallout type="important">Apply one of the following approaches based on the set up of your product</GitHubCallout>
 
-|       | Approaches                                                                                                                                                                                                                                                                                                                                                 |
-| :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1** | **Teams Without a Data Layer Setup** - Need to [Push Data to Data Layer](https://developer.uxcam.com/docs/google-tag-manager#push-data-to-the-data-layer), [Define variables](https://developer.uxcam.com/docs/google-tag-manager#define-variables-in-gtm), and [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags) |
-| **2** | **Teams with Data Layer and User Variable already Setup** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                        |
-| **3** | **Using GMT built-in triggers** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager#create-event-tags)                                                                                                                                                                                                                  |
+|       | Approaches                                                                                                                                                                                                                                                                                                                                                                            |
+| :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1** | **Teams Without a Data Layer Setup** - Need to [Push Data to Data Layer](https://developer.uxcam.com/docs/google-tag-manager-1#push-data-to-the-data-layer), [Define variables](https://developer.uxcam.com/docs/google-tag-manager-1#define-variables-in-gtm), and [Create event tags](https://developer.uxcam.com/docs/google-tag-manager-1#create-event-tags-and-set-the-triggers) |
+| **2** | **Teams with Data Layer and User Variable already Setup** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager-1#create-event-tags-and-set-the-triggers)                                                                                                                                                                                            |
+| **3** | **Using GMT built-in triggers** - Need to only [Create event tags](https://developer.uxcam.com/docs/google-tag-manager-1#create-event-tags-and-set-the-triggers)                                                                                                                                                                                                                      |
 
 ### Push Data to the Data Layer
 
@@ -92,7 +92,7 @@ dataLayer.push({'variable_name': 'variable_value'})
 
 **Example**
 
-`**event**`: The name used to trigger your tag in GTM (e.g., ‘AddToCart)\
+`**event**`: The name used to trigger your tag in GTM (e.g., ‘AddToCart)
 `**Item, ItemPrice**`: Values you want to send as event properties
 
 ```javascript
@@ -110,14 +110,14 @@ Variables pull specific pieces of information out of the `dataLayer` so they can
 
 * Click on "Variables" in the left-hand menu
 * In the 'User-Defined Variables' section, click on 'New', and select 'Data Layer Variable'
-* Give the variable a recognisable name in the top left of the screen (e.g. Item\_Price)
+* Give the variable a recognisable name in the top left of the screen (e.g. Item_Price)
 * Set the Data Layer Variable Name to match the key in the dataLayer.push (e.g., item, itemPrice)
 * Save the Variable
 * Repeat this for each data layer value you want to use
 
 <Image align="center" src="https://files.readme.io/4252334dd396f15ddd8d9caff6aa569204f2f8caf9daf7606853f830be8e8a81-Cart_item_2.png" />
 
-<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)               .</GitHubCallout>
+<GitHubCallout type="tip">Give your GTM variables clear names to stay organized. Read more about GTM variables [here](https://developers.google.com/tag-platform/tag-manager/datalayer)                .</GitHubCallout>
 
 ### Create Event Tags and set the triggers
 
@@ -172,6 +172,8 @@ Use Preview mode in GTM to trigger the event on your website. Steps to confirm:
 <GitHubCallout type="note">Always sanitise and validate dynamic values being pushed to UXCam, and use clear naming for events and properties to stay consistent in UXCam reports.</GitHubCallout>
 
 ## Next steps - Setup and configuration
+
+<br />
 
 | Step                 | Task                                                                                                         | Goal                                      |
 | :------------------- | :----------------------------------------------------------------------------------------------------------- | :---------------------------------------- |
