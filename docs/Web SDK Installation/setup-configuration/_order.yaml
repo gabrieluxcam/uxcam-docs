@@ -2,6 +2,7 @@
 - define-pages-properties
 - setting-user-properties
 - logging-custom-events
+- iframe-recording
 - configure-content-security-policy-csp
 - define-app-version-optional
 - example
