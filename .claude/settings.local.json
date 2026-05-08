@@ -31,7 +31,9 @@
       "Bash(do [ -d \"$dir\" ])",
       "Bash([ ! -f \"$dir/index.md\" ])",
       "Bash(echo \"$dir\")",
-      "Bash(grep -rn '```' \"/Users/rabinthapa/Downloads/Projects/uxcam-docs/docs/Getting Started/quick-start-flutter.md\")"
+      "Bash(grep -rn '```' \"/Users/rabinthapa/Downloads/Projects/uxcam-docs/docs/Getting Started/quick-start-flutter.md\")",
+      "Bash(grep -A 5 \"github-work\" ~/.ssh/config 2>/dev/null; echo \"---\"; git remote -v)",
+      "Read(//Users/rabinthapa/.ssh/**)"
     ],
     "deny": []
   }

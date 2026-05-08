@@ -36,11 +36,24 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 ### Prerequisites Checklist
 
+<Tabs>
+<Tab title="Mobile">
+
 - [ ] Flutter and Dart SDK
-- [ ] UXCam account with app key
+- [ ] UXCam account with mobile app key
 - [ ] iOS deployment target 12.0+ / Android minSdkVersion 21+
 - [ ] Development environment configured (for debug validation)
 - [ ] Network access to uxcam.com domain
+
+</Tab>
+<Tab title="Web">
+
+- [ ] Flutter and Dart SDK
+- [ ] UXCam account with web app key
+- [ ] Access control configured for `uxcam.com` and `uxcam-storage.com` domains — see [Troubleshooting](https://developer.uxcam.com/docs/troubleshooting) for details
+
+</Tab>
+</Tabs>
 
 For the latest Flutter and Dart version requirements, please refer to the [flutter_uxcam pub.dev page](https://pub.dev/packages/flutter_uxcam).
 
@@ -86,6 +99,7 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 <Tab title="Mobile">
 
 ```dart
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_uxcam/flutter_uxcam.dart';
 
@@ -101,10 +115,19 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     FlutterUxcam.optIntoVideoRecordings();
-    FlutterUxConfig config = FlutterUxConfig(
-      userAppKey: "UXCAM_APP_KEY",
-      enableAutomaticScreenNameTagging: false,
-    );
+
+    // Use the web app key on Flutter Web, mobile app key on iOS/Android.
+    FlutterUxConfig config;
+    if (kIsWeb) {
+      config = FlutterUxConfig(
+        userAppKey: "UXCAM_WEB_APP_KEY",
+      );
+    } else {
+      config = FlutterUxConfig(
+        userAppKey: "UXCAM_MOBILE_APP_KEY",
+        enableAutomaticScreenNameTagging: false,
+      );
+    }
     FlutterUxcam.startWithConfiguration(config);
   }
 
@@ -153,7 +176,7 @@ For Flutter Web builds, load the UXCam Web SDK from your `web/index.html` so it 
 > 👍 As Simple As That!
 >
 > This will complete the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+> Your session will be shown on the dashboard within a few minutes after the app goes in the background in mobile or after the tab is closed in browser.
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 

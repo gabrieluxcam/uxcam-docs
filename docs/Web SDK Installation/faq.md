@@ -12,7 +12,7 @@ next:
 ---
 ### 1. What defines the beginning and end of a session?
 
-A session begins as soon as the page loads and the UXCam Web SDK starts recording. There’s no defined inactivity timeout, but if no data is received from the client for 3 minutes, the session is automatically ended and the recording is uploaded.
+A session begins as soon as the page loads and the UXCam Web SDK starts recording. There’s no defined inactivity timeout, but if no data is received from the client for 5 minutes, the session is automatically ended and the recording is uploaded.
 
 **“No data” can mean:**
 
