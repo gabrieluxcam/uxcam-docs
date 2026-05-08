@@ -30,7 +30,8 @@
       "Bash(for dir in /Users/gabriel/Code/Readme/uxcam-docs/docs/*)",
       "Bash(do [ -d \"$dir\" ])",
       "Bash([ ! -f \"$dir/index.md\" ])",
-      "Bash(echo \"$dir\")"
+      "Bash(echo \"$dir\")",
+      "Bash(grep -rn '```' \"/Users/rabinthapa/Downloads/Projects/uxcam-docs/docs/Getting Started/quick-start-flutter.md\")"
     ],
     "deny": []
   }

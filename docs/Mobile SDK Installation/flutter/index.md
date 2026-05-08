@@ -82,6 +82,9 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 4. Initialise UXCam:\
    To ensure UXCam is properly started, it's recommended to initialize it within the initState method of a StatefulWidget. This ensures that the SDK starts as soon as the widget is created.
 
+<Tabs>
+<Tab title="Mobile">
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:flutter_uxcam/flutter_uxcam.dart';
@@ -117,6 +120,35 @@ class _MyAppState extends State<MyApp> {
   }
 }
 ```
+
+</Tab>
+<Tab title="Web">
+
+For Flutter Web builds, load the UXCam Web SDK from your `web/index.html` so it initialises before the Flutter app boots.
+
+```html
+<script>
+  (function (appKey) {
+    window.uxc = window.uxc || { _q: [] };
+    var methods = ['startWithKey', 'tagScreenName', 'logEvent', 'setUserIdentity', 'setUserProperty'];
+    methods.forEach(function (m) {
+      window.uxc[m] = window.uxc[m] || function () {
+        window.uxc._q.push([m, arguments]);
+      };
+    });
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = '//websdk-recording.uxcam.com/index.js';
+    script.id = 'uxcam-web-sdk';
+    script.setAttribute('data-app-key', appKey);
+    document.head.appendChild(script);
+    window.uxc.startWithKey(appKey);
+  })('UXCAM_APP_KEY');
+</script>
+```
+
+</Tab>
+</Tabs>
 
 > 👍 As Simple As That!
 >
