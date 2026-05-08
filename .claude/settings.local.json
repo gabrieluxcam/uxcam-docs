@@ -35,7 +35,8 @@
       "Bash(grep -A 5 \"github-work\" ~/.ssh/config 2>/dev/null; echo \"---\"; git remote -v)",
       "Read(//Users/rabinthapa/.ssh/**)",
       "Bash(git -C \"/Users/rabinthapa/Downloads/Projects/uxcam-docs\" diff --stat HEAD -- \"docs/Mobile SDK Installation/flutter/screen-tagging-flutter/index.md\")",
-      "Bash(md5 \"/Users/rabinthapa/Downloads/Projects/uxcam-docs/docs/Mobile SDK Installation/flutter/screen-tagging-flutter/index.md\")"
+      "Bash(md5 \"/Users/rabinthapa/Downloads/Projects/uxcam-docs/docs/Mobile SDK Installation/flutter/screen-tagging-flutter/index.md\")",
+      "Bash(ssh-add --apple-use-keychain ~/.ssh/id_ed25519_rabin_uxcam)"
     ],
     "deny": []
   }
