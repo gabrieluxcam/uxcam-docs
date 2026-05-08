@@ -16,8 +16,21 @@ next:
 # Flutter Web Limitations
 
 The UXCam Flutter SDK supports both mobile (iOS/Android) and Flutter Web from the same codebase, but a subset of advanced features is not yet available on the web platform.
+## Behavioral Differences from the normal Web SDK
 
-> 📘 At a glance
+Flutter Web sessions are **video-based** rather than DOM-based, so a few things behave differently from the standalone UXCam Web SDK.
+
+### Tap gestures instead of mouse movement
+
+Mouse cursor movement is not rendered in the replay. Instead, you'll see tap gesture indicators on the video — the same way they appear in mobile session replays.
+
+### No heatmaps
+
+Heatmap generation is not supported for Flutter Web sessions.
+
+
+
+> ❗️ Cross-platform safety
 >
 > If you target Flutter Web alongside mobile, guard the unsupported APIs behind a `kIsWeb` platform check so they only run on iOS/Android.
 
@@ -62,18 +75,6 @@ if (!kIsWeb) {
   // other mobile-only APIs...
 }
 ```
-
-## Behavioral Differences from the Web SDK
-
-Flutter Web sessions are **video-based** rather than DOM-based, so a few things behave differently from the standalone UXCam Web SDK.
-
-### Tap gestures instead of mouse movement
-
-Mouse cursor movement is not rendered in the replay. Instead, you'll see tap gesture indicators on the video — the same way they appear in mobile session replays.
-
-### No heatmaps
-
-Heatmap generation is not supported for Flutter Web sessions.
 
 ## Need Help?
 
