@@ -50,7 +50,7 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 - [ ] Flutter and Dart SDK
 - [ ] UXCam account with web app key
-- [ ] Access control configured for `uxcam.com` and `uxcam-storage.com` domains — see [Troubleshooting](https://developer.uxcam.com/docs/troubleshooting) for details
+
 
 </Tab>
 </Tabs>
@@ -95,8 +95,6 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 4. Initialise UXCam:\
    To ensure UXCam is properly started, it's recommended to initialize it within the initState method of a StatefulWidget. This ensures that the SDK starts as soon as the widget is created.
 
-<Tabs>
-<Tab title="Mobile">
 
 ```dart
 import 'package:flutter/foundation.dart';
@@ -114,7 +112,6 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    FlutterUxcam.optIntoVideoRecordings();
 
     // Use the web app key on Flutter Web, mobile app key on iOS/Android.
     FlutterUxConfig config;
@@ -123,6 +120,7 @@ class _MyAppState extends State<MyApp> {
         userAppKey: "UXCAM_WEB_APP_KEY",
       );
     } else {
+      FlutterUxcam.optIntoVideoRecordings();
       config = FlutterUxConfig(
         userAppKey: "UXCAM_MOBILE_APP_KEY",
         enableAutomaticScreenNameTagging: false,
@@ -144,35 +142,6 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
-</Tab>
-<Tab title="Web">
-
-For Flutter Web builds, load the UXCam Web SDK from your `web/index.html` so it initialises before the Flutter app boots.
-
-```html
-<script>
-  (function (appKey) {
-    window.uxc = window.uxc || { _q: [] };
-    var methods = ['startWithKey', 'tagScreenName', 'logEvent', 'setUserIdentity', 'setUserProperty'];
-    methods.forEach(function (m) {
-      window.uxc[m] = window.uxc[m] || function () {
-        window.uxc._q.push([m, arguments]);
-      };
-    });
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = '//websdk-recording.uxcam.com/index.js';
-    script.id = 'uxcam-web-sdk';
-    script.setAttribute('data-app-key', appKey);
-    document.head.appendChild(script);
-    window.uxc.startWithKey(appKey);
-  })('UXCAM_APP_KEY');
-</script>
-```
-
-</Tab>
-</Tabs>
-
 > 👍 As Simple As That!
 >
 > This will complete the integration process.\
@@ -183,16 +152,31 @@ For Flutter Web builds, load the UXCam Web SDK from your `web/index.html` so it 
 > ❗️ Troubleshooting Data Delays
 >
 > If you have successfully integrated the Flutter SDK but are still seeing "Waiting for data to arrive" in your dashboard, here are some common causes and solutions:
->
-> - App State: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
-> - SDK Version: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
-> - Check Logs: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
+
+<Tabs>
+<Tab title="Mobile">
+
+- **App State**: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
+- **SDK Version**: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
+- **Check Logs**: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
+
+</Tab>
+<Tab title="Web">
+
+- **App State**: Ensure the tab is closed or inactive for more than 5 minutes which ensures sessions are uploaded.
+- **Check Logs**: Open the browser developer console and look for `[UXCam] connected successfully`.
+
+</Tab>
+</Tabs>
 
 ## Integration Verification
 
 ### Validate Your Setup
 
-After initialization, if you want to verify UXCam is working correctly, you can validate manually such as:
+After initialization, if you want to verify UXCam is working correctly, you can validate manually:
+
+<Tabs>
+<Tab title="Mobile">
 
 ```dart
 class UXCamValidator {
@@ -219,6 +203,16 @@ class UXCamValidator {
 }
 ```
 
+</Tab>
+<Tab title="Web">
+
+1. Open your app in a browser and open the developer console.
+2. Look for `[UXCam] connected successfully` — this confirms the Web SDK loaded and authenticated with your app key.
+3. Close the tab (or leave it inactive for ~5 minutes) and check your UXCam dashboard for the session.
+
+</Tab>
+</Tabs>
+
 ### Expected Results
 
 Within 5 minutes of running your app:
@@ -226,7 +220,7 @@ Within 5 minutes of running your app:
 1. **Dashboard Activity**: New session appears in UXCam dashboard
 2. **Screen Analytics**: Screen names show in session replay
 3. **Event Tracking**: Custom events appear in session timeline
-4. **Debug Logs**: Console shows UXCam initialization messages in Android Studio or XCode
+4. **Debug Logs**: Console shows UXCam initialization messages in Android Studio or XCode, or `[UXCam] connected successfully` message in browser log
 
 ## What's Next?
 
