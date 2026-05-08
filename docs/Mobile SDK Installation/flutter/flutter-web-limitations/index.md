@@ -15,19 +15,65 @@ next:
 
 # Flutter Web Limitations
 
-The UXCam Flutter SDK supports both mobile (iOS/Android) and Flutter Web, but some advanced features are not yet available on the web platform.
+The UXCam Flutter SDK supports both mobile (iOS/Android) and Flutter Web from the same codebase, but a subset of advanced features is not yet available on the web platform.
 
-## Not Supported on Flutter Web
+> 📘 At a glance
+>
+> If you target Flutter Web alongside mobile, guard the unsupported APIs behind a `kIsWeb` platform check so they only run on iOS/Android.
 
-The following features and APIs are not currently supported when running on Flutter Web:
+## Feature Support Matrix
 
-- **Recording Control** — programmatic start, stop, and pause of session recording
+| Feature                      | Mobile (iOS / Android) | Flutter Web |
+| ---------------------------- | :--------------------: | :---------: |
+| Session recording            |           ✅            |      ✅      |
+| Screen tagging               |           ✅            |      ✅      |
+| Events & user properties     |           ✅            |      ✅      |
+| Recording control APIs       |           ✅            |      ❌      |
+| Crash & ANR handling         |           ✅            |      ❌      |
+| User consent management      |           ✅            |      ❌      |
+| Debug & verbose logging      |           ✅            |      ❌      |
+| Sensitive data occlusion     |           ✅            |   ⚠️ Partial   |
+| `allowShortBreak` API        |           ✅            |      ❌      |
+| Heatmaps                     |           ✅            |      ❌      |
+
+## Unsupported APIs on Flutter Web
+
+The following APIs are no-ops or unavailable when running on Flutter Web. Calling them won't crash your app, but they will not produce dashboard results.
+
+- **Recording Control** — programmatic `start`, `stop`, `pause` and *allowShortBreak* of session recording
 - **Crash & ANR Handling** — automatic crash capture and ANR reporting
 - **User Consent Management** — opt-in / opt-out APIs
 - **Debug & Logging** — verbose integration logging
-- **Sensitive Data Occlusion** — overlay, blur, and dashboard-driven occlusion rules
 
-If your app targets Flutter Web in addition to mobile, guard these calls behind a platform check so they only run on supported platforms.
+### Partially Supported
+
+- **Sensitive Data Occlusion** — basic occlusion is supported on Flutter Web, but advanced controls (overlay/blur modes, fine-grained per-view rules, and dashboard-driven occlusion rules) are not yet available. Stick to the standard occlusion APIs for cross-platform behavior.
+
+### Recommended Pattern
+
+Wrap mobile-only calls in a `kIsWeb` check so the same codebase works across platforms:
+
+```dart
+import 'package:flutter/foundation.dart';
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+
+if (!kIsWeb) {
+  FlutterUxcam.optIntoVideoRecordings();
+  // other mobile-only APIs...
+}
+```
+
+## Behavioral Differences from the Web SDK
+
+Flutter Web sessions are **video-based** rather than DOM-based, so a few things behave differently from the standalone UXCam Web SDK.
+
+### Tap gestures instead of mouse movement
+
+Mouse cursor movement is not rendered in the replay. Instead, you'll see tap gesture indicators on the video — the same way they appear in mobile session replays.
+
+### No heatmaps
+
+Heatmap generation is not supported for Flutter Web sessions.
 
 ## Need Help?
 
