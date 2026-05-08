@@ -17,10 +17,14 @@ next:
   description: ''
 ---
 
-Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
+
 
 <Tabs>
 <Tab title="Mobile">
+
+# Screen Tagging in Flutter Mobile
+
+Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
 > 📘 **Which Approach Should I Use?**
 >
