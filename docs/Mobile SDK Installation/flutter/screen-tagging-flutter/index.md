@@ -17,6 +17,13 @@ next:
   description: ''
 ---
 
+
+
+<Tabs>
+<Tab title="Mobile">
+
+# Screen Tagging in Flutter Mobile
+
 Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 
 > 📘 **Which Approach Should I Use?**
@@ -419,6 +426,57 @@ WebViews can be a unique challenge when it comes to screen tagging, as they ofte
 For more information, click the button below:
 
 [Tagging WebViews Documentation](/docs/ALL UXCAM APIs/tag-of-screens/web-view-tagging)
+
+</Tab>
+<Tab title="Web">
+
+# Screen Tagging in Flutter Web
+
+Flutter Web apps run in the browser, so the Web SDK identifies pages by their **URL** rather than by route names from the Flutter `Navigator`. To get clean, consistent page names in your dashboard you'll do two things:
+
+1. Enable Path-Based URLs.
+2. Define **Page Definition** rules in the UXCam Dashboard to name pages and group dynamic URLs.
+
+## 1. Enable Path-Based URLs
+
+Call `usePathUrlStrategy()` **before** `FlutterUxcam.startWithConfiguration(...)`.
+
+```dart Flutter
+import 'package:flutter/material.dart';
+import 'package:flutter_uxcam/flutter_uxcam.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
+
+void main() {
+  usePathUrlStrategy(); // must be called BEFORE startWithConfiguration
+
+  FlutterUxConfig config = FlutterUxConfig(
+    userAppKey: 'YOUR_WEB_APP_KEY',
+  );
+  FlutterUxcam.startWithConfiguration(config);
+
+  runApp(MyApp());
+}
+```
+
+## 2. Define Pages & Properties in the Dashboard
+
+Page Definition rules let you assign clean names to URLs, group dynamic paths (like `/products/123`) under a single page, and capture dynamic segments as properties for filtering.
+
+For the full step-by-step guide — including grouping dynamic IDs, tagging fragments as distinct pages, and renaming pages for cleaner reports, follow the dedicated guide:
+
+👉 [Define Pages & Properties](https://developer.uxcam.com/docs/define-pages-properties)
+
+> 📘 If pages are not defined in the dashboard, UXCam defaults to displaying the URL path as the page name.
+
+## Verify Your Setup
+
+1. Open your Flutter Web app in a browser and open the developer console.
+2. Confirm `[UXCam] connected successfully` appears.
+3. Navigate through your app's routes, then close the tab (or leave it inactive for ~5 minutes).
+4. In the dashboard, check that each page appears with a meaningful name and a duration **> 0 s**.
+
+</Tab>
+</Tabs>
 
 ## Next Steps:
 

@@ -24,8 +24,6 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
   * Next.js
 </Accordion>
 
-<GitHubCallout type="important">Flutter Web is at the moment not supported</GitHubCallout>
-
 # Choose your Method of Integration
 
 | HTML Code snippet      | <a href="html-code-snippet#">Jump →</a>    |

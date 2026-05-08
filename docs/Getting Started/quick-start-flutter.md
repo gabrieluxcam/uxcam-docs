@@ -21,9 +21,21 @@ Get session recording working in your Flutter app in under 5 minutes.
 
 ## Prerequisites
 
+<Tabs>
+<Tab title="Mobile">
+
 - Flutter SDK
 - iOS deployment target 12.0+ / Android minSdkVersion 21+
-- A [UXCam account](https://app.uxcam.com/signup) with an app key
+- A [UXCam account](https://app.uxcam.com/signup) with a mobile app key
+
+</Tab>
+<Tab title="Web">
+
+- Flutter SDK
+- A [UXCam account](https://app.uxcam.com/signup) with a web app key
+
+</Tab>
+</Tabs>
 
 ---
 
@@ -47,27 +59,46 @@ dependencies:
 In your main widget's `initState`:
 
 ```dart
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uxcam/flutter_uxcam.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
 class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
 
-    FlutterUxcam.optIntoVideoRecordings();
-
-    FlutterUxConfig config = FlutterUxConfig(
-      userAppKey: "YOUR_APP_KEY",
-      enableAutomaticScreenNameTagging: false,
-    );
-
+    // Use the web app key on Flutter Web, mobile app key on iOS/Android.
+    FlutterUxConfig config;
+    if (kIsWeb) {
+      config = FlutterUxConfig(
+        userAppKey: "UXCAM_WEB_APP_KEY",
+      );
+    } else {
+      FlutterUxcam.optIntoVideoRecordings();
+      config = FlutterUxConfig(
+        userAppKey: "UXCAM_MOBILE_APP_KEY",
+        enableAutomaticScreenNameTagging: false,
+      );
+    }
     FlutterUxcam.startWithConfiguration(config);
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Your app content
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -77,16 +108,30 @@ class _MyAppState extends State<MyApp> {
 
 ## Step 3: Verify It Works
 
+<Tabs>
+<Tab title="Mobile">
+
 1. Run your app on a device or emulator
 2. Navigate through a few screens
 3. Send the app to background
-4. Check your [UXCam Dashboard](https://app.uxcam.com) - your session should appear within 30 seconds
+4. Check your [UXCam Dashboard](https://app.uxcam.com) - your session should appear within 5-10 minutes
 
 <GitHubCallout type="tip">Check Android Studio or Xcode logs for UXCam initialization messages.</GitHubCallout>
 
+</Tab>
+<Tab title="Web">
+
+1. Open the site in a browser
+2. Check for the `[UXCam] connected successfully` message in the browser console
+3. Close the tab
+4. Check your [UXCam Dashboard](https://app.uxcam.com) - your session should appear within 5-10 minutes
+
+</Tab>
+</Tabs>
+
 ---
 
-## Validation Helper
+## Validation Helper (Mobile only)
 
 Optionally verify your integration:
 

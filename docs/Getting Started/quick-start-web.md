@@ -24,8 +24,6 @@ Get session recording working on your website in under 5 minutes.
 - A website or web app (HTML, React, Angular, Vue, Next.js, etc.)
 - A [UXCam account](https://app.uxcam.com/signup) with an app key
 
-<GitHubCallout type="important">Flutter Web is not currently supported.</GitHubCallout>
-
 ---
 
 ## Step 1: Add the SDK Snippet
