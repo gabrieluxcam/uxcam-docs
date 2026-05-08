@@ -87,7 +87,7 @@ You can add screen level occlusion rules to your app directly from your dashboar
 
 ### Occlude All Screens from Dashboard
 
-*⚠️ Not available for Flutter Web.*
+> ⚠️ Not available for Flutter Web.
 
 From your app's settings in the UXCam dashboard, you'll see the **video recording privacy** section, from there, you'll see the first option to either record, occlude or blur all screens in your app.
 
@@ -129,7 +129,7 @@ If you prefer to manually handle occlusions in your app or [occlude specific vie
 
 ## Occlude The Entire Screen with Overlay
 
-*⚠️ Not available for Flutter Web.*
+> ⚠️ Not available for Flutter Web.
 
 You can configure different overlay options with the following:
 
@@ -170,7 +170,7 @@ Default value is false.
 
 ## Blur The Entire Screen
 
-*⚠️ Not available for Flutter Web.*
+> ⚠️ Not available for Flutter Web.
 
 Blur is an occlusion API that allows you to blur screen records of screens. This lets you obtain information regarding the state of the screen and user interaction, while also maintaining privacy in sensitive screens.
 
