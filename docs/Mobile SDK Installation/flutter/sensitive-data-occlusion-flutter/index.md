@@ -237,6 +237,8 @@ const OccludeWrapper(
 
 ## Usage from configuration object
 
+> <span style={{fontSize: "13px"}}>⚠️ Not available for Flutter Web.</span>
+
 It's also possible to pass a list of occlusions (except Sensitive View) to be applied during configuration.  For example:
 
 ```dart
