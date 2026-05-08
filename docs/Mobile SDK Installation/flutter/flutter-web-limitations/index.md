@@ -15,7 +15,7 @@ next:
 
 # Flutter Web Limitations
 
-The UXCam Flutter SDK supports both mobile (iOS/Android) and Flutter Web from the same codebase, but a subset of advanced features is not yet available on the web platform.
+The UXCam Flutter SDK supports both mobile (iOS/Android) and Flutter Web from the same plugin, but a subset of advanced features is not yet available on the web platform.
 ## Behavioral Differences from the normal Web SDK
 
 Flutter Web sessions are **video-based** rather than DOM-based, so a few things behave differently from the standalone UXCam Web SDK.
