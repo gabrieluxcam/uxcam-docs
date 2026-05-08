@@ -152,22 +152,22 @@ class _MyAppState extends State<MyApp> {
 > ❗️ Troubleshooting Data Delays
 >
 > If you have successfully integrated the Flutter SDK but are still seeing "Waiting for data to arrive" in your dashboard, here are some common causes and solutions:
-
-<Tabs>
-<Tab title="Mobile">
-
-- **App State**: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
-- **SDK Version**: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
-- **Check Logs**: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
-
-</Tab>
-<Tab title="Web">
-
-- **App State**: Ensure the tab is closed or inactive for more than 5 minutes which ensures sessions are uploaded.
-- **Check Logs**: Open the browser developer console and look for `[UXCam] connected successfully`.
-
-</Tab>
-</Tabs>
+>
+> <Tabs>
+> <Tab title="Mobile">
+>
+> - **App State**: Ensure the app is sent to the background and not fully closed. Data transmission may not occur if the app is force-closed before the session is uploaded.
+> - **SDK Version**: Verify you are using the latest version of the UXCam Flutter SDK to avoid compatibility issues. You can check the changelog in our developer docs to verify the latest version.
+> - **Check Logs**: Use Android Studio or Xcode to check for any errors related to UXCam in your app logs.
+>
+> </Tab>
+> <Tab title="Web">
+>
+> - **App State**: Ensure the tab is closed or inactive for more than 5 minutes which ensures sessions are uploaded.
+> - **Check Logs**: Open the browser developer console and look for `[UXCam] connected successfully`.
+>
+> </Tab>
+> </Tabs>
 
 ## Integration Verification
 
