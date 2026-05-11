@@ -45,13 +45,6 @@ Mouse cursor movement is not rendered in the replay. Instead, you'll see tap ges
 
 The core occlusion API is supported on Flutter Web and covers the most common use cases — masking widgets that contain sensitive content. Advanced controls (overlay/blur modes, fine-grained per-view rules, and dashboard-driven occlusion rules) are not yet available on web. For cross-platform behavior, stick to the standard occlusion APIs.
 
-## On the Roadmap
-
-These features are mobile-only today and are planned for Flutter Web:
-
-- **Heatmaps** — tap and gesture heatmaps for web sessions
-- **Tara AI** — AI-driven session insights
-
 ## Mobile-Only APIs
 
 These APIs are specific to the mobile runtime and aren't part of the Flutter Web scope. Calling them on web is safe — they're no-ops and won't crash your app — but they won't produce dashboard results.
