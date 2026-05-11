@@ -13,6 +13,7 @@ metadata:
   * Angular
   * Vue.js
   * Next.js
+  * Flutter Web
 </Accordion>
 
 ### **To integrate the Web SDK follow these steps:**
@@ -54,6 +55,13 @@ metadata:
 </script>
 ```
 
+## Verify the integration
+
+1. Deploy or serve your site locally
+2. Check for the `[UXCam] connected successfully` message in the browser console
+3. Browse a few pages for at least 30 seconds
+4. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear after 5 - 10 minutes
+
 ## Next steps - Setup and configuration
 
 | Step                 | Task                                                                                                         | Goal                                       |
@@ -64,6 +72,7 @@ metadata:
 | <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-events#">Jump →</a>                             | Track user interactions and key behaviours |
 | <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="configure-content-security-policy-csp#">Jump →</a> | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="define-app-version-optional#">Jump →</a>                      | Debug issues across different releases     |
+| <strong>7 ★</strong> | <strong>Enable Iframe Recording </strong>  <a href="iframe-recording#">Jump →</a>                            | Capture user interactions inside iframes   |
 
 <GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 

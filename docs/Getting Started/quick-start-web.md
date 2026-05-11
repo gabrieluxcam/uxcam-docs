@@ -70,8 +70,9 @@ Copy this script and include it in your HTML before the closing `</head>` tag. R
 ## Step 2: Verify It Works
 
 1. Deploy or serve your site locally
-2. Browse a few pages for at least 30 seconds
-3. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear within 60 seconds
+2. Check for the `[UXCam] connected successfully` message in the browser console
+3. Browse a few pages for at least 30 seconds
+4. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear after 5 - 10 minutes
 
 ---
 
