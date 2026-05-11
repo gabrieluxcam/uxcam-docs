@@ -114,7 +114,7 @@ class _MyAppState extends State<MyApp> {
 1. Run your app on a device or emulator
 2. Navigate through a few screens
 3. Send the app to background
-4. Check your [UXCam Dashboard](https://app.uxcam.com) - your session should appear within 5-10 minutes
+4. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear within 30 seconds
 
 <GitHubCallout type="tip">Check Android Studio or Xcode logs for UXCam initialization messages.</GitHubCallout>
 

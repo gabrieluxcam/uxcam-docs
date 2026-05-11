@@ -54,6 +54,13 @@ metadata:
 </script>
 ```
 
+## Verify the integration
+
+1. Deploy or serve your site locally
+2. Check for the `[UXCam] connected successfully` message in the browser console
+3. Browse a few pages for at least 30 seconds
+4. Check your [UXCam Dashboard](https://app.uxcam.com) — your session should appear after 5 - 10 minutes
+
 ## Next steps - Setup and configuration
 
 | Step                 | Task                                                                                                         | Goal                                       |
