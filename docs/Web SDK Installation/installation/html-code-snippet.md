@@ -13,6 +13,7 @@ metadata:
   * Angular
   * Vue.js
   * Next.js
+  * Flutter Web
 </Accordion>
 
 ### **To integrate the Web SDK follow these steps:**
