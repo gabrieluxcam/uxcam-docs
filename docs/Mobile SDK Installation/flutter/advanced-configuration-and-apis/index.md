@@ -13,7 +13,7 @@ next:
 
 # Advanced Configuration and APIs
 
-> <span style={{fontSize: "13px"}}>⚠️ None of the following are supported on Flutter Web. For more information on what's not available on Flutter Web, see [Flutter Web Limitations](/docs/flutter-web-limitations).</span>
+> <span style={{fontSize: "13px"}}>⚠️ None of the following are supported on Flutter Web. For more information on what's not available on Flutter Web, see [Flutter Web Platform Support](/docs/flutter-web-platform-support).</span>
 
 Unlock the full potential of UXCam's Flutter SDK with advanced configuration options, custom integrations, and powerful APIs for complex use cases.
 

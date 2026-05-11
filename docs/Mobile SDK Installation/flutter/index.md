@@ -53,7 +53,7 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 > 📘 Before you build for web
 >
-> Flutter Web supports the core SDK (recording, screen tagging, events, user properties). A few advanced APIs are mobile-only — see [Flutter Web Platform Support](./flutter-web-limitations) for the full feature matrix.
+> Flutter Web supports the core SDK (recording, screen tagging, events, user properties). A few advanced APIs are mobile-only — see [Flutter Web Platform Support](./flutter-web-platform-support) for the full feature matrix.
 
 </Tab>
 </Tabs>
