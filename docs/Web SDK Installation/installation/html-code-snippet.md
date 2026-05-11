@@ -72,6 +72,7 @@ metadata:
 | <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-events#">Jump →</a>                             | Track user interactions and key behaviours |
 | <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="configure-content-security-policy-csp#">Jump →</a> | Ensure the Web SDK functions correctly     |
 | <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="define-app-version-optional#">Jump →</a>                      | Debug issues across different releases     |
+| <strong>7 ★</strong> | <strong>Enable Iframe Recording </strong>  <a href="iframe-recording#">Jump →</a>                            | Capture user interactions inside iframes   |
 
 <GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 
