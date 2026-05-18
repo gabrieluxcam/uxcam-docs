@@ -17,6 +17,16 @@ metadata:
 
 <br />
 
+### V. 3.10.1 - May 18, 2026
+
+* Fix (tagging): Initial fragment tagging race condition on offline cold-start
+* Fix (uxcamlib): Synchronize timeline event attribution
+* Fix (uxcamlib): Align session screen timeline state
+* Fix (screenshot): Preserve compose occlusion across transient tags
+* Fix (screenshot): Keep compose occlusion during transient detach
+* Fix (file): Cache JSON byte[] once in DataFile write path
+
+
 ### V. 3.10.0 - May 5, 2026
 
 * **New**: Readable fragment screen tagging — fragment screens now show as `Activity/Fragment` (e.g. `MainActivity/HomeFragment`) instead of hex hashes (e.g. `MainActivity/0xa1b2c3`) in the dashboard timeline
