@@ -14,6 +14,11 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.2 - May 18, 2026
+
+* Fixed `pauseScreenRecording`, `occludeSensitiveScreen` misbehaviour during session start and orientation touchpoint.
+
+
 ### V. 3.8.1 - May 2026
 
 * Optimized video recording flow — major internal refactoring of video pipeline architecture for improved performance and stability
