@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+> 📱 **On a different platform?** [iOS](/docs/user-properties-ios) · [React Native](/docs/user-properties-react-native) · [Flutter](/docs/user-properties-flutter) · [Cordova](/docs/user-properties-cordova) · [NativeScript](/docs/user-properties-nativescript) · [Xamarin MAUI](/docs/user-properties-xamarin-maui)
+
 ## Identify Users Reliably with `setUserIdentity`
 
 UXCam gives every fresh install a random alias name based on unique **Install ID**.

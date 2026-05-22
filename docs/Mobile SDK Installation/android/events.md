@@ -10,6 +10,8 @@ metadata:
 next:
   description: ''
 ---
+> 📱 **On a different platform?** [iOS](/docs/events-ios) · [React Native](/docs/events-react-native) · [Flutter](/docs/events-flutter) · [Cordova](/docs/events-cordova) · [NativeScript](/docs/events-nativescript) · [Xamarin MAUI](/docs/events-xamarin-maui)
+
 # Event Tracking with UXCam
 
 Screens tell you **where** users go; **events show what they do**.\
