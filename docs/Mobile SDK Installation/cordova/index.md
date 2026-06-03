@@ -1,6 +1,6 @@
 ---
 title: Cordova
-excerpt: ''
+excerpt: Install and initialize UXCam in a Cordova, Ionic, or Capacitor project.
 deprecated: false
 hidden: false
 metadata:
@@ -36,15 +36,15 @@ Integrating UXCam into your Cordova project only requires a few steps. With just
 
 Add UXCam to your Cordova project by running the following command:
 
-<Terminal>
-  {`cordova plugin add cordova-uxcam`}
-</Terminal>
+```bash
+cordova plugin add cordova-uxcam
+```
 
 ### Step 2: Initialize UXCam
 
 To initialize UXCam, you need to call its configuration method once the device is ready. You can typically do this in the `onDeviceReady()` function. Replace `'YOUR APP KEY'` with the actual key from your UXCam dashboard.
 
-```javascript Cordova
+```javascript
 UXCam.optIntoVideoRecordings(); // Enable video recording on iOS
 
 const configuration = {
@@ -63,7 +63,7 @@ If you're using Ionic, here are the steps to integrate UXCam:
 
 1. **Install UXCam for Ionic**
 
-   ```bash Ionic
+   ```bash
    ionic cordova plugin add cordova-uxcam
    ```
 
