@@ -14,6 +14,10 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+#### V. 9.9.9 (June 10, 2026)
+
+* x
+
 ### V. 3.8.3 - June 9, 2026
 
 * Fixed occlusion misplacement and removal while scrolling, transition and opening custom alerts.
