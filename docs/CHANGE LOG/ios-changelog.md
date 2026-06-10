@@ -14,6 +14,14 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.3 - June 9, 2026
+
+* Fixed webview script removing other user scripts during deallocation.
+* Improved occlusion to cover modal, custom naivation, alerts.
+* Support for flutter scroll optimization.
+* Optmized session lifecycle orchestration.
+
+
 ### V. 3.8.2 - May 18, 2026
 
 * Fixed `pauseScreenRecording`, `occludeSensitiveScreen` misbehaviour during session start and orientation touchpoint.
