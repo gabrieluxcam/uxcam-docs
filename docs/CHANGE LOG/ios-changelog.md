@@ -14,6 +14,14 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.3 - June 9, 2026
+
+* Fixed occlusion misplacement and removal while scrolling, transition and opening custom alerts.
+* Fixed crash due to race condition when trying to stop already stopped session.
+* Fixed SDK removing external webview scripts when trying to open/close the webview.
+* Improved session lifecycle flow to optimize the SDK flow and fix hidden issues.
+
+
 ### V. 3.8.2 - May 18, 2026
 
 * Fixed `pauseScreenRecording`, `occludeSensitiveScreen` misbehaviour during session start and orientation touchpoint.
