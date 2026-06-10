@@ -17,6 +17,20 @@ metadata:
 
 <br />
 
+### V. 3.10.3 - June 10, 2026
+
+* Fix (tagging): Keep prior screen tag for gestures on ignored screens
+* Enhance: remove duplicate call to parse as Thread.getAllStackTraces() suspends every thread in the JVM to capture a consistent snapshot
+* Enhance: split parse so that ThreadsArrayJsonParser does not cause oom on low end devices
+* Fix (di): Prevent CoreModule deadlock between coreModuleLock and framePipelineManagerLock
+* Fix (di): Replace synchronized DCL blocks with @Synchronized methods to avoid R8 VerifyError
+* Feat (session): Add OnSessionStopListener callback to stopSessionAndUploadData
+* Fix (gesture): Detect gestures in bottom sheet dialogs
+* Fix (occlusion): Preserve activity decor against stale WMG cache
+* Fix (screenaction): Clear viewArrayList on Compose taps to prevent stale XML attribution
+* Fix (screenaction): Snapshot Compose actions at touch down to fix XML→Compose tap mis-attribution
+
+
 ### V. 3.10.2 - May 22, 2026
 
 * Fix (uxcamlib): Add short-break black boundary frame
