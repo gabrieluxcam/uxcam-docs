@@ -17,6 +17,16 @@ metadata:
 
 <br />
 
+### V. 3.10.2 - May 22, 2026
+
+* Fix (uxcamlib): Add short-break black boundary frame
+* Fix (uxcamlib): Preserve crash timeline screen history
+* Fix (uxcamlib): Recover cancelled session uploads
+* Fix (uxcamlib): Use ascii test names for kotlin classes
+* Fix (uxcamlib): Anchor video timing to session stop
+* Fix (uxcamlib): Canonicalize timeline screen ownership
+
+
 ### V. 3.10.1 - May 18, 2026
 
 * Fix (tagging): Initial fragment tagging race condition on offline cold-start
