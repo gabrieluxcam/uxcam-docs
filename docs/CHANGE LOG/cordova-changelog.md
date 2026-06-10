@@ -95,3 +95,8 @@ next:
 #### V. 3.0.1 (November 2, 2018)
 
 * SDK released to use Android v3.0.3 and iOS v3.0.5
+
+### V. 3.8.2 - March 20, 2026
+
+* Updated the bundled native SDKs to iOS 3.7.10 and Android 3.8.13.
+* General stability and reliability improvements (improvement).
