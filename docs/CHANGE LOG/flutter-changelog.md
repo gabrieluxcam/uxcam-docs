@@ -12,6 +12,9 @@ next:
 ---
 <br />
 
+### V. 2.8.3 - June 11, 2026
+
+* Added scroll detection to automatically skip recording when scrolling is active, improving capture reliability.
 ### V. 2.8.2 - May 22, 2026
 
 * Updated iOS SDK to 3.8.2 and Android SDK to 3.10.1
