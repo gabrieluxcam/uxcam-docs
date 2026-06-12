@@ -13,9 +13,9 @@ UXCam ships with a **lightweight diagnostics layer** that automatically records:
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
 | **Crash**     | Installs its own `Thread.UncaughtExceptionHandler`, then calls any previous handler. Captures the stack trace and uploads it on the next session. | Java/Kotlin stack trace + device state |
 | **ANR**       | A tiny runnable pings the **main thread** at fixed intervals. If the gap between pings is **> 1 s**, UXCam flags an ANR and snapshots the stack.  | Main‑thread stack trace at ANR onset   |
-| **UI Freeze** | Any stretch where the **main thread is unresponsive for ≥ 2 s**, even if no touch was expected.                                                   | Start/stop timestamps + stack samples  |
+| **UI Freeze** | Any stretch where the **main thread is unresponsive for ≥ 1 s**, even if no touch was expected.                                                   | Start/stop timestamps + stack samples  |
 
-> ⚠️ **Tip:** Running two crash reporters (e.g., Crashlytics *and* UXCam) can lead to conflicts. Disable one of them at app start.
+> ⚠️ **Tip:** Running two crash reporters (e.g., Crashlytics _and_ UXCam) can lead to conflicts. Disable one of them at app start.
 
 ***
 
@@ -45,6 +45,8 @@ UXCam.disableCrashHandling(true);
 
 ### Best Practices
 
-* Decide at launch **which** crash reporter owns crashes; do **not** toggle per session.
-* Keep custom exception/event names in **PascalCase** or **snake\_case** and store them as constants.
-* Avoid logging PII in exception messages—use IDs or hashed values instead.
+- Decide at launch **which** crash reporter owns crashes; do **not** toggle per session.
+- Keep custom exception/event names in **PascalCase** or **snake\_case** and store them as constants.
+- Avoid logging PII in exception messages—use IDs or hashed values instead.
+
+<br />
