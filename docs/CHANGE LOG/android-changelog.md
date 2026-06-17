@@ -17,6 +17,13 @@ metadata:
 
 <br />
 
+### V. 3.10.4 - June 16, 2026
+
+* Fix (startup): Resolve ANRs caused by concurrent foreground lifecycle transitions during SDK initialization
+* Fix (recording): Ensure sessions are captured when the SDK initializes after the first activity has already resumed
+* Fix (stability): Guard ART monitor to prevent verification errors on certain devices
+* Fix (memory): Reduce peak memory usage for long sessions by streaming session data incrementally rather than accumulating it in memory
+* Fix (memory): Resolve memory leak in the session recording pipeline
 ### V. 3.10.3 - June 10, 2026
 
 * Fix (tagging): Keep prior screen tag for gestures on ignored screens
