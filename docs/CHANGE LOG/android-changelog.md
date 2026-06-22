@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.10.5 - June 19, 2026
+
+* Enhance (occlusion): Add occlusion timeline intervals for more accurate privacy coverage tracking
+* Fix (occlusion): Improve occlusion reliability across screen transitions
+* Fix (upload): Resolve session upload stalls when WiFi-only mode is enabled on VPN-connected devices
+* Fix (upload): Preserve the forced-upload setting across SDK configuration refreshes
+* Fix (stability): Upload sessions from previously crashed app launches on the next app start
+* Fix (stability): Correctly respect the SDK configuration when crash handling is disabled
 ### V. 3.10.4 - June 16, 2026
 
 * Fix (startup): Resolve ANRs caused by concurrent foreground lifecycle transitions during SDK initialization
