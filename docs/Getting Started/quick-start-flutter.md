@@ -4,8 +4,8 @@ excerpt: Get UXCam running in your Flutter app in 5 minutes
 deprecated: false
 hidden: false
 metadata:
-  title: 'Flutter Quick Start - UXCam'
-  description: 'Fastest way to add UXCam session recording to your Flutter app'
+  title: Flutter Quick Start - UXCam
+  description: Fastest way to add UXCam session recording to your Flutter app
   robots: index
 next:
   description: ''
@@ -14,7 +14,6 @@ next:
       slug: flutter
       title: Full Flutter Guide
 ---
-
 # Flutter Quick Start
 
 Get session recording working in your Flutter app in under 5 minutes.
@@ -37,7 +36,7 @@ Get session recording working in your Flutter app in under 5 minutes.
 </Tab>
 </Tabs>
 
----
+***
 
 ## Step 1: Add the Package
 
@@ -52,7 +51,7 @@ dependencies:
   flutter_uxcam: ^x.x.x
 ```
 
----
+***
 
 ## Step 2: Initialize UXCam
 
@@ -104,7 +103,7 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
----
+***
 
 ## Step 3: Verify It Works
 
@@ -129,7 +128,7 @@ class _MyAppState extends State<MyApp> {
 </Tab>
 </Tabs>
 
----
+***
 
 ## Validation Helper (Mobile only)
 
@@ -148,7 +147,7 @@ Future<void> validateIntegration() async {
 }
 ```
 
----
+***
 
 ## Next Steps
 
@@ -167,7 +166,9 @@ You're recording sessions! Now customize your integration:
     Protect passwords and PII
   </Card>
 
-  <Card title="Track Events" href="/docs/flutter/events" icon="fa-solid fa-bolt">
+  <Card title="Track Events" href="/docs/events-flutter" icon="fa-solid fa-bolt">
     Capture custom user actions
   </Card>
 </Cards>
+
+<br />
