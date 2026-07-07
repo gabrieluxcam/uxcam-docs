@@ -1,0 +1,90 @@
+---
+name: OcclusionDemo
+---
+import React from 'react';
+
+export const OcclusionDemo = ({ occludedColor = '#FA2A16' }) => {
+  const bezel = {
+    width: '240px',
+    height: '480px',
+    borderRadius: '32px',
+    border: '10px solid #000',
+    backgroundColor: '#000',
+    overflow: 'hidden',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+  };
+  const screen = {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#fff',
+    borderRadius: '22px',
+    overflow: 'hidden',
+    fontFamily: 'system-ui, sans-serif',
+    display: 'flex',
+    flexDirection: 'column',
+  };
+  const appBar = {
+    backgroundColor: '#4B2AFA',
+    color: '#fff',
+    padding: '18px 16px 10px',
+    fontSize: '15px',
+    fontWeight: 600,
+  };
+  const body = { padding: '16px', display: 'flex', flexDirection: 'column', gap: '12px' };
+  const label = { fontSize: '11px', color: '#666', letterSpacing: '0.05em' };
+  const field = {
+    border: '1px solid #ddd',
+    borderRadius: '6px',
+    padding: '8px 10px',
+    fontSize: '13px',
+    color: '#161E35',
+  };
+  const occluded = {
+    backgroundColor: occludedColor,
+    borderRadius: '6px',
+    padding: '8px 10px',
+    fontSize: '13px',
+    color: occludedColor,
+    userSelect: 'none',
+  };
+  const payButton = {
+    backgroundColor: '#4B2AFA',
+    color: '#fff',
+    borderRadius: '6px',
+    padding: '10px',
+    fontSize: '13px',
+    fontWeight: 600,
+    textAlign: 'center',
+    marginTop: '8px',
+  };
+  const caption = { textAlign: 'center', fontSize: '13px', marginTop: '10px', fontWeight: 700 };
+
+  const Phone = ({ masked, title }) => (
+    <div>
+      <div style={bezel}>
+        <div style={screen}>
+          <div style={appBar}>Checkout</div>
+          <div style={body}>
+            <div style={label}>CARDHOLDER NAME</div>
+            <div style={masked ? occluded : field}>{masked ? 'occluded' : 'Alex Rivera'}</div>
+            <div style={label}>CARD NUMBER</div>
+            <div style={masked ? occluded : field}>{masked ? 'occluded' : '4242 4242 4242 4242'}</div>
+            <div style={label}>CVV</div>
+            <div style={{ ...(masked ? occluded : field), width: '60px' }}>{masked ? 'occ' : '123'}</div>
+            <div style={payButton}>Pay $49.00</div>
+          </div>
+        </div>
+      </div>
+      <div style={caption}>{title}</div>
+    </div>
+  );
+
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '32px', margin: '32px 0' }}>
+      <Phone masked={false} title="What your user sees" />
+      <Phone masked={true} title="What UXCam records" />
+    </div>
+  );
+};
+
+<OcclusionDemo />
