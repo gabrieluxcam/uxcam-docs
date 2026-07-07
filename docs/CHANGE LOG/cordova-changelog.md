@@ -12,7 +12,7 @@ next:
 ---
 ### Cordova
 
-#### V. 3.6.5 (March 20th, 2025)
+#### V. 3.8.2 (March 20th, 2025)
 
 - Fixed issue with sdk not being integrated for some cordova apps
 - Update iOS SDK to 3.7.11 and android SDK to 3.8.14
