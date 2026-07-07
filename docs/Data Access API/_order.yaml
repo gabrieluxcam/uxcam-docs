@@ -1,6 +1,6 @@
 - index
 - sessions
 - users
-- events
-- query-parameters
+- events-endpoint
+- api-query-parameters
 - error-handling

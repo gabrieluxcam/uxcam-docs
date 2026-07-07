@@ -59,7 +59,7 @@ These operators can only be used with filter attributes that are of type **DateT
 | before         | \<              | DateTime String                                            |
 | between\_dates | between\_dates  | Dictionary \{“lower”: “lower date”, “upper”:”upper\_date”} |
 
-Filters are valid for all [User Data](https://developer.uxcam.com/docs/users-1) categories, [Session Data](https://developer.uxcam.com/docs/sessions-1) categories, and [Event Data](https://developer.uxcam.com/docs/events) categories having attribute data type (**string, integer, bool, Json, and  DateTime**)
+Filters are valid for all [User Data](https://developer.uxcam.com/docs/users-1) categories, [Session Data](https://developer.uxcam.com/docs/sessions-1) categories, and [Event Data](https://developer.uxcam.com/docs/events-1) categories having attribute data type (**string, integer, bool, Json, and  DateTime**)
 
 In case of Attribute data type JSON filters need to be passed in the given format below. There are two data attributes having JSON type [user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)
 

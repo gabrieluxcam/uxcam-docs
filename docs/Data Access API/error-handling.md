@@ -172,5 +172,5 @@ except requests.HTTPError as e:
 
 ## See Also
 
-- [Query Parameters](query-parameters) - Valid filter syntax
+- [Query Parameters](api-query-parameters) - Valid filter syntax
 - [Filter Operators](filter-operators) - Supported operators by type

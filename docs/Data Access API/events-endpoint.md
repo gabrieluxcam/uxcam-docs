@@ -120,7 +120,7 @@ curl "https://api.uxcam.com/v2/event/analytics" \
 | `session_id` | String | Session containing event |
 | `uxcamuserid` | String | User who triggered event |
 
-For the complete attribute list, see the [full Events documentation](/docs/events).
+For the complete attribute list, see the [full Events documentation](/docs/events-1).
 
 ---
 
@@ -148,7 +148,7 @@ curl "https://api.uxcam.com/v2/event/analytics?..." \
 
 ## See Also
 
-- [Query Parameters](query-parameters) - Filtering and pagination
+- [Query Parameters](api-query-parameters) - Filtering and pagination
 - [Filter Operators](filter-operators) - Advanced filter syntax
 - [Sessions Endpoint](sessions) - Query session data
 - [Users Endpoint](users) - Query user data

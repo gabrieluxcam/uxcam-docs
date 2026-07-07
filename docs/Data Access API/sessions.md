@@ -134,7 +134,7 @@ For the complete attribute list, see the [full Sessions documentation](/docs/ses
 
 ## See Also
 
-- [Query Parameters](query-parameters) - Filtering and pagination
+- [Query Parameters](api-query-parameters) - Filtering and pagination
 - [Filter Operators](filter-operators) - Advanced filter syntax
 - [Users Endpoint](users) - Query user data
-- [Events Endpoint](events) - Query event data
+- [Events Endpoint](events-endpoint) - Query event data

@@ -63,11 +63,11 @@ All API requests require two authentication parameters:
     Query and export user data
   </Card>
 
-  <Card title="Events" href="events" icon="fa-solid fa-bolt">
+  <Card title="Events" href="events-endpoint" icon="fa-solid fa-bolt">
     Query and export event data
   </Card>
 
-  <Card title="Query Parameters" href="query-parameters" icon="fa-solid fa-filter">
+  <Card title="Query Parameters" href="api-query-parameters" icon="fa-solid fa-filter">
     Filtering and pagination options
   </Card>
 </Cards>
@@ -128,7 +128,7 @@ All responses return JSON:
 | Topic | Description |
 |-------|-------------|
 | [Error Handling](error-handling-and-messages) | HTTP status codes and error messages |
-| [Query Parameters](query-parameters) | Filtering, sorting, and pagination |
+| [Query Parameters](api-query-parameters) | Filtering, sorting, and pagination |
 | [Filter Operators](filter-operators) | Advanced filtering syntax |
 
 ---

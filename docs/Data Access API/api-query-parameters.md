@@ -197,4 +197,4 @@ curl "https://api.uxcam.com/v2/session" \
 - [Filter Operators](filter-operators) - Complete operator reference
 - [Sessions Endpoint](sessions) - Session-specific parameters
 - [Users Endpoint](users) - User-specific parameters
-- [Events Endpoint](events) - Event-specific parameters
+- [Events Endpoint](events-endpoint) - Event-specific parameters

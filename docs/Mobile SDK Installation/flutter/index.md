@@ -232,7 +232,7 @@ Within 5 minutes of running your app:
 1. **[Screen Tagging](screen-tagging-flutter)** - Implement detailed screen analytics and navigation tracking
 2. **[Privacy Protection](sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking
 3. **[User Analytics](user-properties)** - Enable user-level insights and segmentation
-4. **[Event Tracking](events)** - Capture business-critical user actions and conversions
+4. **[Event Tracking](events-flutter)** - Capture business-critical user actions and conversions
 5. **[Advanced Configuration](advanced-configuration-and-apis/)** - Optimize and customize for complex use cases
 
 ### Quick Links
