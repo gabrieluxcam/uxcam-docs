@@ -99,10 +99,6 @@ UXCam.Start(configuration);
 Now that you have UXCam integrated, your sessions will start appearing on the dashboard within a few seconds after the app goes into the background. We encourage you to explore customization options such as identifying users, tagging sessions, or hiding sensitive views.\
 Check out our additional documentation to learn how to further tailor UXCam to your needs!
 
-> 👍 **As Simple As That!**
->
-> Your integration process is complete. Start reviewing sessions in the dashboard and explore UXCam's powerful features to get more insights into your app's user experience.
->
-> 📜 **SDK Updates**
->
-> To stay up to date with the latest SDK improvements, visit [this link](https://developer.uxcam.com/docs/xamarin-changelog).
+<GitHubCallout type="success">**As Simple As That!** Your integration process is complete. Start reviewing sessions in the dashboard and explore UXCam's powerful features to get more insights into your app's user experience.</GitHubCallout>
+
+<GitHubCallout type="note">**SDK Updates** — To stay up to date with the latest SDK improvements, visit [this link](https://developer.uxcam.com/docs/xamarin-changelog).</GitHubCallout>

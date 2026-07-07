@@ -29,9 +29,11 @@ Get session recording working in your Cordova app in under 5 minutes.
 
 ## Step 1: Add the Plugin
 
-```bash
-cordova plugin add cordova-uxcam
-```
+<Terminal>
+  {`
+  $ cordova plugin add cordova-uxcam
+  `}
+</Terminal>
 
 ---
 

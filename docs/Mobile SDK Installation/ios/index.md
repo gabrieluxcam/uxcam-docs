@@ -12,31 +12,15 @@ next:
 ---
 <GitHubCallout type="note">Need an account? \*\*[Start free](https://app.uxcam.com/signup)                      \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
 
-<JumpCallout to="#android-sdk--quickstart">Jump to Quickstart</JumpCallout>
+<JumpCallout to="#quick-start-only-a-couple-of-lines-of-code">Jump to Quickstart</JumpCallout>
 
 # Integration Journey at a Glance
 
-<SimpleStepper>
-  <SimpleStep header="Step 1: Customize SDK Configuration">
-    Capture your first live session.
-  </SimpleStep>
-
-  <SimpleStep header="Step 2: Tag Screens">
-    Enable heat-maps & screen analytics.
-  </SimpleStep>
-
-  <SimpleStep header="Step 3: Mask Sensitive Data">
-    Hide passwords and other GDPR/CCPA data.
-  </SimpleStep>
-
-  <SimpleStep header="Step 4: Identify Users & Set Properties">
-    Unify sessions, power funnels & cohorts
-  </SimpleStep>
-
-  <SimpleStep header="Step 5: Track Custom Events">
-    Measure key actions & run final QA
-  </SimpleStep>
-</SimpleStepper>
+1. **[Customize SDK Configuration](#quick-start-only-a-couple-of-lines-of-code)** — Capture your first live session.
+2. **[Tag Screens](screen-tagging-ios/)** — Enable heat-maps & screen analytics.
+3. **[Mask Sensitive Data](sensitive-data-occlusion-ios/)** — Hide passwords and other GDPR/CCPA data.
+4. **[Identify Users & Set Properties](user-properties-ios)** — Unify sessions, power funnels & cohorts.
+5. **[Track Custom Events](events-ios)** — Measure key actions & run final QA.
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
@@ -53,9 +37,7 @@ next:
   * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm the integration is working correctly.
 </Accordion>
 
-> 🚧 Note for SwiftUI developers:
->
-> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios).
+<GitHubCallout type="warning">**Note for SwiftUI developers:** If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios).</GitHubCallout>
 
 <br />
 
@@ -214,10 +196,7 @@ func application(_ application: UIApplication,
 
 Run the app on a simulator or device, navigate a few screens, then send it to the background. Your first session replay will appear on the UXCam dashboard within seconds.
 
-> 👍 As Simple As That!
->
-> This will complete the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+<GitHubCallout type="success">**As Simple As That!** This will complete the integration process. Your session will be shown on the dashboard within a few seconds after the app goes in the background.</GitHubCallout>
 >
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 

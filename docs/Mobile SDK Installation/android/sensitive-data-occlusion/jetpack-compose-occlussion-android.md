@@ -35,9 +35,7 @@ import com.uxcam.UXCamKt
 
 Now you're ready to start setting the occlusion methods for your composables!
 
-> 📘 **Note**
->
-> The `uxcam-ktx`artifact is only required if you need to use the Jetpack Compose occlusion APIs. Otherwise, you only need the core`uxcam` dependency.
+<GitHubCallout type="note">The `uxcam-ktx` artifact is only required if you need to use the Jetpack Compose occlusion APIs. Otherwise, you only need the core `uxcam` dependency.</GitHubCallout>
 
 ### Occluding Composables
 

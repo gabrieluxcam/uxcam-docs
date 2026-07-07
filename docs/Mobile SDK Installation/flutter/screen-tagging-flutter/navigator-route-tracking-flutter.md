@@ -638,7 +638,7 @@ class RoutePatternMatcher {
 
 ## Handling Bottom Navigation and Tab Navigation Limitations
 
-> ⚠️ **Important Limitation**: The automatic tagging feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. This section provides advanced solutions for these scenarios.
+<GitHubCallout type="warning">**Important Limitation**: The automatic tagging feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. This section provides advanced solutions for these scenarios.</GitHubCallout>
 
 ### Why Advanced Solutions Are Needed
 

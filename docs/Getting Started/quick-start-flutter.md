@@ -40,9 +40,11 @@ Get session recording working in your Flutter app in under 5 minutes.
 
 ## Step 1: Add the Package
 
-```bash
-flutter pub add flutter_uxcam
-```
+<Terminal>
+  {`
+  $ flutter pub add flutter_uxcam
+  `}
+</Terminal>
 
 This adds to your `pubspec.yaml`:
 

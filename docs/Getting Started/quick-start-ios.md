@@ -39,9 +39,11 @@ pod 'UXCam'
 
 Then run:
 
-```bash
-pod install
-```
+<Terminal>
+  {`
+  $ pod install
+  `}
+</Terminal>
 
 ### Swift Package Manager
 

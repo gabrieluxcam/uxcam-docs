@@ -20,27 +20,11 @@ next:
 
 # Integration Journey at a Glance
 
-<SimpleStepper>
-  <SimpleStep header="Step 1: Customize SDK Configuration">
-    Capture your first live session.
-  </SimpleStep>
-
-  <SimpleStep header="Step 2: Tag Screens">
-    Enable heat-maps & screen analytics.
-  </SimpleStep>
-
-  <SimpleStep header="Step 3: Mask Sensitive Data">
-    Hide passwords and other GDPR/CCPA data.
-  </SimpleStep>
-
-  <SimpleStep header="Step 4: Identify Users & Set Properties">
-    Unify sessions, power funnels & cohorts
-  </SimpleStep>
-
-  <SimpleStep header="Step 5: Track Custom Events">
-    Measure key actions & run final QA
-  </SimpleStep>
-</SimpleStepper>
+1. **[Customize SDK Configuration](#android-sdk--quickstart)** — Capture your first live session.
+2. **[Tag Screens](screen-tagging/)** — Enable heat-maps & screen analytics.
+3. **[Mask Sensitive Data](sensitive-data-occlusion/)** — Hide passwords and other GDPR/CCPA data.
+4. **[Identify Users & Set Properties](user-properties)** — Unify sessions, power funnels & cohorts.
+5. **[Track Custom Events](events)** — Measure key actions & run final QA.
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
@@ -158,13 +142,13 @@ Set our configuration option `.enableIntegrationLogging(bool)` as `true` to see 
 You've successfully integrated UXCam and sent some sessions, great job! But there's so much more you can do. Now, let's go further into setting things up.
 
 <Cards columns={4}>
-  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging#/" icon="fa-mobile">
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging" icon="fa-mobile">
     Take full advantage of heatmaps and screen analytics.
 
     > Review Automatic or Manual Tagging
   </Card>
 
-  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion" icon="fa-credit-card">
     Protect your users’ privacy by masking sensitive data.
 
     > Mask or Blur Screens, Views and Fields

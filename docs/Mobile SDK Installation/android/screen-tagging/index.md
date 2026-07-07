@@ -176,11 +176,11 @@ If something is off, look for duplicate tag calls or a missing route handler.
 You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={4}>
-  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/docs/jetpack-compose-screen-tagging-1-android#/" icon="fa-mobile">
+  <Card title="Jetpack Compose Screen Tagging" href="https://developer.uxcam.com/docs/jetpack-compose-screen-tagging-1-android" icon="fa-mobile">
     If applicable, make sure screen tagging is properly done in your Compose App.
   </Card>
 
-  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion#/" icon="fa-credit-card">
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion" icon="fa-credit-card">
     Protect Your Users' Privacy and PII Data
 
     > Mask or Blur Screens, Views and Fields

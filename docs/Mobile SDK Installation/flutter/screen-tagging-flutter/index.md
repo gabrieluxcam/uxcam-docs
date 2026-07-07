@@ -53,9 +53,7 @@ Flutter's architecture requires a different approach to screen tagging compared 
 
 While native frameworks may offer automatic tagging, in Flutter, the architecture requires using a Navigation Observer or manual tagging to ensure all screens are clearly and consistently identified in your analytics. This approach gives you full control over how each screen is represented, leading to more accurate and meaningful insights.
 
-> 🚧 Important:
->
-> Flutter UXCam SDK version 2.2.2 introduces the option to add tagging from the Flutter side of your app. This feature is optional and still under active development, so any feedback during testing is highly appreciated.
+<GitHubCallout type="warning">**Important:** Flutter UXCam SDK version 2.2.2 introduces the option to add tagging from the Flutter side of your app. This feature is optional and still under active development, so any feedback during testing is highly appreciated.</GitHubCallout>
 >
 > Note: This feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. However, ongoing work on Navigator 2.0 aims to address these issues in the future.
 
@@ -106,7 +104,7 @@ From FlutterUXCam SDK version 2.2.2, you can add a `FlutterUxcamNavigatorObserve
 
 ## Handling Bottom Navigation and Tab Navigation
 
-> ⚠️ **Important Limitation**: The automatic tagging feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. These scenarios require manual tagging for accurate analytics.
+<GitHubCallout type="warning">**Important Limitation**: The automatic tagging feature currently does not support Bottom Navigation or Tab Navigation for tagging when using Navigator 1.0 or 2.0. These scenarios require manual tagging for accurate analytics.</GitHubCallout>
 
 ### Why Manual Tagging is Needed for Navigation Bars
 
@@ -466,7 +464,7 @@ For the full step-by-step guide — including grouping dynamic IDs, tagging frag
 
 👉 [Define Pages & Properties](https://developer.uxcam.com/docs/define-pages-properties)
 
-> 📘 If pages are not defined in the dashboard, UXCam defaults to displaying the URL path as the page name.
+<GitHubCallout type="note">If pages are not defined in the dashboard, UXCam defaults to displaying the URL path as the page name.</GitHubCallout>
 
 ## Verify Your Setup
 

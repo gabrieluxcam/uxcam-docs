@@ -31,19 +31,23 @@ Get session recording working in your React Native app in under 5 minutes.
 
 ## Step 1: Install the Package
 
-```bash
-# npm
-npm install react-native-ux-cam
+<Terminal>
+  {`
+  # npm
+  $ npm install react-native-ux-cam
 
-# yarn
-yarn add react-native-ux-cam
-```
+  # yarn
+  $ yarn add react-native-ux-cam
+  `}
+</Terminal>
 
 For iOS, install pods:
 
-```bash
-cd ios && pod install
-```
+<Terminal>
+  {`
+  $ cd ios && pod install
+  `}
+</Terminal>
 
 ---
 

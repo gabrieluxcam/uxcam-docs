@@ -65,7 +65,7 @@ UXCam.setUserProperty("nps_score",       "9");  // Cast numbers to strings
 | Prefer **snake\_case keys**          | Prevents duplicates (`planType` vs `plan_type`).                         |
 | Update **only when a value changes** | The SDK overwrites the previous value—no need to resend unchanged props. |
 
-> 🚧 Need to send PII (e.g. email)? Sign a DPA with UXCam first: [team@uxcam.com](mailto:team@uxcam.com).
+<GitHubCallout type="warning">Need to send PII (e.g. email)? Sign a DPA with UXCam first: [team@uxcam.com](mailto:team@uxcam.com).</GitHubCallout>
 
 ***
 
