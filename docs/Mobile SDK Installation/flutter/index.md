@@ -123,7 +123,7 @@ class _MyAppState extends State<MyApp> {
         userAppKey: "UXCAM_WEB_APP_KEY",
       );
     } else {
-      FlutterUxcam.optIntoVideoRecordings();
+      FlutterUxcam.optIntoVideoRecording();
       config = FlutterUxConfig(
         userAppKey: "UXCAM_MOBILE_APP_KEY",
         enableAutomaticScreenNameTagging: false,
@@ -193,7 +193,7 @@ class UXCamValidator {
       FlutterUxcam.tagScreenName('Integration Test Screen');
 
       // Test event logging
-      FlutterUxcam.logEvent('integration_validated', {
+      FlutterUxcam.logEventWithProperties('integration_validated', {
         'timestamp': DateTime.now().toIso8601String(),
         'flutter_version': 'Your Flutter version',
       });

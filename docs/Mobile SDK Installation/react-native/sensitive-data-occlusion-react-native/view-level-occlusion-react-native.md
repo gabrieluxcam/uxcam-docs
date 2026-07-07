@@ -268,7 +268,7 @@ function DynamicOcclusionScreen() {
 ### Occluding Custom Components
 
 ```javascript
-import React, { forwardRef, useImperativeHandle } from 'react';
+import React, { forwardRef, useImperativeHandle, useRef, useEffect } from 'react';
 import { View, TextInput } from 'react-native';
 import RNUxcam from 'react-native-ux-cam';
 

@@ -59,7 +59,7 @@ In your `App.js` or entry file:
 import RNUxcam from 'react-native-ux-cam';
 
 // Enable video recording (required)
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 
 // Start UXCam
 RNUxcam.startWithConfiguration({
@@ -85,7 +85,7 @@ const config: UXCamConfig = {
   enableImprovedScreenCapture: true,
 };
 
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 RNUxcam.startWithConfiguration(config);
 ```
 </Accordion>

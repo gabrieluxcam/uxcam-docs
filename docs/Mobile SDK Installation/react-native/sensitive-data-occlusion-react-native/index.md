@@ -42,10 +42,10 @@ The most efficient approach is configuring privacy rules directly in your UXCam 
 ### Overlay an entire screen
 
 ```javascript
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
+import { OcclusionType } from 'react-native-ux-cam';
 
 const overlay = {
-  type: UXCamOcclusionType.Overlay,
+  type: OcclusionType.Overlay,
   color: 0x000000,
   hideGestures: true,
   screens: ['Login Form', 'Payment Details'],
@@ -56,7 +56,7 @@ const overlay = {
 
 ```javascript
 const blur = {
-  type: UXCamOcclusionType.Blur,
+  type: OcclusionType.Blur,
   blurRadius: 15,
   hideGestures: false,
   screens: ['User Profile Settings', 'Account Overview'],
@@ -68,10 +68,10 @@ const blur = {
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
 
-RNUxcam.occludeAllTextFields();
+RNUxcam.occludeAllTextFields(true);
 
 // Stop occluding when leaving the screen
-RNUxcam.stopOccludingAllTextFields();
+RNUxcam.occludeAllTextFields(false);
 ```
 
 ### Hide a single sensitive view
@@ -94,8 +94,7 @@ import RNUxcam from 'react-native-ux-cam';
 Set all privacy rules during initialization to keep them in one place and avoid race conditions:
 
 ```javascript config/uxcam.js
-import RNUxcam from 'react-native-ux-cam';
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
+import RNUxcam, { OcclusionType } from 'react-native-ux-cam';
 
 const configuration = {
   userAppKey: 'YOUR_API_KEY',
@@ -103,27 +102,29 @@ const configuration = {
   enableImprovedScreenCapture: true,
   occlusions: [
     {
-      type: UXCamOcclusionType.Overlay,
+      type: OcclusionType.Overlay,
       color: 0x000000,
       hideGestures: true,
       screens: ['Login Form', 'Payment Details', 'Password Change'],
     },
     {
-      type: UXCamOcclusionType.Blur,
+      type: OcclusionType.Blur,
       blurRadius: 15,
       hideGestures: false,
       screens: ['User Profile Settings', 'Account Overview'],
     },
     {
-      type: UXCamOcclusionType.OccludeAllTextFields,
+      type: OcclusionType.OccludeAllTextFields,
       screens: ['Search Results', 'Customer Support Chat'],
     },
   ],
 };
 
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 RNUxcam.startWithConfiguration(configuration);
 ```
+
+<GitHubCallout type="warning">On Android, the `screens` list is ignored for `OcclusionType.OccludeAllTextFields` — it always applies to **all screens**. Per-screen scoping for this type only works on iOS.</GitHubCallout>
 
 ***
 
@@ -134,7 +135,7 @@ RNUxcam.startWithConfiguration(configuration);
 | **Entire sensitive screens** | Screen overlay/blur | `screens: ['Login', 'Payment']` | **Low** — uses screen names |
 | **Form sections** | Screen-based blur | `screens: ['ProfileEdit']` | **Low** — covers entire form areas |
 | **Individual fields** | View-level occlusion | `occludeSensitiveView(ref)` | **High** — per-component setup |
-| **All text inputs** | Text field occlusion | `occludeAllTextFields()` | **Medium** — affects all text inputs |
+| **All text inputs** | Text field occlusion | `occludeAllTextFields(true)` | **Medium** — affects all text inputs |
 
 > 💡 **Best Practice**: Start with screen-based protection using your tagged screen names, then add granular view-level occlusion only where needed.
 

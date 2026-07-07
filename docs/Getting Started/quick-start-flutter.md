@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
         userAppKey: "UXCAM_WEB_APP_KEY",
       );
     } else {
-      FlutterUxcam.optIntoVideoRecordings();
+      FlutterUxcam.optIntoVideoRecording();
       config = FlutterUxConfig(
         userAppKey: "UXCAM_MOBILE_APP_KEY",
         enableAutomaticScreenNameTagging: false,

@@ -136,7 +136,7 @@ If you prefer to manually handle occlusions in your app or [occlude specific vie
 You can configure different overlay options with the following:
 
 ```dart
-import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
+import 'package:flutter_uxcam/flutter_uxcam.dart';
 
 FlutterUXOverlay overlay = FlutterUXOverlay(
    		color: Colors.red,
@@ -149,7 +149,7 @@ FlutterUxcam.removeOcclusion(overlay); //To remove overlay
 
 **Available overlay options are:**
 
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
+<p style={{fontSize: "17px"}}><code>hideGestures(boolean hideGestures)</code><br /></p>
 Allows the user to configure wether to capture gesture in the occluded screen or not. Passing in false to this method tells the SDK to capture gestures. Default is true, so by default the gestures are not captured.
 
 <p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
@@ -181,8 +181,7 @@ This is useful to set all the occlusion/Blur from one place of the application w
 You can configure different options using the following:
 
 ```dart
-//Import this on the screen you are trying to Blur
-import 'package:flutter_uxcam/uxblur.dart';
+import 'package:flutter_uxcam/flutter_uxcam.dart';
 
 FlutterUXBlur blur = FlutterUXBlur(
    		blurRadius: 10,
@@ -199,7 +198,7 @@ FlutterUxcam.removeOcclusion(blur); //To remove blur
 <p style={{fontSize: "17px"}}><code>blurRadius(int blurRadius)</code><br /></p>
 This option allows you to define the blur radius to be used for blurring. The higher the value, the more blurred the resulting video is going to be.
 
-<p style={{fontSize: "17px"}}><code>withoutGesture(boolean withoutGesture) || hideGestures(boolean hideGestures)</code><br /></p>
+<p style={{fontSize: "17px"}}><code>hideGestures(boolean hideGestures)</code><br /></p>
 Same as overlay. Please refer to overlay section.
 
 <p style={{fontSize: "17px"}}><code>screens(List screens)</code> - Use it in the configuration object<br /></p>
@@ -244,8 +243,7 @@ const OccludeWrapper(
 It's also possible to pass a list of occlusions (except Sensitive View) to be applied during configuration.  For example:
 
 ```dart
-import 'package:flutter_uxcam/uxblur.dart'; //Import this for Blurring
-import 'package:flutter_uxcam/uxoverlay.dart'; //Import this for Overlay
+import 'package:flutter_uxcam/flutter_uxcam.dart';
 
 FlutterUXBlur blur = FlutterUXBlur(
    	blurRadius: 10, 

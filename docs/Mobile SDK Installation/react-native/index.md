@@ -56,7 +56,7 @@ import RNUxcam from 'react-native-ux-cam';
 const App = () => {
   useEffect(() => {
     // Enable video recording (required for both iOS and Android)
-    RNUxcam.optIntoVideoRecordings();
+    RNUxcam.optIntoVideoRecording();
 
     const configuration = {
       userAppKey: 'YOUR_API_KEY',
@@ -115,14 +115,14 @@ export const useScreenTracking = (screenName) => {
 Configure privacy rules at initialization time:
 
 ```javascript
-import { UXCamOcclusionType } from 'react-native-ux-cam/UXCamOcclusion';
+import { OcclusionType } from 'react-native-ux-cam';
 
 const configuration = {
   userAppKey: 'YOUR_API_KEY',
   enableAutomaticScreenNameTagging: false,
   occlusions: [
     {
-      type: UXCamOcclusionType.Overlay,
+      type: OcclusionType.Overlay,
       color: 0x000000,
       hideGestures: true,
       screens: ['Login Form', 'Payment Details'],
@@ -211,7 +211,7 @@ const config: UXCamConfig = {
   enableAutomaticScreenNameTagging: false,
 };
 
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 RNUxcam.startWithConfiguration(config);
 ```
 
