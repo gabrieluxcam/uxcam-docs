@@ -15,6 +15,8 @@ next:
 
 Occlusion is the process of hiding sensitive data in session recordings. UXCam provides multiple occlusion strategies to protect user privacy while maintaining analytical value.
 
+<OcclusionDemo />
+
 ---
 
 ## Occlusion Strategies
