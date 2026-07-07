@@ -16,9 +16,11 @@ metadata:
 next:
   description: 'Hide sensitive data and PII from session recordings in your NativeScript app'
 ---
-In this section, we focus on how to handle sensitive data within your  React Native application using UXCam's features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
+In this section, we focus on how to handle sensitive data within your NativeScript application using UXCam's features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
 
 UXCam ensures that as a controller you can use our platform and fulfil your obligations under GDPR. However, if you collect any **PII data** in your app such as email address, phone, or credit card number you should use our API to hide it.
+
+<OcclusionDemo />
 
 You can choose to hide:
 

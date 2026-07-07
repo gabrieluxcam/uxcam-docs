@@ -22,6 +22,8 @@ next:
 ---
 Good privacy practices are **non‑negotiable**—especially under GDPR, CCPA and Apple’s App Store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 
+<OcclusionDemo />
+
 > 📘 **UIKit vs SwiftUI** The APIs below come in  *both*  flavours: `UXCam` for UIKit and `UXCamSwiftUI` helpers built on `UXCamCore`.
 
 ***

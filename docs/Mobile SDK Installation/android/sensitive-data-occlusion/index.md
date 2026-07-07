@@ -28,6 +28,8 @@ UXCam records screens so you can debug and improve UX—but **it should never re
 
 The SDK lets you **mask or blur** that content **on the device, before the video is encoded**, so nothing sensitive ever leaves the user’s phone.
 
+<OcclusionDemo />
+
 ## Out of The Box Occlusions:
 
 * Android `EditText` with `android:inputType="textPassword"` or\

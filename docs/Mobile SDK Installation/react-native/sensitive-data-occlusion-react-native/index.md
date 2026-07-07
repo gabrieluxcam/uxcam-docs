@@ -19,6 +19,8 @@ next:
 ---
 Good privacy practices are **non-negotiable** — especially under GDPR, CCPA, and app store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 
+<OcclusionDemo />
+
 ***
 
 ## Dashboard-First Rules (Zero Code)
