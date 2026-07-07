@@ -1,10 +1,10 @@
 ---
 title: Screen Tagging
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in Cordova
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam Cordova SDK'
   description: >-
     The document explains the importance of manual screen tagging in Cordova for
     precise analytics, providing a simple method to tag screens using a line of
@@ -13,7 +13,7 @@ metadata:
     WebViews and offers a guide for effective tagging.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in Cordova'
 ---
 So you've integrated the SDK and have some sessions going already, good! Now it's time to dig into screens—what they are, how to tag them, and why it matters for understanding user behaviour in your app.
 

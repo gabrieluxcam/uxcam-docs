@@ -1,10 +1,10 @@
 ---
 title: Screen Tagging
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in Xamarin / MAUI
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam Xamarin / MAUI SDK'
   description: >-
     The document provides a guide on screen tagging in Xamarin using the UXCam
     SDK, explaining both automatic and manual tagging methods to track user
@@ -12,7 +12,7 @@ metadata:
     manual tagging offering more customization for precise analytics.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in Xamarin / MAUI'
 ---
 # Screen Tagging for MAUI and Xamarin - A Comprehensive Guide
 

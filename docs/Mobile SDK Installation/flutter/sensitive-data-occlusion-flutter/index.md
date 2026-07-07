@@ -1,10 +1,10 @@
 ---
 title: Sensitive Data Occlusion In Flutter Apps
-excerpt: ''
+excerpt: Hide sensitive data and PII from session recordings in your Flutter app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Sensitive Data Occlusion - UXCam Flutter SDK'
   description: >-
     The document outlines how to use UXCam's features to occlude sensitive data
     in Flutter applications, ensuring privacy compliance by hiding information
@@ -12,7 +12,7 @@ metadata:
     dashboard settings.
   robots: index
 next:
-  description: ''
+  description: 'Hide sensitive data and PII from session recordings in your Flutter app'
 ---
 In this section, we focus on how to handle sensitive data within your Flutter application using UXCam's features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
 

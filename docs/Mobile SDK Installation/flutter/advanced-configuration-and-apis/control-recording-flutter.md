@@ -1,5 +1,5 @@
 ---
-title: Recording Control
+title: Control Recording
 excerpt: Programmatically control UXCam session recording in Flutter apps
 deprecated: false
 hidden: false

@@ -1,10 +1,10 @@
 ---
 title: Nativescript
-excerpt: ''
+excerpt: Install and configure the UXCam NativeScript SDK, from setup to your first recorded session
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'NativeScript SDK Integration Guide - UXCam'
   description: >-
     This document provides a guide for integrating UXCam into a NativeScript
     app, detailing initial setup steps, including adding the UXCam plugin,
@@ -12,7 +12,7 @@ metadata:
     and enhance user experience insights.
   robots: index
 next:
-  description: ''
+  description: 'Install and configure the UXCam NativeScript SDK, from setup to your first recorded session'
 ---
 So you've got your account set up, now let’s make sure your NativeScript app is equipped with the insights that UXCam can provide. This guide will take you through the first steps of integrating UXCam, sending your first session, and setting up key features. Our goal? A successful integration that sets you up for product-led growth, better usability insights, and happier users.
 

@@ -1,10 +1,10 @@
 ---
 title: Sensitive Data Occlusion In Xamarin / MAUI Apps
-excerpt: ''
+excerpt: Hide sensitive data and PII from session recordings in your Xamarin / MAUI app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Sensitive Data Occlusion - UXCam Xamarin / MAUI SDK'
   description: >-
     The document outlines how to use UXCam's features to handle sensitive data
     in Xamarin applications, emphasizing the importance of occluding Personally
@@ -12,7 +12,7 @@ metadata:
     guidance on setting up occlusions via the UXCam dashboard or SDK code.
   robots: index
 next:
-  description: ''
+  description: 'Hide sensitive data and PII from session recordings in your Xamarin / MAUI app'
 ---
 In this section, we focus on how to handle sensitive data within your Xamarin application using UXCam’s features to ensure privacy compliance. It is essential to occlude sensitive information to protect user data like passwords, credit card numbers, or any other Personally Identifiable Information (PII).
 

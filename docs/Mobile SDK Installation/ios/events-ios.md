@@ -1,10 +1,10 @@
 ---
 title: Custom Events and Properties
-excerpt: ''
+excerpt: Track custom events and attach properties to analyze user actions in your iOS app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Custom Events - UXCam iOS SDK'
   description: >-
     Events are essential for tracking user interactions in your app, providing
     insights for data-driven decisions to enhance user experience, and can be
@@ -12,7 +12,7 @@ metadata:
     consistently and tested thoroughly.
   robots: index
 next:
-  description: ''
+  description: 'Track custom events and attach properties to analyze user actions in your iOS app'
 ---
 > 📘 **Automatic events already captured**
 >

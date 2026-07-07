@@ -1,11 +1,11 @@
 ---
 title: Xamarin - MAUI
-excerpt: ''
+excerpt: Install and configure the UXCam Xamarin / MAUI SDK, from setup to your first recorded session
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Xamarin / MAUI SDK Integration Guide - UXCam'
+  description: 'Install and configure the UXCam Xamarin / MAUI SDK, from setup to your first recorded session'
   robots: index
 next:
   description: ''

@@ -1,11 +1,11 @@
 ---
 title: Jetpack Compose Occlusion
-excerpt: ''
+excerpt: Occlude sensitive Jetpack Compose composables from session recordings
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Jetpack Compose Occlusion - UXCam Android SDK'
+  description: 'Occlude sensitive Jetpack Compose composables from session recordings'
   robots: index
 next:
   description: ''

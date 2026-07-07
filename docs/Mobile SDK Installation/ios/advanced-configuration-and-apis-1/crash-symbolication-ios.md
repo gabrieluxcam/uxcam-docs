@@ -18,7 +18,7 @@ To ensure proper crash reporting with UXCam, you need to upload dSYM files. Foll
 
 ## Step 1: Download the Upload Symbols Executable
 
-1. Download the "uxcam-upload-symbols" executable from **[this link](http://uxcam.com/mobile/uxcam-upload-dsym.sh)**.
+1. Download the "uxcam-upload-symbols" executable from **[this link](https://uxcam.com/mobile/uxcam-upload-dsym.sh)**.
 2. Place the executable in your app's root folder.
 
 ## Step 2: Set Up dSYM File Generation in Xcode

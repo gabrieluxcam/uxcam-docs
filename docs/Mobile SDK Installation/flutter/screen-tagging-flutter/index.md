@@ -1,10 +1,10 @@
 ---
 title: Screen Tagging
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in Flutter
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam Flutter SDK'
   description: >-
     The document provides guidance on manually and automatically tagging screens in a Flutter app
     for accurate analytics, emphasizing the importance of disabling automatic
@@ -14,7 +14,7 @@ metadata:
     consistent naming to enhance data analysis.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in Flutter'
 ---
 
 

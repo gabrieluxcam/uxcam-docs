@@ -55,7 +55,7 @@ next:
 
 > 🚧 Note for SwiftUI developers:
 >
-> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios#/).
+> If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios).
 
 <br />
 
@@ -230,13 +230,13 @@ Run the app on a simulator or device, navigate a few screens, then send it to th
 You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
 
 <Cards columns={4}>
-  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging-ios#/" icon="fa-mobile">
+  <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging-ios" icon="fa-mobile">
     Take full advantage of heatmaps and screen analytics.
 
     > Review Automatic or Manual Tagging
   </Card>
 
-  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion-ios#/" icon="fa-credit-card">
+  <Card title="Mask PII Data" href="https://developer.uxcam.com/docs/sensitive-data-occlusion-ios" icon="fa-credit-card">
     Protect your users’ privacy by masking sensitive data.
 
     > Mask or Blur Screens, Views and Fields

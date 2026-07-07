@@ -1,10 +1,10 @@
 ---
-title: Custom Users and Properties
-excerpt: ''
+title: Custom User Properties
+excerpt: Identify users and attach custom properties to sessions in your Cordova app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'User Properties - UXCam Cordova SDK'
   description: >-
     UXCam allows you to identify users with a unique User ID and send up to 100
     custom user properties to gain insights into user behavior, while
@@ -12,7 +12,7 @@ metadata:
     Processing Agreement is signed.
   robots: index
 next:
-  description: ''
+  description: 'Identify users and attach custom properties to sessions in your Cordova app'
 ---
 By default, UXCam generates a random alias name to identify your users based on the Install ID. We also show you other properties about the user such as location, device used, network type, and app version. However, you can send up to 100 additional user properties with our API.
 

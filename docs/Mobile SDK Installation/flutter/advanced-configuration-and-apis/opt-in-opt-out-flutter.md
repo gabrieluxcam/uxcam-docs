@@ -1,5 +1,5 @@
 ---
-title: User Consent Management
+title: Opt-in / Opt-out
 excerpt: Implement GDPR/CCPA compliant opt-in/opt-out flows in Flutter
 deprecated: false
 hidden: false

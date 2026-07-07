@@ -1,10 +1,10 @@
 ---
 title: Mask PII & Sensitive Content
-excerpt: ''
+excerpt: Hide sensitive data and PII from session recordings in your iOS app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Sensitive Data Occlusion - UXCam iOS SDK'
   description: >-
     The document outlines how to handle sensitive data in iOS applications using
     UXCam's features to ensure privacy compliance, emphasizing the occlusion of

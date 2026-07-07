@@ -1,10 +1,10 @@
 ---
 title: Custom Events and Properties
-excerpt: ''
+excerpt: Track custom events and attach properties to analyze user actions in your Flutter app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Custom Events - UXCam Flutter SDK'
   description: >-
     The document explains how to track user interactions in an application using
     events and properties, providing methods for logging these events in code,
@@ -12,7 +12,7 @@ metadata:
     for effective analytics.
   robots: index
 next:
-  description: ''
+  description: 'Track custom events and attach properties to analyze user actions in your Flutter app'
 ---
 
 # Event Tracking with UXCam

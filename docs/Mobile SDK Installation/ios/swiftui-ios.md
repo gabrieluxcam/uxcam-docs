@@ -1,11 +1,11 @@
 ---
 title: SwiftUI UXCam package
-excerpt: ''
+excerpt: Set up the dedicated UXCam SwiftUI SDK and start recording sessions
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'SwiftUI SDK Setup - UXCam iOS'
+  description: 'Set up the dedicated UXCam SwiftUI SDK and start recording sessions'
   robots: index
 next:
   description: ''

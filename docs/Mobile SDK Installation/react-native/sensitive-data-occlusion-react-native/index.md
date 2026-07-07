@@ -1,10 +1,10 @@
 ---
 title: Mask PII & Sensitive Content
-excerpt: ''
+excerpt: Hide sensitive data and PII from session recordings in your React Native app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Sensitive Data Occlusion - UXCam React Native SDK'
   description: >-
     The document outlines how to handle sensitive data in React Native
     applications using UXCam's features to ensure privacy compliance,
@@ -15,7 +15,7 @@ metadata:
     needed.
   robots: index
 next:
-  description: ''
+  description: 'Hide sensitive data and PII from session recordings in your React Native app'
 ---
 Good privacy practices are **non-negotiable** — especially under GDPR, CCPA, and app store policies. UXCam lets you decide **what never gets recorded** at three levels: text fields, views, or entire screens.
 

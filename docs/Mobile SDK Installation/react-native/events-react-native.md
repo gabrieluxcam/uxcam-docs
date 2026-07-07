@@ -1,10 +1,10 @@
 ---
 title: Custom Events and Properties
-excerpt: ''
+excerpt: Track custom events and attach properties to analyze user actions in your React Native app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Custom Events - UXCam React Native SDK'
   description: >-
     The document explains how to track user interactions in an application using
     events, highlighting the importance of consistent naming and relevant
@@ -12,7 +12,7 @@ metadata:
     and testing event logging with UXCam.
   robots: index
 next:
-  description: ''
+  description: 'Track custom events and attach properties to analyze user actions in your React Native app'
 ---
 Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 

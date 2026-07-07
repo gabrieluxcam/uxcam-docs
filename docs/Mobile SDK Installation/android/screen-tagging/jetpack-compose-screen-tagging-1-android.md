@@ -1,11 +1,11 @@
 ---
 title: Jetpack Compose Screen Tagging
-excerpt: ''
+excerpt: Tag Jetpack Compose screens for heatmaps and journey analytics
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Jetpack Compose Screen Tagging - UXCam Android SDK'
+  description: 'Tag Jetpack Compose screens for heatmaps and journey analytics'
   robots: index
 next:
   description: ''

@@ -1,16 +1,16 @@
 ---
 title: Tagging Screens
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in React Native
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam React Native SDK'
   description: >-
     Configure manual screen tagging in React Native to unlock heat-maps, funnels
     and journey analytics.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in React Native'
 ---
 Good screen names turn raw replays into **actionable heat-maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through choosing a tagging approach, implementing it, and verifying that every screen shows up with a meaningful duration.
 

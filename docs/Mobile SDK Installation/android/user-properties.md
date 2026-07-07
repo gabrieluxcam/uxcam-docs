@@ -1,11 +1,11 @@
 ---
-title: Set User Identity & Properties
-excerpt: ''
+title: Custom User Properties
+excerpt: Identify users and attach custom properties to sessions in your Android app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'User Properties - UXCam Android SDK'
+  description: 'Identify users and attach custom properties to sessions in your Android app'
   robots: index
 next:
   description: ''

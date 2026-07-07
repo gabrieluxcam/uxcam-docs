@@ -1,17 +1,17 @@
 ---
 title: Custom Events and Properties
-excerpt: ''
+excerpt: Track custom events and attach properties to analyze user actions in your Xamarin / MAUI app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Custom Events - UXCam Xamarin / MAUI SDK'
   description: >-
     Events are essential for tracking user interactions in your app, providing
     insights for data-driven decisions to enhance user experience, and can be
     logged with properties for additional context using UXCam's methods.
   robots: index
 next:
-  description: ''
+  description: 'Track custom events and attach properties to analyze user actions in your Xamarin / MAUI app'
 ---
 Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 

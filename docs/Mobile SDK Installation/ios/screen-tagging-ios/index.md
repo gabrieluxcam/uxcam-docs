@@ -1,17 +1,17 @@
 ---
 title: Tagging Screens
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in iOS
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam iOS SDK'
   description: >-
     The document explains how to use UXCam's SDK for automatic and manual screen
     tagging in iOS apps to track user behavior, recommending automatic tagging
     for simplicity and offering manual tagging for more detailed customization.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in iOS'
 ---
 Good screen names turn raw replays into **actionable heat‑maps**, **screen analytics**, **conversion funnels** and **journey charts**. This guide walks you through **reviewing the automatic tags first**, deciding when (and how) to add manual tags, and finally verifying that every screen shows up with a meaningful duration.
 

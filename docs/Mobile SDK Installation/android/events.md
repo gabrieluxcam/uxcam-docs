@@ -1,11 +1,11 @@
 ---
-title: Send Custom Events
-excerpt: ''
+title: Custom Events and Properties
+excerpt: Track custom events and attach properties to analyze user actions in your Android app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
-  description: ''
+  title: 'Custom Events - UXCam Android SDK'
+  description: 'Track custom events and attach properties to analyze user actions in your Android app'
   robots: index
 next:
   description: ''

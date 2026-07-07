@@ -1,10 +1,10 @@
 ---
-title: Custom Users and Properties
-excerpt: ''
+title: Custom User Properties
+excerpt: Identify users and attach custom properties to sessions in your iOS app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'User Properties - UXCam iOS SDK'
   description: >-
     UXCam allows you to identify users with a unique User ID and send up to 100
     additional user properties for deeper insights into user behavior, while
@@ -12,7 +12,7 @@ metadata:
     Processing Agreement is signed.
   robots: index
 next:
-  description: ''
+  description: 'Identify users and attach custom properties to sessions in your iOS app'
 ---
 > 🛡️ **Privacy first**
 >

@@ -1,16 +1,16 @@
 ---
 title: React Native SDK Integration Guide
-excerpt: ''
+excerpt: Install and configure the UXCam React Native SDK, from setup to your first recorded session
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'React Native SDK Integration Guide - UXCam'
   description: >-
     Complete guide to integrating the UXCam React Native SDK for session
     recordings, screen analytics, heat maps, and user journey insights.
   robots: index
 next:
-  description: ''
+  description: 'Install and configure the UXCam React Native SDK, from setup to your first recorded session'
 ---
 # React Native UXCam Integration Guide
 

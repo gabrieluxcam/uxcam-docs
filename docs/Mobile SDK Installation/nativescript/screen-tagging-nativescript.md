@@ -1,10 +1,10 @@
 ---
 title: Screen Tagging
-excerpt: ''
+excerpt: Tag screens automatically or manually to unlock heatmaps and journey analytics in NativeScript
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Screen Tagging - UXCam NativeScript SDK'
   description: >-
     The document explains the importance of manual screen tagging in
     NativeScript for precise analytics, recommending tagging screens in the
@@ -12,7 +12,7 @@ metadata:
     for better understanding of user behavior.
   robots: index
 next:
-  description: ''
+  description: 'Tag screens automatically or manually to unlock heatmaps and journey analytics in NativeScript'
 ---
 So you've integrated the SDK and have some sessions going already, good! Now it's time to dig into screens—what they are, how to tag them, and why it matters for understanding user behavior in your app.
 

@@ -1,10 +1,10 @@
 ---
 title: SwiftUI Automatic Screen Tagging
-excerpt: ''
+excerpt: Automatically capture screen names from SwiftUI navigation titles and tab items
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Automatic SwiftUI Screen Tagging - UXCam iOS SDK'
   description: >-
     The document introduces a new feature in SDK v1.0.7 that enables automatic
     screen tagging for SwiftUI apps by capturing view names using the
@@ -12,7 +12,7 @@ metadata:
     tagging.
   robots: index
 next:
-  description: ''
+  description: 'Automatically capture screen names from SwiftUI navigation titles and tab items'
 ---
 ## Automatic Screen Tagging for SwiftUI
 
@@ -20,7 +20,7 @@ Meaningful screen names unlock heat‑maps, conversion funnels and journey chart
 
 ## How does it work?
 
-In SwiftUI, screens and views are the same, and multiple screens can be presented from one View class. With automatic screen tagging, if the views are using the `navigationTitle` or `tabItem` method on their class, the name is used as the screen name in the UXCam dashboard. This means that even if you haven't used `[uxcamTagScreenName]`([https://developer.uxcam.com/docs/tag-of-screens#tag-screen-name](https://developer.uxcam.com/docs/tag-of-screens#tag-screen-name)), if there is a name in the navigation bar or tab bar, it will be automatically captured as a screen name in the dashboard.
+In SwiftUI, screens and views are the same, and multiple screens can be presented from one View class. With automatic screen tagging, if the views are using the `navigationTitle` or `tabItem` method on their class, the name is used as the screen name in the UXCam dashboard. This means that even if you haven't used [`uxcamTagScreenName`](https://developer.uxcam.com/docs/tag-of-screens#tag-screen-name), if there is a name in the navigation bar or tab bar, it will be automatically captured as a screen name in the dashboard.
 
 ```swift
 // This will auto‑tag "Home" on push

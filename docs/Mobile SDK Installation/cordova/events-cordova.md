@@ -1,10 +1,10 @@
 ---
 title: Custom Events and Properties
-excerpt: ''
+excerpt: Track custom events and attach properties to analyze user actions in your Cordova app
 deprecated: false
 hidden: false
 metadata:
-  title: ''
+  title: 'Custom Events - UXCam Cordova SDK'
   description: >-
     The document explains how to track user interactions in an application using
     events and properties with UXCam, emphasizing consistent naming, relevant
@@ -12,7 +12,7 @@ metadata:
     experience.
   robots: index
 next:
-  description: ''
+  description: 'Track custom events and attach properties to analyze user actions in your Cordova app'
 ---
 Events are powerful tools for tracking user interactions within your application. By sending events, you can gain deeper insights into how users are interacting with your product and make data-driven decisions to improve the user experience.
 
