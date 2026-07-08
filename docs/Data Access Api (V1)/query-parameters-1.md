@@ -8,7 +8,7 @@ metadata:
 <Callout icon="📘" theme="info">
   ### Note
 
-  All parameters travel in the JSON request body, and your API key rides in the `X-Api-Key` header. This page describes every field you can send in the body — operator syntax and the full filter grammar live on [Filter Operators](doc:filter-operators).
+  All parameters travel in the JSON request body, and your API key rides in the `X-Api-Key` header. This page describes every field you can send in the body — operator syntax and the full filter grammar live on [Filter Operators](doc:filter-operators-1).
 </Callout>
 
 Send a JSON body with `Content-Type: application/json`. Unknown or misspelled fields are rejected (the body is validated strictly), so a typo surfaces as a `422` rather than being silently ignored.
@@ -72,7 +72,7 @@ Multiple filters are combined with AND:
 <Callout icon="📘" theme="info">
   ### Note
 
-  Filtering by an attribute the endpoint doesn't recognise fails closed with `400` — you learn the filter was invalid instead of quietly getting unfiltered results. See each endpoint page for its supported attributes and [Filter Operators](doc:filter-operators) for operator syntax.
+  Filtering by an attribute the endpoint doesn't recognise fails closed with `400` — you learn the filter was invalid instead of quietly getting unfiltered results. See each endpoint page for its supported attributes and [Filter Operators](doc:filter-operators-1) for operator syntax.
 </Callout>
 
 ### Date range
@@ -108,7 +108,7 @@ Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20
 
 ## Analytics-only fields
 
-The `/analytics` endpoints accept three additional fields. Full syntax is on [Filter Operators](doc:filter-operators).
+The `/analytics` endpoints accept three additional fields. Full syntax is on [Filter Operators](doc:filter-operators-1).
 
 | Field         | Type    | Description                                                                                                                        |
 | ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
