@@ -111,7 +111,7 @@ Response data organises into keys: session properties under `property`, device i
     {
       "sessionId": "60f7dd4efd9c2f001169bb96",
       "sessionNumber": 20,
-      "url": "https://app.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
+      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
       "video": null,
       "user": {
         "kUXCam_UserIdentity": "U#5066",
@@ -215,7 +215,7 @@ The analytics endpoint returns aggregated session data grouped by the specified 
       "avg_session_responsive_gesture_count": 18.5662,
       "avg_session_unresponsive_gesture_count": 4.2130,
       "avg_session_unique_screen_count": 5.6582,
-      "dashboard_link": "https://app.uxcam.com/app/YOUR_APP_ID/sessions"
+      "dashboard_link": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions"
     }
   ],
   "pagination": { "current": 1, "next": 2, "total": 87 }
