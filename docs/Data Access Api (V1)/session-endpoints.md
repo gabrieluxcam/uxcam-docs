@@ -62,19 +62,19 @@ The following table outlines all valid attributes for performing aggregations, f
 
 These additional attributes are available for web sessions.
 
-| Attribute Category | Data Type | Attribute Name              | Description                                       |
-| ------------------ | --------- | --------------------------- | ------------------------------------------------- |
-| User               | JSON      | `user_first_utm`            | The UTM of the user's first session               |
-| User               | String    | `user_first_referer`        | The referrer URL of the user's first session      |
-| User               | String    | `user_first_screen_name`    | First page the user landed on                     |
-| User               | String    | `user_first_referer_domain` | The referring domain of the user's first session  |
-| Session            | String    | `browser_name`              | User's browser name in a session                  |
-| Session            | String    | `browser_version`           | User's browser version in a session               |
-| Session            | String    | `referer`                   | URL that referred the user to the current session |
-| Session            | String    | `referer_domain`            | Domain of the referrer URL in a session           |
-| Session            | JSON      | `utm`                       | UTM parameters of the session's landing page      |
-| Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   |
-| Session            | String    | `device_type`               | Device type from which sessions are recorded      |
+| Attribute Category | Data Type | Attribute Name              | Description                                       | Usable as      |
+| ------------------ | --------- | --------------------------- | ------------------------------------------------- | -------------- |
+| User               | JSON      | `user_first_utm`            | The UTM of the user's first session               | Filter         |
+| User               | String    | `user_first_referer`        | The referrer URL of the user's first session      | Filter         |
+| User               | String    | `user_first_screen_name`    | First page the user landed on                     | Filter         |
+| User               | String    | `user_first_referer_domain` | The referring domain of the user's first session  | Filter         |
+| Session            | String    | `browser_name`              | User's browser name in a session                  | Filter · Group |
+| Session            | String    | `browser_version`           | User's browser version in a session               | Filter · Group |
+| Session            | String    | `referer`                   | URL that referred the user to the current session | Filter         |
+| Session            | String    | `referer_domain`            | Domain of the referrer URL in a session           | Filter         |
+| Session            | JSON      | `utm`                       | UTM parameters of the session's landing page      | Filter         |
+| Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   | Filter · Group |
+| Session            | String    | `device_type`               | Device type from which sessions are recorded      | Filter · Group |
 
 > This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the upload time-buckets (`session_uploaded_month`, `session_uploaded_week`, `session_uploadedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
 
