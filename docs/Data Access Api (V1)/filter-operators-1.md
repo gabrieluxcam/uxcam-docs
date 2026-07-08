@@ -109,8 +109,6 @@ Each endpoint page lists its valid group-by attributes.
 | `count` (or `""`) | Row / entity count |
 | `sum`             | Summation          |
 | `avg`             | Average            |
-| `min`             | Minimum            |
-| `max`             | Maximum            |
 
 ```json
 "aggregation": [
