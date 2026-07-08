@@ -15,7 +15,7 @@ A **user** is an individual who engages with your app, identified by a stable UX
 
 ## User Data Attributes
 
-Users support the **same filter attributes as [Sessions](doc:sessions-1)** — device, location, app / SDK, session properties, time buckets, custom properties, and the web-only attributes — matched against each user's sessions (device, location, and app attributes match the user's latest snapshot). In addition, the Users endpoint provides two user-specific date attributes:
+Users support the **same filter attributes as [Sessions](doc:session-endpoints)** — device, location, app / SDK, session properties, time buckets, custom properties, and the web-only attributes — matched against each user's sessions (device, location, and app attributes match the user's latest snapshot). In addition, the Users endpoint provides two user-specific date attributes:
 
 | Data Type | Attribute Name       | Description                                                    |
 | --------- | -------------------- | -------------------------------------------------------------- |
@@ -69,7 +69,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/user \
     {
       "uxcamUserId": "60f7dd46972a633e88696d6b",
       "userId": "U#5066",
-      "url": "https://app.uxcam.com/app/YOUR_APP_ID/users/60f7dd46972a633e88696d6b",
+      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/users/60f7dd46972a633e88696d6b",
       "property": {
         "userProperty": { "gender": "male", "age_group": "10-19", "loyalty_card": "no" }
       },
@@ -126,7 +126,7 @@ Returns aggregated per-user numbers, commonly grouped by `device_platform`. Omit
 | `user_session_count`, `user_session_duration`                              | `avg`     |
 | `user_rage_gesture_count`, `user_event_count`, `user_session_screen_count` | `avg`     |
 
-**Group-by dimensions** — the same set as [Sessions analytics](doc:sessions-1): Device, App / SDK, Location, Browser, and Time-bucket dimensions.
+**Group-by dimensions** — the same set as [Sessions analytics](doc:session-endpoints): Device, App / SDK, Location, Browser, and Time-bucket dimensions.
 
 ### Request
 
@@ -152,7 +152,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/user/analytics \
       "avg_user_rage_gesture_count": 0.19,
       "avg_user_event_count": 2.7,
       "avg_user_session_screen_count": 6.1,
-      "dashboard_link": "https://app.uxcam.com/app/YOUR_APP_ID/sessions"
+      "dashboard_link": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions"
     }
   ],
   "pagination": { "current": 1, "next": null, "total": 3 }
