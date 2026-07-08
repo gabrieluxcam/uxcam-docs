@@ -1,5 +1,5 @@
 ---
-title: Session Endpoints
+title: Session
 deprecated: false
 hidden: true
 metadata:
