@@ -8,18 +8,18 @@ metadata:
 The UXCam **Data Access API** is built on REST principles with predictable, resource-oriented URLs. Every endpoint is a `POST` that accepts a JSON request body, returns JSON, and uses standard HTTP status codes. Authentication is handled with a single header, so no credentials ever appear in a URL.
 
 ### Go ahead and try out our REST APIs with credentials on Postman)
-<br />
+
 Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman collection — every endpoint with example requests, ready to send. Import it, set three collection variables, and go.
 
-{/* TODO(postman): replace the two PLACEHOLDER URLs below with the "Run in Postman" button URL and the public documenter URL from Postman → Share, once the collection is published to the UXCam Postman workspace. */}
+📚 Full collection reference
 
 
-[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://POSTMAN-RUN-URL-PLACEHOLDER)
+[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://web.postman.co/workspace/Data-team-Workspace~190f3460-e8d8-4b0b-9481-5e05c8a61015/collection/29342606-5fd51710-adda-4ab2-8073-f562f4930022?action=share&source=copy-link&creator=29342606)
 
 
-📚 Full collection reference: [https://POSTMAN-DOCUMENTER-URL-PLACEHOLDER](https://POSTMAN-DOCUMENTER-URL-PLACEHOLDER)
+<br />
 
-After importing, set these collection variables:
+### After importing, set these collection variables:
 
 | Variable   | Value                    |
 | ---------- | ------------------------ |
