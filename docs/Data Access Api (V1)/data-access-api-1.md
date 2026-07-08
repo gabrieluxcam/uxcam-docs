@@ -13,9 +13,7 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 
 📚 Full collection reference
 
-
-[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://web.postman.co/workspace/Data-team-Workspace~190f3460-e8d8-4b0b-9481-5e05c8a61015/collection/29342606-5fd51710-adda-4ab2-8073-f562f4930022?action=share&source=copy-link&creator=29342606)
-
+[!![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/29342606/2sBY4JxP93)
 
 <br />
 
