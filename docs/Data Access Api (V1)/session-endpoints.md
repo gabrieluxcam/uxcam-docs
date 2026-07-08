@@ -91,7 +91,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `cursor` — opaque cursor for the next page; omit for the first page.
 - `with_video` — set `true` for a time-limited signed replay link per session.
 
-Full field reference: [Query Parameters](doc:query-parameters).
+Full field reference: [Query Parameters](doc:query-parameters-1).
 
 ```curl
 curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
@@ -165,7 +165,7 @@ This endpoint furnishes aggregated numerical data useful for statistical visuali
 
 ### Request Parameters
 
-Send a JSON body with any of `filters`, `group_by`, `aggregation`, `comparison`, and pagination (`page`, `page_size`); the API key rides in the `X-Api-Key` header. See [Filter Operators](doc:filter-operators) for the full `group_by`, `aggregation`, and `comparison` syntax.
+Send a JSON body with any of `filters`, `group_by`, `aggregation`, `comparison`, and pagination (`page`, `page_size`); the API key rides in the `X-Api-Key` header. See [Filter Operators](doc:filter-operators-1) for the full `group_by`, `aggregation`, and `comparison` syntax.
 
 **Default metrics** — returned when `aggregation` is omitted:
 
