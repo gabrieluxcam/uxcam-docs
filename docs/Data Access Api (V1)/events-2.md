@@ -30,7 +30,7 @@ The event list has a focused, fail-closed filter surface — a date window plus 
 | `device_platform`                                                                            | `equal`        | `1` = Android, `2` = iOS, `3` = Web                |
 | `has_video`                                                                                  | `equal`        | Boolean                                            |
 | `event_custom_property`                                                                      | `equal`        | With `property_name` + value (one property filter) |
-| `date_range`                                                                                 | date operators | See [Filter Operators](doc:filter-operators)       |
+| `date_range`                                                                                 | date operators | See [Filter Operators](doc:filter-operators-1)       |
 
 ## Sections
 
@@ -76,7 +76,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
       "eventScreen": "CheckOutRoute",
       "eventDate": "2026-06-28T14:12:07Z",
       "eventPropertyTime": 3.42,
-      "url": "https://app.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
+      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
       "sessionProperty": {
         "sessionId": "60f7dd4efd9c2f001169bb96", "hasVideo": true, "isCrashed": false,
         "durationSec": 55.009, "totalGesture": 26, "totalScreen": 17,
@@ -144,10 +144,10 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event/analytics \
   "data": [
     { "event_name": "rageTap", "event_count": 5900000,
       "event_unique_user_count": 210334, "event_unique_session_count": 480221,
-      "dashboard_link": "https://app.uxcam.com/app/YOUR_APP_ID/sessions" },
+      "dashboard_link": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions" },
     { "event_name": "purchased", "event_count": 463000,
       "event_unique_user_count": 51002, "event_unique_session_count": 88771,
-      "dashboard_link": "https://app.uxcam.com/app/YOUR_APP_ID/sessions" }
+      "dashboard_link": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions" }
   ],
   "pagination": { "current": 1, "next": null, "total": 32 }
 }
