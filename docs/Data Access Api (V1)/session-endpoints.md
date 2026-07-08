@@ -23,40 +23,40 @@ UXCam offers two endpoints for retrieving session data:
 
 The following table outlines all valid attributes for performing aggregations, filtering, and grouping operations, organised by data type.
 
-| Attribute Category | Data Type       | Attribute Name                       | Description                                                   |
-| ------------------ | --------------- | ------------------------------------ | ------------------------------------------------------------- |
-| DateTime           | DateTime        | `date_range`                         | DateTime when the user used the app and sessions are uploaded |
-| Device             | String          | `app_version`                        | Device app version recorded within a given session            |
-| Device             | String          | `device_class`                       | Class based on device size (height and width)                 |
-| Device             | String          | `device_id`                          | Randomly generated unique device identifier                   |
-| Device             | String          | `device_manufacturer`                | Device manufacturer (e.g. Samsung, Motorola)                  |
-| Device             | String          | `device_model`                       | Device name                                                   |
-| Device             | String          | `device_os_version`                  | Operating system version                                      |
-| Device             | String          | `device_platform`                    | Platform: 1 = Android, 2 = iOS, 3 = Web                       |
-| Session Property   | String          | `event_name`                         | List of events that occurred during the session               |
-| Session Property   | String          | `sdk_version`                        | UXCam SDK version on device                                   |
-| Session Property   | Bool String     | `session_crashed`                    | Show only sessions that crashed / did not crash               |
-| Session Property   | Integer         | `session_duration`                   | Total session length in seconds                               |
-| Session Property   | Integer         | `session_gesture_count`              | Total gestures in an individual session                       |
-| Session Property   | Bool String     | `session_has_video`                  | Video availability indicator                                  |
-| Session Property   | Count           | `session_new_users_count`            | Total number of new users                                     |
-| Session Property   | Integer         | `session_number_of_user`             | Count of sessions for the particular user                     |
-| Session Property   | Integer         | `session_rage_gesture_count`         | Total rage gestures in the session                            |
-| Session Property   | Integer         | `session_responsive_gesture_count`   | Total responsive gestures in the session                      |
-| Session Property   | Integer         | `session_screen_count`               | Total screens visited in the session                          |
-| Session Property   | list            | `session_screen_list`                | List of screens visited during the session                    |
-| Session Property   | Integer         | `session_unique_screen_count`        | Total unique screens visited in the session                   |
-| Session Property   | Count           | `session_unique_user_count`          | Total users                                                   |
-| Session Property   | Integer         | `session_unresponsive_gesture_count` | Total unresponsive gestures in the session                    |
-| Session Property   | DateTime String | `session_uploaded_month`             | Distribution of sessions by month                             |
-| Session Property   | DateTime String | `session_uploaded_week`              | Distribution of sessions by week (Mon–Sun)                    |
-| Session Property   | DateTime String | `session_uploadedon_day`             | Distribution of sessions by day                               |
-| Session Property   | String          | `session_id`                         | UXCam Session ID                                              |
-| User               | String          | `device_city`                        | City name based on device IP address                          |
-| User               | String          | `device_country`                     | Country name based on device IP address                       |
-| User               | String          | `uxcamuserid`                        | UXCam User ID                                                 |
-| User               | String          | `user_name`                          | Randomly assigned alias for the user                          |
-| User               | JSON            | `user_custom_property`               | Additional custom properties attached to sessions             |
+| Attribute Category | Data Type       | Attribute Name                       | Description | Usable as            |
+| ------------------ | --------------- | ------------------------------------ | ----------- | -------------------- |
+| DateTime           | DateTime        | `date_range`                         | ...         | Filter (date window) |
+| Device             | String          | `app_version`                        | ...         | Filter · Group       |
+| Device             | String          | `device_class`                       | ...         | Filter · Group       |
+| Device             | String          | `device_id`                          | ...         | Filter               |
+| Device             | String          | `device_manufacturer`                | ...         | Filter · Group       |
+| Device             | String          | `device_model`                       | ...         | Filter · Group       |
+| Device             | String          | `device_os_version`                  | ...         | Filter · Group       |
+| Device             | String          | `device_platform`                    | ...         | Filter · Group       |
+| Session Property   | String          | `event_name`                         | ...         | Filter               |
+| Session Property   | String          | `sdk_version`                        | ...         | Filter · Group       |
+| Session Property   | Bool String     | `session_crashed`                    | ...         | Filter               |
+| Session Property   | Integer         | `session_duration`                   | ...         | Filter · Aggregate   |
+| Session Property   | Integer         | `session_gesture_count`              | ...         | Filter · Aggregate   |
+| Session Property   | Bool String     | `session_has_video`                  | ...         | Filter               |
+| Session Property   | Count           | `session_new_users_count`            | ...         | **Aggregate only**   |
+| Session Property   | Integer         | `session_number_of_user`             | ...         | Filter               |
+| Session Property   | Integer         | `session_rage_gesture_count`         | ...         | Filter · Aggregate   |
+| Session Property   | Integer         | `session_responsive_gesture_count`   | ...         | Filter · Aggregate   |
+| Session Property   | Integer         | `session_screen_count`               | ...         | Filter · Aggregate   |
+| Session Property   | list            | `session_screen_list`                | ...         | Filter               |
+| Session Property   | Integer         | `session_unique_screen_count`        | ...         | Filter · Aggregate   |
+| Session Property   | Count           | `session_unique_user_count`          | ...         | **Aggregate only**   |
+| Session Property   | Integer         | `session_unresponsive_gesture_count` | ...         | Filter · Aggregate   |
+| Session Property   | DateTime String | `session_uploaded_month`             | ...         | **Group only**       |
+| Session Property   | DateTime String | `session_uploaded_week`              | ...         | **Group only**       |
+| Session Property   | DateTime String | `session_uploadedon_day`             | ...         | **Group only**       |
+| Session Property   | String          | `session_id`                         | ...         | Filter               |
+| User               | String          | `device_city`                        | ...         | Filter · Group       |
+| User               | String          | `device_country`                     | ...         | Filter · Group       |
+| User               | String          | `uxcamuserid`                        | ...         | Filter               |
+| User               | String          | `user_name`                          | ...         | Filter               |
+| User               | JSON            | `user_custom_property`               | ...         | Filter               |
 
 ### Web-only Attributes
 
@@ -75,6 +75,8 @@ These additional attributes are available for web sessions.
 | Session            | JSON      | `utm`                       | UTM parameters of the session's landing page      |
 | Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   |
 | Session            | String    | `device_type`               | Device type from which sessions are recorded      |
+
+> This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the upload time-buckets (`session_uploaded_month`, `session_uploaded_week`, `session_uploadedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
 
 ## List Sessions
 
