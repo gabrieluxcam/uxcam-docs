@@ -14,6 +14,13 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.8.4 - July 8, 2026
+
+* Improved session handling and upload strategy.
+* Improved occlusion delay and orientation handling.
+* Optmized session lifecycle orchestration.
+
+
 ### V. 3.8.3 - June 9, 2026
 
 * Fixed occlusion misplacement and removal while scrolling, transition and opening custom alerts.
