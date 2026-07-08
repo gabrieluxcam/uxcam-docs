@@ -1,0 +1,156 @@
+---
+title: Data Access API
+deprecated: false
+hidden: true
+metadata:
+  robots: index
+---
+The UXCam **Data Access API** is built on REST principles with predictable, resource-oriented URLs. Every endpoint is a `POST` that accepts a JSON request body, returns JSON, and uses standard HTTP status codes. Authentication is handled with a single header, so no credentials ever appear in a URL.
+
+### Go ahead and try out our REST APIs with credentials on Postman)
+<br />
+Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman collection — every endpoint with example requests, ready to send. Import it, set three collection variables, and go.
+
+{/* TODO(postman): replace the two PLACEHOLDER URLs below with the "Run in Postman" button URL and the public documenter URL from Postman → Share, once the collection is published to the UXCam Postman workspace. */}
+
+
+[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://POSTMAN-RUN-URL-PLACEHOLDER)
+
+
+📚 Full collection reference: [https://POSTMAN-DOCUMENTER-URL-PLACEHOLDER](https://POSTMAN-DOCUMENTER-URL-PLACEHOLDER)
+
+After importing, set these collection variables:
+
+| Variable   | Value                    |
+| ---------- | ------------------------ |
+| `base_url` | `https://tara.uxcam.com` |
+| `app_id`   | Your app's `app_id`      |
+| `api_key`  | Your Data Access API key |
+
+## Base URL
+
+All endpoints share a single base URL:
+
+[https://tara.uxcam.com](https://tara.uxcam.com)
+
+Each resource has a list endpoint and an analytics endpoint. Lists return individual records (qualitative data); analytics endpoints return aggregated, grouped numbers suited to charts and dashboards.
+
+| Resource | List endpoint                      | Analytics endpoint                           |
+| -------- | ---------------------------------- | -------------------------------------------- |
+| Sessions | `POST /api/data-access/v1/session` | `POST /api/data-access/v1/session/analytics` |
+| Users    | `POST /api/data-access/v1/user`    | `POST /api/data-access/v1/user/analytics`    |
+| Events   | `POST /api/data-access/v1/event`   | `POST /api/data-access/v1/event/analytics`   |
+
+## Authentication
+
+Every request needs two things — the application it targets and a secret key that proves you may read that app's data:
+
+| Parameter | Where it goes      | Description                                                                                    |
+| --------- | ------------------ | ---------------------------------------------------------------------------------------------- |
+| `app_id`  | JSON request body  | The application identifier whose data you want to read.                                        |
+| API key   | `X-Api-Key` header | Your Data Access API key. Kept in a header so it never lands in URLs, proxies, or server logs. |
+
+<Callout icon="🚧" theme="warn">
+  ### Important
+
+  The API key is a secret. Send it only in the `X-Api-Key` header, never in the URL or query string. Requests missing either the header or `app_id` are rejected with `401 MISSING_CREDENTIALS`.
+</Callout>
+
+### Get your authentication parameters
+
+1. Log in to your UXCam **Dashboard**.
+2. Open **App Settings** for the app you want to query.
+3. Select the **Data Access API** tab.
+4. Click **Generate API key** (or copy the existing one). Your `app_id` is shown on the same settings screen and in the dashboard URL for the app.
+
+<Callout icon="👍" theme="okay">
+  ### Success
+
+  **You're all set.** With your `app_id` and API key you can make your first request below.
+</Callout>
+
+## Make your first request
+
+List the most recent sessions for your app. The smallest valid body is just `app_id` plus a `page_size`; with no filters, the API returns the last 30 days of data. Omitting `show_only` returns each endpoint's lean **default section set** (`/session`: `property` · `/user`: `usage` · `/event`: `eventProperty` + `sessionProperty`); pass `show_only` to request more — the examples below request all sections. See [Request Parameters](doc:query-parameters) for the full section reference.
+
+```curl
+curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
+  -H "X-Api-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"page_size":50}'
+```
+
+```javascript
+fetch("https://tara.uxcam.com/api/data-access/v1/session", {
+  method: "POST",
+  headers: {
+    "X-Api-Key": "YOUR_API_KEY",
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ app_id: "YOUR_APP_ID", show_only: ["property", "user", "device", "location"], page_size: 50 }),
+});
+```
+
+```python
+import requests
+
+requests.post(
+    "https://tara.uxcam.com/api/data-access/v1/session",
+    headers={"X-Api-Key": "YOUR_API_KEY"},
+    json={"app_id": "YOUR_APP_ID", "show_only": ["property", "user", "device", "location"], "page_size": 50},
+)
+```
+
+## Response envelope
+
+Every successful response uses the same top-level shape:
+
+```json
+{
+  "success": true,
+  "data": [ /* records or grouped rows */ ],
+  "pagination": { /* see below */ }
+}
+```
+
+### Pagination
+
+**List endpoints** (`/session`, `/user`, `/event`) use _cursor_ pagination: read `pagination.next_cursor` from a response and pass it back as `cursor` in the next request to fetch the following page. When `has_more` is `false` (`next_cursor` is `null`), you've reached the end. `current_page`/`next_page` count where you are in the walk — they're informational only; you can't jump to a page number, the cursor is the only way forward.
+
+```json
+"pagination": {
+  "page_size": 50,
+  "current_page": 1,
+  "next_page": 2,
+  "has_more": true,
+  "next_cursor": "eyJjIjoiZXlKeVpXTnZjbVJsWkc5dUlqb2lNakF5Tmkwd05pMHlPRlF4TkRveE1qb3dOMW9pTEEi…"
+}
+```
+
+**Analytics endpoints** return a bounded set of grouped rows and use simple offset pagination instead:
+
+```json
+"pagination": {
+  "current": 1,
+  "next": 2,
+  "total": 87
+}
+```
+
+<Callout icon="📘" theme="info">
+  ### Opaque cursor
+
+  Treat `next_cursor` as an **opaque** token — pass it back exactly as received. Do not parse or construct it yourself; a malformed cursor returns `400 INVALID_REQUEST`.
+</Callout>
+
+## Rate limits
+
+Limits are enforced per `app_id`:
+
+- Up to **5 requests per second**
+- Up to **500 requests per hour**
+- At most **2000 records per request** (`page_size` cap)
+
+Every response returns `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; exceeding a limit returns `429` with code `RATE_LIMITED` and a `Retry-After` header. See [Error Handling & Messages](doc:error-handling-and-messages) for details.
+
+<br />
