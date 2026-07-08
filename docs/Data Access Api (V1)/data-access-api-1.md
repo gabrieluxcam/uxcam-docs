@@ -71,7 +71,7 @@ Every request needs two things — the application it targets and a secret key t
 
 ## Make your first request
 
-List the most recent sessions for your app. The smallest valid body is just `app_id` plus a `page_size`; with no filters, the API returns the last 30 days of data. Omitting `show_only` returns each endpoint's lean **default section set** (`/session`: `property` · `/user`: `usage` · `/event`: `eventProperty` + `sessionProperty`); pass `show_only` to request more — the examples below request all sections. See [Request Parameters](doc:query-parameters) for the full section reference.
+List the most recent sessions for your app. The smallest valid body is just `app_id` plus a `page_size`; with no filters, the API returns the last 30 days of data. Omitting `show_only` returns each endpoint's lean **default section set** (`/session`: `property` · `/user`: `usage` · `/event`: `eventProperty` + `sessionProperty`); pass `show_only` to request more — the examples below request all sections. See [Query Parameters](doc:query-parameters-1) for the full section reference.
 
 ```curl
 curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
@@ -151,6 +151,6 @@ Limits are enforced per `app_id`:
 - Up to **500 requests per hour**
 - At most **2000 records per request** (`page_size` cap)
 
-Every response returns `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; exceeding a limit returns `429` with code `RATE_LIMITED` and a `Retry-After` header. See [Error Handling & Messages](doc:error-handling-and-messages) for details.
+Every response returns `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; exceeding a limit returns `429` with code `RATE_LIMITED` and a `Retry-After` header. See [Error Handling & Messages](doc:error-handling-and-messages-1) for details.
 
 <br />
