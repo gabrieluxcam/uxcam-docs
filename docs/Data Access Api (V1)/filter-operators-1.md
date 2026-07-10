@@ -56,6 +56,9 @@ Date filters use the `date_range` attribute and scope the whole query window. **
   "value": { "lower": "2026-06-01", "upper": "2026-06-30" } }
 ```
 
+📘 Which timestamp the window uses
+List endpoints (/session, /user, /event) scope the window by upload time — when the device delivered the data. Analytics endpoints (/…/analytics) scope by record time — when the activity happened on the device. Because a session can be recorded and uploaded on different days (offline usage, delayed sync), the same date\_range bounds can return slightly different counts on a list vs. its analytics counterpart. This is expected.
+
 ## Custom-property filters (JSON attributes)
 
 Custom user and event properties are keyed maps. Filter them with the `user_custom_property` / `event_custom_property` attribute plus a `property_name`:
