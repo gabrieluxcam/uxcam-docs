@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.10.6 - July 10, 2026
+
+* Fix (recording): Capture content from native platform views such as maps, video players, and camera previews that previously appeared blank or grey in session recordings
+* Fix (occlusion): Remove the automatic occlusion limit so all sensitive views are detected and masked regardless of how many appear on screen
+* Fix (recording): Capture gestures correctly on screens that opt out of automatic tagging in single-activity apps
+* Fix (stability): Write session data incrementally and recover sessions after a crash, reducing the chance of incomplete or missing sessions
+* Fix (upload): Harden upload retry logic with preflight size checks and retry limits to improve session delivery reliability
+* Fix (recording): Prevent previous screen content from appearing in recordings when a screen video fails to load
 ### V. 3.10.5 - June 19, 2026
 
 * Enhance (occlusion): Add occlusion timeline intervals for more accurate privacy coverage tracking
