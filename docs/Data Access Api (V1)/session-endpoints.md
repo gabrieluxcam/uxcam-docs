@@ -104,7 +104,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
 
 ### Response Structure
 
-Response data organises into keys: session properties under `property`, device information under `device`, user properties under `user`, and location data under `location`. When `with_video` is set, `video` holds a time-limited signed replay link; otherwise it is `null`. The lookup is best-effort — if a replay link can't be produced for a session, that row's `video` is `null` and the request still succeeds.
+When with_video is set, sessions with a playable recording carry a video key holding a time-limited signed replay link — this covers archived replays too (a recording moved to archive storage after the retention period still gets a working link). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
 
 ```json
 {
@@ -114,7 +114,7 @@ Response data organises into keys: session properties under `property`, device i
       "sessionId": "60f7dd4efd9c2f001169bb96",
       "sessionNumber": 20,
       "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
-      "video": null,
+      "video": "https://sp.uxcam.com/replay/60f7dd4efd9c2f001169bb96?signature=…",
       "user": {
         "kUXCam_UserIdentity": "U#5066",
         "gender": "male",
@@ -130,7 +130,6 @@ Response data organises into keys: session properties under `property`, device i
         "totalScreen": 17,
         "uniqueScreensCount": 5,
         "rageGestureCount": 0,
-        "hasVideo": true,
         "uniqueScreens": ["HomeRoute", "ProductListRoute", "CheckOutRoute"],
         "offlineRecorded": false,
         "isCrashed": false,
