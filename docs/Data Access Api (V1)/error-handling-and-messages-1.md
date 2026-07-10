@@ -55,7 +55,7 @@ When a limit is exceeded the API returns `429 RATE_LIMITED`. The per-second wind
 
 ### Rate-limit headers
 
-Every response advertises your current hourly budget so you can pace requests _before_ hitting a limit:
+Authenticated responses advertise your current hourly budget so you can pace requests _before_ hitting a limit. They appear on a successful `200` and on a `429`; a request rejected _before_ authentication (e.g. `401` for missing/invalid credentials, or `415` for the wrong content type) carries no budget headers, because no key has been metered yet:
 
 | Header                  | Meaning                                 |
 | ----------------------- | --------------------------------------- |
