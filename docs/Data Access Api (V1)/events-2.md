@@ -30,18 +30,18 @@ The event list has a focused, fail-closed filter surface — a date window plus 
 | `device_platform`                                                                            | `equal`        | `1` = Android, `2` = iOS, `3` = Web                |
 | `has_video`                                                                                  | `equal`        | Boolean                                            |
 | `event_custom_property`                                                                      | `equal`        | With `property_name` + value (one property filter) |
-| `date_range`                                                                                 | date operators | See [Filter Operators](doc:filter-operators-1)       |
+| `date_range`                                                                                 | date operators | See [Filter Operators](doc:filter-operators-1)     |
 
 ## Sections
 
 An event record groups into four sections. Omitting `show_only` returns the default set `["eventProperty", "sessionProperty"]` (the event's data plus its parent session — including `sessionId`, the join key) — pass `show_only` to request more:
 
-| Section           | Contents                                                                                                                                                 |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sessionProperty` | The parent session: `sessionId`, `durationSec`, `totalScreen`, `uniqueScreensCount`, `networkType`, `sessionNumber`, `isCrashed`, `hasVideo`, `country`. |
-| `userProperty`    | The user's id (`uxcamuserid`, `kUXCam_UserIdentity`) plus custom user properties.                                                                        |
-| `device`          | `model`, `deviceId`, `platform`, `appVersion`, `osVersion`, `producer`, `class`.                                                                         |
-| `eventProperty`   | The custom properties attached to this event.                                                                                                            |
+| Section           | Contents                                                                                                                                     |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sessionProperty` | The parent session: `sessionId`, `durationSec`, `totalScreen`, `uniqueScreensCount`, `networkType`, `sessionNumber`, `isCrashed`, `country`. |
+| `userProperty`    | The user's id (`uxcamuserid`, `kUXCam_UserIdentity`) plus custom user properties.                                                            |
+| `device`          | `model`, `deviceId`, `platform`, `appVersion`, `osVersion`, `producer`, `class`.                                                             |
+| `eventProperty`   | The custom properties attached to this event.                                                                                                |
 
 ## List events
 
@@ -78,7 +78,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
       "eventPropertyTime": 3.42,
       "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
       "sessionProperty": {
-        "sessionId": "60f7dd4efd9c2f001169bb96", "hasVideo": true, "isCrashed": false,
+        "sessionId": "60f7dd4efd9c2f001169bb96", "isCrashed": false,
         "durationSec": 55.009, "totalGesture": 26, "totalScreen": 17,
         "uniqueScreensCount": 5, "networkType": "wifi", "sessionNumber": 20, "country": "USA"
       },
