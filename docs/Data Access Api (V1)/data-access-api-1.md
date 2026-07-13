@@ -143,8 +143,6 @@ Every successful response uses the same top-level shape:
 
 ## Rate limits
 
-## Rate limits
-
 Limits are enforced per `app_id`:
 
 - Up to **5 requests per second**
