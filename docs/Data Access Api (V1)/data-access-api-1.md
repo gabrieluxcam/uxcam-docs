@@ -13,7 +13,7 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 
 📚 Full collection reference
 
-<Anchor target="_blank" href="https://documenter.getpostman.com/view/29342606/2sBY4JxP93">![Run in Postman](https://run.pstmn.io/button.svg)</Anchor>
+<br />
 
 <br />
 
@@ -143,12 +143,14 @@ Every successful response uses the same top-level shape:
 
 ## Rate limits
 
+## Rate limits
+
 Limits are enforced per `app_id`:
 
 - Up to **5 requests per second**
 - Up to **500 requests per hour**
 - At most **2000 records per request** (`page_size` cap)
 
-Every response returns `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; exceeding a limit returns `429` with code `RATE_LIMITED` and a `Retry-After` header. See [Error Handling & Messages](doc:error-handling-and-messages-1) for details.
+Authenticated responses — a successful `200`, and a `429` when a limit is hit — return `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; a `429` also carries a `Retry-After` header and code `RATE_LIMITED`. Requests rejected before authentication (e.g. `401` for a missing/invalid key, `415` for a wrong content type) carry no rate-limit headers, because no key has been metered yet. See [Error Handling & Messages](doc:error-handling-and-messages) for details.
 
 <br />
