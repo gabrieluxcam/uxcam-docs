@@ -86,20 +86,31 @@ Scope the query window with a date filter inside `filters`. When no date filter 
 ]
 ```
 
-## show\_only
+## show_only
 
 Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20;returns the endpoint's default set** — the core data most integrations need, and the fastest response shape. Pass `show_only` with any combination of sections to request more (or different) blocks. Identity fields (ids, names, timestamps, `url`) are always present on every record regardless of `show_only`.
 
-| Endpoint   | Available sections                                           | Default when omitted                   |
-| ---------- | ------------------------------------------------------------ | -------------------------------------- |
-| `/session` | `property`, `user`, `device`, `location`                     | `["property"]`                         |
-| `/user`    | `property`, `usage`, `location`, `device`                    | `["usage"]`                            |
-| `/event`   | `sessionProperty`, `userProperty`, `device`, `eventProperty` | `["eventProperty", "sessionProperty"]` |
+| Endpoint   | Available sections                                                                                                                                                                                   | Default when omitted                   |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| `/session` | `property`, `user`, `location`, and device sub-sections `deviceBasics`, `deviceHardware`, `devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings` (or `device` to request them all) | `["property"]`                         |
+| `/user`    | `property`, `usage`, `location`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                                             | `["usage"]`                            |
+| `/event`   | `sessionProperty`, `userProperty`, `eventProperty`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                          | `["eventProperty", "sessionProperty"]` |
 
 <Callout icon="📘" theme="info">
   ### Note
 
   For full extractions (data-lake sync), list every section explicitly. Requesting fewer sections makes responses significantly smaller and faster — a sessions page with only `property` is roughly a third of the size of a full one.
+</Callout>
+
+<Callout icon="📘" theme="info">
+  ### Device sections
+
+  `device` is a convenience alias — request it to get every device block the
+  endpoint offers. To keep responses lean, request only the sub-sections you need:
+  e.g. `deviceBasics` for OS/app/version info, or add `devicePerformance`
+  (RAM/storage) and `deviceNetwork` (carrier) only when you need them. On `/session`,
+  web records return empty objects for the mobile-only sub-sections
+  (`devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings`).
 </Callout>
 
 ```json
