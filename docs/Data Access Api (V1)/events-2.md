@@ -40,7 +40,8 @@ An event record groups into four sections. Omitting `show_only` returns the defa
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sessionProperty` | The parent session: `sessionId`, `durationSec`, `totalScreen`, `uniqueScreensCount`, `networkType`, `sessionNumber`, `isCrashed`, `country`. |
 | `userProperty`    | The user's id (`uxcamuserid`, `kUXCam_UserIdentity`) plus custom user properties.                                                            |
-| `device`          | `model`, `deviceId`, `platform`, `appVersion`, `osVersion`, `producer`, `class`.                                                             |
+| `deviceBasics`    | `deviceId`, `appVersion`, `osVersion`.                                                                                                       |
+| `deviceHardware`  | `model`, `producer`, `class`, `platform`. Request `device` to get both device sub-sections.                                                  |
 | `eventProperty`   | The custom properties attached to this event.                                                                                                |
 
 ## List events
@@ -54,14 +55,14 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `app_id` — required; the app to read.
 - `filters` — optional; the focused surface above, plus a `date_range` window (omit for the last 30 days).
 - `show_only` — sections to return. Omit for the default `["eventProperty", "sessionProperty"]`; the example below requests all four.
-- `page_size` — records per page, `1`–`2000` (default `50`).
+- `page_size` — records per page, `1`–`2000` (default `500`).
 - `cursor` — opaque cursor for the next page; omit for the first page.
 
 ```curl
 curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["sessionProperty","userProperty","device","eventProperty"],"filters":[{"attribute":"event_name","operator":"in","value":["purchased"]}],"page_size":50}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["sessionProperty","userProperty","device","eventProperty"],"filters":[{"attribute":"event_name","operator":"in","value":["purchased"]}],"page_size":500}'
 ```
 
 ### Response
@@ -86,21 +87,23 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
         "uxcamuserid": "60f7dd46972a633e88696d6b", "kUXCam_UserIdentity": "U#5066",
         "loyalty_card": "no"
       },
-      "device": {
-        "model": "JKM-LX1", "deviceId": "03c1e123941a19ec", "platform": 1,
-        "appVersion": "1.5", "osVersion": "8.1", "producer": "Huawei", "class": "Android Large"
+      "deviceBasics": {
+        "deviceId": "03c1e123941a19ec", "appVersion": "1.5", "osVersion": "8.1"
+      },
+      "deviceHardware": {
+        "model": "JKM-LX1", "producer": "Huawei", "class": "Android Large", "platform": "android"
       },
       "eventProperty": { "plan": "pro", "price_cents": "1499" }
     }
   ],
-  "pagination": { "page_size": 50, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKMWNHeHZZV1JsWkc5dUlqb2lNakF5TmkuLi4i…" }
+  "pagination": { "page_size": 500, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKMWNHeHZZV1JsWkc5dUlqb2lNakF5TmkuLi4i…" }
 }
 ```
 
 <Callout icon="📘" theme="info">
   ### Note
 
-  Event `device.platform` is the raw numeric code (`1`/`2`/`3`). Custom event-property values are returned as strings (e.g. `"1499"`).
+  Event `device.platform` is the label (`"android"` / `"ios"`), consistent with the Sessions and Users endpoints. (The `device_platform` **filter** input still uses the numeric codes `1`/`2`/`3`.) Custom event-property values are returned as strings (e.g. `"1499"`).
 </Callout>
 
 ## Analyze events
