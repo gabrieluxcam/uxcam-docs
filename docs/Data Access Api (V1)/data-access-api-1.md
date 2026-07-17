@@ -13,10 +13,6 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 
 📚 Full collection reference
 
-<br />
-
-<br />
-
 ### After importing, set these collection variables:
 
 | Variable   | Value                    |
@@ -75,7 +71,7 @@ List the most recent sessions for your app. The smallest valid body is just `app
 curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"page_size":50}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"page_size":500}'
 ```
 
 ```javascript
@@ -85,7 +81,7 @@ fetch("https://tara.uxcam.com/api/data-access/v1/session", {
     "X-Api-Key": "YOUR_API_KEY",
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ app_id: "YOUR_APP_ID", show_only: ["property", "user", "device", "location"], page_size: 50 }),
+  body: JSON.stringify({ app_id: "YOUR_APP_ID", show_only: ["property", "user", "device", "location"], page_size: 500 }),
 });
 ```
 
@@ -95,7 +91,7 @@ import requests
 requests.post(
     "https://tara.uxcam.com/api/data-access/v1/session",
     headers={"X-Api-Key": "YOUR_API_KEY"},
-    json={"app_id": "YOUR_APP_ID", "show_only": ["property", "user", "device", "location"], "page_size": 50},
+    json={"app_id": "YOUR_APP_ID", "show_only": ["property", "user", "device", "location"], "page_size": 500},
 )
 ```
 
@@ -117,7 +113,7 @@ Every successful response uses the same top-level shape:
 
 ```json
 "pagination": {
-  "page_size": 50,
+  "page_size": 500,
   "current_page": 1,
   "next_page": 2,
   "has_more": true,
@@ -150,5 +146,19 @@ Limits are enforced per `app_id`:
 - At most **2000 records per request** (`page_size` cap)
 
 Authenticated responses — a successful `200`, and a `429` when a limit is hit — return `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so you can pace requests; a `429` also carries a `Retry-After` header and code `RATE_LIMITED`. Requests rejected before authentication (e.g. `401` for a missing/invalid key, `415` for a wrong content type) carry no rate-limit headers, because no key has been metered yet. See [Error Handling & Messages](doc:error-handling-and-messages) for details.
+
+## Response compression
+
+Large responses are gzip-compressed to save bandwidth. When your request sends
+`Accept-Encoding: gzip` (most HTTP clients do automatically) and the response body
+is **2 MB or larger**, the API returns it gzip-compressed with:
+
+- `Content-Encoding: gzip`
+- `Vary: Accept-Encoding`
+
+Smaller responses are returned uncompressed. Standard clients decompress
+transparently — `curl --compressed`, browsers, Python `requests`, and `fetch`
+all handle it with no code change. Only the Data Access API endpoints compress.
+⚠️ Rate limits section itself is unchanged — the 2000 records per request cap still holds. Do not edit that number.
 
 <br />
