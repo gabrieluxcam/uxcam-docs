@@ -22,7 +22,7 @@ These apply to `/session`, `/user`, and `/event`.
 | `app_id`     | string  | —                        | **Required.** The app to read. The API key rides in the `X-Api-Key` header.                                |
 | `filters`    | array   | `[]`                     | Filter objects `{attribute, operator, value}`. Omit for the default last-30-days window.                   |
 | `show_only`  | array   | per endpoint (see below) | Which response sections to include. Omit for the endpoint's lean **default set**; pass it to request more. |
-| `page_size`  | integer | `50`                     | Records per page, `1`–`2000`.                                                                              |
+| `page_size`  | integer | `500`                    | Records per page, `1`–`2000`.                                                                              |
 | `cursor`     | string  | `null`                   | Opaque cursor for the next page. Omit for the first page.                                                  |
 | `with_video` | boolean | `false`                  | _Sessions only._ Include a signed replay `video` link per session.                                         |
 
@@ -90,11 +90,11 @@ Scope the query window with a date filter inside `filters`. When no date filter 
 
 Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20;returns the endpoint's default set** — the core data most integrations need, and the fastest response shape. Pass `show_only` with any combination of sections to request more (or different) blocks. Identity fields (ids, names, timestamps, `url`) are always present on every record regardless of `show_only`.
 
-| Endpoint   | Available sections                                                                                                                                                                                   | Default when omitted                   |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| `/session` | `property`, `user`, `location`, and device sub-sections `deviceBasics`, `deviceHardware`, `devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings` (or `device` to request them all) | `["property"]`                         |
-| `/user`    | `property`, `usage`, `location`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                                             | `["usage"]`                            |
-| `/event`   | `sessionProperty`, `userProperty`, `eventProperty`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                          | `["eventProperty", "sessionProperty"]` |
+| Endpoint   | Available sections                                                                                                                                                                                      | Default when omitted                   |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| `/session` | `property`, `user`, `location`, and device sub-sections `deviceBasics`, `deviceHardware`, `devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings` (or `device` to request all of them) | `["property"]`                         |
+| `/user`    | `property`, `usage`, `location`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                                                | `["usage"]`                            |
+| `/event`   | `sessionProperty`, `userProperty`, `eventProperty`, `deviceBasics`, `deviceHardware` (or `device` for both)                                                                                             | `["eventProperty", "sessionProperty"]` |
 
 <Callout icon="📘" theme="info">
   ### Note
@@ -103,14 +103,32 @@ Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20
 </Callout>
 
 <Callout icon="📘" theme="info">
-  ### Device sections
+  ### Device sub-sections
 
-  `device` is a convenience alias — request it to get every device block the
-  endpoint offers. To keep responses lean, request only the sub-sections you need:
-  e.g. `deviceBasics` for OS/app/version info, or add `devicePerformance`
-  (RAM/storage) and `deviceNetwork` (carrier) only when you need them. On `/session`,
-  web records return empty objects for the mobile-only sub-sections
-  (`devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings`).
+  The device data is split into purpose-built sub-sections so you can pull only
+  what you need. `device` is a convenience alias that expands to every device
+  sub-section the endpoint supports.
+
+  | Sub-section         | Contents (mobile)                                                                            | Web                                       |
+  | ------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------- |
+  | `deviceBasics`      | `osName`, `osVersion`, `appVersion`, `sdkVersion`, `deviceId`, `type`, `language`, `country` | also `browser`, `browserVersion`          |
+  | `deviceHardware`    | `producer`, `dpi`, `width`, `height`, `model`, `class`, `platform`                           | `producer`, `dpi`, `width`, `height` only |
+  | `devicePerformance` | `totalRamInMB`, `freeRamInMB`, `totalStorageInMB`                                            | empty `{}`                                |
+  | `deviceNetwork`     | `carrierCode`, `carrierName`                                                                 | empty `{}`                                |
+  | `deviceSecurity`    | `isRooted`                                                                                   | empty `{}`                                |
+  | `deviceSettings`    | `isNotificationEnabled`                                                                      | empty `{}`                                |
+
+  `/session` supports all six sub-sections; `/user` and `/event` support
+  `deviceBasics` and `deviceHardware`.
+
+  <Callout icon="📘" theme="info">
+    ### Tip
+
+    Request only the sub-sections you need to keep responses small — e.g.
+    `deviceBasics` for OS/app info, adding `devicePerformance` (RAM/storage) or
+    `deviceNetwork` (carrier) only when required. On `/session`, web records return
+    empty objects `{}` for the mobile-only sub-sections.
+  </Callout>
 </Callout>
 
 ```json
