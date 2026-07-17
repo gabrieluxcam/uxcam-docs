@@ -80,7 +80,7 @@ These additional attributes are available for web sessions.
 
 ## List Sessions
 
-This endpoint delivers qualitative data encompassing device details, user interactions, personalised properties, and location information. Sections are grouped under `property`, `user`, `device`, and `location`.
+This endpoint delivers qualitative data encompassing device details, user interactions, personalised properties, and location information. Sections are grouped under `property`, `user`, `location`, and the device sub-sections (`deviceBasics`, `deviceHardware`, `devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings`) — request `device` to get all of them at once.
 
 ### Request Parameters
 
@@ -89,7 +89,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `app_id` — required; the app to read.
 - `filters` — optional filter objects; omit for the default last-30-days window.
 - `show_only` — sections to return. Omit for the default `["property"]`; the example below requests all four (`property`, `user`, `device`, `location`).
-- `page_size` — records per page, `1`–`2000` (default `50`).
+- `page_size` — records per page, `1`–`2000` (default `500`).
 - `cursor` — opaque cursor for the next page; omit for the first page.
 - `with_video` — set `true` for a time-limited signed replay link per session.
 
@@ -99,7 +99,7 @@ Full field reference: [Query Parameters](doc:query-parameters-1).
 curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":50}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
 ```
 
 ### Response Structure
@@ -135,29 +135,31 @@ When with_video is set, sessions with a playable recording carry a video key hol
         "isCrashed": false,
         "networkType": "wifi"
       },
-      "device": {
-        "osName": "O_MR1", "appVersion": "1.5", "sdkVersion": "3.3.5",
-        "osVersion": "8.1", "language": "English", "country": "USA",
-        "dpi": -1, "height": 2340, "width": 1080, "type": "Phone",
-        "producer": "Huawei", "deviceId": "03c1e123941a19ec",
-        "carrierCode": "42901", "carrierName": "Verizon Wireless",
-        "totalStorageInMB": 11289, "totalRamInMB": 2815, "freeRamInMB": null,
-        "class": "Android Large", "model": "JKM-LX1",
-        "isNotificationEnabled": null, "isRooted": false, "platform": "android"
+      "deviceBasics": {
+        "osName": "O_MR1", "osVersion": "8.1", "appVersion": "1.5", "sdkVersion": "3.3.5",
+        "deviceId": "03c1e123941a19ec", "type": "Phone", "language": "English", "country": "USA"
       },
+      "deviceHardware": {
+        "producer": "Huawei", "dpi": -1, "width": 1080, "height": 2340,
+        "model": "JKM-LX1", "class": "Android Large", "platform": "android"
+      },
+      "devicePerformance": { "totalRamInMB": 2815, "freeRamInMB": null, "totalStorageInMB": 11289 },
+      "deviceNetwork": { "carrierCode": "42901", "carrierName": "Verizon Wireless" },
+      "deviceSecurity": { "isRooted": false },
+      "deviceSettings": { "isNotificationEnabled": null },
       "location": {
         "countryCode": "US", "city": "Albany", "longitude": -73.7987, "latitude": 42.6664
       }
     }
   ],
-  "pagination": { "page_size": 50, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKeVpXTnZjbVJsWkc5dUlqb2lNakF5Tmk0dUxpSSI…" }
+  "pagination": { "page_size": 500, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKeVpXTnZjbVJsWkc5dUlqb2lNakF5Tmk0dUxpSSI…" }
 }
 ```
 
 <Callout icon="📘" theme="info">
   ### Note
 
-  Storage and RAM are reported in **MB** (`totalStorageInMB`, `totalRamInMB`, `freeRamInMB`). Timestamps are ISO-8601 zulu (`…Z`). Web sessions omit `platform` and carry `browser` / `browserVersion` instead of carrier and model fields.
+  Storage and RAM are reported in **MB** (`totalStorageInMB`, `totalRamInMB`, `freeRamInMB`). Timestamps are ISO-8601 zulu (`…Z`). Web sessions carry `browser` / `browserVersion` in `deviceBasics`, their `deviceHardware` omits `model` / `class` / `platform`, and the mobile-only sub-sections (`devicePerformance`, `deviceNetwork`, `deviceSecurity`, `deviceSettings`) come back as empty objects `{}`.
 </Callout>
 
 ## Analyze Sessions
