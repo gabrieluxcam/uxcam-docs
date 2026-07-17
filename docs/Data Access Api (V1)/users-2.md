@@ -26,12 +26,13 @@ Users support the **same filter attributes as [Sessions](doc:session-endpoints)*
 
 A user record is grouped into four sections. Omitting `show_only` returns the default set `["usage"]` — pass it to request more:
 
-| Section    | Contents                                                                                                                                                   |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `property` | Custom user properties. For web users, also first-touch attribution (`initialLandingUTM`, `initialReferer`, `initialRefererDomain`, `initialLandingPage`). |
-| `usage`    | Per-user aggregates for the queried window, plus `registeredOn` / `lastseenOn` and an all-time `totalLifetime` block.                                      |
-| `location` | `countryCode`, `city`, `country`.                                                                                                                          |
-| `device`   | Latest device snapshot — mobile: `model`, `platform`; web: `os`, `browser`, `browserVersion`, `type`.                                                      |
+| Section          | Contents                                                                                                                                                   |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `property`       | Custom user properties. For web users, also first-touch attribution (`initialLandingUTM`, `initialReferer`, `initialRefererDomain`, `initialLandingPage`). |
+| `usage`          | Per-user aggregates for the queried window, plus `registeredOn` / `lastseenOn` and an all-time `totalLifetime` block.                                      |
+| `location`       | `countryCode`, `city`, `country`.                                                                                                                          |
+| `deviceBasics`   | Identity + OS snapshot: `deviceId`, `appVersion`, `osVersion`; web also adds `os`, `browser`, `browserVersion`, `type`.                                    |
+| `deviceHardware` | Physical device (mobile only): `model`, `platform`. Empty `{}` for web. Request `device` to get both device sub-sections.                                  |
 
 <Callout icon="📘" theme="info">
   ### Note
@@ -57,7 +58,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 curl -X POST https://tara.uxcam.com/api/data-access/v1/user \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["property","usage","location","device"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":50}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","usage","location","device"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
 ```
 
 ### Response
@@ -89,14 +90,14 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/user \
           "screenCount": 402, "eventCount": 76, "rageGestureCount": 7
         }
       },
-      "device": {
-        "deviceId": "03c1e123941a19ec", "appVersion": "1.5", "osVersion": "8.1",
-        "model": "JKM-LX1", "platform": "android"
+      "deviceBasics": {
+        "deviceId": "03c1e123941a19ec", "appVersion": "1.5", "osVersion": "8.1"
       },
+      "deviceHardware": { "model": "JKM-LX1", "platform": "android" },
       "location": { "countryCode": "US", "city": "Albany", "country": "USA" }
     }
   ],
-  "pagination": { "page_size": 50, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKc1lYTjBYM05sWlc0aU9pSXlNREkyLi4uIg…" }
+  "pagination": { "page_size": 500, "current_page": 1, "next_page": 2, "has_more": true, "next_cursor": "eyJjIjoiZXlKc1lYTjBYM05sWlc0aU9pSXlNREkyLi4uIg…" }
 }
 ```
 
