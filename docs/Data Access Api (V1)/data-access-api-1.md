@@ -14,10 +14,6 @@ The UXCam **Data Access API** is built on REST principles with predictable, reso
 
 ### Go ahead and try out our REST APIs with credentials on Postman)
 
-Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman collection — every endpoint with example requests, ready to send. Import it, set three collection variables, and go.
-
-📚 Full collection reference
-
 
 [<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBY4JxP93)
 
@@ -27,6 +23,12 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 # Postman Guide
 
 Postman enables you to test and utilize UXCam's Data Access APIs without requiring a developer account. You can set up and send requests and receive responses for the provided Data Access APIs.
+
+### Steps to set up postman for UXCAM's Data Access APIs collection:)
+
+1. Log in to your Postman account
+2. Create your own fork of the collection by clicking the “Click here” button below
+3. Give a name to your fork and select a workspace.
 
 ### After importing, set these collection variables:
 
