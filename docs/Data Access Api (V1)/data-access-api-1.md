@@ -4,6 +4,11 @@ deprecated: false
 hidden: true
 metadata:
   robots: index
+next:
+  pages:
+    - slug: data-access-api-1
+      title: Data Access API
+      type: basic
 ---
 The UXCam **Data Access API** is built on REST principles with predictable, resource-oriented URLs. Every endpoint is a `POST` that accepts a JSON request body, returns JSON, and uses standard HTTP status codes. Authentication is handled with a single header, so no credentials ever appear in a URL.
 
