@@ -22,6 +22,12 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 [<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBY4JxP93)
 
 
+<br />
+
+# Postman Guide
+
+Postman enables you to test and utilize UXCam's Data Access APIs without requiring a developer account. You can set up and send requests and receive responses for the provided Data Access APIs.
+
 ### After importing, set these collection variables:
 
 | Variable   | Value                    |
