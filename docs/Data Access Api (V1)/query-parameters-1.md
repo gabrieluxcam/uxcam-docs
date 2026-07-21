@@ -109,14 +109,14 @@ Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20
   what you need. `device` is a convenience alias that expands to every device
   sub-section the endpoint supports.
 
-  | Sub-section         | Contents (mobile)                                                                            | Web                                       |
-  | ------------------- | -------------------------------------------------------------------------------------------- | ----------------------------------------- |
-  | `deviceBasics`      | `osName`, `osVersion`, `appVersion`, `sdkVersion`, `deviceId`, `type`, `language`, `country` | also `browser`, `browserVersion`          |
-  | `deviceHardware`    | `producer`, `dpi`, `width`, `height`, `model`, `class`, `platform`                           | `producer`, `dpi`, `width`, `height` only |
-  | `devicePerformance` | `totalRamInMB`, `freeRamInMB`, `totalStorageInMB`                                            | empty `{}`                                |
-  | `deviceNetwork`     | `carrierCode`, `carrierName`                                                                 | empty `{}`                                |
-  | `deviceSecurity`    | `isRooted`                                                                                   | empty `{}`                                |
-  | `deviceSettings`    | `isNotificationEnabled`                                                                      | empty `{}`                                |
+  | Sub-section         | Contents (mobile)                                                                            | Web                                           |
+  | ------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------- |
+  | `deviceBasics`      | `osName`, `osVersion`, `appVersion`, `sdkVersion`, `deviceId`, `type`, `language`, `country` | also `browser`, `browserVersion`              |
+  | `deviceHardware`    | `manufacturer`, `dpi`, `width`, `height`, `model`, `class`, `platform`                       | `manufacturer`, `dpi`, `width`, `height` only |
+  | `devicePerformance` | `totalRamInMB`, `freeRamInMB`, `totalStorageInMB`                                            | empty `{}`                                    |
+  | `deviceNetwork`     | `carrierCode`, `carrierName`                                                                 | empty `{}`                                    |
+  | `deviceSecurity`    | `isRooted`                                                                                   | empty `{}`                                    |
+  | `deviceSettings`    | `isNotificationEnabled`                                                                      | empty `{}`                                    |
 
   `/session` supports all six sub-sections; `/user` and `/event` support
   `deviceBasics` and `deviceHardware`.
