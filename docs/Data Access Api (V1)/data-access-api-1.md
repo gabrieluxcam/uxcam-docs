@@ -18,6 +18,10 @@ Prefer clicking to coding? Import the **UXCam Data Access API (v1)** Postman col
 
 📚 Full collection reference
 
+
+[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBY4JxP93)
+
+
 ### After importing, set these collection variables:
 
 | Variable   | Value                    |
