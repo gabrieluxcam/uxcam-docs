@@ -14,6 +14,16 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.9.0 - July 22, 2026
+
+* Fixed: WebView Occlusion Drop during transition [MOB-1855].
+* Fixed: Modal Screen missing in replay [MOB-1853].
+* Fixed: Forcequit video recovery [MOB-1838].
+* Fixed: Multiwindow capture composition.
+* Deprecated allowShortbreakforAnotherApp.
+* Optmized session lifecycle orchestration.
+
+
 ### V. 3.8.4 - July 8, 2026
 
 * Improved session handling and upload strategy.
