@@ -150,7 +150,5 @@ The `/analytics` endpoints accept three additional fields. Full syntax is on [Fi
 [Sessions](doc:session-endpoints)
 [Users](doc:users-2)
 [Events](doc:events-2)
-[Screen Analytics](doc:screens)
-[Query Parameters](doc:query-parameters-1)
-[Filter Operators](doc:filter-operators-1)
+[Screen Analytics](doc:screens)<br />[Filter Operators](doc:filter-operators-1)
 [Error Handling & Messages](doc:error-handling-and-messages-1)
