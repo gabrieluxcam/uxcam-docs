@@ -171,6 +171,4 @@ Each metric is paired with its `_pct_change` (e.g. `session_count` → `session_
 [Users](doc:users-2)
 [Events](doc:events-2)
 [Screen Analytics](doc:screens)
-[Query Parameters](doc:query-parameters-1)
-[Filter Operators](doc:filter-operators-1)
-[Error Handling & Messages](doc:error-handling-and-messages-1)
+[Query Parameters](doc:query-parameters-1)<br />[Error Handling & Messages](doc:error-handling-and-messages-1)
