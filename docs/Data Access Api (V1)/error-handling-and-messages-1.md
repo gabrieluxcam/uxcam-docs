@@ -78,4 +78,11 @@ Retry-After: 1800
   To stay under the limits, do more per call: combine several filters, groupings, and aggregations into a single analytics request instead of firing many small ones, and use `page_size` up to 2000 and request only the sections you need via `show_only`.
 </Callout>
 
-<br />
+### References:
+
+[Sessions](doc:session-endpoints)
+[Users](doc:users-2)
+[Events](doc:events-2)
+[Screen Analytics](doc:screens)
+[Query Parameters](doc:query-parameters-1)
+[Filter Operators](doc:filter-operators-1)
