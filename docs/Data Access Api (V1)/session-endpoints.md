@@ -225,4 +225,6 @@ The analytics endpoint returns aggregated session data grouped by the specified 
 }
 ```
 
-<br />
+### References:
+
+&#x20;[Users](doc:users-2)<br />[Events](doc:events-2)<br />[Screen Analytics](doc:screens)<br />[Query Parameters](doc:query-parameters-1)<br />[Filter Operators](doc:filter-operators-1)<br />[Error Handling & Messages](doc:error-handling-and-messages-1)
