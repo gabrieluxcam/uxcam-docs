@@ -107,3 +107,8 @@ next:
 - General stability and reliability improvements (improvement).
 
 <br />
+
+### V. 3.8.3 - July 27, 2026
+
+* Updated iOS SDK to 3.9.0 and Android SDK to 3.10.6
+
