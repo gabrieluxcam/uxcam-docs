@@ -156,4 +156,10 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event/analytics \
 }
 ```
 
-<br />
+### References:
+
+[Sessions](doc:session-endpoints)
+[Users](doc:users-2)<br />[Screen Analytics](doc:screens)
+[Query Parameters](doc:query-parameters-1)
+[Filter Operators](doc:filter-operators-1)
+[Error Handling & Messages](doc:error-handling-and-messages-1)
