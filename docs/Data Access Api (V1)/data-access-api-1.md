@@ -179,7 +179,7 @@ transparently — `curl --compressed`, browsers, Python `requests`, and `fetch`
 all handle it with no code change. Only the Data Access API endpoints compress.
 ⚠️ Rate limits section itself is unchanged — the 2000 records per request cap still holds. Do not edit that number.
 
-References:
+### References:
 
 [Sessions](doc:session-endpoints)
 [Users](doc:users-2)
