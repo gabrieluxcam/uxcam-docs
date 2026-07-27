@@ -57,7 +57,7 @@ Date filters use the `date_range` attribute and scope the whole query window. **
 ```
 
 📘 Which timestamp the window uses
-List endpoints (/session, /user, /event) scope the window by upload time — when the device delivered the data. Analytics endpoints (/…/analytics) scope by record time — when the activity happened on the device. Because a session can be recorded and uploaded on different days (offline usage, delayed sync), the same date\_range bounds can return slightly different counts on a list vs. its analytics counterpart. This is expected.
+List endpoints (/session, /user, /event) scope the window by upload time — when the device delivered the data. Analytics endpoints (/…/analytics) scope by record time — when the activity happened on the device. Because a session can be recorded and uploaded on different days (offline usage, delayed sync), the same date_range bounds can return slightly different counts on a list vs. its analytics counterpart. This is expected.
 
 ## Custom-property filters (JSON attributes)
 
@@ -165,4 +165,12 @@ Each metric is paired with its `_pct_change` (e.g. `session_count` → `session_
 }
 ```
 
-<br />
+### References:
+
+[Sessions](doc:session-endpoints)
+[Users](doc:users-2)
+[Events](doc:events-2)
+[Screen Analytics](doc:screens)
+[Query Parameters](doc:query-parameters-1)
+[Filter Operators](doc:filter-operators-1)
+[Error Handling & Messages](doc:error-handling-and-messages-1)
