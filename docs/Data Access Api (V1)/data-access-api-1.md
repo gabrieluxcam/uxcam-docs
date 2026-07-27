@@ -51,6 +51,7 @@ Each resource has a list endpoint and an analytics endpoint. Lists return indivi
 | Sessions | `POST /api/data-access/v1/session` | `POST /api/data-access/v1/session/analytics` |
 | Users    | `POST /api/data-access/v1/user`    | `POST /api/data-access/v1/user/analytics`    |
 | Events   | `POST /api/data-access/v1/event`   | `POST /api/data-access/v1/event/analytics`   |
+| Screens  |                                    | `POST /api/data-access/v1/screen/analytics`  |
 
 ## Authentication
 
