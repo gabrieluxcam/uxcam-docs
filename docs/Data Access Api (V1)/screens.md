@@ -154,3 +154,11 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/screen/analytics \
 ## Errors
 
 Errors use the shared `{ "detail": { "code", "message" } }` shape — a missing or invalid key is `401`, a malformed body is `422`, and an unsupported metric or dimension is `400`. See [Error Handling & Messages](/docs/error-handling-and-messages-1) for the full list.
+
+### References:
+
+[Sessions](doc:session-endpoints)
+[Users](doc:users-2)
+[Events](doc:events-2)<br />[Query Parameters](doc:query-parameters-1)
+[Filter Operators](doc:filter-operators-1)
+[Error Handling & Messages](doc:error-handling-and-messages-1)
