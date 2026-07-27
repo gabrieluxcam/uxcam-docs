@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.10.7 - July 27, 2026
+
+* Fix (occlusion): Keep sensitive screens fully masked during navigation by switching from a fixed-duration timer to event-driven retention, preventing unblurred frames when leaving or entering a sensitive screen
+* Fix (occlusion): Prevent a sensitive screen from being captured unblurred during the brief gap between when a new screen is drawn and when its occlusion tag is committed
+* Enhance (occlusion): Apply `occludeAllTextFields` to cross-platform SDK frames so text field masking is consistent across all rendering paths
+* Enhance (occlusion): Extend occlusion support to content inside cross-origin iframes
+* Fix (startup): Surface a clear error when the SDK starts with an empty API key, replacing the previous silent failure that produced no recording and no diagnostic output
+* Fix (stability): Prevent a crash caused by accessing window decoration off the main thread during concurrent activity layout builds
 ### V. 3.10.6 - July 10, 2026
 
 * Fix (recording): Capture content from native platform views such as maps, video players, and camera previews that previously appeared blank or grey in session recordings
