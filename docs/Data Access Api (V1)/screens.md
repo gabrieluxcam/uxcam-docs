@@ -1,5 +1,5 @@
 ---
-title: 'Screens '
+title: Screen Analytics
 deprecated: false
 hidden: false
 metadata:
