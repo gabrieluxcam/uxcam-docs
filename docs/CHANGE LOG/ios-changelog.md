@@ -14,6 +14,14 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.10.0 - July 30, 2026
+
+* Fixed: Sensitive views painted outside the main view controller hierarchy (SwiftUI `.overlay`, window-level banners) were silently recorded in the clear; occlusion masks now apply correctly across all view hierarchies.
+* Fixed: Occlusion placement mapping for accurate mask positioning [MOB-1859].
+* Fixed: Continuous occlusion frame skip triggered by UIMenu on iOS 26, where a steady presentation-opacity state was incorrectly treated as an in-flight sensitive animation.
+* Fixed: Recording for occluded system pickers.
+* Added: App Clip and App Extension capture — extension sessions are uploaded and handed off to the containing app.
+* Improved: Faster session startup by deferring CoreImage initialization off the main boot path.
 ### V. 3.9.0 - July 22, 2026
 
 * Fixed: WebView Occlusion Drop during transition [MOB-1855].
