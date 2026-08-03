@@ -25,16 +25,16 @@ next:
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
 <Accordion title="Key Benefits After Setup" icon="fa-info-circle">
-  * **Session Replay + Heatmaps** – Watch every user experience moment in full context.
-  * **Advanced Product Analytics** – funnels, retention, feature adoption.
-  * **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
-  * **Engineering Analytics** – Connect client-side performance to real sessions. Monitor crashes, ANRs, and handled exceptions with session replay and developer logs for faster debugging.
+  - **Session Replay + Heatmaps** – Watch every user experience moment in full context.
+    - **Advanced Product Analytics** – funnels, retention, feature adoption.
+    - **Insight Alerts** – journey summaries, rage-tap & anomaly detection.
+    - **Engineering Analytics** – Connect client-side performance to real sessions. Monitor crashes, ANRs, and handled exceptions with session replay and developer logs for faster debugging.
 </Accordion>
 
 <Accordion title="Tips Before You Begin" icon="fa-bolt">
-  * Create **separate keys** for *debug* & *production* to keep data clean.
-  * Use **feature flags** to toggle UXCam in staging builds.
-  * Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm the integration is working correctly.
+  - Create **separate keys** for _debug_ & _production_ to keep data clean.
+    - Use **feature flags** to toggle UXCam in staging builds.
+    - Check Logcat for **“Verification successful”** and **“Session/Video uploaded”** messages to confirm the integration is working correctly.
 </Accordion>
 
 <GitHubCallout type="warning">**Note for SwiftUI developers:** If you're working with SwiftUI, you may add the dedicated SwiftUI SDK instead of the regular iOS one, you can check the initial setup [here](https://developer.uxcam.com/docs/swiftui-ios).</GitHubCallout>
@@ -47,7 +47,9 @@ next:
 
 If you don't already have it, find it in App Settings -> App Key on your <a href="https://app.uxcam.com" target="_blank" rel="noopener">UXCam Dashboard</a>.
 
-<Image align="center" src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" />
+
+<Image src="https://files.readme.io/5879b95c4dd8fb37220bdafe37a126498ca203c86da7fecbffb2dcd2fb241b47-image.png" align="center" />
+
 
 <GitHubCallout type="important">**Create separate keys for debug/production.** Keep your data clean, no need to mix test actions with real user insights!</GitHubCallout>
 
@@ -57,7 +59,7 @@ Put the key in an ignored `.xcconfig` file or pass it in as an environment varia
 
 ## Quick Start: Only a Couple of Lines of Code
 
-<GitHubReleaseBadge owner="uxcam" repo="uxcam-ios-sdk" />
+<GitHubReleaseBadge owner="uxcam" repo="uxcam-ios" />
 
 Let's get you started with the basics. With just a few lines of code, you'll be on your way to capturing user sessions in your test app.
 
@@ -65,11 +67,11 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 #### Cocoapods
 
-* Add UXCam to your `Podfile`:
+- Add UXCam to your `Podfile`:
 
 `pod 'UXCam'`
 
-* Run <code>pod install</code> in the project directory to download dependency.
+- Run <code>pod install</code> in the project directory to download dependency.
 
 <Terminal>
   {`
@@ -79,9 +81,9 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 #### Swift Package Manager
 
-* If you prefer Swift Package Manager, you can add UXCam using the following URL:
+- If you prefer Swift Package Manager, you can add UXCam using the following URL:
 
-`https://github.com/uxcam/uxcam-ios-sdk`
+`https://github.com/uxcam/uxcam-ios`
 
 Specify the exact version to ensure compatibility.
 
@@ -197,18 +199,18 @@ func application(_ application: UIApplication,
 Run the app on a simulator or device, navigate a few screens, then send it to the background. Your first session replay will appear on the UXCam dashboard within seconds.
 
 <GitHubCallout type="success">**As Simple As That!** This will complete the integration process. Your session will be shown on the dashboard within a few seconds after the app goes in the background.</GitHubCallout>
->
+
 > We recommend that after you've set this up and have reviewed some sessions from your tests, get to the customisation features UXCam offers, let's go to the next steps!
 
 ## Video Tutorial:
 
-<Embed typeOfEmbed="youtube" url="https://www.youtube.com/watch?v=i9ReMW6sL9k" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fi9ReMW6sL9k%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Di9ReMW6sL9k%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fi9ReMW6sL9k%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" href="https://www.youtube.com/watch?v=i9ReMW6sL9k" providerUrl="https://www.youtube.com/" providerName="YouTube" />
+<Embed title="" typeOfEmbed="youtube" url="https://www.youtube.com/watch?v=i9ReMW6sL9k" href="https://www.youtube.com/watch?v=i9ReMW6sL9k" html="%3Ciframe%20class%3D%22embedly-embed%22%20src%3D%22%2F%2Fcdn.embedly.com%2Fwidgets%2Fmedia.html%3Fsrc%3Dhttps%253A%252F%252Fwww.youtube.com%252Fembed%252Fi9ReMW6sL9k%253Ffeature%253Doembed%26display_name%3DYouTube%26url%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253Di9ReMW6sL9k%26image%3Dhttps%253A%252F%252Fi.ytimg.com%252Fvi%252Fi9ReMW6sL9k%252Fhqdefault.jpg%26type%3Dtext%252Fhtml%26schema%3Dyoutube%22%20width%3D%22854%22%20height%3D%22480%22%20scrolling%3D%22no%22%20title%3D%22YouTube%20embed%22%20frameborder%3D%220%22%20allow%3D%22autoplay%3B%20fullscreen%3B%20encrypted-media%3B%20picture-in-picture%3B%22%20allowfullscreen%3D%22true%22%3E%3C%2Fiframe%3E" providerName="YouTube" providerUrl="https://www.youtube.com/" />
 
 ## Next Steps ➡️
 
 You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  But there's so much more you can do. Now, let’s go further into setting things up.
 
-<Cards columns={4}>
+<Cards>
   <Card title="Tag Screens" href="https://developer.uxcam.com/docs/screen-tagging-ios" icon="fa-mobile">
     Take full advantage of heatmaps and screen analytics.
 
