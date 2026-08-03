@@ -4,8 +4,8 @@ excerpt: Get UXCam running in your iOS app in 5 minutes
 deprecated: false
 hidden: false
 metadata:
-  title: 'iOS Quick Start - UXCam'
-  description: 'Fastest way to add UXCam session recording to your iOS app'
+  title: iOS Quick Start - UXCam
+  description: Fastest way to add UXCam session recording to your iOS app
   robots: index
 next:
   description: ''
@@ -14,7 +14,6 @@ next:
       slug: ios
       title: Full iOS Guide
 ---
-
 # iOS Quick Start
 
 Get session recording working in your iOS app in under 5 minutes.
@@ -25,7 +24,7 @@ Get session recording working in your iOS app in under 5 minutes.
 - iOS deployment target 12.0+
 - A [UXCam account](https://app.uxcam.com/signup) with an app key
 
----
+***
 
 ## Step 1: Add the Dependency
 
@@ -47,9 +46,9 @@ Then run:
 
 ### Swift Package Manager
 
-Add this URL in Xcode: `https://github.com/uxcam/uxcam-ios-sdk`
+Add this URL in Xcode: `https://github.com/uxcam/uxcam-ios`
 
----
+***
 
 ## Step 2: Initialize UXCam
 
@@ -70,23 +69,23 @@ func application(_ application: UIApplication,
 ```
 
 <Accordion title="Objective-C version">
-```objectivec
-#import <UXCam/UXCam.h>
+  ```objectivec
+  #import <UXCam/UXCam.h>
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    UXCamConfiguration *config = [[UXCamConfiguration alloc] initWithAppKey:@"YOUR_APP_KEY"];
-    [UXCam optIntoVideoRecordings];
-    [UXCam startWithConfiguration:config];
+      UXCamConfiguration *config = [[UXCamConfiguration alloc] initWithAppKey:@"YOUR_APP_KEY"];
+      [UXCam optIntoVideoRecordings];
+      [UXCam startWithConfiguration:config];
 
-    return YES;
-}
-```
+      return YES;
+  }
+  ```
 </Accordion>
 
 <GitHubCallout type="note">**SwiftUI?** Check our dedicated [SwiftUI integration guide](/docs/swiftui-ios) for SwiftUI-specific setup.</GitHubCallout>
 
----
+***
 
 ## Step 3: Verify It Works
 
@@ -97,13 +96,13 @@ func application(_ application: UIApplication,
 
 <GitHubCallout type="tip">Set `config.enableIntegrationLogging = true` to see UXCam debug logs in Xcode console.</GitHubCallout>
 
----
+***
 
 ## Next Steps
 
 You're recording sessions! Now customize your integration:
 
-<Cards columns={2}>
+<Cards>
   <Card title="Full iOS Guide" href="/docs/ios" icon="fa-brands fa-apple">
     Complete setup with all configuration options
   </Card>
