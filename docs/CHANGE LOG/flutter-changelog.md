@@ -12,6 +12,10 @@ next:
 ---
 <br />
 
+### V. 2.9.0 - August 3, 2026
+
+* Updated iOS SDK to 3.10.0 and Android SDK to 3.10.7
+* Added Swift Package Manager (SPM) support for iOS integration.
 ### V. 2.8.4 - July 13, 2026
 
 * Updated iOS SDK to 3.8.4 and Android SDK to 3.10.6
