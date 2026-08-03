@@ -4,17 +4,21 @@ excerpt: Set up the dedicated UXCam SwiftUI SDK and start recording sessions
 deprecated: false
 hidden: false
 metadata:
-  title: 'SwiftUI SDK Setup - UXCam iOS'
-  description: 'Set up the dedicated UXCam SwiftUI SDK and start recording sessions'
+  title: SwiftUI SDK Setup - UXCam iOS
+  description: Set up the dedicated UXCam SwiftUI SDK and start recording sessions
   robots: index
 next:
   description: ''
 ---
-> 📘 **Note**
->
-> All UXCam properties and methods are also available in UXCamSwiftUI without additional import of UXCam and can be accessed using `UXCamCore`. For eg. UXCam.isRecording() can be accessed into UXCamSwiftUI as UXCamCoreSwiftUI.isRecording()
+<Callout icon="📘" theme="info">
+  ### **Note**
 
-[![pod version](https://img.shields.io/cocoapods/v/UXCamSwiftUI)](https://github.com/uxcam/ios-swiftui-ios/tree/1.0.1)
+  All UXCam properties and methods are also available in UXCamSwiftUI without additional import of UXCam and can be accessed using `UXCamCore`. For eg. UXCam.isRecording() can be accessed into UXCamSwiftUI as UXCamCoreSwiftUI.isRecording()
+</Callout>
+
+
+[<Image src="https://img.shields.io/cocoapods/v/UXCamSwiftUI" alt="pod version" align="left" wrap={true} />](https://github.com/uxcam/ios-swiftui-ios/tree/1.0.1)
+
 
 # SDK Integration
 
@@ -22,21 +26,23 @@ If you're building your app using SwiftUI, please integrate UXCam using Swift Pa
 
 ## Cocoapods
 
-* Add to the Podfile
+- Add to the Podfile
 
 ```swift
 pod 'UXCamSwiftUI'
 ```
 
-* Run `pod install` in the project directory to download dependency.
+- Run `pod install` in the project directory to download dependency.
 
 ## Swift Package Manager
 
 ### Add UXCamSwiftUI Package:
 
-<Image align="center" width="80%" src="https://files.readme.io/25df998-Screenshot_25_3_24__09_25.jpg" />
 
-[https://github.com/uxcam/uxcam-ios-swiftui-ios](https://github.com/uxcam/uxcam-ios-swiftui-ios)
+<Image src="https://files.readme.io/25df998-Screenshot_25_3_24__09_25.jpg" align="center" width="80%" />
+
+
+[https://github.com/uxcam/uxcam-swiftui](https://github.com/uxcam/uxcam-ios-swiftui-ios)
 
 ## Securely load your App Key
 
@@ -64,12 +70,12 @@ pod 'UXCamSwiftUI'
       </td>
 
       <td>
-        Add UXCamAppKey = $(UXCAM\_APP\_KEY) to Info.plist and define UXCAM\_APP\_KEY as a User‑Defined build setting (or in an ignored .xcconfig).
+        Add UXCamAppKey = $(UXCAM_APP_KEY) to Info.plist and define UXCAM_APP_KEY as a User‑Defined build setting (or in an ignored .xcconfig).
       </td>
 
       <td>
-        * Keeps key out of source control
-        * Simple to read at runtime
+        - Keeps key out of source control
+        - Simple to read at runtime
       </td>
     </tr>
 
@@ -83,8 +89,8 @@ pod 'UXCamSwiftUI'
       </td>
 
       <td>
-        * Zero key on developer laptops
-        * Extra CI config
+        - Zero key on developer laptops
+        - Extra CI config
       </td>
     </tr>
 
@@ -98,8 +104,8 @@ pod 'UXCamSwiftUI'
       </td>
 
       <td>
-        * Central rotation
-        * Potential slight delay before first session
+        - Central rotation
+        - Potential slight delay before first session
       </td>
     </tr>
   </tbody>
@@ -112,13 +118,13 @@ let appKey = Bundle.main.object(forInfoDictionaryKey: "UXCamAppKey") as! String
 
 ## Initialization Steps:
 
-* Import UXCam at the top of your main App struct:
+- Import UXCam at the top of your main App struct:
 
 ```swift
 import UXCamSwiftUI
 ```
 
-* Add an init method to your main App struct and add the following calls:
+- Add an init method to your main App struct and add the following calls:
 
 ```swift
 @main
@@ -156,12 +162,13 @@ struct MyApp: App {
 | WidgetKit extension             | Record interactions inside a widget.                          | Import UXCamSwiftUI in the widget’s @main and call UXCamSwiftUI.start in init().          |
 | Preview mode                    | Avoid SDK traffic in SwiftUI previews.                        | Guard with `if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != "1".` |
 
-> 👍
->
-> That completes the integration process.\
-> Your session will be shown on the dashboard within a few seconds after the app goes in the background.
-> You can optionally use the API's for customizations such as identifying users from your database with UXCam, tagging sessions or hiding sensitive views.
+<Callout icon="👍" theme="okay">
+  That completes the integration process.<br />Your session will be shown on the dashboard within a few seconds after the app goes in the background.
+  You can optionally use the API's for customizations such as identifying users from your database with UXCam, tagging sessions or hiding sensitive views.
+</Callout>
 
-> 🚧 **Warning**
->
-> **Screen Tagging** and **Hiding Sensitive Data** for Swift UI have some differences and you can check some examples on the documentation, all other customization APIs provided by UXCam can be called regularly done with iOS by importing UXCam and calling the desired method.
+<Callout icon="🚧" theme="warn">
+  ### **Warning**
+
+  **Screen Tagging** and **Hiding Sensitive Data** for Swift UI have some differences and you can check some examples on the documentation, all other customization APIs provided by UXCam can be called regularly done with iOS by importing UXCam and calling the desired method.
+</Callout>
