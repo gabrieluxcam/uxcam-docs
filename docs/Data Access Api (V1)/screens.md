@@ -1,7 +1,7 @@
 ---
 title: Screen Analytics
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   robots: index
 ---
