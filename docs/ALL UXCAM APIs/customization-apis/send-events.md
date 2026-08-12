@@ -19,7 +19,7 @@ Track user interactions by logging custom events. Events appear in session timel
 - Measure feature adoption
 - Identify errors in conversion processes
 
-> **Auto-detected Events**: UXCam automatically logs [UI Freezes](https://help.uxcam.com/hc/en-us/articles/360045884471) and [Rage Taps](https://help.uxcam.com/hc/en-us/articles/360036136992).
+> **Auto-detected Events**: UXCam automatically logs [UI Freezes](https://help.uxcam.com/en/articles/10222575-ui-freeze-s-events) and [Rage Taps](https://help.uxcam.com/en/articles/10222528-session-analytics).
 
 ---
 
@@ -125,7 +125,7 @@ When sending dates as event properties, use these formats:
 
 | Platform | Guide |
 |----------|-------|
-| Android | [Events](/docs/android/events) |
-| iOS | [Events](/docs/ios/events) |
-| Flutter | [Events](/docs/flutter/events) |
-| React Native | [Events](/docs/react-native/events) |
+| Android | [Events](/docs/events) |
+| iOS | [Events](/docs/events-ios) |
+| Flutter | [Events](/docs/events-flutter) |
+| React Native | [Events](/docs/events-react-native) |

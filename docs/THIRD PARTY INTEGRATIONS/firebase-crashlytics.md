@@ -14,7 +14,7 @@ Integrate <strong>UXCam with Firebase Crashlytics</strong> to get more insights 
 
 <strong>UXCam automatically detects Crashes and UI Freeze’s </strong>, you can easily find sessions with them, watch the recording to see what triggered the crash and see the logs or share them with your developers to deeply analyze the problem. However, if you’re using Crashlytics you can connect it with UXCAm to have your Session’s URLs on each of your Crashes Events and easily watch the video recording. You can also analyze the whole experience to understand what led to the crash, and to find the replication steps. 
 
-To read more about UXCam Crash and UI Freezes logs check this [page](https://help.uxcam.com/hc/en-us/articles/360045884471-ANR-s-Events).
+To read more about UXCam Crash and UI Freezes logs check this [page](https://help.uxcam.com/en/articles/10222575-ui-freeze-s-events).
 
 ***
 

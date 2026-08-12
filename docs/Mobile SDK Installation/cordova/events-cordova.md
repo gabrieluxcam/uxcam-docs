@@ -20,7 +20,7 @@ Events are powerful tools for tracking user interactions within your application
 
 > 📘 Note:
 >
-> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/hc/en-us/articles/360045884471)and[ Rage taps](https://help.uxcam.com/hc/en-us/articles/360036136992) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
+> UXCam automatically detects[ UI Freezes ](https://help.uxcam.com/en/articles/10222575-ui-freeze-s-events)and[ Rage taps](https://help.uxcam.com/en/articles/10222528-session-analytics) and logs them as an event; for example, Rage taps are registered as "Rage Tap" events.
 
 ## How to Send Events
 
