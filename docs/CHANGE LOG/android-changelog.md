@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.10.8 - August 13, 2026
+
+* Fix (occlusion): Mask sensitive content in WebViews using frame-locked geometry so that occlusion boxes accurately cover the right pixels during scroll, navigation, and screen transitions, rather than the position of fields from a prior frame
+* Fix (occlusion): Correct occlusion box placement when Android 12 and later applies overscroll stretch, preventing sensitive content at screen edges from appearing unmasked due to GPU-level deformation
+* Fix (occlusion): Mask sensitive text fields inside popups and dialogs, which previously appeared unmasked in session recordings
+* Enhance (performance): Reduce CPU overhead from WebView occlusion tracking by measuring sensitive field positions on demand rather than on every animation frame
+* Fix (upload): Improve session upload reliability — uploads no longer stall when Android misreports connectivity for a backgrounded process, crash-recovery sessions survive a missing upload manifest, and non-retryable upload failures now correctly clean up session storage
+* Fix (stability): Prevent build failures in apps using code shrinking by preserving the required Kotlin facades and consumer ProGuard rules for SDK components
 ### V. 3.10.7 - July 27, 2026
 
 * Fix (occlusion): Keep sensitive screens fully masked during navigation by switching from a fixed-duration timer to event-driven retention, preventing unblurred frames when leaving or entering a sensitive screen
