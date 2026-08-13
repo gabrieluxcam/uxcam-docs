@@ -14,6 +14,13 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.10.1 - August 13, 2026
+
+* Fixed: Sessions queued on devices with intermittent connectivity could be delayed indefinitely; a drain scheduler now uploads them reliably when connectivity or foreground access resumes.
+* Fixed: Crashed sessions recorded while the device was offline failed to upload on next launch.
+* Fixed: A single large session could be blocked from uploading by an internal request-body size cap.
+* Improved: Session capture checkpoints are now persisted to disk, reducing data loss if the app is terminated unexpectedly.
+* Improved: SDK pauses video recording when device disk space reaches a critical threshold, preventing storage exhaustion.
 ### V. 3.10.0 - July 30, 2026
 
 * Fixed: Sensitive views painted outside the main view controller hierarchy (SwiftUI `.overlay`, window-level banners) were silently recorded in the clear; occlusion masks now apply correctly across all view hierarchies.
