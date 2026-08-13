@@ -15,6 +15,10 @@ metadata:
 
 <br />
 
+### V. 6.0.21 - August 13, 2026
+
+* Updated iOS SDK to 3.10.1 and Android SDK to 3.10.8
+* Fixed an issue where sensitive views were not resolved correctly when using the React Native new architecture (Fabric renderer)
 ### V. 6.0.20 - July 31, 2026
 
 * Updated iOS SDK to 3.10.0 and Android SDK to 3.10.7
