@@ -12,6 +12,10 @@ next:
 ---
 <br />
 
+### V. 2.9.1 - August 14, 2026
+
+* Updated iOS SDK to 3.10.1 and Android SDK to 3.10.8
+
 ### V. 2.9.0 - August 3, 2026
 
 * Updated iOS SDK to 3.10.0 and Android SDK to 3.10.7
