@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.10.9 - August 25, 2026
+
+* New (recording): Introduce wireframe capture mode — frames are reconstructed from the view hierarchy so no pixel content is ever captured, with Jetpack Compose screens and components mapped by semantic role for accurate wireframe output
+* Fix (occlusion): Sharpen WebView masking so sensitive fields stay covered through DOM changes, navigation, and fast transitions; cross-origin iframes can no longer bypass masking by injecting decoy coordinates into the bridge
+* Fix (recording): Dialogs and overlays that appeared invisible in session recordings now render correctly, with window layers painted in the correct back-to-front order
+* Fix (gesture): Correctly distinguish double-tap from tap-then-drag, preventing drag gestures from being recorded as double-taps and from incorrectly incrementing rage-tap counts
+* Fix (crash): Prevent the SDK's crash handler from causing an ANR on a low-memory device by limiting crash capture to safe diagnostic data when heap memory is critically low
+* Enhance (performance): Reduce session video upload size by approximately 25% at typical activity levels through an adjusted keyframe interval
 ### V. 3.10.8 - August 13, 2026
 
 * Fix (occlusion): Mask sensitive content in WebViews using frame-locked geometry so that occlusion boxes accurately cover the right pixels during scroll, navigation, and screen transitions, rather than the position of fields from a prior frame
