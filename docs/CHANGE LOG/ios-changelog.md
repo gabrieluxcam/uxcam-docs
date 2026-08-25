@@ -14,6 +14,13 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.10.2 - August 24, 2026
+
+* Added: Opt-in improved WebView capture — enable `UXCamConfiguration.enableImprovedWebViewCapture` to use an isolated-world recorder for higher-fidelity WebView session recording.
+* Fixed: Touch and gesture events were not captured in some cases where a touch trace could not be attached to a gesture recognizer.
+* Fixed: Race conditions during SDK startup could prevent recording from initializing correctly.
+* Fixed: Session upload state could be lost after a restart, causing some sessions to be uploaded more than once or for background uploads to fail silently.
+* Fixed: The count of sessions pending upload on device was understated when multiple sessions were held simultaneously.
 ### V. 3.10.1 - August 13, 2026
 
 * Fixed: Sessions queued on devices with intermittent connectivity could be delayed indefinitely; a drain scheduler now uploads them reliably when connectivity or foreground access resumes.
