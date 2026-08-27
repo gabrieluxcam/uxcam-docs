@@ -86,6 +86,31 @@ Scope the query window with a date filter inside `filters`. When no date filter 
 ]
 ```
 
+<br />
+
+### Date filter operators
+
+| Operator                    | Meaning                                                                |
+| --------------------------- | ---------------------------------------------------------------------- |
+| `between` / `between_dates` | Both bounds, inclusive. Accepts `{"lower","upper"}` or `["from","to"]` |
+| `since` / `after`           | Inclusive lower bound; upper stays open                                |
+| `before` / `until`          | Inclusive upper bound; lower filled 30 days back                       |
+| `on` / `noton`              | A single day                                                           |
+
+`since` and `after` are aliases, as are `before` and `until` — all inclusive.
+
+The window filter must use `attribute: "date_range"`. A date-shaped filter on any other attribute (for example `session_uploadedon`) is treated as a normal predicate, not as the query window.
+
+A malformed date, or an inverted range where `lower` is after `upper`, returns `400`. The API does not silently fall back to the default window.
+
+### Dates and timezones
+
+**Dates are interpreted in your app's configured analytics timezone** (Settings → Analytics defaults) — not UTC, and not your browser's timezone. Apps with no configured timezone default to UTC.
+
+For an app set to `Asia/Katmandu` (UTC+05:45), a range of `2024-11-01` → `2024-11-30` selects activity from `2024-10-31 18:15:00Z` through `2024-11-30 18:14:59Z`.
+
+When only one bound is supplied, the other is filled from **today in your app's timezone**.
+
 ## show_only
 
 Each record is grouped into named sections. **Omitting&#x20;**`show_only`**&#x20;returns the endpoint's default set** — the core data most integrations need, and the fastest response shape. Pass `show_only` with any combination of sections to request more (or different) blocks. Identity fields (ids, names, timestamps, `url`) are always present on every record regardless of `show_only`.
@@ -144,6 +169,24 @@ The `/analytics` endpoints accept three additional fields. Full syntax is on [Fi
 | `group_by`    | array   | Dimensions to break the numbers down by, e.g. `[{"attribute": "device_model"}]`. Optional `max_group_number` caps groups (max 50). |
 | `aggregation` | array   | Metrics to compute, e.g. `[{"attribute": "session_duration", "operator": "avg"}]`. Omit for the endpoint's default metric set.     |
 | `comparison`  | boolean | When `true`, adds period-over-period % change. Honored only when `group_by` is empty.                                              |
+
+### Valid `group_by` attributes
+
+Maximum **2** dimensions per request. An unrecognized attribute returns `400 INVALID_REQUEST`.
+
+`/session/analytics`**&#x20;and&#x20;**`/user/analytics`
+
+`device_model`, `device_manufacturer`, `device_class`, `device_os_version`, `device_os_name`, `device_type`, `app_version`, `sdk_version`, `device_platform`, `device_country`, `device_city`, `browser_name`, `browser_version`, `session_recorded_month`, `session_recorded_week`, `session_recordedon_day`
+
+`/event/analytics`
+
+`event_name`, `event_screen_name`, `device_model`, `device_manufacturer`, `device_class`, `device_os_name`, `device_os_version`, `device_type`, `app_version`, `device_platform`, `browser_name`, `browser_version`, `event_recorded_month`, `event_recorded_week`, `event_recordedon_day`
+
+`/screen/analytics`
+
+`screen_name`, `previous_screen`, `next_screen`, `app_version`, `device_model`, `device_manufacturer`, `device_class`, `device_os_name`, `device_os_version`, `device_type`, `sdk_version`, `device_country`, `device_platform`, `browser_name`, `browser_version`, `screen_recorded_month`, `screen_recorded_week`, `screen_recordedon_day`
+
+The `*_recorded_month`, `*_recorded_week`, and `*_recordedon_day` buckets are cut on `recordedon` — when the activity happened on the device — in your app's configured analytics timezone, not on server upload time.
 
 ### References:
 
