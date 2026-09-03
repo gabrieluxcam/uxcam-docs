@@ -14,6 +14,14 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.10.3 - September 1, 2026
+
+* Added: Screen video is now uploaded progressively in short segments during a live session, improving playback availability and upload reliability.
+* Fixed: Touch and gesture events were not captured when touch handling was routed through certain window configurations.
+* Fixed: Frame orientation was recorded incorrectly for apps using Flutter on iOS.
+* Improved: The SDK is now compatible with Swift 6 strict concurrency — all completion callbacks and notifications are delivered on the main thread, and AI text occlusion is thread-safe.
+* Improved: Capture colorspace now matches the device display gamut, improving color accuracy in recordings on wide-color displays.
+* Fixed: Upload retry loops for session delivery are now bounded, preventing excessive network activity in error scenarios.
 ### V. 3.10.2 - August 24, 2026
 
 * Added: Opt-in improved WebView capture — enable `UXCamConfiguration.enableImprovedWebViewCapture` to use an isolated-world recorder for higher-fidelity WebView session recording.
