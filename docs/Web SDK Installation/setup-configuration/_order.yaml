@@ -3,6 +3,8 @@
 - setting-user-properties
 - logging-custom-events
 - iframe-recording
+- shadow-dom-recording
+- sdk-logs
 - configure-content-security-policy-csp
 - define-app-version-optional
 - example
