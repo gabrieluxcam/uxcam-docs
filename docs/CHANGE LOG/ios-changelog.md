@@ -14,6 +14,13 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.11.0 - September 8, 2026
+
+* Added: App Intent executions — including Siri shortcuts and widget actions — are now automatically captured in session data; use the `@TrackedIntent` macro to annotate specific intents for capture, with built-in consent gating and PII redaction. Live Activity lifecycle events are tracked alongside intent data.
+* Added: A new `occludeSensitiveView:ofType:` API and `UXCamViewOcclusionStyle` provide per-view occlusion style control; dashboard-configured occlusion styles take precedence over in-app overlay settings.
+* Fixed: WebView content is now captured correctly in apps that use Flutter on iOS; the improved WebView capture opt-in is also available in this configuration.
+* Fixed: Upload scheduling consistency and artifact recovery are improved, reducing the risk of missed or duplicate session uploads; race conditions during recorder startup that could silently prevent session initialization are also resolved.
+* Improved: The minimum supported iOS deployment target is now iOS 15.
 ### V. 3.10.3 - September 1, 2026
 
 * Added: Screen video is now uploaded progressively in short segments during a live session, improving playback availability and upload reliability.
