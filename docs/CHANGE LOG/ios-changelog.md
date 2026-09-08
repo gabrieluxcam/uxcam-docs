@@ -16,19 +16,21 @@ metadata:
 
 ### V. 3.11.0 - September 8, 2026
 
-* Added: App Intent executions — including Siri shortcuts and widget actions — are now automatically captured in session data; use the `@TrackedIntent` macro to annotate specific intents for capture, with built-in consent gating and PII redaction. Live Activity lifecycle events are tracked alongside intent data.
-* Added: A new `occludeSensitiveView:ofType:` API and `UXCamViewOcclusionStyle` provide per-view occlusion style control; dashboard-configured occlusion styles take precedence over in-app overlay settings.
-* Fixed: WebView content is now captured correctly in apps that use Flutter on iOS; the improved WebView capture opt-in is also available in this configuration.
-* Fixed: Upload scheduling consistency and artifact recovery are improved, reducing the risk of missed or duplicate session uploads; race conditions during recorder startup that could silently prevent session initialization are also resolved.
-* Improved: The minimum supported iOS deployment target is now iOS 15.
+* Improved: The public API now carries Swift concurrency annotations, with main-actor isolation and thread-safe completion delivery.
+* Improved: WebView capture fidelity — DOM-accurate rendering, and correct capture of fixed bars, large text, collapsed content, and root-scroller pages.
+* Improved: Flutter apps can opt in to the improved WebView capture; scroll and capture performance is optimized and frame orientation is recorded correctly.
+* Improved: Session management — ownership verification no longer depends on a session ID, recorder startup is more robust, and storage handoff is handled cleanly.
+* Improved: Upload reliability — atomic artifact recovery, consistent scheduling, bounded retries so every session settles, and network logging scoped to active sessions.
+* Improved: Durability — coalesced JSON record logs, self-contained session folders, and atomic recovery reduce data loss on unexpected termination.
+* Fixed: Interrupted-video recovery and gesture capture attachment.
 ### V. 3.10.3 - September 1, 2026
 
-* Added: Screen video is now uploaded progressively in short segments during a live session, improving playback availability and upload reliability.
-* Fixed: Touch and gesture events were not captured when touch handling was routed through certain window configurations.
-* Fixed: Frame orientation was recorded incorrectly for apps using Flutter on iOS.
-* Improved: The SDK is now compatible with Swift 6 strict concurrency — all completion callbacks and notifications are delivered on the main thread, and AI text occlusion is thread-safe.
-* Improved: Capture colorspace now matches the device display gamut, improving color accuracy in recordings on wide-color displays.
-* Fixed: Upload retry loops for session delivery are now bounded, preventing excessive network activity in error scenarios.
+* Fixed: Gesture capture could attach to the wrong host view, and UXCam gesture recognizers could interfere with the app's own gestures.
+* Improved: Flutter scroll and idle-screen capture performance.
+* Improved: Native capture colour fidelity and performance on wide-gamut (P3) displays.
+* Improved: Upload authorization is now encrypted at rest.
+* Fixed: Upload verify and cancel retries are now bounded so a session always settles instead of retrying indefinitely.
+* Improved: Session verification may use cellular data while artifact uploads stay Wi-Fi-only.
 ### V. 3.10.2 - August 24, 2026
 
 * Added: Opt-in improved WebView capture — enable `UXCamConfiguration.enableImprovedWebViewCapture` to use an isolated-world recorder for higher-fidelity WebView session recording.
