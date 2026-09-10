@@ -17,6 +17,13 @@ metadata:
 
 <br />
 
+### V. 3.10.10 - September 10, 2026
+
+* Fix (occlusion): WebView occlusion re-scans the view hierarchy when cached view references have expired, so sensitive content stays masked during rapid frame transitions rather than appearing unmasked
+* Fix (screenshot): WebView observation is unified with stale-poll protection, so capture behaviour is consistent across all WebView lifecycle states
+* Fix (screenshot): WebView sensitive regions are masked with precise bounded coverage per region rather than blurring the entire WebView viewport when geometry is uncertain
+* Fix (upload): Sessions are no longer discarded when an upload receives an authorization refusal — the SDK refreshes credentials and retries, preserving session data
+* Fix (stability): Upload manifest writes now use correct lock semantics, preventing a potential crash in apps using R8 or ProGuard code shrinking during session upload
 ### V. 3.10.9 - August 25, 2026
 
 * Fix (occlusion): WebView occlusion is now frame-accurate — masks land on the pixels they were measured for during scroll, navigation, and fast motion
