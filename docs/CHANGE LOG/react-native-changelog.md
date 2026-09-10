@@ -15,6 +15,10 @@ metadata:
 
 <br />
 
+### V. 6.0.23 - September 10, 2026
+
+* Updated iOS SDK to 3.11.0 and Android SDK to 3.10.10
+* Occluded views are now bound to the native view lifecycle for more reliable view masking behaviour
 ### V. 6.0.22 - August 25, 2026
 
 * Updated iOS SDK to 3.10.2 and Android SDK to 3.10.9
