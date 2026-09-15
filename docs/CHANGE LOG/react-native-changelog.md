@@ -15,6 +15,9 @@ metadata:
 
 <br />
 
+### V. 6.0.24 - September 15, 2026
+
+* Updated Android SDK to 3.11.0
 ### V. 6.0.23 - September 10, 2026
 
 * Updated iOS SDK to 3.11.0 and Android SDK to 3.10.10
