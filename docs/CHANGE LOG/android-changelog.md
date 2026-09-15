@@ -17,6 +17,11 @@ metadata:
 
 <br />
 
+### V. 3.11.0 - September 15, 2026
+
+* Enhance (screenshot): Added opt-in improved WebView capture — enable `enableImprovedWebViewCapture` to reconstruct WebView recordings from sanitized DOM snapshots instead of screen pixels, giving more accurate session replays for apps with WebView content
+* Fix (session): Resolved an issue where sessions could receive a blank backend identity after verification, causing repeated re-verification attempts and unreliable session continuity
+* Fix (stability): Corrected the ordering of session stop relative to app visibility changes, preventing edge-case data loss or incorrect upload behaviour during app lifecycle transitions
 ### V. 3.10.10 - September 10, 2026
 
 * Fix (occlusion): WebView occlusion re-scans the view hierarchy when cached view references have expired, so sensitive content stays masked during rapid frame transitions rather than appearing unmasked
