@@ -19,25 +19,25 @@ Users support the **same filter attributes as [Sessions](doc:session-endpoints)*
 
 | Data Type | Attribute Name       | Description                                                                                                            |
 | --------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| DateTime  | `user_first_seen_on` | The user's earliest session date within the selected window list endpoint only; not accepted on `/user/analytics`)     |
+| DateTime  | `user_first_seen_on` | The user's earliest session date (within the selected window list endpoint only; not accepted on `/user/analytics`)    |
 | DateTime  | `user_last_seen_on`  | The user's most recent session date within the selected window (list endpoint only; not accepted on `/user/analytics`) |
 
 ## Sections
 
 A user record is grouped into five sections. Omitting `show_only` returns the default set `["usage"]` — pass it to request more:
 
-| Section          | Contents                                                                                                                                                   |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `property`       | Custom user properties. For web users, also first-touch attribution (`initialLandingUTM`, `initialReferer`, `initialRefererDomain`, `initialLandingPage`). |
-| `usage`          | Per-user aggregates for the queried window, plus `registeredOn` / `lastseenOn` and an all-time `totalLifetime` block.                                      |
-| `location`       | `countryCode`, `city`, `country`.                                                                                                                          |
-| `deviceBasics`   | Identity + OS snapshot: `deviceId`, `appVersion`, `osVersion`; web also adds `os`, `browser`, `browserVersion`, `type`.                                    |
-| `deviceHardware` | Physical device (mobile only): `model`, `platform`. Empty `{}` for web. Request `device` to get both device sub-sections.                                  |
+| Section          | Contents                                                                                                                                                         |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `property`       | Custom user properties. For web users, also first-touch attribution (`initialLandingUTM`, `initialReferer`, `initialRefererDomain`, `initialLandingPage`).       |
+| `usage`          | Per-user aggregates for the queried window, plus `registeredOn` / `lastseenOn` and an all-time `totalLifetime` block. Web users omit `unresponsiveGestureCount`. |
+| `location`       | `countryCode`, `city`, `country`.                                                                                                                                |
+| `deviceBasics`   | Identity + OS snapshot: `deviceId`, `appVersion`, `osVersion`; web also adds `os`, `browser`, `browserVersion`, `type`.                                          |
+| `deviceHardware` | Physical device (mobile only): `model`, `platform`. Empty `{}` for web. Request `device` to get both device sub-sections.                                        |
 
 <Callout icon="📘" theme="info">
   ### Note
 
-  Top-level `usage` counts are **scoped to the queried window** (default: last 30 days). The nested `totalLifetime` block carries all-time cumulative totals, so an ETL job can keep running totals without overwriting them from a single window. Web users omit `unresponsiveGestureCount`.
+  Top-level `usage` counts are **scoped to the queried window** (default: last 30 days). The nested `totalLifetime` block carries all-time cumulative totals, so an ETL job can keep running totals without overwriting them from a single window.&#x20;
 </Callout>
 
 ## List users
