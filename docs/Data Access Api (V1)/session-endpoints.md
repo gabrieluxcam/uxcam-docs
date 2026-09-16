@@ -104,7 +104,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
 
 ### Response Structure
 
-When with_video is set, Sessions without a playable recording have no `video` key at all (it is omitted, not `null`). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
+Response data organises into keys: session properties under `property`, device information under `device`, user properties under `user`, and location data under `location`. When `with_video` is set, sessions with a playable recording carry a `video` key holding a time-limited signed replay link — this covers archived replays too (a recording moved to archive storage after the retention period still gets a working link). The `video` key is **omitted** for any session without a resolvable link (no recording, or `with_video` not requested), so its presence always means a link is available. The lookup is best-effort — a session whose link can't be produced is returned without a `video` key and the request still succeeds. To query by recording existence, filter on `session_has_video`.
 
 ```json
 {
