@@ -33,7 +33,7 @@ The following table outlines all valid attributes for performing aggregations, f
 | Device             | String          | `device_model`                       | ...         | Filter · Group       |
 | Device             | String          | `device_os_version`                  | ...         | Filter · Group       |
 | Device             | String          | `device_platform`                    | ...         | Filter · Group       |
-| Session Property   | String          | `event_name`                         | ...         | Filter               |
+| Session Property   | String          | `event_name`                         | ...         | Filter (list only)   |
 | Session Property   | String          | `sdk_version`                        | ...         | Filter · Group       |
 | Session Property   | Bool String     | `session_crashed`                    | ...         | Filter               |
 | Session Property   | Integer         | `session_duration`                   | ...         | Filter · Aggregate   |
@@ -48,13 +48,13 @@ The following table outlines all valid attributes for performing aggregations, f
 | Session Property   | Integer         | `session_unique_screen_count`        | ...         | Filter · Aggregate   |
 | Session Property   | Count           | `session_unique_user_count`          | ...         | **Aggregate only**   |
 | Session Property   | Integer         | `session_unresponsive_gesture_count` | ...         | Filter · Aggregate   |
-| Session Property   | DateTime String | `session_uploaded_month`             | ...         | **Group only**       |
-| Session Property   | DateTime String | `session_uploaded_week`              | ...         | **Group only**       |
-| Session Property   | DateTime String | `session_uploadedon_day`             | ...         | **Group only**       |
+| Session Property   | DateTime String | `session_recorded_month`             | ...         | **Group only**       |
+| Session Property   | DateTime String | `session_recorded_week`              | ...         | **Group only**       |
+| Session Property   | DateTime String | `session_recordedon_day`             | ...         | **Group only**       |
 | Session Property   | String          | `session_id`                         | ...         | Filter               |
 | User               | String          | `device_city`                        | ...         | Filter · Group       |
 | User               | String          | `device_country`                     | ...         | Filter · Group       |
-| User               | String          | `uxcamuserid`                        | ...         | Filter               |
+| User               | String          | `uxcamuserid`                        | ...         | Filter (list only)   |
 | User               | String          | `user_name`                          | ...         | Filter               |
 | User               | JSON            | `user_custom_property`               | ...         | Filter               |
 
@@ -62,21 +62,21 @@ The following table outlines all valid attributes for performing aggregations, f
 
 These additional attributes are available for web sessions.
 
-| Attribute Category | Data Type | Attribute Name              | Description                                       | Usable as      |
-| ------------------ | --------- | --------------------------- | ------------------------------------------------- | -------------- |
-| User               | JSON      | `user_first_utm`            | The UTM of the user's first session               | Filter         |
-| User               | String    | `user_first_referer`        | The referrer URL of the user's first session      | Filter         |
-| User               | String    | `user_first_screen_name`    | First page the user landed on                     | Filter         |
-| User               | String    | `user_first_referer_domain` | The referring domain of the user's first session  | Filter         |
-| Session            | String    | `browser_name`              | User's browser name in a session                  | Filter · Group |
-| Session            | String    | `browser_version`           | User's browser version in a session               | Filter · Group |
-| Session            | String    | `referer`                   | URL that referred the user to the current session | Filter         |
-| Session            | String    | `referer_domain`            | Domain of the referrer URL in a session           | Filter         |
-| Session            | JSON      | `utm`                       | UTM parameters of the session's landing page      | Filter         |
-| Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   | Filter · Group |
-| Session            | String    | `device_type`               | Device type from which sessions are recorded      | Filter · Group |
+| Attribute Category | Data Type | Attribute Name              | Description                                       | Usable as          |
+| ------------------ | --------- | --------------------------- | ------------------------------------------------- | ------------------ |
+| User               | JSON      | `user_first_utm`            | The UTM of the user's first session               | Filter (list only) |
+| User               | String    | `user_first_referer`        | The referrer URL of the user's first session      | Filter             |
+| User               | String    | `user_first_screen_name`    | First page the user landed on                     | Filter             |
+| User               | String    | `user_first_referer_domain` | The referring domain of the user's first session  | Filter             |
+| Session            | String    | `browser_name`              | User's browser name in a session                  | Filter · Group     |
+| Session            | String    | `browser_version`           | User's browser version in a session               | Filter · Group     |
+| Session            | String    | `referer`                   | URL that referred the user to the current session | Filter             |
+| Session            | String    | `referer_domain`            | Domain of the referrer URL in a session           | Filter             |
+| Session            | JSON      | `utm`                       | UTM parameters of the session's landing page      | Filter (list only) |
+| Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   | Filter · Group     |
+| Session            | String    | `device_type`               | Device type from which sessions are recorded      | Filter · Group     |
 
-> This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the upload time-buckets (`session_uploaded_month`, `session_uploaded_week`, `session_uploadedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
+> This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the upload time-buckets (`session_recorded_month`, `session_recorded_week`, `session_recordedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
 
 ## List Sessions
 
@@ -104,7 +104,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
 
 ### Response Structure
 
-When with_video is set, sessions with a playable recording carry a video key holding a time-limited signed replay link — this covers archived replays too (a recording moved to archive storage after the retention period still gets a working link). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
+When with_video is set, sessions with a playable recording carry a video key holding a time-limited signed replay link — this covers archived replays too (a recording moved to archive storage after the retention period still gets a working link). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. Sessions without a playable recording have no `video` key at all (it is omitted, not `null`). The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
 
 ```json
 {
@@ -140,7 +140,7 @@ When with_video is set, sessions with a playable recording carry a video key hol
         "deviceId": "03c1e123941a19ec", "type": "Phone", "language": "English", "country": "USA"
       },
       "deviceHardware": {
-        "producer": "Huawei", "dpi": -1, "width": 1080, "height": 2340,
+        "manufacturer": "Huawei", "dpi": -1, "width": 1080, "height": 2340,
         "model": "JKM-LX1", "class": "Android Large", "platform": "android"
       },
       "devicePerformance": { "totalRamInMB": 2815, "freeRamInMB": null, "totalStorageInMB": 11289 },
@@ -184,13 +184,22 @@ Send a JSON body with any of `filters`, `group_by`, `aggregation`, `comparison`,
 | `avg_session_unresponsive_gesture_count` | Average unresponsive gestures per session |
 | `avg_session_unique_screen_count`        | Average unique screens per session        |
 
+### Supported aggregations
+
+| Attribute                                                                                                                             | Operators    | Output key                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------- |
+| `session_count`, `session_unique_user_count`, `session_new_users_count`                                                               | `count`      | same as attribute                              |
+| `session_duration`                                                                                                                    | `avg`, `sum` | `avg_session_duration`, `sum_session_duration` |
+| `session_gesture_count`, `session_screen_count`, `session_event_count`                                                                | `avg`        | `avg_<attribute>`                              |
+| `session_rage_gesture_count`, `session_responsive_gesture_count`, `session_unresponsive_gesture_count`, `session_unique_screen_count` | `avg`        | `avg_<attribute>`                              |
+
 **Group-by dimensions** — pass in `group_by` (up to two):
 
 - **Device** — `device_model`, `device_manufacturer`, `device_class`, `device_os_version`, `device_os_name`, `device_type`, `device_platform`
 - **App / SDK** — `app_version`, `sdk_version`
 - **Location** — `device_country`, `device_city`
 - **Browser** (web) — `browser_name`, `browser_version`
-- **Time bucket** — `session_uploaded_month`, `session_uploaded_week`, `session_uploadedon_day`
+- **Time bucket** — `session_recorded_month`, `session_recorded_week`, `session_recordedon_day`
 
 ```curl
 curl -X POST https://tara.uxcam.com/api/data-access/v1/session/analytics \
