@@ -15,7 +15,7 @@ The UXCam **Data Access API** is built on REST principles with predictable, reso
 ### Go ahead and try out our REST APIs with credentials on Postman)
 
 
-[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBY4JxP93)
+[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" border={true} framed={true} wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBYB1M8Ei)
 
 
 <br />
