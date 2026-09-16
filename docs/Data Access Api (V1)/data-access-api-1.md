@@ -65,7 +65,7 @@ Every request needs two things — the application it targets and a secret key t
 <Callout icon="🚧" theme="warn">
   ### Important
 
-  The API key is a secret. Send it only in the `X-Api-Key` header, never in the URL or query string. Requests missing either the header or `app_id` are rejected with `401 MISSING_CREDENTIALS`.
+  The API key is a secret. Send it only in the `X-Api-Key` header, never in the URL or query string. Requests missing either the header or `app_id` are rejected with `401 MISSING_CREDENTIALS`. A valid key on a plan without the Data Access API is rejected with `403 PLAN_FEATURE_DISABLED`.
 </Callout>
 
 ### Get your authentication parameters
@@ -157,7 +157,7 @@ Every successful response uses the same top-level shape:
 
 ## Rate limits
 
-Limits are enforced per `app_id`:
+Limits are enforced per API key (each app has exactly one key):
 
 - Up to **5 requests per second**
 - Up to **500 requests per hour**
