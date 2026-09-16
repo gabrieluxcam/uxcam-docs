@@ -76,7 +76,7 @@ These additional attributes are available for web sessions.
 | Session            | String    | `device_os_name`            | Device OS name from which sessions are recorded   | Filter · Group     |
 | Session            | String    | `device_type`               | Device type from which sessions are recorded      | Filter · Group     |
 
-> This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the upload time-buckets (`session_recorded_month`, `session_recorded_week`, `session_recordedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
+> This table combines attributes usable for **filtering**, **grouping**, and **aggregation** — not every attribute supports all three. In particular, the **count** metrics (`session_new_users_count`, `session_unique_user_count`) and the recorded time-buckets (`session_recorded_month`, `session_recorded_week`, `session_recordedon_day`) are for `group_by`**&#x20;/&#x20;**`aggregation`**&#x20;only** — using them in `filters` returns `400`. To restrict by date, use `date_range`.
 
 ## List Sessions
 
@@ -104,7 +104,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
 
 ### Response Structure
 
-When with_video is set, sessions with a playable recording carry a video key holding a time-limited signed replay link — this covers archived replays too (a recording moved to archive storage after the retention period still gets a working link). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. Sessions without a playable recording have no `video` key at all (it is omitted, not `null`). The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
+When with_video is set, Sessions without a playable recording have no `video` key at all (it is omitted, not `null`). The video key is omitted for any session without a resolvable link (no recording, or with_video not requested), so its presence always means a link is available. The lookup is best-effort — a session whose link can't be produced is returned without a video key and the request still succeeds. To query by recording existence, filter on session_has_video
 
 ```json
 {
