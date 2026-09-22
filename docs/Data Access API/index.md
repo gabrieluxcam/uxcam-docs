@@ -70,6 +70,10 @@ All API requests require two authentication parameters:
   <Card title="Query Parameters" href="api-query-parameters" icon="fa-solid fa-filter">
     Filtering and pagination options
   </Card>
+
+  <Card title="Data Deletion" href="data-deletion-api" icon="fa-solid fa-trash">
+    Erase users and sessions for GDPR/CCPA requests
+  </Card>
 </Cards>
 
 ---
@@ -160,13 +164,7 @@ def export_sessions(start_date, end_date):
 
 ### User Deletion (GDPR)
 
-Delete user data for compliance requests:
-
-```bash
-curl -X DELETE "https://api.uxcam.com/v2/users/user_12345" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY"
-```
+Erasure is a separate API with its own key. Submit users or sessions to `POST /v2/deletion`; see the [Data Deletion API](data-deletion-api).
 
 ### Session Lookup
 
@@ -199,5 +197,6 @@ Exceeding rate limits returns `429 Too Many Requests`.
 
 ## See Also
 
+- [Data Deletion API](/docs/data-deletion-api) - Erase users and sessions programmatically
 - [SDK Reference](/docs/sdk-reference) - Mobile/Web SDK methods
 - [Privacy and Compliance](/docs/privacy-and-compliance) - GDPR/CCPA handling
