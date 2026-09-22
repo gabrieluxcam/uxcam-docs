@@ -2,7 +2,7 @@
 title: Data Deletion API
 excerpt: Programmatically erase users and sessions to honour GDPR and CCPA deletion requests
 deprecated: false
-hidden: false
+hidden: true
 metadata:
   title: 'Data Deletion API - UXCam'
   description: 'REST API for programmatic erasure of UXCam users and sessions (GDPR Art. 17 / CCPA)'
