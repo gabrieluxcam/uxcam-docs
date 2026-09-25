@@ -51,6 +51,39 @@ Common reasons why styles may not load:
 
 Learn how to fix CORS issues here → [Troubleshooting](troubleshooting#)
 
+### 5. Does UXCam record bots, crawlers, or automated browsers?
+
+No. Before it starts, the Web SDK checks whether the visitor is a bot, crawler, link-preview service, monitoring tool, or automated test browser. If it is, the SDK does not start. Nothing is recorded or sent to UXCam, so these visits never appear as sessions and don't count toward your session limit.
+
+This check is on by default and cannot be turned off.
+
+**User agents that are skipped**
+
+The SDK skips any visitor whose user agent contains one of these keywords. Matching is not case-sensitive.
+
+| Category | Keywords |
+|---|---|
+| Generic bots and crawlers | `bot`, `crawl`, `spider`, `slurp`, `mediapartners` |
+| Search engines | `googlebot`, `bingbot`, `yandex`, `baidu`, `duckduck` |
+| Social and messaging link previews | `facebookexternalhit`, `twitterbot`, `linkedinbot`, `whatsapp`, `slack`, `telegram`, `discord` |
+| Headless browsers and test automation | `headless`, `phantom`, `selenium`, `puppeteer`, `playwright` |
+| Performance and SEO tools | `prerender`, `lighthouse`, `pagespeed`, `gtmetrix` |
+| Uptime monitoring | `pingdom`, `uptimerobot`, `statuscake` |
+
+Because matching is by keyword, any user agent containing `bot` is skipped, including crawlers not named above (for example `AhrefsBot` or `GPTBot`).
+
+**Other checks**
+
+The SDK also skips the visit when:
+
+* The browser reports that it is controlled by automation (`navigator.webdriver` is `true`). Selenium, Playwright, and Puppeteer set this by default.
+* The browser is not Chrome-based, Safari, or Firefox, and reports no preferred languages (`navigator.languages` is empty).
+* PhantomJS or Nightmare is detected (`window._phantom`, `window.callPhantom`, or `window.__nightmare` is present).
+
+> 📘 **Testing your installation**
+>
+> Sessions from Playwright, Selenium, Puppeteer, Lighthouse, and similar tools are not recorded. To confirm that UXCam is working, open your site in a regular browser window.
+
 ## Support
 
 For questions or support, reach out to us at [team@uxcam.com](mailto:team@uxcam.com).
