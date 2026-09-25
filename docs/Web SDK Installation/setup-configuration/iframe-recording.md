@@ -19,6 +19,10 @@ Record user interactions inside iframes with the UXCam Web SDK.
 
 > **Note:** UXCam supports **Level 1 iframes only**, meaning direct children of the main document. Deeper nesting is not officially supported.
 
+> 🚧 **Flutter Web**
+>
+> Iframe recording is not supported in Flutter Web apps. Flutter Web sessions are captured from the Flutter canvas, and iframes sit outside it, so they appear blank in the replay. See [Flutter Web Platform Support](/docs/flutter-web-platform-support).
+
 ---
 
 ## Prerequisites
