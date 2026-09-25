@@ -41,6 +41,10 @@ Flutter Web sessions are **video-based** rather than DOM-based, so the replay ex
 
 Mouse cursor movement is not rendered in the replay. Instead, you'll see tap gesture indicators on the video — the same way they appear in mobile session replays.
 
+### Replays may open with a brief white screen
+
+A Flutter Web replay can start with a white screen for a moment before your app appears. This is expected: it covers the short time between UXCam starting and the first frame of your app being captured. Gestures, screens, and events are aligned with the video from the start of the session, so nothing is lost or shifted.
+
 ### Iframes appear blank
 
 Iframes are not supported on Flutter Web. Any iframe embedded in your Flutter Web app, for example through `HtmlElementView`, shows up as a blank area in the session replay.
