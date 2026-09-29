@@ -1,11 +1,15 @@
 ---
 title: App Clips & App Extensions
-excerpt: Record sessions from an App Clip or an app extension and hand them to your main app
+excerpt: >-
+  Record sessions from an App Clip or an app extension and hand them to your
+  main app
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   title: App Clips & App Extensions - UXCam iOS
-  description: Set up UXCam inside an iOS App Clip or app extension, share storage with the main app through an App Group, and understand what is and is not captured.
+  description: >-
+    Set up UXCam inside an iOS App Clip or app extension, share storage with the
+    main app through an App Group, and understand what is and is not captured.
   robots: index
 ---
 > 📘 Requires UXCam iOS SDK **3.10.0 or later**. Check the [iOS changelog](https://developer.uxcam.com/docs/ios-sdk-change-log) for your version.
