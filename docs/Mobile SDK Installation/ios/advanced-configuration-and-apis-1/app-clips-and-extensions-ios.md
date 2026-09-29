@@ -45,7 +45,7 @@ pod 'UXCam'   // in the App Clip target as well
 
 ### 2. Start UXCam in the clip
 
-Use the **same app key** as the main app so both appear under one app in the dashboard. Nothing else changes; the SDK sees `NSAppClip` in the clip's `Info.plist` and switches to clip mode.
+Use the **same app key** as the main app. A different key is not supported; sessions from the clip appear under the same app in the dashboard. Nothing else changes; the SDK sees `NSAppClip` in the clip's `Info.plist` and switches to clip mode.
 
 ```swift iOS
 import UXCam
@@ -81,7 +81,7 @@ If the group is missing from the entitlement, the SDK logs `App group … is una
 
 ### 1. Add the SDK to the extension target
 
-Add the package or pod to the extension target. Extensions ship with a stricter memory budget than apps, so test on a real device.
+Add the package or pod to the extension target and use the **same app key** as the main app. Extensions ship with a stricter memory budget than apps, so test on a real device.
 
 ### 2. Pass the extension's window
 
@@ -118,7 +118,7 @@ Extensions are short-lived and are often terminated before an upload finishes. C
 * The next time the main app starts UXCam, it adopts those sessions and uploads them like its own.
 * The extension reads the opt-in / opt-out decision the main app saved and never changes it.
 
-Without an App Group, pending sessions stay in the extension's own cache and are retried the next time the extension runs.
+Without an App Group, pending sessions are not dropped: they stay in the extension's own cache and are uploaded the next time the extension runs.
 
 ***
 
