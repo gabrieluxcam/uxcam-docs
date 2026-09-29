@@ -192,11 +192,30 @@ The child **must** set `recordCrossOriginIframes: true`.
 
 ## Privacy
 
-Redact sensitive iframe content with the `data-uxc` attribute:
+Mask an iframe's content with the `data-uxc="obfuscated"` attribute. Where you put it depends on whether the iframe is same-site or cross-site.
+
+### Same-site iframes
+
+Add the attribute to the `<iframe>` element, or to any element that contains it, such as `<body>`. The parent SDK records the iframe's document itself, so the mask covers everything inside it: text, form values, and image and video sources. Nothing needs to change in the iframe page.
 
 ```html
 <iframe src="/payment-form.html" data-uxc="obfuscated"></iframe>
 ```
+
+### Cross-site iframes
+
+The parent page can't read a cross-site iframe's content, so a mask set on the parent can't reach inside it. The iframe is recorded by its own SDK, so mask it in the iframe page: add the attribute to that page's `<html>` element.
+
+```html
+<!-- Child: https://third-party.example.com/widget.html -->
+<html data-uxc="obfuscated">
+```
+
+If the parent masks a cross-site iframe (on the `<iframe>` or an element above it) and the iframe page doesn't mask its own `<html>`, UXCam records none of the iframe's content, and the iframe appears empty in the replay. Custom events sent from inside the iframe are still recorded.
+
+> 🚧 **Mask the whole iframe page**
+>
+> When the parent masks a cross-site iframe, masking only part of the iframe page, such as one form, isn't enough: the iframe page must mask its `<html>`. To mask only part of a cross-site iframe, don't mask the iframe on the parent. Add `data-uxc="obfuscated"` to the elements you want hidden in the iframe page instead.
 
 ---
 
@@ -221,7 +240,7 @@ Redact sensitive iframe content with the `data-uxc` attribute:
   ```
   Content-Security-Policy: frame-ancestors 'self' https://trusted-parent.example.com;
   ```
-- **Redact sensitive iframes.** Add `data-uxc="obfuscated"` to iframes containing payment forms, login pages, or personal data entry fields. The content is obscured in session replays while the interaction itself is still captured.
+- **Redact sensitive iframes.** Add `data-uxc="obfuscated"` to iframes containing payment forms, login pages, or personal data entry fields. The content is obscured in session replays while the interaction itself is still captured. For a cross-site iframe, add it to the iframe page's own `<html>` element as well. See [Privacy](#privacy).
 - **Use the same App Key across parent and child.** Mismatched App Keys cause the parent SDK to silently reject cross-origin messages. Verify both pages reference the same key.
 - **Audit iframe sources regularly.** If your page dynamically loads iframes from external sources, periodically review which origins are being recorded to avoid capturing data from untrusted domains.
 

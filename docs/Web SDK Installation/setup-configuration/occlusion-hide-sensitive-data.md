@@ -98,3 +98,5 @@ To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to th
 ```javascript
 <div data-uxc="obfuscated">Sensitive Content</div>
 ```
+
+The attribute masks the element and everything inside it, including same-site iframes. Cross-site iframes need the attribute in the iframe page itself; see [Iframe Recording: Privacy](/docs/iframe-recording#privacy).
