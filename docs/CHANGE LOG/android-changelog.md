@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.11.1 - September 29, 2026
+
+* Fix (occlusion): WebView masking is now bounded to the WebView itself, applied before the first frame is captured, and covers every recycler list row sharing an occluded view ID, preventing sensitive content from appearing unmasked during navigation and rapid layout changes
+* Fix (session): Resolved an issue where a session verified while the app was in the background was replayed as a new session on the next foreground; sessions also now stop cleanly even when a frame capture stalls
+* Fix (session): Offline sessions without a backend ID are now re-verified automatically on the next app launch and proceed to upload with a bounded retry budget and backoff; sessions recorded on cached settings are correctly reported as offline to the backend
+* Fix (upload): Each session's upload credentials are now stored encrypted in its upload manifest, allowing sessions to authenticate their upload securely across app restarts without requiring re-verification
+* Fix (session): Sessions excluded by the data filter no longer upload their video on a subsequent launch, and session data and video now upload in parallel for faster session delivery
+* Fix (stability): Corrected lock semantics for checkpoint and video state to prevent crashes in apps using R8 or ProGuard code shrinking
 ### V. 3.11.0 - September 15, 2026
 
 * Enhance (screenshot): Added opt-in improved WebView capture — enable `enableImprovedWebViewCapture` to reconstruct WebView recordings from sanitized DOM snapshots instead of screen pixels, giving more accurate session replays for apps with WebView content
