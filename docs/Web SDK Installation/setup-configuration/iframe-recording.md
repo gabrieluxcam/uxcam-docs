@@ -192,7 +192,7 @@ The child **must** set `recordCrossOriginIframes: true`.
 
 ## Privacy
 
-Mask an iframe's content with the `data-uxc="obfuscated"` attribute. Where you put it depends on whether the iframe is same-site or cross-site.
+Mask an iframe's content with the `data-uxc="obfuscated"` attribute (or `data-uxc="mask"`, which means the same), or with the `occlusion.mask` option. Where you put it depends on whether the iframe is same-site or cross-site. See [Occlusion - Hide Sensitive Data](/docs/occlusion-hide-sensitive-data#masking-page-content) for how `mask` and `unmask` work.
 
 ### Same-site iframes
 
@@ -201,6 +201,8 @@ Add the attribute to the `<iframe>` element, or to any element that contains it,
 ```html
 <iframe src="/payment-form.html" data-uxc="obfuscated"></iframe>
 ```
+
+The `occlusion.mask` and `occlusion.unmask` options apply inside same-site iframes too. `mask: ['html']` masks them, because each iframe page has its own `<html>`, and a `data-uxc="unmask"` inside the iframe page shows that part.
 
 ### Cross-site iframes
 
@@ -212,6 +214,11 @@ The parent page can't read a cross-site iframe's content, so a mask set on the p
 ```
 
 If the parent masks a cross-site iframe (on the `<iframe>` or an element above it) and the iframe page doesn't mask its own `<html>`, UXCam records none of the iframe's content, and the iframe appears empty in the replay. Custom events sent from inside the iframe are still recorded.
+
+This includes `occlusion.mask: ['html']` on the parent, which covers every iframe on the page. For the iframe to be recorded, do one of these:
+
+- Mask the iframe page too: give its SDK the same `occlusion.mask` option, or add `data-uxc="mask"` to its `<html>`. Its own `unmask` settings then decide what is shown.
+- Unmask the iframe on the parent, for example `unmask: ['iframe.chat-widget']`. The iframe page's SDK then records it according to that page's own settings.
 
 > 🚧 **Mask the whole iframe page**
 >

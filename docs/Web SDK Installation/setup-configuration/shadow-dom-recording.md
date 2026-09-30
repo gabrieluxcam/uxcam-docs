@@ -84,7 +84,7 @@ Any library that uses the browser's native shadow DOM is supported. This include
 
 Nested components, styles inside shadow roots (including `adoptedStyleSheets`), and DOM changes after page load are all recorded.
 
-Occlusion works the same way inside shadow roots. Elements marked with `data-uxc="obfuscated"` and sensitive input types are hidden as usual. See [Occlusion - Hide Sensitive Data](occlusion-hide-sensitive-data#).
+Occlusion works the same way inside shadow roots. `data-uxc="mask"` (or `obfuscated`) and `data-uxc="unmask"` markers, the `occlusion.mask` and `occlusion.unmask` selectors, and sensitive input types all apply. A mask on a component's host masks everything the component renders, and an `unmask` inside the component still shows that part. See [Occlusion - Hide Sensitive Data](occlusion-hide-sensitive-data#masking-page-content).
 
 ---
 

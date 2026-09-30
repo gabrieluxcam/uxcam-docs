@@ -273,11 +273,22 @@ Here is an example of initializing the SDK with an application version and occlu
 
 ## Occlusion of HTML Elements
 
-To occlude specific HTML elements, add the attribute `data-uxc="obfuscated"` to the elements you want to occlude.
+To occlude specific HTML elements, add the attribute `data-uxc="mask"` to them. `data-uxc="obfuscated"` still works and means the same. The element and everything inside it are masked.
+
+```html
+<div data-uxc="mask">Sensitive Content</div>
+```
+
+You can also list CSS selectors in the `occlusion` option. To mask the whole page and show only selected parts, mask `html` and unmask the parts to keep:
 
 ```javascript
-<div data-uxc="obfuscated">Sensitive Content</div>
+occlusion: {
+  mask: ['html'],
+  unmask: ['header', 'nav', '.product-list']
+}
 ```
+
+The nearest `mask` or `unmask` above an element decides, and password and card fields always stay masked. See [Occlusion - Hide Sensitive Data](/docs/occlusion-hide-sensitive-data#masking-page-content) for the full rules.
 
 ## Conclusion
 
