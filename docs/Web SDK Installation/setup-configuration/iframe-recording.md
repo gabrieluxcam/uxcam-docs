@@ -192,7 +192,7 @@ The child **must** set `recordCrossOriginIframes: true`.
 
 ## Privacy
 
-Mask an iframe's content with the `data-uxc="obfuscated"` attribute (or `data-uxc="mask"`, which means the same), or with the `occlusion.mask` option. Where you put it depends on whether the iframe is same-site or cross-site. See [Occlusion - Hide Sensitive Data](/docs/occlusion-hide-sensitive-data#masking-page-content) for how `mask` and `unmask` work.
+Mask an iframe's content with the `data-uxc="obfuscated"` attribute, or with the `occlusion.mask` option. Where you put it depends on whether the iframe is same-site or cross-site. See [Occlusion - Hide Sensitive Data](/docs/occlusion-hide-sensitive-data#masking-page-content) for how `mask` and `unmask` work.
 
 ### Same-site iframes
 
@@ -217,7 +217,7 @@ If the parent masks a cross-site iframe (on the `<iframe>` or an element above i
 
 This includes `occlusion.mask: ['html']` on the parent, which covers every iframe on the page. For the iframe to be recorded, do one of these:
 
-- Mask the iframe page too: give its SDK the same `occlusion.mask` option, or add `data-uxc="mask"` to its `<html>`. Its own `unmask` settings then decide what is shown.
+- Mask the iframe page too: give its SDK the same `occlusion.mask` option, or add `data-uxc="obfuscated"` to its `<html>`. Its own `unmask` settings then decide what is shown.
 - Unmask the iframe on the parent, for example `unmask: ['iframe.chat-widget']`. The iframe page's SDK then records it according to that page's own settings.
 
 > 🚧 **Mask the whole iframe page**

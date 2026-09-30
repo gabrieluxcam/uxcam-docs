@@ -98,14 +98,14 @@ occlusion: {
 
 ### Masking page content
 
-Choose what to hide with the `data-uxc` attribute in your HTML, or with CSS selectors in the `occlusion` option. Both use the same two values:
+Choose what to hide with the `data-uxc` attribute in your HTML:
 
-| Value | Effect |
+| Attribute | Effect |
 |:------|:-------|
-| `mask` | Hides the element and everything inside it. |
-| `unmask` | Shows the element and everything inside it again, inside a masked area. |
+| `data-uxc="obfuscated"` | Hides the element and everything inside it. |
+| `data-uxc="unmask"` | Shows the element and everything inside it again, inside an obfuscated area. |
 
-`data-uxc="obfuscated"` still works. It means the same as `mask`.
+The `occlusion` option does the same with CSS selectors, without changing your HTML: `occlusion.mask` works like adding `data-uxc="obfuscated"` to every matching element, and `occlusion.unmask` like adding `data-uxc="unmask"`.
 
 A masked element looks like this in the replay:
 
@@ -122,7 +122,7 @@ Masking happens in the browser, so masked content never reaches UXCam.
 Add the attribute to the element:
 
 ```html
-<div data-uxc="mask">Account balance: $1,234.56</div>
+<div data-uxc="obfuscated">Account balance: $1,234.56</div>
 ```
 
 Or list CSS selectors, without changing your HTML:
@@ -147,7 +147,7 @@ occlusion: {
 The same with attributes:
 
 ```html
-<html data-uxc="mask">
+<html data-uxc="obfuscated">
   <body>
     <header data-uxc="unmask">...</header>
   </body>
@@ -158,19 +158,19 @@ Use `html` rather than `body`, so the page title is masked too.
 
 #### Which rule wins
 
-UXCam checks the element, then each of its parents in turn. The first `mask` or `unmask` it finds, from an attribute or a selector, decides:
+UXCam checks the element, then each of its parents in turn. The first one it finds that is obfuscated (by the attribute or a `mask` selector) or unmasked (by the attribute or an `unmask` selector) decides:
 
-- An `unmask` inside a masked area shows that part.
-- A `mask` inside an unmasked area hides that part again.
-- If an element has both a `mask` and an `unmask`, for example because it matches selectors in both lists, it's masked.
-- Content with no `mask` or `unmask` above it is recorded as usual, apart from the fields in the table above.
+- An unmasked element inside an obfuscated area is shown.
+- An obfuscated element inside an unmasked area is hidden again.
+- If an element is both obfuscated and unmasked, for example because it matches selectors in both lists, it's masked.
+- Content with nothing obfuscated or unmasked above it is recorded as usual, apart from the fields in the table above.
 
 ```html
-<section data-uxc="mask">
-  <p>Jane Doe</p>                             <!-- masked -->
+<section data-uxc="obfuscated">
+  <p>Jane Doe</p>                                   <!-- masked -->
   <div data-uxc="unmask">
-    <p>Order status: shipped</p>              <!-- shown -->
-    <p data-uxc="mask">Card ending 4242</p>   <!-- masked -->
+    <p>Order status: shipped</p>                    <!-- shown -->
+    <p data-uxc="obfuscated">Card ending 4242</p>   <!-- masked -->
   </div>
 </section>
 ```
@@ -178,7 +178,7 @@ UXCam checks the element, then each of its parents in turn. The first `mask` or 
 #### Sensitive input fields
 
 - **Always masked:** password fields, hidden fields, and fields whose name or autocomplete contains `password` or `cc-`. No `unmask` can show them.
-- **Masked unless you target the field:** email, phone and number fields, and fields whose name or autocomplete suggests an email, phone number or address. They stay masked inside an unmasked area. To show one, put the `unmask` on the field itself:
+- **Masked unless you target the field:** email, phone and number fields, and fields whose name or autocomplete suggests an email, phone number or address. They stay masked inside an unmasked area. To show one, unmask the field itself:
 
 ```javascript
 occlusion: {
@@ -189,11 +189,11 @@ occlusion: {
 
 > 🚧 **Broad unmask selectors**
 >
-> A selector such as `input`, `p` or `*` matches many elements directly, including fields, and elements inside areas marked `data-uxc="mask"` or `data-uxc="obfuscated"`. Email, phone and number fields matched this way are shown. Prefer specific selectors, such as `#promo-code` or `.product-list`.
+> A selector such as `input`, `p` or `*` matches many elements directly, including fields, and elements inside areas marked `data-uxc="obfuscated"`. Email, phone and number fields matched this way are shown. Prefer specific selectors, such as `#promo-code` or `.product-list`.
 
 #### Iframes and shadow DOM
 
-- Masking works inside shadow DOM: a mask on a component's host masks everything it renders, and an `unmask` inside the component still shows that part.
+- Masking works inside shadow DOM: obfuscating a component's host masks everything it renders, and an `unmask` inside the component still shows that part.
 - Masking reaches into same-site iframes. `mask: ['html']` masks them too, because each iframe page has its own `<html>`.
 - A cross-site iframe is recorded by the SDK in the iframe page, so it follows that page's own attributes and `occlusion` options. See [Iframe Recording: Privacy](/docs/iframe-recording#privacy).
 
