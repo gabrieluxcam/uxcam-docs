@@ -16,13 +16,13 @@ Stops recording and closes the connection. The session is not uploaded, does not
 ```javascript
 uxc.abort();
 
-//Example
-<button id="decline">Decline analytics</button>
-
-<script>
-const button = document.querySelector('#decline');
-button.addEventListener('click', () => uxc.abort());
-</script>
+//Example: don't record internal pages
+// (wait for 'load' so the SDK is ready)
+window.addEventListener('load', () => {
+  if (window.location.pathname.startsWith('/admin')) {
+    uxc.abort();
+  }
+});
 ```
 
 ### What to expect
