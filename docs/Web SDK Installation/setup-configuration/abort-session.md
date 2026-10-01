@@ -11,7 +11,7 @@ To stop recording the current session and prevent it from being uploaded, call `
 
 **uxc.abort()**
 
-Stops recording and closes the connection. The session is not uploaded and does not appear in your UXCam dashboard. The method takes no parameters.
+Stops recording and closes the connection. The session is not uploaded, does not appear in your UXCam dashboard, and does not count towards your session quota. The method takes no parameters.
 
 ```javascript
 uxc.abort();
@@ -32,19 +32,3 @@ button.addEventListener('click', () => uxc.abort());
 * Single-page apps navigate without a page load, so the abort lasts until the user reloads.
 
 <GitHubCallout type="tip">Call `uxc.abort()` as early as possible, ideally before the user interacts with the page, so that nothing has been sent yet.</GitHubCallout>
-
-### Calling before the SDK has loaded
-
-Once the SDK has loaded, `uxc.abort()` is always available. To call it earlier, for example from a consent script that runs before the UXCam script finishes loading, add `abort` to the `window.uxc` object in your snippet. The call is queued and applied as soon as the SDK starts.
-
-```javascript
-window.uxc = {
-    __t: [],
-    __ak: appKey,
-    __o: opts,
-    // ...event, setUserIdentity, setUserProperty and setUserProperties as in the standard snippet
-    abort: function() {
-        this.__t.push(['abort']);
-    },
-};
-```
