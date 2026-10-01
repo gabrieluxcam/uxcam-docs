@@ -9,16 +9,17 @@ The API returns a standard HTTP status code with every response. Successful read
 
 ## Status codes
 
-| Status                  | Reason                 | Description                                                                                                     |
-| ----------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `200`                   | OK                     | The request succeeded.                                                                                          |
-| `400`                   | Bad Request            | The request was malformed — e.g. an invalid cursor, an unknown filter attribute, or an unsupported aggregation. |
-| `401`                   | Unauthorized           | Missing or invalid credentials — no `app_id`/`X-Api-Key`, or the key doesn't match the app.                     |
-| `404`                   | Not Found              | The requested resource doesn't exist.                                                                           |
-| `415`                   | Unsupported Media Type | The request wasn't sent as `application/json`.                                                                  |
-| `422`                   | Unprocessable Entity   | The body failed validation — e.g. `page_size` outside 1–2000, or an unrecognised field.                         |
-| `429`                   | Too Many Requests      | A rate limit was exceeded (see below).                                                                          |
-| `500 / 502 / 503 / 504` | Server Error           | An unexpected server-side condition. Retry after a short delay.                                                 |
+| Status                  | Reason                 | Description                                                                                                                                                                    |
+| ----------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `200`                   | OK                     | The request succeeded.                                                                                                                                                         |
+| `400`                   | Bad Request            | The request was malformed — e.g. an invalid cursor, an unknown filter attribute or operator, a malformed or inverted date filter, or an unsupported aggregation or `group_by`. |
+| `401`                   | Unauthorized           | Missing or invalid credentials — no `app_id`/`X-Api-Key`, or the key doesn't match the app.                                                                                    |
+| `403`                   | Forbidden              | Credentials are valid, but the plan does not include the Data Access API, or the subscription is cancelled or expired.                                                         |
+| `404`                   | Not Found              | The requested resource doesn't exist.                                                                                                                                          |
+| `415`                   | Unsupported Media Type | The request wasn't sent as `application/json`.                                                                                                                                 |
+| `422`                   | Unprocessable Entity   | The body failed validation — e.g. `page_size` outside 1–2000, or an unrecognised field.                                                                                        |
+| `429`                   | Too Many Requests      | A rate limit was exceeded (see below).                                                                                                                                         |
+| `500 / 502 / 503 / 504` | Server Error           | An unexpected server-side condition. Retry after a short delay. A `503` with code `PLAN_CHECK_UNAVAILABLE` means your plan could not be verified; retry.                       |
 
 ## Error body
 
@@ -35,13 +36,16 @@ For most 4xx responses the body carries a stable machine-readable `code` and a h
 
 Switch on `detail.code` (stable) rather than the message text (which may be retuned). Body-validation failures (`422`) use FastAPI's standard validation shape, with `detail` as an array describing each invalid field.
 
-| Code                   | Status | When                                                                                                  |
-| ---------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
-| `MISSING_CREDENTIALS`  | 401    | No `app_id` in the body, or no `X-Api-Key` header.                                                    |
-| `INVALID_CREDENTIALS`  | 401    | The key doesn't match the app (unknown app and wrong key share this code so app ids can't be probed). |
-| `INVALID_REQUEST`      | 400    | A bad cursor, unknown filter attribute, or unsupported aggregation.                                   |
-| `INVALID_CONTENT_TYPE` | 415    | `Content-Type` wasn't `application/json`.                                                             |
-| `RATE_LIMITED`         | 429    | A rate limit was exceeded.                                                                            |
+| Code                     | Status | When                                                                                                                                                                                                                         |
+| ------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MISSING_CREDENTIALS`    | 401    | No `app_id` in the body, or no `X-Api-Key` header.                                                                                                                                                                           |
+| `INVALID_CREDENTIALS`    | 401    | The key doesn't match the app (unknown app and wrong key share this code so app ids can't be probed).                                                                                                                        |
+| `INVALID_REQUEST`        | 400    | A bad cursor, unknown filter attribute, unsupported filter operator, malformed or inverted date filter, unsupported aggregation or `group_by`; on `/event`, a non-`equal` operator or a `device_platform` value outside 1–3. |
+| `PLAN_FEATURE_DISABLED`  | 403    | The Data Access API is not enabled on your current plan.                                                                                                                                                                     |
+| `SUBSCRIPTION_INACTIVE`  | 403    | Your subscription is cancelled or expired.                                                                                                                                                                                   |
+| `PLAN_CHECK_UNAVAILABLE` | 503    | Your plan could not be verified. Retry shortly.                                                                                                                                                                              |
+| `INVALID_CONTENT_TYPE`   | 415    | `Content-Type` wasn't `application/json`.                                                                                                                                                                                    |
+| `RATE_LIMITED`           | 429    | A rate limit was exceeded.                                                                                                                                                                                                   |
 
 ## Rate limiting
 

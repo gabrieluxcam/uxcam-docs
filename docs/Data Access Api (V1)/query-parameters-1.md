@@ -72,7 +72,7 @@ Multiple filters are combined with AND:
 <Callout icon="📘" theme="info">
   ### Note
 
-  Filtering by an attribute the endpoint doesn't recognise fails closed with `400` — you learn the filter was invalid instead of quietly getting unfiltered results. See each endpoint page for its supported attributes and [Filter Operators](doc:filter-operators-1) for operator syntax.
+  Filtering by an attribute the endpoint doesn't recognise fails closed with `400` — you learn the filter was invalid instead of quietly getting unfiltered results. See each endpoint page for its supported attributes and [Filter Operators](doc:filter-operators-1) for operator syntax.The analytics endpoints (`/…/analytics`) accept a narrower set of filter attributes than their list counterparts; attributes marked "list only" on the endpoint pages return `400` there.
 </Callout>
 
 ### Date range

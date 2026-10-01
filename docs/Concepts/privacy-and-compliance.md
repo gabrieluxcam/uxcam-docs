@@ -136,7 +136,7 @@ Some teams prefer **Consent** - requiring explicit user agreement before recordi
 | Right | UXCam Implementation |
 |-------|---------------------|
 | **Right to Access** | Export user data via API or dashboard |
-| **Right to Erasure** | Delete user data via API or dashboard |
+| **Right to Erasure** | Delete user data via the [Data Deletion API](/docs/data-deletion-api) or dashboard |
 | **Right to Restrict Processing** | Use opt-out SDK methods |
 | **Right to Portability** | Export sessions in standard formats |
 
@@ -149,7 +149,7 @@ By default, UXCam uses anonymous device IDs. To enable deletion requests:
 UXCam.setUserIdentity("user_123");
 ```
 
-Sessions can then be deleted by user ID through the dashboard or API.
+Sessions can then be deleted by user ID through the dashboard or the [Data Deletion API](/docs/data-deletion-api), which accepts your `userId` directly.
 
 ### Data Processing Agreement
 

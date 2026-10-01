@@ -21,7 +21,7 @@ metadata:
 
 ## Filtering events
 
-The event list has a focused, fail-closed filter surface — a date window plus the attributes below. Anything else returns `400`. Scalar attributes match by equality; `event_name` also accepts a list (`in`).
+The event list has a focused, fail-closed filter surface — a date window plus the attributes below. Anything else returns `400`. Every attribute accepts only `equal`; `event_name` also accepts `in` with a list. Any other operator returns `400`.
 
 | Attribute                                                                                    | Operator(s)    | Value                                              |
 | -------------------------------------------------------------------------------------------- | -------------- | -------------------------------------------------- |
@@ -41,7 +41,7 @@ An event record groups into four sections. Omitting `show_only` returns the defa
 | `sessionProperty` | The parent session: `sessionId`, `durationSec`, `totalScreen`, `uniqueScreensCount`, `networkType`, `sessionNumber`, `isCrashed`, `country`. |
 | `userProperty`    | The user's id (`uxcamuserid`, `kUXCam_UserIdentity`) plus custom user properties.                                                            |
 | `deviceBasics`    | `deviceId`, `appVersion`, `osVersion`.                                                                                                       |
-| `deviceHardware`  | `model`, `producer`, `class`, `platform`. Request `device` to get both device sub-sections.                                                  |
+| `deviceHardware`  | `model`, `manufacturer`, `class`, `platform`. Request `device` to get both device sub-sections.                                              |
 | `eventProperty`   | The custom properties attached to this event.                                                                                                |
 
 ## List events
@@ -76,6 +76,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
       "eventName": "purchased",
       "eventScreen": "CheckOutRoute",
       "eventDate": "2026-06-28T14:12:07Z",
+      "eventUploadedDate": "2026-06-28T14:12:11Z",
       "eventPropertyTime": 3.42,
       "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
       "sessionProperty": {
@@ -91,7 +92,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
         "deviceId": "03c1e123941a19ec", "appVersion": "1.5", "osVersion": "8.1"
       },
       "deviceHardware": {
-        "model": "JKM-LX1", "producer": "Huawei", "class": "Android Large", "platform": "android"
+        "model": "JKM-LX1", "manufacturer": "Huawei", "class": "Android Large", "platform": "android"
       },
       "eventProperty": { "plan": "pro", "price_cents": "1499" }
     }
@@ -103,6 +104,8 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
 <Callout icon="📘" theme="info">
   ### Note
 
+  `eventDate` is when the event happened on the device — the field the date window and sort order use. `eventUploadedDate` is when the device delivered it to UXCam and can lag `eventDate` by days.
+
   Event `device.platform` is the label (`"android"` / `"ios"`), consistent with the Sessions and Users endpoints. (The `device_platform` **filter** input still uses the numeric codes `1`/`2`/`3`.) Custom event-property values are returned as strings (e.g. `"1499"`).
 </Callout>
 
@@ -110,7 +113,7 @@ curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
 
 `POST /api/data-access/v1/event/analytics`
 
-Returns event counts, optionally grouped by the dimension(s) you pass in `group_by`. Omit `group_by` for an ungrouped total across all events (the example below groups by `event_name`). Event analytics are count-based (no averages).
+Returns event counts, optionally grouped by the dimension(s) you pass in `group_by`. Omit `group_by` for an ungrouped total across all events (the example below groups by `event_name`). Event analytics are count-based (no averages). Filter attribute names differ on `/event/analytics`: use `device_country` (not `country`), `event_screen_name` (not `screen_name`) and `session_has_video` (not `has_video`). `event_custom_property` is not accepted on `/event/analytics`.
 
 ### Default metrics
 
@@ -128,7 +131,7 @@ Pass in `group_by` (up to two):
 - **Device** — `device_model`, `device_manufacturer`, `device_class`, `device_os_name`, `device_os_version`, `device_type`, `device_platform`
 - **App** — `app_version`
 - **Browser** (web) — `browser_name`, `browser_version`
-- **Time bucket** — `event_uploaded_month`, `event_uploaded_week`, `event_uploadedon_day`
+- **Time bucket** — `event_recorded_month`, `event_recorded_week`, `event_recordedon_day`
 
 ### Request
 

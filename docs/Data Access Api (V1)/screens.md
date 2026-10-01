@@ -67,7 +67,7 @@ Pass in `group_by` (up to two). Omit it for the default `screen_name` grouping (
 - **App / SDK** — `app_version`, `sdk_version`
 - **Location** — `device_country`
 - **Browser** (web) — `browser_name`, `browser_version`
-- **Time bucket** — `screen_uploaded_month`, `screen_uploaded_week`, `screen_uploadedon_day`
+- **Time bucket** — `screen_recorded_month`, `screen_recorded_week`, `screen_recordedon_day`
 
 `device_platform` groups return readable values (`Android` / `iOS` / `Web`).
 
@@ -79,7 +79,7 @@ Pass in `group_by` (up to two). Omit it for the default `screen_name` grouping (
 
 ## Filtering
 
-Scope results with a `filters` array. A `date_range` filter sets the window (omit for the last 30 days). Common attributes — `device_country`, `device_platform`, `device_model`, `app_version` — narrow the result; see [Filter Operators](/docs/filter-operators-1) for the full operator syntax.
+Scope results with a `filters` array. A `date_range` filter sets the window (omit for the last 30 days). Common attributes — `screen_name`, `previous_screen`, `next_screen`, `device_country`, `device_platform`, `device_model`, `app_version` — narrow the result; see [Filter Operators](/docs/filter-operators-1) for the full operator syntax.
 
 ## Analyze screens
 
@@ -93,6 +93,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `filters` — optional; a `date_range` window plus the attributes above (omit for the last 30 days).
 - `group_by` — up to two dimensions; omit for the default `screen_name`.
 - `aggregation` — the metrics to return; omit for the default set.
+- `comparison` — has no effect on this endpoint: `group_by` always defaults to `screen_name`, and period comparison applies only to an ungrouped total.
 - `page` / `page_size` — offset pagination over the grouped rows (`page` default `1`; `page_size` `1`–`2000`, default `500`).
 
 ```bash

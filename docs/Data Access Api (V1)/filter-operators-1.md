@@ -14,9 +14,9 @@ For numeric attributes such as `session_duration`.
 
 | Operator           | Meaning | Value type      |
 | ------------------ | ------- | --------------- |
-| `greater`          | >       | Integer / Float |
+| `greater`          | \>      | Integer / Float |
 | `less`             | \<      | Integer / Float |
-| `greater_or_equal` | >=      | Integer / Float |
+| `greater_or_equal` | \>=     | Integer / Float |
 | `less_or_equal`    | \<=     | Integer / Float |
 
 ## String operators
@@ -29,6 +29,8 @@ For numeric attributes such as `session_duration`.
 | `not_in`       | ∉ (not in set)             | Array of strings |
 | `contains`     | contains substring         | String           |
 | `not_contains` | does not contain substring | String           |
+
+The `/event` list endpoint accepts only `equal` (and `in` for `event_name`) on every attribute. Any other operator returns `400 INVALID_REQUEST`.
 
 ## List operators
 
@@ -43,13 +45,14 @@ For list-of-string attributes such as `session_screen_list`.
 
 Date filters use the `date_range` attribute and scope the whole query window. **If no date filter is supplied, the response covers the last 30 days.** Dates are ISO-8601; a date (`2026-06-01`) or a zulu timestamp (`2026-06-01T11:23:12Z`) are both accepted.
 
-| Operator           | Window it selects     | Value shape                              |
-| ------------------ | --------------------- | ---------------------------------------- |
-| `between_dates`    | lower … upper         | `{"lower": "<date>", "upper": "<date>"}` |
-| `in`               | first … second        | `["<lower>", "<upper>"]`                 |
-| `on` / `not_on`    | a single day          | `"<date>"`                               |
-| `after` / `since`  | value … today         | `"<date>"`                               |
-| `before` / `until` | (value − 30d) … value | `"<date>"`                               |
+| Operator           | Window it selects                        | Value shape                                                          |
+| ------------------ | ---------------------------------------- | -------------------------------------------------------------------- |
+| `between_dates`    | lower … upper                            | `{"lower": "<date>", "upper": "<date>"}`                             |
+| `in`               | first … second                           | `["<lower>", "<upper>"]`                                             |
+| `on` / `not_on`    | a single day                             | `"<date>"`                                                           |
+| `after` / `since`  | value … today                            | `"<date>"`                                                           |
+| `before` / `until` | (value − 30d) … value                    | `"<date>"`                                                           |
+| between            | lower … upper (alias of `between_dates`) | `{"lower": "<date>", "upper": "<date>"}` or `["<lower>", "<upper>"]` |
 
 ```json
 { "attribute": "date_range", "operator": "between_dates",
@@ -57,7 +60,7 @@ Date filters use the `date_range` attribute and scope the whole query window. **
 ```
 
 📘 Which timestamp the window uses
-List endpoints (/session, /user, /event) scope the window by upload time — when the device delivered the data. Analytics endpoints (/…/analytics) scope by record time — when the activity happened on the device. Because a session can be recorded and uploaded on different days (offline usage, delayed sync), the same date_range bounds can return slightly different counts on a list vs. its analytics counterpart. This is expected.
+Every endpoint, list and analytics alike, scopes the `date_range` window by record time — when the activity happened on the device — interpreted in your app's analytics timezone. List results come back newest-first: sessions and events by record time, users by last-seen time.
 
 ## Custom-property filters (JSON attributes)
 
@@ -81,6 +84,12 @@ Custom user and event properties are keyed maps. Filter them with the `user_cust
   ### Filtering only
 
   Custom properties can be **filtered** (as above) but are not `group_by` or `aggregation` dimensions — a grouping or aggregation entry takes only a documented `attribute` (no `property_name`). Each endpoint page lists its valid group-by and aggregation attributes.
+</Callout>
+
+<Callout icon="📘" theme="info">
+  ### Where they work
+
+  `user_custom_property` works on `/session`, `/user`, `/session/analytics` and `/user/analytics`.<br />`event_custom_property` works on `/event` only — it is not accepted on `/event/analytics`. Send at most one `event_custom_property` filter per request, with operator `equal` and a `property_name`.
 </Callout>
 
 ## Groupings (analytics only)

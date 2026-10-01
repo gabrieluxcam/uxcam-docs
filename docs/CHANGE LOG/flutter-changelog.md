@@ -12,6 +12,10 @@ next:
 ---
 <br />
 
+### V. 2.10.1 - September 11, 2026
+
+* Updated iOS SDK to 3.11.0 and Android SDK to 3.10.10.
+* Raised the Android compile SDK version to 34.
 ### V. 2.10.0 - September 1, 2026
 
 * Updated iOS SDK to 3.10.3 and Android SDK to 3.10.9.

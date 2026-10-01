@@ -15,7 +15,7 @@ UXCam ships with a **lightweight diagnostics layer** that automatically records:
 | **ANR**          | A tiny runnable pings the **main thread** at fixed intervals. If the gap between pings is **> 1 s**, UXCam flags an ANR and snapshots the stack.  | Main‑thread stack trace at ANR onset  |
 | **UI Freeze**    | Any stretch where the **main thread is unresponsive for ≥ 2 s**, even if no touch was expected.                                                   | Start/stop timestamps + stack samples |
 
-> ⚠️ **Important:** Currently, UXCam only captures **native crashes** (iOS/Android). JavaScript crashes are not automatically captured and require manual reporting.
+> ⚠️ **Important:** UXCam captures **native crashes** (iOS/Android) only. JavaScript exceptions are not captured automatically, and the React Native SDK does not currently expose a handled‑exception reporting API — `reportExceptionEvent()` is available for the native iOS, Android and Flutter SDKs only. See [JavaScript errors](#javascript-errors) below for the current workaround.
 
 > ⚠️ **Tip:** Running two crash reporters (e.g., Crashlytics *and* UXCam) can lead to conflicts. Disable one of them at app start.
 
@@ -23,157 +23,64 @@ UXCam ships with a **lightweight diagnostics layer** that automatically records:
 
 ### Enable / Disable Crash Handling
 
-Call **before** `RNUxcam.startWithConfiguration()`:
+Crash handling is controlled through the configuration object passed to `RNUxcam.startWithConfiguration()`:
 
 ```javascript
-// Disable UXCam crash, ANR and freeze capture
-RNUxcam.disableCrashHandling(true);
+import RNUxcam from 'react-native-ux-cam';
+
+RNUxcam.startWithConfiguration({
+  userAppKey: 'YOUR_APP_KEY',
+  enableCrashHandling: false, // default: true
+});
 ```
 
-| Parameter  | Default | Meaning                                                                              |
-| ---------- | ------- | ------------------------------------------------------------------------------------ |
-| `disabled` | `false` | `true` stops UXCam from recording crashes, ANRs and freezes for the current session. |
+| Parameter             | Default | Meaning                                                                                                                      |
+| --------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `enableCrashHandling` | `true`  | `false` stops UXCam from recording native crashes for the session. On iOS this also disables ANR and UI‑freeze capture. |
 
 ***
 
 ### Quick Verification
 
-1. **For native crashes**: Simulate a native crash in a debug build.
-2. **For JavaScript errors**: Use manual reporting with `reportExceptionEvent()`.
-3. Wait for the session to upload.
-4. In the dashboard, open **Issues → Crashes / ANRs / UI Freezes**.
-5. Confirm the stack trace and replay are linked to the problem event.
-
-> **Note**: JavaScript crashes will only appear if manually reported using `reportExceptionEvent()`.
+1. Simulate a **native** crash in a debug build.
+2. Wait for the session to upload.
+3. In the dashboard, open **Issues → Crashes / ANRs / UI Freezes**.
+4. Confirm the stack trace and replay are linked to the problem event.
 
 ***
 
-### React Native Specific Considerations
+### JavaScript errors
 
-#### JavaScript Error Handling (Manual Reporting Required)
+Uncaught JavaScript exceptions are handled by the React Native runtime, not by the native layer UXCam hooks into, so they do not appear in **Issues → Crashes**. The React Native SDK does not yet provide `reportExceptionEvent()`.
 
-Since UXCam doesn't automatically capture JavaScript crashes, you need to manually report them:
+Until it does, you can record JavaScript errors as **custom events** from a global error handler so they still show up on the session timeline:
 
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
 
-// Set up global error handler for manual reporting
-const originalErrorHandler = ErrorUtils.setGlobalHandler;
+const previousHandler = ErrorUtils.getGlobalHandler();
 
-ErrorUtils.setGlobalHandler = (error, isFatal) => {
-  // Manually report JavaScript errors to UXCam
-  RNUxcam.reportExceptionEvent(error, {
-    errorType: 'JavaScriptError',
-    isFatal: isFatal,
+ErrorUtils.setGlobalHandler((error, isFatal) => {
+  RNUxcam.logEvent('js_error', {
+    name: error?.name ?? 'Error',
+    message: String(error?.message ?? error).slice(0, 1000),
+    fatal: isFatal ? 1 : 0,
   });
 
-  // Call original handler
-  if (originalErrorHandler) {
-    originalErrorHandler(error, isFatal);
+  if (previousHandler) {
+    previousHandler(error, isFatal);
   }
-};
+});
 ```
 
-#### Component Error Boundaries
-
-```javascript
-import React from 'react';
-import RNUxcam from 'react-native-ux-cam';
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error, errorInfo) {
-    // Report to UXCam
-    RNUxcam.reportExceptionEvent(error, {
-      componentStack: errorInfo.componentStack,
-      errorType: 'ReactErrorBoundary',
-    });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <Text>Something went wrong.</Text>;
-    }
-
-    return this.props.children;
-  }
-}
-```
-
-#### Async Error Handling
-
-```javascript
-import RNUxcam from 'react-native-ux-cam';
-
-// Handle async errors with manual reporting
-const handleAsyncError = async (asyncFunction) => {
-  try {
-    return await asyncFunction();
-  } catch (error) {
-    // Manually report async errors since they're not automatically captured
-    RNUxcam.reportExceptionEvent(error, {
-      errorType: 'AsyncError',
-      functionName: asyncFunction.name,
-    });
-    throw error;
-  }
-};
-```
+The same call works inside a React Error Boundary's `componentDidCatch` or a `catch` block around async code. Only number and string property values are supported (max 100 properties, 1 KiB each).
 
 ***
 
 ### Best Practices
 
-* **Native crashes are automatic**: UXCam automatically captures native iOS/Android crashes
-* **JavaScript crashes require manual reporting**: Use `reportExceptionEvent()` for JavaScript errors
+* **Native crashes are automatic**: UXCam captures native iOS/Android crashes without extra code.
+* **JavaScript errors are not**: use the `logEvent` workaround above until a React Native `reportExceptionEvent()` ships.
 * Decide at launch **which** crash reporter owns crashes; do **not** toggle per session.
-* Keep custom exception/event names in **PascalCase** or **snake\_case** and store them as constants.
-* Avoid logging PII in exception messages—use IDs or hashed values instead.
-* Use React Error Boundaries for component-level error handling.
-* Handle async errors properly to prevent unhandled promise rejections.
-
-***
-
-### TypeScript Support
-
-```typescript
-import RNUxcam from 'react-native-ux-cam';
-
-interface ExceptionProperties {
-  errorType?: string;
-  componentStack?: string;
-  functionName?: string;
-  [key: string]: string | number | boolean | undefined;
-}
-
-// Typed exception reporting
-const reportException = (error: Error, properties?: ExceptionProperties) => {
-  RNUxcam.reportExceptionEvent(error, properties);
-};
-```
-
-<br />
-
-```typescript
-import RNUxcam from 'react-native-ux-cam';
-
-interface ExceptionProperties {
-  errorType?: string;
-  componentStack?: string;
-  functionName?: string;
-  [key: string]: string | number | boolean | undefined;
-}
-
-// Typed exception reporting
-const reportException = (error: Error, properties?: ExceptionProperties) => {
-  RNUxcam.reportExceptionEvent(error, properties);
-};
-```
+* Keep custom event names in **PascalCase** or **snake\_case** and store them as constants.
+* Avoid logging PII in error messages — use IDs or hashed values instead.

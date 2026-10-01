@@ -38,13 +38,13 @@ Inputs will be occluded by default if they meet any of the following criteria:
         'tel'
         'hidden'
         'number'
-        'hidden'
       </td>
 
       <td>
         'password'
         'cc-'
         'email'
+        'phone'
       </td>
 
       <td>
@@ -57,6 +57,8 @@ Inputs will be occluded by default if they meet any of the following criteria:
     </tr>
   </tbody>
 </Table>
+
+Password and hidden fields, and fields whose name or autocomplete contains `password` or `cc-`, are always masked. The other fields in the table can be shown with an `unmask` on the field itself; see [Sensitive input fields](#sensitive-input-fields).
 
 ***
 
@@ -92,9 +94,110 @@ occlusion: {
 // Output: http://www.uxcam.com/invite/:inviteId
 ```
 
-**Occlusion of HTML Elements**\
-To occlude specific HTML elements, add the attribute data-uxc="obfuscated" to the elements you want to occlude.
+***
+
+### Masking page content
+
+Choose what to hide with the `data-uxc` attribute in your HTML:
+
+| Attribute | Effect |
+|:------|:-------|
+| `data-uxc="obfuscated"` | Hides the element and everything inside it. |
+| `data-uxc="unmask"` | Shows the element and everything inside it again, inside an obfuscated area. |
+
+The `occlusion` option does the same with CSS selectors, without changing your HTML: `occlusion.mask` works like adding `data-uxc="obfuscated"` to every matching element, and `occlusion.unmask` like adding `data-uxc="unmask"`.
+
+A masked element looks like this in the replay:
+
+- **Text:** every letter and digit becomes `*`. Spaces and punctuation stay, so the layout is kept.
+- **Input values:** `******`, or `000000` for number fields.
+- **Attributes:** `placeholder`, `title`, `aria-label`, `aria-description`, `alt` and `label`, and dropdown option values, are masked too.
+- **Images and videos:** an empty box of the same size. Their URLs aren't recorded.
+- **Everything else:** layout, styles, clicks and scrolling are still recorded, so replays and heatmaps keep working.
+
+Masking happens in the browser, so masked content never reaches UXCam.
+
+#### Mask specific elements
+
+Add the attribute to the element:
+
+```html
+<div data-uxc="obfuscated">Account balance: $1,234.56</div>
+```
+
+Or list CSS selectors, without changing your HTML:
 
 ```javascript
-<div data-uxc="obfuscated">Sensitive Content</div>
+occlusion: {
+  mask: ['.account-balance', '#checkout-summary']
+}
 ```
+
+#### Mask the whole page, then show selected parts
+
+Mask everything with the `html` selector, then list the parts that should stay visible:
+
+```javascript
+occlusion: {
+  mask: ['html'],
+  unmask: ['header', 'nav', '.product-list']
+}
+```
+
+The same with attributes:
+
+```html
+<html data-uxc="obfuscated">
+  <body>
+    <header data-uxc="unmask">...</header>
+  </body>
+</html>
+```
+
+Use `html` rather than `body`, so the page title is masked too.
+
+#### Which rule wins
+
+UXCam checks the element, then each of its parents in turn. The first one it finds that is obfuscated (by the attribute or a `mask` selector) or unmasked (by the attribute or an `unmask` selector) decides:
+
+- An unmasked element inside an obfuscated area is shown.
+- An obfuscated element inside an unmasked area is hidden again.
+- If an element is both obfuscated and unmasked, for example because it matches selectors in both lists, it's masked.
+- Content with nothing obfuscated or unmasked above it is recorded as usual, apart from the fields in the table above.
+
+```html
+<section data-uxc="obfuscated">
+  <p>Jane Doe</p>                                   <!-- masked -->
+  <div data-uxc="unmask">
+    <p>Order status: shipped</p>                    <!-- shown -->
+    <p data-uxc="obfuscated">Card ending 4242</p>   <!-- masked -->
+  </div>
+</section>
+```
+
+#### Sensitive input fields
+
+- **Always masked:** password fields, hidden fields, and fields whose name or autocomplete contains `password` or `cc-`. No `unmask` can show them.
+- **Masked unless you target the field:** email, phone and number fields, and fields whose name or autocomplete suggests an email, phone number or address. They stay masked inside an unmasked area. To show one, unmask the field itself:
+
+```javascript
+occlusion: {
+  mask: ['html'],
+  unmask: ['input[type="number"]']  // show quantity fields
+}
+```
+
+> 🚧 **Broad unmask selectors**
+>
+> A selector such as `input`, `p` or `*` matches many elements directly, including fields, and elements inside areas marked `data-uxc="obfuscated"`. Email, phone and number fields matched this way are shown. Prefer specific selectors, such as `#promo-code` or `.product-list`.
+
+#### Iframes and shadow DOM
+
+- Masking works inside shadow DOM: obfuscating a component's host masks everything it renders, and an `unmask` inside the component still shows that part.
+- Masking reaches into same-site iframes. `mask: ['html']` masks them too, because each iframe page has its own `<html>`.
+- A cross-site iframe is recorded by the SDK in the iframe page, so it follows that page's own attributes and `occlusion` options. See [Iframe Recording: Privacy](/docs/iframe-recording#privacy).
+
+#### Things to know
+
+- Put the attributes in your HTML, or add them before the UXCam script loads. Adding or changing `data-uxc` later doesn't change what was already recorded.
+- Invalid CSS selectors are ignored, and the SDK logs a warning in the browser console (unless `silent` is on).
