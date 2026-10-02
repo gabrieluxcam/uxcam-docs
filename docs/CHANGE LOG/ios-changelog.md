@@ -14,6 +14,18 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.11.1 - October 2, 2026
+
+* Improved: Pending sessions are now stored in the Application Support directory instead of Caches, so iOS can no longer purge them under storage pressure. Sessions recorded by earlier SDK versions are migrated automatically.
+* Improved: Sessions now upload through an iOS background session, so they finish uploading without the app being reopened. Upload tasks of deleted sessions are cancelled, and waiting uploads are resubmitted when their credentials expire or cellular becomes allowed.
+* Fixed: Crashed sessions now report the correct reason when video was not recorded, such as the user opting out of video recording.
+* Fixed: Screen privacy that stayed applied after a manually blurred screen was dismissed.
+* Improved: Screen privacy now follows the screens that are actually visible and is applied at capture time.
+* Fixed: Gesture masking in landscape-left orientation.
+* Fixed: Text fields were not masked when a custom subclass does not call `super` in `didMoveToWindow`.
+* Fixed: Capture of windows that are not positioned at the screen origin.
+* Improved: Screens are now named per view controller instance. Manual screen tags take precedence over automatic names and are restored when the screen reappears.
+* Fixed: CocoaPods installs now include the SDK privacy manifest.
 ### V. 3.11.0 - September 8, 2026
 
 * Improved: The public API now carries Swift concurrency annotations, with main-actor isolation and thread-safe completion delivery.
