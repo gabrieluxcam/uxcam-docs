@@ -12,6 +12,10 @@ next:
 ---
 ### SwiftUI
 
+### V. 3.11.1 (October 2, 2026)
+
+- Built on UXCam iOS 3.11.1.
+- Fixed App Store rejection errors (ITMS-90685, ITMS-90206) for Swift Package Manager integrations caused by a stub UXCam.framework bundled inside UXCamSwiftUI.framework; affected versions 3.10.0–3.11.0.
 ### V. 3.11.0 (September 8, 2026)
 
 - Built on UXCam iOS 3.11.0.
