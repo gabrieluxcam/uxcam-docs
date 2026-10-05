@@ -32,9 +32,9 @@ Returns detailed user data including device info, engagement metrics, and custom
 
 ```bash
 curl "https://api.uxcam.com/v2/user" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'page=1' \
   --data-urlencode 'page_size=50' \
   --data-urlencode 'filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]'
@@ -85,9 +85,9 @@ Returns aggregated statistics for users matching your query.
 
 ```bash
 curl "https://api.uxcam.com/v2/user/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]' \
   --data-urlencode 'group_by=[{"attribute":"device_manufacturer","max_group_number":50}]'
 ```

@@ -35,12 +35,14 @@ The UXCam Data Access API is a REST API for programmatically accessing your anal
 
 ## Authentication
 
-All API requests require two authentication parameters:
+All API requests require two authentication parameters, sent as **query parameters** on every request:
 
-| Parameter | Description | Where to Find |
+| Query parameter | Description | Where to Find |
 |-----------|-------------|---------------|
-| `App ID` | Your app's unique identifier | Dashboard > App Settings > Application |
-| `API Key` | Authentication key for API access | Dashboard > App Settings > Data Access API |
+| `appid` | Your app's unique identifier (App ID) | Dashboard > App Settings > Application |
+| `apikey` | Authentication key for API access (API Key) | Dashboard > App Settings > Data Access API |
+
+<GitHubCallout type="warning">Pass `appid` and `apikey` in the query string, not as request headers. Requests that send the credentials as headers (for example `X-App-Id` / `X-Api-Key`) are rejected with `401 Request authentication failed`.</GitHubCallout>
 
 ### Getting Your Credentials
 
@@ -88,23 +90,22 @@ https://api.uxcam.com/v2/
 
 ## Request Format
 
-All requests use:
-- **Method**: GET or POST (endpoint-specific)
-- **Content-Type**: `application/json`
-- **Authentication**: Headers with App ID and API Key
+All data endpoints (`session`, `user`, `event` and their `/analytics` variants) use:
+- **Method**: `GET` (`POST` returns `405 Method Not Allowed`)
+- **Parameters**: query string (URL-encoded); there is no JSON request body
+- **Authentication**: `appid` and `apikey` query parameters
 
 ### Example Request
 
 ```bash
-curl -X GET "https://api.uxcam.com/v2/sessions" \
-  -H "Content-Type: application/json" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
-  -d '{
-    "startDate": "2024-01-01",
-    "endDate": "2024-01-31",
-    "limit": 100
-  }'
+# Sessions uploaded between Jan 1 and Jan 31, 2024, 100 per page
+curl "https://api.uxcam.com/v2/session" \
+  -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
+  --data-urlencode 'filters=[{"attribute":"date_range","operator":"between_dates","value":{"lower":"2024-01-01","upper":"2024-01-31"}}]' \
+  --data-urlencode 'page=1' \
+  --data-urlencode 'page_size=100'
 ```
 
 ---
@@ -118,12 +119,14 @@ All responses return JSON:
   "success": true,
   "data": [...],
   "pagination": {
-    "total": 1234,
-    "limit": 100,
-    "offset": 0
+    "current": 1,
+    "next": 2,
+    "total": 100
   }
 }
 ```
+
+`pagination.total` is the number of items in the current page, not the overall result count. Keep requesting `page = next` until `next` is `null`.
 
 ---
 
@@ -144,22 +147,31 @@ All responses return JSON:
 Pull session data into your analytics infrastructure:
 
 ```python
+import json
 import requests
 
 def export_sessions(start_date, end_date):
-    response = requests.get(
-        "https://api.uxcam.com/v2/sessions",
-        headers={
-            "X-App-Id": "YOUR_APP_ID",
-            "X-Api-Key": "YOUR_API_KEY"
-        },
-        json={
-            "startDate": start_date,
-            "endDate": end_date,
-            "limit": 1000
-        }
-    )
-    return response.json()["data"]
+    sessions, page = [], 1
+    date_filter = [{
+        "attribute": "date_range",
+        "operator": "between_dates",
+        "value": {"lower": start_date, "upper": end_date},
+    }]
+    while page:
+        response = requests.get(
+            "https://api.uxcam.com/v2/session",
+            params={
+                "appid": "YOUR_APP_ID",
+                "apikey": "YOUR_API_KEY",
+                "filters": json.dumps(date_filter),
+                "page": page,
+                "page_size": 500,
+            },
+        )
+        body = response.json()
+        sessions.extend(body.get("data") or [])
+        page = body.get("pagination", {}).get("next")
+    return sessions
 ```
 
 ### User Deletion (GDPR)
@@ -171,15 +183,11 @@ Erasure is a separate API with its own key. Submit users or sessions to `POST /v
 Find sessions for a specific user:
 
 ```bash
-curl -X GET "https://api.uxcam.com/v2/sessions" \
-  -H "Content-Type: application/json" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
-  -d '{
-    "filters": {
-      "userId": "user_12345"
-    }
-  }'
+curl "https://api.uxcam.com/v2/session" \
+  -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
+  --data-urlencode 'filters=[{"attribute":"uxcamuserid","operator":"equal","value":"60f7dd46972a633e88696d6b"}]'
 ```
 
 ---

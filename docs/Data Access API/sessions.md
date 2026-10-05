@@ -32,9 +32,9 @@ Returns detailed session data including device info, user properties, and intera
 
 ```bash
 curl "https://api.uxcam.com/v2/session" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'page=1' \
   --data-urlencode 'page_size=50' \
   --data-urlencode 'filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]'
@@ -86,9 +86,9 @@ Returns aggregated statistics for sessions matching your query.
 
 ```bash
 curl "https://api.uxcam.com/v2/session/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]' \
   --data-urlencode 'group_by=[{"attribute":"device_model","max_group_number":50}]'
 ```
