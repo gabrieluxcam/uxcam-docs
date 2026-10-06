@@ -1,7 +1,7 @@
 ---
 title: Data Access API
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 next:
@@ -11,6 +11,12 @@ next:
       type: basic
 ---
 The UXCam **Data Access API** is built on REST principles with predictable, resource-oriented URLs. Every endpoint is a `POST` that accepts a JSON request body, returns JSON, and uses standard HTTP status codes. Authentication is handled with a single header, so no credentials ever appear in a URL.
+
+<Callout icon="📘" theme="info">
+  ### Two versions of the Data Access API
+
+  This section documents the **v1 API** for the new UXCam dashboard (`https://api.uxcam.com/api/data-access/v1/...`). The **classic API** (`https://api.uxcam.com/v2/...`, `GET` with `appid`/`apikey` query parameters) remains supported — see the [classic Data Access API](/docs/data-access-api). If you already have a working classic integration, you don't need to change it.
+</Callout>
 
 ### Go ahead and try out our REST APIs with credentials on Postman)
 
@@ -34,7 +40,7 @@ Postman enables you to test and utilize UXCam's Data Access APIs without requiri
 
 | Variable   | Value                    |
 | ---------- | ------------------------ |
-| `base_url` | `https://tara.uxcam.com` |
+| `base_url` | `https://api.uxcam.com` |
 | `app_id`   | Your app's `app_id`      |
 | `api_key`  | Your Data Access API key |
 
@@ -42,7 +48,7 @@ Postman enables you to test and utilize UXCam's Data Access APIs without requiri
 
 All endpoints share a single base URL:
 
-[https://tara.uxcam.com](https://tara.uxcam.com)
+[https://api.uxcam.com](https://api.uxcam.com)
 
 Each resource has a list endpoint and an analytics endpoint. Lists return individual records (qualitative data); analytics endpoints return aggregated, grouped numbers suited to charts and dashboards.
 
@@ -86,14 +92,14 @@ Every request needs two things — the application it targets and a secret key t
 List the most recent sessions for your app. The smallest valid body is just `app_id` plus a `page_size`; with no filters, the API returns the last 30 days of data. Omitting `show_only` returns each endpoint's lean **default section set** (`/session`: `property` · `/user`: `usage` · `/event`: `eventProperty` + `sessionProperty`); pass `show_only` to request more — the examples below request all sections. See [Query Parameters](doc:query-parameters-1) for the full section reference.
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
+curl -X POST https://api.uxcam.com/api/data-access/v1/session \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"page_size":500}'
 ```
 
 ```javascript
-fetch("https://tara.uxcam.com/api/data-access/v1/session", {
+fetch("https://api.uxcam.com/api/data-access/v1/session", {
   method: "POST",
   headers: {
     "X-Api-Key": "YOUR_API_KEY",
@@ -107,7 +113,7 @@ fetch("https://tara.uxcam.com/api/data-access/v1/session", {
 import requests
 
 requests.post(
-    "https://tara.uxcam.com/api/data-access/v1/session",
+    "https://api.uxcam.com/api/data-access/v1/session",
     headers={"X-Api-Key": "YOUR_API_KEY"},
     json={"app_id": "YOUR_APP_ID", "show_only": ["property", "user", "device", "location"], "page_size": 500},
 )

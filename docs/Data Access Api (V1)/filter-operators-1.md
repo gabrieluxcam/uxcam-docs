@@ -2,7 +2,7 @@
 title: Filter Operators
 excerpt: Operators for filtering, grouping, and aggregating — by data type.
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---

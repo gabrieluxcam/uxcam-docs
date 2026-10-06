@@ -1,7 +1,7 @@
 ---
-title: 'Events '
+title: Events
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
@@ -59,7 +59,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `cursor` — opaque cursor for the next page; omit for the first page.
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/event \
+curl -X POST https://api.uxcam.com/api/data-access/v1/event \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","show_only":["sessionProperty","userProperty","device","eventProperty"],"filters":[{"attribute":"event_name","operator":"in","value":["purchased"]}],"page_size":500}'
@@ -136,7 +136,7 @@ Pass in `group_by` (up to two):
 ### Request
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/event/analytics \
+curl -X POST https://api.uxcam.com/api/data-access/v1/event/analytics \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","group_by":[{"attribute":"event_name","max_group_number":50}]}'

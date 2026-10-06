@@ -1,7 +1,7 @@
 ---
 title: Session
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
@@ -96,7 +96,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 Full field reference: [Query Parameters](doc:query-parameters-1).
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/session \
+curl -X POST https://api.uxcam.com/api/data-access/v1/session \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
@@ -202,7 +202,7 @@ Send a JSON body with any of `filters`, `group_by`, `aggregation`, `comparison`,
 - **Time bucket** — `session_recorded_month`, `session_recorded_week`, `session_recordedon_day`
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/session/analytics \
+curl -X POST https://api.uxcam.com/api/data-access/v1/session/analytics \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"group_by":[{"attribute":"device_model","max_group_number":50}]}'
