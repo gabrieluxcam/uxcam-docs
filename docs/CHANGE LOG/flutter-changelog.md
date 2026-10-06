@@ -12,6 +12,10 @@ next:
 ---
 <br />
 
+### V. 2.10.2 - October 6, 2026
+
+* Updated iOS SDK to 3.11.1 and Android SDK to 3.11.1.
+* Improved tap target detection accuracy.
 ### V. 2.10.1 - September 11, 2026
 
 * Updated iOS SDK to 3.11.0 and Android SDK to 3.10.10.
