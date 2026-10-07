@@ -17,6 +17,11 @@ metadata:
 
 <br />
 
+### V. 3.11.2 - October 7, 2026
+
+* Fix (upload): Sessions are no longer held back when the device is at low battery — recordings now upload as soon as network is available regardless of battery level
+* Fix (screenshot): Resolved a native crash in apps using improved WebView capture; frame data is now sent through a dedicated JavaScript interface instead of the WebView messaging channel, which was triggering a null-pointer crash on Chromium-based WebViews
+* Add (occlusion): View-level occlusions can now render as a blur of the view's own pixels instead of a solid rectangle — pass `ViewOcclusionStyle.BLUR` to `occludeSensitiveView(view, style)` to enable the blur style
 ### V. 3.11.1 - September 29, 2026
 
 * Fix (occlusion): WebView masking is now bounded to the WebView itself, applied before the first frame is captured, and covers every recycler list row sharing an occluded view ID, preventing sensitive content from appearing unmasked during navigation and rapid layout changes
