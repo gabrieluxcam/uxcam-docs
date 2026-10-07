@@ -15,7 +15,7 @@ The UXCam **Data Access API** is built on REST principles with predictable, reso
 <Callout icon="📘" theme="info">
   ### Two versions of the Data Access API
 
-  This section documents the **v1 API** for the new UXCam dashboard (`https://api.uxcam.com/api/data-access/v1/...`). The **classic API** (`https://api.uxcam.com/v2/...`, `GET` with `appid`/`apikey` query parameters) remains supported — see the [classic Data Access API](/docs/data-access-api). If you already have a working classic integration, you don't need to change it.
+  This section documents the **v1 API** for the new UXCam dashboard (`https://api.uxcam.com/api/data-access/v1/...`). The **classic API** (`https://api.uxcam.com/v2/...`, `GET` with `appid`/`apikey` query parameters) remains supported — see the [classic Data Access API](/docs/data-access-api). Both versions use the same Data Access API key, so an existing key works here too. If you already have a working classic integration, you don't need to change it.
 </Callout>
 
 ### Go ahead and try out our REST APIs with credentials on Postman)
