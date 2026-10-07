@@ -1,7 +1,7 @@
 ---
 title: Users
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
@@ -55,7 +55,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `cursor` — opaque cursor for the next page; omit for the first page.
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/user \
+curl -X POST https://api.uxcam.com/api/data-access/v1/user \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","show_only":["property","usage","location","device"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
@@ -132,7 +132,7 @@ Returns aggregated per-user numbers, commonly grouped by `device_platform`. Omit
 ### Request
 
 ```curl
-curl -X POST https://tara.uxcam.com/api/data-access/v1/user/analytics \
+curl -X POST https://api.uxcam.com/api/data-access/v1/user/analytics \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","group_by":[{"attribute":"device_platform"}]}'

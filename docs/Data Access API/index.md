@@ -15,6 +15,8 @@ next:
 
 The UXCam Data Access API is a REST API for programmatically accessing your analytics data. Use it to export sessions, users, and events to your own systems.
 
+<GitHubCallout type="note">**Two versions of the Data Access API.** This page documents the **classic API** (`api.uxcam.com/v2/...`): `GET` requests with `appid` and `apikey` as query parameters. A newer **v1 API** for the new UXCam dashboard (`api.uxcam.com/api/data-access/v1/...`) uses `POST` with a JSON body and the API key in an `X-Api-Key` header — see [Data Access API v1](/docs/data-access-api-1). Both versions use the same Data Access API key. The classic API remains supported; existing integrations don't need to change.</GitHubCallout>
+
 <GitHubCallout type="note">This is different from the SDK APIs. The Data Access API is a server-side REST API for exporting data. For mobile/web SDK methods, see the [SDK Reference](/docs/sdk-reference).</GitHubCallout>
 
 ---

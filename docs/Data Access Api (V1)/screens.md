@@ -1,7 +1,7 @@
 ---
 title: Screen Analytics
 deprecated: false
-hidden: true
+hidden: false
 metadata:
   robots: index
 ---
@@ -97,7 +97,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 - `page` / `page_size` — offset pagination over the grouped rows (`page` default `1`; `page_size` `1`–`2000`, default `500`).
 
 ```bash
-curl -X POST https://tara.uxcam.com/api/data-access/v1/screen/analytics \
+curl -X POST https://api.uxcam.com/api/data-access/v1/screen/analytics \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"app_id":"YOUR_APP_ID","group_by":[{"attribute":"screen_name","max_group_number":50}]}'
