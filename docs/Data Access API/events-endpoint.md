@@ -32,9 +32,9 @@ Returns detailed event data including session context, user properties, and cust
 
 ```bash
 curl "https://api.uxcam.com/v2/event" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'page=1' \
   --data-urlencode 'page_size=50' \
   --data-urlencode 'filters=[{"attribute":"event_name","operator":"equal","value":"purchase"}]'
@@ -84,9 +84,9 @@ Returns aggregated statistics for events matching your query.
 
 ```bash
 curl "https://api.uxcam.com/v2/event/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"event_name","operator":"equal","value":"purchase"}]' \
   --data-urlencode 'group_by=[{"attribute":"event_uploadedon_day"}]'
 ```
@@ -132,15 +132,18 @@ Count users who completed each step:
 
 ```bash
 # Step 1: Viewed product
-curl "https://api.uxcam.com/v2/event/analytics?..." \
+curl "https://api.uxcam.com/v2/event/analytics" -G \
+  --data-urlencode 'appid=YOUR_APP_ID' --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"event_name","operator":"equal","value":"view_product"}]'
 
 # Step 2: Added to cart
-curl "https://api.uxcam.com/v2/event/analytics?..." \
+curl "https://api.uxcam.com/v2/event/analytics" -G \
+  --data-urlencode 'appid=YOUR_APP_ID' --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"event_name","operator":"equal","value":"add_to_cart"}]'
 
 # Step 3: Purchased
-curl "https://api.uxcam.com/v2/event/analytics?..." \
+curl "https://api.uxcam.com/v2/event/analytics" -G \
+  --data-urlencode 'appid=YOUR_APP_ID' --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[{"attribute":"event_name","operator":"equal","value":"purchase"}]'
 ```
 

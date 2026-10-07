@@ -24,15 +24,15 @@ Control how many results are returned and which page to fetch.
 | Parameter | Type | Description | Default |
 |-----------|------|-------------|---------|
 | `page` | Integer | Page number (1-indexed) | 1 |
-| `page_size` | Integer | Results per page (max 1000) | 50 |
+| `page_size` | Integer | Results per page (max 500) | 50 |
 
 ### Example
 
 ```bash
 curl "https://api.uxcam.com/v2/session" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'page=2' \
   --data-urlencode 'page_size=100'
 ```
@@ -61,8 +61,8 @@ Narrow results to specific criteria. Filters are passed as a JSON array.
 | `not_equal` | Not equal | `"USA"` |
 | `in` | Match any in list | `["USA", "UK", "CA"]` |
 | `not_in` | Match none in list | `["test", "demo"]` |
-| `greater_than` | Greater than | `100` |
-| `less_than` | Less than | `100` |
+| `greater` | Greater than | `100` |
+| `less` | Less than | `100` |
 | `between_dates` | Date range | `{"lower": "2024-01-01", "upper": "2024-01-31"}` |
 
 See [Filter Operators](filter-operators) for the complete list.
@@ -72,12 +72,12 @@ See [Filter Operators](filter-operators) for the complete list.
 ```bash
 # Sessions from USA with duration > 60 seconds
 curl "https://api.uxcam.com/v2/session" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[
     {"attribute":"device_country","operator":"equal","value":"USA"},
-    {"attribute":"session_duration","operator":"greater_than","value":60}
+    {"attribute":"session_duration","operator":"greater","value":60}
   ]'
 ```
 
@@ -101,9 +101,9 @@ Aggregate results by specific attributes. Used with `/analytics` endpoints.
 ```bash
 # Session analytics grouped by device model
 curl "https://api.uxcam.com/v2/session/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'group_by=[{"attribute":"device_model","max_group_number":20}]'
 ```
 
@@ -129,9 +129,9 @@ Specify which metrics to calculate.
 
 ```bash
 curl "https://api.uxcam.com/v2/session/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'aggregation=[{"attribute":"session_count"}]'
 ```
 
@@ -159,9 +159,9 @@ Compare current period to previous period.
 ```bash
 # Compare current month to previous month
 curl "https://api.uxcam.com/v2/session/analytics" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'comparison=1'
 ```
 
@@ -175,9 +175,9 @@ Filter by date using the `date_range` attribute.
 
 ```bash
 curl "https://api.uxcam.com/v2/session" \
-  -H "X-App-Id: YOUR_APP_ID" \
-  -H "X-Api-Key: YOUR_API_KEY" \
   -G \
+  --data-urlencode 'appid=YOUR_APP_ID' \
+  --data-urlencode 'apikey=YOUR_API_KEY' \
   --data-urlencode 'filters=[
     {
       "attribute": "date_range",

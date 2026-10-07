@@ -146,7 +146,7 @@ def api_request(url, headers, params, max_retries=3):
 ### Validate Before Sending
 
 ```python
-VALID_OPERATORS = ['equal', 'not_equal', 'in', 'not_in', 'greater_than', 'less_than']
+VALID_OPERATORS = ['equal', 'not_equal', 'in', 'not_in', 'greater', 'less']
 
 def validate_filter(filter_obj):
     if filter_obj['operator'] not in VALID_OPERATORS:
