@@ -21,7 +21,7 @@ The UXCam **Data Access API** is built on REST principles with predictable, reso
 ### Go ahead and try out our REST APIs with credentials on Postman)
 
 
-[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" border={true} framed={true} wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBYB1M8Ei)
+[<Image src="https://run.pstmn.io/button.svg" alt="Run in Postman" align="left" border={true} wrap={true} />](https://documenter.getpostman.com/view/29342606/2sBYHQ22tm)
 
 
 <br />
@@ -40,7 +40,7 @@ Postman enables you to test and utilize UXCam's Data Access APIs without requiri
 
 | Variable   | Value                    |
 | ---------- | ------------------------ |
-| `base_url` | `https://api.uxcam.com` |
+| `base_url` | `https://api.uxcam.com`  |
 | `app_id`   | Your app's `app_id`      |
 | `api_key`  | Your Data Access API key |
 
