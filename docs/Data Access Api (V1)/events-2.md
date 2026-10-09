@@ -79,7 +79,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/event \
       "eventDate": "2026-06-28T14:12:07Z",
       "eventUploadedDate": "2026-06-28T14:12:11Z",
       "eventPropertyTime": 3.42,
-      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
+      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/60f7dd4efd9c2f001169bb96",
       "sessionProperty": {
         "sessionId": "60f7dd4efd9c2f001169bb96", "isCrashed": false,
         "durationSec": 55.009, "totalGesture": 26, "totalScreen": 17,
