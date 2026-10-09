@@ -23,34 +23,34 @@ Returns per-screen numbers, optionally grouped by additional dimension(s). By de
 
 Returned when `aggregation` is omitted:
 
-| Metric               | Description                                                                     |
-| -------------------- | ------------------------------------------------------------------------------- |
-| `screen_visits`      | Total visits to the screen                                                      |
-| `unique_users`       | Distinct users who opened the screen                                            |
-| `unique_sessions`    | Distinct sessions the screen appeared in                                        |
-| `avg_time_on_screen` | Average seconds spent on the screen per visit                                   |
-| `sum_time_on_screen` | Total seconds spent on the screen across all visits                             |
-| `rage_taps`          | Total rage taps recorded on the screen                                          |
-| `crash_rate`         | Percentage of visits where the app crashed on this screen                       |
-| `ui_freeze_rate`     | Percentage of visits with at least one UI freeze                                |
-| `entries`            | Visits that were the session's first screen (the app opened here)               |
-| `exits`              | Visits where the user left the app from this screen                             |
-| `exit_rate`          | Percentage of visits that ended in an app exit                                  |
-| `bounce_rate`        | Percentage of very short visits (under 1s) that returned to the previous screen |
+| Metric                         | Description                                                                     |
+| ------------------------------ | ------------------------------------------------------------------------------- |
+| `screen_visits`                | Total visits to the screen                                                      |
+| `unique_users`                 | Distinct users who opened the screen                                            |
+| `unique_sessions`              | Distinct sessions the screen appeared in                                        |
+| `avg_duration_per_screenvisit` | Average seconds spent on the screen per visit                                   |
+| `sum_time_on_screen`           | Total seconds spent on the screen across all visits                             |
+| `rage_taps`                    | Total rage taps recorded on the screen                                          |
+| `crash_rate`                   | Percentage of visits where the app crashed on this screen                       |
+| `ui_freeze_rate`               | Percentage of visits with at least one UI freeze                                |
+| `entries`                      | Visits that were the session's first screen (the app opened here)               |
+| `exits`                        | Visits where the user left the app from this screen                             |
+| `exit_rate`                    | Percentage of visits that ended in an app exit                                  |
+| `bounce_rate`                  | Percentage of very short visits (under 1s) that returned to the previous screen |
 
 ## Additional metrics
 
 Pass an `aggregation` array to choose exactly which metrics you want. Beyond the default set:
 
-| Attribute               | Operator(s)   | Description                                                                             |
-| ----------------------- | ------------- | --------------------------------------------------------------------------------------- |
-| `time_on_screen`        | `avg` / `sum` | Time on screen — `avg` returns `avg_time_on_screen`, `sum` returns `sum_time_on_screen` |
-| `median_time_on_screen` | `count`       | Median (P50) seconds on screen                                                          |
-| `p95_time_on_screen`    | `count`       | 95th-percentile seconds on screen                                                       |
-| `avg_taps`              | `count`       | Average taps per visit                                                                  |
-| `avg_swipes`            | `count`       | Average swipes per visit                                                                |
-| `avg_time_before_exit`  | `count`       | Average seconds on screen before an app exit                                            |
-| `quick_exit_rate`       | `count`       | Percentage of visits under 3s that ended in an app exit                                 |
+| Attribute               | Operator(s)   | Description                                                                                       |
+| ----------------------- | ------------- | ------------------------------------------------------------------------------------------------- |
+| `time_on_screen`        | `avg` / `sum` | Time on screen — `avg` returns `avg_duration_per_screenvisit`, `sum` returns `sum_time_on_screen` |
+| `median_time_on_screen` | `count`       | Median (P50) seconds on screen                                                                    |
+| `p95_time_on_screen`    | `count`       | 95th-percentile seconds on screen                                                                 |
+| `avg_taps`              | `count`       | Average taps per visit                                                                            |
+| `avg_swipes`            | `count`       | Average swipes per visit                                                                          |
+| `avg_time_before_exit`  | `count`       | Average seconds on screen before an app exit                                                      |
+| `quick_exit_rate`       | `count`       | Percentage of visits under 3s that ended in an app exit                                           |
 
 <Callout icon="📘" theme="info">
   ### Picking metrics
@@ -114,7 +114,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/screen/analytics \
       "screen_visits": 12100000,
       "unique_users": 842301,
       "unique_sessions": 1980554,
-      "avg_time_on_screen": 8.31,
+      "avg_duration_per_screenvisit": 8.31,
       "sum_time_on_screen": 100530000,
       "rage_taps": 41022,
       "crash_rate": 0.42,
@@ -130,7 +130,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/screen/analytics \
       "screen_visits": 9600000,
       "unique_users": 701244,
       "unique_sessions": 1622890,
-      "avg_time_on_screen": 14.07,
+      "avg_duration_per_screenvisit": 14.07,
       "sum_time_on_screen": 135072000,
       "rage_taps": 88210,
       "crash_rate": 1.18,
