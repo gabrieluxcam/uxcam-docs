@@ -23,14 +23,15 @@ metadata:
 
 The event list has a focused, fail-closed filter surface — a date window plus the attributes below. Anything else returns `400`. Every attribute accepts only `equal`; `event_name` also accepts `in` with a list. Any other operator returns `400`.
 
-| Attribute                                                                                    | Operator(s)    | Value                                              |
-| -------------------------------------------------------------------------------------------- | -------------- | -------------------------------------------------- |
-| `event_name`                                                                                 | `equal` / `in` | One name or a list of names                        |
-| `device_model`, `device_manufacturer`, `os_version`, `app_version`, `country`, `screen_name` | `equal`        | A single string                                    |
-| `device_platform`                                                                            | `equal`        | `1` = Android, `2` = iOS, `3` = Web                |
-| `has_video`                                                                                  | `equal`        | Boolean                                            |
-| `event_custom_property`                                                                      | `equal`        | With `property_name` + value (one property filter) |
-| `date_range`                                                                                 | date operators | See [Filter Operators](doc:filter-operators-1)     |
+| Attribute                                                                         | Operator(s)    | Value                                                                  |
+| --------------------------------------------------------------------------------- | -------------- | ---------------------------------------------------------------------- |
+| `event_name`                                                                      | `equal` / `in` | One name or a list of names                                            |
+| `device_model`, `device_manufacturer`, `os_version`, `app_version`, `screen_name` | `equal`        | A single string                                                        |
+| `device_platform`                                                                 | `equal`        | `1` = Android, `2` = iOS, `3` = Web                                    |
+| `country`                                                                         | `equal`        | "a 2-letter ISO code, e.g. US". The full name and "USA" return no rows |
+| `has_video`                                                                       | `equal`        | Boolean                                                                |
+| `event_custom_property`                                                           | `equal`        | With `property_name` + value (one property filter)                     |
+| `date_range`                                                                      | date operators | See [Filter Operators](doc:filter-operators-1)                         |
 
 ## Sections
 
