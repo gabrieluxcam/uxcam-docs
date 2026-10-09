@@ -56,7 +56,7 @@ Narrow results with an array of filter objects. Each object names an `attribute`
 
 ```json
 "filters": [
-  { "attribute": "device_country", "operator": "equal", "value": "USA" }
+  { "attribute": "device_country", "operator": "equal", "value": "United States of America" }
 ]
 ```
 
@@ -64,7 +64,7 @@ Multiple filters are combined with AND:
 
 ```json
 "filters": [
-  { "attribute": "device_country", "operator": "equal", "value": "USA" },
+  { "attribute": "device_country", "operator": "equal", "value": "United States of America" },
   { "attribute": "session_duration", "operator": "greater", "value": 30 }
 ]
 ```
