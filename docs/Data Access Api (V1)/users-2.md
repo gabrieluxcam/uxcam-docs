@@ -145,7 +145,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/user/analytics \
   "success": true,
   "data": [
     {
-      "device_platform": "android",
+      "device_platform": "1",
       "user_count": 18402,
       "session_new_users_count": 1204,
       "avg_user_session_count": 3.41,
