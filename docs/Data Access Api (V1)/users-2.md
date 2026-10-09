@@ -58,7 +58,7 @@ Send a JSON body; the API key rides in the `X-Api-Key` header.
 curl -X POST https://api.uxcam.com/api/data-access/v1/user \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["property","usage","location","device"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","usage","location","device"],"filters":[{"attribute":"device_country","operator":"equal","value":"United States of America"}],"page_size":500}'
 ```
 
 ### Response
