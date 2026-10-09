@@ -99,7 +99,7 @@ Full field reference: [Query Parameters](doc:query-parameters-1).
 curl -X POST https://api.uxcam.com/api/data-access/v1/session \
   -H "X-Api-Key: YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"filters":[{"attribute":"device_country","operator":"equal","value":"USA"}],"page_size":500}'
+  -d '{"app_id":"YOUR_APP_ID","show_only":["property","user","device","location"],"filters":[{"attribute":"device_country","operator":"equal","value":"United States of America"}],"page_size":500}'
 ```
 
 ### Response Structure
