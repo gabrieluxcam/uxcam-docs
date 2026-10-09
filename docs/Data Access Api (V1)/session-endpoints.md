@@ -113,7 +113,7 @@ Response data organises into keys: session properties under `property`, device i
     {
       "sessionId": "60f7dd4efd9c2f001169bb96",
       "sessionNumber": 20,
-      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/list/1/60f7dd4efd9c2f001169bb96",
+      "url": "https://tara.uxcam.com/app/YOUR_APP_ID/sessions/60f7dd4efd9c2f001169bb96",
       "video": "https://sp.uxcam.com/replay/60f7dd4efd9c2f001169bb96?signature=…",
       "user": {
         "kUXCam_UserIdentity": "U#5066",
