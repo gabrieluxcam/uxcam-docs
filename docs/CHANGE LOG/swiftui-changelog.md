@@ -3,6 +3,7 @@ title: SwiftUI
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-swift
 metadata:
   title: ''
   description: ''

@@ -2,6 +2,7 @@
 title: Google Tag Manager
 deprecated: false
 hidden: false
+icon: fa-brands fa-google
 metadata:
   robots: index
 ---

@@ -3,6 +3,7 @@ title: Salesforce
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-salesforce
 metadata:
   title: ''
   description: ''

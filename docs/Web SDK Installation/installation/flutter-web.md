@@ -2,6 +2,7 @@
 title: Flutter Web
 deprecated: false
 hidden: false
+icon: fa-solid fa-layer-group
 metadata:
   robots: index
 ---

@@ -2,6 +2,7 @@
 title: Shopify
 deprecated: false
 hidden: false
+icon: fa-brands fa-shopify
 metadata:
   robots: index
 ---

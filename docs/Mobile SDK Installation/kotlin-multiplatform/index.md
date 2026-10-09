@@ -3,6 +3,7 @@ title: Kotlin Multiplatform
 excerpt: Install and initialize UXCam in a Kotlin Multiplatform (KMP) project.
 deprecated: false
 hidden: false
+icon: fa-solid fa-share-nodes
 metadata:
   title: ''
   description: ''

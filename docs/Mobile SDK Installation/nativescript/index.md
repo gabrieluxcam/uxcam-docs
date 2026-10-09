@@ -3,6 +3,7 @@ title: Nativescript
 excerpt: Install and configure the UXCam NativeScript SDK, from setup to your first recorded session
 deprecated: false
 hidden: false
+icon: fa-brands fa-js
 metadata:
   title: 'NativeScript SDK Integration Guide - UXCam'
   description: >-

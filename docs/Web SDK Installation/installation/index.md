@@ -3,6 +3,7 @@ title: Web Installation
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-globe
 metadata:
   title: ''
   description: ''

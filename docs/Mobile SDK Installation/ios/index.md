@@ -3,6 +3,7 @@ title: iOS SDK Integration Guide
 excerpt: How to Get Started with UXCam for iOS
 deprecated: false
 hidden: false
+icon: fa-brands fa-apple
 metadata:
   title: ''
   description: ''

@@ -3,6 +3,7 @@ title: Segment
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-diagram-project
 metadata:
   title: ''
   description: ''

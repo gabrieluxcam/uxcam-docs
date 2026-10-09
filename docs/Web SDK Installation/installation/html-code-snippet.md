@@ -2,6 +2,7 @@
 title: HTML Code Snippet
 deprecated: false
 hidden: false
+icon: fa-brands fa-html5
 metadata:
   robots: index
 ---

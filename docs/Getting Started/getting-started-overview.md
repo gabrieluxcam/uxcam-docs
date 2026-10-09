@@ -3,6 +3,7 @@ title: Getting Started
 excerpt: Choose your platform and start capturing user sessions in minutes
 deprecated: false
 hidden: false
+icon: fa-solid fa-rocket
 metadata:
   title: 'Getting Started with UXCam'
   description: 'Quick setup guides for UXCam SDK integration across mobile and web platforms'

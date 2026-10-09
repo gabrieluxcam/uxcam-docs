@@ -3,6 +3,7 @@ title: Quick Start - Web
 excerpt: Get UXCam running on your website in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-solid fa-globe
 metadata:
   title: 'Web Quick Start - UXCam'
   description: 'Fastest way to add UXCam session recording to your website'

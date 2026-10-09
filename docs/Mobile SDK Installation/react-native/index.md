@@ -3,6 +3,7 @@ title: React Native SDK Integration Guide
 excerpt: Install and configure the UXCam React Native SDK, from setup to your first recorded session
 deprecated: false
 hidden: false
+icon: fa-brands fa-react
 metadata:
   title: 'React Native SDK Integration Guide - UXCam'
   description: >-

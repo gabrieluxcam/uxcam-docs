@@ -3,6 +3,7 @@ title: Amplitude
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-chart-line
 metadata:
   title: ''
   description: ''

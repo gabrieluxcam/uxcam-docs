@@ -3,6 +3,7 @@ title: Cordova
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-mobile-screen-button
 metadata:
   title: ''
   description: ''

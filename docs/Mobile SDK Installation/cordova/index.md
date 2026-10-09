@@ -3,6 +3,7 @@ title: Cordova
 excerpt: Install and initialize UXCam in a Cordova, Ionic, or Capacitor project.
 deprecated: false
 hidden: false
+icon: fa-solid fa-mobile-screen-button
 metadata:
   title: ''
   description: ''

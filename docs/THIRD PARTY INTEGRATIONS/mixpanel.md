@@ -3,6 +3,7 @@ title: Mixpanel
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-chart-pie
 metadata:
   title: ''
   description: ''

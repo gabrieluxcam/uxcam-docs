@@ -3,6 +3,7 @@ title: Xamarin - MAUI
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-microsoft
 metadata:
   title: ''
   description: ''

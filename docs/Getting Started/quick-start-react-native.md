@@ -3,6 +3,7 @@ title: Quick Start - React Native
 excerpt: Get UXCam running in your React Native app in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-brands fa-react
 metadata:
   title: 'React Native Quick Start - UXCam'
   description: 'Fastest way to add UXCam session recording to your React Native app'

@@ -3,6 +3,7 @@ title: Flutter SDK Changelog
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-layer-group
 metadata:
   title: Flutter SDK Changelog
   description: >-

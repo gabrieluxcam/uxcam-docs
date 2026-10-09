@@ -3,6 +3,7 @@ title: Quick Start - Flutter
 excerpt: Get UXCam running in your Flutter app in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-solid fa-layer-group
 metadata:
   title: Flutter Quick Start - UXCam
   description: Fastest way to add UXCam session recording to your Flutter app

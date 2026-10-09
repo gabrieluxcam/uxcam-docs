@@ -3,6 +3,7 @@ title: Flutter
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-layer-group
 metadata:
   title: ''
   description: ''

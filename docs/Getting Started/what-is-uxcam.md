@@ -3,6 +3,7 @@ title: What is UXCam?
 excerpt: Understanding session recording, heatmaps, and user analytics
 deprecated: false
 hidden: false
+icon: fa-solid fa-circle-info
 metadata:
   title: 'What is UXCam?'
   description: 'Learn how UXCam session recording and analytics helps you understand user behavior'

@@ -3,6 +3,7 @@ title: Quick Start - iOS
 excerpt: Get UXCam running in your iOS app in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-brands fa-apple
 metadata:
   title: iOS Quick Start - UXCam
   description: Fastest way to add UXCam session recording to your iOS app

@@ -3,6 +3,7 @@ title: So What Does UXCam Do?
 excerpt: Let's Understand What UXCam Is Before Integrating It, Right?
 deprecated: false
 hidden: false
+icon: fa-solid fa-lightbulb
 metadata:
   title: ''
   description: ''

@@ -2,7 +2,7 @@
 title: NativeScript SDK Changelog
 deprecated: false
 hidden: false
-icon: fa-brands fa-nativescript
+icon: fa-brands fa-js
 metadata:
   robots: index
 ---

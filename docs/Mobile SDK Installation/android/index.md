@@ -3,6 +3,7 @@ title: Android SDK Integration Guide
 excerpt: How to Get Started with UXCam for Android
 deprecated: false
 hidden: false
+icon: fa-brands fa-android
 metadata:
   title: ''
   description: ''

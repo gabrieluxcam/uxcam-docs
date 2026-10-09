@@ -2,6 +2,7 @@
 title: Wordpress
 deprecated: false
 hidden: false
+icon: fa-brands fa-wordpress
 metadata:
   robots: index
 ---

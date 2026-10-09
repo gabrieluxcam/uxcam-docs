@@ -3,6 +3,7 @@ title: Quick Start - Android
 excerpt: Get UXCam running in your Android app in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-brands fa-android
 metadata:
   title: 'Android Quick Start - UXCam'
   description: 'Fastest way to add UXCam session recording to your Android app'

@@ -3,6 +3,7 @@ title: Flutter SDK Integration Guide
 excerpt: Complete Flutter UXCam integration with session analytics and user insights
 deprecated: false
 hidden: false
+icon: fa-solid fa-layer-group
 metadata:
   title: ''
   description: ''

@@ -3,6 +3,7 @@ title: React Native SDK Changelog
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-react
 metadata:
   title: React Native SDK Changelog
   description: >-

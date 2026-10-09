@@ -3,6 +3,7 @@ title: Quick Start - Cordova
 excerpt: Get UXCam running in your Cordova app in 5 minutes
 deprecated: false
 hidden: false
+icon: fa-solid fa-mobile-screen-button
 metadata:
   title: 'Cordova Quick Start - UXCam'
   description: 'Fastest way to add UXCam session recording to your Cordova app'

@@ -3,6 +3,7 @@ title: Other 3rd party integrations
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-puzzle-piece
 metadata:
   title: ''
   description: ''

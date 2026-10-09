@@ -3,6 +3,7 @@ title: Intercom
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-intercom
 metadata:
   title: ''
   description: ''

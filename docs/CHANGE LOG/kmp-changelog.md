@@ -3,6 +3,7 @@ title: Kotlin Multiplatform
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-share-nodes
 metadata:
   title: ''
   description: ''

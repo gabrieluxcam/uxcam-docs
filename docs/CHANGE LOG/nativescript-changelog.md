@@ -3,6 +3,7 @@ title: Nativescript
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-js
 metadata:
   title: ''
   description: ''

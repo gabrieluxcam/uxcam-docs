@@ -3,6 +3,7 @@ title: Firebase Google Analytics
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-brands fa-google
 metadata:
   title: ''
   description: ''

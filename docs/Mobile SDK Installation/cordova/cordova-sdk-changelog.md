@@ -2,7 +2,7 @@
 title: Cordova SDK Changelog
 deprecated: false
 hidden: false
-icon: fa-brands fa-cordova
+icon: fa-solid fa-mobile-screen-button
 metadata:
   robots: index
 ---

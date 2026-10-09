@@ -3,6 +3,7 @@ title: Firebase Crashlytics
 excerpt: ''
 deprecated: false
 hidden: false
+icon: fa-solid fa-fire
 metadata:
   title: ''
   description: ''
