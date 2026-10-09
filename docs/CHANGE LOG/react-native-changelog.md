@@ -62,11 +62,11 @@ metadata:
 
 ### V. 6.0.14 - March 18, 2026
 
-* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log).
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log-react-native).
 
 ### V. 6.0.13 - March 3, 2026
 
-* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log).
+* Interim release — see [live changelog](https://developer.uxcam.com/docs/react-native-sdk-change-log-react-native).
 
 ### V. 6.0.12 - February 11, 2026
 

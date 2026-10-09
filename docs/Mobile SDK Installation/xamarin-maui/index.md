@@ -46,7 +46,7 @@ UXCam.Start(configuration);
 
 ## SDK Installation — Xamarin (Deprecated)
 
-[![NuGet version](https://badge.fury.io/nu/UXCam.svg)](https://badge.fury.io/nu/UXCam/3.5.1)
+[![NuGet version](https://badge.fury.io/nu/UXCam.svg)](https://www.nuget.org/packages/UXCam/3.5.1)
 
 ### iOS
 

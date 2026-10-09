@@ -39,7 +39,7 @@ Instead of manually implementing the UXCam SDK, this MCP server guides your AI a
 
 Each prompt provides platform-specific code examples, validates your implementation, and guides you to the next step.
 
-**Note:** You'll need your UXCam app key to begin the integration. Find it at **Dashboard → Settings → App Key** or [sign up for free](https://dashboard.uxcam.com/signup).
+**Note:** You'll need your UXCam app key to begin the integration. Find it at **Dashboard → Settings → App Key** or [sign up for free](https://app.uxcam.com/signup).
 
 ## Supported Platforms
 
@@ -181,7 +181,7 @@ Sets user identity and custom properties for advanced analytics and filtering.
 
 ## Get Your UXCam App Key
 
-Don't have a UXCam account yet? [Sign up for free](https://dashboard.uxcam.com/signup)
+Don't have a UXCam account yet? [Sign up for free](https://app.uxcam.com/signup)
 
 Find your app key at: **Dashboard → Settings → App Key**
 

@@ -52,7 +52,7 @@ To start tracking, each UXCam account needs an **App Key** for both test and pro
 
 1. **Log In** to the UXCam dashboard and ensure you have both a test and production environment. If not, create a new app specifically for testing.
 2. **Locate the App Key**: If you’re setting up a new app, you’ll see the App Key listed in the **App Settings**. For an existing app, click the app name in the top-left corner > **App Settings** to find it.
-3. **Invite Your Team**: If others need access, don’t forget to add them! Here’s how to [add team members](https://help.uxcam.com/hc/en-us/articles/360036092012-Manage-your-team).
+3. **Invite Your Team**: If others need access, don’t forget to add them! Here’s how to [add team members](https://help.uxcam.com/en/articles/10222476-manage-your-team).
 
 > **Pro Tip:** Keep your test data separate from your production data to ensure clean, actionable insights!
 
@@ -62,7 +62,7 @@ To start tracking, each UXCam account needs an **App Key** for both test and pro
 
 ### Ready for Action? 🔍
 
-Explore our powerful analytics features and start uncovering how users experience your app. For a detailed look at each feature, check out the [full list here](https://help.uxcam.com/hc/en-us/categories/360002359512-knowledge-base).
+Explore our powerful analytics features and start uncovering how users experience your app. For a detailed look at each feature, check out the [full list here](https://help.uxcam.com/en/).
 
 ***
 

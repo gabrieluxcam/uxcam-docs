@@ -76,6 +76,6 @@ Sessions upload when the app goes to background. If force-closed before upload, 
 
 ## Further Reading
 
-- [SDK Reference](/docs/all-uxcam-apis) - API method documentation
+- [SDK Reference](/docs/sdk-reference) - API method documentation
 - [Getting Started](/docs/getting-started) - Platform integration guides
 - [Troubleshooting](/docs/troubleshooting-android) - Common issues and solutions

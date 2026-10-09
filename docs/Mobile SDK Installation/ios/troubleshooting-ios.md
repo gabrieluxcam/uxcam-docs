@@ -20,7 +20,7 @@ This guide covers common issues encountered when integrating UXCam with iOS appl
 Before diving into specific issues, verify these basics:
 
 - [ ] Xcode version 14.0+ is installed
-- [ ] UXCam iOS SDK is latest version (Check [changelog](ios-sdk-change-log-ios.md))
+- [ ] UXCam iOS SDK is latest version (Check [changelog](/docs/ios-sdk-change-log))
 - [ ] Valid UXCam app key is configured
 - [ ] Deployment target is iOS 12.0+
 - [ ] Internet connectivity is available
@@ -230,7 +230,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```swift
 // Add to Package.swift or use CocoaPods
 dependencies: [
-    .package(url: "https://github.com/uxcam/uxcam-swiftui-sdk", from: "1.0.0")
+    .package(url: "https://github.com/uxcam/uxcam-swiftui", from: "3.11.0")
 ]
 ```
 
@@ -255,7 +255,7 @@ struct MyApp: App {
 }
 ```
 
-For more details, see: [SwiftUI Integration Guide](swiftui-ios.md)
+For more details, see: [SwiftUI Integration Guide](/docs/swiftui-ios)
 
 ---
 
@@ -309,7 +309,7 @@ struct ProfileView: View {
 }
 ```
 
-For more details, see: [SwiftUI Automatic Screen Tagging](screen-tagging-ios/automatic-screen-tagging-swiftui-ios.md)
+For more details, see: [SwiftUI Automatic Screen Tagging](/docs/automatic-screen-tagging-swiftui-ios)
 
 ### Duplicate Screen Names or 0s Duration
 
@@ -401,7 +401,7 @@ struct PaymentView: View {
 }
 ```
 
-For more details, see: [Sensitive Data Occlusion](sensitive-data-occlusion-ios/index.md)
+For more details, see: [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-ios)
 
 ### Entire Screen Being Blurred
 
@@ -524,7 +524,7 @@ FirebaseCrashlytics.crashlytics()  // After
    - Upload dSYM files to UXCam
    - Check Build Settings → Debug Information Format → DWARF with dSYM File
 
-For more details, see: [Crash Symbolication Guide](advanced-configuration-and-apis-1/crash-symbolication-ios.md)
+For more details, see: [Crash Symbolication Guide](/docs/crash-symbolication-ios)
 
 ---
 
@@ -625,17 +625,17 @@ When contacting support, include:
 ### Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [iOS Integration Guide](index.md)
-- **Changelog**: [Version History](ios-sdk-change-log-ios.md)
-- **Advanced Configuration**: [Advanced APIs](advanced-configuration-and-apis-1/index.md)
+- **Documentation**: [iOS Integration Guide](/docs/ios)
+- **Changelog**: [Version History](/docs/ios-sdk-change-log)
+- **Advanced Configuration**: [Advanced APIs](/docs/advanced-configuration-and-apis-1)
 
 ### Related Documentation
 
-- [SwiftUI Guide](swiftui-ios.md)
-- [Screen Tagging Guide](screen-tagging-ios/index.md)
-- [Sensitive Data Occlusion](sensitive-data-occlusion-ios/index.md)
-- [User Properties](user-properties.md)
-- [Events](events.md)
+- [SwiftUI Guide](/docs/swiftui-ios)
+- [Screen Tagging Guide](/docs/screen-tagging-ios)
+- [Sensitive Data Occlusion](/docs/sensitive-data-occlusion-ios)
+- [User Properties](/docs/user-properties-ios)
+- [Events](/docs/events-ios)
 
 ---
 

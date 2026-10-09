@@ -724,9 +724,9 @@ class _PrivacySettingsScreenState extends State<PrivacySettingsScreen> {
 
 ## Next Steps
 
-- **[Integration Logging](integration-logging-guide-flutter.md)** - Debug your consent setup
-- **[Troubleshooting](troubleshooting-faqs-flutter.md)** - Solve consent-related issues
-- **[Recording Control](control-recording-flutter.md)** - Control recording based on consent
+- **[Integration Logging](/docs/integration-logging-guide-flutter)** - Debug your consent setup
+- **[Troubleshooting](/docs/troubleshooting-faqs-flutter)** - Solve consent-related issues
+- **[Recording Control](/docs/control-recording-flutter)** - Control recording based on consent
 
 ---
 

@@ -370,5 +370,5 @@ dotnet list package
 ## Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [Xamarin/MAUI Integration Guide](index.md)
-- **Changelog**: [Version History](xamarin-sdk-changelog.md)
+- **Documentation**: [Xamarin/MAUI Integration Guide](/docs/xamarin-maui)
+- **Changelog**: [Version History](/docs/xamarin-sdk-changelog)

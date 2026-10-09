@@ -112,7 +112,7 @@ When **analyzing your Events on Firebase** you can see the custom parameters and
 
 > 📘 Example
 >
-> We suggest send the same events that you’ve on Firebase to UXCam, to have more consistency in your data and collect more insights into your users’ behavior. **[Send Events to UXCam →](https://uxcam-documentation.readme.io/docs/send-events)**
+> We suggest send the same events that you’ve on Firebase to UXCam, to have more consistency in your data and collect more insights into your users’ behavior. **[Send Events to UXCam →](/docs/send-events)**
 
 ![](https://files.readme.io/348ec86-Firebase_k-base_article.png "Firebase k-base article.png")
 

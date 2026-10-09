@@ -48,7 +48,7 @@ Postman enables you to test and utilize UXCam's Data Access APIs without requiri
 
 All endpoints share a single base URL:
 
-[https://api.uxcam.com](https://api.uxcam.com)
+`https://api.uxcam.com`
 
 Each resource has a list endpoint and an analytics endpoint. Lists return individual records (qualitative data); analytics endpoints return aggregated, grouped numbers suited to charts and dashboards.
 

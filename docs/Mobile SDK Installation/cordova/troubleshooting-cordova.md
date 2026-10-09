@@ -299,5 +299,5 @@ cordova plugin list
 ## Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [Cordova Integration Guide](index.md)
-- **Changelog**: [Version History](cordova-sdk-changelog.md)
+- **Documentation**: [Cordova Integration Guide](/docs/cordova)
+- **Changelog**: [Version History](/docs/cordova-sdk-changelog)

@@ -202,15 +202,15 @@ void main() {
 
 Explore the detailed guides for each advanced feature:
 
-1. **[Recording Control](control-recording-flutter.md)** - Master session lifecycle management
-2. **[Crash Handling](crashes-and-anrs-flutter.md)** - Implement comprehensive error tracking
-3. **[User Consent](opt-in-opt-out-flutter.md)** - Build privacy-compliant experiences
-4. **[Integration Logging](integration-logging-guide-flutter.md)** - Debug and validate your setup
-5. **[Troubleshooting](troubleshooting-faqs-flutter.md)** - Solve complex integration challenges
+1. **[Recording Control](/docs/control-recording-flutter)** - Master session lifecycle management
+2. **[Crash Handling](/docs/crashes-and-anrs-flutter)** - Implement comprehensive error tracking
+3. **[User Consent](/docs/opt-in-opt-out-flutter)** - Build privacy-compliant experiences
+4. **[Integration Logging](/docs/integration-logging-guide-flutter)** - Debug and validate your setup
+5. **[Troubleshooting](/docs/troubleshooting-faqs-flutter)** - Solve complex integration challenges
 
 ## Support Resources
 
-- **Documentation**: [Flutter Integration Guide](../index.md)
+- **Documentation**: [Flutter Integration Guide](/docs/flutter)
 - **API Reference**: Complete method documentation
 - **Examples**: Working code samples for each feature
 - **Support**: [team@uxcam.com](mailto:team@uxcam.com)

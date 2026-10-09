@@ -315,5 +315,5 @@ npm list nativescript-uxcam
 ## Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [NativeScript Integration Guide](index.md)
-- **Changelog**: [Version History](nativescript-sdk-changelog.md)
+- **Documentation**: [NativeScript Integration Guide](/docs/nativescript)
+- **Changelog**: [Version History](/docs/nativescript-sdk-changelog)

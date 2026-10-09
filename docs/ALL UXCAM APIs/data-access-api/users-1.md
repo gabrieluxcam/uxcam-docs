@@ -16,9 +16,9 @@ An entity that engages with an application is referred to as a user. A user can 
 
 UXCam Data Access API provides two endpoint URLs for retrieving both qualitative (List User) and quantitative (Analyze User) data for users. The endpoint URLs are:
 
-List User: [https://api.uxcam.com/v2/user](https://api.uxcam.com/v2/user)
+List User: `https://api.uxcam.com/v2/user`
 
-Analyze User: [https://api.uxcam.com/v2/user/analytics](https://api.uxcam.com/v2/user/analytics)
+Analyze User: `https://api.uxcam.com/v2/user/analytics`
 
 ## User Data Attributes
 
@@ -313,7 +313,7 @@ https://api.uxcam.com/v2/user?appid=<appid>&apikey=<apikey>&filters=<filters>&pa
 
 To authenticate the List event API, App ID and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=50)
+Example request: `https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50`
 
 ### Response Structure
 
@@ -445,7 +445,7 @@ https://api.uxcam.com/v2/user/analytics?appid=<appid>&apikey=<apikey>&filters=<f
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=100)
+Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100`
 
 ### Response Structure
 
@@ -469,7 +469,7 @@ The user analytics API provides aggregated data of users based on the user’s q
 }
 ```
 
-[Example](https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&filters=\[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]\&group_by=\[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]\&page=1\&page_size=100)
+Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]&group_by=[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]&page=1&page_size=100`
 
 ### Example Requests
 

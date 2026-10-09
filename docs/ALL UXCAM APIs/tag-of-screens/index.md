@@ -11,8 +11,8 @@ next:
   description: ''
   pages:
     - type: basic
-      slug: hide-sensitive-views
-      title: Hide Sensitive Views
+      slug: screen-blurring
+      title: Sensitive Data Occlusion and Screen Blurring
 ---
 UXCam captures the Screen (view controller/activity) name **automatically**. However, there are some cases where you will need to manually tag your screens to ensure you have them separately in your recordings and heatmaps. 
 
@@ -21,7 +21,7 @@ UXCam captures the Screen (view controller/activity) name **automatically**. How
 > For more information on how to automatically capture screens in Flutter and Fragments on Android please visit this respective links: 
 >
 > * [Flutter automatic screen capture](https://developer.uxcam.com/docs/flutter-tagging-approach)
-> * [Fragment based tagging](https://developer.uxcam.com/docs/fragment-based-tagging)
+> * [Fragment based tagging](https://developer.uxcam.com/docs/fragment-based-tagging-android)
 
 **Use our API to tag screens if you:**
 

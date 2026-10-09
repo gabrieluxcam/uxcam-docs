@@ -423,7 +423,7 @@ WebViews can be a unique challenge when it comes to screen tagging, as they ofte
 
 For more information, click the button below:
 
-[Tagging WebViews Documentation](/docs/ALL UXCAM APIs/tag-of-screens/web-view-tagging)
+[Tagging WebViews Documentation](/docs/web-view-tagging)
 
 </Tab>
 <Tab title="Web">

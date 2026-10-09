@@ -17,7 +17,7 @@ next:
 </Callout>
 
 
-[<Image src="https://img.shields.io/cocoapods/v/UXCamSwiftUI" alt="pod version" align="left" wrap={true} />](https://github.com/uxcam/ios-swiftui-ios/tree/1.0.1)
+[<Image src="https://img.shields.io/cocoapods/v/UXCamSwiftUI" alt="pod version" align="left" wrap={true} />](https://github.com/uxcam/uxcam-swiftui)
 
 
 # SDK Integration
@@ -42,7 +42,7 @@ pod 'UXCamSwiftUI'
 <Image src="https://files.readme.io/25df998-Screenshot_25_3_24__09_25.jpg" align="center" width="80%" />
 
 
-[https://github.com/uxcam/uxcam-swiftui](https://github.com/uxcam/uxcam-ios-swiftui-ios)
+[https://github.com/uxcam/uxcam-swiftui](https://github.com/uxcam/uxcam-swiftui)
 
 ## Securely load your App Key
 

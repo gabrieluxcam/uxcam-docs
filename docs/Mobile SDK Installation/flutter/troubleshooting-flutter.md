@@ -432,8 +432,8 @@ flutter pub deps
 ### Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [Flutter Integration Guide](index.md)
-- **Changelog**: [Version History](flutter-sdk-changelog-flutter.md)
+- **Documentation**: [Flutter Integration Guide](/docs/flutter)
+- **Changelog**: [Version History](/docs/flutter-sdk-changelog-flutter)
 
 ### Community Resources
 

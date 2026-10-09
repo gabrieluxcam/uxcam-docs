@@ -38,7 +38,7 @@ This section covers advanced UXCam Android SDK features beyond the basic integra
     Send caught exceptions to UXCam alongside session replays.
   </Card>
 
-  <Card title="Troubleshooting FAQs" href="troubleshooting-faqs-android" icon="fa-question-circle">
+  <Card title="Troubleshooting FAQs" href="/docs/troubleshooting-android" icon="fa-question-circle">
     Common issues and solutions during Android integration.
   </Card>
 </Cards>

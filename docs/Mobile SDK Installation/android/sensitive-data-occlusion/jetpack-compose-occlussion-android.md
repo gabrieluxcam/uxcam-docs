@@ -12,7 +12,7 @@ next:
 ---
 <GitHubCallout type="warning"> 🚧 This guide covers occlusion methods specifically for Jetpack Compose. For occluding traditional Android Views, please refer to our main occlusion documentation.</GitHubCallout>
 
-To support occlusion in Jetpack Compose, we have introduced a new helper module: **UXCamKtx**. This module is required to occlude Composables and is available for Android SDK v3.4.1 and newer. The standard UXCam SDK is still a required dependency. (guide [here](https://uxcam-documentation.readme.io/docs/android))
+To support occlusion in Jetpack Compose, we have introduced a new helper module: **UXCamKtx**. This module is required to occlude Composables and is available for Android SDK v3.4.1 and newer. The standard UXCam SDK is still a required dependency. (guide [here](/docs/android))
 
 ***
 

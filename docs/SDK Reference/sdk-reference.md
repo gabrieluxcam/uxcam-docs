@@ -13,7 +13,7 @@ next:
 
 # SDK Reference
 
-This reference documents UXCam SDK methods available across all platforms. For platform-specific implementation guides, see the [Mobile SDK](/docs/mobile-sdk-installation) or [Web SDK](/docs/web-sdk-installation) documentation.
+This reference documents UXCam SDK methods available across all platforms. For platform-specific implementation guides, see the [Mobile SDK](/docs/android) or [Web SDK](/docs/installation) documentation.
 
 ---
 

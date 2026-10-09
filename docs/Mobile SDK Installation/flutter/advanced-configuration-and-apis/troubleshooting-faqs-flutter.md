@@ -669,7 +669,7 @@ class DiagnosticChecklist {
 ### Contact Information
 
 - **Email Support**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [Flutter Integration Guide](../index.md)
+- **Documentation**: [Flutter Integration Guide](/docs/flutter)
 - **GitHub Issues**: Report bugs on our repository
 - **Community**: Join our developer Discord/Slack
 

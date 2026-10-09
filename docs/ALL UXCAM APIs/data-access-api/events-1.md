@@ -18,9 +18,9 @@ For example, when a user taps the login button in the app, it is considered a ta
 
 UXCAM provides two endpoint URLs for retrieving qualitative (**Event List**) and quantitative (**Event Analytics**) data for events. The endpoint URLs are:
 
-Event List: [https://api.uxcam.com/v2/event](https://api.uxcam.com/v2/event)
+Event List: `https://api.uxcam.com/v2/event`
 
-Event Analytics: [https://api.uxcam.com/v2/event/analytics](https://api.uxcam.com/v2/event/analytics)
+Event Analytics: `https://api.uxcam.com/v2/event/analytics`
 
 ## Event Data Attributes
 
@@ -318,7 +318,7 @@ https://api.uxcam.com/v2/event?appid=<appid>&apikey=<apikey>&filters=<filters>&p
 
 To authenticate the List event API, App ID and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/event?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=50)
+Example request: `https://api.uxcam.com/v2/event?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50`
 
 ### Response Structure
 
@@ -407,7 +407,7 @@ https://api.uxcam.com/v2/event/analytics?appid=<appid>&apikey=<apikey>&filters=<
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/event/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=100)
+Example request: `https://api.uxcam.com/v2/event/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100`
 
 ### Response Structure
 

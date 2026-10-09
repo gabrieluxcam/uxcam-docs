@@ -749,9 +749,9 @@ class LogExporter {
 
 ## Next Steps
 
-- **[Troubleshooting FAQs](troubleshooting-faqs-flutter.md)** - Common issues and solutions
-- **[Recording Control](control-recording-flutter.md)** - Advanced recording management
-- **[Crash Handling](crashes-and-anrs-flutter.md)** - Error tracking integration
+- **[Troubleshooting FAQs](/docs/troubleshooting-faqs-flutter)** - Common issues and solutions
+- **[Recording Control](/docs/control-recording-flutter)** - Advanced recording management
+- **[Crash Handling](/docs/crashes-and-anrs-flutter)** - Error tracking integration
 
 ---
 

@@ -21,7 +21,7 @@ The following guide explains how to associate a UXCam session URL with Mixpanel 
 
 UXCam website will walk you through how to sign up and set up UXCam. To create a Mixpanel account, visit Mixpanel's website.
 
-For more information about 3rd party integration and best practices, visit our [3rd party integration guide](https://uxcam-documentation.readme.io/docs/other-3rd-party-integrations).
+For more information about 3rd party integration and best practices, visit our [3rd party integration guide](/docs/other-3rd-party-integrations).
 
 ## Integrate with Mixpanel
 

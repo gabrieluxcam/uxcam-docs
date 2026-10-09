@@ -28,7 +28,7 @@ For iOS, UXCam automatically tags view controllers the moment they appear. This 
 | **UIKit ViewControllers** | ✅ Tagged automatically by default | None - works out of the box | Optional - for custom names |
 | **SwiftUI Views** | ✅ Tagged automatically with config | `enableAutomaticScreenNameTagging = true` (SDK v1.0.7+) | Optional - for edge cases |
 
-<GitHubCallout type="note">**SwiftUI automatic tagging** captures screen names from `navigationTitle` or `tabItem` modifiers. For views without these modifiers, use manual tagging. [Learn more about SwiftUI automatic tagging](automatic-screen-tagging-swiftui-ios.md)</GitHubCallout>
+<GitHubCallout type="note">**SwiftUI automatic tagging** captures screen names from `navigationTitle` or `tabItem` modifiers. For views without these modifiers, use manual tagging. [Learn more about SwiftUI automatic tagging](/docs/automatic-screen-tagging-swiftui-ios)</GitHubCallout>
 
 **Review the default names**
 
@@ -125,7 +125,7 @@ if message.name == "uxcam", let dict = message.body as? [String: String],
 }
 ```
 
-For a full walk‑through—including regex URL matching—see [**WebView Tagging →**](/docs/ALL UXCAM APIs/tag-of-screens/web-view-tagging).
+For a full walk‑through—including regex URL matching—see [**WebView Tagging →**](/docs/web-view-tagging).
 
 ***
 

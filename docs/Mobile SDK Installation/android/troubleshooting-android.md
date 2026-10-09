@@ -20,7 +20,7 @@ This guide covers common issues encountered when integrating UXCam with Android 
 Before diving into specific issues, verify these basics:
 
 - [ ] Android Studio version 4.0+ is installed
-- [ ] UXCam Android SDK is latest version (Check [changelog](android-sdk-changelog-android.md))
+- [ ] UXCam Android SDK is latest version (Check [changelog](/docs/android-sdk-changelog))
 - [ ] Valid UXCam app key is configured
 - [ ] minSdkVersion is 21+ (Android 5.0 Lollipop)
 - [ ] Internet connectivity is available
@@ -559,16 +559,16 @@ adb logcat -d | grep -E "UXCam|UXCAM" > uxcam_logs.txt
 ### Contact Support
 
 - **Email**: [team@uxcam.com](mailto:team@uxcam.com)
-- **Documentation**: [Android Integration Guide](index.md)
-- **Changelog**: [Version History](android-sdk-changelog-android.md)
-- **Advanced Configuration**: [Advanced APIs](advanced-configuration-and-apis/index.md)
+- **Documentation**: [Android Integration Guide](/docs/android)
+- **Changelog**: [Version History](/docs/android-sdk-changelog)
+- **Advanced Configuration**: [Advanced APIs](/docs/advanced-configuration-and-apis-android)
 
 ### Related Documentation
 
-- [Screen Tagging Guide](screen-tagging/index.md)
-- [Sensitive Data Occlusion](sensitive-data-occlusion/index.md)
-- [Users and Properties](user-properties.md)
-- [Sending Events](events.md)
+- [Screen Tagging Guide](/docs/screen-tagging)
+- [Sensitive Data Occlusion](/docs/sensitive-data-occlusion)
+- [Users and Properties](/docs/user-properties)
+- [Sending Events](/docs/events)
 
 ---
 

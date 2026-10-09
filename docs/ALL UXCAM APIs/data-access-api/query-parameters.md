@@ -28,7 +28,7 @@ This pagination parameter divides a large data set into smaller sections to faci
 page=1&page_size=20
 ```
 
-Example Request [Here](https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=20).
+Example Request `https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=20`.
 
 ## Filters:
 

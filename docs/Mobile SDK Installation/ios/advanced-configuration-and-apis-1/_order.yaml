@@ -1,8 +1,8 @@
-- crash-symbolication
-- integration-logging-guide-for-developers-copy-1
-- crashes-anrs-copy
-- report-handled-exceptions-copy
-- control-recording-copy-1
-- pause-and-resume-video-recording-copy
-- opt-in-opt-out-copy
-- app-clips-and-extensions
+- crash-symbolication-ios
+- integration-logging-guide-for-developers-copy-1-ios
+- crashes-anrs-copy-ios
+- report-handled-exceptions-copy-ios
+- control-recording-copy-1-ios
+- pause-and-resume-video-recording-copy-ios
+- opt-in-opt-out-copy-ios
+- app-clips-and-extensions-ios

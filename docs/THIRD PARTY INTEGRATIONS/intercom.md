@@ -213,4 +213,4 @@ You can send the same Intercom events to UXCam, to not only have more consistenc
 
 You can also build funnels including relevant Events and **analyze the drop-offs or user’s pain points** within your app. Next, you can easily **find these users on Intercom** and contact them to help them through the process, improving their experience. 
 
-You can read more about logging Events to UXCam [here](https://uxcam-documentation.readme.io/docs/send-events).
+You can read more about logging Events to UXCam [here](/docs/send-events).

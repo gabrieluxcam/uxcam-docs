@@ -16,9 +16,9 @@ A session is a period of time during which a user interacts with your app. It ty
 
 UXCam provides **two** endpoint URLs for retrieving qualitative **(Session List)** and quantitative **(Session Analytics)** data for sessions. The endpoint URLs are as follows:
 
-Session List: [https://api.uxcam.com/v2/session](https://api.uxcam.com/v2/session)
+Session List: `https://api.uxcam.com/v2/session`
 
-Session Analytics: [https://api.uxcam.com/v2/session/analytics](https://api.uxcam.com/v2/session/analytics)
+Session Analytics: `https://api.uxcam.com/v2/session/analytics`
 
 # Session Data Attributes
 
@@ -305,8 +305,8 @@ A session list provides qualitative data, including details about the device, in
 
 This list session endpoint supports the following query parameters apart from authentication, as given in the URL structure below.
 
-* [pagination](https://help.uxcam.com/hc/en-us/articles/15844412117401)
-* [filters](https://help.uxcam.com/hc/en-us/articles/15844412117401)
+* [pagination](/docs/api-query-parameters#pagination)
+* [filters](/docs/api-query-parameters#filters)
 
 For more information on request parameters see the [Query parameters](https://developer.uxcam.com/docs/query-parameters) section
 
@@ -318,7 +318,7 @@ https://api.uxcam.com/v2/session?appid=<appid>&apikey=<apikey>&filters=<filters>
 
 To authenticate the list sessions API, appid and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example Link](https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=50)
+Example request: `https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50`
 
 ### Response Structure
 
@@ -431,7 +431,7 @@ https://api.uxcam.com/v2/session/analytics?appid=<appid>&apikey=<apikey>&filters
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-[Example](https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb\&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618\&page=1\&page_size=100)
+Example request: `https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100`
 
 ### Response Structure
 

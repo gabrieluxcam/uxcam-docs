@@ -18,9 +18,9 @@ If you are using Segment to track your events and collect useful information, yo
 
 > 📘
 >
-> If you haven’t already, please integrate UXCam following the steps described for [iOS](https://uxcam-documentation.readme.io/docs/ios-beta) or [Android](https://uxcam-documentation.readme.io/docs/android)
+> If you haven’t already, please integrate UXCam following the steps described for [iOS](/docs/ios) or [Android](/docs/android)
 >
-> To read more about Segment's integration process, please visit [this page ](https://segment.com/docs/)
+> To read more about Segment's integration process, please visit [this page ](https://www.twilio.com/docs/segment)
 
 ## <br/>
 
@@ -48,11 +48,11 @@ Here you can view a list of Segment's available calls and the UXCam supported me
   <tbody>
     <tr>
       <td>
-        [Identify](https://segment.com/docs/connections/spec/identify/)
+        [Identify](https://www.twilio.com/docs/segment/connections/spec/identify)
       </td>
 
       <td>
-        [setUserProperties](https://uxcam-documentation.readme.io/docs/send-user-properties)
+        [setUserProperties](/docs/send-user-properties)
       </td>
 
       <td>
@@ -62,11 +62,11 @@ Here you can view a list of Segment's available calls and the UXCam supported me
 
     <tr>
       <td>
-        [Track](https://segment.com/docs/connections/spec/track/)
+        [Track](https://www.twilio.com/docs/segment/connections/spec/track)
       </td>
 
       <td>
-        [logEvent](https://uxcam-documentation.readme.io/docs/send-events)
+        [logEvent](/docs/send-events)
       </td>
 
       <td>
@@ -76,11 +76,11 @@ Here you can view a list of Segment's available calls and the UXCam supported me
 
     <tr>
       <td>
-        [Screen](https://segment.com/docs/connections/spec/screen/)
+        [Screen](https://www.twilio.com/docs/segment/connections/spec/screen)
       </td>
 
       <td>
-        [tagScreenName](https://uxcam-documentation.readme.io/docs/tag-of-screens)
+        [tagScreenName](/docs/tag-of-screens)
       </td>
 
       <td>
@@ -90,11 +90,11 @@ Here you can view a list of Segment's available calls and the UXCam supported me
 
     <tr>
       <td>
-        [Alias](https://segment.com/docs/connections/spec/alias/)
+        [Alias](https://www.twilio.com/docs/segment/connections/spec/alias)
       </td>
 
       <td>
-        [setUserIdentity](https://uxcam-documentation.readme.io/docs/send-user-properties)
+        [setUserIdentity](/docs/send-user-properties)
       </td>
 
       <td>

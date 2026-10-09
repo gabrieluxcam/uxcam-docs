@@ -471,9 +471,9 @@ class UXCamTestController {
 
 ## Next Steps
 
-- **[Crash Handling](crashes-and-anrs-flutter.md)** - Learn advanced error tracking
-- **[User Consent](opt-in-opt-out-flutter.md)** - Implement privacy controls
-- **[Integration Logging](integration-logging-guide-flutter.md)** - Debug your setup
+- **[Crash Handling](/docs/crashes-and-anrs-flutter)** - Learn advanced error tracking
+- **[User Consent](/docs/opt-in-opt-out-flutter)** - Implement privacy controls
+- **[Integration Logging](/docs/integration-logging-guide-flutter)** - Debug your setup
 
 ---
 
