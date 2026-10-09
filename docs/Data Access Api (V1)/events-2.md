@@ -83,7 +83,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/event \
       "sessionProperty": {
         "sessionId": "60f7dd4efd9c2f001169bb96", "isCrashed": false,
         "durationSec": 55.009, "totalGesture": 26, "totalScreen": 17,
-        "uniqueScreensCount": 5, "networkType": "wifi", "sessionNumber": 20, "country": "USA"
+        "uniqueScreensCount": 5, "networkType": "wifi", "sessionNumber": 20, "country": "United States of America"
       },
       "userProperty": {
         "uxcamuserid": "60f7dd46972a633e88696d6b", "kUXCam_UserIdentity": "U#5066",
