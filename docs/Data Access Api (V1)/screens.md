@@ -154,7 +154,7 @@ curl -X POST https://api.uxcam.com/api/data-access/v1/screen/analytics \
 
 ## Errors
 
-Errors use the shared `{ "detail": { "code", "message" } }` shape — a missing or invalid key is `401`, a malformed body is `422`, and an unsupported metric or dimension is `400`. See [Error Handling & Messages](/docs/error-handling-and-messages-1) for the full list.
+Errors uses the error format shown on Error Handling — a missing or invalid key is `401`, a malformed body is `422`, and an unsupported metric or dimension is `400`. See [Error Handling & Messages](/docs/error-handling-and-messages-1) for the full list.
 
 ### References:
 
