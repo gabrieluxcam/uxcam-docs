@@ -313,7 +313,7 @@ https://api.uxcam.com/v2/user?appid=<appid>&apikey=<apikey>&filters=<filters>&pa
 
 To authenticate the List event API, App ID and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-Example request: `https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50`
+Example request: `https://api.uxcam.com/v2/user?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&page=1&page_size=50`
 
 ### Response Structure
 
@@ -417,7 +417,7 @@ The List user API provides information about a user in several key-value pairs g
 List users from the country USA:
 
 ```
-https://api.uxcam.com/v2/user?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]
+https://api.uxcam.com/v2/user?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]
 
 ```
 
@@ -445,7 +445,7 @@ https://api.uxcam.com/v2/user/analytics?appid=<appid>&apikey=<apikey>&filters=<f
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100`
+Example request: `https://api.uxcam.com/v2/user/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&page=1&page_size=100`
 
 ### Response Structure
 
@@ -469,7 +469,7 @@ The user analytics API provides aggregated data of users based on the user’s q
 }
 ```
 
-Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]&group_by=[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]&page=1&page_size=100`
+Example request: `https://api.uxcam.com/v2/user/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[%7B%22attribute%22:%20%22device_country%22,%22operator%22:%20%22equal%22,%20%22value%22:%22USA%22%7D]&group_by=[%7B%22attribute%22:%20%22device_model%22,%20%22max_group_number%22:%2050%7D]&page=1&page_size=100`
 
 ### Example Requests
 
@@ -478,7 +478,7 @@ Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419
 How many users are in a given country (for instance USA) for the app in the last month, and how did this change compared to the month before?
 
 ```
-https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]&comparison=1
+https://api.uxcam.com/v2/user/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]&comparison=1
 ```
 
 * Users distribution by device manufacturer
@@ -486,6 +486,6 @@ https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c
 What is the most commonly used device manufacturer observed in the generated users? Or what is the distribution of users by the device manufacturer for Jan 2023?
 
 ```
-https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute":"date_range","operator":"between_dates","value":{"lower":"2023-01-01","upper":"2023-01-20"}}]&group_by=[{"attribute":"device_manufacturer"}]&aggregation=[{"attribute":"user_count","operator":""}]
+https://api.uxcam.com/v2/user/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[{"attribute":"date_range","operator":"between_dates","value":{"lower":"2023-01-01","upper":"2023-01-20"}}]&group_by=[{"attribute":"device_manufacturer"}]&aggregation=[{"attribute":"user_count","operator":""}]
 
 ```

@@ -70,7 +70,7 @@ filters=[{"attribute":"event_custom_property","operator":
 "<Operator Name>","property_name":"<custom property Name>","value":"<property value>"}]
 ```
 
-Example request: `https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[%7B%22attribute%22:%20%22device_class%22,%22operator%22:%20%22equal%22,%20%22value%22:%22Android%20Large%22%7D]&page=1&page_size=20`
+Example request: `https://api.uxcam.com/v2/session?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[%7B%22attribute%22:%20%22device_class%22,%22operator%22:%20%22equal%22,%20%22value%22:%22Android%20Large%22%7D]&page=1&page_size=20`
 
 ### Groupings (For analytics endpoints only)
 
@@ -98,7 +98,7 @@ group_by=[{"attribute":"event_custom_property","property_name":"<custom property
 
 ```
 
-Example request: `https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&group_by=[%7B%22attribute%22:%22app_version%22,%22max_group_number%22:50%7D]&page=1&page_size=50`
+Example request: `https://api.uxcam.com/v2/session/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&group_by=[%7B%22attribute%22:%22app_version%22,%22max_group_number%22:50%7D]&page=1&page_size=50`
 
 ### Aggregation (For analytics endpoints only)
 
@@ -119,7 +119,7 @@ Here are the valid aggregation functions:
 | Minimum               | min                       | Integer, Bool             |
 | Maximum               | max                       | Integer, Bool             |
 
-**Note:**  For JSON ([user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)) attribute data type, this supports aggregation functions like(sum/avg/min/max) as well if property\_name values contain integer values. If aggregation functions are used with string value then this will return an empty response \[Example request: `https://api.uxcam.com/v2/user/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&aggregation=[%7B%22attribute%22:%22user_custom_property%22,%22operator%22:%22avg%22,%22property_name%22:%22age_group%22%7D]&page=1&page_size=20`]
+**Note:**  For JSON ([user\_custom\_property](https://developer.uxcam.com/docs/send-user-properties) and [event\_custom\_property](https://developer.uxcam.com/docs/send-events)) attribute data type, this supports aggregation functions like(sum/avg/min/max) as well if property\_name values contain integer values. If aggregation functions are used with string value then this will return an empty response \[Example request: `https://api.uxcam.com/v2/user/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&aggregation=[%7B%22attribute%22:%22user_custom_property%22,%22operator%22:%22avg%22,%22property_name%22:%22age_group%22%7D]&page=1&page_size=20`]
 
 ```text JSON Aggregation Example
 aggregation=[{"attribute":"user_custom_property","property_name":"price","operator":"avg"}]
@@ -141,4 +141,4 @@ comparison=1
 
 **Note**: This parameter is only applicable to the analytics endpoint and cannot be used in conjunction with grouping parameters. If both grouping and comparison are used, the comparison parameter will be skipped.
 
-Example request: `https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&comparison=1`
+Example request: `https://api.uxcam.com/v2/session/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&comparison=1`

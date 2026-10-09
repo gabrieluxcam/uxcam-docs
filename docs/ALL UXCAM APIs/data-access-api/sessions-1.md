@@ -318,7 +318,7 @@ https://api.uxcam.com/v2/session?appid=<appid>&apikey=<apikey>&filters=<filters>
 
 To authenticate the list sessions API, appid and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-Example request: `https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=50`
+Example request: `https://api.uxcam.com/v2/session?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&page=1&page_size=50`
 
 ### Response Structure
 
@@ -403,7 +403,7 @@ Here in the response, their **video** key contains the session video link and th
 List sessions from the country USA:
 
 ```
-https://api.uxcam.com/v2/session?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]
+https://api.uxcam.com/v2/session?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[{"attribute":"device_country","operator":"equal","value":"USA"}]
 ```
 
 ## Analyze Sessions
@@ -431,7 +431,7 @@ https://api.uxcam.com/v2/session/analytics?appid=<appid>&apikey=<apikey>&filters
 
 To authenticate the event analytics API, app id and API key are required. See [authentication](https://developer.uxcam.com/docs/data-access-api) for more details.
 
-Example request: `https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&page=1&page_size=100`
+Example request: `https://api.uxcam.com/v2/session/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&page=1&page_size=100`
 
 ### Response Structure
 
@@ -506,5 +506,5 @@ Session from device country USA distributed by device model:
 To get session analytics data (**quantitative**) which is grouped with **device model** from country **USA**. The structure of the API URL.
 
 ```
-https://api.uxcam.com/v2/session/analytics?appid=60f6c0b8b97ba419120b82eb&apikey=9c633412-927a-4f4e-87bc-386dc1e3a618&filters=[{"attribute": "device_country","operator": "equal", "value":"USA"}]&group_by=[{"attribute": "device_model", "max_group_number": 50}]&page=1&page_size=100
+https://api.uxcam.com/v2/session/analytics?appid=YOUR_APP_ID&apikey=YOUR_API_KEY&filters=[{"attribute": "device_country","operator": "equal", "value":"USA"}]&group_by=[{"attribute": "device_model", "max_group_number": 50}]&page=1&page_size=100
 ```
