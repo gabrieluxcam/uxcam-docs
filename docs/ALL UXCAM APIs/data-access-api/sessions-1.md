@@ -305,8 +305,8 @@ A session list provides qualitative data, including details about the device, in
 
 This list session endpoint supports the following query parameters apart from authentication, as given in the URL structure below.
 
-* [pagination](/docs/api-query-parameters#pagination)
-* [filters](/docs/api-query-parameters#filters)
+* [pagination](/docs/query-parameters#pagination)
+* [filters](/docs/query-parameters#filters)
 
 For more information on request parameters see the [Query parameters](https://developer.uxcam.com/docs/query-parameters) section
 
