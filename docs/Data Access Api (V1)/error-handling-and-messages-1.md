@@ -34,7 +34,7 @@ For most 4xx responses the body carries a stable machine-readable `code` and a h
 }
 ```
 
-Switch on `detail.code` (stable) rather than the message text (which may be retuned). Body-validation failures (`422`) use FastAPI's standard validation shape, with `detail` as an array describing each invalid field.
+Switch on `detail.code` (stable) rather than the message text (which may be retuned). The real body is `{"success": false, "error":{"code": "TOO_LONG", "message": "…", "details":`{"errors": [ … ]}`}}.` So detail.code doesn't exist for 422 errors
 
 | Code                     | Status | When                                                                                                                                                                                                                         |
 | ------------------------ | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
