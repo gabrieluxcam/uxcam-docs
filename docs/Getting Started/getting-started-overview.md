@@ -16,27 +16,27 @@ next:
 Welcome to UXCam! Select your platform below to get session recording working in under 5 minutes.
 
 <Cards columns={3}>
-  <Card title="Android" href="quick-start-android" icon="fa-brands fa-android">
+  <Card title="Android" href="/docs/quick-start-android" icon="fa-brands fa-android">
     Native Android apps with Java or Kotlin
   </Card>
 
-  <Card title="iOS" href="quick-start-ios" icon="fa-brands fa-apple">
+  <Card title="iOS" href="/docs/quick-start-ios" icon="fa-brands fa-apple">
     Native iOS apps with Swift or Objective-C
   </Card>
 
-  <Card title="React Native" href="quick-start-react-native" icon="fa-brands fa-react">
+  <Card title="React Native" href="/docs/quick-start-react-native" icon="fa-brands fa-react">
     Cross-platform React Native apps
   </Card>
 
-  <Card title="Flutter" href="quick-start-flutter" icon="fa-solid fa-feather">
+  <Card title="Flutter" href="/docs/quick-start-flutter" icon="fa-solid fa-feather">
     Cross-platform Flutter apps
   </Card>
 
-  <Card title="Web" href="quick-start-web" icon="fa-solid fa-globe">
+  <Card title="Web" href="/docs/quick-start-web" icon="fa-solid fa-globe">
     Websites and web applications
   </Card>
 
-  <Card title="Cordova" href="quick-start-cordova" icon="fa-solid fa-mobile-screen">
+  <Card title="Cordova" href="/docs/quick-start-cordova" icon="fa-solid fa-mobile-screen">
     Apache Cordova apps
   </Card>
 </Cards>
@@ -47,7 +47,7 @@ Welcome to UXCam! Select your platform below to get session recording working in
 
 If you're new to session recording and user analytics, start here:
 
-<Card title="What is UXCam?" href="what-is-uxcam" icon="fa-solid fa-circle-info">
+<Card title="What is UXCam?" href="/docs/what-is-uxcam" icon="fa-solid fa-circle-info">
   Learn about session recording, heatmaps, and how UXCam helps you understand user behavior
 </Card>
 
@@ -73,10 +73,10 @@ Once you've completed the quick start, explore these common next steps:
 
 | Task | Description |
 |------|-------------|
-| [Tag Screens](/docs/screen-tagging) | Enable heatmaps and screen-level analytics |
-| [Mask Sensitive Data](/docs/sensitive-data-occlusion) | Protect user privacy (GDPR/CCPA) |
-| [Identify Users](/docs/user-properties) | Track users across sessions |
-| [Track Events](/docs/events) | Capture custom user actions |
+| [Tag Screens](/docs/tag-of-screens) | Enable heatmaps and screen-level analytics |
+| [Mask Sensitive Data](/docs/screen-blurring) | Protect user privacy (GDPR/CCPA) |
+| [Identify Users](/docs/send-user-properties) | Track users across sessions |
+| [Track Events](/docs/send-events) | Capture custom user actions |
 
 ---
 

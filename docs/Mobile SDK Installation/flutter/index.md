@@ -53,7 +53,7 @@ With a properly integrated UXCam SDK, you'll have complete visibility into user 
 
 > 📘 Before you build for web
 >
-> Flutter Web supports the core SDK (recording, screen tagging, events, user properties). A few advanced APIs are mobile-only — see [Flutter Web Platform Support](./flutter-web-platform-support) for the full feature matrix.
+> Flutter Web supports the core SDK (recording, screen tagging, events, user properties). A few advanced APIs are mobile-only — see [Flutter Web Platform Support](/docs/flutter-web-platform-support) for the full feature matrix.
 
 </Tab>
 </Tabs>
@@ -229,21 +229,21 @@ Within 5 minutes of running your app:
 
 🚀 **Ready to unlock the full potential?** Continue with our comprehensive feature guides:
 
-1. **[Screen Tagging](screen-tagging-flutter)** - Implement detailed screen analytics and navigation tracking
-2. **[Privacy Protection](sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking
-3. **[User Analytics](user-properties)** - Enable user-level insights and segmentation
-4. **[Event Tracking](events-flutter)** - Capture business-critical user actions and conversions
-5. **[Advanced Configuration](advanced-configuration-and-apis/)** - Optimize and customize for complex use cases
+1. **[Screen Tagging](/docs/screen-tagging-flutter)** - Implement detailed screen analytics and navigation tracking
+2. **[Privacy Protection](/docs/sensitive-data-occlusion-flutter)** - Ensure GDPR/CCPA compliance with data masking
+3. **[User Analytics](/docs/user-properties-flutter)** - Enable user-level insights and segmentation
+4. **[Event Tracking](/docs/events-flutter)** - Capture business-critical user actions and conversions
+5. **[Advanced Configuration](/docs/advanced-configuration-and-apis)** - Optimize and customize for complex use cases
 
 ### Quick Links
 
-📖 **[Changelog](flutter-sdk-changelog-flutter)** - Version history and breaking changes\
-🔧 **[Troubleshooting Guide](troubleshooting-flutter)** - Common issues and solutions
-⚙️ **[Advanced APIs](advanced-configuration-and-apis/)** - Recording control, crash handling, and more
+📖 **[Changelog](/docs/flutter-sdk-changelog-flutter)** - Version history and breaking changes\
+🔧 **[Troubleshooting Guide](/docs/troubleshooting-flutter)** - Common issues and solutions
+⚙️ **[Advanced APIs](/docs/advanced-configuration-and-apis)** - Recording control, crash handling, and more
 
 ### Support Resources
 
-- **Integration Issues**: [troubleshooting-flutter](troubleshooting-flutter)
+- **Integration Issues**: [troubleshooting-flutter](/docs/troubleshooting-flutter)
 - **API Questions**: [team@uxcam.com](mailto:team@uxcam.com)
 - **Feature Requests**: GitHub Issues
 - **Community**: Join our developer Discord

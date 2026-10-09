@@ -106,4 +106,4 @@ With opt-out enabled, the timeline displays `MainActivity/0xa1b2c3` exactly as i
 
 ## Jetpack Compose
 
-If your app uses Jetpack Compose for navigation instead of Fragments, see the [Jetpack Compose Screen Tagging](jetpack-compose-screen-tagging-1-android) guide for tagging Compose destinations.
+If your app uses Jetpack Compose for navigation instead of Fragments, see the [Jetpack Compose Screen Tagging](/docs/jetpack-compose-screen-tagging-1-android) guide for tagging Compose destinations.

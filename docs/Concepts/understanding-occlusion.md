@@ -342,6 +342,6 @@ UXCam: Screen occlusion enabled for: PaymentScreen
 
 ## Further Reading
 
-- [Privacy and Compliance](privacy-and-compliance) - GDPR/CCPA requirements
+- [Privacy and Compliance](/docs/privacy-and-compliance) - GDPR/CCPA requirements
 - [Sensitive Data Occlusion - Android](/docs/sensitive-data-occlusion) - Platform-specific guide
 - [Sensitive Data Occlusion - iOS](/docs/sensitive-data-occlusion-ios) - Platform-specific guide

@@ -14,27 +14,27 @@ metadata:
 This section covers advanced UXCam Android SDK features beyond the basic integration.
 
 <Cards columns={2}>
-  <Card title="Control Recording" href="control-recording-android" icon="fa-video">
+  <Card title="Control Recording" href="/docs/control-recording-android" icon="fa-video">
     Start, stop, and manage session recording programmatically.
   </Card>
 
-  <Card title="Crashes & ANRs" href="crashes-anrs-android" icon="fa-bug">
+  <Card title="Crashes & ANRs" href="/docs/crashes-anrs-android" icon="fa-bug">
     How UXCam captures crash reports and ANR events.
   </Card>
 
-  <Card title="Opt In / Opt Out" href="opt-in-opt-out-android" icon="fa-user-shield">
+  <Card title="Opt In / Opt Out" href="/docs/opt-in-opt-out-android" icon="fa-user-shield">
     Give users control over session recording for privacy compliance.
   </Card>
 
-  <Card title="Pause & Resume Recording" href="pause-and-resume-video-recording-android" icon="fa-pause-circle">
+  <Card title="Pause & Resume Recording" href="/docs/pause-and-resume-video-recording-android" icon="fa-pause-circle">
     Temporarily pause recording for sensitive flows without stopping the session.
   </Card>
 
-  <Card title="Integration Logging" href="integration-logging-guide-for-developers-copy-android" icon="fa-terminal">
+  <Card title="Integration Logging" href="/docs/integration-logging-guide-for-developers-copy-android" icon="fa-terminal">
     Enable verbose SDK logs for debugging your integration.
   </Card>
 
-  <Card title="Report Handled Exceptions" href="report-handled-exceptions-1-android" icon="fa-exclamation-triangle">
+  <Card title="Report Handled Exceptions" href="/docs/report-handled-exceptions-1-android" icon="fa-exclamation-triangle">
     Send caught exceptions to UXCam alongside session replays.
   </Card>
 

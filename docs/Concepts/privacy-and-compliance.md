@@ -84,7 +84,7 @@ UXCam.occlude(sensitiveView, isBlurred: true)
 UXCam.occludeAllTextFields(true)
 ```
 
-See [Understanding Occlusion](understanding-occlusion) for complete options.
+See [Understanding Occlusion](/docs/understanding-occlusion) for complete options.
 
 ### Opt-Out Users
 
@@ -263,6 +263,6 @@ const ConsentDialog = () => {
 
 ## Further Reading
 
-- [Understanding Occlusion](understanding-occlusion) - Technical details on hiding data
-- [How Session Recording Works](how-session-recording-works) - What gets captured
+- [Understanding Occlusion](/docs/understanding-occlusion) - Technical details on hiding data
+- [How Session Recording Works](/docs/how-session-recording-works) - What gets captured
 - [Opt-In/Opt-Out](/docs/opt-in-opt-out) - SDK methods for consent management

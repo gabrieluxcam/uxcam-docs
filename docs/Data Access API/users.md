@@ -130,7 +130,7 @@ For the complete attribute list, see the [full Users documentation](/docs/users-
 
 ## See Also
 
-- [Query Parameters](api-query-parameters) - Filtering and pagination
-- [Filter Operators](filter-operators) - Advanced filter syntax
-- [Sessions Endpoint](sessions) - Query session data
-- [Events Endpoint](events-endpoint) - Query event data
+- [Query Parameters](/docs/api-query-parameters) - Filtering and pagination
+- [Filter Operators](/docs/filter-operators) - Advanced filter syntax
+- [Sessions Endpoint](/docs/sessions) - Query session data
+- [Events Endpoint](/docs/events-endpoint) - Query event data

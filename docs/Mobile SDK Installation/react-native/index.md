@@ -25,7 +25,7 @@ Add session recordings, heat maps, and user journey analytics to your React Nati
 - UXCam account with app key ([sign up](https://uxcam.com))
 - iOS deployment target 12.0+ / Android minSdkVersion 21+
 
-> 📘 **Expo projects** require EAS Build for native modules. See our [Expo Installation Guide](expo-installation-react-native) for the complete setup.
+> 📘 **Expo projects** require EAS Build for native modules. See our [Expo Installation Guide](/docs/expo-installation-react-native) for the complete setup.
 
 ***
 
@@ -220,31 +220,31 @@ RNUxcam.startWithConfiguration(config);
 ## Next Steps
 
 <Cards columns={3}>
-  <Card title="Expo Installation" href="expo-installation-react-native" icon="fa-mobile">
+  <Card title="Expo Installation" href="/docs/expo-installation-react-native" icon="fa-mobile">
     Complete Expo-specific setup with EAS Build configuration.
   </Card>
 
-  <Card title="Screen Tagging" href="screen-tagging-react-native/" icon="fa-tags">
+  <Card title="Screen Tagging" href="/docs/screen-tagging-react-native" icon="fa-tags">
     Comprehensive screen tagging with React Navigation, Expo Router, and WebViews.
   </Card>
 
-  <Card title="Mask PII Data" href="sensitive-data-occlusion-react-native/" icon="fa-eye-slash">
+  <Card title="Mask PII Data" href="/docs/sensitive-data-occlusion-react-native" icon="fa-eye-slash">
     Protect your users' privacy — mask or blur screens, views and fields.
   </Card>
 
-  <Card title="Send Events" href="events" icon="fa-bolt">
+  <Card title="Send Events" href="/docs/events-react-native" icon="fa-bolt">
     Capture business-critical user actions with custom events.
   </Card>
 
-  <Card title="User Properties" href="user-properties" icon="fa-user">
+  <Card title="User Properties" href="/docs/user-properties-react-native" icon="fa-user">
     Identify users and track properties across sessions.
   </Card>
 
-  <Card title="Advanced Configuration" href="advanced-configuration-and-apis-2/" icon="fa-cog">
+  <Card title="Advanced Configuration" href="/docs/advanced-configuration-and-apis-2" icon="fa-cog">
     Recording control, crash handling, opt-in/opt-out, and more.
   </Card>
 </Cards>
 
 ***
 
-**Need Help?** Check our [Troubleshooting Guide](troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).
+**Need Help?** Check our [Troubleshooting Guide](/docs/troubleshooting-react-native-uxcam-react-native) or contact [team@uxcam.com](mailto:team@uxcam.com).

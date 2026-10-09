@@ -17,10 +17,10 @@ next:
 # Integration Journey at a Glance
 
 1. **[Customize SDK Configuration](#quick-start-only-a-couple-of-lines-of-code)** — Capture your first live session.
-2. **[Tag Screens](screen-tagging-ios/)** — Enable heat-maps & screen analytics.
-3. **[Mask Sensitive Data](sensitive-data-occlusion-ios/)** — Hide passwords and other GDPR/CCPA data.
-4. **[Identify Users & Set Properties](user-properties-ios)** — Unify sessions, power funnels & cohorts.
-5. **[Track Custom Events](events-ios)** — Measure key actions & run final QA.
+2. **[Tag Screens](/docs/screen-tagging-ios)** — Enable heat-maps & screen analytics.
+3. **[Mask Sensitive Data](/docs/sensitive-data-occlusion-ios)** — Hide passwords and other GDPR/CCPA data.
+4. **[Identify Users & Set Properties](/docs/user-properties-ios)** — Unify sessions, power funnels & cohorts.
+5. **[Track Custom Events](/docs/events-ios)** — Measure key actions & run final QA.
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
@@ -223,13 +223,13 @@ You’ve successfully integrated UXCam and sent some sessions, great job! 🎉  
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="user-properties" icon="fa-user">
+  <Card title="Assign User IDs" href="/docs/user-properties-ios" icon="fa-user">
     Get the full picture with user-level analytics.
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="events" icon="fa-question">
+  <Card title="Send Events" href="/docs/events-ios" icon="fa-question">
     Gain deeper insights into your users' interactions.
 
     > Send Events and Add Properties

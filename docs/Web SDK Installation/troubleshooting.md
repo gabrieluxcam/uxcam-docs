@@ -13,7 +13,7 @@ metadata:
 > * Your **plan includes web session recording.**\
 >   You can request a **web trial** by clicking on Request Trial on your subscription page or simply by reaching out to our support team via [team@uxcam.com](mailto:team@uxcam.com).
 > * You're **testing in a regular browser**, not an automated or headless one such as Playwright, Selenium, Puppeteer, or Lighthouse.\
->   The SDK does not run for bots, crawlers, or automated browsers. See the full list in the [FAQ](faq#).
+>   The SDK does not run for bots, crawlers, or automated browsers. See the full list in the [FAQ](/docs/faq).
 
 ## Resolving CORS Issues for UXCam Session Replays
 

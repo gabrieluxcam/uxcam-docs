@@ -27,11 +27,11 @@ Get up and running with UXCam in minutes - no complex setup required. This guide
 
 # Choose your Method of Integration
 
-| HTML Code snippet      | <a href="html-code-snippet#">Jump →</a>                       |
+| HTML Code snippet      | <a href="/docs/html-code-snippet">Jump →</a>                       |
 | :--------------------- | :------------------------------------------------------------ |
-| **Google Tag Manager** | <a href="google-tag-manager-1#">Jump →</a>                    |
-| **Shopify**            | <a href="shopify-1#">Jump →</a>                               |
-| **Wordpress**          | <a href="wordpress-1#">Jump →</a>                             |
+| **Google Tag Manager** | <a href="/docs/google-tag-manager-1">Jump →</a>                    |
+| **Shopify**            | <a href="/docs/shopify-1">Jump →</a>                               |
+| **Wordpress**          | <a href="/docs/wordpress-1">Jump →</a>                             |
 | **Flutter Web**        | <a href="https://developer.uxcam.com/docs/flutter">Jump →</a> |
 
 # What is automatically captured?

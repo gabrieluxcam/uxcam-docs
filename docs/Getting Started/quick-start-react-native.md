@@ -120,7 +120,7 @@ You're recording sessions! Now customize your integration:
     Protect passwords and PII
   </Card>
 
-  <Card title="Track Events" href="/docs/react-native/events" icon="fa-solid fa-bolt">
+  <Card title="Track Events" href="/docs/events-react-native" icon="fa-solid fa-bolt">
     Capture custom user actions
   </Card>
 </Cards>

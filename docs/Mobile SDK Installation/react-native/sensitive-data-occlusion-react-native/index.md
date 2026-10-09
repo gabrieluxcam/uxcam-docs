@@ -160,7 +160,7 @@ RNUxcam.startWithConfiguration(configuration);
 | Overlay shows but gestures still visible | `hideGestures` defaulted to `false` | Set `hideGestures: true` |
 | Text inputs still visible | Custom component wrapping `TextInput` | Use `occludeSensitiveView(ref)` manually |
 | Occlusion not applying | Screen names don't match dashboard rules | Verify screen names match exactly |
-| WebView leaks card numbers | WebView content not protected | See [WebView Occlusion guide](occlude-pii-data-within-webviews-2-react-native) |
+| WebView leaks card numbers | WebView content not protected | See [WebView Occlusion guide](/docs/occlude-pii-data-within-webviews-2-react-native) |
 | Protection only on one platform | Platform-specific rendering differences | Test on both iOS and Android simulators |
 
 ***
@@ -168,15 +168,15 @@ RNUxcam.startWithConfiguration(configuration);
 ## Next Steps
 
 <Cards columns={3}>
-  <Card title="View-Level Occlusion" href="view-level-occlusion-react-native" icon="fa-eye-slash">
+  <Card title="View-Level Occlusion" href="/docs/view-level-occlusion-react-native" icon="fa-eye-slash">
     Hide specific components — forms, inputs, and dynamically created views.
   </Card>
 
-  <Card title="WebView Occlusion" href="occlude-pii-data-within-webviews-2-react-native" icon="fa-globe">
+  <Card title="WebView Occlusion" href="/docs/occlude-pii-data-within-webviews-2-react-native" icon="fa-globe">
     Protect sensitive content inside WebViews using HTML classes, CSS injection, or full occlusion.
   </Card>
 
-  <Card title="Send Events" href="../events" icon="fa-bolt">
+  <Card title="Send Events" href="/docs/events-react-native" icon="fa-bolt">
     Capture business-critical user actions while maintaining privacy compliance.
   </Card>
 </Cards>

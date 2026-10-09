@@ -121,7 +121,7 @@ Common user properties to consider:
 
 | Platform | Guide |
 |----------|-------|
-| Android | [User Properties](/docs/android/user-properties) |
-| iOS | [User Properties](/docs/ios/user-properties) |
-| Flutter | [User Properties](/docs/flutter/user-properties) |
-| React Native | [User Properties](/docs/react-native/user-properties) |
+| Android | [User Properties](/docs/user-properties) |
+| iOS | [User Properties](/docs/user-properties-ios) |
+| Flutter | [User Properties](/docs/user-properties-flutter) |
+| React Native | [User Properties](/docs/user-properties-react-native) |

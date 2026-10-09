@@ -220,6 +220,6 @@ UXCam does NOT capture:
 
 ## Further Reading
 
-- [Understanding Occlusion](understanding-occlusion) - Privacy protection in recordings
-- [Privacy and Compliance](privacy-and-compliance) - Data handling and regulations
+- [Understanding Occlusion](/docs/understanding-occlusion) - Privacy protection in recordings
+- [Privacy and Compliance](/docs/privacy-and-compliance) - Data handling and regulations
 - [Screen Tagging](/docs/screen-tagging) - Naming screens for analytics

@@ -21,10 +21,10 @@ next:
 # Integration Journey at a Glance
 
 1. **[Customize SDK Configuration](#android-sdk--quickstart)** — Capture your first live session.
-2. **[Tag Screens](screen-tagging/)** — Enable heat-maps & screen analytics.
-3. **[Mask Sensitive Data](sensitive-data-occlusion/)** — Hide passwords and other GDPR/CCPA data.
-4. **[Identify Users & Set Properties](user-properties)** — Unify sessions, power funnels & cohorts.
-5. **[Track Custom Events](events)** — Measure key actions & run final QA.
+2. **[Tag Screens](/docs/screen-tagging)** — Enable heat-maps & screen analytics.
+3. **[Mask Sensitive Data](/docs/sensitive-data-occlusion)** — Hide passwords and other GDPR/CCPA data.
+4. **[Identify Users & Set Properties](/docs/user-properties)** — Unify sessions, power funnels & cohorts.
+5. **[Track Custom Events](/docs/events)** — Measure key actions & run final QA.
 
 <GitHubCallout type="tip"> ★ **Optional but highly recommended.** Ship steps 1-3 to start getting session replays and heatmaps, then add steps 4-5 for deeper analytics.</GitHubCallout>
 
@@ -127,7 +127,7 @@ Set our configuration option `.enableIntegrationLogging(bool)` as `true` to see 
 ## Other Configuration Options
 
 * `.enableAutomaticScreenNameTagging(bool)`  True by Default. Set to false if you want to disable automatic screen tagging.
-* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here](sensitive-data-occlusion/).
+* `.occlusions(Arrays.asList(occlusion))` For passing occlusion for screens from the SDK startup, we'll get to that [here](/docs/sensitive-data-occlusion).
 * `.enableCrashHandling(bool)` True by Default. Set to false if you want to disable crash capture.
 * `.enableMultiSessionRecord(bool)` True by Default. Set to false to stop any session after the first one from being recorded.
 
@@ -154,13 +154,13 @@ You've successfully integrated UXCam and sent some sessions, great job! But ther
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="user-properties" icon="fa-user">
+  <Card title="Assign User IDs" href="/docs/user-properties" icon="fa-user">
     Get the full picture with user-level analytics.
 
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="events" icon="fa-question">
+  <Card title="Send Events" href="/docs/events" icon="fa-question">
     Gain deeper insights into your users' interactions.
 
     > Send Events and Add Properties

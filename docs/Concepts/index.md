@@ -20,15 +20,15 @@ This section explains how UXCam works at a fundamental level. Understanding thes
 ## Core Concepts
 
 <Cards columns={2}>
-  <Card title="How Session Recording Works" href="how-session-recording-works" icon="fa-solid fa-video">
+  <Card title="How Session Recording Works" href="/docs/how-session-recording-works" icon="fa-solid fa-video">
     Understand the technical approach behind screen capture, data transmission, and session reconstruction
   </Card>
 
-  <Card title="Privacy and Compliance" href="privacy-and-compliance" icon="fa-solid fa-shield-halved">
+  <Card title="Privacy and Compliance" href="/docs/privacy-and-compliance" icon="fa-solid fa-shield-halved">
     GDPR, CCPA, consent management, and data handling practices
   </Card>
 
-  <Card title="Understanding Occlusion" href="understanding-occlusion" icon="fa-solid fa-eye-slash">
+  <Card title="Understanding Occlusion" href="/docs/understanding-occlusion" icon="fa-solid fa-eye-slash">
     How UXCam protects sensitive data in recordings and the different occlusion strategies
   </Card>
 </Cards>
@@ -77,5 +77,5 @@ Sessions upload when the app goes to background. If force-closed before upload, 
 ## Further Reading
 
 - [SDK Reference](/docs/sdk-reference) - API method documentation
-- [Getting Started](/docs/getting-started) - Platform integration guides
+- [Getting Started](/docs/getting-started-overview) - Platform integration guides
 - [Troubleshooting](/docs/troubleshooting-android) - Common issues and solutions

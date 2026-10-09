@@ -65,7 +65,7 @@ Narrow results to specific criteria. Filters are passed as a JSON array.
 | `less` | Less than | `100` |
 | `between_dates` | Date range | `{"lower": "2024-01-01", "upper": "2024-01-31"}` |
 
-See [Filter Operators](filter-operators) for the complete list.
+See [Filter Operators](/docs/filter-operators) for the complete list.
 
 ### Example
 
@@ -194,7 +194,7 @@ curl "https://api.uxcam.com/v2/session" \
 
 ## See Also
 
-- [Filter Operators](filter-operators) - Complete operator reference
-- [Sessions Endpoint](sessions) - Session-specific parameters
-- [Users Endpoint](users) - User-specific parameters
-- [Events Endpoint](events-endpoint) - Event-specific parameters
+- [Filter Operators](/docs/filter-operators) - Complete operator reference
+- [Sessions Endpoint](/docs/sessions) - Session-specific parameters
+- [Users Endpoint](/docs/users) - User-specific parameters
+- [Events Endpoint](/docs/events-endpoint) - Event-specific parameters

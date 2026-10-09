@@ -285,6 +285,6 @@ Some features have platform-specific implementations:
 
 ## See Also
 
-- [Getting Started](/docs/getting-started) - Platform installation guides
+- [Getting Started](/docs/getting-started-overview) - Platform installation guides
 - [Concepts](/docs/concepts) - How UXCam works
 - [Data Access API](/docs/data-access-api) - REST API for exporting data

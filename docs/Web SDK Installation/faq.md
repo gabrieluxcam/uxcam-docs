@@ -49,7 +49,7 @@ Common reasons why styles may not load:
 * The resource is inaccessible: It may require authentication or be restricted to an internal network.
 * The resource is blocked by the browser due to CORS: Browsers enforce cross-origin security checks, preventing UXCam from loading your assets if CORS is not properly configured.
 
-Learn how to fix CORS issues here → [Troubleshooting](troubleshooting#)
+Learn how to fix CORS issues here → [Troubleshooting](/docs/troubleshooting)
 
 ### 5. Does UXCam record bots, crawlers, or automated browsers?
 

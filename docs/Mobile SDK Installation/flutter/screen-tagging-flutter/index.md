@@ -481,17 +481,17 @@ For the full step-by-step guide — including grouping dynamic IDs, tagging frag
 You've properly tagged screens and are ready to move on! Let's review some next steps you should take.
 
 <Cards columns={3}>
-    <Card title="Mask PII Data" href="../sensitive-data-occlusion-flutter/" icon="fa-credit-card">
+    <Card title="Mask PII Data" href="/docs/sensitive-data-occlusion-flutter" icon="fa-credit-card">
     Protect Your Users' Privacy and PII Data
     > Mask or Blur Screens, Views and Fields
   </Card>
 
-  <Card title="Assign User IDs" href="../user-properties" icon="fa-user">
+  <Card title="Assign User IDs" href="/docs/user-properties-flutter" icon="fa-user">
     Get The Full Picture with User Analytics
     > Assign Custom User IDs and Properties
   </Card>
 
-  <Card title="Send Events" href="../events" icon="fa-question">
+  <Card title="Send Events" href="/docs/events-flutter" icon="fa-question">
     Deeper Insights of Your Users' interactions
     > Send Events and Add Properties
   </Card>

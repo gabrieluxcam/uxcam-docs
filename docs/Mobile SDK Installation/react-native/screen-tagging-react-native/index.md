@@ -129,15 +129,15 @@ A solid screen-naming strategy makes **PII masking** and **heat-map analysis** f
 ## Next Steps
 
 <Cards columns={3}>
-  <Card title="React Navigation & Wix" href="react-navigation-tagging-react-native" icon="fa-route">
+  <Card title="React Navigation & Wix" href="/docs/react-navigation-tagging-react-native" icon="fa-route">
     Full integration guides for React Navigation v6, tab navigators, and Wix/React Native Navigation.
   </Card>
 
-  <Card title="WebView Tagging" href="tagging-webviews-react-native" icon="fa-globe">
+  <Card title="WebView Tagging" href="/docs/tagging-webviews-react-native" icon="fa-globe">
     Tag screens inside WebViews using URL changes and JavaScript bridges.
   </Card>
 
-  <Card title="Mask PII Data" href="../sensitive-data-occlusion-react-native/" icon="fa-eye-slash">
+  <Card title="Mask PII Data" href="/docs/sensitive-data-occlusion-react-native" icon="fa-eye-slash">
     Protect your users' privacy — mask or blur screens, views and fields.
   </Card>
 </Cards>

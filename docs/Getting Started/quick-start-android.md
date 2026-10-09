@@ -105,7 +105,7 @@ You're recording sessions! Now customize your integration:
     Protect passwords and PII
   </Card>
 
-  <Card title="Track Events" href="/docs/android/events" icon="fa-solid fa-bolt">
+  <Card title="Track Events" href="/docs/events" icon="fa-solid fa-bolt">
     Capture custom user actions
   </Card>
 </Cards>

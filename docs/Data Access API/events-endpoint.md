@@ -151,7 +151,7 @@ curl "https://api.uxcam.com/v2/event/analytics" -G \
 
 ## See Also
 
-- [Query Parameters](api-query-parameters) - Filtering and pagination
-- [Filter Operators](filter-operators) - Advanced filter syntax
-- [Sessions Endpoint](sessions) - Query session data
-- [Users Endpoint](users) - Query user data
+- [Query Parameters](/docs/api-query-parameters) - Filtering and pagination
+- [Filter Operators](/docs/filter-operators) - Advanced filter syntax
+- [Sessions Endpoint](/docs/sessions) - Query session data
+- [Users Endpoint](/docs/users) - Query user data

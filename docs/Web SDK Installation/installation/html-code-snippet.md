@@ -66,15 +66,15 @@ metadata:
 
 | Step                 | Task                                                                                                         | Goal                                       |
 | :------------------- | :----------------------------------------------------------------------------------------------------------- | :----------------------------------------- |
-| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="occlusion-hide-sensitive-data#">Jump →</a>                   | Hide sensitive user data                   |
-| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="define-pages-properties#">Jump →</a>                                | Group similar URLs under consistent names  |
-| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="setting-user-properties#">Jump →</a>               | Unify sessions, power funnels & cohorts    |
-| <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="logging-custom-events#">Jump →</a>                             | Track user interactions and key behaviours |
-| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="configure-content-security-policy-csp#">Jump →</a> | Ensure the Web SDK functions correctly     |
-| <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="define-app-version-optional#">Jump →</a>                      | Debug issues across different releases     |
-| <strong>7 ★</strong> | <strong>Enable Iframe Recording </strong>  <a href="iframe-recording#">Jump →</a>                            | Capture user interactions inside iframes   |
-| <strong>8 ★</strong> | <strong>Enable Shadow DOM Recording </strong>  <a href="shadow-dom-recording#">Jump →</a>                            | Capture Web Components in replays          |
-| <strong>9 ★</strong> | <strong>Manage SDK Logs </strong>  <a href="sdk-logs#">Jump →</a>                            | Silence SDK console output                  |
+| <strong>1</strong>   | <strong>Configure occlusion </strong>  <a href="/docs/occlusion-hide-sensitive-data">Jump →</a>                   | Hide sensitive user data                   |
+| <strong>2</strong>   | <strong>Define Pages </strong>  <a href="/docs/define-pages-properties">Jump →</a>                                | Group similar URLs under consistent names  |
+| <strong>3</strong>   | <strong>Set User Identity & Propertie </strong>  <a href="/docs/setting-user-properties">Jump →</a>               | Unify sessions, power funnels & cohorts    |
+| <strong>4</strong>   | <strong>Add Custom Events </strong>  <a href="/docs/logging-custom-events">Jump →</a>                             | Track user interactions and key behaviours |
+| <strong>5 </strong>  | <strong>Check Content Security Policy </strong>  <a href="/docs/configure-content-security-policy-csp">Jump →</a> | Ensure the Web SDK functions correctly     |
+| <strong>6 ★</strong> | <strong>Define App version </strong>  <a href="/docs/define-app-version-optional">Jump →</a>                      | Debug issues across different releases     |
+| <strong>7 ★</strong> | <strong>Enable Iframe Recording </strong>  <a href="/docs/iframe-recording">Jump →</a>                            | Capture user interactions inside iframes   |
+| <strong>8 ★</strong> | <strong>Enable Shadow DOM Recording </strong>  <a href="/docs/shadow-dom-recording">Jump →</a>                            | Capture Web Components in replays          |
+| <strong>9 ★</strong> | <strong>Manage SDK Logs </strong>  <a href="/docs/sdk-logs">Jump →</a>                            | Silence SDK console output                  |
 
 <GitHubCallout type="note">★ **Refer to optional steps**. Ship steps 1-5, to get the most value out of UXCam</GitHubCallout>
 

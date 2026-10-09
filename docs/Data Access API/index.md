@@ -59,23 +59,23 @@ All API requests require two authentication parameters, sent as **query paramete
 ## API Endpoints
 
 <Cards columns={2}>
-  <Card title="Sessions" href="sessions" icon="fa-solid fa-video">
+  <Card title="Sessions" href="/docs/sessions" icon="fa-solid fa-video">
     Query and export session data
   </Card>
 
-  <Card title="Users" href="users" icon="fa-solid fa-users">
+  <Card title="Users" href="/docs/users" icon="fa-solid fa-users">
     Query and export user data
   </Card>
 
-  <Card title="Events" href="events-endpoint" icon="fa-solid fa-bolt">
+  <Card title="Events" href="/docs/events-endpoint" icon="fa-solid fa-bolt">
     Query and export event data
   </Card>
 
-  <Card title="Query Parameters" href="api-query-parameters" icon="fa-solid fa-filter">
+  <Card title="Query Parameters" href="/docs/api-query-parameters" icon="fa-solid fa-filter">
     Filtering and pagination options
   </Card>
 
-  <Card title="Data Deletion" href="data-deletion-api" icon="fa-solid fa-trash">
+  <Card title="Data Deletion" href="/docs/data-deletion-api" icon="fa-solid fa-trash">
     Erase users and sessions for GDPR/CCPA requests
   </Card>
 </Cards>
@@ -136,9 +136,9 @@ All responses return JSON:
 
 | Topic | Description |
 |-------|-------------|
-| [Error Handling](error-handling-and-messages) | HTTP status codes and error messages |
-| [Query Parameters](api-query-parameters) | Filtering, sorting, and pagination |
-| [Filter Operators](filter-operators) | Advanced filtering syntax |
+| [Error Handling](/docs/error-handling-and-messages) | HTTP status codes and error messages |
+| [Query Parameters](/docs/api-query-parameters) | Filtering, sorting, and pagination |
+| [Filter Operators](/docs/filter-operators) | Advanced filtering syntax |
 
 ---
 
@@ -178,7 +178,7 @@ def export_sessions(start_date, end_date):
 
 ### User Deletion (GDPR)
 
-Erasure is a separate API with its own key. Submit users or sessions to `POST /v2/deletion`; see the [Data Deletion API](data-deletion-api).
+Erasure is a separate API with its own key. Submit users or sessions to `POST /v2/deletion`; see the [Data Deletion API](/docs/data-deletion-api).
 
 ### Session Lookup
 

@@ -1153,8 +1153,8 @@ testWidgets('Navigator observer tracks navigation', (WidgetTester tester) async 
 
 ## Next Steps
 
-- **[Privacy Protection](../sensitive-data-occlusion-flutter/)** - Implement data masking
-- **[User Analytics](../user-properties)** - Connect navigation to user insights
+- **[Privacy Protection](/docs/sensitive-data-occlusion-flutter)** - Implement data masking
+- **[User Analytics](/docs/user-properties-flutter)** - Connect navigation to user insights
 
 ---
 

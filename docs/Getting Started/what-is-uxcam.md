@@ -110,23 +110,23 @@ Every UXCam integration requires an app key:
 Choose your platform and integrate in under 5 minutes:
 
 <Cards columns={3}>
-  <Card title="Android" href="quick-start-android" icon="fa-brands fa-android">
+  <Card title="Android" href="/docs/quick-start-android" icon="fa-brands fa-android">
     Native Android
   </Card>
 
-  <Card title="iOS" href="quick-start-ios" icon="fa-brands fa-apple">
+  <Card title="iOS" href="/docs/quick-start-ios" icon="fa-brands fa-apple">
     Native iOS
   </Card>
 
-  <Card title="React Native" href="quick-start-react-native" icon="fa-brands fa-react">
+  <Card title="React Native" href="/docs/quick-start-react-native" icon="fa-brands fa-react">
     Cross-platform
   </Card>
 
-  <Card title="Flutter" href="quick-start-flutter" icon="fa-solid fa-feather">
+  <Card title="Flutter" href="/docs/quick-start-flutter" icon="fa-solid fa-feather">
     Cross-platform
   </Card>
 
-  <Card title="Web" href="quick-start-web" icon="fa-solid fa-globe">
+  <Card title="Web" href="/docs/quick-start-web" icon="fa-solid fa-globe">
     Websites
   </Card>
 </Cards>

@@ -95,7 +95,7 @@ The Data Access API uses standard HTTP status codes to indicate success or failu
 }
 ```
 
-**Solution**: Use a compatible operator for the attribute type. See [Filter Operators](filter-operators).
+**Solution**: Use a compatible operator for the attribute type. See [Filter Operators](/docs/filter-operators).
 
 ---
 
@@ -172,5 +172,5 @@ except requests.HTTPError as e:
 
 ## See Also
 
-- [Query Parameters](api-query-parameters) - Valid filter syntax
-- [Filter Operators](filter-operators) - Supported operators by type
+- [Query Parameters](/docs/api-query-parameters) - Valid filter syntax
+- [Filter Operators](/docs/filter-operators) - Supported operators by type

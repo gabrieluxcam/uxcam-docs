@@ -8,4 +8,4 @@ metadata:
 
 > 📘 **This page has moved**
 >
-> Setup instructions are now part of the main [React Native Integration Guide](./). Please use the main guide for the latest installation and configuration steps.
+> Setup instructions are now part of the main [React Native Integration Guide](/docs/react-native). Please use the main guide for the latest installation and configuration steps.
