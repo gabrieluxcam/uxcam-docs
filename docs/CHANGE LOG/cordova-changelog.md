@@ -13,6 +13,9 @@ next:
 ---
 ### Cordova
 
+### V. 3.8.5 - October 13, 2026
+
+- Updated iOS SDK to 3.11.1 and Android SDK to 3.11.2.
 ### V. 3.8.4 - August 26, 2026
 
 - Updated iOS SDK to 3.10.2 and Android SDK to 3.10.9.
