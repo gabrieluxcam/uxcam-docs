@@ -1,6 +1,6 @@
 ---
 title: AI Integration
-hidden: false
+hidden: true
 ---
 # UXCam Integration MCP Server
 
