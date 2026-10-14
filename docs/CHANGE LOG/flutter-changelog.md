@@ -13,6 +13,9 @@ next:
 ---
 <br />
 
+### V. 2.10.3 - October 14, 2026
+
+* Updated Android SDK to 3.11.3.
 ### V. 2.10.2 - October 6, 2026
 
 * Updated iOS SDK to 3.11.1 and Android SDK to 3.11.1.
