@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.11.3 - October 14, 2026
+
+* Fix (timeline): Tap and gesture positions now accurately reflect device orientation, so interactions recorded in landscape or rotated views appear at their correct screen locations in session replay
+* Enhance (capture): Flutter screen recording now captures content directly from the plugin's scene render, improving frame accuracy and eliminating pixel-timing mismatches that could expose occluded widgets
+* Fix (session): Short sessions that ended within seconds of a cold start are no longer incorrectly reported as recording errors
+* Fix (stability): Resolved an issue where the UXCam window callback could be stacked multiple times when a third-party wrapper was present, causing interaction and recording instability (MOB-1897)
+* Fix (session): Session data now correctly records the wrapper type for Unity, MAUI, NativeScript, and KMP integrations — previously these were written as blank
+* Fix (screenshot): Corrected ad-activity detection that was incorrectly classifying activities whose names contain words like "Download" or "Thread" as ad screens, which prevented their dialogs and popups from appearing in session recordings
 ### V. 3.11.2 - October 7, 2026
 
 * Fix (upload): Sessions are no longer held back when the device is at low battery — recordings now upload as soon as network is available regardless of battery level
