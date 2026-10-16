@@ -13,6 +13,9 @@ next:
 ---
 ### Kotlin Multiplatform
 
+### V. 1.0.1 (October 16, 2026)
+
+- Fixed the Swift Package Manager manifest to resolve an integration issue for iOS-side KMP consumers.
 ### V. 1.0.0 (August 5, 2026)
 
 - Initial release of the UXCam Kotlin Multiplatform (KMP) SDK, providing a shared Kotlin API for session recording across Android and iOS from a single codebase.
