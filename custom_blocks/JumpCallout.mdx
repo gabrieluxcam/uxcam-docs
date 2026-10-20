@@ -23,8 +23,8 @@ export const JumpCallout = ({ to = "#", children, style = {} }) => {
   }, []);
 
   const colours = isDark
-    ? { bg: "#161E35", text: "#FFFFFF" } 
-    : { bg: "#5D97FF", text: "#FFFFFF" }; 
+    ? { bg: "#161E35", text: "#FFFFFF" }
+    : { bg: "#5D97FF", text: "#FFFFFF" };
 
   const baseStyle = {
     display: "inline-flex",
@@ -74,12 +74,17 @@ export const JumpCallout = ({ to = "#", children, style = {} }) => {
   return (
     <a
       href={to}
+      className="jump-callout"
       style={baseStyle}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       onClick={onClick}
     >
-      <span>{children}</span>
+      <style>{`
+        .jump-callout .jump-label,
+        .jump-callout .jump-label > p { margin: 0; display: inline; line-height: 1.2; }
+      `}</style>
+      <span className="jump-label">{children}</span>
       <span className="jump-arrow" style={arrowStyle} aria-hidden="true">
         ➔
       </span>
