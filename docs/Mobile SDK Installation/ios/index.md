@@ -11,7 +11,7 @@ metadata:
 next:
   description: ''
 ---
-<GitHubCallout type="note">Need an account? \*\*[Start free](https://app.uxcam.com/signup)                      \*\* – most teams complete this setup in **under 15 minutes**..</GitHubCallout>
+<GitHubCallout type="note">Need an account? **[Start free](https://app.uxcam.com/signup)** – most teams complete this setup in **under 15 minutes**.</GitHubCallout>
 
 <JumpCallout to="#quick-start-only-a-couple-of-lines-of-code">Jump to Quickstart</JumpCallout>
 
