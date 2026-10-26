@@ -14,6 +14,10 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.11.2 - October 26, 2026
+
+* Improved: Session storage reliability — sessions are preserved when storage or recorder failures occur, and session ownership is tracked correctly across restarts and drain cycles.
+* Improved: Upload reliability — sessions now begin uploading after every recording stop (unless the app is terminating), uploads that the server already accepted are correctly marked complete even when iOS reports a delivery error, and upload bodies are prepared off the pipeline queue to prevent blocking.
 ### V. 3.11.1 - October 2, 2026
 
 * Improved: Pending sessions are now stored in the Application Support directory instead of Caches, so iOS can no longer purge them under storage pressure. Sessions recorded by earlier SDK versions are migrated automatically.
