@@ -18,9 +18,9 @@ next:
 ---
 UXCam is a product analytics platform for mobile apps and websites. Add the SDK once and UXCam records every session automatically: the screens people visit, every tap, swipe and scroll, and each crash or freeze. You don't need to tag events to get started.
 
-UXCam then finds what deserves your attention. Tara, UXCam's AI analyst, flags what changed and what's costing you users. You watch the sessions behind each finding, then measure whether your fix worked.
+It then finds what deserves your attention. Tara, UXCam's AI analyst, flags what changed and what's costing you users. You watch the sessions behind each finding, then measure whether your fix worked.
 
-UXCam has built mobile SDKs since 2014 and processes 100B+ data points every month. On the web, it's a single JavaScript snippet.
+UXCam has built mobile SDKs since 2014 and processes 100B+ data points every month. On the web, it's a single low-impact JavaScript snippet.
 
 ## Discover: what needs your attention<br />
 
