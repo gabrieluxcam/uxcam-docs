@@ -1,108 +1,64 @@
 ---
 title: What is UXCam?
-excerpt: Understanding session recording, heatmaps, and user analytics
+excerpt: >-
+  UXCam is a product analytics platform with an integrated AI analyst, for
+  mobile apps and websites. We serve companies in 50+ countries and process
+  100B+ data points every month.
 deprecated: false
 hidden: false
 icon: fa-solid fa-circle-info
 metadata:
-  title: 'What is UXCam?'
-  description: 'Learn how UXCam session recording and analytics helps you understand user behavior'
+  title: What is UXCam?
+  description: >-
+    Learn how UXCam session recording and analytics helps you understand user
+    behavior
   robots: index
 next:
   description: ''
 ---
+UXCam is a product analytics platform for mobile apps and websites. Add the SDK once and UXCam records every session automatically: the screens people visit, every tap, swipe and scroll, and each crash or freeze. You don't need to tag events to get started.
 
-# What is UXCam?
+UXCam then finds what deserves your attention. Tara, UXCam's AI analyst, flags what changed and what's costing you users. You watch the sessions behind each finding, then measure whether your fix worked.
 
-UXCam is a user experience analytics platform that helps you understand how users interact with your mobile app or website through **session recordings**, **heatmaps**, and **behavioral analytics**.
+UXCam has built mobile SDKs since 2014 and processes 100B+ data points every month. On the web, it's a single JavaScript snippet.
 
----
+## Discover: what needs your attention<br />
 
-## Core Features
+### Tara AI
 
-### Session Recording
+Ask a question in plain language, such as "Why did checkout completion drop after the last release?", and Tara answers with the numbers and the session replays that show what happened. Routines check your key flows on a schedule and report what moved, so a conversion drop or an error spike reaches you before anyone has to ask. Any answer can become a report or dashboard you share with your team. <Anchor target="_blank" href="https://uxcam.com/ai/">Learn more about Tara.</Anchor>
 
-Watch video replays of real user sessions to see exactly what users experience - taps, swipes, navigation, and more.
+### UXCam MCP
 
-- See the user's perspective, not just data points
-- Identify UX issues and friction points
-- Debug crashes with full context
+Use your UXCam data inside Claude, ChatGPT, Cursor and other AI assistants. A coding assistant can also add the SDK to your app and confirm that sessions, screens and events arrive. <Anchor target="_blank" href="https://uxcam.com/mcp/">Get started with UXCam MCP.</Anchor>
 
-### Heatmaps
+## See: what users actually do
 
-Visualize user engagement patterns across your screens:
+- Session replay: watch real sessions from iOS, Android, cross-platform frameworks and the web, with every screen, gesture and error in order.
+- Heatmaps: see where people tap, click, swipe and scroll on each screen and page, and compare a screen before and after a release.
+- User journeys: follow the paths people take through your product and see where they leave.
+- Issue analytics: crashes, UI freezes, rage taps and dead taps, each linked to the session that led up to it, with stack traces for crashes.
 
-- **Tap heatmaps** - Where users interact most
-- **Scroll heatmaps** - How far users scroll
-- **Attention heatmaps** - What captures user focus
+## Measure: how the product performs
 
-### User Analytics
+- Funnels: find the step where users drop off in sign-up, checkout or onboarding.
+- Retention: see which cohorts come back after day 1, 7 or 30.
+- Segments: compare behavior across user groups built from your user properties and events.
+- Dashboards: track your KPIs in one place and schedule reports for your team.<br />
 
-Track user journeys, funnels, and behavior patterns:
+Every chart links to the sessions behind it, so you can go from a number to the replay in one click.
 
-- **Screen analytics** - Engagement and drop-off per screen
-- **Conversion funnels** - Where users abandon flows
-- **User segmentation** - Compare behavior across user groups
+## Privacy and security
 
----
+- Masking runs in the SDK, so masked content never leaves the user's device. Password fields are masked automatically.
+- You decide what else is hidden: text fields, views, screen areas or whole screens. <Anchor target="_blank" href="https://developer.uxcam.com/docs/understanding-occlusion">See Understanding Occlusion.</Anchor>
+- Consent and deletion: opt-in and opt-out APIs, plus the <Anchor target="_blank" href="https://developer.uxcam.com/docs/data-deletion-api">Data Deletion API f</Anchor>or GDPR and CCPA requests.
+- Audits: UXCam is SOC 2 Type II audited, GDPR and CCPA compliant, and signs a BAA for HIPAA.
+- Data storage: you choose where each project's data is stored when you create it (US, or EU on plans with multi-region storage).<br />
 
-## Key Concepts
+More detail is in <Anchor target="_blank" href="https://developer.uxcam.com/docs/privacy-and-compliance">Privacy and Compliance.</Anchor>
 
-### Sessions
-
-A **session** starts when a user opens your app and ends when they close it or it goes to background. Each session captures:
-
-- Screen navigation sequence
-- User interactions (taps, scrolls, gestures)
-- Custom events you define
-- Crashes and errors
-
-### Screens
-
-**Screens** are the individual pages or views users navigate through. Proper screen tagging enables:
-
-- Heatmaps per screen
-- Screen-level analytics
-- Journey analysis
-
-### Events
-
-**Events** are specific user actions you want to track - like "Add to Cart" or "Complete Purchase". Events help you:
-
-- Measure feature usage
-- Build conversion funnels
-- Segment users by behavior
-
-### User Properties
-
-**User properties** are attributes you assign to users - like subscription tier, account age, or device type. Properties enable:
-
-- User segmentation
-- Cohort analysis
-- Personalized insights
-
----
-
-## Privacy & Compliance
-
-UXCam is designed with privacy in mind:
-
-- **Automatic PII protection** - Passwords and sensitive fields are masked by default
-- **Manual occlusion** - You control what's hidden in recordings
-- **GDPR/CCPA compliant** - Tools for consent management and data deletion
-- **SOC 2 Type II certified** - Enterprise-grade security
-
----
-
-## Getting Your App Key
-
-Every UXCam integration requires an app key:
-
-1. Log in to your [UXCam Dashboard](https://app.uxcam.com)
-2. Go to **App Settings** (click app name in top-left)
-3. Copy your **App Key**
-
-<GitHubCallout type="tip">Create separate keys for development and production to keep your data clean.</GitHubCallout>
+<br />
 
 ---
 
