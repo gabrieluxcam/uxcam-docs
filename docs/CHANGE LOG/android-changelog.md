@@ -17,6 +17,10 @@ metadata:
 
 <br />
 
+### V. 3.12.0 - October 29, 2026
+
+* Fix (stability): Apps that call UXCam APIs before `startWithKey` — such as `isRecording()` — in builds without `AppLaunchContentProvider` no longer fail with an "Unknown error"; the SDK now reads the application context when it is needed rather than caching a null reference at startup
+* Add (capture): Wireframe screen capture mode is now available — when enabled, the SDK records a structural outline of the view hierarchy instead of screen pixels, so sensitive content is never captured rather than masked after the fact
 ### V. 3.11.3 - October 14, 2026
 
 * Fix (timeline): Tap and gesture positions now accurately reflect device orientation, so interactions recorded in landscape or rotated views appear at their correct screen locations in session replay
