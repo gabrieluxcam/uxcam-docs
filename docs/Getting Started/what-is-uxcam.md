@@ -2,8 +2,7 @@
 title: What is UXCam?
 excerpt: >-
   UXCam is a product analytics platform with an integrated AI analyst, for
-  mobile apps and websites. We serve companies in 50+ countries and process
-  100B+ data points every month.
+  mobile apps and websites.
 deprecated: false
 hidden: false
 icon: fa-solid fa-circle-info
