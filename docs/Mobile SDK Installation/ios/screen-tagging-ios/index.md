@@ -105,6 +105,46 @@ struct OrderSummaryView: View {
 
 (Prefer **`.onAppear`** over **`onChange(of:navigationPath)`** so the tag matches the moment the view becomes visible.)
 
+# Hiding screens from the timeline (ignore list)
+
+Some view controllers are not real screens for your users: system keyboard controllers, transparent containers, loading overlays. If they appear in your session timeline, you can hide them with the **screen ignore list**.
+
+The list applies to **both automatic and manual tags**. Any name passed to `tagScreenName()` is filtered too, whether automatic tagging is on or off.
+
+**Two ways to set it:**
+
+* **Dashboard (no app release needed):** add the names to the screen ignore list for your app in the UXCam dashboard.
+* **In code:** use the SDK methods below.
+
+<GitHubCallout type="warning">**Set the list in the start completion block.** Today the SDK reloads the ignore list from the dashboard at the start of every new session, which removes names your app added in code. Add your names inside the `UXCam.start(with:)` completion block so they're applied to every session.</GitHubCallout>
+
+```swift
+var config = UXCamConfiguration(appKey: "YOUR-APP-KEY")
+UXCam.start(with: config) { started in
+    guard started else { return }
+    UXCam.addScreenNames(toIgnore: ["UIInputWindowController",
+                                    "UICompatibilityInputViewController",
+                                    "UISystemKeyboardDockController"])
+}
+```
+
+| Swift | Objective-C | What it does |
+| --- | --- | --- |
+| `UXCam.addScreenName(toIgnore:)` | `addScreenNameToIgnore:` | Add one name |
+| `UXCam.addScreenNames(toIgnore:)` | `addScreenNamesToIgnore:` | Add several names |
+| `UXCam.removeScreenName(toIgnore:)` | `removeScreenNameToIgnore:` | Remove one name |
+| `UXCam.removeScreenNames(toIgnore:)` | `removeScreenNamesToIgnore:` | Remove several names |
+| `UXCam.removeAllScreenNamesToIgnore()` | `removeAllScreenNamesToIgnore` | Clear the list |
+| `UXCam.screenNamesBeingIgnored()` | `screenNamesBeingIgnored` | Read the current list |
+
+**Good to know**
+
+* **Timeline only.** An ignored screen is removed from the timeline; its time stays on the previous screen, and gestures are still recorded.
+* **Exact names.** Names are case-sensitive and must match exactly (no wildcards).
+* **Applies immediately** to screens tagged after the call. Screens already recorded stay in the timeline.
+
+<GitHubCallout type="tip">**Seeing keyboard or system controllers in your timeline?** That usually means a custom tagging hook calls `tagScreenName()` for every view controller that appears, including iOS's own. The lasting fix is to tag only your app's controllers, for example with `guard Bundle(for: type(of: viewController)) == .main else { return }` before calling `tagScreenName()`. Automatic tagging already works this way. Use the ignore list as a stop-gap.</GitHubCallout>
+
 #  Tagging WebViews
 
 WebViews contain dynamic content that rarely maps 1‑to‑1 to native screens. Use the **JS ↔ native bridge** to tag logical pages whenever the URL (or in‑page route) changes.
@@ -153,6 +193,7 @@ A solid screen‑naming strategy makes **PII masking** and **heat‑map analysis
 | **Deep‑link cold launch**         | First screen appears before SDK start | Initialise SDK in `@main` or `application(_:didFinishLaunching)` |
 | **Split‑view multitasking**       | Second window never gains focus       | Tag in `sceneDidBecomeActive` for each connected scene           |
 | **Internationalised tag strings** | “Profile” vs “Perfil” split analytics | Tag with constant key, translate later in Dashboard              |
+| **Keyboard / system controllers in the timeline** | Custom hook tags every view controller | Tag only your own controllers, or use the [screen ignore list](#hiding-screens-from-the-timeline-ignore-list) |
 
 ***
 
