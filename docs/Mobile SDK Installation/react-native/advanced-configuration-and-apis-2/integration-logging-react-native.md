@@ -25,7 +25,7 @@ const configuration = {
   enableIntegrationLogging: true, // Enable verbose logs
 };
 
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 RNUxcam.startWithConfiguration(configuration);
 ```
 
@@ -82,5 +82,5 @@ const configuration = {
 |-------|----------|
 | No logs visible | Ensure you're using Xcode (iOS) or Android Studio (Android), not a JS-only IDE |
 | `Verification failed` | Check that your API key is correct and the app key matches your UXCam dashboard |
-| `Session not started` | Verify `optIntoVideoRecordings()` is called before `startWithConfiguration()` |
+| `Session not started` | Verify `optIntoVideoRecording()` is called before `startWithConfiguration()` |
 | Logs stop appearing | The app may have been backgrounded — recording pauses until the app returns to foreground |

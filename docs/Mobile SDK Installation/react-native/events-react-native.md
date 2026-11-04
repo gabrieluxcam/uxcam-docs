@@ -78,14 +78,13 @@ By leveraging events and properties effectively, you can unlock valuable insight
 ### Event Properties
 - Property values can be `string`, `number`, or `boolean`
 - Nested objects are serialized as JSON strings
-- Maximum of **512 characters** per property value
+- Maximum of **1,024 characters** per property value
 - Use properties for context: `RNUxcam.logEvent('purchase_completed', { amount: 49.99, currency: 'USD' })`
 
-### Events vs. Session Properties
+### Events vs. User Properties
 | Use Case | Mechanism |
 |----------|-----------|
 | User completed checkout | `logEvent('checkout_completed', { total: 99 })` |
 | User is on a paid plan | `setUserProperty('plan', 'premium')` |
-| This session is from QA | `setSessionProperty('is_qa', 'true')` |
 
-Events track **actions**. User properties describe **who** the user is. Session properties describe **this particular session**.
+Events track **actions**. User properties describe **who** the user is.

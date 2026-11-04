@@ -4,21 +4,30 @@ deprecated: false
 hidden: false
 metadata:
   description: >-
-    Send caught exceptions and handled errors to UXCam alongside session replays
-    for better debugging context.
+    Record caught exceptions and JavaScript errors in UXCam as custom events so
+    they appear on the session timeline next to the replay.
   robots: index
 ---
 # Report Handled Exceptions
 
-Send caught exceptions to UXCam so they appear alongside session replays. This gives you full context — see exactly what the user was doing when the error occurred.
+Record the errors your app catches, so they appear on the session timeline next to the replay. You can see exactly what the user was doing when the error happened.
 
-## API Reference
+> 🚧 No exception API in React Native yet
+>
+> The React Native SDK doesn't have a `reportExceptionEvent()` method yet (checked up to `react-native-ux-cam` 6.0.26). Calling it throws `undefined is not a function`. Until a dedicated API ships, record errors as **custom events** with `RNUxcam.logEvent()`, as shown below. Native iOS and Android crashes are still captured automatically. See [Crashes and ANRs](https://developer.uxcam.com/docs/crashes-and-anrs-react-native).
+
+## Logging an Error as an Event
 
 ```javascript
 import RNUxcam from 'react-native-ux-cam';
 
-RNUxcam.reportExceptionEvent(error);
+RNUxcam.logEvent('js_error', {
+  name: error?.name ?? 'Error',
+  message: String(error?.message ?? error).slice(0, 1000),
+});
 ```
+
+Event properties accept string and number values, with up to 20 properties per event and 1,024 characters per value.
 
 ## Error Boundary Integration
 
@@ -36,12 +45,12 @@ class UXCamErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Report to UXCam — this links the error to the session replay
-    RNUxcam.reportExceptionEvent(error);
-
-    // Optionally log additional context
-    RNUxcam.logEvent('Component Error', {
-      componentStack: errorInfo.componentStack?.substring(0, 200),
+    // Record the error on the session timeline
+    RNUxcam.logEvent('js_error', {
+      source: 'error_boundary',
+      name: error?.name ?? 'Error',
+      message: String(error?.message ?? error).slice(0, 1000),
+      componentStack: errorInfo?.componentStack?.substring(0, 500) ?? '',
     });
   }
 
@@ -71,22 +80,26 @@ Capture unhandled JavaScript errors using React Native's `ErrorUtils`:
 ```javascript utils/errorHandler.js
 import RNUxcam from 'react-native-ux-cam';
 
-const defaultHandler = ErrorUtils.getGlobalHandler();
+const previousHandler = ErrorUtils.getGlobalHandler();
 
 ErrorUtils.setGlobalHandler((error, isFatal) => {
-  // Report to UXCam
-  RNUxcam.reportExceptionEvent(error);
+  RNUxcam.logEvent('js_error', {
+    source: 'global_handler',
+    name: error?.name ?? 'Error',
+    message: String(error?.message ?? error).slice(0, 1000),
+    fatal: isFatal ? 1 : 0,
+  });
 
-  // Call the default handler
-  if (defaultHandler) {
-    defaultHandler(error, isFatal);
+  // Keep React Native's default behaviour
+  if (previousHandler) {
+    previousHandler(error, isFatal);
   }
 });
 ```
 
 ## Async Error Pattern
 
-Report errors from API calls and async operations:
+Record errors from API calls and async operations:
 
 ```javascript
 const fetchUserData = async (userId) => {
@@ -94,10 +107,10 @@ const fetchUserData = async (userId) => {
     const response = await api.getUser(userId);
     return response.data;
   } catch (error) {
-    RNUxcam.reportExceptionEvent(error);
-    RNUxcam.logEvent('API Error', {
+    RNUxcam.logEvent('api_error', {
       endpoint: 'getUser',
-      status: error.response?.status?.toString(),
+      status: String(error?.response?.status ?? ''),
+      message: String(error?.message ?? error).slice(0, 1000),
     });
     throw error;
   }
@@ -106,7 +119,8 @@ const fetchUserData = async (userId) => {
 
 ## Best Practices
 
-- **Report meaningful errors** — don't report expected conditions like "user not logged in"
-- **Add context with events** — pair `reportExceptionEvent` with `logEvent` for richer debugging
-- **Keep stack traces** — pass the original `Error` object, not just a string message
-- **Don't swallow errors** — always re-throw or handle the error after reporting
+- **Use one event name for errors**, for example `js_error`, so you can filter and count them in the dashboard.
+- **Record meaningful errors.** Don't log expected conditions such as "user not logged in".
+- **Keep messages short.** Trim long messages and stacks to stay within the 1,024-character limit per value.
+- **Don't swallow errors.** Re-throw or handle the error after logging it.
+- **Avoid PII** in error messages. Use IDs or hashed values instead.

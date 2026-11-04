@@ -13,7 +13,7 @@ Before diving into specific issues, run through this quick checklist:
 
 * [ ] UXCam SDK version is compatible with your React Native version
 * [ ] API key is valid and properly configured
-* [ ] `optIntoVideoRecordings()` is called before initialization (replaces deprecated `optIntoSchematicRecordings()`)
+* [ ] `optIntoVideoRecording()` is called before initialization (replaces deprecated `optIntoSchematicRecordings()`)
 * [ ] App backgrounds for at least 5 seconds to trigger session upload
 * [ ] Network connection is available during session upload
 * [ ] Debug logs are checked in **Xcode/Android Studio** (not other IDEs)
@@ -46,7 +46,7 @@ const debugUXCamInit = async () => {
     }
 
     // Always call this first
-    RNUxcam.optIntoVideoRecordings();
+    RNUxcam.optIntoVideoRecording();
     console.log('✅ Video recording enabled');
 
     const config = {
@@ -93,10 +93,10 @@ const debugUXCamInit = async () => {
    };
    ```
 
-2. **Missing optIntoVideoRecordings()** (formerly `optIntoSchematicRecordings()`)
+2. **Missing optIntoVideoRecording()** (formerly `optIntoSchematicRecordings()`)
    ```javascript
    // ✅ Always call before startWithConfiguration
-   RNUxcam.optIntoVideoRecordings();
+   RNUxcam.optIntoVideoRecording();
    RNUxcam.startWithConfiguration(config);
    ```
 
@@ -230,12 +230,12 @@ const debugSessionUpload = () => {
    // Must be called before initialization
    const initWithProperRecording = () => {
      // ✅ Correct order
-     RNUxcam.optIntoVideoRecordings(); // FIRST
+     RNUxcam.optIntoVideoRecording(); // FIRST
      RNUxcam.startWithConfiguration(config); // SECOND
      
      // ❌ Wrong order
      // RNUxcam.startWithConfiguration(config);
-     // RNUxcam.optIntoVideoRecordings(); // Too late!
+     // RNUxcam.optIntoVideoRecording(); // Too late!
    };
    ```
 
@@ -895,7 +895,7 @@ export const runUXCamIntegrationTest = async () => {
 
   try {
     // Test 1: Initialization
-    RNUxcam.optIntoVideoRecordings();
+    RNUxcam.optIntoVideoRecording();
     await RNUxcam.startWithConfiguration({
       userAppKey: 'test-key-12345',
       enableIntegrationLogging: true

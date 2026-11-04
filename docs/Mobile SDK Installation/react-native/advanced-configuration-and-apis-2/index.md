@@ -66,10 +66,10 @@ const configuration = {
   enableNetworkLogging: false,              // default: false
 };
 
-RNUxcam.optIntoVideoRecordings();
+RNUxcam.optIntoVideoRecording();
 RNUxcam.startWithConfiguration(configuration);
 ```
 
 > 📘 **Deprecation Note**
 >
-> `optIntoSchematicRecordings()` / `optOutOfSchematicRecordings()` are deprecated. Use `optIntoVideoRecordings()` / `optOutOfVideoRecordings()` instead. Schematic vs. video recording is now controlled exclusively from the dashboard.
+> `optIntoSchematicRecordings()` / `optOutOfSchematicRecordings()` are deprecated. Use `optIntoVideoRecording()` / `optOutOfVideoRecording()` instead. Schematic vs. video recording is now controlled exclusively from the dashboard.
