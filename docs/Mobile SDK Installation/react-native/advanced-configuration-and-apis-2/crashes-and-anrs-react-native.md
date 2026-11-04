@@ -73,7 +73,7 @@ ErrorUtils.setGlobalHandler((error, isFatal) => {
 });
 ```
 
-The same call works inside a React Error Boundary's `componentDidCatch` or a `catch` block around async code. Only number and string property values are supported (max 100 properties, 1 KiB each).
+The same call works inside a React Error Boundary's `componentDidCatch` or a `catch` block around async code. Only number and string property values are supported (up to 20 properties per event, 1,024 characters per value).
 
 ***
 
