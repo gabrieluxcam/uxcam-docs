@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.12.1 - November 17, 2026
+
+* Fix (capture): Screen tags set before the session starts — for example, in the first activity's `onCreate` — are now preserved; previously they were discarded and the first screen appeared as "unknown" in recordings
+* Fix (logging): Enabling app log recording no longer erases the host app's own logcat entries; the SDK now reads the existing buffer without clearing it
+* Fix (logging): The app log buffer is now bounded to prevent out-of-memory growth during long sessions
+* Fix (upload): Recording rules are now applied to sessions recovered from an automatic checkpoint, ensuring sessions that do not match your dashboard recording rules are not uploaded
+* Fix (stability): Debug log line construction is now performed off the main thread, eliminating ANRs that could occur during cold start when app logging was enabled
+* Enhance (occlusion): View-level occlusions now support a custom blur radius and overlay colour; hybrid occluded areas also follow the session-level occlusion style
 ### V. 3.12.0 - October 29, 2026
 
 * Fix (stability): Apps that call UXCam APIs before `startWithKey` — such as `isRecording()` — in builds without `AppLaunchContentProvider` no longer fail with an "Unknown error"; the SDK now reads the application context when it is needed rather than caching a null reference at startup
