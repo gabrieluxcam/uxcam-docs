@@ -1,0 +1,26 @@
+navigation:
+  - kind: home
+    name: Home
+    icon: far fa-house
+  - kind: guide
+    directory: docs
+    name: Guides
+    icon: far fa-book-open
+  - kind: recipes
+    directory: recipes
+    name: Tutorials
+    hidden: true
+    icon: far fa-flask
+  - kind: reference
+    directory: reference
+    name: Reference
+    hidden: true
+    icon: far fa-code-simple
+  - kind: changelog
+    name: Changelog
+    hidden: true
+    icon: far fa-bullhorn
+  - kind: discuss
+    name: Community Discussions
+    hidden: true
+    icon: far fa-comments
