@@ -14,6 +14,14 @@ metadata:
 ---
 # UXCam iOS Changelog
 
+### V. 3.12.0 - November 19, 2026
+
+* New: Choose blur or solid overlay for occluded views — set the style per view using `occludeSensitiveView:style:` and `occludeSensitiveViewWithoutGesture:style:`, or for the whole session via `UXCamConfiguration.sensitiveViewOcclusionStyle`, with custom blur radius and overlay colour supported.
+* New: Network insights — HTTP and HTTPS requests made during a session are now recorded with timing, status codes, and per-endpoint rollups.
+* New: A per-session occlusion timeline is recorded and can be recovered for interrupted sessions.
+* Improved: Interrupted and crashed sessions now retain their app logs.
+* Improved: Native capture skips empty windows (such as the system keyboard window) and pauses when a capture stalls the main thread, reducing UI impact.
+* Fixed: View occlusion scaling, privacy composition, blur rects outside the frame, tap text on occluded screens from plugin hosts, and video salvage that outlasts a recovery pass.
 ### V. 3.11.2 - October 26, 2026
 
 * Improved: Session storage reliability — sessions are preserved when storage or recorder failures occur, and session ownership is tracked correctly across restarts and drain cycles.
