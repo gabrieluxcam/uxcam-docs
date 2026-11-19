@@ -13,6 +13,9 @@ next:
 ---
 ### SwiftUI
 
+### V. 3.12.0 (November 19, 2026)
+
+- Built on UXCam iOS 3.12.0.
 ### V. 3.11.2 (October 27, 2026)
 
 - Built on UXCam iOS 3.11.2.
