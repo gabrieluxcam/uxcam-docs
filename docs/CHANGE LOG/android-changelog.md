@@ -17,6 +17,14 @@ metadata:
 
 <br />
 
+### V. 3.13.0 - November 26, 2026
+
+* Add (capture): Network request recording is now enabled by default; each request is logged to the session data file with per-endpoint rollups and the screen it started on — no code changes are required for apps using OkHttp
+* Enhance (capture): Apps can now opt in to recording FLAG_SECURE windows (such as payment screens) using `UXConfig.Builder.allowSecureWindowCapture(true)`; occlusion rules continue to apply to those windows
+* Fix (capture): Transparent activities — including overlays opened by Play Billing and similar SDKs — now record with their background correctly visible instead of appearing black; rotation and activity re-creation cases are covered
+* Fix (occlusion): Manually-added view occlusions no longer carry over to other screens; each rule now applies only to the screen on which it was registered
+* Fix (video): Screen video files are smaller on Android 12 and later; constant bitrate encoding mode prevents the encoder from exceeding the configured bitrate
+* Fix (capture): In wireframe mode, screens composed entirely of secure windows now record black frames instead of freezing replay on the previous screen
 ### V. 3.12.1 - November 17, 2026
 
 * Fix (capture): Screen tags set before the session starts — for example, in the first activity's `onCreate` — are now preserved; previously they were discarded and the first screen appeared as "unknown" in recordings
