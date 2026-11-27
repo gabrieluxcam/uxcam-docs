@@ -22,19 +22,9 @@ next:
 
 # SDK Integration
 
-If you're building your app using SwiftUI, please integrate UXCam using Swift Package Manager or Cocoapods using the following steps:
+If you're building your app using SwiftUI, please integrate UXCam using Swift Package Manager (recommended) or CocoaPods (legacy) using the following steps:
 
-## Cocoapods
-
-- Add to the Podfile
-
-```swift
-pod 'UXCamSwiftUI'
-```
-
-- Run `pod install` in the project directory to download dependency.
-
-## Swift Package Manager
+## Swift Package Manager (recommended)
 
 ### Add UXCamSwiftUI Package:
 
@@ -43,6 +33,24 @@ pod 'UXCamSwiftUI'
 
 
 [https://github.com/uxcam/uxcam-swiftui](https://github.com/uxcam/uxcam-swiftui)
+
+Add the **UXCamSwiftUI** product to your app target. It brings in the matching UXCam package, so you do not need to add `uxcam-ios` separately.
+
+## CocoaPods (legacy, up to 3.12.0)
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release of UXCamSwiftUI.** CocoaPods stops accepting new releases on December 2, 2026, so new versions will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods. [Move to Swift Package Manager](#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
+
+- Add to the Podfile
+
+```ruby
+pod 'UXCamSwiftUI', '~> 3.12.0'
+```
+
+- Run `pod install` in the project directory to download dependency.
+
+## Moving from CocoaPods to Swift Package Manager
+
+Follow the [steps in the iOS guide](https://developer.uxcam.com/docs/ios#moving-from-cocoapods-to-swift-package-manager), with these names: remove `pod 'UXCamSwiftUI'` from your `Podfile`, then add the package `https://github.com/uxcam/uxcam-swiftui` (product **UXCamSwiftUI**). Do not keep the pod and the package in the same app.
 
 ## Securely load your App Key
 

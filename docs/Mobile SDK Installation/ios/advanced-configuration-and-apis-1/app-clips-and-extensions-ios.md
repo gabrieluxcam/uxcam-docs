@@ -58,9 +58,15 @@ See [Opt-in / opt-out](https://developer.uxcam.com/docs/opt-in-opt-out-copy-ios)
 
 Add the UXCam package or pod to the App Clip target the same way you did for the main app. See [iOS integration](https://developer.uxcam.com/docs/ios).
 
+**Swift Package Manager (recommended):** select the App Clip target, and under **General > Frameworks, Libraries, and Embedded Content** add the **UXCam** product from the `https://github.com/uxcam/uxcam-ios` package.
+
+**CocoaPods (legacy, up to 3.12.0):**
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** CocoaPods stops accepting new releases on December 2, 2026, so new versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods. [Move to Swift Package Manager](https://developer.uxcam.com/docs/ios#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
+
 ```ruby
 target 'YourAppClip' do
-  pod 'UXCam' # Add within the App Clip target
+  pod 'UXCam', '~> 3.12.0' # Add within the App Clip target
 end
 ```
 

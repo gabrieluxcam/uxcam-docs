@@ -44,17 +44,19 @@ To ensure proper crash reporting with UXCam, you need to upload dSYM files. Foll
 
 4. In the script box, add the following lines based on your dependency management method:
 
-### For CocoaPods
-
-```c
-SCRIPT=$(/usr/bin/find "${SRCROOT}" -name uxcam-upload-symbols.sh | head -n 1)
-"${SCRIPT}" "app-key"
-```
-
-### For Swift Package Manager (SPM)
+### For Swift Package Manager (SPM, recommended)
 
 ```c
 SCRIPT=$(/usr/bin/find "${BUILD_DIR%Build/}SourcePackages" -name uxcam-upload-symbols.sh | head -n 1)
+"${SCRIPT}" "app-key"
+```
+
+### For CocoaPods (legacy, up to 3.12.0)
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** CocoaPods stops accepting new releases on December 2, 2026, so new versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods. [Move to Swift Package Manager](https://developer.uxcam.com/docs/ios#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
+
+```c
+SCRIPT=$(/usr/bin/find "${SRCROOT}" -name uxcam-upload-symbols.sh | head -n 1)
 "${SCRIPT}" "app-key"
 ```
 

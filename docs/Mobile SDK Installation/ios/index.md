@@ -90,7 +90,7 @@ targets: [
 ]
 ```
 
-#### Cocoapods
+#### CocoaPods (legacy, up to 3.12.0)
 
 <GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** New versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods.</GitHubCallout>
 

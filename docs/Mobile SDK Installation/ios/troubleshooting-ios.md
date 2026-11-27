@@ -30,7 +30,29 @@ Before diving into specific issues, verify these basics:
 
 ## Installation & Setup Issues
 
-### CocoaPods Installation Failures
+### Swift Package Manager (SPM) Issues
+
+**Symptoms:**
+- Package resolution fails
+- Build errors after adding UXCam via SPM
+
+**Solutions:**
+
+1. **Reset package cache**:
+   - File → Packages → Reset Package Caches
+   - File → Packages → Update to Latest Package Versions
+
+2. **Verify package URL**:
+```
+https://github.com/uxcam/uxcam-ios
+```
+
+3. **Check minimum iOS version** in project settings:
+   - Project → Deployment Info → iOS Deployment Target: 12.0+
+
+### CocoaPods Installation Failures (legacy, up to 3.12.0)
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** CocoaPods stops accepting new releases on December 2, 2026, so new versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods. [Move to Swift Package Manager](https://developer.uxcam.com/docs/ios#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
 
 **Symptoms:**
 ```bash
@@ -52,7 +74,7 @@ platform :ios, '12.0'  # Minimum iOS 12.0
 target 'MyApp' do
   use_frameworks!  # Required for Swift projects
 
-  pod 'UXCam'
+  pod 'UXCam', '~> 3.12.0'
 end
 ```
 
@@ -62,26 +84,6 @@ rm -rf Pods/ Podfile.lock
 pod deintegrate
 pod install
 ```
-
-### Swift Package Manager (SPM) Issues
-
-**Symptoms:**
-- Package resolution fails
-- Build errors after adding UXCam via SPM
-
-**Solutions:**
-
-1. **Reset package cache**:
-   - File → Packages → Reset Package Caches
-   - File → Packages → Update to Latest Package Versions
-
-2. **Verify package URL**:
-```
-https://github.com/uxcam/uxcam-ios-sdk
-```
-
-3. **Check minimum iOS version** in project settings:
-   - Project → Deployment Info → iOS Deployment Target: 12.0+
 
 ### Build Failures After Adding UXCam
 
