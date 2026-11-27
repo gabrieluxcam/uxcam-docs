@@ -15,6 +15,8 @@ next:
 
 <JumpCallout to="#quick-start-only-a-couple-of-lines-of-code">Jump to Quickstart</JumpCallout>
 
+<GitHubCallout type="warning">**CocoaPods support ends with 3.12.0.** CocoaPods stops accepting new releases on December 2, 2026, so iOS SDK 3.12.0 is the last version published to CocoaPods. From the next release, the iOS SDK is available only through Swift Package Manager (SPM). If you use CocoaPods, you can stay on 3.12.0 or [move to SPM](#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
+
 # Integration Journey at a Glance
 
 1. **[Customize SDK Configuration](#quick-start-only-a-couple-of-lines-of-code)** — Capture your first live session.
@@ -66,11 +68,35 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
 
 ### Adding the Dependencies
 
+#### Swift Package Manager (recommended)
+
+- In Xcode, go to **File > Add Package Dependencies...** and enter this URL:
+
+`https://github.com/uxcam/uxcam-ios`
+
+- Choose **Up to Next Major Version** from `3.12.0`, then add the **UXCam** product to your app target.
+
+If you manage dependencies in a `Package.swift` file instead:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/uxcam/uxcam-ios", from: "3.12.0")
+],
+targets: [
+    .target(
+        name: "YourApp",
+        dependencies: [.product(name: "UXCam", package: "uxcam-ios")]
+    )
+]
+```
+
 #### Cocoapods
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** New versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods.</GitHubCallout>
 
 - Add UXCam to your `Podfile`:
 
-`pod 'UXCam'`
+`pod 'UXCam', '~> 3.12.0'`
 
 - Run <code>pod install</code> in the project directory to download dependency.
 
@@ -80,13 +106,12 @@ Let's get you started with the basics. With just a few lines of code, you'll be 
                                                                                     `}
 </Terminal>
 
-#### Swift Package Manager
+#### Moving from CocoaPods to Swift Package Manager
 
-- If you prefer Swift Package Manager, you can add UXCam using the following URL:
-
-`https://github.com/uxcam/uxcam-ios`
-
-Specify the exact version to ensure compatibility.
+1. Remove the `pod 'UXCam'` line from your `Podfile`.
+2. Run `pod install` to remove UXCam from your project. If UXCam was your only pod, you can run `pod deintegrate` instead.
+3. Add the Swift Package Manager package `https://github.com/uxcam/uxcam-ios` (product **UXCam**) as shown above.
+4. Build and run. Your code does not change: keep `import UXCam` and your existing configuration.
 
 ## Initializing UXCam
 
