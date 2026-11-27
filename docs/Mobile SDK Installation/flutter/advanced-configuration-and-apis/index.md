@@ -22,6 +22,7 @@ Unlock the full potential of UXCam's Flutter SDK with advanced configuration opt
 This section covers advanced features that go beyond basic integration:
 
 - **Recording Control** - Start, stop, and pause session recording programmatically
+- **Smart Events** - Automatic tap labels, on by default (`enableSmartEvents`)
 - **Crash & ANR Handling** - Advanced error tracking and custom exception reporting  
 - **User Consent Management** - Implement GDPR/CCPA compliant opt-in/opt-out flows
 - **Debug & Logging** - Comprehensive logging and integration validation
@@ -98,6 +99,30 @@ if (!hasConsent) {
   }
 }
 ```
+
+## Smart Events (automatic tap labels)
+
+Smart events label each tap with the widget the user tapped, so you can see which button, tab or field was used in a session without wrapping your widgets or adding code. They cover common Flutter widgets such as buttons, text fields, switches, `BottomNavigationBar`, `NavigationBar` and `TabBar`. The label is taken from the tapped widget, for example its text.
+
+Smart events are **on by default**. To turn them off, set `enableSmartEvents` to `false`:
+
+```dart
+FlutterUxConfig config = FlutterUxConfig(
+  userAppKey: "YOUR_APP_KEY",
+  enableSmartEvents: false, // default: true
+);
+await FlutterUxcam.startWithConfiguration(config);
+```
+
+If your app uses its own button, field or interactive widgets, register their types so their taps are labelled too:
+
+```dart
+UXCamWidgetClassifier.registerButtonType(MyCustomButton);
+UXCamWidgetClassifier.registerFieldType(MyCustomTextField);
+UXCamWidgetClassifier.registerInteractiveType(MyCustomToggle);
+```
+
+Smart events label taps; they do not create custom events. To build funnels or recording rules on an action, log a [custom event](/docs/events-flutter).
 
 ## Integration Patterns
 
