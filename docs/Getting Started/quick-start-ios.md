@@ -29,12 +29,18 @@ Get session recording working in your iOS app in under 5 minutes.
 
 ## Step 1: Add the Dependency
 
-### CocoaPods
+### Swift Package Manager (recommended)
+
+In Xcode, go to **File > Add Package Dependencies...**, enter `https://github.com/uxcam/uxcam-ios`, choose **Up to Next Major Version** from `3.12.0`, and add the **UXCam** product to your app target.
+
+### CocoaPods (legacy, up to 3.12.0)
+
+<GitHubCallout type="warning">**3.12.0 is the last CocoaPods release.** CocoaPods stops accepting new releases on December 2, 2026, so new versions of the iOS SDK will be published only through Swift Package Manager. CocoaPods keeps installing 3.12.0 and earlier versions, but you will not get later fixes or features through CocoaPods. [Move to Swift Package Manager](https://developer.uxcam.com/docs/ios#moving-from-cocoapods-to-swift-package-manager).</GitHubCallout>
 
 Add to your `Podfile`:
 
 ```ruby
-pod 'UXCam'
+pod 'UXCam', '~> 3.12.0'
 ```
 
 Then run:
@@ -44,10 +50,6 @@ Then run:
   $ pod install
   `}
 </Terminal>
-
-### Swift Package Manager
-
-Add this URL in Xcode: `https://github.com/uxcam/uxcam-ios`
 
 ***
 
